@@ -1,0 +1,22 @@
+{
+  "titulo": "Stalker",
+  "slug": "stalker",
+  "imdb_id": "tt4009572",
+  "year": "2014",
+  "director": "Cédric Spozio",
+  "plot": null,
+  "poster": "https://image.tmdb.org/t/p/w500/rFibFbwN7tw8GwrNRYjxIQP54Xp.jpg",
+  "genre": "Suspense",
+  "imdb_rating": null,
+  "runtime": "25 min",
+  "traida_por": [
+    "Hypnos"
+  ],
+  "findes": [
+    3
+  ],
+  "tmdb_id": 401218,
+  "titulo_es": "Stalker",
+  "titulo_original": "Stalker",
+  "tmdb_rating": 2.0
+}

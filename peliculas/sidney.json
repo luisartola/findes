@@ -1,0 +1,22 @@
+{
+  "titulo": "Sidney",
+  "slug": "sidney",
+  "imdb_id": "tt16977750",
+  "year": "2022",
+  "director": "Reginald Hudlin",
+  "plot": "Este documental revelador producido por Oprah Winfrey rinde homenaje al legendario Sidney Poitier, actor icónico, director y activista por los derechos humanos. Incluye entrevistas con Denzel Washington, Spike Lee y Barbra Streisand, entre otros.",
+  "poster": "https://image.tmdb.org/t/p/w500/7pAOqcwkqBdGuUJkXWkOJ8vI3ET.jpg",
+  "genre": "Documental",
+  "imdb_rating": null,
+  "runtime": "112 min",
+  "traida_por": [
+    "Romulo"
+  ],
+  "findes": [
+    7
+  ],
+  "tmdb_id": 961722,
+  "titulo_es": "Sidney Poitier",
+  "titulo_original": "Sidney",
+  "tmdb_rating": 7.6
+}

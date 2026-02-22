@@ -1,0 +1,22 @@
+{
+  "titulo": "Fantasía",
+  "slug": "fantasia",
+  "imdb_id": "tt0032455",
+  "year": "1940",
+  "director": "Wilfred Jackson, Bill Roberts, Paul Satterfield, Samuel Armstrong, Jim Handley, T. Hee, Hamilton Luske, Ben Sharpsteen, James Algar, Norman Ferguson, David Hand, Ford Beebe Jr.",
+  "plot": "Una colección de interpretaciones animadas de grandes obras de música clásica. En 'El Aprendiz de Brujo' (P. Dukas), Mickey Mouse, discípulo de un mago, se mete en un gran embrollo, pues sus conocimientos de magia son muy limitados. 'La Consagración de la Primavera' (Stravinsky) cuenta la historia de la evolución, desde los seres unicelulares hasta la extinción de los dinosaurios. 'La Danza de las Horas' (Ponchielli) es un fragmento de un ballet cómico interpretado por elefantes, hipopótamos, cocodrilos y avestruces. 'Una Noche en el Monte Pelado' de Mussorgsky y el 'Ave Maria' de Schubert describen el enfrentamiento entre la oscuridad y la luz.",
+  "poster": "https://image.tmdb.org/t/p/w500/qCaPIUrbKsUKKFPykmKxc6bPbo0.jpg",
+  "genre": "Animación, Familia, Fantasía",
+  "imdb_rating": null,
+  "runtime": "120 min",
+  "traida_por": [
+    "Mario"
+  ],
+  "findes": [
+    1
+  ],
+  "tmdb_id": 756,
+  "titulo_es": "Fantasía",
+  "titulo_original": "Fantasia",
+  "tmdb_rating": 7.3
+}

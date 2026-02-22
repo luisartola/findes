@@ -1,0 +1,22 @@
+{
+  "titulo": "Creepshow",
+  "slug": "creepshow",
+  "imdb_id": "tt0083767",
+  "year": "1982",
+  "director": "George A. Romero",
+  "plot": "Cinco historias de terror creadas por Stephen King, enmarcadas dentro de las páginas de un cómic que un insensible padre le ha tirado a su hijo a la basura.",
+  "poster": "https://image.tmdb.org/t/p/w500/5ELCQTrBI2KdbgMiJUwWAT1VauY.jpg",
+  "genre": "Terror, Comedia",
+  "imdb_rating": null,
+  "runtime": "120 min",
+  "traida_por": [
+    "Beiger"
+  ],
+  "findes": [
+    24
+  ],
+  "tmdb_id": 16281,
+  "titulo_es": "Creepshow",
+  "titulo_original": "Creepshow",
+  "tmdb_rating": 6.9
+}

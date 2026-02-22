@@ -1,0 +1,22 @@
+{
+  "titulo": "Doberman",
+  "slug": "doberman",
+  "imdb_id": "tt10146204",
+  "year": "2019",
+  "director": "Azul Lombardía",
+  "plot": "Una tarde de siesta en las afueras de la ciudad, dos mujeres entrecruzan sus mundos transformando una charla casual en un campo de batalla, sin poder prevenir lo inevitable: una tragedia doméstica.",
+  "poster": "https://image.tmdb.org/t/p/w500/jGUDapEC4WtVRfA1z0soFNlDWw7.jpg",
+  "genre": "Drama",
+  "imdb_rating": null,
+  "runtime": "72 min",
+  "traida_por": [
+    "Obi Wan"
+  ],
+  "findes": [
+    4
+  ],
+  "tmdb_id": 604260,
+  "titulo_es": "Dóberman",
+  "titulo_original": "Dóberman",
+  "tmdb_rating": 5.2
+}

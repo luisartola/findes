@@ -1,0 +1,22 @@
+{
+  "titulo": "Movie 43",
+  "slug": "movie-43",
+  "imdb_id": "tt1333125",
+  "year": "2013",
+  "director": "Steven Brill, Elizabeth Banks, Steve Carr, James Duffy, Griffin Dunne, Peter Farrelly, Patrik Forsberg, James Gunn, Brett Ratner, Will Graham, Jonathan van Tulleken, Rusty Cundieff",
+  "plot": "Serie de sketches cómicos que cuentan 14 disparatadas historias, dirigidas entre otros por los Hermanos Farrelly y con un reparto coral espectacular, todas conectadas entre sí y cada cual más hilarante que la anterior. Desde cómo fracasa una cita de dos jóvenes cuando la chica se convierte en “mujer” hasta la cita rápida de un superhéroe.",
+  "poster": "https://image.tmdb.org/t/p/w500/wMKzuE6WEJehykIIDeiH2y1pQR.jpg",
+  "genre": "Comedia",
+  "imdb_rating": null,
+  "runtime": "90 min",
+  "traida_por": [
+    "Beiger"
+  ],
+  "findes": [
+    22
+  ],
+  "tmdb_id": 87818,
+  "titulo_es": "Movie 43",
+  "titulo_original": "Movie 43",
+  "tmdb_rating": 4.6
+}

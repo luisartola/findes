@@ -1,0 +1,22 @@
+{
+  "titulo": "Scott Pilgrim contra el mundo",
+  "slug": "scott-pilgrim-contra-el-mundo",
+  "imdb_id": "tt0446029",
+  "year": "2010",
+  "director": "Edgar Wright",
+  "plot": "Scott Pilgrim deberá derrotar a los malévolos siete ex novios de su nueva novia para ganarse su corazón.",
+  "poster": "https://image.tmdb.org/t/p/w500/fgrVbga0oZQNeljO6dyoWknjOzJ.jpg",
+  "genre": "Acción, Comedia, Romance",
+  "imdb_rating": null,
+  "runtime": "112 min",
+  "traida_por": [
+    "Sherlock"
+  ],
+  "findes": [
+    12
+  ],
+  "tmdb_id": 22538,
+  "titulo_es": "Scott Pilgrim contra el mundo",
+  "titulo_original": "Scott Pilgrim vs. the World",
+  "tmdb_rating": 7.5
+}

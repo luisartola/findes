@@ -1,0 +1,22 @@
+{
+  "titulo": "Haze",
+  "slug": "haze",
+  "imdb_id": "tt4601504",
+  "year": "2017",
+  "director": "David Burkman",
+  "plot": null,
+  "poster": "https://image.tmdb.org/t/p/w500/iMr8ubh3aPgjYecdNX3lnCEFQT8.jpg",
+  "genre": "Suspense, Drama",
+  "imdb_rating": null,
+  "runtime": "106 min",
+  "traida_por": [
+    "Sherlock"
+  ],
+  "findes": [
+    18
+  ],
+  "tmdb_id": 481703,
+  "titulo_es": "Haze",
+  "titulo_original": "Haze",
+  "tmdb_rating": 4.7
+}

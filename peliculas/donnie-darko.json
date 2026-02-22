@@ -1,0 +1,22 @@
+{
+  "titulo": "Donnie Darko",
+  "slug": "donnie-darko",
+  "imdb_id": "tt0246578",
+  "year": "2001",
+  "director": "Richard Kelly",
+  "plot": "Donnie es un chico americano dotado de gran inteligencia e imaginación. Tras escapar milagrosamente de una muerte casi segura, comienza a sufrir alucinaciones que lo llevan a actuar como nunca hubiera imaginado y a descubrir un mundo insólito a su alrededor, pues en sus visiones un gran conejito lo manipula para cometer una serie de crímenes.",
+  "poster": "https://image.tmdb.org/t/p/w500/1YjDHBC4v2O7IQDKYAiM8fOxzf3.jpg",
+  "genre": "Fantasía, Drama, Misterio",
+  "imdb_rating": null,
+  "runtime": "113 min",
+  "traida_por": [
+    "Sherlock"
+  ],
+  "findes": [
+    1
+  ],
+  "tmdb_id": 141,
+  "titulo_es": "Donnie Darko",
+  "titulo_original": "Donnie Darko",
+  "tmdb_rating": 7.8
+}

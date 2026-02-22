@@ -1,0 +1,22 @@
+{
+  "titulo": "Persona",
+  "slug": "persona",
+  "imdb_id": "tt0060827",
+  "year": "1966",
+  "director": "Ingmar Bergman",
+  "plot": "Elisabeth, una célebre actriz teatral, es hospitalizada tras perder la voz durante una representación de 'Electra'. Una doctora la somete a toda una serie de pruebas, y afirma que está sana y bien, pero ella sigue sin hablar y permanece en el pabellón. Alma, la enfermara encargada de cuidarla, intenta establecer una relación con ella y se dedica a hablarle todo el tiempo.",
+  "poster": "https://image.tmdb.org/t/p/w500/pnJMAumh0gaZC02r9t5YmN9HR74.jpg",
+  "genre": "Drama",
+  "imdb_rating": null,
+  "runtime": "83 min",
+  "traida_por": [
+    "Hypnos"
+  ],
+  "findes": [
+    4
+  ],
+  "tmdb_id": 797,
+  "titulo_es": "Persona",
+  "titulo_original": "Persona",
+  "tmdb_rating": 8.1
+}

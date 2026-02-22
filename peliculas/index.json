@@ -1,0 +1,1830 @@
+{
+  "la-palabra": {
+    "titulo": "La palabra",
+    "slug": "la-palabra"
+  },
+  "el-pistolero": {
+    "titulo": "El pistolero",
+    "slug": "el-pistolero"
+  },
+  "el-cuarto-mandamiento": {
+    "titulo": "El cuarto mandamiento",
+    "slug": "el-cuarto-mandamiento"
+  },
+  "pi": {
+    "titulo": "Pi",
+    "slug": "pi"
+  },
+  "donnie-darko": {
+    "titulo": "Donnie Darko",
+    "slug": "donnie-darko"
+  },
+  "happiness": {
+    "titulo": "Happiness",
+    "slug": "happiness"
+  },
+  "la-vida-privada-de-sherlock-holmes": {
+    "titulo": "La vida privada de Sherlock Holmes",
+    "slug": "la-vida-privada-de-sherlock-holmes"
+  },
+  "clerks": {
+    "titulo": "Clerks",
+    "slug": "clerks"
+  },
+  "el-amanecer-de-los-muertos": {
+    "titulo": "El amanecer de los muertos",
+    "slug": "el-amanecer-de-los-muertos"
+  },
+  "la-ley-de-la-calle": {
+    "titulo": "La ley de la calle",
+    "slug": "la-ley-de-la-calle"
+  },
+  "la-huella": {
+    "titulo": "La huella",
+    "slug": "la-huella"
+  },
+  "sonadores": {
+    "titulo": "Soñadores",
+    "slug": "sonadores"
+  },
+  "cube": {
+    "titulo": "Cube",
+    "slug": "cube"
+  },
+  "pulp-fiction": {
+    "titulo": "Pulp Fiction",
+    "slug": "pulp-fiction"
+  },
+  "guerreros-del-viento": {
+    "titulo": "Guerreros del viento",
+    "slug": "guerreros-del-viento"
+  },
+  "ghost-in-the-shell": {
+    "titulo": "Ghost in the shell",
+    "slug": "ghost-in-the-shell"
+  },
+  "irreversible": {
+    "titulo": "Irreversible",
+    "slug": "irreversible"
+  },
+  "1984": {
+    "titulo": "1984",
+    "slug": "1984"
+  },
+  "fantasia": {
+    "titulo": "Fantasía",
+    "slug": "fantasia"
+  },
+  "atrapado-por-su-pasado": {
+    "titulo": "Atrapado por su pasado",
+    "slug": "atrapado-por-su-pasado"
+  },
+  "la-muerte-tenia-un-precio": {
+    "titulo": "La muerte tenía un precio",
+    "slug": "la-muerte-tenia-un-precio"
+  },
+  "encadenados": {
+    "titulo": "Encadenados",
+    "slug": "encadenados"
+  },
+  "el-crack": {
+    "titulo": "El Crack",
+    "slug": "el-crack"
+  },
+  "nadie-puede-vencerme": {
+    "titulo": "Nadie puede vencerme",
+    "slug": "nadie-puede-vencerme"
+  },
+  "recuerdos": {
+    "titulo": "Recuerdos",
+    "slug": "recuerdos"
+  },
+  "ladron-de-orquideas": {
+    "titulo": "Ladrón de orquídeas",
+    "slug": "ladron-de-orquideas"
+  },
+  "los-tennenbaums": {
+    "titulo": "Los Tennenbaums",
+    "slug": "los-tennenbaums"
+  },
+  "gummo": {
+    "titulo": "Gummo",
+    "slug": "gummo"
+  },
+  "hervidero": {
+    "titulo": "Hervidero",
+    "slug": "hervidero"
+  },
+  "videodrome": {
+    "titulo": "Videodrome",
+    "slug": "videodrome"
+  },
+  "looking-for-richard": {
+    "titulo": "Looking for Richard",
+    "slug": "looking-for-richard"
+  },
+  "una-pura-formalidad": {
+    "titulo": "Una pura formalidad",
+    "slug": "una-pura-formalidad"
+  },
+  "boogie-nights": {
+    "titulo": "Boogie nights",
+    "slug": "boogie-nights"
+  },
+  "underground": {
+    "titulo": "Underground",
+    "slug": "underground"
+  },
+  "al-final-de-la-escalera": {
+    "titulo": "Al final de la escalera",
+    "slug": "al-final-de-la-escalera"
+  },
+  "el-ansia": {
+    "titulo": "El ansia",
+    "slug": "el-ansia"
+  },
+  "la-pequena-tienda-de-los-horrores": {
+    "titulo": "La pequeña tienda de los horrores",
+    "slug": "la-pequena-tienda-de-los-horrores"
+  },
+  "la-torre-de-los-siete-jorobados": {
+    "titulo": "La torre de los siete jorobados",
+    "slug": "la-torre-de-los-siete-jorobados"
+  },
+  "high-art": {
+    "titulo": "High art",
+    "slug": "high-art"
+  },
+  "anatomia-de-un-asesinato": {
+    "titulo": "Anatomía de un asesinato",
+    "slug": "anatomia-de-un-asesinato"
+  },
+  "stalker": {
+    "titulo": "Stalker",
+    "slug": "stalker"
+  },
+  "el-secreto-de-vera-drake": {
+    "titulo": "El secreto de Vera Drake",
+    "slug": "el-secreto-de-vera-drake"
+  },
+  "american-splendor": {
+    "titulo": "American Splendor",
+    "slug": "american-splendor"
+  },
+  "la-invasion-de-los-ultracuerpos": {
+    "titulo": "La invasión de los ultracuerpos",
+    "slug": "la-invasion-de-los-ultracuerpos"
+  },
+  "naufragos": {
+    "titulo": "Náufragos",
+    "slug": "naufragos"
+  },
+  "tetsuo": {
+    "titulo": "Tetsuo",
+    "slug": "tetsuo"
+  },
+  "porco-rosso": {
+    "titulo": "Porco Rosso",
+    "slug": "porco-rosso"
+  },
+  "alphaville": {
+    "titulo": "Alphaville",
+    "slug": "alphaville"
+  },
+  "kundun": {
+    "titulo": "Kundun",
+    "slug": "kundun"
+  },
+  "new-york-new-york": {
+    "titulo": "New York, New York",
+    "slug": "new-york-new-york"
+  },
+  "reencarnacion": {
+    "titulo": "Reencarnación",
+    "slug": "reencarnacion"
+  },
+  "cancion-de-cuna-para-un-cadaver": {
+    "titulo": "Canción de cuna para un cadáver",
+    "slug": "cancion-de-cuna-para-un-cadaver"
+  },
+  "corazon-salvaje": {
+    "titulo": "Corazón salvaje",
+    "slug": "corazon-salvaje"
+  },
+  "cronos": {
+    "titulo": "Cronos",
+    "slug": "cronos"
+  },
+  "cuando-el-viento-sopla": {
+    "titulo": "Cuando el viento sopla",
+    "slug": "cuando-el-viento-sopla"
+  },
+  "salo": {
+    "titulo": "Saló",
+    "slug": "salo"
+  },
+  "shine": {
+    "titulo": "Shine",
+    "slug": "shine"
+  },
+  "el-efecto-mariposa": {
+    "titulo": "El efecto mariposa",
+    "slug": "el-efecto-mariposa"
+  },
+  "algo-en-comun": {
+    "titulo": "Algo en común",
+    "slug": "algo-en-comun"
+  },
+  "hasta-que-llego-su-hora": {
+    "titulo": "Hasta que llegó su hora",
+    "slug": "hasta-que-llego-su-hora"
+  },
+  "leolo": {
+    "titulo": "Léolo",
+    "slug": "leolo"
+  },
+  "persona": {
+    "titulo": "Persona",
+    "slug": "persona"
+  },
+  "te-querre-siempre": {
+    "titulo": "Te querré siempre",
+    "slug": "te-querre-siempre"
+  },
+  "irma-vep": {
+    "titulo": "Irma Vep",
+    "slug": "irma-vep"
+  },
+  "tu-y-yo-y-todo-lo-demas": {
+    "titulo": "Tú y yo y todo lo demás",
+    "slug": "tu-y-yo-y-todo-lo-demas"
+  },
+  "viaje-alucinante-al-fondo-de-la-mente": {
+    "titulo": "Viaje alucinante al fondo de la mente",
+    "slug": "viaje-alucinante-al-fondo-de-la-mente"
+  },
+  "los-ojos-sin-rostro": {
+    "titulo": "Los ojos sin rostro",
+    "slug": "los-ojos-sin-rostro"
+  },
+  "el-samurai": {
+    "titulo": "El samurai",
+    "slug": "el-samurai"
+  },
+  "historia-de-ricki": {
+    "titulo": "Historia de Ricki",
+    "slug": "historia-de-ricki"
+  },
+  "el-quimerico-inquilino": {
+    "titulo": "El quimérico inquilino",
+    "slug": "el-quimerico-inquilino"
+  },
+  "shopping": {
+    "titulo": "Shopping",
+    "slug": "shopping"
+  },
+  "agirre-y-la-colera-de-dios": {
+    "titulo": "Agirre y la cólera de dios",
+    "slug": "agirre-y-la-colera-de-dios"
+  },
+  "chunking-express": {
+    "titulo": "Chunking express",
+    "slug": "chunking-express"
+  },
+  "doberman": {
+    "titulo": "Doberman",
+    "slug": "doberman"
+  },
+  "azul": {
+    "titulo": "Azul",
+    "slug": "azul"
+  },
+  "el-maquinista-de-la-general": {
+    "titulo": "El maquinista de la general",
+    "slug": "el-maquinista-de-la-general"
+  },
+  "matar-a-un-ruisenor": {
+    "titulo": "Matar a un ruiseñor",
+    "slug": "matar-a-un-ruisenor"
+  },
+  "arrebato": {
+    "titulo": "Arrebato",
+    "slug": "arrebato"
+  },
+  "bloody-sunday": {
+    "titulo": "Bloody Sunday",
+    "slug": "bloody-sunday"
+  },
+  "la-noche-cae-sobre-manhattan": {
+    "titulo": "La noche cae sobre Manhattan",
+    "slug": "la-noche-cae-sobre-manhattan"
+  },
+  "albino-alligator": {
+    "titulo": "Albino Alligator",
+    "slug": "albino-alligator"
+  },
+  "stromboli": {
+    "titulo": "Stromboli",
+    "slug": "stromboli"
+  },
+  "exotica": {
+    "titulo": "Exotica",
+    "slug": "exotica"
+  },
+  "tristam-shandy": {
+    "titulo": "Tristam Shandy",
+    "slug": "tristam-shandy"
+  },
+  "matadero-cinco": {
+    "titulo": "Matadero Cinco",
+    "slug": "matadero-cinco"
+  },
+  "cosa-ruim": {
+    "titulo": "Cosa ruim",
+    "slug": "cosa-ruim"
+  },
+  "demonlover": {
+    "titulo": "Demonlover",
+    "slug": "demonlover"
+  },
+  "la-conversacion": {
+    "titulo": "La conversación",
+    "slug": "la-conversacion"
+  },
+  "breaking-and-entering": {
+    "titulo": "Breaking and entering",
+    "slug": "breaking-and-entering"
+  },
+  "la-noche-de-los-girasoles": {
+    "titulo": "La noche de los girasoles",
+    "slug": "la-noche-de-los-girasoles"
+  },
+  "cyclo": {
+    "titulo": "Cyclo",
+    "slug": "cyclo"
+  },
+  "yo-vigilo-el-camino": {
+    "titulo": "Yo vigilo el camino",
+    "slug": "yo-vigilo-el-camino"
+  },
+  "calles-de-fuego": {
+    "titulo": "Calles de fuego",
+    "slug": "calles-de-fuego"
+  },
+  "todo-sobre-lily": {
+    "titulo": "Todo sobre Lily",
+    "slug": "todo-sobre-lily"
+  },
+  "la-gran-comilona": {
+    "titulo": "La gran comilona",
+    "slug": "la-gran-comilona"
+  },
+  "eva-al-desnudo": {
+    "titulo": "Eva al desnudo",
+    "slug": "eva-al-desnudo"
+  },
+  "factotum": {
+    "titulo": "Factotum",
+    "slug": "factotum"
+  },
+  "paprika": {
+    "titulo": "Paprika",
+    "slug": "paprika"
+  },
+  "offscreen": {
+    "titulo": "Offscreen",
+    "slug": "offscreen"
+  },
+  "la-noche-americana": {
+    "titulo": "La noche americana",
+    "slug": "la-noche-americana"
+  },
+  "breaking-news": {
+    "titulo": "Breaking News",
+    "slug": "breaking-news"
+  },
+  "mistery-train": {
+    "titulo": "Mistery Train",
+    "slug": "mistery-train"
+  },
+  "plan-diabolico": {
+    "titulo": "Plan diabólico",
+    "slug": "plan-diabolico"
+  },
+  "8-y-medio": {
+    "titulo": "8 y medio",
+    "slug": "8-y-medio"
+  },
+  "goya-en-burdeos": {
+    "titulo": "Goya en Burdeos",
+    "slug": "goya-en-burdeos"
+  },
+  "la-linterna-roja": {
+    "titulo": "La linterna roja",
+    "slug": "la-linterna-roja"
+  },
+  "velvet-goldmine": {
+    "titulo": "Velvet Goldmine",
+    "slug": "velvet-goldmine"
+  },
+  "the-descent": {
+    "titulo": "The descent",
+    "slug": "the-descent"
+  },
+  "la-madre-muerta": {
+    "titulo": "La madre muerta",
+    "slug": "la-madre-muerta"
+  },
+  "malpertuis": {
+    "titulo": "Malpertuis",
+    "slug": "malpertuis"
+  },
+  "seres-extranos": {
+    "titulo": "Seres extraños",
+    "slug": "seres-extranos"
+  },
+  "conspiracion-de-silencio": {
+    "titulo": "Conspiración de silencio",
+    "slug": "conspiracion-de-silencio"
+  },
+  "dos-en-la-carretera": {
+    "titulo": "Dos en la carretera",
+    "slug": "dos-en-la-carretera"
+  },
+  "los-sobornados": {
+    "titulo": "Los sobornados",
+    "slug": "los-sobornados"
+  },
+  "dai-nipponjin": {
+    "titulo": "Dai Nipponjin",
+    "slug": "dai-nipponjin"
+  },
+  "los-coches-que-devoraron-paris": {
+    "titulo": "Los coches que devoraron Paris",
+    "slug": "los-coches-que-devoraron-paris"
+  },
+  "la-escafandra-y-la-mariposa": {
+    "titulo": "La escafandra y la mariposa",
+    "slug": "la-escafandra-y-la-mariposa"
+  },
+  "jules-y-jim": {
+    "titulo": "Jules y Jim",
+    "slug": "jules-y-jim"
+  },
+  "gun-crazy": {
+    "titulo": "Gun Crazy",
+    "slug": "gun-crazy"
+  },
+  "bubba-ho-tep": {
+    "titulo": "Bubba Ho tep",
+    "slug": "bubba-ho-tep"
+  },
+  "ensayo-de-orquesta": {
+    "titulo": "Ensayo de orquesta",
+    "slug": "ensayo-de-orquesta"
+  },
+  "sidney": {
+    "titulo": "Sidney",
+    "slug": "sidney"
+  },
+  "fido": {
+    "titulo": "Fido",
+    "slug": "fido"
+  },
+  "la-pianista": {
+    "titulo": "La pianista",
+    "slug": "la-pianista"
+  },
+  "vampyr": {
+    "titulo": "Vampyr",
+    "slug": "vampyr"
+  },
+  "fragiles": {
+    "titulo": "Frágiles",
+    "slug": "fragiles"
+  },
+  "el-hombre-que-mira": {
+    "titulo": "El hombre que mira",
+    "slug": "el-hombre-que-mira"
+  },
+  "barry-lindon": {
+    "titulo": "Barry Lindon",
+    "slug": "barry-lindon"
+  },
+  "slipstream": {
+    "titulo": "Slipstream",
+    "slug": "slipstream"
+  },
+  "once": {
+    "titulo": "Once",
+    "slug": "once"
+  },
+  "el-beso-mortal": {
+    "titulo": "El beso mortal",
+    "slug": "el-beso-mortal"
+  },
+  "damnation": {
+    "titulo": "Damnation",
+    "slug": "damnation"
+  },
+  "epidemic": {
+    "titulo": "Epidemic",
+    "slug": "epidemic"
+  },
+  "h-history": {
+    "titulo": "H-History",
+    "slug": "h-history"
+  },
+  "hiroshima-mon-amour": {
+    "titulo": "Hiroshima, Mon amour",
+    "slug": "hiroshima-mon-amour"
+  },
+  "quien-puede-matar-a-un-nino": {
+    "titulo": "¿Quién puede matar a un niño?",
+    "slug": "quien-puede-matar-a-un-nino"
+  },
+  "borrachera-de-poder": {
+    "titulo": "Borrachera de poder",
+    "slug": "borrachera-de-poder"
+  },
+  "el-carnicero": {
+    "titulo": "El carnicero",
+    "slug": "el-carnicero"
+  },
+  "southland-tales": {
+    "titulo": "Southland tales",
+    "slug": "southland-tales"
+  },
+  "el-rey-de-la-comedia": {
+    "titulo": "El rey de la comedia",
+    "slug": "el-rey-de-la-comedia"
+  },
+  "jcvd": {
+    "titulo": "JCVD",
+    "slug": "jcvd"
+  },
+  "mi-vida-sin-mi": {
+    "titulo": "Mi vida sin mí",
+    "slug": "mi-vida-sin-mi"
+  },
+  "cuentos-de-la-luna-palida": {
+    "titulo": "Cuentos de la luna pálida",
+    "slug": "cuentos-de-la-luna-palida"
+  },
+  "el-amante": {
+    "titulo": "El amante",
+    "slug": "el-amante"
+  },
+  "salvad-al-tigre": {
+    "titulo": "Salvad al tigre",
+    "slug": "salvad-al-tigre"
+  },
+  "nuestros-maravillosos-aliados": {
+    "titulo": "Nuestros maravillosos aliados",
+    "slug": "nuestros-maravillosos-aliados"
+  },
+  "hombres-intrepidos": {
+    "titulo": "Hombres intrépidos",
+    "slug": "hombres-intrepidos"
+  },
+  "old-joy": {
+    "titulo": "Old joy",
+    "slug": "old-joy"
+  },
+  "vexille-no-vista-por-error": {
+    "titulo": "Vexille (no vista por error)",
+    "slug": "vexille-no-vista-por-error"
+  },
+  "detour": {
+    "titulo": "Detour",
+    "slug": "detour"
+  },
+  "tokyo": {
+    "titulo": "Tokyo!",
+    "slug": "tokyo"
+  },
+  "vals-con-bashir": {
+    "titulo": "Vals con Bashir",
+    "slug": "vals-con-bashir"
+  },
+  "princess": {
+    "titulo": "Princess",
+    "slug": "princess"
+  },
+  "bienvenido-mr-chance": {
+    "titulo": "Bienvenido Mr Chance",
+    "slug": "bienvenido-mr-chance"
+  },
+  "noche-de-estreno": {
+    "titulo": "Noche de estreno",
+    "slug": "noche-de-estreno"
+  },
+  "julia": {
+    "titulo": "Julia",
+    "slug": "julia"
+  },
+  "mishima": {
+    "titulo": "Mishima",
+    "slug": "mishima"
+  },
+  "teniente-corrupto": {
+    "titulo": "Teniente corrupto",
+    "slug": "teniente-corrupto"
+  },
+  "el-hombre-que-cayo-a-la-tierra": {
+    "titulo": "El hombre que cayó a la tierra",
+    "slug": "el-hombre-que-cayo-a-la-tierra"
+  },
+  "querelle": {
+    "titulo": "Querelle",
+    "slug": "querelle"
+  },
+  "harold-y-maude": {
+    "titulo": "Harold y Maude",
+    "slug": "harold-y-maude"
+  },
+  "el-segundo-nombre": {
+    "titulo": "El segundo nombre",
+    "slug": "el-segundo-nombre"
+  },
+  "un-condenado-a-muerte-se-ha-escapado": {
+    "titulo": "Un condenado a muerte se ha escapado",
+    "slug": "un-condenado-a-muerte-se-ha-escapado"
+  },
+  "la-vida-privada-de-enrique-viii": {
+    "titulo": "La vida privada de Enrique VIII",
+    "slug": "la-vida-privada-de-enrique-viii"
+  },
+  "blow-up": {
+    "titulo": "Blow-up",
+    "slug": "blow-up"
+  },
+  "la-venganza-de-un-actor": {
+    "titulo": "La venganza de un actor",
+    "slug": "la-venganza-de-un-actor"
+  },
+  "pauline-en-la-playa": {
+    "titulo": "Pauline en la playa",
+    "slug": "pauline-en-la-playa"
+  },
+  "tres-dias-con-la-familia": {
+    "titulo": "Tres días con la familia",
+    "slug": "tres-dias-con-la-familia"
+  },
+  "retrato-de-una-obsesion": {
+    "titulo": "Retrato de una obsesión",
+    "slug": "retrato-de-una-obsesion"
+  },
+  "a-l-interieur": {
+    "titulo": "A l´interieur",
+    "slug": "a-l-interieur"
+  },
+  "el-ente": {
+    "titulo": "El ente",
+    "slug": "el-ente"
+  },
+  "ana-y-los-lobos": {
+    "titulo": "Ana y los lobos",
+    "slug": "ana-y-los-lobos"
+  },
+  "nubes-pasajeras": {
+    "titulo": "Nubes pasajeras",
+    "slug": "nubes-pasajeras"
+  },
+  "all-that-jazz": {
+    "titulo": "All that jazz",
+    "slug": "all-that-jazz"
+  },
+  "el-asesinato-de-jesse-james": {
+    "titulo": "El asesinato de Jesse James...",
+    "slug": "el-asesinato-de-jesse-james"
+  },
+  "el-septimo-continente": {
+    "titulo": "El séptimo continente",
+    "slug": "el-septimo-continente"
+  },
+  "los-demonios-en-mi-puerta": {
+    "titulo": "Los demonios en mi puerta",
+    "slug": "los-demonios-en-mi-puerta"
+  },
+  "thirst": {
+    "titulo": "Thirst",
+    "slug": "thirst"
+  },
+  "rashomon": {
+    "titulo": "Rashomon",
+    "slug": "rashomon"
+  },
+  "huesos": {
+    "titulo": "Huesos",
+    "slug": "huesos"
+  },
+  "el-crimen-del-cine-oriente": {
+    "titulo": "El crimen del cine oriente",
+    "slug": "el-crimen-del-cine-oriente"
+  },
+  "el-bosque-del-lobo": {
+    "titulo": "El bosque del lobo",
+    "slug": "el-bosque-del-lobo"
+  },
+  "chantaje-a-una-mujer": {
+    "titulo": "Chantaje a una mujer",
+    "slug": "chantaje-a-una-mujer"
+  },
+  "canciones-del-segundo-piso": {
+    "titulo": "Canciones del segundo piso",
+    "slug": "canciones-del-segundo-piso"
+  },
+  "yodo": {
+    "titulo": "Yodo",
+    "slug": "yodo"
+  },
+  "pesadilla-en-elm-street-7": {
+    "titulo": "Pesadilla en Elm Street 7",
+    "slug": "pesadilla-en-elm-street-7"
+  },
+  "5-condiciones": {
+    "titulo": "5 Condiciones",
+    "slug": "5-condiciones"
+  },
+  "fraude": {
+    "titulo": "Fraude",
+    "slug": "fraude"
+  },
+  "triangle": {
+    "titulo": "Triangle",
+    "slug": "triangle"
+  },
+  "la-verguenza": {
+    "titulo": "La vergüenza",
+    "slug": "la-verguenza"
+  },
+  "3-dias": {
+    "titulo": "3 días",
+    "slug": "3-dias"
+  },
+  "el-beso-de-la-pantera": {
+    "titulo": "El beso de la pantera",
+    "slug": "el-beso-de-la-pantera"
+  },
+  "amenaza-en-la-sombra": {
+    "titulo": "Amenaza en la sombra",
+    "slug": "amenaza-en-la-sombra"
+  },
+  "doble-cuerpo": {
+    "titulo": "Doble cuerpo",
+    "slug": "doble-cuerpo"
+  },
+  "el-extrano-viaje": {
+    "titulo": "El extraño viaje",
+    "slug": "el-extrano-viaje"
+  },
+  "las-diabolicas": {
+    "titulo": "Las diabólicas",
+    "slug": "las-diabolicas"
+  },
+  "la-escalera-de-jacob": {
+    "titulo": "La escalera de Jacob",
+    "slug": "la-escalera-de-jacob"
+  },
+  "el-habitante-incierto": {
+    "titulo": "El habitante incierto",
+    "slug": "el-habitante-incierto"
+  },
+  "taxidermia": {
+    "titulo": "Taxidermia",
+    "slug": "taxidermia"
+  },
+  "el-cocinero-el-ladron-su-mujer-y-su-amante": {
+    "titulo": "El cocinero, el ladrón, su mujer y su amante",
+    "slug": "el-cocinero-el-ladron-su-mujer-y-su-amante"
+  },
+  "5x2": {
+    "titulo": "5x2",
+    "slug": "5x2"
+  },
+  "yo-soy-curiosa-amarillo": {
+    "titulo": "Yo soy curiosa (amarillo)",
+    "slug": "yo-soy-curiosa-amarillo"
+  },
+  "5-cm-s": {
+    "titulo": "5 cm/s",
+    "slug": "5-cm-s"
+  },
+  "symbol": {
+    "titulo": "Symbol",
+    "slug": "symbol"
+  },
+  "scott-pilgrim-contra-el-mundo": {
+    "titulo": "Scott Pilgrim contra el mundo",
+    "slug": "scott-pilgrim-contra-el-mundo"
+  },
+  "jacuzzi-al-pasado": {
+    "titulo": "Jacuzzi al pasado",
+    "slug": "jacuzzi-al-pasado"
+  },
+  "la-escopeta-nacional": {
+    "titulo": "La escopeta nacional",
+    "slug": "la-escopeta-nacional"
+  },
+  "un-burgues-pequeno-muy-pequeno": {
+    "titulo": "Un burgués pequeño, muy pequeño",
+    "slug": "un-burgues-pequeno-muy-pequeno"
+  },
+  "perfect-blue": {
+    "titulo": "Perfect Blue",
+    "slug": "perfect-blue"
+  },
+  "los-amantes-del-pont-neuf": {
+    "titulo": "Los amantes del Pont-Neuf",
+    "slug": "los-amantes-del-pont-neuf"
+  },
+  "el-espia": {
+    "titulo": "El espía",
+    "slug": "el-espia"
+  },
+  "yakuza": {
+    "titulo": "Yakuza",
+    "slug": "yakuza"
+  },
+  "la-chica-que-saltaba-a-traves-del-tiempo": {
+    "titulo": "La chica que saltaba a través del tiempo",
+    "slug": "la-chica-que-saltaba-a-traves-del-tiempo"
+  },
+  "brick": {
+    "titulo": "Brick",
+    "slug": "brick"
+  },
+  "noche-de-miedo": {
+    "titulo": "Noche de miedo",
+    "slug": "noche-de-miedo"
+  },
+  "el-gabinete-del-dr-caligary": {
+    "titulo": "El gabinete del Dr. Caligary",
+    "slug": "el-gabinete-del-dr-caligary"
+  },
+  "el-hombre-con-la-camara": {
+    "titulo": "El hombre con la cámara",
+    "slug": "el-hombre-con-la-camara"
+  },
+  "cuando-pasan-las-ciguenas": {
+    "titulo": "Cuando pasan las cigüeñas",
+    "slug": "cuando-pasan-las-ciguenas"
+  },
+  "impulso-criminal": {
+    "titulo": "Impulso criminal",
+    "slug": "impulso-criminal"
+  },
+  "una-luz-en-el-hampa": {
+    "titulo": "Una luz en el hampa",
+    "slug": "una-luz-en-el-hampa"
+  },
+  "al-fuego-bomberos": {
+    "titulo": "Al fuego bomberos",
+    "slug": "al-fuego-bomberos"
+  },
+  "my-winnipeg": {
+    "titulo": "My Winnipeg",
+    "slug": "my-winnipeg"
+  },
+  "rubber": {
+    "titulo": "Rubber",
+    "slug": "rubber"
+  },
+  "suture": {
+    "titulo": "Suture",
+    "slug": "suture"
+  },
+  "el-ultimo-exorcismo": {
+    "titulo": "El último exorcismo",
+    "slug": "el-ultimo-exorcismo"
+  },
+  "valhalla-rising": {
+    "titulo": "Valhalla Rising",
+    "slug": "valhalla-rising"
+  },
+  "black-death": {
+    "titulo": "Black Death",
+    "slug": "black-death"
+  },
+  "paranoid-park": {
+    "titulo": "Paranoid Park",
+    "slug": "paranoid-park"
+  },
+  "the-driver": {
+    "titulo": "The Driver",
+    "slug": "the-driver"
+  },
+  "ocurrio-cerca-de-su-casa": {
+    "titulo": "Ocurrió cerca de su casa",
+    "slug": "ocurrio-cerca-de-su-casa"
+  },
+  "rango": {
+    "titulo": "Rango",
+    "slug": "rango"
+  },
+  "simon-del-desierto": {
+    "titulo": "Simón del desierto",
+    "slug": "simon-del-desierto"
+  },
+  "el-arte-de-vivir-pero-bien": {
+    "titulo": "El arte de vivir pero bien",
+    "slug": "el-arte-de-vivir-pero-bien"
+  },
+  "no-mataras": {
+    "titulo": "No matarás",
+    "slug": "no-mataras"
+  },
+  "un-dia-de-fiesta": {
+    "titulo": "Un día de fiesta",
+    "slug": "un-dia-de-fiesta"
+  },
+  "catfish": {
+    "titulo": "Catfish",
+    "slug": "catfish"
+  },
+  "acid-house": {
+    "titulo": "Acid House",
+    "slug": "acid-house"
+  },
+  "la-balada-de-cable-houge": {
+    "titulo": "La balada de Cable Houge",
+    "slug": "la-balada-de-cable-houge"
+  },
+  "ocho-sentencias-de-muerte": {
+    "titulo": "Ocho sentencias de muerte",
+    "slug": "ocho-sentencias-de-muerte"
+  },
+  "bigger-than-life": {
+    "titulo": "Bigger than life",
+    "slug": "bigger-than-life"
+  },
+  "kinatay": {
+    "titulo": "Kinatay",
+    "slug": "kinatay"
+  },
+  "saya-zamurai": {
+    "titulo": "Saya Zamurai",
+    "slug": "saya-zamurai"
+  },
+  "strings": {
+    "titulo": "Strings",
+    "slug": "strings"
+  },
+  "de-repente-el-ultimo-verano": {
+    "titulo": "De repente el último verano",
+    "slug": "de-repente-el-ultimo-verano"
+  },
+  "las-ciervas": {
+    "titulo": "Las ciervas",
+    "slug": "las-ciervas"
+  },
+  "la-habitacion-verde": {
+    "titulo": "La habitación verde",
+    "slug": "la-habitacion-verde"
+  },
+  "la-noche-es-nuestra": {
+    "titulo": "La noche es nuestra",
+    "slug": "la-noche-es-nuestra"
+  },
+  "wise-blood": {
+    "titulo": "Wise Blood",
+    "slug": "wise-blood"
+  },
+  "homicidio": {
+    "titulo": "Homicidio",
+    "slug": "homicidio"
+  },
+  "onibaba": {
+    "titulo": "Onibaba",
+    "slug": "onibaba"
+  },
+  "posesion-infernal": {
+    "titulo": "Posesión infernal",
+    "slug": "posesion-infernal"
+  },
+  "zombies-party": {
+    "titulo": "Zombies Party",
+    "slug": "zombies-party"
+  },
+  "mi-enemigo-intimo": {
+    "titulo": "Mi enemigo íntimo",
+    "slug": "mi-enemigo-intimo"
+  },
+  "soy-cuba": {
+    "titulo": "Soy Cuba",
+    "slug": "soy-cuba"
+  },
+  "el-ano-pasado-en-marienbad": {
+    "titulo": "El año pasado en Marienbad",
+    "slug": "el-ano-pasado-en-marienbad"
+  },
+  "la-vida-util": {
+    "titulo": "La vida útil",
+    "slug": "la-vida-util"
+  },
+  "el-primer-dia-del-resto-de-tu-vida": {
+    "titulo": "El primer día del resto de tu vida",
+    "slug": "el-primer-dia-del-resto-de-tu-vida"
+  },
+  "ser-y-tener": {
+    "titulo": "Ser y tener",
+    "slug": "ser-y-tener"
+  },
+  "serie-negra": {
+    "titulo": "Serie negra",
+    "slug": "serie-negra"
+  },
+  "bajos-fondos": {
+    "titulo": "Bajos fondos",
+    "slug": "bajos-fondos"
+  },
+  "el-fuego-fatuo": {
+    "titulo": "El fuego fatuo",
+    "slug": "el-fuego-fatuo"
+  },
+  "super": {
+    "titulo": "Super",
+    "slug": "super"
+  },
+  "allegro": {
+    "titulo": "Allegro",
+    "slug": "allegro"
+  },
+  "un-amor-de-juventud": {
+    "titulo": "Un amor de juventud",
+    "slug": "un-amor-de-juventud"
+  },
+  "essential-killing": {
+    "titulo": "Essential killing",
+    "slug": "essential-killing"
+  },
+  "las-trillizas-de-belleville": {
+    "titulo": "Las trillizas de Belleville",
+    "slug": "las-trillizas-de-belleville"
+  },
+  "arrastrame-al-infierno": {
+    "titulo": "Arrástrame al infierno",
+    "slug": "arrastrame-al-infierno"
+  },
+  "desaparecida": {
+    "titulo": "Desaparecida",
+    "slug": "desaparecida"
+  },
+  "manhunter": {
+    "titulo": "Manhunter",
+    "slug": "manhunter"
+  },
+  "koyaanisqatsi": {
+    "titulo": "Koyaanisqatsi",
+    "slug": "koyaanisqatsi"
+  },
+  "insidious": {
+    "titulo": "Insidious",
+    "slug": "insidious"
+  },
+  "los-mundos-de-coraline": {
+    "titulo": "Los mundos de Coraline",
+    "slug": "los-mundos-de-coraline"
+  },
+  "hedwig-and-the-angry-inch": {
+    "titulo": "Hedwig and the angry inch",
+    "slug": "hedwig-and-the-angry-inch"
+  },
+  "a-serbian-film": {
+    "titulo": "A serbian film",
+    "slug": "a-serbian-film"
+  },
+  "la-caza": {
+    "titulo": "La caza",
+    "slug": "la-caza"
+  },
+  "la-belleza-de-las-cosas": {
+    "titulo": "La belleza de las cosas",
+    "slug": "la-belleza-de-las-cosas"
+  },
+  "el-compromiso": {
+    "titulo": "El compromiso",
+    "slug": "el-compromiso"
+  },
+  "banda-aparte": {
+    "titulo": "Banda Aparte",
+    "slug": "banda-aparte"
+  },
+  "los-rompepelotas": {
+    "titulo": "Los rompepelotas",
+    "slug": "los-rompepelotas"
+  },
+  "hunger": {
+    "titulo": "Hunger",
+    "slug": "hunger"
+  },
+  "no": {
+    "titulo": "No",
+    "slug": "no"
+  },
+  "somos-lo-que-hay": {
+    "titulo": "Somos lo que hay",
+    "slug": "somos-lo-que-hay"
+  },
+  "el-sirviente": {
+    "titulo": "El sirviente",
+    "slug": "el-sirviente"
+  },
+  "deep-end": {
+    "titulo": "Deep End",
+    "slug": "deep-end"
+  },
+  "society": {
+    "titulo": "Society",
+    "slug": "society"
+  },
+  "posesion": {
+    "titulo": "Posesión",
+    "slug": "posesion"
+  },
+  "el-largo-adios": {
+    "titulo": "El largo adiós",
+    "slug": "el-largo-adios"
+  },
+  "impacto": {
+    "titulo": "Impacto",
+    "slug": "impacto"
+  },
+  "conocimiento-carnal": {
+    "titulo": "Conocimiento carnal",
+    "slug": "conocimiento-carnal"
+  },
+  "dead-man-s-shoes": {
+    "titulo": "Dead man's shoes",
+    "slug": "dead-man-s-shoes"
+  },
+  "las-truchas": {
+    "titulo": "Las truchas",
+    "slug": "las-truchas"
+  },
+  "emergo": {
+    "titulo": "Emergo",
+    "slug": "emergo"
+  },
+  "largo-fin-de-semana": {
+    "titulo": "Largo fin de semana",
+    "slug": "largo-fin-de-semana"
+  },
+  "el-perfecto-anfitrion": {
+    "titulo": "El perfecto anfitrión",
+    "slug": "el-perfecto-anfitrion"
+  },
+  "crumb": {
+    "titulo": "Crumb",
+    "slug": "crumb"
+  },
+  "los-chicos-de-la-banda": {
+    "titulo": "Los chicos de la banda",
+    "slug": "los-chicos-de-la-banda"
+  },
+  "contratado-para-matar": {
+    "titulo": "Contratado para matar",
+    "slug": "contratado-para-matar"
+  },
+  "fuerza-mayor": {
+    "titulo": "Fuerza Mayor",
+    "slug": "fuerza-mayor"
+  },
+  "the-duke-of-burgundy": {
+    "titulo": "The Duke of Burgundy",
+    "slug": "the-duke-of-burgundy"
+  },
+  "r100": {
+    "titulo": "R100",
+    "slug": "r100"
+  },
+  "arcadia": {
+    "titulo": "Arcadia",
+    "slug": "arcadia"
+  },
+  "otell-o": {
+    "titulo": "Otell-o",
+    "slug": "otell-o"
+  },
+  "el-esqueleto-de-la-senora-morales": {
+    "titulo": "El esqueleto de la señora morales",
+    "slug": "el-esqueleto-de-la-senora-morales"
+  },
+  "tape": {
+    "titulo": "Tape",
+    "slug": "tape"
+  },
+  "manhattan-sur": {
+    "titulo": "Manhattan Sur",
+    "slug": "manhattan-sur"
+  },
+  "testigo-silencioso": {
+    "titulo": "Testigo silencioso",
+    "slug": "testigo-silencioso"
+  },
+  "el-nadador": {
+    "titulo": "El nadador",
+    "slug": "el-nadador"
+  },
+  "dias-perros": {
+    "titulo": "Días perros",
+    "slug": "dias-perros"
+  },
+  "mentiras": {
+    "titulo": "Mentiras",
+    "slug": "mentiras"
+  },
+  "euphoria": {
+    "titulo": "Euphoria",
+    "slug": "euphoria"
+  },
+  "chess-computer": {
+    "titulo": "Chess Computer",
+    "slug": "chess-computer"
+  },
+  "le-mepris": {
+    "titulo": "Le mépris",
+    "slug": "le-mepris"
+  },
+  "en-otro-pais": {
+    "titulo": "En otro país",
+    "slug": "en-otro-pais"
+  },
+  "bone-tomahawk": {
+    "titulo": "Bone Tomahawk",
+    "slug": "bone-tomahawk"
+  },
+  "haze": {
+    "titulo": "Haze",
+    "slug": "haze"
+  },
+  "el-accidente": {
+    "titulo": "El accidente",
+    "slug": "el-accidente"
+  },
+  "kill-list": {
+    "titulo": "Kill List",
+    "slug": "kill-list"
+  },
+  "the-raid-redemption": {
+    "titulo": "The Raid Redemption",
+    "slug": "the-raid-redemption"
+  },
+  "sobre-la-marxa": {
+    "titulo": "Sobre la marxa",
+    "slug": "sobre-la-marxa"
+  },
+  "el-gran-extasis-del-escultor-de-madera-steiner": {
+    "titulo": "El gran éxtasis del escultor de madera Steiner",
+    "slug": "el-gran-extasis-del-escultor-de-madera-steiner"
+  },
+  "cold-in-july": {
+    "titulo": "Cold in July",
+    "slug": "cold-in-july"
+  },
+  "una-chica-vuelva-a-casa-sola-de-noche": {
+    "titulo": "Una chica vuelva a casa sola de noche",
+    "slug": "una-chica-vuelva-a-casa-sola-de-noche"
+  },
+  "el-mundo-sigue": {
+    "titulo": "El mundo sigue",
+    "slug": "el-mundo-sigue"
+  },
+  "the-devils": {
+    "titulo": "The Devils",
+    "slug": "the-devils"
+  },
+  "carne-viva": {
+    "titulo": "Carne viva",
+    "slug": "carne-viva"
+  },
+  "el-asesino-poeta": {
+    "titulo": "El asesino poeta",
+    "slug": "el-asesino-poeta"
+  },
+  "hausu": {
+    "titulo": "Hausu",
+    "slug": "hausu"
+  },
+  "el-desconocido-del-lago": {
+    "titulo": "El desconocido del lago",
+    "slug": "el-desconocido-del-lago"
+  },
+  "the-hit": {
+    "titulo": "The Hit",
+    "slug": "the-hit"
+  },
+  "dog-eat-dog": {
+    "titulo": "Dog eat Dog",
+    "slug": "dog-eat-dog"
+  },
+  "la-region-salvaje": {
+    "titulo": "La región salvaje",
+    "slug": "la-region-salvaje"
+  },
+  "the-one-i-love": {
+    "titulo": "The One I Love",
+    "slug": "the-one-i-love"
+  },
+  "la-fiesta-de-las-salchichas": {
+    "titulo": "La fiesta de las salchichas",
+    "slug": "la-fiesta-de-las-salchichas"
+  },
+  "a-ghost-story": {
+    "titulo": "A ghost story",
+    "slug": "a-ghost-story"
+  },
+  "mi-idaho-privado": {
+    "titulo": "Mi Idaho privado",
+    "slug": "mi-idaho-privado"
+  },
+  "sam-was-here": {
+    "titulo": "Sam Was Here",
+    "slug": "sam-was-here"
+  },
+  "io-sono-l-amore": {
+    "titulo": "Io sono l'amore",
+    "slug": "io-sono-l-amore"
+  },
+  "el-anacoreta": {
+    "titulo": "El anacoreta",
+    "slug": "el-anacoreta"
+  },
+  "lifeforce": {
+    "titulo": "Lifeforce",
+    "slug": "lifeforce"
+  },
+  "i-nuovi-mostri": {
+    "titulo": "I nuovi mostri",
+    "slug": "i-nuovi-mostri"
+  },
+  "cruising": {
+    "titulo": "Cruising",
+    "slug": "cruising"
+  },
+  "the-public-defender": {
+    "titulo": "The public defender",
+    "slug": "the-public-defender"
+  },
+  "brawl-in-cell-block-99": {
+    "titulo": "Brawl in Cell Block 99",
+    "slug": "brawl-in-cell-block-99"
+  },
+  "el-sacerdote": {
+    "titulo": "El sacerdote",
+    "slug": "el-sacerdote"
+  },
+  "the-void": {
+    "titulo": "The Void",
+    "slug": "the-void"
+  },
+  "ruby-sparks": {
+    "titulo": "Ruby Sparks",
+    "slug": "ruby-sparks"
+  },
+  "brigsby-bear": {
+    "titulo": "Brigsby Bear",
+    "slug": "brigsby-bear"
+  },
+  "billy-ted-s-excelent-adventure": {
+    "titulo": "Billy & Ted's excelent adventure",
+    "slug": "billy-ted-s-excelent-adventure"
+  },
+  "el-reverendo-first-reformed": {
+    "titulo": "El reverendo (First reformed)",
+    "slug": "el-reverendo-first-reformed"
+  },
+  "bad-timing": {
+    "titulo": "Bad Timing",
+    "slug": "bad-timing"
+  },
+  "lady-snowblood": {
+    "titulo": "Lady Snowblood",
+    "slug": "lady-snowblood"
+  },
+  "jodorowsky-s-dune": {
+    "titulo": "Jodorowsky's Dune",
+    "slug": "jodorowsky-s-dune"
+  },
+  "fando-y-lis": {
+    "titulo": "Fando y Lis",
+    "slug": "fando-y-lis"
+  },
+  "el-cienpies-humano": {
+    "titulo": "El cienpiés humano",
+    "slug": "el-cienpies-humano"
+  },
+  "la-calumnia": {
+    "titulo": "La calumnia",
+    "slug": "la-calumnia"
+  },
+  "el-manantial": {
+    "titulo": "El manantial",
+    "slug": "el-manantial"
+  },
+  "eclipse-en-el-tiempo": {
+    "titulo": "Eclipse en el tiempo",
+    "slug": "eclipse-en-el-tiempo"
+  },
+  "dragged-across-concrete": {
+    "titulo": "Dragged across concrete",
+    "slug": "dragged-across-concrete"
+  },
+  "interior-leather-bar": {
+    "titulo": "Interior. Leather bar",
+    "slug": "interior-leather-bar"
+  },
+  "the-wild-boys": {
+    "titulo": "The Wild Boys",
+    "slug": "the-wild-boys"
+  },
+  "the-fake": {
+    "titulo": "The Fake",
+    "slug": "the-fake"
+  },
+  "entre-tinieblas": {
+    "titulo": "Entre tinieblas",
+    "slug": "entre-tinieblas"
+  },
+  "spider-man-into-the-spiderverse": {
+    "titulo": "Spider man: into the spiderverse",
+    "slug": "spider-man-into-the-spiderverse"
+  },
+  "the-double": {
+    "titulo": "The Double",
+    "slug": "the-double"
+  },
+  "roman-polanski-wanted-and-desired": {
+    "titulo": "Roman Polanski: wanted and desired",
+    "slug": "roman-polanski-wanted-and-desired"
+  },
+  "fingers": {
+    "titulo": "Fingers",
+    "slug": "fingers"
+  },
+  "la-residencia": {
+    "titulo": "La residencia",
+    "slug": "la-residencia"
+  },
+  "tras-el-espejo": {
+    "titulo": "Tras el espejo",
+    "slug": "tras-el-espejo"
+  },
+  "panico-en-el-transiberiano": {
+    "titulo": "Pánico en el transiberiano",
+    "slug": "panico-en-el-transiberiano"
+  },
+  "el-largo-viernes-santo": {
+    "titulo": "El largo viernes santo",
+    "slug": "el-largo-viernes-santo"
+  },
+  "la-mujer-de-paja": {
+    "titulo": "La mujer de paja",
+    "slug": "la-mujer-de-paja"
+  },
+  "la-trampa-de-la-muerte": {
+    "titulo": "La trampa de la muerte",
+    "slug": "la-trampa-de-la-muerte"
+  },
+  "martin-eden": {
+    "titulo": "Martin Eden",
+    "slug": "martin-eden"
+  },
+  "bliss": {
+    "titulo": "Bliss",
+    "slug": "bliss"
+  },
+  "ya-no-me-siento-a-gusto-en-este-mundo": {
+    "titulo": "Ya no me siento a gusto en este mundo",
+    "slug": "ya-no-me-siento-a-gusto-en-este-mundo"
+  },
+  "donde-esta-mi-cuerpo": {
+    "titulo": "¿Dónde está mi cuerpo?",
+    "slug": "donde-esta-mi-cuerpo"
+  },
+  "movie-43": {
+    "titulo": "Movie 43",
+    "slug": "movie-43"
+  },
+  "raising-cain": {
+    "titulo": "Raising Cain",
+    "slug": "raising-cain"
+  },
+  "sesion-continua": {
+    "titulo": "Sesión continua",
+    "slug": "sesion-continua"
+  },
+  "angustia": {
+    "titulo": "Angustia",
+    "slug": "angustia"
+  },
+  "el-desencanto": {
+    "titulo": "El desencanto",
+    "slug": "el-desencanto"
+  },
+  "la-portentosa-vida-del-padre-vicente": {
+    "titulo": "La portentosa vida del padre Vicente",
+    "slug": "la-portentosa-vida-del-padre-vicente"
+  },
+  "pieles": {
+    "titulo": "Pieles",
+    "slug": "pieles"
+  },
+  "el-incidente-1967": {
+    "titulo": "El incidente (1967)",
+    "slug": "el-incidente-1967"
+  },
+  "asesinato-por-contrato": {
+    "titulo": "Asesinato por contrato",
+    "slug": "asesinato-por-contrato"
+  },
+  "milan-calibre-9": {
+    "titulo": "Milán, calibre 9",
+    "slug": "milan-calibre-9"
+  },
+  "la-rueda-de-la-fortuna-y-la-fantasia": {
+    "titulo": "La rueda de la fortuna y la fantasía",
+    "slug": "la-rueda-de-la-fortuna-y-la-fantasia"
+  },
+  "paranoiac": {
+    "titulo": "Paranoiac",
+    "slug": "paranoiac"
+  },
+  "host": {
+    "titulo": "Host",
+    "slug": "host"
+  },
+  "predestination": {
+    "titulo": "Predestination",
+    "slug": "predestination"
+  },
+  "shimmer-lake": {
+    "titulo": "Shimmer Lake",
+    "slug": "shimmer-lake"
+  },
+  "open-grave": {
+    "titulo": "Open Grave",
+    "slug": "open-grave"
+  },
+  "la-bouche-de-jean-pierre": {
+    "titulo": "La bouche de Jean Pierre",
+    "slug": "la-bouche-de-jean-pierre"
+  },
+  "malcom-and-marie": {
+    "titulo": "Malcom and Marie",
+    "slug": "malcom-and-marie"
+  },
+  "bad-boy-bubby": {
+    "titulo": "Bad boy Bubby",
+    "slug": "bad-boy-bubby"
+  },
+  "possessor": {
+    "titulo": "Possessor",
+    "slug": "possessor"
+  },
+  "juguetes-rotos": {
+    "titulo": "Juguetes rotos",
+    "slug": "juguetes-rotos"
+  },
+  "los-perros-no-llevan-pantalones": {
+    "titulo": "Los perros no llevan pantalones",
+    "slug": "los-perros-no-llevan-pantalones"
+  },
+  "el-hombre-clave": {
+    "titulo": "El hombre clave",
+    "slug": "el-hombre-clave"
+  },
+  "nuestro-hombre-de-milan": {
+    "titulo": "Nuestro hombre de Milán",
+    "slug": "nuestro-hombre-de-milan"
+  },
+  "nevada-express": {
+    "titulo": "Nevada Express",
+    "slug": "nevada-express"
+  },
+  "espiritu-sagrado": {
+    "titulo": "Espíritu sagrado",
+    "slug": "espiritu-sagrado"
+  },
+  "el-sabor-del-miedo": {
+    "titulo": "El sabor del miedo",
+    "slug": "el-sabor-del-miedo"
+  },
+  "son": {
+    "titulo": "Son",
+    "slug": "son"
+  },
+  "nivel-13": {
+    "titulo": "Nivel 13",
+    "slug": "nivel-13"
+  },
+  "cria-cuervos": {
+    "titulo": "Cría cuervos",
+    "slug": "cria-cuervos"
+  },
+  "creepshow": {
+    "titulo": "Creepshow",
+    "slug": "creepshow"
+  },
+  "sorcerer": {
+    "titulo": "Sorcerer",
+    "slug": "sorcerer"
+  },
+  "una-mujer-bajo-la-influencia": {
+    "titulo": "Una mujer bajo la influencia",
+    "slug": "una-mujer-bajo-la-influencia"
+  },
+  "marathon-man": {
+    "titulo": "Marathon Man",
+    "slug": "marathon-man"
+  },
+  "surcos": {
+    "titulo": "Surcos",
+    "slug": "surcos"
+  },
+  "los-peces-rojos": {
+    "titulo": "Los peces rojos",
+    "slug": "los-peces-rojos"
+  },
+  "relic": {
+    "titulo": "Relic",
+    "slug": "relic"
+  },
+  "chantaje-en-broadway": {
+    "titulo": "Chantaje en Broadway",
+    "slug": "chantaje-en-broadway"
+  },
+  "la-senda-tenebrosa": {
+    "titulo": "La senda tenebrosa",
+    "slug": "la-senda-tenebrosa"
+  },
+  "asesinato-por-decreto": {
+    "titulo": "Asesinato por decreto",
+    "slug": "asesinato-por-decreto"
+  },
+  "la-montana": {
+    "titulo": "La montaña",
+    "slug": "la-montana"
+  },
+  "cuando-acecha-la-maldad": {
+    "titulo": "Cuando acecha la maldad",
+    "slug": "cuando-acecha-la-maldad"
+  },
+  "oso-vicioso": {
+    "titulo": "Oso vicioso",
+    "slug": "oso-vicioso"
+  },
+  "la-novena-configuracion": {
+    "titulo": "La novena configuración",
+    "slug": "la-novena-configuracion"
+  },
+  "mandibulas": {
+    "titulo": "Mandíbulas",
+    "slug": "mandibulas"
+  },
+  "mystery-men": {
+    "titulo": "Mystery Men",
+    "slug": "mystery-men"
+  },
+  "barbarian": {
+    "titulo": "Barbarian",
+    "slug": "barbarian"
+  },
+  "passion": {
+    "titulo": "Passion",
+    "slug": "passion"
+  },
+  "shadow-in-the-cloud": {
+    "titulo": "Shadow in the cloud",
+    "slug": "shadow-in-the-cloud"
+  },
+  "el-incinerador-de-cadaveres": {
+    "titulo": "El incinerador de cadáveres",
+    "slug": "el-incinerador-de-cadaveres"
+  },
+  "la-oreja": {
+    "titulo": "La oreja",
+    "slug": "la-oreja"
+  },
+  "noches-de-vino-tinto": {
+    "titulo": "Noches de vino tinto",
+    "slug": "noches-de-vino-tinto"
+  },
+  "la-gata-negra": {
+    "titulo": "La gata negra",
+    "slug": "la-gata-negra"
+  },
+  "los-voyeurs": {
+    "titulo": "Los voyeurs",
+    "slug": "los-voyeurs"
+  },
+  "diabolik": {
+    "titulo": "Diabolik",
+    "slug": "diabolik"
+  },
+  "de-naturaleza-violenta": {
+    "titulo": "De naturaleza violenta",
+    "slug": "de-naturaleza-violenta"
+  },
+  "moebius": {
+    "titulo": "Moebius",
+    "slug": "moebius"
+  },
+  "maxxxine": {
+    "titulo": "Maxxxine",
+    "slug": "maxxxine"
+  },
+  "shiva-baby": {
+    "titulo": "Shiva Baby",
+    "slug": "shiva-baby"
+  },
+  "despidiendo-a-yang": {
+    "titulo": "Despidiendo a Yang",
+    "slug": "despidiendo-a-yang"
+  },
+  "tenacious-d": {
+    "titulo": "Tenacious D",
+    "slug": "tenacious-d"
+  },
+  "thunder-road": {
+    "titulo": "Thunder Road",
+    "slug": "thunder-road"
+  },
+  "flashback": {
+    "titulo": "Flashback",
+    "slug": "flashback"
+  },
+  "romeo-is-bleeding": {
+    "titulo": "Romeo is bleeding",
+    "slug": "romeo-is-bleeding"
+  },
+  "nina-wu": {
+    "titulo": "Nina Wu",
+    "slug": "nina-wu"
+  },
+  "nadie-te-salvara": {
+    "titulo": "Nadie te salvará",
+    "slug": "nadie-te-salvara"
+  },
+  "panico-en-las-calles": {
+    "titulo": "Pánico en las calles",
+    "slug": "panico-en-las-calles"
+  },
+  "the-artifice-girl": {
+    "titulo": "The Artifice Girl",
+    "slug": "the-artifice-girl"
+  },
+  "performance": {
+    "titulo": "Performance",
+    "slug": "performance"
+  },
+  "grand-theft-hamlet": {
+    "titulo": "Grand Theft Hamlet",
+    "slug": "grand-theft-hamlet"
+  },
+  "la-teoria-universal": {
+    "titulo": "La teoría universal",
+    "slug": "la-teoria-universal"
+  },
+  "daaaaaali": {
+    "titulo": "Daaaaaalí!",
+    "slug": "daaaaaali"
+  },
+  "bottoms": {
+    "titulo": "Bottoms",
+    "slug": "bottoms"
+  },
+  "el-bandido-de-la-luz-roja": {
+    "titulo": "El bandido de la luz roja",
+    "slug": "el-bandido-de-la-luz-roja"
+  },
+  "dashcam": {
+    "titulo": "Dashcam",
+    "slug": "dashcam"
+  },
+  "la-cocina": {
+    "titulo": "La cocina",
+    "slug": "la-cocina"
+  },
+  "cuckoo": {
+    "titulo": "Cuckoo",
+    "slug": "cuckoo"
+  },
+  "night-of-the-hunted": {
+    "titulo": "Night of the Hunted",
+    "slug": "night-of-the-hunted"
+  },
+  "domingo-de-carnaval": {
+    "titulo": "Domingo de carnaval",
+    "slug": "domingo-de-carnaval"
+  },
+  "compartimento-6": {
+    "titulo": "Compartimento 6",
+    "slug": "compartimento-6"
+  },
+  "nightsiren": {
+    "titulo": "Nightsiren",
+    "slug": "nightsiren"
+  }
+}

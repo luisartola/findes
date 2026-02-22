@@ -1,0 +1,22 @@
+{
+  "titulo": "Un día de fiesta",
+  "slug": "un-dia-de-fiesta",
+  "imdb_id": "tt0040497",
+  "year": "1949",
+  "director": "Jacques Tati",
+  "plot": "Un cartero del pueblo sin sentido del humor entrega su correo en bicicleta el día que llega la feria ambulante a la ciudad. Se ve interrumpido por un cortometraje sobre la velocidad y la eficiencia estadounidenses y las bromas juguetonas de la gente del pueblo.",
+  "poster": "https://image.tmdb.org/t/p/w500/WYuJSD1lt4xXH1tdS3FT1d1gL.jpg",
+  "genre": "Comedia",
+  "imdb_rating": null,
+  "runtime": "86 min",
+  "traida_por": [
+    "Munny"
+  ],
+  "findes": [
+    13
+  ],
+  "tmdb_id": 4595,
+  "titulo_es": "Día de fiesta",
+  "titulo_original": "Jour de fête",
+  "tmdb_rating": 7.0
+}

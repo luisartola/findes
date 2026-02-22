@@ -1,0 +1,22 @@
+{
+  "titulo": "Matadero Cinco",
+  "slug": "matadero-cinco",
+  "imdb_id": "tt0069280",
+  "year": "1972",
+  "director": "George Roy Hill",
+  "plot": "Billy Pilgrim, un veterano de la Segunda Guerra Mundial, se encuentra a sí mismo misteriosamente desligado del tiempo, de modo que es capaz de viajar, sin que pueda evitarlo, desde los días de su infancia a aquellos de su peculiar vida en un lejano planeta llamado Tralfamadore, pasando por su amarga experiencia como prisionero de guerra en la ciudad alemana de Dresde, sobre la que se cierne la sombra inevitable de una tragedia inenarrable.",
+  "poster": "https://image.tmdb.org/t/p/w500/fDL9YApgq1ZNe6sLh02lcVITp54.jpg",
+  "genre": "Drama, Ciencia ficción, Bélica",
+  "imdb_rating": null,
+  "runtime": "100 min",
+  "traida_por": [
+    "Sherlock"
+  ],
+  "findes": [
+    5
+  ],
+  "tmdb_id": 24559,
+  "titulo_es": "Matadero Cinco",
+  "titulo_original": "Slaughterhouse-Five",
+  "tmdb_rating": 6.5
+}

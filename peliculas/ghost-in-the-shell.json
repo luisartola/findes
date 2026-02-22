@@ -1,0 +1,22 @@
+{
+  "titulo": "Ghost in the shell",
+  "slug": "ghost-in-the-shell",
+  "imdb_id": "tt0113568",
+  "year": "1995",
+  "director": "Mamoru Oshii",
+  "plot": "En un futuro no muy lejano, un grupo de agentes especiales se disponen a encontrar a un hacker misterioso conocido como \"Puppet Master\". En la búsqueda descubrirán alarmantes secretos acerca de la evolución de la inteligencia artificial. La película fue una gran inspiración para la trilogía de Matrix.",
+  "poster": "https://image.tmdb.org/t/p/w500/mo4PUj0SWiX33uQMgxyzE2ZOPBK.jpg",
+  "genre": "Acción, Animación, Ciencia ficción",
+  "imdb_rating": null,
+  "runtime": "82 min",
+  "traida_por": [
+    "Munny"
+  ],
+  "findes": [
+    1
+  ],
+  "tmdb_id": 9323,
+  "titulo_es": "Ghost in the Shell",
+  "titulo_original": "GHOST IN THE SHELL",
+  "tmdb_rating": 7.9
+}

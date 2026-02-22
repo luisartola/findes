@@ -1,0 +1,2919 @@
+[
+  {
+    "numero": 1,
+    "lugar": "Asín (Corral de Bartolo)",
+    "fecha": "Agosto 2005",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "La palabra",
+            "slug": "la-palabra"
+          },
+          {
+            "titulo": "El pistolero",
+            "slug": "el-pistolero"
+          },
+          {
+            "titulo": "El cuarto mandamiento",
+            "slug": "el-cuarto-mandamiento"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Pi",
+            "slug": "pi"
+          },
+          {
+            "titulo": "Donnie Darko",
+            "slug": "donnie-darko"
+          },
+          {
+            "titulo": "Happiness",
+            "slug": "happiness"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "La vida privada de Sherlock Holmes",
+            "slug": "la-vida-privada-de-sherlock-holmes"
+          },
+          {
+            "titulo": "Clerks",
+            "slug": "clerks"
+          },
+          {
+            "titulo": "El amanecer de los muertos",
+            "slug": "el-amanecer-de-los-muertos"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "La ley de la calle",
+            "slug": "la-ley-de-la-calle"
+          },
+          {
+            "titulo": "La huella",
+            "slug": "la-huella"
+          },
+          {
+            "titulo": "Soñadores",
+            "slug": "sonadores"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Cube",
+            "slug": "cube"
+          },
+          {
+            "titulo": "Pulp Fiction",
+            "slug": "pulp-fiction"
+          },
+          {
+            "titulo": "Guerreros del viento",
+            "slug": "guerreros-del-viento"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "Ghost in the shell",
+            "slug": "ghost-in-the-shell"
+          },
+          {
+            "titulo": "Irreversible",
+            "slug": "irreversible"
+          },
+          {
+            "titulo": "1984",
+            "slug": "1984"
+          }
+        ]
+      },
+      {
+        "nombre": "Mario",
+        "peliculas": [
+          {
+            "titulo": "Fantasía",
+            "slug": "fantasia"
+          },
+          {
+            "titulo": "Atrapado por su pasado",
+            "slug": "atrapado-por-su-pasado"
+          },
+          {
+            "titulo": "La muerte tenía un precio",
+            "slug": "la-muerte-tenia-un-precio"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2005-08",
+    "lugares": [
+      "Asín (Corral de Bartolo)"
+    ]
+  },
+  {
+    "numero": 2,
+    "lugar": "Estella (Beiger's House)",
+    "fecha": "Invierno 2006",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Encadenados",
+            "slug": "encadenados"
+          },
+          {
+            "titulo": "El Crack",
+            "slug": "el-crack"
+          },
+          {
+            "titulo": "Nadie puede vencerme",
+            "slug": "nadie-puede-vencerme"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Recuerdos",
+            "slug": "recuerdos"
+          },
+          {
+            "titulo": "Ladrón de orquídeas",
+            "slug": "ladron-de-orquideas"
+          },
+          {
+            "titulo": "Los Tennenbaums",
+            "slug": "los-tennenbaums"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Gummo",
+            "slug": "gummo"
+          },
+          {
+            "titulo": "Hervidero",
+            "slug": "hervidero"
+          },
+          {
+            "titulo": "Videodrome",
+            "slug": "videodrome"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Looking for Richard",
+            "slug": "looking-for-richard"
+          },
+          {
+            "titulo": "Una pura formalidad",
+            "slug": "una-pura-formalidad"
+          },
+          {
+            "titulo": "Boogie nights",
+            "slug": "boogie-nights"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Underground",
+            "slug": "underground"
+          },
+          {
+            "titulo": "Al final de la escalera",
+            "slug": "al-final-de-la-escalera"
+          },
+          {
+            "titulo": "El ansia",
+            "slug": "el-ansia"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "La pequeña tienda de los horrores",
+            "slug": "la-pequena-tienda-de-los-horrores"
+          },
+          {
+            "titulo": "La torre de los siete jorobados",
+            "slug": "la-torre-de-los-siete-jorobados"
+          },
+          {
+            "titulo": "High art",
+            "slug": "high-art"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2006-01",
+    "lugares": [
+      "Estella (Beiger's House)"
+    ]
+  },
+  {
+    "numero": 3,
+    "lugar": "Huesca (Munny's House)",
+    "fecha": "Agosto 2006",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Anatomía de un asesinato",
+            "slug": "anatomia-de-un-asesinato"
+          },
+          {
+            "titulo": "Stalker",
+            "slug": "stalker"
+          },
+          {
+            "titulo": "El secreto de Vera Drake",
+            "slug": "el-secreto-de-vera-drake"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "American Splendor",
+            "slug": "american-splendor"
+          },
+          {
+            "titulo": "La invasión de los ultracuerpos",
+            "slug": "la-invasion-de-los-ultracuerpos"
+          },
+          {
+            "titulo": "Náufragos",
+            "slug": "naufragos"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Tetsuo",
+            "slug": "tetsuo"
+          },
+          {
+            "titulo": "Porco Rosso",
+            "slug": "porco-rosso"
+          },
+          {
+            "titulo": "Alphaville",
+            "slug": "alphaville"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Kundun",
+            "slug": "kundun"
+          },
+          {
+            "titulo": "New York, New York",
+            "slug": "new-york-new-york"
+          },
+          {
+            "titulo": "Reencarnación",
+            "slug": "reencarnacion"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Canción de cuna para un cadáver",
+            "slug": "cancion-de-cuna-para-un-cadaver"
+          },
+          {
+            "titulo": "Corazón salvaje",
+            "slug": "corazon-salvaje"
+          },
+          {
+            "titulo": "Cronos",
+            "slug": "cronos"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "Cuando el viento sopla",
+            "slug": "cuando-el-viento-sopla"
+          },
+          {
+            "titulo": "Saló",
+            "slug": "salo"
+          },
+          {
+            "titulo": "Shine",
+            "slug": "shine"
+          }
+        ]
+      },
+      {
+        "nombre": "Mario",
+        "peliculas": [
+          {
+            "titulo": "El efecto mariposa",
+            "slug": "el-efecto-mariposa"
+          },
+          {
+            "titulo": "Algo en común",
+            "slug": "algo-en-comun"
+          },
+          {
+            "titulo": "Hasta que llegó su hora",
+            "slug": "hasta-que-llego-su-hora"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2006-08",
+    "lugares": [
+      "Huesca (Munny's House)"
+    ]
+  },
+  {
+    "numero": 4,
+    "lugar": "Lastur (Vaquillas)",
+    "fecha": "Invierno 2007",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Léolo",
+            "slug": "leolo"
+          },
+          {
+            "titulo": "Persona",
+            "slug": "persona"
+          },
+          {
+            "titulo": "Te querré siempre",
+            "slug": "te-querre-siempre"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Irma Vep",
+            "slug": "irma-vep"
+          },
+          {
+            "titulo": "Tú y yo y todo lo demás",
+            "slug": "tu-y-yo-y-todo-lo-demas"
+          },
+          {
+            "titulo": "Viaje alucinante al fondo de la mente",
+            "slug": "viaje-alucinante-al-fondo-de-la-mente"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Los ojos sin rostro",
+            "slug": "los-ojos-sin-rostro"
+          },
+          {
+            "titulo": "El samurai",
+            "slug": "el-samurai"
+          },
+          {
+            "titulo": "Historia de Ricki",
+            "slug": "historia-de-ricki"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "El quimérico inquilino",
+            "slug": "el-quimerico-inquilino"
+          },
+          {
+            "titulo": "Shopping",
+            "slug": "shopping"
+          },
+          {
+            "titulo": "Agirre y la cólera de dios",
+            "slug": "agirre-y-la-colera-de-dios"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Chunking express",
+            "slug": "chunking-express"
+          },
+          {
+            "titulo": "Doberman",
+            "slug": "doberman"
+          },
+          {
+            "titulo": "Azul",
+            "slug": "azul"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "El maquinista de la general",
+            "slug": "el-maquinista-de-la-general"
+          },
+          {
+            "titulo": "Matar a un ruiseñor",
+            "slug": "matar-a-un-ruisenor"
+          },
+          {
+            "titulo": "Arrebato",
+            "slug": "arrebato"
+          }
+        ]
+      },
+      {
+        "nombre": "Mario",
+        "peliculas": [
+          {
+            "titulo": "Bloody Sunday",
+            "slug": "bloody-sunday"
+          },
+          {
+            "titulo": "La noche cae sobre Manhattan",
+            "slug": "la-noche-cae-sobre-manhattan"
+          },
+          {
+            "titulo": "Albino Alligator",
+            "slug": "albino-alligator"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2007-01",
+    "lugares": [
+      "Lastur (Vaquillas)"
+    ]
+  },
+  {
+    "numero": 5,
+    "lugar": "Valtierra (Cuevas)",
+    "fecha": "Verano 2007",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Stromboli",
+            "slug": "stromboli"
+          },
+          {
+            "titulo": "Exotica",
+            "slug": "exotica"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Tristam Shandy",
+            "slug": "tristam-shandy"
+          },
+          {
+            "titulo": "Matadero Cinco",
+            "slug": "matadero-cinco"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Cosa ruim",
+            "slug": "cosa-ruim"
+          },
+          {
+            "titulo": "Demonlover",
+            "slug": "demonlover"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "La conversación",
+            "slug": "la-conversacion"
+          },
+          {
+            "titulo": "Breaking and entering",
+            "slug": "breaking-and-entering"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "La noche de los girasoles",
+            "slug": "la-noche-de-los-girasoles"
+          },
+          {
+            "titulo": "Cyclo",
+            "slug": "cyclo"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "Yo vigilo el camino",
+            "slug": "yo-vigilo-el-camino"
+          },
+          {
+            "titulo": "Calles de fuego",
+            "slug": "calles-de-fuego"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2007-07",
+    "lugares": [
+      "Valtierra (Cuevas)"
+    ]
+  },
+  {
+    "numero": 6,
+    "lugar": "Valtierra (Cuevas)",
+    "fecha": "02/09/2008",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Todo sobre Lily",
+            "slug": "todo-sobre-lily"
+          },
+          {
+            "titulo": "La gran comilona",
+            "slug": "la-gran-comilona"
+          },
+          {
+            "titulo": "Eva al desnudo",
+            "slug": "eva-al-desnudo"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Factotum",
+            "slug": "factotum"
+          },
+          {
+            "titulo": "Paprika",
+            "slug": "paprika"
+          },
+          {
+            "titulo": "Offscreen",
+            "slug": "offscreen"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "La noche americana",
+            "slug": "la-noche-americana"
+          },
+          {
+            "titulo": "Breaking News",
+            "slug": "breaking-news"
+          },
+          {
+            "titulo": "Mistery Train",
+            "slug": "mistery-train"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Plan diabólico",
+            "slug": "plan-diabolico"
+          },
+          {
+            "titulo": "8 y medio",
+            "slug": "8-y-medio"
+          },
+          {
+            "titulo": "Goya en Burdeos",
+            "slug": "goya-en-burdeos"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "La linterna roja",
+            "slug": "la-linterna-roja"
+          },
+          {
+            "titulo": "Velvet Goldmine",
+            "slug": "velvet-goldmine"
+          },
+          {
+            "titulo": "The descent",
+            "slug": "the-descent"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "La madre muerta",
+            "slug": "la-madre-muerta"
+          },
+          {
+            "titulo": "Malpertuis",
+            "slug": "malpertuis"
+          },
+          {
+            "titulo": "Seres extraños",
+            "slug": "seres-extranos"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2008-09-02",
+    "lugares": [
+      "Valtierra (Cuevas)"
+    ]
+  },
+  {
+    "numero": 7,
+    "lugar": "Artarain (Casa del Arco)",
+    "fecha": "17/10/2008",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Conspiración de silencio",
+            "slug": "conspiracion-de-silencio"
+          },
+          {
+            "titulo": "Dos en la carretera",
+            "slug": "dos-en-la-carretera"
+          },
+          {
+            "titulo": "Los sobornados",
+            "slug": "los-sobornados"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Dai Nipponjin",
+            "slug": "dai-nipponjin"
+          },
+          {
+            "titulo": "Los coches que devoraron Paris",
+            "slug": "los-coches-que-devoraron-paris"
+          },
+          {
+            "titulo": "La escafandra y la mariposa",
+            "slug": "la-escafandra-y-la-mariposa"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Jules y Jim",
+            "slug": "jules-y-jim"
+          },
+          {
+            "titulo": "Gun Crazy",
+            "slug": "gun-crazy"
+          },
+          {
+            "titulo": "Bubba Ho tep",
+            "slug": "bubba-ho-tep"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Ensayo de orquesta",
+            "slug": "ensayo-de-orquesta"
+          },
+          {
+            "titulo": "Sidney",
+            "slug": "sidney"
+          },
+          {
+            "titulo": "Fido",
+            "slug": "fido"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "La pianista",
+            "slug": "la-pianista"
+          },
+          {
+            "titulo": "Vampyr",
+            "slug": "vampyr"
+          },
+          {
+            "titulo": "Frágiles",
+            "slug": "fragiles"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "El hombre que mira",
+            "slug": "el-hombre-que-mira"
+          },
+          {
+            "titulo": "Barry Lindon",
+            "slug": "barry-lindon"
+          },
+          {
+            "titulo": "Slipstream",
+            "slug": "slipstream"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2008-10-17",
+    "lugares": [
+      "Artarain (Casa del Arco)"
+    ]
+  },
+  {
+    "numero": 8,
+    "lugar": "Valtierra (Cuevas)",
+    "fecha": "13/02/2009",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Once",
+            "slug": "once"
+          },
+          {
+            "titulo": "El beso mortal",
+            "slug": "el-beso-mortal"
+          },
+          {
+            "titulo": "Damnation",
+            "slug": "damnation"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Epidemic",
+            "slug": "epidemic"
+          },
+          {
+            "titulo": "H-History",
+            "slug": "h-history"
+          },
+          {
+            "titulo": "Hiroshima, Mon amour",
+            "slug": "hiroshima-mon-amour"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "¿Quién puede matar a un niño?",
+            "slug": "quien-puede-matar-a-un-nino"
+          },
+          {
+            "titulo": "Borrachera de poder",
+            "slug": "borrachera-de-poder"
+          },
+          {
+            "titulo": "El carnicero",
+            "slug": "el-carnicero"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Southland tales",
+            "slug": "southland-tales"
+          },
+          {
+            "titulo": "El rey de la comedia",
+            "slug": "el-rey-de-la-comedia"
+          },
+          {
+            "titulo": "JCVD",
+            "slug": "jcvd"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Mi vida sin mí",
+            "slug": "mi-vida-sin-mi"
+          },
+          {
+            "titulo": "Cuentos de la luna pálida",
+            "slug": "cuentos-de-la-luna-palida"
+          },
+          {
+            "titulo": "El amante",
+            "slug": "el-amante"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "Salvad al tigre",
+            "slug": "salvad-al-tigre"
+          },
+          {
+            "titulo": "Nuestros maravillosos aliados",
+            "slug": "nuestros-maravillosos-aliados"
+          },
+          {
+            "titulo": "Hombres intrépidos",
+            "slug": "hombres-intrepidos"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2009-02-13",
+    "lugares": [
+      "Valtierra (Cuevas)"
+    ]
+  },
+  {
+    "numero": 9,
+    "lugar": "Valtierra (Cuevas)",
+    "fecha": "23/10/2009",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Old joy",
+            "slug": "old-joy"
+          },
+          {
+            "titulo": "Vexille (no vista por error)",
+            "slug": "vexille-no-vista-por-error"
+          },
+          {
+            "titulo": "Detour",
+            "slug": "detour"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Tokyo!",
+            "slug": "tokyo"
+          },
+          {
+            "titulo": "Vals con Bashir",
+            "slug": "vals-con-bashir"
+          },
+          {
+            "titulo": "Princess",
+            "slug": "princess"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Bienvenido Mr Chance",
+            "slug": "bienvenido-mr-chance"
+          },
+          {
+            "titulo": "Noche de estreno",
+            "slug": "noche-de-estreno"
+          },
+          {
+            "titulo": "Julia",
+            "slug": "julia"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Mishima",
+            "slug": "mishima"
+          },
+          {
+            "titulo": "Teniente corrupto",
+            "slug": "teniente-corrupto"
+          },
+          {
+            "titulo": "El hombre que cayó a la tierra",
+            "slug": "el-hombre-que-cayo-a-la-tierra"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Querelle",
+            "slug": "querelle"
+          },
+          {
+            "titulo": "Harold y Maude",
+            "slug": "harold-y-maude"
+          },
+          {
+            "titulo": "El segundo nombre",
+            "slug": "el-segundo-nombre"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "Un condenado a muerte se ha escapado",
+            "slug": "un-condenado-a-muerte-se-ha-escapado"
+          },
+          {
+            "titulo": "La vida privada de Enrique VIII",
+            "slug": "la-vida-privada-de-enrique-viii"
+          },
+          {
+            "titulo": "Blow-up",
+            "slug": "blow-up"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2009-10-23",
+    "lugares": [
+      "Valtierra (Cuevas)"
+    ]
+  },
+  {
+    "numero": 10,
+    "lugar": "Arguedas (Pinturitas)",
+    "fecha": "23/04/2010",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "La venganza de un actor",
+            "slug": "la-venganza-de-un-actor"
+          },
+          {
+            "titulo": "Pauline en la playa",
+            "slug": "pauline-en-la-playa"
+          },
+          {
+            "titulo": "Tres días con la familia",
+            "slug": "tres-dias-con-la-familia"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Retrato de una obsesión",
+            "slug": "retrato-de-una-obsesion"
+          },
+          {
+            "titulo": "A l´interieur",
+            "slug": "a-l-interieur"
+          },
+          {
+            "titulo": "Teniente corrupto",
+            "slug": "teniente-corrupto"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "El ente",
+            "slug": "el-ente"
+          },
+          {
+            "titulo": "Ana y los lobos",
+            "slug": "ana-y-los-lobos"
+          },
+          {
+            "titulo": "Nubes pasajeras",
+            "slug": "nubes-pasajeras"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "All that jazz",
+            "slug": "all-that-jazz"
+          },
+          {
+            "titulo": "El asesinato de Jesse James...",
+            "slug": "el-asesinato-de-jesse-james"
+          },
+          {
+            "titulo": "El séptimo continente",
+            "slug": "el-septimo-continente"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Los demonios en mi puerta",
+            "slug": "los-demonios-en-mi-puerta"
+          },
+          {
+            "titulo": "Thirst",
+            "slug": "thirst"
+          },
+          {
+            "titulo": "Rashomon",
+            "slug": "rashomon"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "Huesos",
+            "slug": "huesos"
+          },
+          {
+            "titulo": "El crimen del cine oriente",
+            "slug": "el-crimen-del-cine-oriente"
+          },
+          {
+            "titulo": "El bosque del lobo",
+            "slug": "el-bosque-del-lobo"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2010-04-23",
+    "lugares": [
+      "Arguedas (Pinturitas)"
+    ]
+  },
+  {
+    "numero": 11,
+    "lugar": "Arguedas (Pinturitas)",
+    "fecha": "12/10/2010",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Chantaje a una mujer",
+            "slug": "chantaje-a-una-mujer"
+          },
+          {
+            "titulo": "Canciones del segundo piso",
+            "slug": "canciones-del-segundo-piso"
+          },
+          {
+            "titulo": "Yodo",
+            "slug": "yodo"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Pesadilla en Elm Street 7",
+            "slug": "pesadilla-en-elm-street-7"
+          },
+          {
+            "titulo": "5 Condiciones",
+            "slug": "5-condiciones"
+          },
+          {
+            "titulo": "Fraude",
+            "slug": "fraude"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Triangle",
+            "slug": "triangle"
+          },
+          {
+            "titulo": "La vergüenza",
+            "slug": "la-verguenza"
+          },
+          {
+            "titulo": "3 días",
+            "slug": "3-dias"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "El beso de la pantera",
+            "slug": "el-beso-de-la-pantera"
+          },
+          {
+            "titulo": "Amenaza en la sombra",
+            "slug": "amenaza-en-la-sombra"
+          },
+          {
+            "titulo": "Doble cuerpo",
+            "slug": "doble-cuerpo"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "El extraño viaje",
+            "slug": "el-extrano-viaje"
+          },
+          {
+            "titulo": "Las diabólicas",
+            "slug": "las-diabolicas"
+          },
+          {
+            "titulo": "La escalera de Jacob",
+            "slug": "la-escalera-de-jacob"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "El habitante incierto",
+            "slug": "el-habitante-incierto"
+          },
+          {
+            "titulo": "Taxidermia",
+            "slug": "taxidermia"
+          },
+          {
+            "titulo": "El cocinero, el ladrón, su mujer y su amante",
+            "slug": "el-cocinero-el-ladron-su-mujer-y-su-amante"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2010-10-12",
+    "lugares": [
+      "Arguedas (Pinturitas)"
+    ]
+  },
+  {
+    "numero": 12,
+    "lugar": "Arguedas (Pinturitas)",
+    "fecha": "02/04/2011",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "5x2",
+            "slug": "5x2"
+          },
+          {
+            "titulo": "Yo soy curiosa (amarillo)",
+            "slug": "yo-soy-curiosa-amarillo"
+          },
+          {
+            "titulo": "5 cm/s",
+            "slug": "5-cm-s"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Symbol",
+            "slug": "symbol"
+          },
+          {
+            "titulo": "Scott Pilgrim contra el mundo",
+            "slug": "scott-pilgrim-contra-el-mundo"
+          },
+          {
+            "titulo": "Jacuzzi al pasado",
+            "slug": "jacuzzi-al-pasado"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "La escopeta nacional",
+            "slug": "la-escopeta-nacional"
+          },
+          {
+            "titulo": "Un burgués pequeño, muy pequeño",
+            "slug": "un-burgues-pequeno-muy-pequeno"
+          },
+          {
+            "titulo": "Perfect Blue",
+            "slug": "perfect-blue"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Los amantes del Pont-Neuf",
+            "slug": "los-amantes-del-pont-neuf"
+          },
+          {
+            "titulo": "El espía",
+            "slug": "el-espia"
+          },
+          {
+            "titulo": "Yakuza",
+            "slug": "yakuza"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "La chica que saltaba a través del tiempo",
+            "slug": "la-chica-que-saltaba-a-traves-del-tiempo"
+          },
+          {
+            "titulo": "Brick",
+            "slug": "brick"
+          },
+          {
+            "titulo": "Noche de miedo",
+            "slug": "noche-de-miedo"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "El gabinete del Dr. Caligary",
+            "slug": "el-gabinete-del-dr-caligary"
+          },
+          {
+            "titulo": "El hombre con la cámara",
+            "slug": "el-hombre-con-la-camara"
+          },
+          {
+            "titulo": "Cuando pasan las cigüeñas",
+            "slug": "cuando-pasan-las-ciguenas"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2011-04-02",
+    "lugares": [
+      "Arguedas (Pinturitas)"
+    ]
+  },
+  {
+    "numero": 13,
+    "lugar": "Bera",
+    "fecha": "11/11/2011",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Impulso criminal",
+            "slug": "impulso-criminal"
+          },
+          {
+            "titulo": "Una luz en el hampa",
+            "slug": "una-luz-en-el-hampa"
+          },
+          {
+            "titulo": "Al fuego bomberos",
+            "slug": "al-fuego-bomberos"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "My Winnipeg",
+            "slug": "my-winnipeg"
+          },
+          {
+            "titulo": "Rubber",
+            "slug": "rubber"
+          },
+          {
+            "titulo": "Suture",
+            "slug": "suture"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "El último exorcismo",
+            "slug": "el-ultimo-exorcismo"
+          },
+          {
+            "titulo": "Valhalla Rising",
+            "slug": "valhalla-rising"
+          },
+          {
+            "titulo": "Black Death",
+            "slug": "black-death"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Paranoid Park",
+            "slug": "paranoid-park"
+          },
+          {
+            "titulo": "The Driver",
+            "slug": "the-driver"
+          },
+          {
+            "titulo": "Ocurrió cerca de su casa",
+            "slug": "ocurrio-cerca-de-su-casa"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Rango",
+            "slug": "rango"
+          },
+          {
+            "titulo": "Simón del desierto",
+            "slug": "simon-del-desierto"
+          },
+          {
+            "titulo": "El arte de vivir pero bien",
+            "slug": "el-arte-de-vivir-pero-bien"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "No matarás",
+            "slug": "no-mataras"
+          },
+          {
+            "titulo": "Un día de fiesta",
+            "slug": "un-dia-de-fiesta"
+          },
+          {
+            "titulo": "Catfish",
+            "slug": "catfish"
+          }
+        ]
+      },
+      {
+        "nombre": "Olmo",
+        "peliculas": [
+          {
+            "titulo": "Acid House",
+            "slug": "acid-house"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2011-11-11",
+    "lugares": [
+      "Bera"
+    ]
+  },
+  {
+    "numero": 14,
+    "lugar": "Bera",
+    "fecha": "03/02/2012",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "La balada de Cable Houge",
+            "slug": "la-balada-de-cable-houge"
+          },
+          {
+            "titulo": "Ocho sentencias de muerte",
+            "slug": "ocho-sentencias-de-muerte"
+          },
+          {
+            "titulo": "Bigger than life",
+            "slug": "bigger-than-life"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Kinatay",
+            "slug": "kinatay"
+          },
+          {
+            "titulo": "Saya Zamurai",
+            "slug": "saya-zamurai"
+          },
+          {
+            "titulo": "Strings",
+            "slug": "strings"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "De repente el último verano",
+            "slug": "de-repente-el-ultimo-verano"
+          },
+          {
+            "titulo": "Las ciervas",
+            "slug": "las-ciervas"
+          },
+          {
+            "titulo": "La habitación verde",
+            "slug": "la-habitacion-verde"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "La noche es nuestra",
+            "slug": "la-noche-es-nuestra"
+          },
+          {
+            "titulo": "Wise Blood",
+            "slug": "wise-blood"
+          },
+          {
+            "titulo": "Homicidio",
+            "slug": "homicidio"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Onibaba",
+            "slug": "onibaba"
+          },
+          {
+            "titulo": "Posesión infernal",
+            "slug": "posesion-infernal"
+          },
+          {
+            "titulo": "Zombies Party",
+            "slug": "zombies-party"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "Mi enemigo íntimo",
+            "slug": "mi-enemigo-intimo"
+          },
+          {
+            "titulo": "Soy Cuba",
+            "slug": "soy-cuba"
+          },
+          {
+            "titulo": "El año pasado en Marienbad",
+            "slug": "el-ano-pasado-en-marienbad"
+          }
+        ]
+      },
+      {
+        "nombre": "Olmo",
+        "peliculas": [
+          {
+            "titulo": "La vida útil",
+            "slug": "la-vida-util"
+          },
+          {
+            "titulo": "El primer día del resto de tu vida",
+            "slug": "el-primer-dia-del-resto-de-tu-vida"
+          },
+          {
+            "titulo": "Ser y tener",
+            "slug": "ser-y-tener"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2012-02-03",
+    "lugares": [
+      "Bera"
+    ]
+  },
+  {
+    "numero": 15,
+    "lugar": "Bera",
+    "fecha": "19/10/2012",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Serie negra",
+            "slug": "serie-negra"
+          },
+          {
+            "titulo": "Bajos fondos",
+            "slug": "bajos-fondos"
+          },
+          {
+            "titulo": "El fuego fatuo",
+            "slug": "el-fuego-fatuo"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Super",
+            "slug": "super"
+          },
+          {
+            "titulo": "Allegro",
+            "slug": "allegro"
+          },
+          {
+            "titulo": "Un amor de juventud",
+            "slug": "un-amor-de-juventud"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Essential killing",
+            "slug": "essential-killing"
+          },
+          {
+            "titulo": "Las trillizas de Belleville",
+            "slug": "las-trillizas-de-belleville"
+          },
+          {
+            "titulo": "Arrástrame al infierno",
+            "slug": "arrastrame-al-infierno"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Desaparecida",
+            "slug": "desaparecida"
+          },
+          {
+            "titulo": "Manhunter",
+            "slug": "manhunter"
+          },
+          {
+            "titulo": "Koyaanisqatsi",
+            "slug": "koyaanisqatsi"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Insidious",
+            "slug": "insidious"
+          },
+          {
+            "titulo": "Los mundos de Coraline",
+            "slug": "los-mundos-de-coraline"
+          },
+          {
+            "titulo": "Hedwig and the angry inch",
+            "slug": "hedwig-and-the-angry-inch"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "A serbian film",
+            "slug": "a-serbian-film"
+          },
+          {
+            "titulo": "La caza",
+            "slug": "la-caza"
+          },
+          {
+            "titulo": "La belleza de las cosas",
+            "slug": "la-belleza-de-las-cosas"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2012-10-19",
+    "lugares": [
+      "Bera"
+    ]
+  },
+  {
+    "numero": 16,
+    "lugar": "Bera",
+    "fecha": "15/11/2013",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "El compromiso",
+            "slug": "el-compromiso"
+          },
+          {
+            "titulo": "Banda Aparte",
+            "slug": "banda-aparte"
+          },
+          {
+            "titulo": "Los rompepelotas",
+            "slug": "los-rompepelotas"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Hunger",
+            "slug": "hunger"
+          },
+          {
+            "titulo": "No",
+            "slug": "no"
+          },
+          {
+            "titulo": "Somos lo que hay",
+            "slug": "somos-lo-que-hay"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "El sirviente",
+            "slug": "el-sirviente"
+          },
+          {
+            "titulo": "Deep End",
+            "slug": "deep-end"
+          },
+          {
+            "titulo": "Society",
+            "slug": "society"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Posesión",
+            "slug": "posesion"
+          },
+          {
+            "titulo": "El largo adiós",
+            "slug": "el-largo-adios"
+          },
+          {
+            "titulo": "Impacto",
+            "slug": "impacto"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Conocimiento carnal",
+            "slug": "conocimiento-carnal"
+          },
+          {
+            "titulo": "Dead man's shoes",
+            "slug": "dead-man-s-shoes"
+          },
+          {
+            "titulo": "Las truchas",
+            "slug": "las-truchas"
+          }
+        ]
+      },
+      {
+        "nombre": "Munny",
+        "peliculas": [
+          {
+            "titulo": "Emergo",
+            "slug": "emergo"
+          },
+          {
+            "titulo": "Largo fin de semana",
+            "slug": "largo-fin-de-semana"
+          },
+          {
+            "titulo": "El perfecto anfitrión",
+            "slug": "el-perfecto-anfitrion"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2013-11-15",
+    "lugares": [
+      "Bera"
+    ]
+  },
+  {
+    "numero": 17,
+    "lugar": "Rentería",
+    "fecha": "13/11/2015",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Crumb",
+            "slug": "crumb"
+          },
+          {
+            "titulo": "Los chicos de la banda",
+            "slug": "los-chicos-de-la-banda"
+          },
+          {
+            "titulo": "Contratado para matar",
+            "slug": "contratado-para-matar"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Fuerza Mayor",
+            "slug": "fuerza-mayor"
+          },
+          {
+            "titulo": "The Duke of Burgundy",
+            "slug": "the-duke-of-burgundy"
+          },
+          {
+            "titulo": "R100",
+            "slug": "r100"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Arcadia",
+            "slug": "arcadia"
+          },
+          {
+            "titulo": "Otell-o",
+            "slug": "otell-o"
+          },
+          {
+            "titulo": "El esqueleto de la señora morales",
+            "slug": "el-esqueleto-de-la-senora-morales"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Tape",
+            "slug": "tape"
+          },
+          {
+            "titulo": "Manhattan Sur",
+            "slug": "manhattan-sur"
+          },
+          {
+            "titulo": "Testigo silencioso",
+            "slug": "testigo-silencioso"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "El nadador",
+            "slug": "el-nadador"
+          },
+          {
+            "titulo": "Días perros",
+            "slug": "dias-perros"
+          },
+          {
+            "titulo": "Mentiras",
+            "slug": "mentiras"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2015-11-13",
+    "lugares": [
+      "Rentería"
+    ]
+  },
+  {
+    "numero": 18,
+    "lugar": "Igantzi",
+    "fecha": "11/11/2016",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Euphoria",
+            "slug": "euphoria"
+          },
+          {
+            "titulo": "Chess Computer",
+            "slug": "chess-computer"
+          },
+          {
+            "titulo": "Le mépris",
+            "slug": "le-mepris"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "En otro país",
+            "slug": "en-otro-pais"
+          },
+          {
+            "titulo": "Bone Tomahawk",
+            "slug": "bone-tomahawk"
+          },
+          {
+            "titulo": "Haze",
+            "slug": "haze"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "El accidente",
+            "slug": "el-accidente"
+          },
+          {
+            "titulo": "Kill List",
+            "slug": "kill-list"
+          },
+          {
+            "titulo": "The Raid Redemption",
+            "slug": "the-raid-redemption"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Sobre la marxa",
+            "slug": "sobre-la-marxa"
+          },
+          {
+            "titulo": "El gran éxtasis del escultor de madera Steiner",
+            "slug": "el-gran-extasis-del-escultor-de-madera-steiner"
+          },
+          {
+            "titulo": "Cold in July",
+            "slug": "cold-in-july"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Una chica vuelva a casa sola de noche",
+            "slug": "una-chica-vuelva-a-casa-sola-de-noche"
+          },
+          {
+            "titulo": "El mundo sigue",
+            "slug": "el-mundo-sigue"
+          },
+          {
+            "titulo": "The Devils",
+            "slug": "the-devils"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2016-11-11",
+    "lugares": [
+      "Igantzi"
+    ]
+  },
+  {
+    "numero": 19,
+    "lugar": "Bera",
+    "fecha": "10/06/2017",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Carne viva",
+            "slug": "carne-viva"
+          },
+          {
+            "titulo": "El asesino poeta",
+            "slug": "el-asesino-poeta"
+          },
+          {
+            "titulo": "Hausu",
+            "slug": "hausu"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "El desconocido del lago",
+            "slug": "el-desconocido-del-lago"
+          },
+          {
+            "titulo": "The Hit",
+            "slug": "the-hit"
+          },
+          {
+            "titulo": "Dog eat Dog",
+            "slug": "dog-eat-dog"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "La región salvaje",
+            "slug": "la-region-salvaje"
+          },
+          {
+            "titulo": "The One I Love",
+            "slug": "the-one-i-love"
+          },
+          {
+            "titulo": "La fiesta de las salchichas",
+            "slug": "la-fiesta-de-las-salchichas"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "A ghost story",
+            "slug": "a-ghost-story"
+          },
+          {
+            "titulo": "Mi Idaho privado",
+            "slug": "mi-idaho-privado"
+          },
+          {
+            "titulo": "Sam Was Here",
+            "slug": "sam-was-here"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Io sono l'amore",
+            "slug": "io-sono-l-amore"
+          },
+          {
+            "titulo": "El anacoreta",
+            "slug": "el-anacoreta"
+          },
+          {
+            "titulo": "Lifeforce",
+            "slug": "lifeforce"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2017-06-10",
+    "lugares": [
+      "Bera"
+    ]
+  },
+  {
+    "numero": 20,
+    "lugar": "Bera",
+    "fecha": "23/11/2018",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "I nuovi mostri",
+            "slug": "i-nuovi-mostri"
+          },
+          {
+            "titulo": "Cruising",
+            "slug": "cruising"
+          },
+          {
+            "titulo": "The public defender",
+            "slug": "the-public-defender"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Brawl in Cell Block 99",
+            "slug": "brawl-in-cell-block-99"
+          },
+          {
+            "titulo": "El sacerdote",
+            "slug": "el-sacerdote"
+          },
+          {
+            "titulo": "The Void",
+            "slug": "the-void"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Ruby Sparks",
+            "slug": "ruby-sparks"
+          },
+          {
+            "titulo": "Brigsby Bear",
+            "slug": "brigsby-bear"
+          },
+          {
+            "titulo": "Billy & Ted's excelent adventure",
+            "slug": "billy-ted-s-excelent-adventure"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "El reverendo (First reformed)",
+            "slug": "el-reverendo-first-reformed"
+          },
+          {
+            "titulo": "Bad Timing",
+            "slug": "bad-timing"
+          },
+          {
+            "titulo": "Lady Snowblood",
+            "slug": "lady-snowblood"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Jodorowsky's Dune",
+            "slug": "jodorowsky-s-dune"
+          },
+          {
+            "titulo": "Fando y Lis",
+            "slug": "fando-y-lis"
+          },
+          {
+            "titulo": "El cienpiés humano",
+            "slug": "el-cienpies-humano"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2018-11-23",
+    "lugares": [
+      "Bera"
+    ]
+  },
+  {
+    "numero": 21,
+    "lugar": "Bera",
+    "fecha": "22/11/2019",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "La calumnia",
+            "slug": "la-calumnia"
+          },
+          {
+            "titulo": "El manantial",
+            "slug": "el-manantial"
+          },
+          {
+            "titulo": "Eclipse en el tiempo",
+            "slug": "eclipse-en-el-tiempo"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Dragged across concrete",
+            "slug": "dragged-across-concrete"
+          },
+          {
+            "titulo": "Interior. Leather bar",
+            "slug": "interior-leather-bar"
+          },
+          {
+            "titulo": "The Wild Boys",
+            "slug": "the-wild-boys"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "The Fake",
+            "slug": "the-fake"
+          },
+          {
+            "titulo": "Entre tinieblas",
+            "slug": "entre-tinieblas"
+          },
+          {
+            "titulo": "Spider man: into the spiderverse",
+            "slug": "spider-man-into-the-spiderverse"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "The Double",
+            "slug": "the-double"
+          },
+          {
+            "titulo": "Roman Polanski: wanted and desired",
+            "slug": "roman-polanski-wanted-and-desired"
+          },
+          {
+            "titulo": "Fingers",
+            "slug": "fingers"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "La residencia",
+            "slug": "la-residencia"
+          },
+          {
+            "titulo": "Tras el espejo",
+            "slug": "tras-el-espejo"
+          },
+          {
+            "titulo": "Pánico en el transiberiano",
+            "slug": "panico-en-el-transiberiano"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2019-11-22",
+    "lugares": [
+      "Bera"
+    ]
+  },
+  {
+    "numero": 22,
+    "lugar": "Miramón (Hanekasa)",
+    "fecha": "27/08/2021",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "El largo viernes santo",
+            "slug": "el-largo-viernes-santo"
+          },
+          {
+            "titulo": "La mujer de paja",
+            "slug": "la-mujer-de-paja"
+          },
+          {
+            "titulo": "La trampa de la muerte",
+            "slug": "la-trampa-de-la-muerte"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Martin Eden",
+            "slug": "martin-eden"
+          },
+          {
+            "titulo": "La caza",
+            "slug": "la-caza"
+          },
+          {
+            "titulo": "Bliss",
+            "slug": "bliss"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Ya no me siento a gusto en este mundo",
+            "slug": "ya-no-me-siento-a-gusto-en-este-mundo"
+          },
+          {
+            "titulo": "¿Dónde está mi cuerpo?",
+            "slug": "donde-esta-mi-cuerpo"
+          },
+          {
+            "titulo": "Movie 43",
+            "slug": "movie-43"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Raising Cain",
+            "slug": "raising-cain"
+          },
+          {
+            "titulo": "Sesión continua",
+            "slug": "sesion-continua"
+          },
+          {
+            "titulo": "Angustia",
+            "slug": "angustia"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "El desencanto",
+            "slug": "el-desencanto"
+          },
+          {
+            "titulo": "La portentosa vida del padre Vicente",
+            "slug": "la-portentosa-vida-del-padre-vicente"
+          },
+          {
+            "titulo": "Pieles",
+            "slug": "pieles"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2021-08-27",
+    "lugares": [
+      "Miramón (Hanekasa)"
+    ]
+  },
+  {
+    "numero": 23,
+    "lugar": "Arano",
+    "fecha": "18/02/2022",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "El incidente (1967)",
+            "slug": "el-incidente-1967"
+          },
+          {
+            "titulo": "Asesinato por contrato",
+            "slug": "asesinato-por-contrato"
+          },
+          {
+            "titulo": "Milán, calibre 9",
+            "slug": "milan-calibre-9"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "La rueda de la fortuna y la fantasía",
+            "slug": "la-rueda-de-la-fortuna-y-la-fantasia"
+          },
+          {
+            "titulo": "Paranoiac",
+            "slug": "paranoiac"
+          },
+          {
+            "titulo": "Host",
+            "slug": "host"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Predestination",
+            "slug": "predestination"
+          },
+          {
+            "titulo": "Shimmer Lake",
+            "slug": "shimmer-lake"
+          },
+          {
+            "titulo": "Open Grave",
+            "slug": "open-grave"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "La bouche de Jean Pierre",
+            "slug": "la-bouche-de-jean-pierre"
+          },
+          {
+            "titulo": "Malcom and Marie",
+            "slug": "malcom-and-marie"
+          },
+          {
+            "titulo": "Bad boy Bubby",
+            "slug": "bad-boy-bubby"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Possessor",
+            "slug": "possessor"
+          },
+          {
+            "titulo": "Juguetes rotos",
+            "slug": "juguetes-rotos"
+          },
+          {
+            "titulo": "Los perros no llevan pantalones",
+            "slug": "los-perros-no-llevan-pantalones"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2022-02-18",
+    "lugares": [
+      "Arano"
+    ]
+  },
+  {
+    "numero": 24,
+    "lugar": "Arano",
+    "fecha": "18/11/2022",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "El hombre clave",
+            "slug": "el-hombre-clave"
+          },
+          {
+            "titulo": "Nuestro hombre de Milán",
+            "slug": "nuestro-hombre-de-milan"
+          },
+          {
+            "titulo": "Nevada Express",
+            "slug": "nevada-express"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Espíritu sagrado",
+            "slug": "espiritu-sagrado"
+          },
+          {
+            "titulo": "El sabor del miedo",
+            "slug": "el-sabor-del-miedo"
+          },
+          {
+            "titulo": "Son",
+            "slug": "son"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Nivel 13",
+            "slug": "nivel-13"
+          },
+          {
+            "titulo": "Cría cuervos",
+            "slug": "cria-cuervos"
+          },
+          {
+            "titulo": "Creepshow",
+            "slug": "creepshow"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Sorcerer",
+            "slug": "sorcerer"
+          },
+          {
+            "titulo": "Una mujer bajo la influencia",
+            "slug": "una-mujer-bajo-la-influencia"
+          },
+          {
+            "titulo": "Marathon Man",
+            "slug": "marathon-man"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Surcos",
+            "slug": "surcos"
+          },
+          {
+            "titulo": "Los peces rojos",
+            "slug": "los-peces-rojos"
+          },
+          {
+            "titulo": "Relic",
+            "slug": "relic"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2022-11-18",
+    "lugares": [
+      "Arano"
+    ]
+  },
+  {
+    "numero": 25,
+    "lugar": "Arano",
+    "fecha": "17/11/2023",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Chantaje en Broadway",
+            "slug": "chantaje-en-broadway"
+          },
+          {
+            "titulo": "La senda tenebrosa",
+            "slug": "la-senda-tenebrosa"
+          },
+          {
+            "titulo": "Asesinato por decreto",
+            "slug": "asesinato-por-decreto"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "La montaña",
+            "slug": "la-montana"
+          },
+          {
+            "titulo": "Cuando acecha la maldad",
+            "slug": "cuando-acecha-la-maldad"
+          },
+          {
+            "titulo": "Oso vicioso",
+            "slug": "oso-vicioso"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "La novena configuración",
+            "slug": "la-novena-configuracion"
+          },
+          {
+            "titulo": "Mandíbulas",
+            "slug": "mandibulas"
+          },
+          {
+            "titulo": "Mystery Men",
+            "slug": "mystery-men"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Barbarian",
+            "slug": "barbarian"
+          },
+          {
+            "titulo": "Passion",
+            "slug": "passion"
+          },
+          {
+            "titulo": "Shadow in the cloud",
+            "slug": "shadow-in-the-cloud"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "El incinerador de cadáveres",
+            "slug": "el-incinerador-de-cadaveres"
+          },
+          {
+            "titulo": "La oreja",
+            "slug": "la-oreja"
+          },
+          {
+            "titulo": "Noches de vino tinto",
+            "slug": "noches-de-vino-tinto"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2023-11-17",
+    "lugares": [
+      "Arano"
+    ]
+  },
+  {
+    "numero": 26,
+    "lugar": "Arano",
+    "fecha": "15/11/2024",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "La gata negra",
+            "slug": "la-gata-negra"
+          },
+          {
+            "titulo": "Los voyeurs",
+            "slug": "los-voyeurs"
+          },
+          {
+            "titulo": "Diabolik",
+            "slug": "diabolik"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "De naturaleza violenta",
+            "slug": "de-naturaleza-violenta"
+          },
+          {
+            "titulo": "Moebius",
+            "slug": "moebius"
+          },
+          {
+            "titulo": "Maxxxine",
+            "slug": "maxxxine"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Shiva Baby",
+            "slug": "shiva-baby"
+          },
+          {
+            "titulo": "Despidiendo a Yang",
+            "slug": "despidiendo-a-yang"
+          },
+          {
+            "titulo": "Tenacious D",
+            "slug": "tenacious-d"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "Thunder Road",
+            "slug": "thunder-road"
+          },
+          {
+            "titulo": "Flashback",
+            "slug": "flashback"
+          },
+          {
+            "titulo": "Romeo is bleeding",
+            "slug": "romeo-is-bleeding"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Nina Wu",
+            "slug": "nina-wu"
+          },
+          {
+            "titulo": "Nadie te salvará",
+            "slug": "nadie-te-salvara"
+          },
+          {
+            "titulo": "Moebius",
+            "slug": "moebius"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2024-11-15",
+    "lugares": [
+      "Arano"
+    ]
+  },
+  {
+    "numero": 27,
+    "lugar": "Zaragoza",
+    "fecha": "04/04/2025",
+    "personas": [
+      {
+        "nombre": "Hypnos",
+        "peliculas": [
+          {
+            "titulo": "Pánico en las calles",
+            "slug": "panico-en-las-calles"
+          },
+          {
+            "titulo": "The Artifice Girl",
+            "slug": "the-artifice-girl"
+          },
+          {
+            "titulo": "Performance",
+            "slug": "performance"
+          }
+        ]
+      },
+      {
+        "nombre": "Sherlock",
+        "peliculas": [
+          {
+            "titulo": "Grand Theft Hamlet",
+            "slug": "grand-theft-hamlet"
+          },
+          {
+            "titulo": "La teoría universal",
+            "slug": "la-teoria-universal"
+          },
+          {
+            "titulo": "Daaaaaalí!",
+            "slug": "daaaaaali"
+          }
+        ]
+      },
+      {
+        "nombre": "Beiger",
+        "peliculas": [
+          {
+            "titulo": "Bottoms",
+            "slug": "bottoms"
+          },
+          {
+            "titulo": "El bandido de la luz roja",
+            "slug": "el-bandido-de-la-luz-roja"
+          },
+          {
+            "titulo": "Dashcam",
+            "slug": "dashcam"
+          }
+        ]
+      },
+      {
+        "nombre": "Romulo",
+        "peliculas": [
+          {
+            "titulo": "La cocina",
+            "slug": "la-cocina"
+          },
+          {
+            "titulo": "Cuckoo",
+            "slug": "cuckoo"
+          },
+          {
+            "titulo": "Night of the Hunted",
+            "slug": "night-of-the-hunted"
+          }
+        ]
+      },
+      {
+        "nombre": "Obi Wan",
+        "peliculas": [
+          {
+            "titulo": "Domingo de carnaval",
+            "slug": "domingo-de-carnaval"
+          },
+          {
+            "titulo": "Compartimento 6",
+            "slug": "compartimento-6"
+          },
+          {
+            "titulo": "Nightsiren",
+            "slug": "nightsiren"
+          }
+        ]
+      }
+    ],
+    "fecha_sort": "2025-04-04",
+    "lugares": [
+      "Zaragoza"
+    ]
+  }
+]

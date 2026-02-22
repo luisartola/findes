@@ -1,0 +1,22 @@
+{
+  "titulo": "Oso vicioso",
+  "slug": "oso-vicioso",
+  "imdb_id": "tt14209916",
+  "year": "2023",
+  "director": "Elizabeth Banks",
+  "plot": "Inspirado en hechos reales ocurridos en Kentucky en 1985, donde un oso negro de 80 Kilos ingirió 40 Kilogramos de cocaína pura.",
+  "poster": "https://image.tmdb.org/t/p/w500/yGCpehozPDlaczL4Fas1d01mfAH.jpg",
+  "genre": "Suspense, Comedia, Crimen",
+  "imdb_rating": null,
+  "runtime": "95 min",
+  "traida_por": [
+    "Sherlock"
+  ],
+  "findes": [
+    25
+  ],
+  "tmdb_id": 804150,
+  "titulo_es": "Oso vicioso",
+  "titulo_original": "Cocaine Bear",
+  "tmdb_rating": 6.0
+}

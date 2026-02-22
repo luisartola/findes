@@ -1,0 +1,22 @@
+{
+  "titulo": "Pulp Fiction",
+  "slug": "pulp-fiction",
+  "imdb_id": "tt0110912",
+  "year": "1994",
+  "director": "Quentin Tarantino",
+  "plot": "Jules y Vincent, dos asesinos a sueldo con muy pocas luces, trabajan para Marsellus Wallace. Vincent le confiesa a Jules que Marsellus le ha pedido que cuide de Mia, su mujer. Jules le recomienda prudencia porque es muy peligroso sobrepasarse con la novia del jefe. Cuando llega la hora de trabajar, ambos deben ponerse manos a la obra. Su misión: recuperar un misterioso maletín.",
+  "poster": "https://image.tmdb.org/t/p/w500/hNcQAuquJxTxl2fJFs1R42DrWcf.jpg",
+  "genre": "Suspense, Crimen, Comedia",
+  "imdb_rating": null,
+  "runtime": "154 min",
+  "traida_por": [
+    "Obi Wan"
+  ],
+  "findes": [
+    1
+  ],
+  "tmdb_id": 680,
+  "titulo_es": "Pulp Fiction",
+  "titulo_original": "Pulp Fiction",
+  "tmdb_rating": 8.5
+}

@@ -1,0 +1,22 @@
+{
+  "titulo": "El nadador",
+  "slug": "el-nadador",
+  "imdb_id": "tt10889066",
+  "year": "2018",
+  "director": "Pablo Barce",
+  "plot": null,
+  "poster": "https://image.tmdb.org/t/p/w500/roVLqaejMnJKVcBtnx9pGblqU0e.jpg",
+  "genre": "Drama",
+  "imdb_rating": null,
+  "runtime": "19 min",
+  "traida_por": [
+    "Obi Wan"
+  ],
+  "findes": [
+    17
+  ],
+  "tmdb_id": 518363,
+  "titulo_es": "El nadador",
+  "titulo_original": "El nadador",
+  "tmdb_rating": null
+}

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Findes Precríticos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    :root {
+      --pico-font-size: 16px;
+      --accent: #e63946;
+      --accent-dark: #a4161a;
+      --blue: #457b9d;
+      --blue-dark: #1d3557;
+      --green: #2a9d8f;
+      --purple: #9b5de5;
+      --gold: #f5c518;
+    }
+
+    /* Layout */
+    #view { min-height: 60vh; }
+
+    /* Top bar */
+    .top-bar { display: flex; align-items: center; gap: .5rem; padding: .75rem 0; margin-bottom: .75rem; flex-wrap: wrap; }
+    .top-bar-brand { font-size: 1.15rem; font-weight: 700; text-decoration: none; color: inherit; white-space: nowrap; flex-shrink: 0; }
+    .top-bar-brand:hover { color: var(--accent); }
+    .top-bar-nav { display: flex; gap: .3rem; flex-shrink: 0; }
+    .top-bar-nav a { text-decoration: none; padding: .3rem .65rem; border-radius: 2rem; background: var(--blue-dark); color: #fff; font-size: .8rem; font-weight: 500; transition: all .15s; }
+    .top-bar-nav a:hover { background: var(--accent); }
+    .top-bar-nav a.active { background: var(--accent); }
+    .top-bar-search { flex: 1; min-width: 180px; position: relative; }
+    .top-bar-search input[type="search"] { width: 100%; margin-bottom: 0; padding: .45rem .75rem .45rem 2.25rem; font-size: .85rem; height: auto; }
+    @media (max-width: 575px) {
+      .top-bar { gap: .4rem; }
+      .top-bar-search { order: 10; min-width: 100%; }
+    }
+
+    /* Stats */
+    .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; margin-bottom: 1.5rem; }
+    @media (min-width: 576px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
+    .stat-card { background: var(--pico-card-background-color, #f8f9fa); padding: .75rem; border-radius: .5rem; text-align: center; border: 1px solid var(--pico-muted-border-color, #dee2e6); }
+    .stat-card .num { font-size: 1.75rem; font-weight: 700; line-height: 1; color: var(--accent); }
+    .stat-card .label { font-size: .8rem; opacity: .7; margin-top: .15rem; }
+
+    /* Breadcrumb */
+    .breadcrumb { display: flex; align-items: center; gap: .3rem; font-size: .85rem; margin-bottom: .75rem; flex-wrap: wrap; }
+    .breadcrumb a { text-decoration: none; color: var(--blue); }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb .sep { opacity: .35; font-size: .7rem; }
+    .breadcrumb .current { opacity: .6; }
+
+    /* Card lists */
+    .card-list { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1.5rem; }
+    .list-card { display: flex; align-items: center; gap: .75rem; padding: .65rem .85rem; background: var(--pico-card-background-color, #f8f9fa); border: 1px solid var(--pico-muted-border-color, #dee2e6); border-radius: .5rem; text-decoration: none; color: inherit; transition: border-color .15s, box-shadow .15s; }
+    .list-card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+    .list-card-num { font-size: 1.1rem; font-weight: 700; color: var(--accent); min-width: 2.2rem; text-align: center; flex-shrink: 0; }
+    .list-card-icon { font-size: 1.3rem; min-width: 2rem; text-align: center; flex-shrink: 0; }
+    .list-card-body { flex: 1; min-width: 0; }
+    .list-card-title { font-weight: 600; font-size: .95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .list-card-sub { font-size: .8rem; opacity: .6; margin-top: .1rem; }
+    .list-card-sub .lugar-tag { font-size: .7rem; padding: .1rem .4rem; }
+    .list-card-right { text-align: right; flex-shrink: 0; font-size: .8rem; opacity: .6; white-space: nowrap; }
+
+    /* Film card in películas list */
+    .film-card { display: flex; align-items: center; gap: .65rem; padding: .5rem .75rem; background: var(--pico-card-background-color, #f8f9fa); border: 1px solid var(--pico-muted-border-color, #dee2e6); border-radius: .4rem; }
+    .film-card-poster { width: 28px; height: 42px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
+    .film-card-poster-ph { width: 28px; height: 42px; background: var(--pico-muted-border-color, #ddd); border-radius: 3px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: .6rem; }
+    .film-card-body { flex: 1; min-width: 0; }
+    .film-card-title { font-weight: 600; font-size: .9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .film-card-title a { text-decoration: none; }
+    .film-card-sub { font-size: .75rem; opacity: .55; }
+
+    /* Lugar tags */
+    .lugar-tag { display: inline-block; background: var(--blue); color: #fff; padding: .15rem .5rem; border-radius: 2rem; font-size: .75rem; text-decoration: none; margin: .1rem .15rem .1rem 0; transition: background .15s; }
+    .lugar-tag:hover { background: var(--blue-dark); color: #fff; }
+
+    /* Persona block */
+    .persona { margin-bottom: 1.25rem; }
+    .persona h3 { margin-bottom: .25rem; font-size: 1.1rem; }
+    .persona ul { margin-top: .25rem; padding-left: 1.25rem; }
+    .film-list li { margin-bottom: .2rem; }
+
+    /* Finde header */
+    .finde-header { margin-bottom: 1rem; }
+    .finde-header h2 { margin-bottom: .25rem; }
+    .finde-header p { opacity: .75; margin-top: 0; }
+
+    /* Movie detail */
+    .peli-detail { display: flex; gap: 1.5rem; }
+    .peli-poster { width: 160px; flex-shrink: 0; border-radius: .5rem; align-self: start; }
+    .peli-info { flex: 1; min-width: 0; }
+    .peli-info h2 { margin-bottom: .25rem; word-break: break-word; }
+    .peli-meta { opacity: .7; margin-bottom: .35rem; font-size: .9rem; }
+    .peli-imdb { display: inline-block; background: var(--gold); color: #000; padding: .2rem .6rem; border-radius: .25rem; font-weight: 700; text-decoration: none; font-size: .85rem; }
+    @media (max-width: 575px) {
+      .peli-detail { flex-direction: column; align-items: center; text-align: center; }
+      .peli-poster { width: 140px; }
+      .peli-info { text-align: left; }
+    }
+
+    /* Search */
+    .search-results { position: absolute; top: 100%; left: 0; right: 0; background: var(--pico-card-background-color, #fff); border: 1px solid var(--pico-muted-border-color, #dee2e6); border-top: none; border-radius: 0 0 .5rem .5rem; max-height: 55vh; overflow-y: auto; z-index: 100; box-shadow: 0 8px 24px rgba(0,0,0,.12); display: none; }
+    .search-results.open { display: block; }
+    .sr-item { padding: .5rem .75rem; cursor: pointer; display: flex; align-items: center; gap: .65rem; border-bottom: 1px solid var(--pico-muted-border-color, #eee); transition: background .1s; }
+    .sr-item:hover, .sr-item.selected { background: var(--pico-card-sectioning-background-color, #f0f0f0); }
+    .sr-item img { width: 30px; height: 45px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
+    .sr-item .sr-placeholder { width: 30px; height: 45px; background: var(--pico-muted-border-color, #ddd); border-radius: 3px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: .65rem; }
+    .sr-text { flex: 1; min-width: 0; }
+    .sr-title { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: .9rem; }
+    .sr-title mark { background: var(--gold); color: #000; border-radius: 2px; padding: 0 2px; }
+    .sr-sub { font-size: .75rem; opacity: .55; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .sr-type { font-size: .65rem; padding: .15rem .4rem; border-radius: 2rem; flex-shrink: 0; color: #fff; text-transform: uppercase; letter-spacing: .3px; font-weight: 600; }
+    .sr-type.pelicula { background: var(--accent); }
+    .sr-type.persona { background: var(--green); }
+    .sr-type.lugar { background: var(--blue); }
+    .sr-type.finde { background: #6c757d; }
+    .sr-type.director { background: var(--purple); }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="top-bar">
+      <a href="#" class="top-bar-brand">🎬 Findes</a>
+      <nav class="top-bar-nav" id="main-nav">
+        <a href="#" data-page="">Inicio</a>
+        <a href="#lugares" data-page="lugares">Lugares</a>
+        <a href="#personas" data-page="personas">Personas</a>
+        <a href="#peliculas" data-page="peliculas">Películas</a>
+      </nav>
+      <div class="top-bar-search">
+        <input type="search" id="global-search" placeholder="Buscar..." autocomplete="off">
+        <div class="search-results" id="search-results"></div>
+      </div>
+    </div>
+    <div id="view"></div>
+  </main>
+
+  <script>
+    let DATA = [];
+    const PELI_CACHE = {};
+
+    async function init() {
+      const res = await fetch('data.json');
+      DATA = await res.json();
+      // Preload all movie JSONs for search
+      const slugs = new Set();
+      for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
+        if (typeof m !== 'string' && m.slug) slugs.add(m.slug);
+      }
+      await Promise.all([...slugs].map(s => loadPeli(s)));
+      route();
+      window.addEventListener('hashchange', route);
+      buildSearchIndex();
+      setupSearch();
+    }
+
+    async function loadPeli(slug) {
+      if (PELI_CACHE[slug]) return PELI_CACHE[slug];
+      try {
+        const res = await fetch(`peliculas/${slug}.json`);
+        if (res.ok) { PELI_CACHE[slug] = await res.json(); return PELI_CACHE[slug]; }
+      } catch(e) {}
+      return null;
+    }
+
+    function peliLink(peli) {
+      const t = typeof peli === 'string' ? peli : peli.titulo;
+      const s = typeof peli === 'string' ? null : peli.slug;
+      return s ? `<a href="#pelicula/${s}">${t}</a>` : t;
+    }
+
+    function route() {
+      const hash = location.hash.slice(1);
+      // Update active nav link
+      const seg = hash.split('/')[0] || '';
+      const pageMap = { finde: '', persona: 'personas', pelicula: 'peliculas', lugar: 'lugares' };
+      const page = pageMap[seg] !== undefined ? pageMap[seg] : seg;
+      document.querySelectorAll('#main-nav a').forEach(a => {
+        a.classList.toggle('active', a.dataset.page === page);
+      });
+      if (hash.startsWith('finde/')) {
+        renderFinde(parseInt(hash.split('/')[1]));
+      } else if (hash.startsWith('pelicula/')) {
+        renderPelicula(hash.split('/')[1]);
+      } else if (hash.startsWith('persona/')) {
+        renderPersona(decodeURIComponent(hash.split('/')[1]));
+      } else if (hash.startsWith('lugar/')) {
+        renderLugar(decodeURIComponent(hash.split('/')[1]));
+      } else if (hash === 'lugares') {
+        renderLugares();
+      } else if (hash === 'personas') {
+        renderPersonas();
+      } else if (hash === 'peliculas') {
+        renderPeliculas();
+      } else {
+        renderHome();
+      }
+    }
+
+    function lugarLinks(lugares) {
+      return lugares.map(l => `<a class="lugar-tag" href="#lugar/${encodeURIComponent(l)}">${l}</a>`).join(' ');
+    }
+
+    function renderHome() {
+      const totalPelis = DATA.reduce((sum, f) => sum + f.personas.reduce((s, p) => s + p.peliculas.length, 0), 0);
+      const allPeople = [...new Set(DATA.flatMap(f => f.personas.map(p => p.nombre)))];
+      const allLugares = [...new Set(DATA.flatMap(f => f.lugares))];
+
+      let html = `
+        <div class="stats-grid">
+          <div class="stat-card"><div class="num">${DATA.length}</div><div class="label">Findes</div></div>
+          <div class="stat-card"><div class="num">${totalPelis}</div><div class="label">Películas</div></div>
+          <div class="stat-card"><div class="num">${allPeople.length}</div><div class="label">Participantes</div></div>
+          <div class="stat-card"><div class="num">${allLugares.length}</div><div class="label">Lugares</div></div>
+        </div>
+        <h2>Findes</h2>
+        <div class="card-list">
+      `;
+      for (const f of DATA) {
+        const npelis = f.personas.reduce((s, p) => s + p.peliculas.length, 0);
+        html += `<a href="#finde/${f.numero}" class="list-card">
+          <span class="list-card-num">#${f.numero}</span>
+          <div class="list-card-body">
+            <div class="list-card-title">${f.fecha || '—'}</div>
+            <div class="list-card-sub">${f.lugares.join(', ')}</div>
+          </div>
+          <span class="list-card-right">${npelis} pelis</span>
+        </a>`;
+      }
+      html += '</div>';
+      document.getElementById('view').innerHTML = html;
+    }
+
+    function renderFinde(num) {
+      const f = DATA.find(d => d.numero === num);
+      if (!f) { renderHome(); return; }
+
+      let html = `
+        <nav class="breadcrumb"><a href="#">Inicio</a><span class="sep">›</span><span class="current">Finde #${f.numero}</span></nav>
+        <div class="finde-header">
+          <h2>Finde #${f.numero}</h2>
+          <p>${f.fecha || ''} · ${lugarLinks(f.lugares)}</p>
+        </div>
+      `;
+      for (const p of f.personas) {
+        html += `<div class="persona">
+          <h3><a href="#persona/${encodeURIComponent(p.nombre)}">${p.nombre}</a></h3>
+          <ul class="film-list">${p.peliculas.map(m => `<li>${peliLink(m)}</li>`).join('')}</ul>
+        </div>`;
+      }
+      document.getElementById('view').innerHTML = html;
+    }
+
+    function renderPersonas() {
+      const stats = {};
+      for (const f of DATA) {
+        for (const p of f.personas) {
+          if (!stats[p.nombre]) stats[p.nombre] = { pelis: 0, findes: 0 };
+          stats[p.nombre].pelis += p.peliculas.length;
+          stats[p.nombre].findes += 1;
+        }
+      }
+
+      let html = `
+        <h2>Personas</h2>
+        <div class="card-list">
+      `;
+      for (const [name, s] of Object.entries(stats).sort((a, b) => b[1].pelis - a[1].pelis)) {
+        html += `<a href="#persona/${encodeURIComponent(name)}" class="list-card">
+          <span class="list-card-icon">👤</span>
+          <div class="list-card-body">
+            <div class="list-card-title">${name}</div>
+            <div class="list-card-sub">${s.findes} findes · ${s.pelis} películas</div>
+          </div>
+        </a>`;
+      }
+      html += '</div>';
+      document.getElementById('view').innerHTML = html;
+    }
+
+    function renderPersona(nombre) {
+      const findes = DATA.filter(f => f.personas.some(p => p.nombre === nombre));
+
+      let html = `
+        <nav class="breadcrumb"><a href="#">Inicio</a><span class="sep">›</span><a href="#personas">Personas</a><span class="sep">›</span><span class="current">${nombre}</span></nav>
+        <h2>${nombre}</h2>
+        <p>${findes.length} findes · ${findes.reduce((s, f) => s + f.personas.find(p => p.nombre === nombre).peliculas.length, 0)} películas</p>
+      `;
+      for (const f of findes) {
+        const p = f.personas.find(p => p.nombre === nombre);
+        html += `<h3><a href="#finde/${f.numero}">Finde #${f.numero}</a> <small>${f.fecha || ''} — ${lugarLinks(f.lugares)}</small></h3>
+          <ul class="film-list">${p.peliculas.map(m => `<li>${peliLink(m)}</li>`).join('')}</ul>`;
+      }
+      document.getElementById('view').innerHTML = html;
+    }
+
+    function renderPeliculas() {
+      const allFilms = [];
+      for (const f of DATA) {
+        for (const p of f.personas) {
+          for (const m of p.peliculas) {
+            const titulo = typeof m === 'string' ? m : m.titulo;
+            const slug = typeof m === 'string' ? null : m.slug;
+            allFilms.push({ titulo, slug, persona: p.nombre, finde: f.numero, fecha: f.fecha });
+          }
+        }
+      }
+      allFilms.sort((a, b) => a.titulo.localeCompare(b.titulo, 'es'));
+
+      let html = `
+        <h2>Todas las películas (${allFilms.length})</h2>
+        <input type="search" id="search" placeholder="Filtrar por título..." style="margin-bottom:.75rem;">
+        <div class="card-list" id="films-list">
+      `;
+      for (const f of allFilms) {
+        const peli = f.slug ? PELI_CACHE[f.slug] : null;
+        const posterHtml = peli && peli.poster
+          ? `<img class="film-card-poster" src="${peli.poster}" alt="" loading="lazy">`
+          : `<div class="film-card-poster-ph">🎬</div>`;
+        const link = f.slug ? `<a href="#pelicula/${f.slug}">${f.titulo}</a>` : f.titulo;
+        html += `<div class="film-card">
+          ${posterHtml}
+          <div class="film-card-body">
+            <div class="film-card-title">${link}</div>
+            <div class="film-card-sub"><a href="#persona/${encodeURIComponent(f.persona)}">${f.persona}</a> · <a href="#finde/${f.finde}">#${f.finde}</a></div>
+          </div>
+        </div>`;
+      }
+      html += '</div>';
+      document.getElementById('view').innerHTML = html;
+
+      document.getElementById('search').addEventListener('input', function() {
+        const q = this.value.toLowerCase();
+        for (const card of document.querySelectorAll('#films-list .film-card')) {
+          card.style.display = card.textContent.toLowerCase().includes(q) ? '' : 'none';
+        }
+      });
+    }
+
+    function renderLugares() {
+      const lugarStats = {};
+      for (const f of DATA) {
+        for (const l of f.lugares) {
+          if (!lugarStats[l]) lugarStats[l] = { findes: 0, pelis: 0 };
+          lugarStats[l].findes += 1;
+          lugarStats[l].pelis += f.personas.reduce((s, p) => s + p.peliculas.length, 0);
+        }
+      }
+      let html = `
+        <h2>Lugares</h2>
+        <div class="card-list">
+      `;
+      for (const [name, s] of Object.entries(lugarStats).sort((a, b) => b[1].findes - a[1].findes)) {
+        html += `<a href="#lugar/${encodeURIComponent(name)}" class="list-card">
+          <span class="list-card-icon">📍</span>
+          <div class="list-card-body">
+            <div class="list-card-title">${name}</div>
+            <div class="list-card-sub">${s.findes} findes · ${s.pelis} películas</div>
+          </div>
+        </a>`;
+      }
+      html += '</div>';
+      document.getElementById('view').innerHTML = html;
+    }
+
+    function renderLugar(nombre) {
+      const findes = DATA.filter(f => f.lugares.includes(nombre));
+      const totalPelis = findes.reduce((s, f) => s + f.personas.reduce((sp, p) => sp + p.peliculas.length, 0), 0);
+
+      let html = `
+        <nav class="breadcrumb"><a href="#">Inicio</a><span class="sep">›</span><a href="#lugares">Lugares</a><span class="sep">›</span><span class="current">${nombre}</span></nav>
+        <h2>📍 ${nombre}</h2>
+        <p>${findes.length} findes · ${totalPelis} películas</p>
+        <div class="card-list">
+      `;
+      for (const f of findes) {
+        const npelis = f.personas.reduce((s, p) => s + p.peliculas.length, 0);
+        const participantes = f.personas.map(p => p.nombre).join(', ');
+        html += `<a href="#finde/${f.numero}" class="list-card">
+          <span class="list-card-num">#${f.numero}</span>
+          <div class="list-card-body">
+            <div class="list-card-title">${f.fecha}</div>
+            <div class="list-card-sub">${participantes}</div>
+          </div>
+          <span class="list-card-right">${npelis} pelis</span>
+        </a>`;
+      }
+      html += '</div>';
+      document.getElementById('view').innerHTML = html;
+    }
+
+    async function renderPelicula(slug) {
+      const peli = await loadPeli(slug);
+      if (!peli) { renderHome(); return; }
+
+      // Find all appearances in findes
+      const appearances = [];
+      for (const f of DATA) {
+        for (const p of f.personas) {
+          for (const m of p.peliculas) {
+            const s = typeof m === 'string' ? null : m.slug;
+            if (s === slug) {
+              appearances.push({ finde: f, persona: p.nombre });
+            }
+          }
+        }
+      }
+
+      let html = `
+        <nav class="breadcrumb"><a href="#">Inicio</a><span class="sep">›</span><a href="#peliculas">Películas</a><span class="sep">›</span><span class="current">${peli.titulo}</span></nav>
+        <div class="peli-detail">
+      `;
+
+      if (peli.poster) {
+        html += `<img class="peli-poster" src="${peli.poster}" alt="${peli.titulo}">`;
+      }
+
+      html += `<div class="peli-info">
+        <h2>${peli.titulo}</h2>`;
+
+      if (peli.titulo_original && peli.titulo_original !== peli.titulo) {
+        html += `<p class="peli-meta"><em>${peli.titulo_original}</em></p>`;
+      }
+
+      const meta = [peli.year, peli.director, peli.runtime, peli.genre].filter(Boolean);
+      if (meta.length) html += `<p class="peli-meta">${meta.join(' · ')}</p>`;
+
+      if (peli.imdb_id) {
+        const rating = peli.tmdb_rating ? ` ⭐ ${peli.tmdb_rating}` : '';
+        html += `<p><a class="peli-imdb" href="https://www.imdb.com/title/${peli.imdb_id}" target="_blank">IMDb${rating}</a></p>`;
+      } else if (peli.tmdb_id) {
+        const rating = peli.tmdb_rating ? ` ⭐ ${peli.tmdb_rating}` : '';
+        html += `<p><a class="peli-imdb" href="https://www.themoviedb.org/movie/${peli.tmdb_id}" target="_blank">TMDB${rating}</a></p>`;
+      }
+
+      if (peli.plot) html += `<p>${peli.plot}</p>`;
+
+      html += `<h3>En los Findes</h3><ul>`;
+      for (const a of appearances) {
+        html += `<li><a href="#finde/${a.finde.numero}">Finde #${a.finde.numero}</a> (${a.finde.fecha}) — traída por <a href="#persona/${encodeURIComponent(a.persona)}">${a.persona}</a></li>`;
+      }
+      html += `</ul></div></div>`;
+
+      document.getElementById('view').innerHTML = html;
+    }
+
+    // ── Fuzzy search engine ──
+    let SEARCH_INDEX = [];
+
+    function normalize(str) {
+      return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    }
+
+    // Fuzzy match: returns score (0 = no match, higher = better)
+    function fuzzyScore(query, target) {
+      const q = normalize(query);
+      const t = normalize(target);
+      if (!q) return 0;
+
+      // Exact substring match (best)
+      const subIdx = t.indexOf(q);
+      if (subIdx === 0) return 10000 + (1000 - t.length); // starts with
+      if (subIdx > 0) return 5000 + (1000 - subIdx);      // contains
+
+      // Word-start matching
+      const words = t.split(/\s+/);
+      const qWords = q.split(/\s+/);
+      let wordScore = 0;
+      for (const qw of qWords) {
+        for (const tw of words) {
+          if (tw.startsWith(qw)) wordScore += 2000;
+          else if (tw.includes(qw)) wordScore += 1000;
+        }
+      }
+      if (wordScore > 0) return wordScore;
+
+      // Fuzzy character matching
+      let qi = 0, consecutive = 0, score = 0, firstMatch = -1;
+      for (let ti = 0; ti < t.length && qi < q.length; ti++) {
+        if (t[ti] === q[qi]) {
+          if (firstMatch < 0) firstMatch = ti;
+          consecutive++;
+          score += consecutive * 10 + (ti === 0 ? 50 : 0);
+          // Bonus for word boundaries
+          if (ti === 0 || ' .-_'.includes(t[ti - 1])) score += 30;
+          qi++;
+        } else {
+          consecutive = 0;
+        }
+      }
+      if (qi < q.length) return 0; // not all chars matched
+      return score - firstMatch;
+    }
+
+    function buildSearchIndex() {
+      SEARCH_INDEX = [];
+      const seenDirectors = new Set();
+      const seenSlugs = new Set();
+
+      for (const f of DATA) {
+        for (const p of f.personas) {
+          for (const m of p.peliculas) {
+            const titulo = typeof m === 'string' ? m : m.titulo;
+            const slug = typeof m === 'string' ? null : m.slug;
+            if (!slug || seenSlugs.has(slug)) continue;
+            seenSlugs.add(slug);
+            const peli = PELI_CACHE[slug];
+            const searchFields = [titulo];
+            let sub = `${p.nombre} · Finde #${f.numero}`;
+            let poster = null;
+            if (peli) {
+              if (peli.titulo_original && peli.titulo_original !== titulo) searchFields.push(peli.titulo_original);
+              if (peli.titulo_es && peli.titulo_es !== titulo) searchFields.push(peli.titulo_es);
+              if (peli.director) { searchFields.push(peli.director); sub = `${peli.director} (${peli.year || '?'}) · ${p.nombre}`; }
+              if (peli.genre) searchFields.push(peli.genre);
+              if (peli.year) searchFields.push(peli.year);
+              poster = peli.poster;
+              if (peli.director) {
+                for (const d of peli.director.split(', ')) {
+                  if (!seenDirectors.has(d)) {
+                    seenDirectors.add(d);
+                    const dirPelis = [];
+                    for (const [s, pd] of Object.entries(PELI_CACHE)) {
+                      if (pd && pd.director && pd.director.includes(d)) dirPelis.push(pd.titulo);
+                    }
+                    SEARCH_INDEX.push({
+                      type: 'director', label: d, sub: `${dirPelis.length} peli${dirPelis.length>1?'s':''}: ${dirPelis.slice(0,3).join(', ')}${dirPelis.length>3?'…':''}`,
+                      search: d, href: `#peliculas`, poster: null, boost: 1
+                    });
+                  }
+                }
+              }
+            }
+            SEARCH_INDEX.push({
+              type: 'pelicula', label: titulo, sub, search: searchFields.join(' '),
+              href: `#pelicula/${slug}`, poster, boost: 3
+            });
+          }
+        }
+      }
+
+      // Personas
+      const allPeople = [...new Set(DATA.flatMap(f => f.personas.map(p => p.nombre)))];
+      for (const name of allPeople) {
+        const count = DATA.reduce((s, f) => s + (f.personas.some(p => p.nombre === name) ? 1 : 0), 0);
+        SEARCH_INDEX.push({
+          type: 'persona', label: name, sub: `${count} findes`,
+          search: name, href: `#persona/${encodeURIComponent(name)}`, poster: null, boost: 2
+        });
+      }
+
+      // Lugares
+      const allLugares = [...new Set(DATA.flatMap(f => f.lugares))];
+      for (const l of allLugares) {
+        const count = DATA.filter(f => f.lugares.includes(l)).length;
+        SEARCH_INDEX.push({
+          type: 'lugar', label: l, sub: `${count} findes`,
+          search: l, href: `#lugar/${encodeURIComponent(l)}`, poster: null, boost: 2
+        });
+      }
+
+      // Findes
+      for (const f of DATA) {
+        SEARCH_INDEX.push({
+          type: 'finde', label: `Finde #${f.numero}`,
+          sub: `${f.fecha} · ${f.lugares.join(', ')}`,
+          search: `Finde ${f.numero} ${f.fecha} ${f.lugares.join(' ')}`,
+          href: `#finde/${f.numero}`, poster: null, boost: 1
+        });
+      }
+    }
+
+    // ── Search UI ──
+    let searchSelectedIdx = -1;
+
+    function setupSearch() {
+      const input = document.getElementById('global-search');
+      const results = document.getElementById('search-results');
+      let debounceTimer;
+
+      input.addEventListener('input', () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => doSearch(input.value), 80);
+      });
+
+      input.addEventListener('keydown', (e) => {
+        const items = results.querySelectorAll('.sr-item');
+        if (e.key === 'ArrowDown') { e.preventDefault(); searchSelectedIdx = Math.min(searchSelectedIdx + 1, items.length - 1); highlightItem(items); }
+        else if (e.key === 'ArrowUp') { e.preventDefault(); searchSelectedIdx = Math.max(searchSelectedIdx - 1, -1); highlightItem(items); }
+        else if (e.key === 'Enter' && searchSelectedIdx >= 0 && items[searchSelectedIdx]) {
+          e.preventDefault(); items[searchSelectedIdx].click();
+        }
+        else if (e.key === 'Escape') { results.classList.remove('open'); input.blur(); }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.top-bar-search')) results.classList.remove('open');
+      });
+
+      input.addEventListener('focus', () => { if (input.value.length >= 2) doSearch(input.value); });
+    }
+
+    function highlightItem(items) {
+      items.forEach((el, i) => el.classList.toggle('selected', i === searchSelectedIdx));
+      if (items[searchSelectedIdx]) items[searchSelectedIdx].scrollIntoView({ block: 'nearest' });
+    }
+
+    function doSearch(query) {
+      const results = document.getElementById('search-results');
+      if (query.length < 2) { results.classList.remove('open'); return; }
+
+      // Score and deduplicate (keep best score per href)
+      const scored = new Map();
+      for (const item of SEARCH_INDEX) {
+        // Score against label first (boosted), then full search text
+        const labelScore = fuzzyScore(query, item.label) * item.boost * 2;
+        const fullScore = fuzzyScore(query, item.search) * item.boost;
+        const score = Math.max(labelScore, fullScore);
+        if (score > 0) {
+          const existing = scored.get(item.href);
+          if (!existing || score > existing.score) {
+            scored.set(item.href, { ...item, score });
+          }
+        }
+      }
+
+      const matches = [...scored.values()].sort((a, b) => b.score - a.score).slice(0, 15);
+      searchSelectedIdx = -1;
+
+      if (matches.length === 0) {
+        results.innerHTML = '<div style="padding:.75rem;opacity:.6;">Sin resultados</div>';
+        results.classList.add('open');
+        return;
+      }
+
+      results.innerHTML = matches.map((m, i) => {
+        const posterHtml = m.poster
+          ? `<img src="${m.poster}" alt="" loading="lazy">`
+          : `<div class="sr-placeholder">${{pelicula:'🎬',persona:'👤',lugar:'📍',finde:'📅',director:'🎥'}[m.type]||'•'}</div>`;
+        const highlighted = highlightMatch(m.label, query);
+        return `<div class="sr-item" data-href="${m.href}" data-idx="${i}">
+          ${posterHtml}
+          <div class="sr-text">
+            <div class="sr-title">${highlighted}</div>
+            <div class="sr-sub">${m.sub}</div>
+          </div>
+          <span class="sr-type ${m.type}">${m.type}</span>
+        </div>`;
+      }).join('');
+
+      results.classList.add('open');
+
+      results.querySelectorAll('.sr-item').forEach(el => {
+        el.addEventListener('click', () => {
+          location.hash = el.dataset.href;
+          results.classList.remove('open');
+          document.getElementById('global-search').value = '';
+        });
+      });
+    }
+
+    function highlightMatch(text, query) {
+      const q = normalize(query);
+      const tNorm = normalize(text);
+      const idx = tNorm.indexOf(q);
+      if (idx >= 0) {
+        return text.slice(0, idx) + '<mark>' + text.slice(idx, idx + q.length) + '</mark>' + text.slice(idx + q.length);
+      }
+      // Fuzzy highlight
+      let result = '', qi = 0;
+      for (let i = 0; i < text.length; i++) {
+        if (qi < q.length && normalize(text[i]) === q[qi]) {
+          result += '<mark>' + text[i] + '</mark>';
+          qi++;
+        } else {
+          result += text[i];
+        }
+      }
+      return result;
+    }
+
+    init();
+  </script>
+</body>
+</html>

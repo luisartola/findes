@@ -1,0 +1,22 @@
+{
+  "titulo": "El pistolero",
+  "slug": "el-pistolero",
+  "imdb_id": null,
+  "year": null,
+  "director": "Ariana Durazo",
+  "plot": null,
+  "poster": "https://image.tmdb.org/t/p/w500/l9EeD1ySPfIEFAKQNSmpCKKk75W.jpg",
+  "genre": "Comedia, Drama",
+  "imdb_rating": null,
+  "runtime": "20 min",
+  "traida_por": [
+    "Hypnos"
+  ],
+  "findes": [
+    1
+  ],
+  "tmdb_id": 1468550,
+  "titulo_es": "El Pistolero",
+  "titulo_original": "El Pistolero",
+  "tmdb_rating": null
+}

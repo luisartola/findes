@@ -1,0 +1,24 @@
+{
+  "titulo": "La caza",
+  "slug": "la-caza",
+  "imdb_id": "tt0060223",
+  "year": "1966",
+  "director": "Carlos Saura",
+  "plot": "Tres amigos van de caza a un coto que fue escenario de una batalla durante la Guerra Civil (1936-1939). Todos ellos están pasando por momentos difíciles, separaciones, problemas con el alcohol, de modo que lo que iba a ser una tranquila jornada de caza se convierte en un enfrentamiento entre los tres.",
+  "poster": "https://image.tmdb.org/t/p/w500/2lODWq6rLdcb8hLuQpt9qHSAatW.jpg",
+  "genre": "Drama, Suspense",
+  "imdb_rating": null,
+  "runtime": "87 min",
+  "traida_por": [
+    "Munny",
+    "Sherlock"
+  ],
+  "findes": [
+    15,
+    22
+  ],
+  "tmdb_id": 114333,
+  "titulo_es": "La caza",
+  "titulo_original": "La caza",
+  "tmdb_rating": 7.0
+}

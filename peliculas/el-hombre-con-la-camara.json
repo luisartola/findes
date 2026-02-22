@@ -1,0 +1,22 @@
+{
+  "titulo": "El hombre con la cámara",
+  "slug": "el-hombre-con-la-camara",
+  "imdb_id": "tt0019760",
+  "year": "1929",
+  "director": "Dziga Vertov",
+  "plot": "Un cámara deambula con una cámara colgada del hombro, documentando la vida urbana con una deslumbrante inventiva.",
+  "poster": "https://image.tmdb.org/t/p/w500/t54yc1AU8KszWGPnEv3rHDTIYcH.jpg",
+  "genre": "Documental",
+  "imdb_rating": null,
+  "runtime": "68 min",
+  "traida_por": [
+    "Munny"
+  ],
+  "findes": [
+    12
+  ],
+  "tmdb_id": 26317,
+  "titulo_es": "El hombre de la cámara",
+  "titulo_original": "Человек с киноаппаратом",
+  "tmdb_rating": 7.8
+}

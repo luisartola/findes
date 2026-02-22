@@ -1,0 +1,22 @@
+{
+  "titulo": "The Hit",
+  "slug": "the-hit",
+  "imdb_id": "tt0087414",
+  "year": "1984",
+  "director": "Stephen Frears",
+  "plot": "Willie Parker, un antiguo gángster inglés que se convirtió en delator, vive desde hace diez años con una identidad falsa en una remota aldea española. Pero, cuando los mafiosos a los que traicionó descubren su paradero, le encargan a dos asesinos a sueldo que lo secuestren y lo trasladen a París. El plan se complica cuando, tras el rapto de Parker, la policía española empieza a perseguir a los criminales.",
+  "poster": "https://image.tmdb.org/t/p/w500/n8P13rEyvy6vPFmPaqUWAfbOZpk.jpg",
+  "genre": "Drama, Suspense, Crimen",
+  "imdb_rating": null,
+  "runtime": "98 min",
+  "traida_por": [
+    "Sherlock"
+  ],
+  "findes": [
+    19
+  ],
+  "tmdb_id": 19621,
+  "titulo_es": "La venganza (The Hit)",
+  "titulo_original": "The Hit",
+  "tmdb_rating": 6.5
+}

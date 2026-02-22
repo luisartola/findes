@@ -1,0 +1,22 @@
+{
+  "titulo": "Serie negra",
+  "slug": "serie-negra",
+  "imdb_id": null,
+  "year": "2012",
+  "director": "José Carballo",
+  "plot": null,
+  "poster": "https://image.tmdb.org/t/p/w500/6o8LT1CscTJGofXwDJF58d8EL68.jpg",
+  "genre": null,
+  "imdb_rating": null,
+  "runtime": "5 min",
+  "traida_por": [
+    "Hypnos"
+  ],
+  "findes": [
+    15
+  ],
+  "tmdb_id": 708651,
+  "titulo_es": "Serie negra",
+  "titulo_original": "Serie negra",
+  "tmdb_rating": null
+}

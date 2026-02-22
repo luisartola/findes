@@ -1,0 +1,22 @@
+{
+  "titulo": "Julia",
+  "slug": "julia",
+  "imdb_id": "tt1365472",
+  "year": "2009",
+  "director": "Lotta Lättström",
+  "plot": null,
+  "poster": "https://image.tmdb.org/t/p/w500/ooSj59GqF2PFY7IIzbMd6Zb1pe0.jpg",
+  "genre": "Drama",
+  "imdb_rating": null,
+  "runtime": "29 min",
+  "traida_por": [
+    "Beiger"
+  ],
+  "findes": [
+    9
+  ],
+  "tmdb_id": 760693,
+  "titulo_es": "Julia",
+  "titulo_original": "Julia",
+  "tmdb_rating": 6.0
+}

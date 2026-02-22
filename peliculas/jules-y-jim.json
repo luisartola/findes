@@ -1,0 +1,22 @@
+{
+  "titulo": "Jules y Jim",
+  "slug": "jules-y-jim",
+  "imdb_id": "tt0055032",
+  "year": "1962",
+  "director": "François Truffaut",
+  "plot": "Desde que se conocieron en 1912, Jules (Oskar Werner) y Jim (Henri Serre) se convirtieron en dos inseparables amigos que un día se enamoran de la misma mujer, Catherine (Jeanne Moreau). Uno de ellos finalmente se casa con ella. Obra capital del cine francés de los sesenta, un hermoso canto al amor y la pasión.",
+  "poster": "https://image.tmdb.org/t/p/w500/iQPk7jK26RrwYgnAYq5l2Ha3iPc.jpg",
+  "genre": "Drama, Romance",
+  "imdb_rating": null,
+  "runtime": "105 min",
+  "traida_por": [
+    "Beiger"
+  ],
+  "findes": [
+    7
+  ],
+  "tmdb_id": 1628,
+  "titulo_es": "Jules y Jim",
+  "titulo_original": "Jules et Jim",
+  "tmdb_rating": 7.5
+}

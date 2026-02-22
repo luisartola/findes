@@ -1,0 +1,22 @@
+{
+  "titulo": "Saló",
+  "slug": "salo",
+  "imdb_id": "tt0073650",
+  "year": "1976",
+  "director": "Pier Paolo Pasolini",
+  "plot": "En una mansión, cuatro señores se reúnen con cuatro exprostitutas y con un grupo de jóvenes de ambos sexos, partisanos o hijos de partisanos, que han sido hechos prisioneros. Nadie en la casa puede eludir las reglas del juego establecidas por los señores; toda transgresión se castiga con la muerte. Además, ellos gozan de la facultad de disponer a su antojo de la vida de los cautivos.",
+  "poster": "https://image.tmdb.org/t/p/w500/mmWkv7RQIBpCNlc6BFFbVvvFpiy.jpg",
+  "genre": "Drama, Terror",
+  "imdb_rating": null,
+  "runtime": "116 min",
+  "traida_por": [
+    "Munny"
+  ],
+  "findes": [
+    3
+  ],
+  "tmdb_id": 5336,
+  "titulo_es": "Saló, o los 120 días de Sodoma",
+  "titulo_original": "Salò o le 120 giornate di Sodoma",
+  "tmdb_rating": 6.3
+}

@@ -1,0 +1,22 @@
+{
+  "titulo": "El carnicero",
+  "slug": "el-carnicero",
+  "imdb_id": null,
+  "year": "2021",
+  "director": "Iván Constantino",
+  "plot": null,
+  "poster": "https://image.tmdb.org/t/p/w500/11bNceOaK1kX7jigssY8FafJiqb.jpg",
+  "genre": "Terror",
+  "imdb_rating": null,
+  "runtime": "8 min",
+  "traida_por": [
+    "Beiger"
+  ],
+  "findes": [
+    8
+  ],
+  "tmdb_id": 900308,
+  "titulo_es": "El carnicero",
+  "titulo_original": "El carnicero",
+  "tmdb_rating": 2.0
+}

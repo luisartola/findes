@@ -1,0 +1,22 @@
+{
+  "titulo": "Princess",
+  "slug": "princess",
+  "imdb_id": "tt1052352",
+  "year": "2008",
+  "director": "Mark Rosman",
+  "plot": null,
+  "poster": "https://image.tmdb.org/t/p/w500/txLRWBOjPISJ8NNypcNqeejMs2b.jpg",
+  "genre": "Fantasía, Familia",
+  "imdb_rating": null,
+  "runtime": "89 min",
+  "traida_por": [
+    "Sherlock"
+  ],
+  "findes": [
+    9
+  ],
+  "tmdb_id": 41362,
+  "titulo_es": "Princess",
+  "titulo_original": "Princess",
+  "tmdb_rating": 6.2
+}

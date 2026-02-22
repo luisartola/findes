@@ -1,0 +1,22 @@
+{
+  "titulo": "Rashomon",
+  "slug": "rashomon",
+  "imdb_id": "tt0042876",
+  "year": "1950",
+  "director": "Akira Kurosawa",
+  "plot": "Japón, siglo XII. En Kioto, bajo las puertas del derruido templo de Rashomon, se guarecen de la torrencial lluvia un leñador, un sacerdote budista y un peregrino. Los tres discuten sobre el juicio a un bandido, acusado de haber dado muerte a un señor feudal y violado a su esposa. Los detalles del crimen son narrados desde el punto de vista del bandido, de la mujer, del señor feudal -con la ayuda de un médium- y del leñador, único testigo de los hechos.",
+  "poster": "https://image.tmdb.org/t/p/w500/hTzw4ectHlJw1gZciFNsemTPARM.jpg",
+  "genre": "Crimen, Drama, Misterio",
+  "imdb_rating": null,
+  "runtime": "83 min",
+  "traida_por": [
+    "Obi Wan"
+  ],
+  "findes": [
+    10
+  ],
+  "tmdb_id": 548,
+  "titulo_es": "Rashomon",
+  "titulo_original": "羅生門",
+  "tmdb_rating": 8.0
+}
