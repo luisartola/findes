@@ -1,22 +1,21 @@
 {
   "titulo": "Contratado para matar",
   "slug": "contratado-para-matar",
-  "imdb_id": "tt5470222",
-  "year": "2016",
-  "director": "Keoni Waxman",
-  "plot": "John Harmon es un agente de la CIA que debe investigar a unos terroristas islámicos capturados en México. Junto a su equipo, la sensual agente del FBI Zara Hakey y el piloto de drones Matthew Sharp, viaja a Estambul donde descubrirá una trama brutal: los extremistas islámicos planean usar las rutas del contrabando de Sonora para traer armas a los Estados Unidos.",
-  "poster": "https://image.tmdb.org/t/p/w500/A6FqN8R7LQkdhboVp1NIhdCEYf1.jpg",
-  "genre": "Aventura, Acción",
-  "imdb_rating": null,
-  "runtime": "90 min",
+  "tmdb_id": 16703,
+  "imdb_id": "tt0035432",
+  "titulo_es": "El cuervo (Contratado para matar)",
+  "titulo_original": "This Gun for Hire",
+  "year": "1942",
+  "director": "Frank Tuttle",
+  "plot": "Un matón llamado Raven (Cuervo en inglés) es contratado para que cometa un asesinato. Sin embargo, pronto se da cuenta de que su vida está en peligro, ya que alguien pretende tenderle una trampa.",
+  "poster": "https://image.tmdb.org/t/p/w500/iOIbIhEhr9DnspzzOyd8oFQP3K3.jpg",
+  "genre": "Crimen, Suspense, Misterio",
+  "tmdb_rating": 6.976,
+  "runtime": "81 min",
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     17
-  ],
-  "tmdb_id": 423627,
-  "titulo_es": "Contratado para matar",
-  "titulo_original": "Contract to Kill",
-  "tmdb_rating": 4.5
+  ]
 }

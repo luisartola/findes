@@ -1,22 +1,21 @@
 {
   "titulo": "El cuarto mandamiento",
   "slug": "el-cuarto-mandamiento",
-  "imdb_id": "tt0251648",
-  "year": "1948",
-  "director": "Rolando Aguilar",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/5tVXISdqhyg69pGkxtHHdVMFJBa.jpg",
-  "genre": "Drama",
-  "imdb_rating": null,
-  "runtime": "97 min",
+  "tmdb_id": 965,
+  "imdb_id": "tt0035015",
+  "titulo_es": "El cuarto mandamiento",
+  "titulo_original": "The Magnificent Ambersons",
+  "year": "1942",
+  "director": "Orson Welles",
+  "plot": "A finales del siglo XIX, la mansión Amberson es la más fastuosa de Indianápolis. Cuando su dueña, la bellísima Isabel, es humillada públicamente, aunque de forma involuntaria por su pretendiente Eugene Morgan, lo abandona y se casa con el torpe Wilbur Minafer. Su único hijo, George, crecerá demasiado consentido y malcriado. Años más tarde, Eugene regresa a la ciudad con su hija Lucy, de quien se enamora el engreído George.",
+  "poster": "https://image.tmdb.org/t/p/w500/vTDBlSw5lPLJi6JI7JjARNmCnZ0.jpg",
+  "genre": "Drama, Romance",
+  "tmdb_rating": 7.3,
+  "runtime": "88 min",
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     1
-  ],
-  "tmdb_id": 480697,
-  "titulo_es": "El cuarto mandamiento",
-  "titulo_original": "El cuarto mandamiento",
-  "tmdb_rating": 6.7
+  ]
 }

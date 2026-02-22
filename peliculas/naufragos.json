@@ -1,22 +1,21 @@
 {
   "titulo": "Náufragos",
   "slug": "naufragos",
-  "imdb_id": "tt1693811",
-  "year": "2010",
-  "director": "Matheus da Rocha Pereira, Gabriela Amaral Almeida",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/tRqTdst3yev9kFdbtHTFgQ66ALb.jpg",
-  "genre": "Drama",
-  "imdb_rating": null,
-  "runtime": "15 min",
+  "tmdb_id": 13321,
+  "imdb_id": "tt0037017",
+  "titulo_es": "Náufragos",
+  "titulo_original": "Lifeboat",
+  "year": "1944",
+  "director": "Alfred Hitchcock",
+  "plot": "Durante la Segunda Guerra Mundial, ocho supervivientes de un barco que ha sido torpedeado comparten un bote salvavidas. También recogerán a un nazi que está a punto de ahogarse, lo que provocará diversas tensiones entre los tripulantes.",
+  "poster": "https://image.tmdb.org/t/p/w500/9oeYBuG7Ev2NwuBmJcpxpY2PR2e.jpg",
+  "genre": "Bélica, Drama",
+  "tmdb_rating": 7.359,
+  "runtime": "96 min",
   "traida_por": [
     "Sherlock"
   ],
   "findes": [
     3
-  ],
-  "tmdb_id": 539115,
-  "titulo_es": "Náufragos",
-  "titulo_original": "Náufragos",
-  "tmdb_rating": 5.0
+  ]
 }

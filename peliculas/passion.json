@@ -1,22 +1,21 @@
 {
   "titulo": "Passion",
   "slug": "passion",
-  "imdb_id": "tt0805775",
-  "year": "2005",
-  "director": "Lonny Price",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/3nQtll70tyKzYaBfjtbELG9YNsA.jpg",
-  "genre": "Música, Drama",
-  "imdb_rating": null,
-  "runtime": "117 min",
+  "tmdb_id": 109099,
+  "imdb_id": "tt1829012",
+  "titulo_es": "Passion",
+  "titulo_original": "Passion",
+  "year": "2013",
+  "director": "Brian De Palma",
+  "plot": "Isabelle, una joven ejecutiva de cuentas de una agencia publicitaria multinacional, y su poderosa jefa, la ambiciosa Christine, pasan de mantener un romance a comenzar a odiarse hasta límites insospechados... Nueva versión de la película francesa ‘Crime d'amour’ (2010), de Alain Corneau.",
+  "poster": "https://image.tmdb.org/t/p/w500/71rxpW80PixRke5PVm1pD5EbYpt.jpg",
+  "genre": "Suspense, Drama, Crimen, Misterio",
+  "tmdb_rating": 5.234,
+  "runtime": "101 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     25
-  ],
-  "tmdb_id": 378389,
-  "titulo_es": "Passion",
-  "titulo_original": "Passion",
-  "tmdb_rating": null
+  ]
 }

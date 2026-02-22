@@ -1,22 +1,21 @@
 {
   "titulo": "Noche de estreno",
   "slug": "noche-de-estreno",
-  "imdb_id": "tt4156972",
-  "year": "2016",
-  "director": "Isaac Rentz",
-  "plot": "Un cantante de Broadway fracasado ahora trabaja como gerente de producción, y debe salvar la noche de apertura de su nueva producción de las disputas a su reparto y del excéntrico equipo.",
-  "poster": "https://image.tmdb.org/t/p/w500/wVoJCGoOTcwBLZapuUuGbZ47GOd.jpg",
-  "genre": "Comedia, Música",
-  "imdb_rating": null,
-  "runtime": "90 min",
+  "tmdb_id": 33665,
+  "imdb_id": "tt0079672",
+  "titulo_es": "Noche de estreno",
+  "titulo_original": "Opening Night",
+  "year": "1977",
+  "director": "John Cassavetes",
+  "plot": "Myrtle Gordon, actriz de Broadway, ensaya su último obra sobre una mujer incapaz de admitir que envejece. Cuando es testigo de la trágica muerte de una de sus fieles seguidoras, comienza a enfrentarse al torbellino en la que su propia vida personal y profesional se ha adentrado. \"Opening Night\", con escenas rodadas con la presencia de público que reaccionan con libertad a las actuaciones que ven sobre el escenario, expone el drama de una actriz que, con gran desgaste personal consigue hacer suyos los papeles que interpreta.",
+  "poster": "https://image.tmdb.org/t/p/w500/5i1331f4Q2sNHUp9X3BOwWPS2Gg.jpg",
+  "genre": "Drama",
+  "tmdb_rating": 7.575,
+  "runtime": "143 min",
   "traida_por": [
     "Beiger"
   ],
   "findes": [
     9
-  ],
-  "tmdb_id": 311764,
-  "titulo_es": "Noche De Estreno",
-  "titulo_original": "Opening Night",
-  "tmdb_rating": 5.7
+  ]
 }

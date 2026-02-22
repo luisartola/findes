@@ -1,22 +1,21 @@
 {
   "titulo": "Son",
   "slug": "son",
-  "imdb_id": "tt22863296",
-  "year": "2022",
-  "director": "Marta Nieto",
-  "plot": "Ana no sabe cómo tratar a su hijo Son, de 6 años. Últimamente su vida está llena de conflictos y de luchas y se siente muy confusa. Ana decide entonces pasar unos días con Son en un pueblo de montaña, rodeados de naturaleza. Quiere reencontrarse con él. Poco a poco, lo que empieza siendo un agradable paseo por unos apacibles jardines se convierte en una metáfora de su propia realidad. Ana y Son se pierden en un jardín-laberinto en el que revivirán la confusión, la inconsciencia y la tensión de su propia relación. Una vez hayan entendido que están perdidos, Ana y Son podrán mirarse a los ojos y empezar a encontrarse.",
-  "poster": "https://image.tmdb.org/t/p/w500/2qR0s89DchqgnUUbDgGdB09Gyie.jpg",
-  "genre": "Drama",
-  "imdb_rating": null,
-  "runtime": "15 min",
+  "tmdb_id": 754934,
+  "imdb_id": "tt5624466",
+  "titulo_es": "Heredero",
+  "titulo_original": "Son",
+  "year": "2021",
+  "director": "Ivan Kavanagh",
+  "plot": "Cuando un joven cae enfermo por una misteriosa enfermedad, su madre tendrá que decidir hasta dónde está dispuesta a llegar para protegerle de unas aterradoras fuerzas que estuvieron presentes en su vida pasada.",
+  "poster": "https://image.tmdb.org/t/p/w500/rnZUG1B9c9GFSkRrDiKBz779Mna.jpg",
+  "genre": "Terror, Suspense",
+  "tmdb_rating": 6.009,
+  "runtime": "98 min",
   "traida_por": [
     "Sherlock"
   ],
   "findes": [
     24
-  ],
-  "tmdb_id": 1039834,
-  "titulo_es": "Son",
-  "titulo_original": "Son",
-  "tmdb_rating": 5.8
+  ]
 }

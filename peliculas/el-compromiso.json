@@ -1,22 +1,21 @@
 {
   "titulo": "El compromiso",
   "slug": "el-compromiso",
-  "imdb_id": "tt1753764",
-  "year": "2011",
-  "director": "Óscar Castillo",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/blhDKFLwn20q3jxnGX5p9BAyIcD.jpg",
-  "genre": null,
-  "imdb_rating": null,
-  "runtime": "100 min",
+  "tmdb_id": 48612,
+  "imdb_id": "tt0064041",
+  "titulo_es": "El compromiso",
+  "titulo_original": "The Arrangement",
+  "year": "1969",
+  "director": "Elia Kazan",
+  "plot": "Una mañana, Eddie Anderson va a trabajar, pero, de repente, en la autopista intenta suicidarse. Al regresar del hospital, se encierra en un mutismo que sólo rompe para intentar que su mujer comprenda las razones de su malestar: trata de explicarle cómo su éxito como ejecutivo y su relación amorosa con su secretaria Gwen sólo han servido para poner de manifiesto la falsedad de su vida. A partir de ese momento, Eddie intenta cambiar, pero sus esfuerzos fracasan: vuelve a la agencia y reanuda su relación con Gwen, pero no puede evitar que su esposa lo recluya en un hospital psiquiátrico.",
+  "poster": "https://image.tmdb.org/t/p/w500/yR0eQI4nkNIadoCG8W5zyft04Ls.jpg",
+  "genre": "Drama, Romance",
+  "tmdb_rating": 6.5,
+  "runtime": "125 min",
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     16
-  ],
-  "tmdb_id": 1029960,
-  "titulo_es": "El Compromiso",
-  "titulo_original": "El Compromiso",
-  "tmdb_rating": 5.0
+  ]
 }

@@ -1,22 +1,21 @@
 {
   "titulo": "Impacto",
   "slug": "impacto",
-  "imdb_id": "tt6079382",
-  "year": "2017",
-  "director": "Hèctor Romance",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/2a7PKeFRPIbdHIRayKpJFkNJnnM.jpg",
-  "genre": "Drama, Suspense",
-  "imdb_rating": null,
-  "runtime": "14 min",
+  "tmdb_id": 11644,
+  "imdb_id": "tt0082085",
+  "titulo_es": "Impacto",
+  "titulo_original": "Blow Out",
+  "year": "1981",
+  "director": "Brian De Palma",
+  "plot": "El protagonista es un ingeniero de sonido que trabaja en películas de terror baratas. Una noche, mientras graba efectos sonoros, observa cómo un coche en el que viaja una pareja cae desde un puente a un río. A pesar de sus esfuerzos, sólo consigue salvar a la chica. Cuando se entera de que el hombre muerto era un candidato a la Presidencia de la Nación, recuerda haber escuchado un disparo antes del accidente y, entonces, empieza a sospechar que fue un atentado.",
+  "poster": "https://image.tmdb.org/t/p/w500/vbHo8X0Zpny7rSovAdAEJeXVRwK.jpg",
+  "genre": "Crimen, Misterio, Suspense",
+  "tmdb_rating": 7.362,
+  "runtime": "108 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     16
-  ],
-  "tmdb_id": 572907,
-  "titulo_es": "Impacto",
-  "titulo_original": "Impacto",
-  "tmdb_rating": 2.7
+  ]
 }

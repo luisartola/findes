@@ -1,22 +1,21 @@
 {
   "titulo": "Soñadores",
   "slug": "sonadores",
-  "imdb_id": "tt31725403",
-  "year": null,
-  "director": "Héctor Rodríguez",
-  "plot": "Dani y Antía son una pareja de universitarios que, después de hacer el amor, fuman un porro y hablan sobre la vida, las relaciones, el miedo, el amor y sus sueños. Sobre todo los de Dani.",
-  "poster": "https://image.tmdb.org/t/p/w500/pxfdPSmXnaPLeNWa3f5AT4YM9BQ.jpg",
-  "genre": "Comedia, Romance",
-  "imdb_rating": null,
-  "runtime": "5 min",
+  "tmdb_id": 1278,
+  "imdb_id": "tt0309987",
+  "titulo_es": "Soñadores",
+  "titulo_original": "The Dreamers",
+  "year": "2003",
+  "director": "Bernardo Bertolucci",
+  "plot": "París, 1968. Isabelle y su hermano Theo, solos en la ciudad mientras sus padres están de viaje, invitan a su apartamento a Matthew, un joven estudiante americano al que han conocido en un cine. Una vez en casa establecen unas reglas para conocerse mutuamente, explorando emociones y erotismo a través de una serie de juegos extremadamente arriesgados.",
+  "poster": "https://image.tmdb.org/t/p/w500/rdddOCZTYQuR3AXIvUiDhijKNjl.jpg",
+  "genre": "Drama, Romance",
+  "tmdb_rating": 7.182,
+  "runtime": "120 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     1
-  ],
-  "tmdb_id": 1238201,
-  "titulo_es": "Soñadores",
-  "titulo_original": "Soñadores",
-  "tmdb_rating": 10.0
+  ]
 }

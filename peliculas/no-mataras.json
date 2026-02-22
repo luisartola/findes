@@ -1,22 +1,21 @@
 {
   "titulo": "No matarás",
   "slug": "no-mataras",
-  "imdb_id": "tt0096734",
-  "year": "1989",
-  "director": "Joe Dante",
-  "plot": "En un típico vecindario norteamericano de los suburbios llegan unos vecinos nuevos a instalarse al lado de la casa de Ray Peterson. Pero estos nuevos vecinos son realmente extraños: nadie los ha visto y por la noche se pueden escuchar extraños sonidos provenientes del sótano. Lo único que conocen es su apellido: los Klopeks. Un día Walter, un anciano del vecindario, desaparece y todos comienzan a sospechar de ellos.",
-  "poster": "https://image.tmdb.org/t/p/w500/tRPXllE8ktssheL8yEAKwTGRDMk.jpg",
-  "genre": "Comedia, Terror, Suspense",
-  "imdb_rating": null,
-  "runtime": "105 min",
+  "tmdb_id": 10754,
+  "imdb_id": "tt0095468",
+  "titulo_es": "No matarás",
+  "titulo_original": "Krótki film o zabijaniu",
+  "year": "1988",
+  "director": "Krzysztof Kieślowski",
+  "plot": "Varsovia. Un taxista está lavando su coche. Jacek, un joven campesino de mirada turbia, vaga por la ciudad. Piotr, un estudiante de derecho, se prepara para hacer su último examen. Sus destinos se cruzan cuando Jacek coge un taxi para ir a los suburbios de la ciudad, donde asesina brutalmente al taxista golpeándolo con una piedra.",
+  "poster": "https://image.tmdb.org/t/p/w500/i5Yy8BSeNWwTAsMvBfglEXmjsj5.jpg",
+  "genre": "Crimen, Drama",
+  "tmdb_rating": 7.625,
+  "runtime": "85 min",
   "traida_por": [
     "Munny"
   ],
   "findes": [
     13
-  ],
-  "tmdb_id": 11974,
-  "titulo_es": "No matarás... al vecino",
-  "titulo_original": "The 'Burbs",
-  "tmdb_rating": 6.8
+  ]
 }

@@ -1,22 +1,21 @@
 {
   "titulo": "Julia",
   "slug": "julia",
-  "imdb_id": "tt1365472",
-  "year": "2009",
-  "director": "Lotta Lättström",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/ooSj59GqF2PFY7IIzbMd6Zb1pe0.jpg",
+  "tmdb_id": 7351,
+  "imdb_id": "tt0903627",
+  "titulo_es": "Julia",
+  "titulo_original": "Julia",
+  "year": "2008",
+  "director": "Erick Zonca",
+  "plot": "Inspirada en \"Gloria\" de John Cassavetes, la película se centra en Julia (Tilda Swinton), una mujer de 40 años, alcohólica, manipuladora, desconfiada y mentirosa. Entre vodkas, Julia sobrevive con trabajos con los que gana una miseria. A pesar de su soledad, mantiene una buena relación con Mitch, un antiguo novio que procura ayudarla. Pero Julia ignora sus esfuerzos. Presionada por la desesperación y la necesidad económica, se ve forzada a cometer un crimen (el secuestro de un niño), cuyo inesperado desenlace la obligará a huir. (FILMAFFINITY)",
+  "poster": "https://image.tmdb.org/t/p/w500/ojyXgRZtK1qvMbPdTsxDYjgmr04.jpg",
   "genre": "Drama",
-  "imdb_rating": null,
-  "runtime": "29 min",
+  "tmdb_rating": 6.7,
+  "runtime": "144 min",
   "traida_por": [
     "Beiger"
   ],
   "findes": [
     9
-  ],
-  "tmdb_id": 760693,
-  "titulo_es": "Julia",
-  "titulo_original": "Julia",
-  "tmdb_rating": 6.0
+  ]
 }

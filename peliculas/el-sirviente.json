@@ -1,22 +1,21 @@
 {
   "titulo": "El sirviente",
   "slug": "el-sirviente",
-  "imdb_id": "tt1528057",
-  "year": "2009",
-  "director": "Ernesto Baca",
-  "plot": null,
-  "poster": null,
-  "genre": "Documental",
-  "imdb_rating": null,
-  "runtime": "47 min",
+  "tmdb_id": 42987,
+  "imdb_id": "tt0057490",
+  "titulo_es": "El sirviente",
+  "titulo_original": "The Servant",
+  "year": "1963",
+  "director": "Joseph Losey",
+  "plot": "Un intrigante y manipulador mayordomo consigue, gradualmente, dominar la vida del señor al que sirve, aprovechándose de sus debilidades sexuales. Un tenso y adulto drama psicológico que obtuvo excelentes críticas.",
+  "poster": "https://image.tmdb.org/t/p/w500/7aqzvi7mRfQAzSdWKSZcm7haoix.jpg",
+  "genre": "Drama",
+  "tmdb_rating": 7.6,
+  "runtime": "116 min",
   "traida_por": [
     "Beiger"
   ],
   "findes": [
     16
-  ],
-  "tmdb_id": 874727,
-  "titulo_es": "El sirviente",
-  "titulo_original": "El sirviente",
-  "tmdb_rating": null
+  ]
 }

@@ -1,22 +1,21 @@
 {
   "titulo": "The Fake",
   "slug": "the-fake",
-  "imdb_id": "tt4844894",
-  "year": "2015",
-  "director": "Matthew Douglas Helfgott, Jared Hillman",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/iFQBpWJxazWJVzwbVYVHyp3wYeK.jpg",
-  "genre": "Drama, Comedia",
-  "imdb_rating": null,
-  "runtime": "8 min",
+  "tmdb_id": 211247,
+  "imdb_id": "tt3091272",
+  "titulo_es": "The Fake",
+  "titulo_original": "사이비",
+  "year": "2013",
+  "director": "연상호",
+  "plot": "En un pequeño pueblo de Corea del Sur que está a punto de ser inundado por la construcción de una presa, los habitantes han caído bajo el hechizo de un carismático pastor evangelista, quien les ha prometido un nuevo hogar y un lugar en el cielo a cambio de sus ahorros. En medio de toda esta corrupción irrumpe Min-chul, el violento y agresivo borracho del pueblo que acaba de salir de la cárcel, y el único que no parece caer en las mentiras y engaños del pastor como el resto de vecinos. Una falsedad en que todo el pueblo parece haberse acomodado, y algo que Min-chul no está dispuesto a permitir.",
+  "poster": "https://image.tmdb.org/t/p/w500/eIKje8Cmr22wmpAE2WKsvYxXumx.jpg",
+  "genre": "Animación, Drama, Suspense",
+  "tmdb_rating": 6.588,
+  "runtime": "101 min",
   "traida_por": [
     "Beiger"
   ],
   "findes": [
     21
-  ],
-  "tmdb_id": 614900,
-  "titulo_es": "The Fake",
-  "titulo_original": "The Fake",
-  "tmdb_rating": null
+  ]
 }

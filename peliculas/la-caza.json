@@ -1,14 +1,17 @@
 {
   "titulo": "La caza",
   "slug": "la-caza",
-  "imdb_id": "tt0060223",
-  "year": "1966",
-  "director": "Carlos Saura",
-  "plot": "Tres amigos van de caza a un coto que fue escenario de una batalla durante la Guerra Civil (1936-1939). Todos ellos están pasando por momentos difíciles, separaciones, problemas con el alcohol, de modo que lo que iba a ser una tranquila jornada de caza se convierte en un enfrentamiento entre los tres.",
-  "poster": "https://image.tmdb.org/t/p/w500/2lODWq6rLdcb8hLuQpt9qHSAatW.jpg",
-  "genre": "Drama, Suspense",
-  "imdb_rating": null,
-  "runtime": "87 min",
+  "tmdb_id": 514847,
+  "imdb_id": "tt8244784",
+  "titulo_es": "La caza",
+  "titulo_original": "The Hunt",
+  "year": "2020",
+  "director": "Craig Zobel",
+  "plot": "Doce extraños se despiertan en el claro de un bosque con muchas preguntas sin respuesta. ¿Dónde están? ¿Cómo llegaron allí? ¿Y por qué o con qué propósito están ahí? La respuesta a todas esas preguntas es: La caza, un juego macabro ideado por miembros de las élites globales, que se reúnen en un punto remoto o una casa para cazar humanos por diversión. Ellos son las presas; el resto, los cazadores. Pero todo está a punto de cambiar cuando Crystal, una de las jóvenes que se encuentra entre los \"cazados\", le da la vuelta al juego y empieza a inclinar la balanza a su favor. Uno a uno, comienza a deshacerse de los miembros de la élite que pretende darles caza, con la intención de llegar hasta la misteriosa mujer (Hilary Swank) que mueve los hilos de todo aquello.",
+  "poster": "https://image.tmdb.org/t/p/w500/5WCuPRfa0h8jMT4Iu2jIIQXqllM.jpg",
+  "genre": "Acción, Suspense, Terror",
+  "tmdb_rating": 6.635,
+  "runtime": "90 min",
   "traida_por": [
     "Munny",
     "Sherlock"
@@ -16,9 +19,5 @@
   "findes": [
     15,
     22
-  ],
-  "tmdb_id": 114333,
-  "titulo_es": "La caza",
-  "titulo_original": "La caza",
-  "tmdb_rating": 7.0
+  ]
 }

@@ -1,22 +1,21 @@
 {
   "titulo": "Detour",
   "slug": "detour",
-  "imdb_id": "tt1753693",
-  "year": "2013",
-  "director": "William Dickerson",
-  "plot": "Atrapado dentro de su coche por un corrimiento de tierra, Jackson Alder se encuentra en una situación de la que no puede salir mediante su labia y don de gentes. Sin esperanza de ser rescatado, deberá luchar contra la naturaleza para sobrevivir.",
-  "poster": "https://image.tmdb.org/t/p/w500/dIwLGZ3LLL99Gfrr0zLgE0YOlQi.jpg",
-  "genre": "Suspense, Misterio",
-  "imdb_rating": null,
-  "runtime": "87 min",
+  "tmdb_id": 20367,
+  "imdb_id": "tt0037638",
+  "titulo_es": "Desvío",
+  "titulo_original": "Detour",
+  "year": "1945",
+  "director": "Edgar G. Ulmer",
+  "plot": "La vida de Al Roberts, pianista en un club nocturno de Nueva York, se convierte en una pesadilla cuando decide hacer autostop hasta Los Ángeles para visitar a su novia.",
+  "poster": "https://image.tmdb.org/t/p/w500/gJb9HRAs1V4bA0VKsWpT6mhv2RT.jpg",
+  "genre": "Drama, Suspense",
+  "tmdb_rating": 7.229,
+  "runtime": "66 min",
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     9
-  ],
-  "tmdb_id": 178603,
-  "titulo_es": "Detour",
-  "titulo_original": "Detour",
-  "tmdb_rating": 5.3
+  ]
 }

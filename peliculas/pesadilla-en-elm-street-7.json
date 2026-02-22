@@ -1,22 +1,21 @@
 {
   "titulo": "Pesadilla en Elm Street 7",
   "slug": "pesadilla-en-elm-street-7",
-  "imdb_id": "tt0111686",
-  "year": "1994",
+  "tmdb_id": 377,
+  "imdb_id": "tt0087800",
+  "titulo_es": "Pesadilla en Elm Street",
+  "titulo_original": "A Nightmare on Elm Street",
+  "year": "1984",
   "director": "Wes Craven",
-  "plot": "La actriz que protagonizó la primera «Pesadilla en Elm Street» se empieza a obsesionar con su personaje y con la presencia de Freddy Kruger. A la vez, recibe una oferta para hacer una nueva secuela de la serie, escrita por el propio Craven, que se inspira en los sueños de la chica.",
-  "poster": "https://image.tmdb.org/t/p/w500/sLLYfNEruiG8OTdF4MOKHfU7udi.jpg",
-  "genre": "Terror, Misterio, Fantasía",
-  "imdb_rating": null,
-  "runtime": "112 min",
+  "plot": "Varios jóvenes de una pequeña localidad tienen habitualmente pesadillas en las que son perseguidos por un hombre deformado por el fuego y que usa un guante terminado en afiladas cuchillas. Algunos de ellos comienzan a ser asesinados mientras duermen por este ser, que resulta ser un asesino al que los padres de estos jóvenes quemaron vivo hace varios años tras descubrir que había asesinado a varios niños.",
+  "poster": "https://image.tmdb.org/t/p/w500/qDmeYxsfNA68Bn7aW8HSkAuVmWf.jpg",
+  "genre": "Terror",
+  "tmdb_rating": 7.341,
+  "runtime": "91 min",
   "traida_por": [
     "Sherlock"
   ],
   "findes": [
     11
-  ],
-  "tmdb_id": 11596,
-  "titulo_es": "La nueva pesadilla de Wes Craven",
-  "titulo_original": "New Nightmare",
-  "tmdb_rating": 6.5
+  ]
 }

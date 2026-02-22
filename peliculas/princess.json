@@ -1,22 +1,21 @@
 {
   "titulo": "Princess",
   "slug": "princess",
-  "imdb_id": "tt1052352",
-  "year": "2008",
-  "director": "Mark Rosman",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/txLRWBOjPISJ8NNypcNqeejMs2b.jpg",
-  "genre": "Fantasía, Familia",
-  "imdb_rating": null,
-  "runtime": "89 min",
+  "tmdb_id": 2493,
+  "imdb_id": "tt0093779",
+  "titulo_es": "La princesa prometida",
+  "titulo_original": "The Princess Bride",
+  "year": "1987",
+  "director": "Rob Reiner",
+  "plot": "Después de buscar fortuna durante cinco años, Westley retorna a su tierra para casarse con su amada, la bella Buttercup, a la que había jurado amor eterno. Sin embargo, para recuperarla habrá de enfrentarse a Vizzini y sus esbirros. Una vez derrotados éstos, tendrá que superar el peor de los obstáculos: el príncipe Humperdinck pretende desposar a la desdichada Buttercup, pese a que ella no lo ama, ya que sigue enamorada de Westley.",
+  "poster": "https://image.tmdb.org/t/p/w500/dYgsPYY3sI6Zvie8NaJeA0vo1PF.jpg",
+  "genre": "Aventura, Familia, Fantasía, Comedia, Romance",
+  "tmdb_rating": 7.692,
+  "runtime": "98 min",
   "traida_por": [
     "Sherlock"
   ],
   "findes": [
     9
-  ],
-  "tmdb_id": 41362,
-  "titulo_es": "Princess",
-  "titulo_original": "Princess",
-  "tmdb_rating": 6.2
+  ]
 }

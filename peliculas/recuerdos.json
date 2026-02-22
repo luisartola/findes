@@ -1,22 +1,21 @@
 {
   "titulo": "Recuerdos",
   "slug": "recuerdos",
-  "imdb_id": "tt14227076",
-  "year": "2013",
-  "director": "Santi Planet",
-  "plot": "Los objetos atesorados tienen un doble valor: el real y el simbólico. Su existencia es frágil y depende, en gran medida, de la memoria que los aferra al mundo que los rodea.",
-  "poster": "https://image.tmdb.org/t/p/w500/616FjuJGAkPoJFQp6IEI9B8FuEn.jpg",
-  "genre": "Drama",
-  "imdb_rating": null,
-  "runtime": "2 min",
+  "tmdb_id": 11337,
+  "imdb_id": "tt0081554",
+  "titulo_es": "Recuerdos de una estrella",
+  "titulo_original": "Stardust Memories",
+  "year": "1980",
+  "director": "Woody Allen",
+  "plot": "El cineasta Sandy Bates, legendario creador de comedias, está harto de ser gracioso. Al borde de un ataque de nervios, Bates asiste a una retrospectiva de su obra que se celebra un fin de semana, y que le obligará a reflexionar sobre la misma, sobre los recuerdos de su gran amor Dorrie y sobre las virtudes de sentar la cabeza con su nueva novia Isabel. Bates se debatirá por encontrar una razón por la que seguir viviendo.",
+  "poster": "https://image.tmdb.org/t/p/w500/9CavoUa5MjeipEeKwLkwP9GYvd6.jpg",
+  "genre": "Comedia, Drama, Romance",
+  "tmdb_rating": 6.919,
+  "runtime": "89 min",
   "traida_por": [
     "Sherlock"
   ],
   "findes": [
     2
-  ],
-  "tmdb_id": 805500,
-  "titulo_es": "Recuerdos",
-  "titulo_original": "Recuerdos",
-  "tmdb_rating": 10.0
+  ]
 }

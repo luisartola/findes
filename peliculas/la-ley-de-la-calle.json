@@ -1,22 +1,21 @@
 {
   "titulo": "La ley de la calle",
   "slug": "la-ley-de-la-calle",
-  "imdb_id": "tt0439544",
-  "year": "2005",
-  "director": "Chris Fisher",
-  "plot": "La ciudad de Los Ángeles está siendo asolada por las bandas, por lo que el Departamento de Policía decide hacer algo y crea una unidad específica para combatirlas y sacar a esa escoria de las calles.  Para combatirlas nada mejor que antiguos pandilleros, por lo que contratan a Armando y a Salim para que formen parte de esa unidad de élite. Ellos se han criado en las calles y saben cómo funcionan las bandas, por lo que son los mejores para acabar con ellas.  Los métodos de estos dos compañeros son poco ortodoxos. Desde pequeños se han criado en la violencia, por lo que los métodos que usan siempre tienen que ver con la violencia, aunque lo cierto es que no puede ser de otro modo cuando hay bandas de por medio.  Esto crea un nuevo problema, y es que estos dos policías en realidad son miembros de bandas con placa, cuyo proceder poco tiene que ver con el de los policías normales, que suelen respetar la ley.",
-  "poster": "https://image.tmdb.org/t/p/w500/ilMLmhbEMCS0rcbN1itN4UlFrMq.jpg",
-  "genre": "Crimen, Drama, Suspense",
-  "imdb_rating": null,
-  "runtime": "97 min",
+  "tmdb_id": 232,
+  "imdb_id": "tt0086216",
+  "titulo_es": "La ley de la calle",
+  "titulo_original": "Rumble Fish",
+  "year": "1983",
+  "director": "Francis Ford Coppola",
+  "plot": "Rusty James (Matt Dillon) es un joven que sueña con volver a los tiempos de las pandillas juveniles para emular a su hermano mayor (Mickey Rourke), que en su día fue líder de una de ellas y que arrastra una reputación de rebelde e intocable como \"el chico de la moto\". Pero ahora su hermano ya no está, pues hace dos meses que se marchó, y a Rusty le han citado para una pelea.",
+  "poster": "https://image.tmdb.org/t/p/w500/nhkBx2ehlxZVLclBXuojUZuSjB6.jpg",
+  "genre": "Crimen, Drama, Romance",
+  "tmdb_rating": 7.0,
+  "runtime": "94 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     1
-  ],
-  "tmdb_id": 10598,
-  "titulo_es": "La ley de la calle (Dirty)",
-  "titulo_original": "Dirty",
-  "tmdb_rating": 5.3
+  ]
 }

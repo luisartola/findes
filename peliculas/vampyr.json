@@ -1,22 +1,21 @@
 {
   "titulo": "Vampyr",
   "slug": "vampyr",
-  "imdb_id": "tt9330030",
-  "year": "1989",
-  "director": "Jaroslav Hanuš",
-  "plot": null,
-  "poster": null,
-  "genre": "Terror, Misterio, Película de TV",
-  "imdb_rating": null,
-  "runtime": "34 min",
+  "tmdb_id": 779,
+  "imdb_id": "tt0023649",
+  "titulo_es": "Vampyr, la bruja vampiro",
+  "titulo_original": "Vampyr - Der Traum des Allan Grey",
+  "year": "1932",
+  "director": "Carl Theodor Dreyer",
+  "plot": "En esta película Dreyer nos introduce en un universo fantasmagórico por medio de imágenes expresionistas. Un joven viajero, Allan Gray, se aloja en un extraño castillo, cuya atmósfera densa y enrarecida recuerda la de las pesadillas. El joven comienza a tener espeluznantes visiones, de las cuales la más terrible es el descubrimiento de una mujer inconsciente que ha sido atacada por un vampiro en forma de bruja. El maestro Dreyer rueda en Francia esta personal visión del terror: un mundo onírico y sugerente, lleno de fantasmas y sombras que cautivan más por la fuerza de las imágenes que por lo terrorífico del relato. A pesar de que actualmente es considerada una obra maestra del género, en su día fue un rotundo fracaso, por lo que el director danés tardaría doce años en volver a rodar su siguiente película, \"Dies Irae\".",
+  "poster": "https://image.tmdb.org/t/p/w500/rzLsS8d1PJQhb0Ni9RjTaqyQ0ca.jpg",
+  "genre": "Terror, Fantasía, Misterio",
+  "tmdb_rating": 7.274,
+  "runtime": "70 min",
   "traida_por": [
     "Obi Wan"
   ],
   "findes": [
     7
-  ],
-  "tmdb_id": 1172736,
-  "titulo_es": "Vampýr",
-  "titulo_original": "Vampýr",
-  "tmdb_rating": 3.3
+  ]
 }

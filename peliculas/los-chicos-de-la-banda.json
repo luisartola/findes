@@ -1,22 +1,21 @@
 {
   "titulo": "Los chicos de la banda",
   "slug": "los-chicos-de-la-banda",
-  "imdb_id": "tt10199914",
-  "year": "2020",
-  "director": "Joe Mantello",
-  "plot": "Un grupo de amigos gays se reúne en un apartamento de Nueva York para celebrar un cumpleaños. Cuando transcurren las horas, después de beber y de subir el volumen de la música, la velada comienza a exponer las fisuras que existen entre su amistad y el dolor auto-infligido que amenaza con hacer trizas su concepto de la solidaridad.",
-  "poster": "https://image.tmdb.org/t/p/w500/ajzVxjwq4DkzlDq1yk2h6CKkbIP.jpg",
+  "tmdb_id": 34377,
+  "imdb_id": "tt0065488",
+  "titulo_es": "Los chicos de la banda",
+  "titulo_original": "The Boys in the Band",
+  "year": "1970",
+  "director": "William Friedkin",
+  "plot": "Adaptación de una exitosa obra de Mart Crowley. Nueve chicos se reúnen para una fiesta de cumpleaños; ocho de ellos se declaran abiertamente gays, y el noveno sostiene que no lo es. Primer film con homosexuales con final no trágico producido en Hollywood.",
+  "poster": "https://image.tmdb.org/t/p/w500/puUiyXUEBeK22NIjcY4q3h2y7xz.jpg",
   "genre": "Drama",
-  "imdb_rating": null,
-  "runtime": "122 min",
+  "tmdb_rating": 7.0,
+  "runtime": "118 min",
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     17
-  ],
-  "tmdb_id": 597156,
-  "titulo_es": "Los chicos de la banda",
-  "titulo_original": "The Boys in the Band",
-  "tmdb_rating": 6.8
+  ]
 }

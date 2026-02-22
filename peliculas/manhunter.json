@@ -1,22 +1,21 @@
 {
   "titulo": "Manhunter",
   "slug": "manhunter",
-  "imdb_id": "tt0071809",
-  "year": "1974",
-  "director": "Walter Grauman",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/jkVpV6Crjc6i7sf5EjezAqam5oY.jpg",
-  "genre": "Crimen, Drama, Película de TV",
-  "imdb_rating": null,
-  "runtime": "74 min",
+  "tmdb_id": 11454,
+  "imdb_id": "tt0091474",
+  "titulo_es": "Hunter",
+  "titulo_original": "Manhunter",
+  "year": "1986",
+  "director": "Michael Mann",
+  "plot": "Will Graham (William Petersen) regresa a la policía persuadido por un compañero. Encargado de la difícil tarea de dar caza a un escurridizo asesino que ataca sólo los días de luna llena, Graham decide emplear métodos poco convencionales. De este modo, recurre al doctor Hannibal Lecter (Brian Cox), otro asesino en serie, para entrar en la mente del asesino, pero esto le llevará a estar expuesto a la inteligencia de un genio poniendo en peligro su salud mental.",
+  "poster": "https://image.tmdb.org/t/p/w500/ndrnaRtKgxnc8K2F0CCTioabzoA.jpg",
+  "genre": "Crimen, Terror, Suspense",
+  "tmdb_rating": 7.014,
+  "runtime": "124 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     15
-  ],
-  "tmdb_id": 100279,
-  "titulo_es": "Manhunter",
-  "titulo_original": "Manhunter",
-  "tmdb_rating": 6.5
+  ]
 }

@@ -1,22 +1,21 @@
 {
   "titulo": "Un amor de juventud",
   "slug": "un-amor-de-juventud",
-  "imdb_id": "tt0459666",
-  "year": "2005",
-  "director": "Hou Hsiao-hsien",
-  "plot": "Tres épocas (1966, 1911, 2005) y tres historias, interpretadas por la misma pareja de actores, Shu Qi y Chang Chen. Un cuento sentimental que evoca la triple reencarnación de un amor infinito.",
-  "poster": "https://image.tmdb.org/t/p/w500/6ig1sHOjMgpntufgPOEOLtRCWsG.jpg",
-  "genre": "Romance, Drama",
-  "imdb_rating": null,
-  "runtime": "139 min",
+  "tmdb_id": 82327,
+  "imdb_id": "tt1618447",
+  "titulo_es": "Primer amor (Un amour de jeunesse)",
+  "titulo_original": "Un amour de jeunesse",
+  "year": "2011",
+  "director": "Mia Hansen-Løve",
+  "plot": "Primavera de 1999. Camille, de quince años (Lola Créton), y Sullivan, de 19 (Sebastian Urzendowky), viven un amor apasionado, pero él partirá para Sudamérica, dejando a Camille dolorida y desesperada. Años más tarde, Camille, que forma una sólida pareja con Lorenz (Magne Havard Brekke), volverá a reencontrarse con Sullivan.",
+  "poster": "https://image.tmdb.org/t/p/w500/tmPHufnMYyEoSYv2N8XQPPQZNNr.jpg",
+  "genre": "Drama, Romance",
+  "tmdb_rating": 6.242,
+  "runtime": "110 min",
   "traida_por": [
     "Sherlock"
   ],
   "findes": [
     15
-  ],
-  "tmdb_id": 11554,
-  "titulo_es": "Tiempos de Amor, Juventud y Libertad",
-  "titulo_original": "最好的時光",
-  "tmdb_rating": 7.0
+  ]
 }

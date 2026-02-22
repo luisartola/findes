@@ -1,22 +1,21 @@
 {
   "titulo": "Thunder Road",
   "slug": "thunder-road",
-  "imdb_id": "tt0052293",
-  "year": "1958",
-  "director": "Arthur Ripley",
-  "plot": "Un héroe de la Guerra de Corea, de espíritu pendenciero, se une a un antiguo compañero, que se dedica a fabricar clandestinamente whisky en las montañas. Su trabajo consistirá conducir el camión que lleva el whisky de contrabando. (FILMAFFINITY)",
-  "poster": "https://image.tmdb.org/t/p/w500/EzKXYEfTsZjGZIUHM3vmlZMewk.jpg",
-  "genre": "Crimen, Acción, Suspense",
-  "imdb_rating": null,
-  "runtime": "92 min",
+  "tmdb_id": 502422,
+  "imdb_id": "tt7738450",
+  "titulo_es": "Thunder Road",
+  "titulo_original": "Thunder Road",
+  "year": "2018",
+  "director": "Jim Cummings",
+  "plot": "Un agente de policía lidia con la muerte de su madre al dar un emocionante discurso en su funeral.",
+  "poster": "https://image.tmdb.org/t/p/w500/ynljTdiGVUCJJ6THSZi22SBoQAR.jpg",
+  "genre": "Comedia, Drama",
+  "tmdb_rating": 6.806,
+  "runtime": "95 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     26
-  ],
-  "tmdb_id": 19368,
-  "titulo_es": "Camino de odio",
-  "titulo_original": "Thunder Road",
-  "tmdb_rating": 6.0
+  ]
 }

@@ -1,22 +1,21 @@
 {
   "titulo": "Calles de fuego",
   "slug": "calles-de-fuego",
-  "imdb_id": "tt0772743",
-  "year": "2006",
-  "director": "Ismael Morillo",
-  "plot": "Ani y Niko tienen 16 años y son novios, pero llevan una vida muy diferente. Ella es hija de un taxista y un ama de casa y ha vivido siempre feliz y contenta. Niko trabaja de repartidor de pizzas, su madre es alcohólica desde que su padre les abandonó y su hermano es pandillero y adicto a las drogas. El mundo de la joven pareja se ve alterado por la aparición cada vez más frecuente de coches quemados los fines de semana. Las patrullas vecinales organizadas en el barrio obrero desencadenan una tragedia que acabará salpicando a Ani y Niko. (FILMAFFINITY)",
-  "poster": null,
-  "genre": "Drama, Película de TV",
-  "imdb_rating": null,
-  "runtime": "82 min",
+  "tmdb_id": 14746,
+  "imdb_id": "tt0088194",
+  "titulo_es": "Calles de fuego",
+  "titulo_original": "Streets of Fire",
+  "year": "1984",
+  "director": "Walter Hill",
+  "plot": "Tom Cody, atractivo, soldado heroico y afortunado regresa a su antiguo vecindario para rescatar a su hermosa ex novia, la estrella de rock Ellen Aim, de las garras de una banda de malvados motociclistas que la han secuestrado. Junto con el productor de Ellen, Billy Fish, y los dos puños de su compañero bebedor de cerveza, McCoy, parte a un mundo de humo, neón, calles salpicadas de lluvia, coches contaminantes y enemigos mortales para traer a Ellen de regreso.",
+  "poster": "https://image.tmdb.org/t/p/w500/r6s0i5GpGIcJAgIeOAlC0d4cvJE.jpg",
+  "genre": "Acción",
+  "tmdb_rating": 6.895,
+  "runtime": "93 min",
   "traida_por": [
     "Munny"
   ],
   "findes": [
     5
-  ],
-  "tmdb_id": 230927,
-  "titulo_es": "Calles de fuego",
-  "titulo_original": "Calles de fuego",
-  "tmdb_rating": 1.0
+  ]
 }

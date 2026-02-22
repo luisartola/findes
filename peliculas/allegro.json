@@ -1,22 +1,21 @@
 {
   "titulo": "Allegro",
   "slug": "allegro",
-  "imdb_id": "tt3626254",
-  "year": "1970",
-  "director": "Hugo Niebeling",
-  "plot": null,
-  "poster": null,
-  "genre": "Documental",
-  "imdb_rating": null,
-  "runtime": "17 min",
+  "tmdb_id": 52473,
+  "imdb_id": "tt0424789",
+  "titulo_es": "Allegro",
+  "titulo_original": "Allegro",
+  "year": "2005",
+  "director": "Christoffer Boe",
+  "plot": "",
+  "poster": "https://image.tmdb.org/t/p/w500/89BHF2Xc4wr5PNC6OYnFDjbU6p8.jpg",
+  "genre": "Drama, Romance, Ciencia ficción",
+  "tmdb_rating": 6.8,
+  "runtime": "88 min",
   "traida_por": [
     "Sherlock"
   ],
   "findes": [
     15
-  ],
-  "tmdb_id": 1401142,
-  "titulo_es": "Allegro",
-  "titulo_original": "Allegro",
-  "tmdb_rating": null
+  ]
 }

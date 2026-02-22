@@ -1,22 +1,21 @@
 {
   "titulo": "Stromboli",
   "slug": "stromboli",
-  "imdb_id": "tt12726428",
-  "year": "2022",
-  "director": "Michiel van Erp",
-  "plot": "Sara, una mujer que se ha divorciado recientemente, ha decidido registrarse en un retiro en la isla volcánica italiana de Stromboli. Pero al mismo tiempo, se enfrentará al doloroso pasado que ha estado tratando de ocultar.",
-  "poster": "https://image.tmdb.org/t/p/w500/4rQcKxoJkm6CViK82UfZwVkW2ec.jpg",
+  "tmdb_id": 4173,
+  "imdb_id": "tt0041931",
+  "titulo_es": "Stromboli, tierra de Dios",
+  "titulo_original": "Stromboli (Terra di Dio)",
+  "year": "1950",
+  "director": "Roberto Rossellini",
+  "plot": "Para poder escapar de un campo de concentración, una mujer desesperada acepta casarse con un pescador de una pequeña isla llamada Stromboli. Pero escapar de una prisión la lleva al final a meterse en otra, y su vida en la isla es también una condena.",
+  "poster": "https://image.tmdb.org/t/p/w500/7YEX2VP3YXxUNo3YvfbSiDYZTX4.jpg",
   "genre": "Drama",
-  "imdb_rating": null,
-  "runtime": "86 min",
+  "tmdb_rating": 7.079,
+  "runtime": "107 min",
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     5
-  ],
-  "tmdb_id": 1034629,
-  "titulo_es": "Stromboli",
-  "titulo_original": "Stromboli",
-  "tmdb_rating": 5.2
+  ]
 }

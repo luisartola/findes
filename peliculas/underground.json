@@ -1,22 +1,21 @@
 {
   "titulo": "Underground",
   "slug": "underground",
-  "imdb_id": "tt0870209",
-  "year": "2007",
-  "director": "Chee Keong Cheung",
-  "plot": "En los suburbios del Reino Unido, un torneo clandestino desafía a doce luchadores de diferentes orígenes a competir por un premio de $500.000.",
-  "poster": "https://image.tmdb.org/t/p/w500/zaWVpk2COx93OHq9Vz41xl0Sij7.jpg",
-  "genre": "Acción",
-  "imdb_rating": null,
-  "runtime": "95 min",
+  "tmdb_id": 11902,
+  "imdb_id": "tt0114787",
+  "titulo_es": "Underground",
+  "titulo_original": "Подземље",
+  "year": "1995",
+  "director": "Emir Kusturica",
+  "plot": "En Belgrado, Yugoslavia, durante la Segunda Guerra Mundial, un poeta, Marko Dren (Miki Manojlovic), esconde a su amigo Petar Popara (Lazar Ristovski) y a su familia en un sótano para esconderse de los nazis. Allí ocultos deben fabricar armas para la guerra. Marko los engaña para que sigan fabricando armas 20 años después de la guerra y haciéndoles creer que aún no termina y que sólo han pasado 15 años. La película está llena de simbolismos y metáforas. Por ejemplo, tras el bombardeo a Belgrado, Blaky se limpia el zapato con un gato; al final, Petar, en la búsqueda de su hijo y tras descubrir que Marko y Natalija (Mirjana Jokovic) murieron, se apoya en una cruz que tiene a Cristo invertido. Además, en medio del fuego y la destrucción, hay un caballo blanco y un ganso volando.",
+  "poster": "https://image.tmdb.org/t/p/w500/h8N6y13t4VusrDdH5PzTkwvBvgN.jpg",
+  "genre": "Comedia, Drama, Bélica",
+  "tmdb_rating": 7.732,
+  "runtime": "167 min",
   "traida_por": [
     "Obi Wan"
   ],
   "findes": [
     2
-  ],
-  "tmdb_id": 17318,
-  "titulo_es": "Underground",
-  "titulo_original": "Underground",
-  "tmdb_rating": 4.2
+  ]
 }

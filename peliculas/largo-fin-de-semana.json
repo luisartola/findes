@@ -1,22 +1,21 @@
 {
   "titulo": "Largo fin de semana",
   "slug": "largo-fin-de-semana",
-  "imdb_id": "tt1098356",
-  "year": "2009",
-  "director": "Jamie Blanks",
-  "plot": "Una pareja en crisis viaja a un recóndito lugar: ella sólo piensa en largarse, él atropella a un canguro, tira una colilla en el bosque, una botella al mar y dispara por doquier. Remake del film \"Largo fin de semana\" (Colin Eggleston, 1978).",
-  "poster": "https://image.tmdb.org/t/p/w500/szfiY3ycr0SBAjb81og8tIzKgGj.jpg",
-  "genre": "Suspense, Drama, Terror",
-  "imdb_rating": null,
-  "runtime": "88 min",
+  "tmdb_id": 39995,
+  "imdb_id": "tt0079482",
+  "titulo_es": "Largo fin de semana",
+  "titulo_original": "Long Weekend",
+  "year": "1979",
+  "director": "Colin Eggleston",
+  "plot": "Una pareja se toma unas vacaciones en el bosque, con el fin de solucionar sus problemas matrimoniales. Sin embargo, esto es a lo que menos podrán dedicarse. En 2008, el director Jamie Blanks realizó un remake protagonizado por James Caviezel.",
+  "poster": "https://image.tmdb.org/t/p/w500/ww2pBkh36VnNHaYWrQZMttWPTf3.jpg",
+  "genre": "Terror, Misterio, Suspense",
+  "tmdb_rating": 6.079,
+  "runtime": "92 min",
   "traida_por": [
     "Munny"
   ],
   "findes": [
     16
-  ],
-  "tmdb_id": 20323,
-  "titulo_es": "Largo fin de semana",
-  "titulo_original": "Long Weekend",
-  "tmdb_rating": 5.1
+  ]
 }

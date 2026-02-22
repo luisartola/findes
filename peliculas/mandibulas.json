@@ -1,22 +1,21 @@
 {
   "titulo": "Mandíbulas",
   "slug": "mandibulas",
-  "imdb_id": "tt4416518",
-  "year": "2015",
-  "director": "Jerry Dugan",
-  "plot": "La sheriff Meredith Hendricks investiga un caso de ataques de tiburones que tiene aterrorizados a los habitantes de la pequeña localidad de Lake Tahoe.",
-  "poster": "https://image.tmdb.org/t/p/w500/rAvFko64iscEmDQkVnmc8rpmqCw.jpg",
-  "genre": "Suspense",
-  "imdb_rating": null,
-  "runtime": "88 min",
+  "tmdb_id": 638965,
+  "imdb_id": "tt10375106",
+  "titulo_es": "Mandíbulas",
+  "titulo_original": "Mandibules",
+  "year": "2021",
+  "director": "Quentin Dupieux",
+  "plot": "Dos amigos ingenuos descubren una mosca gigante en el maletero de un automóvil y deciden domesticarla para ganar dinero con ella.",
+  "poster": "https://image.tmdb.org/t/p/w500/2g9AsQKpcL8R9kqoLW63TVT3l1O.jpg",
+  "genre": "Comedia, Fantasía",
+  "tmdb_rating": 6.303,
+  "runtime": "77 min",
   "traida_por": [
     "Beiger"
   ],
   "findes": [
     25
-  ],
-  "tmdb_id": 299553,
-  "titulo_es": "Mandíbulas letales",
-  "titulo_original": "Shark Lake",
-  "tmdb_rating": 3.6
+  ]
 }

@@ -1,22 +1,21 @@
 {
   "titulo": "Encadenados",
   "slug": "encadenados",
-  "imdb_id": "tt3646208",
-  "year": "2015",
-  "director": "Miguel Barreda-Delgado",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/MAgsjx2W2SjCCDhrBsTwF6hMxT.jpg",
-  "genre": null,
-  "imdb_rating": null,
-  "runtime": "87 min",
+  "tmdb_id": 303,
+  "imdb_id": "tt0038787",
+  "titulo_es": "Encadenados",
+  "titulo_original": "Notorious",
+  "year": "1946",
+  "director": "Alfred Hitchcock",
+  "plot": "Tras la Segunda Guerra Mundial (1939-1945), el padre de Alicia Huberman, un espía nazi, es condenado por traición contra los Estados Unidos. Después del juicio, Alicia da una fiesta en la que aparece un apuesto desconocido llamado Devlin. Se trata de un agente de los servicios de Inteligencia que reclama su colaboración para atrapar a Alexander Sebastian, el cerebro de los nazis en Brasil. Al principio se muestra reacia, pero finalmente accede, sobre todo, porque se ha enamorado del atractivo agente americano. Una vez en Brasil, Alicia se gana la simpatía de Sebastian y se va a vivir a su casa. Pero su implicación en el asunto acaba poniendo en peligro su vida.",
+  "poster": "https://image.tmdb.org/t/p/w500/gHI8XPXkMspTIly1TcHAEHQo63A.jpg",
+  "genre": "Suspense, Romance, Misterio",
+  "tmdb_rating": 7.733,
+  "runtime": "101 min",
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     2
-  ],
-  "tmdb_id": 478855,
-  "titulo_es": "Encadenados",
-  "titulo_original": "Encadenados",
-  "tmdb_rating": 3.3
+  ]
 }

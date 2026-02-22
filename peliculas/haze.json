@@ -1,22 +1,21 @@
 {
   "titulo": "Haze",
   "slug": "haze",
-  "imdb_id": "tt4601504",
-  "year": "2017",
-  "director": "David Burkman",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/iMr8ubh3aPgjYecdNX3lnCEFQT8.jpg",
-  "genre": "Suspense, Drama",
-  "imdb_rating": null,
-  "runtime": "106 min",
+  "tmdb_id": 26040,
+  "imdb_id": "tt0491399",
+  "titulo_es": "ヘイズ",
+  "titulo_original": "ヘイズ",
+  "year": "2005",
+  "director": "塚本晋也",
+  "plot": "",
+  "poster": "https://image.tmdb.org/t/p/w500/hIqlsqwfcrAxGiVaZGK3ofI18fR.jpg",
+  "genre": "Terror, Misterio",
+  "tmdb_rating": 6.504,
+  "runtime": "49 min",
   "traida_por": [
     "Sherlock"
   ],
   "findes": [
     18
-  ],
-  "tmdb_id": 481703,
-  "titulo_es": "Haze",
-  "titulo_original": "Haze",
-  "tmdb_rating": 4.7
+  ]
 }

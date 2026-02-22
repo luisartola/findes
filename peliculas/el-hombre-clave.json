@@ -1,22 +1,21 @@
 {
   "titulo": "El hombre clave",
   "slug": "el-hombre-clave",
-  "imdb_id": "tt0054403",
-  "year": "1960",
-  "director": "Ken Hughes",
-  "plot": "En Inglaterra, a finales del siglo XIX, el brutal y amargado marqués de Queensberry, que cree que su hijo menor, Bosie, tiene una relación inapropiada con el famoso escritor irlandés Oscar Wilde, mantiene una continua disputa con este último con el propósito de arruinar su reputación y provocar su caída en desgracia.",
-  "poster": "https://image.tmdb.org/t/p/w500/iAaCjMpJeJebAA29kT5WY9Sif6x.jpg",
-  "genre": "Drama, Historia",
-  "imdb_rating": null,
-  "runtime": "125 min",
+  "tmdb_id": 40793,
+  "imdb_id": "tt0073451",
+  "titulo_es": "The Nickel Ride",
+  "titulo_original": "The Nickel Ride",
+  "year": "1975",
+  "director": "Robert Mulligan",
+  "plot": "",
+  "poster": "https://image.tmdb.org/t/p/w500/3YBVM1jpBASSm9qfJQfX6RmCkPE.jpg",
+  "genre": "Crimen, Drama",
+  "tmdb_rating": 5.5,
+  "runtime": "99 min",
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     24
-  ],
-  "tmdb_id": 172535,
-  "titulo_es": "Los juicios de Oscar Wilde",
-  "titulo_original": "The Trials of Oscar Wilde",
-  "tmdb_rating": 6.2
+  ]
 }

@@ -1,22 +1,21 @@
 {
   "titulo": "El accidente",
   "slug": "el-accidente",
-  "imdb_id": "tt0049341",
-  "year": "1956",
-  "director": "Charles August Nichols",
-  "plot": "Es un día tranquilo en una ciudad local cuando, de repente, J.J. El destino parece sermonearnos sobre cómo el 'destino' no es el culpable de los accidentes, ¡sino las personas! Utiliza al pato Donald como ejemplo. Donald es extremadamente propenso a sufrir accidentes. Enciende su pipa en una habitación con una fuga de gas, se resbala en una alfombra mientras lleva una pecera, sobrecarga los enchufes eléctricos y continuamente se cae por las escaleras. Finalmente, Donald se hartó y arregla su casa garantizando que no habrá más accidentes. Eso es bueno para Donald, pero el resto de la ciudad propensa a los accidentes todavía tiene que aprender a 'no culpar al destino por tu descuido'.",
-  "poster": "https://image.tmdb.org/t/p/w500/ssPvt5BHyW0HZfrPI81ChICmrVW.jpg",
-  "genre": "Animación",
-  "imdb_rating": null,
-  "runtime": "7 min",
+  "tmdb_id": 50838,
+  "imdb_id": "tt1316622",
+  "titulo_es": "El accidente",
+  "titulo_original": "Wrecked",
+  "year": "2010",
+  "director": "Michael Greenspan",
+  "plot": "El accidente se centra en un hombre que despierta entre los restos de un coche en el fondo de un precipicio, en medio de la naturaleza. Está herido y con la piernas atrapadas, y no recuerda quién es ni cómo ha llegado hasta aquí. Tan solo le acompaña una emisora de radio en la que salta la noticia de un violento atraco a un banco y un cadáver en el asiento trasero con una cartera que lo identifica como uno de los atracadores. Ahora deberá depender de sus instintos más primitivos y utilizar todo lo que pueda encontrar para sobrevivir. En medio de obstáculos abrumadores, este hombre deberá descubrir su identidad y enfrentar las consecuencias de lo que haya sucedido.",
+  "poster": "https://image.tmdb.org/t/p/w500/vlMaBNaC7FATlWq5lq9LmWijBOe.jpg",
+  "genre": "Misterio, Suspense, Terror",
+  "tmdb_rating": 5.34,
+  "runtime": "89 min",
   "traida_por": [
     "Beiger"
   ],
   "findes": [
     18
-  ],
-  "tmdb_id": 66886,
-  "titulo_es": "Como tener un accidente en el hogar",
-  "titulo_original": "How to Have an Accident in the Home",
-  "tmdb_rating": 7.0
+  ]
 }

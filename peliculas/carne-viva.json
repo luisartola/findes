@@ -1,22 +1,21 @@
 {
   "titulo": "Carne viva",
   "slug": "carne-viva",
-  "imdb_id": "tt0199626",
-  "year": "2003",
-  "director": "Jane Campion",
-  "plot": "Frannie Avery, profesora de escritura creativa, vive sola en Nueva York. Inteligente y reservada, se dedica a investigar sobre el lenguaje de la calle y la novela policíaca. Pero una noche algo cambia en su vida: presencia involuntariamente un momento de intimidad entre un hombre y una mujer. La carga erótica de la situación la paraliza y, aunque no llega a ver el rostro del hombre, no olvidará el tatuaje de su muñeca ni su sensual mirada. Al poco tiempo, se entera, al ser interrogada por un policía, de un oscuro crimen cometido cerca de su apartamento. El detective Malloy, un hombre seductor, que a Frannie le resulta extrañamente familiar, cree que ella puede saber algo. Aunque Frannie intenta mantener las distancias, no puede evitar sentirse atraída por él.",
-  "poster": "https://image.tmdb.org/t/p/w500/iWm8LfkCV2PLCUn741MsmOL3S4r.jpg",
-  "genre": "Drama, Misterio, Suspense, Romance",
-  "imdb_rating": null,
-  "runtime": "119 min",
+  "tmdb_id": 27292,
+  "imdb_id": "tt0069121",
+  "titulo_es": "Carne viva",
+  "titulo_original": "Prime Cut",
+  "year": "1972",
+  "director": "Michael Ritchie",
+  "plot": "Un mafioso de Kansas que se dedica al tráfico de drogas y a la prostitución utiliza como tapadera una fábrica de carne; pero las cosas cambian cuando el duro Nick llega a la ciudad.",
+  "poster": "https://image.tmdb.org/t/p/w500/59vBMXePcS6OiZbpCIBKMaUtIcs.jpg",
+  "genre": "Acción, Crimen, Drama",
+  "tmdb_rating": 6.382,
+  "runtime": "86 min",
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     19
-  ],
-  "tmdb_id": 10944,
-  "titulo_es": "En carne viva",
-  "titulo_original": "In the Cut",
-  "tmdb_rating": 5.1
+  ]
 }

@@ -1,22 +1,21 @@
 {
   "titulo": "H-History",
   "slug": "h-history",
-  "imdb_id": "tt0367655",
-  "year": "1997",
-  "director": "Johan Grimonprez",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/2OtaxewaMNQDiFdG55bLecACLFL.jpg",
-  "genre": "Documental, Historia, Crimen",
-  "imdb_rating": null,
-  "runtime": "68 min",
+  "tmdb_id": 125815,
+  "imdb_id": "tt0285166",
+  "titulo_es": "H Story",
+  "titulo_original": "H Story",
+  "year": "2001",
+  "director": "諏訪敦彦",
+  "plot": "",
+  "poster": "https://image.tmdb.org/t/p/w500/d4N9SvxxfvUIe9nlkSVQFB34WnZ.jpg",
+  "genre": "Drama",
+  "tmdb_rating": 5.9,
+  "runtime": "111 min",
   "traida_por": [
     "Sherlock"
   ],
   "findes": [
     8
-  ],
-  "tmdb_id": 58032,
-  "titulo_es": "Dial H-I-S-T-O-R-Y",
-  "titulo_original": "Dial H-I-S-T-O-R-Y",
-  "tmdb_rating": 6.9
+  ]
 }

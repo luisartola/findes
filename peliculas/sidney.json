@@ -1,22 +1,21 @@
 {
   "titulo": "Sidney",
   "slug": "sidney",
-  "imdb_id": "tt16977750",
-  "year": "2022",
-  "director": "Reginald Hudlin",
-  "plot": "Este documental revelador producido por Oprah Winfrey rinde homenaje al legendario Sidney Poitier, actor icónico, director y activista por los derechos humanos. Incluye entrevistas con Denzel Washington, Spike Lee y Barbra Streisand, entre otros.",
-  "poster": "https://image.tmdb.org/t/p/w500/7pAOqcwkqBdGuUJkXWkOJ8vI3ET.jpg",
-  "genre": "Documental",
-  "imdb_rating": null,
-  "runtime": "112 min",
+  "tmdb_id": 8052,
+  "imdb_id": "tt0119256",
+  "titulo_es": "Sidney (Hard Eight)",
+  "titulo_original": "Hard Eight",
+  "year": "1997",
+  "director": "Paul Thomas Anderson",
+  "plot": "John es un hombre sin recursos que vive en Reno. Un día, Sydney, un misterioso individuo, lo invita a desayunar y le ofrece la oportunidad de ganar dinero acompañándolo por los casinos. Todo les va muy bien, pero John se enamora de una camarera, que está dispuesta a hacer lo que sea por conseguir dinero.",
+  "poster": "https://image.tmdb.org/t/p/w500/1l5UaoP25Ak8PWCKIULQz70yF03.jpg",
+  "genre": "Drama, Crimen",
+  "tmdb_rating": 6.8,
+  "runtime": "101 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     7
-  ],
-  "tmdb_id": 961722,
-  "titulo_es": "Sidney Poitier",
-  "titulo_original": "Sidney",
-  "tmdb_rating": 7.6
+  ]
 }

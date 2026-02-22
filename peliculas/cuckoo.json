@@ -1,22 +1,21 @@
 {
   "titulo": "Cuckoo",
   "slug": "cuckoo",
-  "imdb_id": "tt1148779",
-  "year": "2010",
-  "director": "Richard Bracewell",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/2lBIJzsAIPa5iMyG0ChlP9WbHM0.jpg",
-  "genre": "Drama, Suspense",
-  "imdb_rating": null,
-  "runtime": "89 min",
+  "tmdb_id": 869291,
+  "imdb_id": "tt12349832",
+  "titulo_es": "Cuckoo",
+  "titulo_original": "Cuckoo",
+  "year": "2024",
+  "director": "Tilman Singer",
+  "plot": "Gretchen viaja con su padre y su madrastra a los Alpes alemanes. Se encuentra con misteriosos secretos en la localidad donde se hospedan. Escucha sonidos extraños y tiene visiones aterradoras de una mujer que la persigue. Gretchen se ve involucrada en una conspiración que involucra experimentos extraños del dueño del balneario que se remontan a generaciones.",
+  "poster": "https://image.tmdb.org/t/p/w500/qaNfJX6MT6kyRDfbH62Deazl0sD.jpg",
+  "genre": "Terror, Misterio, Suspense",
+  "tmdb_rating": 5.73,
+  "runtime": "103 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     27
-  ],
-  "tmdb_id": 62049,
-  "titulo_es": "Cuckoo",
-  "titulo_original": "Cuckoo",
-  "tmdb_rating": 4.7
+  ]
 }

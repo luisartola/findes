@@ -1,22 +1,21 @@
 {
   "titulo": "Arcadia",
   "slug": "arcadia",
-  "imdb_id": "tt2056520",
-  "year": "2012",
-  "director": "Olivia Silver",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/dGic2hlJe1MiTo3UfDpi5RysJuM.jpg",
-  "genre": "Drama",
-  "imdb_rating": null,
-  "runtime": "91 min",
+  "tmdb_id": 34186,
+  "imdb_id": "tt0422015",
+  "titulo_es": "Arcadia",
+  "titulo_original": "Le Couperet",
+  "year": "2005",
+  "director": "Costa-Gavras",
+  "plot": "Bruno Davert es un alto ejecutivo que trabaja desde hace quince años en una fábrica de papel. Debido a la reestructuración económica de la empresa, él y cientos de empleados son despedidos de la noche a la mañana. En principio la medida no le preocupa; es joven (ronda los cuarenta), tiene una preparación excelente y confía en encontrar pronto un puesto de trabajo similar. Tres años después, aún sin trabajo, sólo piensa en sobrevivir y garantizar el futuro de su familia. Por ello, decide, con la ayuda de un arma, pasar a la acción y aniquilar a la competencia de una forma ordenada y lógica. Al mismo tiempo prepara el asalto a la Corporación Arcadia, el último obstáculo entre él y el puesto laboral que ansía.",
+  "poster": "https://image.tmdb.org/t/p/w500/syccVhlbAmCVvTwZax7NkXpiBVZ.jpg",
+  "genre": "Comedia, Crimen, Drama, Suspense",
+  "tmdb_rating": 6.92,
+  "runtime": "118 min",
   "traida_por": [
     "Beiger"
   ],
   "findes": [
     17
-  ],
-  "tmdb_id": 154537,
-  "titulo_es": "Arcadia",
-  "titulo_original": "Arcadia",
-  "tmdb_rating": 6.0
+  ]
 }

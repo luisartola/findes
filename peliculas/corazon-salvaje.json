@@ -1,22 +1,21 @@
 {
   "titulo": "Corazón salvaje",
   "slug": "corazon-salvaje",
-  "imdb_id": "tt0061518",
-  "year": "1968",
-  "director": "Tito Davison",
-  "plot": "Segunda adaptación de la novela clásica de Caridad Bravo Adams. La historia se desarrolla en la isla caribeña de Martinica, a principios del siglo XX. Dos hermanos se ven envueltos en los enredos de una joven frívola y calculadora.",
-  "poster": "https://image.tmdb.org/t/p/w500/bFuTsmLmDhNpfz7T3DNDpSSVKVP.jpg",
-  "genre": "Drama, Romance, Aventura",
-  "imdb_rating": null,
-  "runtime": "95 min",
+  "tmdb_id": 483,
+  "imdb_id": "tt0100935",
+  "titulo_es": "Corazón salvaje",
+  "titulo_original": "Wild at Heart",
+  "year": "1990",
+  "director": "David Lynch",
+  "plot": "Durante un permiso carcelario, Sailor va a ver a su novia Lula y ambos deciden huir a California. La madre de la chica, que se opone a esta relación, se pone en contacto con un mafioso para que elimine a Sailor.",
+  "poster": "https://image.tmdb.org/t/p/w500/xKMJu2wDMmluBkMmrEdShxDPRGx.jpg",
+  "genre": "Crimen, Suspense, Romance",
+  "tmdb_rating": 7.041,
+  "runtime": "124 min",
   "traida_por": [
     "Obi Wan"
   ],
   "findes": [
     3
-  ],
-  "tmdb_id": 52168,
-  "titulo_es": "Corazón salvaje",
-  "titulo_original": "Corazón salvaje",
-  "tmdb_rating": 4.3
+  ]
 }

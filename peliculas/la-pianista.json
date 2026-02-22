@@ -1,22 +1,21 @@
 {
   "titulo": "La pianista",
   "slug": "la-pianista",
-  "imdb_id": "tt0120731",
-  "year": "1998",
-  "director": "Giuseppe Tornatore",
-  "plot": "Historia de un niño que fue abandonado sobre el piano del Virginia, un enorme trasatlántico. El niño es adoptado por un maquinista y le pone por nombre \"Novecento\", ya que lo encuentra justo en el cambio de siglo. Novecento se convertirá en un fabuloso pianista y amenizará las noches del Virginia. Pero nunca pisará tierra firme, ni tan sólo tras las súplicas de su amigo Max.",
-  "poster": "https://image.tmdb.org/t/p/w500/td38NLfhvwotZhKKHGXd71BKiox.jpg",
-  "genre": "Drama, Música",
-  "imdb_rating": null,
-  "runtime": "125 min",
+  "tmdb_id": 1791,
+  "imdb_id": "tt0254686",
+  "titulo_es": "La pianista",
+  "titulo_original": "La Pianiste",
+  "year": "2001",
+  "director": "Michael Haneke",
+  "plot": "Una mujer, profesora de piano en un conservatorio, frecuenta cines porno y tiendas de sexo para escapar de la influencia de su dominante madre. Uno de sus alumnos se propone seducirla.",
+  "poster": "https://image.tmdb.org/t/p/w500/pR7lOkoI5XRan0NDqMpuw5eRkx2.jpg",
+  "genre": "Drama, Romance",
+  "tmdb_rating": 7.262,
+  "runtime": "129 min",
   "traida_por": [
     "Obi Wan"
   ],
   "findes": [
     7
-  ],
-  "tmdb_id": 10376,
-  "titulo_es": "La leyenda del pianista en el océano",
-  "titulo_original": "La leggenda del pianista sull'oceano",
-  "tmdb_rating": 8.2
+  ]
 }

@@ -1,22 +1,21 @@
 {
   "titulo": "Thirst",
   "slug": "thirst",
-  "imdb_id": "tt1101048",
-  "year": "2010",
-  "director": "Jeffery Scott Lando",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/5cFwfCtqjAXvG4ctAyGdwopSNlc.jpg",
+  "tmdb_id": 22536,
+  "imdb_id": "tt0762073",
+  "titulo_es": "Thirst",
+  "titulo_original": "박쥐",
+  "year": "2009",
+  "director": "Park Chan-wook",
+  "plot": "Sang-hyun, un caritativo sacerdote que suele visitar a los pacientes del pequeño hospital de su ciudad, vive atormentado por las dudas y la desesperación que le provoca un mundo dominado por el sufrimiento y la muerte. El deseo de salvar vidas lo lleva a África, para participar en un proyecto cuyo objetivo es encontrar una vacuna contra un virus letal. Allí contrae una enfermedad mortal de la que se recupera casi milagrosamente. La gente, convencida de sus poderes de curación, empieza a ir en peregrinación a su casa. Sin embargo, una noche, Sang-hyun sufre una recaída y muere. A la mañana siguiente, se ha convertido en vampiro: se siente animado por una nueva vitalidad, pero siente un gran rechazo por sí mismo, al verse transformado en una criatura sanguinaria.",
+  "poster": "https://image.tmdb.org/t/p/w500/2CoIYuNwGmdhsV5CM8jRJ2sAZKe.jpg",
   "genre": "Drama, Terror, Suspense",
-  "imdb_rating": null,
-  "runtime": "91 min",
+  "tmdb_rating": 7.115,
+  "runtime": "133 min",
   "traida_por": [
     "Obi Wan"
   ],
   "findes": [
     10
-  ],
-  "tmdb_id": 64861,
-  "titulo_es": "Sed. Desierto maldito",
-  "titulo_original": "Thirst",
-  "tmdb_rating": 3.9
+  ]
 }

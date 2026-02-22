@@ -1,22 +1,21 @@
 {
   "titulo": "Doberman",
   "slug": "doberman",
-  "imdb_id": "tt10146204",
-  "year": "2019",
-  "director": "Azul Lombardía",
-  "plot": "Una tarde de siesta en las afueras de la ciudad, dos mujeres entrecruzan sus mundos transformando una charla casual en un campo de batalla, sin poder prevenir lo inevitable: una tragedia doméstica.",
-  "poster": "https://image.tmdb.org/t/p/w500/jGUDapEC4WtVRfA1z0soFNlDWw7.jpg",
-  "genre": "Drama",
-  "imdb_rating": null,
-  "runtime": "72 min",
+  "tmdb_id": 10347,
+  "imdb_id": "tt0118996",
+  "titulo_es": "Dobermann",
+  "titulo_original": "Dobermann",
+  "year": "1997",
+  "director": "Jan Kounen",
+  "plot": "El comisario ha reunido a sus mejores agentes, los intocables, la flor y nata de la policía y les ha prevenido: no lo olvidéis, nadie quiere ver a \"El Dobermann\" en prisión. ¿Lo habéis comprendido? ¡No se arresta a los delincuentes como ellos, se eliminan! Pero no le escucharon, no lo consiguieron y el comisario buscó la solución más radical; os voy a dar al policía más podrido de todos los policías. El salvador Cristini, la hiena. ¡El enterrador de los malhechores! Él es un cazador y vosotros sois sus perros.",
+  "poster": "https://image.tmdb.org/t/p/w500/8gBP86Gnae2iuhZcF6Q8o7dPOHK.jpg",
+  "genre": "Acción, Crimen",
+  "tmdb_rating": 6.477,
+  "runtime": "103 min",
   "traida_por": [
     "Obi Wan"
   ],
   "findes": [
     4
-  ],
-  "tmdb_id": 604260,
-  "titulo_es": "Dóberman",
-  "titulo_original": "Dóberman",
-  "tmdb_rating": 5.2
+  ]
 }

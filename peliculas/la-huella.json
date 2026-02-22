@@ -1,22 +1,21 @@
 {
   "titulo": "La huella",
   "slug": "la-huella",
-  "imdb_id": "tt0420681",
-  "year": "1991",
-  "director": "Jesús Fragoso Montoya",
-  "plot": null,
-  "poster": null,
-  "genre": "Terror",
-  "imdb_rating": null,
-  "runtime": null,
+  "tmdb_id": 993,
+  "imdb_id": "tt0069281",
+  "titulo_es": "La huella",
+  "titulo_original": "Sleuth",
+  "year": "1972",
+  "director": "Joseph L. Mankiewicz",
+  "plot": "Andrew Wyke es un prestigioso escritor de novelas de intriga. Además, su pasión por los juegos de ingenio y las adivinanzas lo ha llevado a convertir su gran mansión en una especie de museo, donde se exponen los juguetes y mecanismos más extravagantes. Una tarde, invita a su casa a Milo Tindle, amante de su mujer y propietario de una cadena de salones de belleza, para proponerle un ingenioso plan del que ambos podrían salir beneficiados.",
+  "poster": "https://image.tmdb.org/t/p/w500/vGZrvkCm0FSKvjuPnu1svE3pNls.jpg",
+  "genre": "Suspense, Misterio, Crimen",
+  "tmdb_rating": 7.7,
+  "runtime": "138 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     1
-  ],
-  "tmdb_id": 422227,
-  "titulo_es": "La huella",
-  "titulo_original": "La huella",
-  "tmdb_rating": 5.0
+  ]
 }

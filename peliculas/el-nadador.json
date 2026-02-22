@@ -1,22 +1,21 @@
 {
   "titulo": "El nadador",
   "slug": "el-nadador",
-  "imdb_id": "tt10889066",
-  "year": "2018",
-  "director": "Pablo Barce",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/roVLqaejMnJKVcBtnx9pGblqU0e.jpg",
+  "tmdb_id": 33564,
+  "imdb_id": "tt0063663",
+  "titulo_es": "El nadador",
+  "titulo_original": "The Swimmer",
+  "year": "1968",
+  "director": "Frank Perry",
+  "plot": "Ned Merrill vive en una zona residencial de clase alta en las afueras de Connecticut. Una día, Ned se da cuenta de que todo el valle donde vive está lleno de piscinas privadas. Ante el asombro de sus amigos, Ned decide recorrer el valle de piscina en piscina hasta llegar a su casa. Por el camino, se encuentra a varias de las mujeres que formaron parte de su vida: una apasionada adolescente a punto de dejar de serlo, una ex amante despechada, la sensual esposa de un viejo amigo...",
+  "poster": "https://image.tmdb.org/t/p/w500/jf80lJ1uzRfXMAdZLhB2HdxhOOf.jpg",
   "genre": "Drama",
-  "imdb_rating": null,
-  "runtime": "19 min",
+  "tmdb_rating": 7.306,
+  "runtime": "95 min",
   "traida_por": [
     "Obi Wan"
   ],
   "findes": [
     17
-  ],
-  "tmdb_id": 518363,
-  "titulo_es": "El nadador",
-  "titulo_original": "El nadador",
-  "tmdb_rating": null
+  ]
 }

@@ -1,22 +1,21 @@
 {
   "titulo": "Bajos fondos",
   "slug": "bajos-fondos",
-  "imdb_id": "tt0043386",
-  "year": "1952",
-  "director": "Jacques Becker",
-  "plot": "A finales del siglo XIX, durante un baile en Joinville, en las afueras de París, Georges, un antiguo delincuente que trabaja como carpintero, conoce a Marie, una joven relacionada con una banda criminal.",
-  "poster": "https://image.tmdb.org/t/p/w500/xJJjSW1L434kBnA5g6v4tyZHlf6.jpg",
-  "genre": "Drama, Crimen, Romance",
-  "imdb_rating": null,
+  "tmdb_id": 28699,
+  "imdb_id": "tt0055571",
+  "titulo_es": "Bajos fondos",
+  "titulo_original": "Underworld U.S.A.",
+  "year": "1961",
+  "director": "Samuel Fuller",
+  "plot": "Con sólo catorce años, Tolly ve cómo cuatro encapuchados asesinan a su padre. Veinte años después, su único objetivo es encontrarlos para satisfacer sus deseos de venganza.",
+  "poster": "https://image.tmdb.org/t/p/w500/upOuTouqx5dGX1TphOdzXoRgKP7.jpg",
+  "genre": "Crimen, Suspense",
+  "tmdb_rating": 6.961,
   "runtime": "99 min",
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     15
-  ],
-  "tmdb_id": 68822,
-  "titulo_es": "París, bajos fondos",
-  "titulo_original": "Casque d'Or",
-  "tmdb_rating": 7.3
+  ]
 }

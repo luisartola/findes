@@ -1,22 +1,21 @@
 {
   "titulo": "Homicidio",
   "slug": "homicidio",
-  "imdb_id": "tt0054988",
-  "year": "1961",
-  "director": "William Castle",
-  "plot": "Emily, una joven de 20 años, le propone matrimonio al botones de un hotel para poder llegar hasta el juez de paz. Una vez logrados sus planes, lo asesina, huye y se refugia en la casa de una anciana paralítica y muda a la que cuida. La policía no logra dar con ella, pero la sobrina de la anciana y su novio empiezan a sospechar de ella.",
-  "poster": "https://image.tmdb.org/t/p/w500/sH4Sux8UGkDOHHyokKLfIj73BQg.jpg",
-  "genre": "Terror, Suspense",
-  "imdb_rating": null,
-  "runtime": "87 min",
+  "tmdb_id": 22828,
+  "imdb_id": "tt0102048",
+  "titulo_es": "Homicidio",
+  "titulo_original": "Homicide",
+  "year": "1991",
+  "director": "David Mamet",
+  "plot": "A un detective judío le encargan el caso del asesinato de una anciana judía, pero la investigación lo llevará mucho más lejos.",
+  "poster": "https://image.tmdb.org/t/p/w500/6FDfcvM0OAp2Dt2YUlCZWP1avav.jpg",
+  "genre": "Drama, Crimen, Misterio, Suspense",
+  "tmdb_rating": 6.272,
+  "runtime": "102 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     14
-  ],
-  "tmdb_id": 29394,
-  "titulo_es": "Homicidio",
-  "titulo_original": "Homicidal",
-  "tmdb_rating": 6.4
+  ]
 }

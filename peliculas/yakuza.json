@@ -1,22 +1,21 @@
 {
   "titulo": "Yakuza",
   "slug": "yakuza",
-  "imdb_id": "tt32508210",
-  "year": "2025",
-  "director": "水﨑淳平, Shinji Takagi",
-  "plot": "Sólo un día después de regresar del pasado, Batman y sus aliados descubren que el mundo no es exactamente el mismo que dejaron. Toda la isla de Japón ya no existe y los héroes de la Liga de la Justicia tampoco. Pero antes de que puedan comprender lo que está pasando, los yakuza empiezan a llover literalmente del cielo. Secuela de la película anime 3D \"Batman Ninja\".",
-  "poster": "https://image.tmdb.org/t/p/w500/3hVjnB5FE4gBrR5rqk42qiBFgGe.jpg",
-  "genre": "Animación, Acción, Ciencia ficción",
-  "imdb_rating": null,
-  "runtime": "90 min",
+  "tmdb_id": 28415,
+  "imdb_id": "tt0073918",
+  "titulo_es": "Yakuza",
+  "titulo_original": "The Yakuza",
+  "year": "1974",
+  "director": "Sydney Pollack",
+  "plot": "La Yakuza es una mafia japonesa cuyo origen se remonta al siglo XVII. Utiliza los mismos métodos que las mafias occidentales y, como ellas, controla los negocios más turbios: la prostitución, el blanqueo de dinero, el contrabando, etc. Después de la Revolución Meijí (1868), que supuso la occidentalización del Japón, muchos samuráis pasaron a engrosar las filas de esta organización. Harry Kilman, un hombre que formó parte de las tropas de ocupación estadounidenses en Japón, vuelve a este país para ayudar a un amigo cuya hija ha sido secuestrada.",
+  "poster": "https://image.tmdb.org/t/p/w500/b9Jp85lRhJIkDqy7MFSsEPkPgJH.jpg",
+  "genre": "Crimen, Drama, Suspense",
+  "tmdb_rating": 7.095,
+  "runtime": "113 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     12
-  ],
-  "tmdb_id": 1297763,
-  "titulo_es": "Batman Ninja vs. Yakuza League",
-  "titulo_original": "ニンジャバットマン対ヤクザリーグ",
-  "tmdb_rating": 6.8
+  ]
 }

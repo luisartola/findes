@@ -1,22 +1,21 @@
 {
   "titulo": "Pi",
   "slug": "pi",
-  "imdb_id": "tt31050594",
-  "year": "2026",
-  "director": "Timur Bekmambetov",
-  "plot": "En un futuro próximo, un detective (Chris Pratt) es acusado de asesinar a su esposa. Tiene 90 minutos para demostrar su inocencia ante la Jueza de la I.A. avanzada (Rebecca Ferguson), a la que él mismo defendió en su día, antes de que esta decida su destino.",
-  "poster": "https://image.tmdb.org/t/p/w500/9zBNg8koM3fjUTPT7QeJHuGG2r9.jpg",
-  "genre": "Ciencia ficción, Acción, Suspense",
-  "imdb_rating": null,
-  "runtime": "100 min",
+  "tmdb_id": 473,
+  "imdb_id": "tt0138704",
+  "titulo_es": "Pi, fe en el caos",
+  "titulo_original": "Pi",
+  "year": "1998",
+  "director": "Darren Aronofsky",
+  "plot": "Max es un brillante matemático que está a punto de dar con el descubrimiento más importante de su vida: la decodificación del sistema numérico que rige el aparente caos del mercado bursátil. Pero primero ha de encontrar el valor del número PI. Mientras se acerca a la verdad, y afectado periódicamente por unas brutales jaquecas, Max es acosado por una agresiva firma de Wall Street y una secta judía que pretende descifrar los secretos ocultos tras los textos sagrados. Todos ansían apropiarse del inminente hallazgo de Max",
+  "poster": "https://image.tmdb.org/t/p/w500/iauKJI5oeCAUeMfvmhCHuYd5vN4.jpg",
+  "genre": "Misterio, Drama, Suspense",
+  "tmdb_rating": 7.117,
+  "runtime": "85 min",
   "traida_por": [
     "Sherlock"
   ],
   "findes": [
     1
-  ],
-  "tmdb_id": 1236153,
-  "titulo_es": "Sin piedad",
-  "titulo_original": "Mercy",
-  "tmdb_rating": 7.0
+  ]
 }

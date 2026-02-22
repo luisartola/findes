@@ -1,22 +1,21 @@
 {
   "titulo": "Symbol",
   "slug": "symbol",
-  "imdb_id": "tt2575998",
-  "year": "2012",
-  "director": "Garrett W. Hammel",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/rfIQpIRZ9mU5r6SRwZZMTFVj4Ua.jpg",
-  "genre": "Drama",
-  "imdb_rating": null,
-  "runtime": "35 min",
+  "tmdb_id": 42430,
+  "imdb_id": "tt1410261",
+  "titulo_es": "Symbol",
+  "titulo_original": "しんぼる",
+  "year": "2009",
+  "director": "松本人志",
+  "plot": "Un japonés se despierta solo en una habitación blanca bien iluminada, sin puertas ni ventanas o . Cuando presiona una protuberancia falica que aparece misteriosamente en una pared, un cepillo de dientes de color rosa se materializa de la nada, cae al suelo y pone en marcha una realmente extraña cadena de acontecimientos. Pronto el hombre preso que estaba realizando ya hilarantes intentos de escapar de la habitación, lanzando objetos al azar de las paredes, creando una ratonera de gran tamaño en la que una cuerda, una escobilla del WC y una jarra de barrollena de sushi puede ser el claves para su fuga. Mientras tanto, en un pueblo polvoriento, de un luchador enmascarado mexicano conocido como Escargot Man se prepara para una lucha importante. Su familia se reúne alrededor de él, preocupada por su aparente impasibilidad antes de la batalla. (FILMAFFINITY)",
+  "poster": "https://image.tmdb.org/t/p/w500/53GVh2dgZ5JCLiHKc6arbHISZCg.jpg",
+  "genre": "Comedia, Fantasía",
+  "tmdb_rating": 6.645,
+  "runtime": "93 min",
   "traida_por": [
     "Sherlock"
   ],
   "findes": [
     12
-  ],
-  "tmdb_id": 1559320,
-  "titulo_es": "Symbol",
-  "titulo_original": "Symbol",
-  "tmdb_rating": null
+  ]
 }

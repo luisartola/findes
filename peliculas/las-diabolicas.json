@@ -1,22 +1,21 @@
 {
   "titulo": "Las diabólicas",
   "slug": "las-diabolicas",
-  "imdb_id": "tt0282387",
-  "year": "1968",
-  "director": "Chano Urueta",
-  "plot": "En esta ocasión Blue Demon no solo debe enfrentar a las mujeres diabólicas (una organización criminal) sino también a un sosías",
-  "poster": "https://image.tmdb.org/t/p/w500/yHfHcWne6r5n06OLzDeECtzgm91.jpg",
-  "genre": "Ciencia ficción, Aventura, Terror, Acción, Crimen, Suspense",
-  "imdb_rating": null,
-  "runtime": "87 min",
+  "tmdb_id": 827,
+  "imdb_id": "tt0046911",
+  "titulo_es": "Las diabólicas",
+  "titulo_original": "Les Diaboliques",
+  "year": "1955",
+  "director": "Henri-Georges Clouzot",
+  "plot": "El director de un colegio, el señor Delasalle, convive con su esposa y su amante, la profesora Horner. Pero las dos mujeres, cansadas de sufrir la constante tiranía y malos tratos del hombre que comparten, deciden que esa situación no puede continuar.",
+  "poster": "https://image.tmdb.org/t/p/w500/eX2SM3UECXJgrGknXHdYS2veReS.jpg",
+  "genre": "Suspense, Misterio",
+  "tmdb_rating": 7.902,
+  "runtime": "117 min",
   "traida_por": [
     "Obi Wan"
   ],
   "findes": [
     11
-  ],
-  "tmdb_id": 369877,
-  "titulo_es": "Blue Demon contra las diabólicas",
-  "titulo_original": "Blue Demon contra las diabólicas",
-  "tmdb_rating": 4.9
+  ]
 }

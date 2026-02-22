@@ -1,22 +1,21 @@
 {
   "titulo": "Tape",
   "slug": "tape",
-  "imdb_id": "tt11584870",
-  "year": "2020",
-  "director": "Jojo Erholtz",
-  "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/h8SkknHqzHkFROdK5Ek7O9W9zRL.jpg",
-  "genre": null,
-  "imdb_rating": null,
-  "runtime": "13 min",
+  "tmdb_id": 23949,
+  "imdb_id": "tt0275719",
+  "titulo_es": "La cinta",
+  "titulo_original": "Tape",
+  "year": "2001",
+  "director": "Richard Linklater",
+  "plot": "John, un director de cine primerizo, visita la ciudad de Lansing (Michigan) para presentar su película en el festival de cine local. Vince, su mejor amigo del instituto también visita el lugar para apoyarlo en su gran día, o eso parece. John acudirá al hotel de Vince donde, tras una calurosa bienvenida y mucho juego dialéctico, pasando el tiempo en una habitación de un motel de Michigan diseccionando los dolorosos recuerdos de sus años de estudiantes, una creciente tensión empieza a apoderarse del ambiente hasta que Vince acusa a su amigo de algo que sucedió diez años atrás...",
+  "poster": "https://image.tmdb.org/t/p/w500/4Flz17KOjGdGqJ2dFRhKnB7eg5.jpg",
+  "genre": "Drama",
+  "tmdb_rating": 6.85,
+  "runtime": "90 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     17
-  ],
-  "tmdb_id": 732502,
-  "titulo_es": "Tape",
-  "titulo_original": "Tape",
-  "tmdb_rating": null
+  ]
 }

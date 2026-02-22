@@ -1,22 +1,21 @@
 {
   "titulo": "Cyclo",
   "slug": "cyclo",
-  "imdb_id": "tt0092812",
-  "year": "1987",
-  "director": "Fred Olen Ray",
-  "plot": "Después del brutal asesinato de un inventor, su espectacular novia Teri se convierte en la involuntaria responsable de su última creación, el Ciclón, una moto del futuro equipada con todo tipo de armas y, lo más importante, propulsada con una nueva fuente de energía que puede convertirse en el descubrimiento del siglo. Un codiciado combustible que persigue con ahínco Bosarian, un hombre de negocios sin escrúpulos que dirige buena parte de todo el mercado negro a nivel internacional y que no dudará en vender al mejor postor, aunque eso suponga poner en peligro la paz mundial.",
-  "poster": "https://image.tmdb.org/t/p/w500/bhKVOYETvLrJhJrdhQw8dtyPTtN.jpg",
-  "genre": "Acción, Suspense",
-  "imdb_rating": null,
-  "runtime": "89 min",
+  "tmdb_id": 36266,
+  "imdb_id": "tt0112767",
+  "titulo_es": "Cyclo",
+  "titulo_original": "Xích lô",
+  "year": "1995",
+  "director": "Trần Anh Hùng",
+  "plot": "En la superpoblada y frenética ciudad de Ho Chi Minh -antigua Saigón-, un joven adolescente, conductor de un ciclomotor que transporta a los turistas a través de las calles, trata de ganarse la vida para mantener a sus dos hermanas y a su anciano abuelo. Cuando le roban su medio de locomoción y de vida, el joven se adentrará en una espiral de crimen y violencia.",
+  "poster": "https://image.tmdb.org/t/p/w500/mdOsnSVTLwHMEH1juOLMiwXcO5o.jpg",
+  "genre": "Drama, Crimen",
+  "tmdb_rating": 6.956,
+  "runtime": "123 min",
   "traida_por": [
     "Obi Wan"
   ],
   "findes": [
     5
-  ],
-  "tmdb_id": 81573,
-  "titulo_es": "Cyclone, al filo de la muerte",
-  "titulo_original": "Cyclone",
-  "tmdb_rating": 3.9
+  ]
 }

@@ -1,22 +1,21 @@
 {
   "titulo": "El largo adiós",
   "slug": "el-largo-adios",
-  "imdb_id": "tt24082558",
-  "year": "2024",
-  "director": "Ido Mizrahy",
-  "plot": "El próximo gran reto de la NASA es enviar astronautas a Marte. Más allá de la preparación física, estos astronautas deberán enfrentar un desafío aún mayor: la soledad. Un viaje a Marte implicaría tres años de aislamiento social. Un psicólogo de la NASA encargado de la preparación para estas largas travesías explica cómo este aislamiento extremo podría afectar gravemente su estado mental y la misión. Este documental, estrenado en el Festival de Sundance, ofrece una visión profunda de los desafíos psicológicos que acompañan a la exploración espacial.",
-  "poster": "https://image.tmdb.org/t/p/w500/cMzUPwU0ovb8ickv0Fm5qhTJFD7.jpg",
-  "genre": "Documental",
-  "imdb_rating": null,
-  "runtime": "87 min",
+  "tmdb_id": 1847,
+  "imdb_id": "tt0070334",
+  "titulo_es": "Un largo adiós",
+  "titulo_original": "The Long Goodbye",
+  "year": "1973",
+  "director": "Robert Altman",
+  "plot": "Una noche de verano, Terry Lennox aterriza en el ático de su amigo Philip Marlowe y le pide que lo acompañe hasta la frontera mejicana para cambiar de aires. Marlowe acepta la propuesta, pero al regresar a su casa se encuentra con que la policía le pide explicaciones sobre ese viaje. Marlowe termina entre rejas acusado de complicidad en el asesinato de la mujer de Terry, que ha aparecido brutalmente apaleada",
+  "poster": "https://image.tmdb.org/t/p/w500/3qiEp9ElWRWI8vIdQDuDr9BGUqu.jpg",
+  "genre": "Misterio, Drama, Crimen",
+  "tmdb_rating": 7.404,
+  "runtime": "112 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     16
-  ],
-  "tmdb_id": 1058680,
-  "titulo_es": "Marte. El adiós más largo",
-  "titulo_original": "Space: The Longest Goodbye",
-  "tmdb_rating": 7.5
+  ]
 }

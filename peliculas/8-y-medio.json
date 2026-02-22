@@ -1,22 +1,21 @@
 {
   "titulo": "8 y medio",
   "slug": "8-y-medio",
-  "imdb_id": "tt0154443",
-  "year": "1999",
-  "director": "Peter Greenaway",
-  "plot": "Tras la muerte de su madre,Stoney regresa a casa e intenta paliar el dolor de su millonario padre convirtiendo el castillo familiar en un lujoso prostibulo  privado .  Encontrar a las mujeres adecuadas es complicado ,pero finalmente consiguen varias expertas sexuales.",
-  "poster": "https://image.tmdb.org/t/p/w500/p02UAID489brFlBNVwluYE3Ibq9.jpg",
-  "genre": "Drama, Comedia",
-  "imdb_rating": null,
-  "runtime": "115 min",
+  "tmdb_id": 422,
+  "imdb_id": "tt0056801",
+  "titulo_es": "Fellini, ocho y medio",
+  "titulo_original": "8½",
+  "year": "1963",
+  "director": "Federico Fellini",
+  "plot": "Después de obtener un éxito rotundo, un director de cine atraviesa una crisis de creatividad e intenta inútilmente hacer una nueva película. En esta situación, empieza a pasar revista a los hechos más importantes de su vida y a recordar a todas las mujeres a las que ha amado.",
+  "poster": "https://image.tmdb.org/t/p/w500/nCbEu0JLfCIXLnFAxuTs5i5AYN9.jpg",
+  "genre": "Drama",
+  "tmdb_rating": 8.116,
+  "runtime": "138 min",
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     6
-  ],
-  "tmdb_id": 11332,
-  "titulo_es": "8 Mujeres y Media",
-  "titulo_original": "8 ½ Women",
-  "tmdb_rating": 5.4
+  ]
 }

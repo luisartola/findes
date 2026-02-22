@@ -1,22 +1,21 @@
 {
   "titulo": "Tú y yo y todo lo demás",
   "slug": "tu-y-yo-y-todo-lo-demas",
-  "imdb_id": "tt33046197",
-  "year": "2026",
-  "director": "Ángel Manuel Soto",
-  "plot": "Un improbable dúo de hermanastros, uno un impulsivo detective y el otro un disciplinado, se ven atraídos por el asesinato de su padre en Hawai, lo que les lleva a un peligroso viaje para desenmascarar una conspiración de largo alcance.",
-  "poster": "https://image.tmdb.org/t/p/w500/ttEESBvVrO8ngZr19qp6eBMVS9F.jpg",
-  "genre": "Acción, Comedia, Crimen, Misterio",
-  "imdb_rating": null,
-  "runtime": "124 min",
+  "tmdb_id": 1382,
+  "imdb_id": "tt0415978",
+  "titulo_es": "Tú, yo y todos los demás",
+  "titulo_original": "Me and You and Everyone We Know",
+  "year": "2005",
+  "director": "Miranda July",
+  "plot": "Christine Jesperson (Miranda July) es una artista solitaria que trabaja como conductora de taxis para mayores. Ella utiliza sus fantasías artísticas para sentirse más cerca de sus objetos de deseo. Richard Swersey (John Hawkes), dependiente de zapatería recién separado y padre de dos niños, parece estar preparado para las cosas sorprendentes que van a pasarle, pero cuando conoce a Christine, siente pánico. La vida no es tan complicada para los hijos de Richard. Robby, de siete años, mantiene un peligroso romance por Internet, mientras que Peter, de catorce años, se convierte en conejillo de Indias de unas chicas vecinas suyas, que están practicando para sus futuros noviazgos y bodas. En este universo, lo prosaico es trascendente y las personas comunes y corrientes se convierten en personajes luminosos que hablan de sus pensamientos más íntimos, siguen secretos impulsos y experimentan momentos de sincera humanidad que a veces se acercan a lo surrealista.",
+  "poster": "https://image.tmdb.org/t/p/w500/uQYhF25UDVC1kFG2W58YkOjvNzz.jpg",
+  "genre": "Comedia, Drama",
+  "tmdb_rating": 7.015,
+  "runtime": "95 min",
   "traida_por": [
     "Sherlock"
   ],
   "findes": [
     4
-  ],
-  "tmdb_id": 1168190,
-  "titulo_es": "Los hermanos demolición",
-  "titulo_original": "The Wrecking Crew",
-  "tmdb_rating": 6.9
+  ]
 }

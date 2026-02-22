@@ -1,22 +1,21 @@
 {
   "titulo": "Posesión infernal",
   "slug": "posesion-infernal",
-  "imdb_id": "tt13345606",
-  "year": "2023",
-  "director": "Lee Cronin",
-  "plot": "Historia de dos hermanas separadas cuyo reencuentro se ve interrumpido por el surgimiento de demonios poseedores de carne, empujándolos a una batalla por la supervivencia mientras se enfrentan a la versión de familia más aterradora que se pueda imaginar. Secuela de la trilogía original de 'Evil Dead'.",
-  "poster": "https://image.tmdb.org/t/p/w500/ioMtng0qHbwNjR1fuxYZsRf1kjm.jpg",
-  "genre": "Terror, Suspense",
-  "imdb_rating": null,
-  "runtime": "96 min",
+  "tmdb_id": 764,
+  "imdb_id": "tt0083907",
+  "titulo_es": "Posesión infernal",
+  "titulo_original": "The Evil Dead",
+  "year": "1981",
+  "director": "Sam Raimi",
+  "plot": "Cinco chicos van a pasar el fin de semana a una cabaña perdida en un espeso bosque en las montañas de Tennessee. Una vez instalados, y cuando se encuentran cenando, la trampilla que da acceso al sótano se abre de golpe. Extrañados, deciden bajar a investigar. Allí encuentran un magnetófono, un extraño cuchillo ritual y un libro antiquísimo.",
+  "poster": "https://image.tmdb.org/t/p/w500/vgQDogdqPrSk2zRdy2JESq2LGvy.jpg",
+  "genre": "Terror",
+  "tmdb_rating": 7.276,
+  "runtime": "86 min",
   "traida_por": [
     "Obi Wan"
   ],
   "findes": [
     14
-  ],
-  "tmdb_id": 713704,
-  "titulo_es": "Posesión infernal: El despertar",
-  "titulo_original": "Evil Dead Rise",
-  "tmdb_rating": 6.9
+  ]
 }

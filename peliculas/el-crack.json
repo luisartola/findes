@@ -1,22 +1,21 @@
 {
   "titulo": "El Crack",
   "slug": "el-crack",
-  "imdb_id": "tt0144150",
-  "year": "1960",
-  "director": "José A. Martínez Suárez",
-  "plot": "Osvaldo, un jugador de fútbol en ascenso, comienza a ser objeto de intereses privados que pretenden elevarlo a la categoría de estrella deportiva.",
-  "poster": "https://image.tmdb.org/t/p/w500/bu7fufrOKR6pQ4p4k1PqSL4AYa7.jpg",
-  "genre": "Drama",
-  "imdb_rating": null,
-  "runtime": "81 min",
+  "tmdb_id": 60794,
+  "imdb_id": "tt0082210",
+  "titulo_es": "El crack",
+  "titulo_original": "El crack",
+  "year": "1981",
+  "director": "José Luis Garci",
+  "plot": "El detective privado Germán Areta el Piojo es contratado por un cliente moribundo que antes de morir desea ver a su hija, perdida hace tiempo.",
+  "poster": "https://image.tmdb.org/t/p/w500/thPZa2lHHV8wJu71kOHTR90OQ3p.jpg",
+  "genre": "Drama, Suspense",
+  "tmdb_rating": 7.122,
+  "runtime": "121 min",
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     2
-  ],
-  "tmdb_id": 597489,
-  "titulo_es": "El crack",
-  "titulo_original": "El crack",
-  "tmdb_rating": 6.0
+  ]
 }
