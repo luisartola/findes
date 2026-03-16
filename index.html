@@ -875,8 +875,43 @@
       const displayTitle = orig.toLowerCase() === es.toLowerCase()
         ? orig : `${orig} <span class="peli-es">(${es})</span>`;
 
+      // Find other films by same director(s)
+      const directorFilms = {};
+      if (peli.director) {
+        for (const d of peli.director.split(', ')) {
+          directorFilms[d] = [];
+          for (const [s, p] of Object.entries(PELI_CACHE)) {
+            if (p && s !== slug && p.director && p.director.split(', ').includes(d)) {
+              directorFilms[d].push({ slug: s, peli: p });
+            }
+          }
+        }
+      }
+
+      // Find films from the same genre
+      const genres = peli.genre ? peli.genre.split(', ').map(g => g.trim()) : [];
+      const genreFilms = [];
+      if (genres.length) {
+        const primaryGenre = genres[0];
+        for (const [s, p] of Object.entries(PELI_CACHE)) {
+          if (p && s !== slug && p.genre && p.genre.includes(primaryGenre)) {
+            const shared = genres.filter(g => p.genre.includes(g)).length;
+            genreFilms.push({ slug: s, peli: p, shared });
+          }
+        }
+        genreFilms.sort((a, b) => b.shared - a.shared);
+      }
+
+      // Find films from the same year
+      const yearFilms = [];
+      if (peli.year) {
+        for (const [s, p] of Object.entries(PELI_CACHE)) {
+          if (p && s !== slug && p.year === peli.year) yearFilms.push({ slug: s, peli: p });
+        }
+      }
+
       let html = `<section class="main-section"><div class="container">
-        ${breadcrumb([{href:'#', label:'Inicio'}, {href:`#director/${encodeURIComponent(d)}`, label:'Películas'}, {href:'#', label: orig}])}
+        ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#peliculas', label:'Películas'}, {href:'#', label: orig}])}
 
         <div class="columns">
           <div class="column is-narrow" style="text-align:center">
@@ -884,42 +919,178 @@
       if (peli.poster) {
         html += `<img class="peli-poster-img" src="${peli.poster}" alt="${peli.titulo}">`;
       }
+
       html += `</div><div class="column">
         <h1 class="peli-title">${displayTitle}</h1>
-        ${peli.year ? `<div style="font-family:var(--ff-display);font-style:italic;font-size:1.2rem;color:var(--tx-2);margin-bottom:.5rem">${peli.year}</div>` : ''}
       `;
 
-      const metaParts = [peli.director, peli.runtime].filter(Boolean);
-      if (metaParts.length) html += `<div class="peli-meta-line">${metaParts.join(' · ')}</div>`;
-
-      if (peli.genre) {
-        const genres = peli.genre.split(', ');
-        html += `<div class="tags mb-3">${genres.map(g => `<span class="tag is-genre">${g}</span>`).join('')}</div>`;
+      // ── Year (linked to same-year films)
+      if (peli.year) {
+        const yearNote = yearFilms.length ? ` <span style="font-size:.78rem;font-style:normal;font-family:var(--ff-body);color:var(--tx-3)">(${yearFilms.length} más de este año)</span>` : '';
+        html += `<div style="font-family:var(--ff-display);font-style:italic;font-size:1.2rem;color:var(--tx-2);margin-bottom:.5rem">${peli.year}${yearNote}</div>`;
       }
 
-      if (peli.imdb_id || peli.tmdb_id) {
-        const rating = peli.tmdb_rating ? `⭐ ${peli.tmdb_rating}` : '';
-        const url = peli.imdb_id
-          ? `https://www.imdb.com/title/${peli.imdb_id}`
-          : `https://www.themoviedb.org/movie/${peli.tmdb_id}`;
-        const label = peli.imdb_id ? 'IMDb' : 'TMDB';
-        html += `<p><a class="peli-rating" href="${url}" target="_blank">${label} ${rating}</a></p>`;
+      // ── Director (navigable link)
+      if (peli.director) {
+        const dirLinks = peli.director.split(', ').map(d =>
+          `<a href="#director/${encodeURIComponent(d)}" style="color:var(--wine);text-decoration:none;font-weight:500">${d}</a>`
+        ).join(', ');
+        html += `<div style="font-size:.95rem;margin-bottom:.4rem">🎥 ${dirLinks}</div>`;
       }
 
+      // ── Runtime
+      if (peli.runtime) {
+        html += `<div style="font-size:.88rem;color:var(--tx-2);margin-bottom:.5rem">🕐 ${peli.runtime}</div>`;
+      }
+
+      // ── Genres (navigable tags)
+      if (genres.length) {
+        html += `<div class="tags mb-3">${genres.map(g =>
+          `<span class="tag is-genre" style="cursor:default">${g}</span>`
+        ).join('')}</div>`;
+      }
+
+      // ── Ratings
+      if (peli.imdb_id || peli.tmdb_id || peli.tmdb_rating) {
+        html += `<div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem">`;
+        if (peli.tmdb_rating) {
+          html += `<span class="peli-rating" style="cursor:default">⭐ ${peli.tmdb_rating} / 10</span>`;
+        }
+        if (peli.imdb_id) {
+          html += `<a class="peli-rating" href="https://www.imdb.com/title/${peli.imdb_id}" target="_blank" rel="noopener" style="background:var(--gold-bg);color:var(--gold)">IMDb ↗</a>`;
+        }
+        if (peli.tmdb_id) {
+          html += `<a class="peli-rating" href="https://www.themoviedb.org/movie/${peli.tmdb_id}" target="_blank" rel="noopener" style="background:var(--bg-inset);color:var(--tx-2)">TMDB ↗</a>`;
+        }
+        html += `</div>`;
+      }
+
+      // ── Plot
       if (peli.plot) {
         html += `<article class="message is-wine mt-4"><div class="message-body">${peli.plot}</div></article>`;
       }
 
-      html += `<h2 class="page-heading" style="font-size:1.2rem;margin-top:1.5rem;margin-bottom:.75rem">En los Findes</h2>`;
-
-      html += `<div class="menu"><ul class="menu-list">`;
-      for (const a of appearances) {
-        html += `<li><a href="#finde/${a.finde.numero}" style="display:flex;justify-content:space-between;align-items:center">
-          <span><strong>Finde #${a.finde.numero}</strong> — traída por <a href="#persona/${encodeURIComponent(a.persona)}">${a.persona}</a></span>
-          <span style="color:var(--tx-3);font-size:.8rem;font-family:var(--ff-display);font-style:italic">${a.finde.fecha}</span>
-        </a></li>`;
+      // ── Traída por / En los Findes
+      html += `<h2 style="font-family:var(--ff-display);font-size:1.15rem;margin-top:1.5rem;margin-bottom:.75rem">En los Findes</h2>`;
+      html += `<div class="stagger">`;
+      for (const [i, a] of appearances.entries()) {
+        html += `<div class="card mb-3" style="--i:${i}">
+          <div class="card-content" style="display:flex;align-items:center;gap:.85rem;overflow:visible">
+            <div class="persona-avatar" style="width:38px;height:38px;font-size:.95rem">${a.persona.charAt(0)}</div>
+            <div style="flex:1;min-width:0">
+              <div style="font-weight:600;font-size:.9rem">
+                Traída por <a href="#persona/${encodeURIComponent(a.persona)}">${a.persona}</a>
+              </div>
+              <div style="font-size:.78rem;color:var(--tx-3)">
+                <a href="#finde/${a.finde.numero}" style="color:var(--tx-3)">Finde #${a.finde.numero}</a>
+                · <span style="font-family:var(--ff-display);font-style:italic">${a.finde.fecha}</span>
+                · ${a.finde.lugares.map(l => `<a href="#lugar/${encodeURIComponent(l)}" style="color:var(--tx-3)">${l}</a>`).join(', ')}
+              </div>
+            </div>
+          </div>
+        </div>`;
       }
-      html += `</ul></div>`;
+      html += `</div>`;
+
+      // ── More by same director(s)
+      for (const [director, films] of Object.entries(directorFilms)) {
+        if (!films.length) continue;
+        html += `<h2 style="font-family:var(--ff-display);font-size:1.15rem;margin-top:2rem;margin-bottom:.75rem">
+          Más de <a href="#director/${encodeURIComponent(director)}">${director}</a>
+        </h2>`;
+        html += `<div class="columns is-multiline stagger">`;
+        for (const [i, f] of films.slice(0, 6).entries()) {
+          const t = f.peli.titulo_original || f.peli.titulo;
+          const posterHtml = f.peli.poster
+            ? `<img src="${f.peli.poster}" alt="" loading="lazy" style="width:40px;height:60px;object-fit:cover;border-radius:3px;flex-shrink:0">`
+            : `<div style="width:40px;height:60px;background:var(--bg-inset);border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.6rem">🎬</div>`;
+          const yr = f.peli.year ? ` (${f.peli.year})` : '';
+          const rating = f.peli.tmdb_rating ? `<span style="color:var(--gold);font-size:.72rem">⭐ ${f.peli.tmdb_rating}</span>` : '';
+          html += `<div class="column is-half-tablet is-one-third-desktop" style="--i:${i}">
+            <a href="#pelicula/${f.slug}" style="text-decoration:none;color:inherit">
+              <div class="card" style="transition:border-color .2s">
+                <div class="card-content" style="display:flex;align-items:center;gap:.7rem;padding:.75rem;overflow:visible">
+                  ${posterHtml}
+                  <div style="flex:1;min-width:0">
+                    <div style="font-weight:600;font-size:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${t}${yr}</div>
+                    ${rating}
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>`;
+        }
+        html += `</div>`;
+        if (films.length > 6) {
+          html += `<p style="font-size:.85rem"><a href="#director/${encodeURIComponent(director)}">Ver las ${films.length} películas →</a></p>`;
+        }
+      }
+
+      // ── Same year
+      if (yearFilms.length) {
+        html += `<h2 style="font-family:var(--ff-display);font-size:1.15rem;margin-top:2rem;margin-bottom:.75rem">
+          También de ${peli.year}
+        </h2>`;
+        html += `<div class="columns is-multiline stagger">`;
+        for (const [i, f] of yearFilms.slice(0, 6).entries()) {
+          const t = f.peli.titulo_original || f.peli.titulo;
+          const posterHtml = f.peli.poster
+            ? `<img src="${f.peli.poster}" alt="" loading="lazy" style="width:40px;height:60px;object-fit:cover;border-radius:3px;flex-shrink:0">`
+            : `<div style="width:40px;height:60px;background:var(--bg-inset);border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.6rem">🎬</div>`;
+          const yr = f.peli.year ? ` (${f.peli.year})` : '';
+          const dir = f.peli.director ? `<div style="font-size:.72rem;color:var(--tx-3)">${f.peli.director}</div>` : '';
+          html += `<div class="column is-half-tablet is-one-third-desktop" style="--i:${i}">
+            <a href="#pelicula/${f.slug}" style="text-decoration:none;color:inherit">
+              <div class="card" style="transition:border-color .2s">
+                <div class="card-content" style="display:flex;align-items:center;gap:.7rem;padding:.75rem;overflow:visible">
+                  ${posterHtml}
+                  <div style="flex:1;min-width:0">
+                    <div style="font-weight:600;font-size:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${t}</div>
+                    ${dir}
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>`;
+        }
+        html += `</div>`;
+        if (yearFilms.length > 6) {
+          html += `<p style="font-size:.85rem;color:var(--tx-3)">y ${yearFilms.length - 6} más del mismo año</p>`;
+        }
+      }
+
+      // ── Related by genre
+      if (genreFilms.length) {
+        html += `<h2 style="font-family:var(--ff-display);font-size:1.15rem;margin-top:2rem;margin-bottom:.75rem">
+          Mismo género
+        </h2>`;
+        html += `<div class="columns is-multiline stagger">`;
+        const shown = genreFilms.filter(f =>
+          !Object.values(directorFilms).flat().some(df => df.slug === f.slug) &&
+          !yearFilms.some(yf => yf.slug === f.slug)
+        ).slice(0, 6);
+        for (const [i, f] of shown.entries()) {
+          const t = f.peli.titulo_original || f.peli.titulo;
+          const posterHtml = f.peli.poster
+            ? `<img src="${f.peli.poster}" alt="" loading="lazy" style="width:40px;height:60px;object-fit:cover;border-radius:3px;flex-shrink:0">`
+            : `<div style="width:40px;height:60px;background:var(--bg-inset);border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.6rem">🎬</div>`;
+          const dir = f.peli.director ? `<div style="font-size:.72rem;color:var(--tx-3)">${f.peli.director} (${f.peli.year || '?'})</div>` : '';
+          html += `<div class="column is-half-tablet is-one-third-desktop" style="--i:${i}">
+            <a href="#pelicula/${f.slug}" style="text-decoration:none;color:inherit">
+              <div class="card" style="transition:border-color .2s">
+                <div class="card-content" style="display:flex;align-items:center;gap:.7rem;padding:.75rem;overflow:visible">
+                  ${posterHtml}
+                  <div style="flex:1;min-width:0">
+                    <div style="font-weight:600;font-size:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${t}</div>
+                    ${dir}
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>`;
+        }
+        html += `</div>`;
+      }
 
       html += `</div></div></div></section>`;
       document.getElementById('view').innerHTML = html;
