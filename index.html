@@ -1,150 +1,566 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
   <title>Findes Precríticos</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    /* ═══ Design Tokens ═══ */
     :root {
-      --pico-font-size: 16px;
-      --accent: #e63946;
-      --accent-dark: #a4161a;
-      --blue: #457b9d;
-      --blue-dark: #1d3557;
-      --green: #2a9d8f;
-      --purple: #9b5de5;
-      --gold: #f5c518;
+      --ff-display: 'Instrument Serif', Georgia, serif;
+      --ff-body: 'Outfit', system-ui, sans-serif;
+      --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+      --bg: #faf8f3;
+      --bg-raised: #f3efe8;
+      --bg-inset: #ece7de;
+      --tx: #1c1814;
+      --tx-2: #5e564b;
+      --tx-3: #918778;
+      --border: #ddd7cc;
+      --wine: #8b2635;
+      --wine-soft: #c4546a;
+      --wine-bg: #f7ecee;
+      --gold: #a8872a;
+      --gold-bg: #faf4e4;
+      --teal: #3a7a5f;
+      --blue: #3d6b8e;
+      --purple: #6b4d8a;
     }
 
-    /* Layout */
-    #view { min-height: 60vh; }
-
-    /* Top bar */
-    .top-bar { display: flex; align-items: center; gap: .5rem; padding: .75rem 0; margin-bottom: .75rem; flex-wrap: wrap; }
-    .top-bar-brand { font-size: 1.15rem; font-weight: 700; text-decoration: none; color: inherit; white-space: nowrap; flex-shrink: 0; }
-    .top-bar-brand:hover { color: var(--accent); }
-    .top-bar-nav { display: flex; gap: .3rem; flex-shrink: 0; }
-    .top-bar-nav a { text-decoration: none; padding: .3rem .65rem; border-radius: 2rem; background: var(--blue-dark); color: #fff; font-size: .8rem; font-weight: 500; transition: all .15s; }
-    .top-bar-nav a:hover { background: var(--accent); }
-    .top-bar-nav a.active { background: var(--accent); }
-    .top-bar-search { flex: 1; min-width: 180px; position: relative; }
-    .top-bar-search input[type="search"] { width: 100%; margin-bottom: 0; padding: .45rem .75rem .45rem 2.25rem; font-size: .85rem; height: auto; }
-    @media (max-width: 575px) {
-      .top-bar { gap: .4rem; }
-      .top-bar-search { order: 10; min-width: 100%; }
+    [data-theme="dark"] {
+      --bg: #13110f;
+      --bg-raised: #1d1a16;
+      --bg-inset: #252220;
+      --tx: #e4ded4;
+      --tx-2: #a39a8d;
+      --tx-3: #6e665c;
+      --border: #302c27;
+      --wine: #d4647a;
+      --wine-soft: #e8899a;
+      --wine-bg: #2a1a1e;
+      --gold: #d4b24a;
+      --gold-bg: #24200f;
+      --teal: #5cb88a;
+      --blue: #6ab0db;
+      --purple: #9d7ec2;
     }
 
-    /* Stats */
-    .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; margin-bottom: 1.5rem; }
-    @media (min-width: 576px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
-    .stat-card { background: var(--pico-card-background-color, #f8f9fa); padding: .75rem; border-radius: .5rem; text-align: center; border: 1px solid var(--pico-muted-border-color, #dee2e6); }
-    .stat-card .num { font-size: 1.75rem; font-weight: 700; line-height: 1; color: var(--accent); }
-    .stat-card .label { font-size: .8rem; opacity: .7; margin-top: .15rem; }
+    /* ═══ Bulma Overrides ═══ */
+    html { background: var(--bg); }
+    body {
+      font-family: var(--ff-body);
+      background: var(--bg);
+      color: var(--tx);
+      -webkit-font-smoothing: antialiased;
+      padding-top: 3.5rem;
+      transition: background .35s var(--ease-out-quart), color .35s var(--ease-out-quart);
+    }
+    .title, .subtitle { color: var(--tx) !important; }
+    a { color: var(--wine); transition: color .15s; }
+    a:hover { color: var(--wine-soft); }
 
-    /* Breadcrumb */
-    .breadcrumb { display: flex; align-items: center; gap: .3rem; font-size: .85rem; margin-bottom: .75rem; flex-wrap: wrap; }
-    .breadcrumb a { text-decoration: none; color: var(--blue); }
-    .breadcrumb a:hover { text-decoration: underline; }
-    .breadcrumb .sep { opacity: .35; font-size: .7rem; }
-    .breadcrumb .current { opacity: .6; }
-
-    /* Card lists */
-    .card-list { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1.5rem; }
-    .list-card { display: flex; align-items: center; gap: .75rem; padding: .65rem .85rem; background: var(--pico-card-background-color, #f8f9fa); border: 1px solid var(--pico-muted-border-color, #dee2e6); border-radius: .5rem; text-decoration: none; color: inherit; transition: border-color .15s, box-shadow .15s; }
-    .list-card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,.06); }
-    .list-card-num { font-size: 1.1rem; font-weight: 700; color: var(--accent); min-width: 2.2rem; text-align: center; flex-shrink: 0; }
-    .list-card-icon { font-size: 1.3rem; min-width: 2rem; text-align: center; flex-shrink: 0; }
-    .list-card-body { flex: 1; min-width: 0; }
-    .list-card-title { font-weight: 600; font-size: .95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .list-card-sub { font-size: .8rem; opacity: .6; margin-top: .1rem; }
-    .list-card-sub .lugar-tag { font-size: .7rem; padding: .1rem .4rem; }
-    .list-card-right { text-align: right; flex-shrink: 0; font-size: .8rem; opacity: .6; white-space: nowrap; }
-
-    /* Film card in películas list */
-    .film-card { display: flex; align-items: center; gap: .65rem; padding: .5rem .75rem; background: var(--pico-card-background-color, #f8f9fa); border: 1px solid var(--pico-muted-border-color, #dee2e6); border-radius: .4rem; }
-    .film-card-poster { width: 28px; height: 42px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
-    .film-card-poster-ph { width: 28px; height: 42px; background: var(--pico-muted-border-color, #ddd); border-radius: 3px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: .6rem; }
-    .film-card-body { flex: 1; min-width: 0; }
-    .film-card-title { font-weight: 600; font-size: .9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .film-card-title a { text-decoration: none; }
-    .film-card-sub { font-size: .75rem; opacity: .55; }
-
-    /* Lugar tags */
-    .lugar-tag { display: inline-block; background: var(--blue); color: #fff; padding: .15rem .5rem; border-radius: 2rem; font-size: .75rem; text-decoration: none; margin: .1rem .15rem .1rem 0; transition: background .15s; }
-    .lugar-tag:hover { background: var(--blue-dark); color: #fff; }
-
-    /* Persona block */
-    .persona { margin-bottom: 1.25rem; }
-    .persona h3 { margin-bottom: .25rem; font-size: 1.1rem; }
-    .persona ul { margin-top: .25rem; padding-left: 1.25rem; }
-    .film-list li { margin-bottom: .2rem; }
-    .peli-es { opacity: .55; font-size: .85em; }
-
-    /* Finde header */
-    .finde-header { margin-bottom: 1rem; }
-    .finde-header h2 { margin-bottom: .25rem; }
-    .finde-header p { opacity: .75; margin-top: 0; }
-
-    /* Movie detail */
-    .peli-detail { display: flex; gap: 1.5rem; }
-    .peli-poster { width: 160px; flex-shrink: 0; border-radius: .5rem; align-self: start; }
-    .peli-info { flex: 1; min-width: 0; }
-    .peli-info h2 { margin-bottom: .25rem; word-break: break-word; }
-    .peli-meta { opacity: .7; margin-bottom: .35rem; font-size: .9rem; }
-    .peli-imdb { display: inline-block; background: var(--gold); color: #000; padding: .2rem .6rem; border-radius: .25rem; font-weight: 700; text-decoration: none; font-size: .85rem; }
-    @media (max-width: 575px) {
-      .peli-detail { flex-direction: column; align-items: center; text-align: center; }
-      .peli-poster { width: 140px; }
-      .peli-info { text-align: left; }
+    /* ═══ Navbar ═══ */
+    .navbar.is-fixed-top {
+      background: var(--bg-raised);
+      border-bottom: 1px solid var(--border);
+      min-height: 3.5rem;
+      box-shadow: none;
+      transition: background .35s var(--ease-out-quart), border-color .35s var(--ease-out-quart);
+    }
+    .navbar-brand > .navbar-item {
+      font-family: var(--ff-display);
+      font-size: 1.3rem;
+      color: var(--wine) !important;
+      gap: .35rem;
+      padding-left: 0;
+    }
+    .navbar-brand > .navbar-item:hover { background: transparent !important; }
+    .navbar-item, .navbar-link {
+      font-family: var(--ff-body);
+      color: var(--tx-2) !important;
+      font-size: .88rem;
+      font-weight: 500;
+      letter-spacing: .01em;
+    }
+    .navbar-item:hover, .navbar-item:focus { background: transparent !important; color: var(--wine) !important; }
+    .navbar-item.is-active-page { color: var(--wine) !important; font-weight: 600; }
+    .navbar-burger { color: var(--tx); }
+    .navbar-burger:hover { background: transparent; color: var(--wine); }
+    .navbar-menu {
+      background: var(--bg-raised) !important;
+      box-shadow: none !important;
+    }
+    @media screen and (max-width: 1023px) {
+      .navbar-menu { border-top: 1px solid var(--border); padding: .5rem 0; }
     }
 
-    /* Search */
-    .search-results { position: absolute; top: 100%; left: 0; right: 0; background: var(--pico-card-background-color, #fff); border: 1px solid var(--pico-muted-border-color, #dee2e6); border-top: none; border-radius: 0 0 .5rem .5rem; max-height: 55vh; overflow-y: auto; z-index: 100; box-shadow: 0 8px 24px rgba(0,0,0,.12); display: none; }
+    /* Search in navbar */
+    .search-wrap { position: relative; width: 220px; }
+    @media screen and (max-width: 1023px) { .search-wrap { width: 100%; } }
+    .search-wrap .input {
+      background: var(--bg);
+      border-color: var(--border);
+      color: var(--tx);
+      font-family: var(--ff-body);
+      font-size: .85rem;
+      height: 2.1rem;
+      box-shadow: none;
+      border-radius: 6px;
+      transition: border-color .15s;
+    }
+    .search-wrap .input::placeholder { color: var(--tx-3); }
+    .search-wrap .input:focus { border-color: var(--wine); box-shadow: 0 0 0 2px var(--wine-bg); }
+    .search-results {
+      position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+      background: var(--bg-raised); border: 1px solid var(--border);
+      border-radius: 8px; max-height: 55vh; overflow-y: auto;
+      z-index: 100; box-shadow: 0 12px 40px rgba(0,0,0,.15);
+      display: none;
+    }
     .search-results.open { display: block; }
-    .sr-item { padding: .5rem .75rem; cursor: pointer; display: flex; align-items: center; gap: .65rem; border-bottom: 1px solid var(--pico-muted-border-color, #eee); transition: background .1s; }
-    .sr-item:hover, .sr-item.selected { background: var(--pico-card-sectioning-background-color, #f0f0f0); }
+    .sr-item {
+      padding: .55rem .75rem; cursor: pointer;
+      display: flex; align-items: center; gap: .6rem;
+      border-bottom: 1px solid var(--border); transition: background .1s;
+    }
+    .sr-item:last-child { border-bottom: none; }
+    .sr-item:hover, .sr-item.selected { background: var(--bg-inset); }
     .sr-item img { width: 30px; height: 45px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
-    .sr-item .sr-placeholder { width: 30px; height: 45px; background: var(--pico-muted-border-color, #ddd); border-radius: 3px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: .65rem; }
+    .sr-placeholder { width: 30px; height: 45px; background: var(--bg-inset); border-radius: 3px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: .6rem; }
     .sr-text { flex: 1; min-width: 0; }
-    .sr-title { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: .9rem; }
-    .sr-title mark { background: var(--gold); color: #000; border-radius: 2px; padding: 0 2px; }
-    .sr-sub { font-size: .75rem; opacity: .55; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .sr-type { font-size: .65rem; padding: .15rem .4rem; border-radius: 2rem; flex-shrink: 0; color: #fff; text-transform: uppercase; letter-spacing: .3px; font-weight: 600; }
-    .sr-type.pelicula { background: var(--accent); }
-    .sr-type.persona { background: var(--green); }
+    .sr-title { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: .88rem; color: var(--tx); }
+    .sr-title mark { background: var(--gold-bg); color: var(--gold); border-radius: 2px; padding: 0 2px; }
+    .sr-sub { font-size: .72rem; color: var(--tx-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .sr-type { font-size: .6rem; padding: .15rem .4rem; border-radius: 2rem; flex-shrink: 0; color: #fff; text-transform: uppercase; letter-spacing: .3px; font-weight: 600; }
+    .sr-type.pelicula { background: var(--wine); }
+    .sr-type.persona { background: var(--teal); }
     .sr-type.lugar { background: var(--blue); }
-    .sr-type.finde { background: #6c757d; }
+    .sr-type.finde { background: var(--tx-3); }
     .sr-type.director { background: var(--purple); }
+
+    /* Theme toggle */
+    .theme-toggle {
+      background: none; border: none; cursor: pointer;
+      color: var(--tx-2); font-size: 1.1rem; padding: .35rem;
+      border-radius: 6px; transition: color .15s, background .15s;
+      line-height: 1; display: flex; align-items: center;
+    }
+    .theme-toggle:hover { color: var(--wine); background: var(--bg-inset); }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    [data-theme="light"] .theme-toggle .icon-sun { display: none; }
+    [data-theme="light"] .theme-toggle .icon-moon { display: inline; }
+
+    /* ═══ Main Content ═══ */
+    #view { min-height: 70vh; }
+    .main-section { padding: 2rem 0 3rem; }
+
+    /* ═══ Breadcrumb ═══ */
+    .breadcrumb {
+      font-size: .85rem;
+      margin-bottom: 1.25rem !important;
+    }
+    .breadcrumb a { color: var(--tx-3) !important; }
+    .breadcrumb a:hover { color: var(--wine) !important; }
+    .breadcrumb li.is-active a { color: var(--tx-2) !important; }
+    .breadcrumb li + li::before { color: var(--tx-3) !important; }
+
+    /* ═══ Hero / Home ═══ */
+    .home-hero {
+      padding: 3rem 0 2.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .home-hero .display-title {
+      font-family: var(--ff-display);
+      font-size: clamp(2.2rem, 1.5rem + 3.5vw, 4.2rem);
+      line-height: 1.05;
+      color: var(--tx);
+      margin-bottom: .35rem;
+      letter-spacing: -.02em;
+    }
+    .home-hero .display-sub {
+      font-family: var(--ff-display);
+      font-style: italic;
+      font-size: clamp(1rem, 0.8rem + 1vw, 1.4rem);
+      color: var(--tx-3);
+    }
+
+    /* Level stats */
+    .level.stats-level { margin: 2rem 0; }
+    .stats-level .level-item { flex-direction: column; }
+    .stats-level .stat-num {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 1.5rem + 2vw, 3.2rem);
+      line-height: 1;
+      color: var(--wine);
+      font-variant-numeric: tabular-nums;
+    }
+    .stats-level .stat-label {
+      font-size: .78rem;
+      color: var(--tx-3);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 500;
+      margin-top: .2rem;
+    }
+
+    /* ═══ Cards ═══ */
+    .card {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      box-shadow: none;
+      border-radius: 8px;
+      transition: border-color .2s var(--ease-out-quart), transform .2s var(--ease-out-quart);
+    }
+    .card:hover {
+      border-color: var(--wine);
+      transform: translateY(-2px);
+    }
+    .card .card-content { padding: 1.15rem; }
+    .card-header {
+      background: transparent;
+      box-shadow: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-header-title {
+      color: var(--tx) !important;
+      font-family: var(--ff-display);
+      font-size: 1.1rem;
+      font-weight: 400;
+      padding: .85rem 1.15rem;
+    }
+    .card-footer { border-top: 1px solid var(--border); }
+    .card-footer-item {
+      color: var(--tx-2) !important;
+      font-size: .82rem;
+      padding: .65rem;
+    }
+    .card-footer-item:hover { color: var(--wine) !important; background: var(--bg-inset); }
+
+    /* Finde cards on home */
+    .finde-card-link {
+      text-decoration: none; color: inherit; display: block;
+    }
+    .finde-card-link .card-content {
+      display: flex; align-items: center; gap: .85rem;
+    }
+    .finde-num {
+      font-family: var(--ff-display);
+      font-size: 1.5rem;
+      color: var(--wine);
+      min-width: 2.8rem;
+      text-align: center;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .finde-info { flex: 1; min-width: 0; }
+    .finde-date { font-weight: 600; font-size: .92rem; }
+    .finde-lugar { font-size: .8rem; color: var(--tx-3); margin-top: .1rem; }
+    .finde-pelis { flex-shrink: 0; font-size: .78rem; color: var(--tx-3); }
+
+    /* ═══ Panels (person movie lists) ═══ */
+    .panel {
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: none;
+      background: var(--bg-raised);
+      font-size: .92rem;
+    }
+    .panel-heading {
+      background: var(--bg-inset) !important;
+      color: var(--tx) !important;
+      font-family: var(--ff-display);
+      font-size: 1.05rem;
+      font-weight: 400;
+      border-bottom: 1px solid var(--border);
+      border-radius: 8px 8px 0 0;
+      padding: .7rem 1rem;
+    }
+    .panel-heading a { color: var(--wine) !important; text-decoration: none; }
+    .panel-heading a:hover { text-decoration: underline; }
+    .panel-block {
+      border-bottom: 1px solid var(--border);
+      padding: .55rem 1rem;
+      color: var(--tx);
+      font-size: .88rem;
+    }
+    .panel-block:last-child { border-bottom: none; border-radius: 0 0 8px 8px; }
+    .panel-block a { color: var(--wine); text-decoration: none; }
+    .panel-block a:hover { text-decoration: underline; }
+    .panel-block .panel-icon { color: var(--tx-3); margin-right: .5rem; }
+    .peli-es { opacity: .5; font-size: .85em; }
+
+    /* ═══ Tags ═══ */
+    .tag.is-lugar {
+      background: var(--blue);
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 500;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .tag.is-lugar:hover { background: var(--wine); color: #fff; }
+    .tag.is-genre {
+      background: var(--bg-inset);
+      color: var(--tx-2);
+      font-size: .72rem;
+      border-radius: 2rem;
+    }
+
+    /* ═══ Tabs ═══ */
+    .tabs {
+      border-bottom-color: var(--border);
+      margin-bottom: 1.5rem !important;
+    }
+    .tabs a {
+      color: var(--tx-3) !important;
+      border-bottom-color: transparent !important;
+      font-weight: 500;
+      font-size: .88rem;
+    }
+    .tabs a:hover { color: var(--wine) !important; border-bottom-color: var(--wine) !important; }
+    .tabs li.is-active a {
+      color: var(--wine) !important;
+      border-bottom-color: var(--wine) !important;
+      font-weight: 600;
+    }
+
+    /* ═══ Messages (plot, info) ═══ */
+    .message {
+      background: var(--bg-raised);
+      border-radius: 8px;
+    }
+    .message.is-wine { border-left: 4px solid var(--wine); }
+    .message.is-wine .message-body {
+      background: var(--wine-bg);
+      color: var(--tx);
+      border: none;
+      font-size: .9rem;
+      line-height: 1.65;
+      padding: 1rem 1.25rem;
+    }
+
+    /* ═══ Movie Detail ═══ */
+    .peli-poster-img {
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.12);
+      width: 100%;
+      max-width: 240px;
+    }
+    .peli-title {
+      font-family: var(--ff-display);
+      font-size: clamp(1.6rem, 1.2rem + 2vw, 2.6rem);
+      line-height: 1.1;
+      margin-bottom: .4rem;
+      letter-spacing: -.01em;
+    }
+    .peli-meta-line {
+      font-size: .88rem;
+      color: var(--tx-2);
+      margin-bottom: .5rem;
+      font-style: italic;
+      font-family: var(--ff-display);
+    }
+    .peli-rating {
+      display: inline-flex; align-items: center; gap: .35rem;
+      background: var(--gold-bg); color: var(--gold);
+      padding: .3rem .7rem; border-radius: 4px;
+      font-weight: 700; font-size: .85rem;
+      text-decoration: none; transition: opacity .15s;
+    }
+    .peli-rating:hover { opacity: .85; color: var(--gold); }
+
+    /* ═══ Persona cards ═══ */
+    .persona-card .card-content { display: flex; align-items: center; gap: .85rem; }
+    .persona-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--wine-bg);
+      color: var(--wine);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--ff-display);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    [data-theme="dark"] .persona-avatar { background: var(--wine-bg); color: var(--wine-soft); }
+
+    /* ═══ Page Heading ═══ */
+    .page-heading {
+      font-family: var(--ff-display);
+      font-size: clamp(1.6rem, 1.2rem + 2vw, 2.8rem);
+      line-height: 1.1;
+      margin-bottom: .6rem;
+      letter-spacing: -.02em;
+    }
+    .page-sub {
+      font-size: .9rem;
+      color: var(--tx-2);
+      margin-bottom: 1.5rem;
+    }
+    .page-sub a { color: var(--wine); }
+
+    /* ═══ Film List (all movies) ═══ */
+    .film-row {
+      display: flex; align-items: center; gap: .7rem;
+      padding: .5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .film-row:last-child { border-bottom: none; }
+    .film-poster-sm {
+      width: 32px; height: 48px;
+      object-fit: cover; border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .film-poster-ph {
+      width: 32px; height: 48px;
+      background: var(--bg-inset);
+      border-radius: 3px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .55rem; color: var(--tx-3);
+    }
+    .film-row-body { flex: 1; min-width: 0; }
+    .film-row-title {
+      font-weight: 500; font-size: .88rem;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .film-row-title a { text-decoration: none; color: var(--tx); }
+    .film-row-title a:hover { color: var(--wine); }
+    .film-row-sub { font-size: .75rem; color: var(--tx-3); }
+    .film-row-sub a { color: var(--tx-3); text-decoration: none; }
+    .film-row-sub a:hover { color: var(--wine); }
+
+    /* ═══ Entrance Animation ═══ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .stagger > * {
+      opacity: 0;
+      animation: fadeUp .45s var(--ease-out-quart) forwards;
+      animation-delay: calc(var(--i, 0) * 40ms);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .stagger > * { animation: none; opacity: 1; }
+    }
+
+    /* ═══ Dropdown (Bulma) ═══ */
+    .dropdown-content { background: var(--bg-raised); box-shadow: 0 8px 24px rgba(0,0,0,.1); }
+    .dropdown-item { color: var(--tx); font-size: .88rem; }
+    .dropdown-item:hover { background: var(--bg-inset); color: var(--wine); }
+
+    /* ═══ Menu (Bulma) ═══ */
+    .menu-label { color: var(--tx-3) !important; font-weight: 600; letter-spacing: .05em; }
+    .menu-list a { color: var(--tx-2); border-radius: 6px; }
+    .menu-list a:hover { background: var(--bg-inset); color: var(--wine); }
+    .menu-list a.is-active { background: var(--wine-bg); color: var(--wine); }
+
+    /* ═══ Responsive ═══ */
+    @media screen and (max-width: 768px) {
+      .main-section { padding: 1.25rem 0 2rem; }
+      .home-hero { padding: 1.75rem 0 1.5rem; }
+      .columns.finde-panels { gap: .5rem; }
+    }
+
+    /* ═══ Filter input ═══ */
+    .filter-input .input {
+      background: var(--bg-raised);
+      border-color: var(--border);
+      color: var(--tx);
+      font-family: var(--ff-body);
+      border-radius: 6px;
+      box-shadow: none;
+    }
+    .filter-input .input::placeholder { color: var(--tx-3); }
+    .filter-input .input:focus { border-color: var(--wine); box-shadow: 0 0 0 2px var(--wine-bg); }
+
+    /* ═══ Scrollbar ═══ */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--tx-3); }
   </style>
 </head>
 <body>
-  <main class="container">
-    <div class="top-bar">
-      <a href="#" class="top-bar-brand">🎬 Findes</a>
-      <nav class="top-bar-nav" id="main-nav">
-        <a href="#" data-page="">Inicio</a>
-        <a href="#lugares" data-page="lugares">Lugares</a>
-        <a href="#personas" data-page="personas">Personas</a>
-        <a href="#peliculas" data-page="peliculas">Películas</a>
-      </nav>
-      <div class="top-bar-search">
-        <input type="search" id="global-search" placeholder="Buscar..." autocomplete="off">
-        <div class="search-results" id="search-results"></div>
+  <!-- ═══ Navbar ═══ -->
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">🎬 Findes Precríticos</a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start" id="main-nav">
+          <a class="navbar-item" href="#" data-page="">Inicio</a>
+          <a class="navbar-item" href="#lugares" data-page="lugares">Lugares</a>
+          <a class="navbar-item" href="#personas" data-page="personas">Personas</a>
+          <a class="navbar-item" href="#peliculas" data-page="peliculas">Películas</a>
+          <a class="navbar-item" href="#directores" data-page="directores">Directores</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="search-wrap">
+              <input class="input" type="search" id="global-search" placeholder="Buscar película, persona..." autocomplete="off">
+              <div class="search-results" id="search-results"></div>
+            </div>
+          </div>
+          <div class="navbar-item">
+            <button class="theme-toggle" id="theme-toggle" title="Cambiar tema">
+              <span class="icon-moon">🌙</span>
+              <span class="icon-sun">☀️</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <div id="view"></div>
-  </main>
+  </nav>
+
+  <!-- ═══ Main View ═══ -->
+  <div id="view"></div>
 
   <script>
     let DATA = [];
     const PELI_CACHE = {};
 
+    /* ── Theme ── */
+    (function initTheme() {
+      const saved = localStorage.getItem('fp-theme');
+      if (saved) {
+        document.documentElement.dataset.theme = saved;
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem('fp-theme', next);
+    });
+
+    /* ── Navbar burger ── */
+    document.querySelector('.navbar-burger').addEventListener('click', function () {
+      this.classList.toggle('is-active');
+      document.getElementById(this.dataset.target).classList.toggle('is-active');
+    });
+
+    /* ── Init ── */
     async function init() {
       const res = await fetch('data.json');
       DATA = await res.json();
-      // Preload all movie JSONs for search
       const slugs = new Set();
       for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
         if (typeof m !== 'string' && m.slug) slugs.add(m.slug);
@@ -171,7 +587,6 @@
       const orig = p.titulo_original || p.titulo;
       const es = p.titulo_es || p.titulo;
       const year = p.year ? ` (${p.year})` : '';
-      // If original and Spanish are essentially the same, just show one
       if (orig.toLowerCase() === es.toLowerCase()) return `${orig}${year}`;
       return `${orig} <span class="peli-es">(${es})</span>${year}`;
     }
@@ -180,92 +595,139 @@
       const t = typeof peli === 'string' ? peli : peli.titulo;
       const s = typeof peli === 'string' ? null : peli.slug;
       if (!s) return t;
-      const display = peliDisplayTitle(peli, s);
-      return `<a href="#pelicula/${s}">${display}</a>`;
+      return `<a href="#pelicula/${s}">${peliDisplayTitle(peli, s)}</a>`;
     }
 
+    /* ── Routing ── */
     function route() {
       const hash = location.hash.slice(1);
-      // Update active nav link
       const seg = hash.split('/')[0] || '';
-      const pageMap = { finde: '', persona: 'personas', pelicula: 'peliculas', lugar: 'lugares' };
+      const pageMap = { finde: '', persona: 'personas', pelicula: 'peliculas', lugar: 'lugares', director: 'directores' };
       const page = pageMap[seg] !== undefined ? pageMap[seg] : seg;
-      document.querySelectorAll('#main-nav a').forEach(a => {
-        a.classList.toggle('active', a.dataset.page === page);
+      document.querySelectorAll('#main-nav .navbar-item').forEach(a => {
+        a.classList.toggle('is-active-page', a.dataset.page === page);
       });
-      if (hash.startsWith('finde/')) {
-        renderFinde(parseInt(hash.split('/')[1]));
-      } else if (hash.startsWith('pelicula/')) {
-        renderPelicula(hash.split('/')[1]);
-      } else if (hash.startsWith('persona/')) {
-        renderPersona(decodeURIComponent(hash.split('/')[1]));
-      } else if (hash.startsWith('lugar/')) {
-        renderLugar(decodeURIComponent(hash.split('/')[1]));
-      } else if (hash === 'lugares') {
-        renderLugares();
-      } else if (hash === 'personas') {
-        renderPersonas();
-      } else if (hash === 'peliculas') {
-        renderPeliculas();
-      } else {
-        renderHome();
-      }
+      // Close mobile menu on navigation
+      document.querySelector('.navbar-burger').classList.remove('is-active');
+      document.getElementById('navMenu').classList.remove('is-active');
+
+      if (hash.startsWith('finde/')) renderFinde(parseInt(hash.split('/')[1]));
+      else if (hash.startsWith('pelicula/')) renderPelicula(hash.split('/')[1]);
+      else if (hash.startsWith('persona/')) renderPersona(decodeURIComponent(hash.split('/')[1]));
+      else if (hash.startsWith('lugar/')) renderLugar(decodeURIComponent(hash.split('/')[1]));
+      else if (hash.startsWith('director/')) renderDirector(decodeURIComponent(hash.split('/').slice(1).join('/')));
+      else if (hash === 'lugares') renderLugares();
+      else if (hash === 'personas') renderPersonas();
+      else if (hash === 'peliculas') renderPeliculas();
+      else if (hash === 'directores') renderDirectores();
+      else renderHome();
+
+      window.scrollTo({ top: 0, behavior: 'instant' });
     }
 
-    function lugarLinks(lugares) {
-      return lugares.map(l => `<a class="lugar-tag" href="#lugar/${encodeURIComponent(l)}">${l}</a>`).join(' ');
+    function lugarTags(lugares) {
+      return lugares.map(l =>
+        `<a href="#lugar/${encodeURIComponent(l)}"><span class="tag is-lugar">${l}</span></a>`
+      ).join(' ');
     }
 
+    function breadcrumb(items) {
+      return `<nav class="breadcrumb" aria-label="breadcrumbs"><ul>
+        ${items.map((it, i) => i < items.length - 1
+          ? `<li><a href="${it.href}">${it.label}</a></li>`
+          : `<li class="is-active"><a href="#" aria-current="page">${it.label}</a></li>`
+        ).join('')}
+      </ul></nav>`;
+    }
+
+    function staggerAttrs(items) {
+      return items.map((_, i) => `style="--i:${i}"`);
+    }
+
+    /* ── HOME ── */
     function renderHome() {
       const totalPelis = DATA.reduce((sum, f) => sum + f.personas.reduce((s, p) => s + p.peliculas.length, 0), 0);
       const allPeople = [...new Set(DATA.flatMap(f => f.personas.map(p => p.nombre)))];
       const allLugares = [...new Set(DATA.flatMap(f => f.lugares))];
 
-      let html = `
-        <div class="stats-grid">
-          <div class="stat-card"><div class="num">${DATA.length}</div><div class="label">Findes</div></div>
-          <div class="stat-card"><div class="num">${totalPelis}</div><div class="label">Películas</div></div>
-          <div class="stat-card"><div class="num">${allPeople.length}</div><div class="label">Participantes</div></div>
-          <div class="stat-card"><div class="num">${allLugares.length}</div><div class="label">Lugares</div></div>
+      let html = `<section class="main-section"><div class="container">
+        <div class="home-hero">
+          <div class="display-title">Findes Precríticos</div>
+          <div class="display-sub">Un archivo cinematográfico entre amigos, desde 2005</div>
         </div>
-        <h2>Findes</h2>
-        <div class="card-list">
-      `;
-      for (const f of DATA) {
-        const npelis = f.personas.reduce((s, p) => s + p.peliculas.length, 0);
-        html += `<a href="#finde/${f.numero}" class="list-card">
-          <span class="list-card-num">#${f.numero}</span>
-          <div class="list-card-body">
-            <div class="list-card-title">${f.fecha || '—'}</div>
-            <div class="list-card-sub">${f.lugares.join(', ')}</div>
+
+        <nav class="level stats-level">
+          <div class="level-item has-text-centered">
+            <div><div class="stat-num">${DATA.length}</div><div class="stat-label">Findes</div></div>
           </div>
-          <span class="list-card-right">${npelis} pelis</span>
+          <div class="level-item has-text-centered">
+            <div><div class="stat-num">${totalPelis}</div><div class="stat-label">Películas</div></div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div><div class="stat-num">${allPeople.length}</div><div class="stat-label">Participantes</div></div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div><div class="stat-num">${allLugares.length}</div><div class="stat-label">Lugares</div></div>
+          </div>
+        </nav>
+
+        <div class="tabs is-medium">
+          <ul>
+            <li class="is-active"><a>Archivo</a></li>
+          </ul>
+        </div>
+
+        <div class="stagger">
+      `;
+      for (const [i, f] of DATA.entries()) {
+        const npelis = f.personas.reduce((s, p) => s + p.peliculas.length, 0);
+        html += `<a href="#finde/${f.numero}" class="finde-card-link" style="--i:${i}">
+          <div class="card mb-3">
+            <div class="card-content">
+              <span class="finde-num">${f.numero}</span>
+              <div class="finde-info">
+                <div class="finde-date">${f.fecha || '—'}</div>
+                <div class="finde-lugar">${f.lugares.join(' · ')}</div>
+              </div>
+              <span class="finde-pelis">${npelis} películas</span>
+            </div>
+          </div>
         </a>`;
       }
-      html += '</div>';
+      html += `</div></div></section>`;
       document.getElementById('view').innerHTML = html;
     }
 
+    /* ── FINDE DETAIL ── */
     function renderFinde(num) {
       const f = DATA.find(d => d.numero === num);
       if (!f) { renderHome(); return; }
 
-      let html = `
-        <nav class="breadcrumb"><a href="#">Inicio</a><span class="sep">›</span><span class="current">Finde #${f.numero}</span></nav>
-        <div class="finde-header">
-          <h2>Finde #${f.numero}</h2>
-          <p>${f.fecha || ''} · ${lugarLinks(f.lugares)}</p>
+      let html = `<section class="main-section"><div class="container">
+        ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#', label:`Finde #${f.numero}`}])}
+        <h1 class="page-heading">Finde #${f.numero}</h1>
+        <div class="page-sub">
+          <span style="font-family:var(--ff-display);font-style:italic">${f.fecha || ''}</span>
+          &ensp;${lugarTags(f.lugares)}
         </div>
+
+        <div class="columns is-multiline finde-panels stagger">
       `;
-      for (const p of f.personas) {
-        html += `<div class="persona">
-          <h3><a href="#persona/${encodeURIComponent(p.nombre)}">${p.nombre}</a></h3>
-          <ul class="film-list">${p.peliculas.map(m => `<li>${peliLink(m)}</li>`).join('')}</ul>
+      for (const [i, p] of f.personas.entries()) {
+        html += `<div class="column is-half-tablet is-one-third-desktop" style="--i:${i}">
+          <nav class="panel">
+            <p class="panel-heading"><a href="#persona/${encodeURIComponent(p.nombre)}">${p.nombre}</a></p>
+            ${p.peliculas.map(m => `<div class="panel-block">
+              <span class="panel-icon">🎬</span> ${peliLink(m)}
+            </div>`).join('')}
+          </nav>
         </div>`;
       }
+      html += `</div></div></section>`;
       document.getElementById('view').innerHTML = html;
     }
 
+    /* ── PERSONAS ── */
     function renderPersonas() {
       const stats = {};
       for (const f of DATA) {
@@ -276,49 +738,77 @@
         }
       }
 
-      let html = `
-        <h2>Personas</h2>
-        <div class="card-list">
+      let html = `<section class="main-section"><div class="container">
+        <h1 class="page-heading">Personas</h1>
+        <div class="columns is-multiline stagger">
       `;
-      for (const [name, s] of Object.entries(stats).sort((a, b) => b[1].pelis - a[1].pelis)) {
-        html += `<a href="#persona/${encodeURIComponent(name)}" class="list-card">
-          <span class="list-card-icon">👤</span>
-          <div class="list-card-body">
-            <div class="list-card-title">${name}</div>
-            <div class="list-card-sub">${s.findes} findes · ${s.pelis} películas</div>
-          </div>
-        </a>`;
+      const sorted = Object.entries(stats).sort((a, b) => b[1].pelis - a[1].pelis);
+      for (const [i, [name, s]] of sorted.entries()) {
+        const initial = name.charAt(0).toUpperCase();
+        html += `<div class="column is-half-tablet is-one-third-desktop" style="--i:${i}">
+          <a href="#persona/${encodeURIComponent(name)}" style="text-decoration:none;color:inherit">
+            <div class="card persona-card">
+              <div class="card-content">
+                <div class="persona-avatar">${initial}</div>
+                <div>
+                  <div style="font-weight:600;font-size:.95rem">${name}</div>
+                  <div style="font-size:.8rem;color:var(--tx-3)">${s.findes} findes · ${s.pelis} películas</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>`;
       }
-      html += '</div>';
+      html += `</div></div></section>`;
       document.getElementById('view').innerHTML = html;
     }
 
+    /* ── PERSONA DETAIL ── */
     function renderPersona(nombre) {
       const findes = DATA.filter(f => f.personas.some(p => p.nombre === nombre));
+      const totalPelis = findes.reduce((s, f) => s + f.personas.find(p => p.nombre === nombre).peliculas.length, 0);
 
-      let html = `
-        <nav class="breadcrumb"><a href="#">Inicio</a><span class="sep">›</span><a href="#personas">Personas</a><span class="sep">›</span><span class="current">${nombre}</span></nav>
-        <h2>${nombre}</h2>
-        <p>${findes.length} findes · ${findes.reduce((s, f) => s + f.personas.find(p => p.nombre === nombre).peliculas.length, 0)} películas</p>
+      let html = `<section class="main-section"><div class="container">
+        ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#personas', label:'Personas'}, {href:'#', label: nombre}])}
+
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+          <div class="persona-avatar" style="width:56px;height:56px;font-size:1.5rem">${nombre.charAt(0)}</div>
+          <div>
+            <h1 class="page-heading" style="margin-bottom:.1rem">${nombre}</h1>
+            <div class="page-sub" style="margin-bottom:0">${findes.length} findes · ${totalPelis} películas</div>
+          </div>
+        </div>
+
+        <div class="stagger">
       `;
-      for (const f of findes) {
+      for (const [i, f] of findes.entries()) {
         const p = f.personas.find(p => p.nombre === nombre);
-        html += `<h3><a href="#finde/${f.numero}">Finde #${f.numero}</a> <small>${f.fecha || ''} — ${lugarLinks(f.lugares)}</small></h3>
-          <ul class="film-list">${p.peliculas.map(m => `<li>${peliLink(m)}</li>`).join('')}</ul>`;
+        html += `<div style="--i:${i}">
+          <nav class="panel mb-4">
+            <p class="panel-heading">
+              <a href="#finde/${f.numero}">Finde #${f.numero}</a>
+              <span style="float:right;font-family:var(--ff-display);font-style:italic;font-size:.88rem;color:var(--tx-3)">${f.fecha || ''}</span>
+            </p>
+            ${p.peliculas.map(m => `<div class="panel-block">
+              <span class="panel-icon">🎬</span> ${peliLink(m)}
+            </div>`).join('')}
+            <div class="panel-block" style="font-size:.78rem;color:var(--tx-3)">
+              ${lugarTags(f.lugares)}
+            </div>
+          </nav>
+        </div>`;
       }
+      html += `</div></div></section>`;
       document.getElementById('view').innerHTML = html;
     }
 
+    /* ── PELÍCULAS ── */
     function renderPeliculas() {
       const allFilms = [];
-      for (const f of DATA) {
-        for (const p of f.personas) {
-          for (const m of p.peliculas) {
-            const titulo = typeof m === 'string' ? m : m.titulo;
-            const slug = typeof m === 'string' ? null : m.slug;
-            allFilms.push({ titulo, slug, persona: p.nombre, finde: f.numero, fecha: f.fecha });
-          }
-        }
+      for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
+        const titulo = typeof m === 'string' ? m : m.titulo;
+        const slug = typeof m === 'string' ? null : m.slug;
+        allFilms.push({ titulo, slug, persona: p.nombre, finde: f.numero, fecha: f.fecha });
       }
       allFilms.sort((a, b) => {
         const pa = a.slug ? PELI_CACHE[a.slug] : null;
@@ -328,299 +818,416 @@
         return ta.localeCompare(tb, 'es');
       });
 
-      let html = `
-        <h2>Todas las películas (${allFilms.length})</h2>
-        <input type="search" id="search" placeholder="Filtrar por título..." style="margin-bottom:.75rem;">
-        <div class="card-list" id="films-list">
+      let html = `<section class="main-section"><div class="container">
+        <h1 class="page-heading">Películas <span style="font-family:var(--ff-display);font-style:italic;font-size:.5em;color:var(--tx-3)">${allFilms.length}</span></h1>
+
+        <div class="field filter-input" style="max-width:360px;margin-bottom:1.5rem">
+          <div class="control">
+            <input class="input" type="search" id="search" placeholder="Filtrar por título...">
+          </div>
+        </div>
+
+        <div id="films-list">
       `;
       for (const f of allFilms) {
         const peli = f.slug ? PELI_CACHE[f.slug] : null;
         const posterHtml = peli && peli.poster
-          ? `<img class="film-card-poster" src="${peli.poster}" alt="" loading="lazy">`
-          : `<div class="film-card-poster-ph">🎬</div>`;
+          ? `<img class="film-poster-sm" src="${peli.poster}" alt="" loading="lazy">`
+          : `<div class="film-poster-ph">🎬</div>`;
         const display = f.slug ? peliDisplayTitle(f, f.slug) : f.titulo;
         const link = f.slug ? `<a href="#pelicula/${f.slug}">${display}</a>` : f.titulo;
-        html += `<div class="film-card">
+        html += `<div class="film-row">
           ${posterHtml}
-          <div class="film-card-body">
-            <div class="film-card-title">${link}</div>
-            <div class="film-card-sub"><a href="#persona/${encodeURIComponent(f.persona)}">${f.persona}</a> · <a href="#finde/${f.finde}">#${f.finde}</a></div>
+          <div class="film-row-body">
+            <div class="film-row-title">${link}</div>
+            <div class="film-row-sub"><a href="#persona/${encodeURIComponent(f.persona)}">${f.persona}</a> · <a href="#finde/${f.finde}">#${f.finde}</a></div>
           </div>
         </div>`;
       }
-      html += '</div>';
+      html += `</div></div></section>`;
       document.getElementById('view').innerHTML = html;
 
       document.getElementById('search').addEventListener('input', function() {
         const q = this.value.toLowerCase();
-        for (const card of document.querySelectorAll('#films-list .film-card')) {
-          card.style.display = card.textContent.toLowerCase().includes(q) ? '' : 'none';
+        for (const row of document.querySelectorAll('#films-list .film-row')) {
+          row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
         }
       });
     }
 
-    function renderLugares() {
-      const lugarStats = {};
-      for (const f of DATA) {
-        for (const l of f.lugares) {
-          if (!lugarStats[l]) lugarStats[l] = { findes: 0, pelis: 0 };
-          lugarStats[l].findes += 1;
-          lugarStats[l].pelis += f.personas.reduce((s, p) => s + p.peliculas.length, 0);
-        }
-      }
-      let html = `
-        <h2>Lugares</h2>
-        <div class="card-list">
-      `;
-      for (const [name, s] of Object.entries(lugarStats).sort((a, b) => b[1].findes - a[1].findes)) {
-        html += `<a href="#lugar/${encodeURIComponent(name)}" class="list-card">
-          <span class="list-card-icon">📍</span>
-          <div class="list-card-body">
-            <div class="list-card-title">${name}</div>
-            <div class="list-card-sub">${s.findes} findes · ${s.pelis} películas</div>
-          </div>
-        </a>`;
-      }
-      html += '</div>';
-      document.getElementById('view').innerHTML = html;
-    }
-
-    function renderLugar(nombre) {
-      const findes = DATA.filter(f => f.lugares.includes(nombre));
-      const totalPelis = findes.reduce((s, f) => s + f.personas.reduce((sp, p) => sp + p.peliculas.length, 0), 0);
-
-      let html = `
-        <nav class="breadcrumb"><a href="#">Inicio</a><span class="sep">›</span><a href="#lugares">Lugares</a><span class="sep">›</span><span class="current">${nombre}</span></nav>
-        <h2>📍 ${nombre}</h2>
-        <p>${findes.length} findes · ${totalPelis} películas</p>
-        <div class="card-list">
-      `;
-      for (const f of findes) {
-        const npelis = f.personas.reduce((s, p) => s + p.peliculas.length, 0);
-        const participantes = f.personas.map(p => p.nombre).join(', ');
-        html += `<a href="#finde/${f.numero}" class="list-card">
-          <span class="list-card-num">#${f.numero}</span>
-          <div class="list-card-body">
-            <div class="list-card-title">${f.fecha}</div>
-            <div class="list-card-sub">${participantes}</div>
-          </div>
-          <span class="list-card-right">${npelis} pelis</span>
-        </a>`;
-      }
-      html += '</div>';
-      document.getElementById('view').innerHTML = html;
-    }
-
+    /* ── PELÍCULA DETAIL ── */
     async function renderPelicula(slug) {
       const peli = await loadPeli(slug);
       if (!peli) { renderHome(); return; }
 
-      // Find all appearances in findes
       const appearances = [];
-      for (const f of DATA) {
-        for (const p of f.personas) {
-          for (const m of p.peliculas) {
-            const s = typeof m === 'string' ? null : m.slug;
-            if (s === slug) {
-              appearances.push({ finde: f, persona: p.nombre });
-            }
-          }
-        }
+      for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
+        if (typeof m !== 'string' && m.slug === slug) appearances.push({ finde: f, persona: p.nombre });
       }
 
       const orig = peli.titulo_original || peli.titulo;
       const es = peli.titulo_es || peli.titulo;
       const displayTitle = orig.toLowerCase() === es.toLowerCase()
-        ? `${orig}${peli.year ? ' ('+peli.year+')' : ''}`
-        : `${orig} <span class="peli-es">(${es})</span>${peli.year ? ' ('+peli.year+')' : ''}`;
+        ? orig : `${orig} <span class="peli-es">(${es})</span>`;
 
-      let html = `
-        <nav class="breadcrumb"><a href="#">Inicio</a><span class="sep">›</span><a href="#peliculas">Películas</a><span class="sep">›</span><span class="current">${orig}</span></nav>
-        <div class="peli-detail">
+      let html = `<section class="main-section"><div class="container">
+        ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#peliculas', label:'Películas'}, {href:'#', label: orig}])}
+
+        <div class="columns">
+          <div class="column is-narrow" style="text-align:center">
+      `;
+      if (peli.poster) {
+        html += `<img class="peli-poster-img" src="${peli.poster}" alt="${peli.titulo}">`;
+      }
+      html += `</div><div class="column">
+        <h1 class="peli-title">${displayTitle}</h1>
+        ${peli.year ? `<div style="font-family:var(--ff-display);font-style:italic;font-size:1.2rem;color:var(--tx-2);margin-bottom:.5rem">${peli.year}</div>` : ''}
       `;
 
-      if (peli.poster) {
-        html += `<img class="peli-poster" src="${peli.poster}" alt="${peli.titulo}">`;
+      const metaParts = [peli.director, peli.runtime].filter(Boolean);
+      if (metaParts.length) html += `<div class="peli-meta-line">${metaParts.join(' · ')}</div>`;
+
+      if (peli.genre) {
+        const genres = peli.genre.split(', ');
+        html += `<div class="tags mb-3">${genres.map(g => `<span class="tag is-genre">${g}</span>`).join('')}</div>`;
       }
 
-      html += `<div class="peli-info">
-        <h2>${displayTitle}</h2>`;
-
-      const meta = [peli.director, peli.runtime, peli.genre].filter(Boolean);
-      if (meta.length) html += `<p class="peli-meta">${meta.join(' · ')}</p>`;
-
-      if (peli.imdb_id) {
-        const rating = peli.tmdb_rating ? ` ⭐ ${peli.tmdb_rating}` : '';
-        html += `<p><a class="peli-imdb" href="https://www.imdb.com/title/${peli.imdb_id}" target="_blank">IMDb${rating}</a></p>`;
-      } else if (peli.tmdb_id) {
-        const rating = peli.tmdb_rating ? ` ⭐ ${peli.tmdb_rating}` : '';
-        html += `<p><a class="peli-imdb" href="https://www.themoviedb.org/movie/${peli.tmdb_id}" target="_blank">TMDB${rating}</a></p>`;
+      if (peli.imdb_id || peli.tmdb_id) {
+        const rating = peli.tmdb_rating ? `⭐ ${peli.tmdb_rating}` : '';
+        const url = peli.imdb_id
+          ? `https://www.imdb.com/title/${peli.imdb_id}`
+          : `https://www.themoviedb.org/movie/${peli.tmdb_id}`;
+        const label = peli.imdb_id ? 'IMDb' : 'TMDB';
+        html += `<p><a class="peli-rating" href="${url}" target="_blank">${label} ${rating}</a></p>`;
       }
 
-      if (peli.plot) html += `<p>${peli.plot}</p>`;
+      if (peli.plot) {
+        html += `<article class="message is-wine mt-4"><div class="message-body">${peli.plot}</div></article>`;
+      }
 
-      html += `<h3>En los Findes</h3><ul>`;
+      html += `<h2 class="page-heading" style="font-size:1.2rem;margin-top:1.5rem;margin-bottom:.75rem">En los Findes</h2>`;
+
+      html += `<div class="menu"><ul class="menu-list">`;
       for (const a of appearances) {
-        html += `<li><a href="#finde/${a.finde.numero}">Finde #${a.finde.numero}</a> (${a.finde.fecha}) — traída por <a href="#persona/${encodeURIComponent(a.persona)}">${a.persona}</a></li>`;
+        html += `<li><a href="#finde/${a.finde.numero}" style="display:flex;justify-content:space-between;align-items:center">
+          <span><strong>Finde #${a.finde.numero}</strong> — traída por <a href="#persona/${encodeURIComponent(a.persona)}">${a.persona}</a></span>
+          <span style="color:var(--tx-3);font-size:.8rem;font-family:var(--ff-display);font-style:italic">${a.finde.fecha}</span>
+        </a></li>`;
       }
-      html += `</ul></div></div>`;
+      html += `</ul></div>`;
 
+      html += `</div></div></div></section>`;
       document.getElementById('view').innerHTML = html;
     }
 
-    // ── Fuzzy search engine ──
+    /* ── LUGARES ── */
+    function renderLugares() {
+      const lugarStats = {};
+      for (const f of DATA) for (const l of f.lugares) {
+        if (!lugarStats[l]) lugarStats[l] = { findes: 0, pelis: 0 };
+        lugarStats[l].findes += 1;
+        lugarStats[l].pelis += f.personas.reduce((s, p) => s + p.peliculas.length, 0);
+      }
+
+      let html = `<section class="main-section"><div class="container">
+        <h1 class="page-heading">Lugares</h1>
+        <div class="stagger">
+      `;
+      const sorted = Object.entries(lugarStats).sort((a, b) => b[1].findes - a[1].findes);
+      for (const [i, [name, s]] of sorted.entries()) {
+        html += `<a href="#lugar/${encodeURIComponent(name)}" class="finde-card-link" style="--i:${i}">
+          <div class="card mb-3">
+            <div class="card-content" style="display:flex;align-items:center;gap:.85rem">
+              <span style="font-size:1.4rem">📍</span>
+              <div style="flex:1;min-width:0">
+                <div style="font-weight:600;font-size:.95rem">${name}</div>
+                <div style="font-size:.8rem;color:var(--tx-3)">${s.findes} findes · ${s.pelis} películas</div>
+              </div>
+            </div>
+          </div>
+        </a>`;
+      }
+      html += `</div></div></section>`;
+      document.getElementById('view').innerHTML = html;
+    }
+
+    /* ── LUGAR DETAIL ── */
+    function renderLugar(nombre) {
+      const findes = DATA.filter(f => f.lugares.includes(nombre));
+      const totalPelis = findes.reduce((s, f) => s + f.personas.reduce((sp, p) => sp + p.peliculas.length, 0), 0);
+
+      let html = `<section class="main-section"><div class="container">
+        ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#lugares', label:'Lugares'}, {href:'#', label: nombre}])}
+
+        <h1 class="page-heading">📍 ${nombre}</h1>
+        <div class="page-sub">${findes.length} findes · ${totalPelis} películas</div>
+
+        <div class="stagger">
+      `;
+      for (const [i, f] of findes.entries()) {
+        const npelis = f.personas.reduce((s, p) => s + p.peliculas.length, 0);
+        const participantes = f.personas.map(p =>
+          `<a href="#persona/${encodeURIComponent(p.nombre)}" style="color:var(--tx-2)">${p.nombre}</a>`
+        ).join(', ');
+        html += `<a href="#finde/${f.numero}" class="finde-card-link" style="--i:${i}">
+          <div class="card mb-3">
+            <div class="card-content" style="display:flex;align-items:center;gap:.85rem">
+              <span class="finde-num">${f.numero}</span>
+              <div class="finde-info">
+                <div class="finde-date">${f.fecha}</div>
+                <div class="finde-lugar">${f.personas.map(p=>p.nombre).join(', ')}</div>
+              </div>
+              <span class="finde-pelis">${npelis} pelis</span>
+            </div>
+          </div>
+        </a>`;
+      }
+      html += `</div></div></section>`;
+      document.getElementById('view').innerHTML = html;
+    }
+
+    /* ── DIRECTORES ── */
+    function getDirectorStats() {
+      const directors = {};
+      for (const [slug, peli] of Object.entries(PELI_CACHE)) {
+        if (!peli || !peli.director) continue;
+        for (const d of peli.director.split(', ')) {
+          if (!directors[d]) directors[d] = { films: [], findes: new Set(), poster: null };
+          directors[d].films.push({ slug, peli });
+          if (!directors[d].poster && peli.poster) directors[d].poster = peli.poster;
+          if (peli.findes) peli.findes.forEach(n => directors[d].findes.add(n));
+        }
+      }
+      return directors;
+    }
+
+    function renderDirectores() {
+      const directors = getDirectorStats();
+      const sorted = Object.entries(directors).sort((a, b) => b[1].films.length - a[1].films.length);
+
+      let html = `<section class="main-section"><div class="container">
+        <h1 class="page-heading">Directores</h1>
+        <div class="page-sub">${sorted.length} directores en el archivo</div>
+
+        <div class="field filter-input" style="max-width:360px;margin-bottom:1.5rem">
+          <div class="control">
+            <input class="input" type="search" id="director-search" placeholder="Filtrar por nombre...">
+          </div>
+        </div>
+
+        <div class="stagger" id="directors-list">
+      `;
+      for (const [i, [name, stats]] of sorted.entries()) {
+        const topFilms = stats.films.slice(0, 3).map(f => {
+          const t = f.peli.titulo_original || f.peli.titulo;
+          const yr = f.peli.year ? ` (${f.peli.year})` : '';
+          return t + yr;
+        }).join(', ');
+        const extra = stats.films.length > 3 ? `, +${stats.films.length - 3} más` : '';
+        html += `<a href="#director/${encodeURIComponent(name)}" class="finde-card-link" style="--i:${Math.min(i, 20)}">
+          <div class="card mb-3">
+            <div class="card-content" style="display:flex;align-items:center;gap:.85rem">
+              <div class="persona-avatar" style="background:var(--purple);background:oklch(from var(--purple) l c h / .15);color:var(--purple);font-size:1rem">🎥</div>
+              <div style="flex:1;min-width:0">
+                <div style="font-weight:600;font-size:.95rem">${name}</div>
+                <div style="font-size:.78rem;color:var(--tx-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${topFilms}${extra}</div>
+              </div>
+              <span class="finde-pelis">${stats.films.length} peli${stats.films.length !== 1 ? 's' : ''}</span>
+            </div>
+          </div>
+        </a>`;
+      }
+      html += `</div></div></section>`;
+      document.getElementById('view').innerHTML = html;
+
+      document.getElementById('director-search').addEventListener('input', function() {
+        const q = normalize(this.value);
+        for (const card of document.querySelectorAll('#directors-list .finde-card-link')) {
+          card.style.display = normalize(card.textContent).includes(q) ? '' : 'none';
+        }
+      });
+    }
+
+    /* ── DIRECTOR DETAIL ── */
+    function renderDirector(nombre) {
+      const directors = getDirectorStats();
+      const stats = directors[nombre];
+      if (!stats) { renderDirectores(); return; }
+
+      const films = stats.films.sort((a, b) => {
+        const ya = parseInt(a.peli.year) || 9999;
+        const yb = parseInt(b.peli.year) || 9999;
+        return ya - yb;
+      });
+
+      // Find which personas brought these films and in which findes
+      const appearances = [];
+      for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
+        if (typeof m === 'string') continue;
+        const peli = PELI_CACHE[m.slug];
+        if (peli && peli.director && peli.director.split(', ').includes(nombre)) {
+          appearances.push({ finde: f, persona: p.nombre, slug: m.slug, peli });
+        }
+      }
+
+      let html = `<section class="main-section"><div class="container">
+        ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#directores', label:'Directores'}, {href:'#', label: nombre}])}
+
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+          <div class="persona-avatar" style="width:56px;height:56px;font-size:1.5rem;background:oklch(from var(--purple) l c h / .15);color:var(--purple)">🎥</div>
+          <div>
+            <h1 class="page-heading" style="margin-bottom:.1rem">${nombre}</h1>
+            <div class="page-sub" style="margin-bottom:0">${films.length} película${films.length !== 1 ? 's' : ''} en el archivo</div>
+          </div>
+        </div>
+
+        <h2 style="font-family:var(--ff-display);font-size:1.2rem;margin-bottom:.75rem">Filmografía</h2>
+        <div class="columns is-multiline stagger">
+      `;
+      for (const [i, { slug, peli }] of films.entries()) {
+        const orig = peli.titulo_original || peli.titulo;
+        const es = peli.titulo_es || peli.titulo;
+        const titleDisplay = orig.toLowerCase() === es.toLowerCase()
+          ? orig : `${orig} <span class="peli-es">(${es})</span>`;
+        const posterHtml = peli.poster
+          ? `<img src="${peli.poster}" alt="" loading="lazy" style="width:60px;height:90px;object-fit:cover;border-radius:4px">`
+          : `<div style="width:60px;height:90px;background:var(--bg-inset);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.8rem">🎬</div>`;
+        const rating = peli.tmdb_rating ? `<span style="color:var(--gold);font-size:.78rem">⭐ ${peli.tmdb_rating}</span>` : '';
+        const genres = peli.genre ? `<div class="tags mt-2">${peli.genre.split(', ').map(g => `<span class="tag is-genre">${g}</span>`).join('')}</div>` : '';
+
+        html += `<div class="column is-half-tablet" style="--i:${i}">
+          <a href="#pelicula/${slug}" style="text-decoration:none;color:inherit">
+            <div class="card">
+              <div class="card-content" style="display:flex;gap:.85rem;padding:1rem">
+                ${posterHtml}
+                <div style="flex:1;min-width:0">
+                  <div style="font-weight:600;font-size:.92rem;margin-bottom:.2rem">${titleDisplay}</div>
+                  <div style="font-size:.8rem;color:var(--tx-3)">${peli.year || '?'} · ${peli.runtime || ''}</div>
+                  ${rating}
+                  ${genres}
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>`;
+      }
+      html += `</div>`;
+
+      // Appearances in Findes
+      html += `<h2 style="font-family:var(--ff-display);font-size:1.2rem;margin-top:2rem;margin-bottom:.75rem">En los Findes</h2>`;
+      html += `<div class="menu"><ul class="menu-list">`;
+      const seen = new Set();
+      for (const a of appearances) {
+        const key = `${a.finde.numero}-${a.slug}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        const orig = a.peli.titulo_original || a.peli.titulo;
+        html += `<li><a href="#finde/${a.finde.numero}" style="display:flex;justify-content:space-between;align-items:center;gap:.5rem">
+          <span><strong>${orig}</strong> — traída por <span style="color:var(--wine)">${a.persona}</span></span>
+          <span style="color:var(--tx-3);font-size:.78rem;font-family:var(--ff-display);font-style:italic;flex-shrink:0">Finde #${a.finde.numero}</span>
+        </a></li>`;
+      }
+      html += `</ul></div>`;
+
+      html += `</div></section>`;
+      document.getElementById('view').innerHTML = html;
+    }
+
+    /* ── Fuzzy Search Engine ── */
     let SEARCH_INDEX = [];
 
     function normalize(str) {
       return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     }
 
-    // Fuzzy match: returns score (0 = no match, higher = better)
     function fuzzyScore(query, target) {
-      const q = normalize(query);
-      const t = normalize(target);
+      const q = normalize(query), t = normalize(target);
       if (!q) return 0;
-
-      // Exact substring match (best)
       const subIdx = t.indexOf(q);
-      if (subIdx === 0) return 10000 + (1000 - t.length); // starts with
-      if (subIdx > 0) return 5000 + (1000 - subIdx);      // contains
-
-      // Word-start matching
-      const words = t.split(/\s+/);
-      const qWords = q.split(/\s+/);
+      if (subIdx === 0) return 10000 + (1000 - t.length);
+      if (subIdx > 0) return 5000 + (1000 - subIdx);
+      const words = t.split(/\s+/), qWords = q.split(/\s+/);
       let wordScore = 0;
-      for (const qw of qWords) {
-        for (const tw of words) {
-          if (tw.startsWith(qw)) wordScore += 2000;
-          else if (tw.includes(qw)) wordScore += 1000;
-        }
+      for (const qw of qWords) for (const tw of words) {
+        if (tw.startsWith(qw)) wordScore += 2000;
+        else if (tw.includes(qw)) wordScore += 1000;
       }
       if (wordScore > 0) return wordScore;
-
-      // Fuzzy character matching
       let qi = 0, consecutive = 0, score = 0, firstMatch = -1;
       for (let ti = 0; ti < t.length && qi < q.length; ti++) {
         if (t[ti] === q[qi]) {
           if (firstMatch < 0) firstMatch = ti;
           consecutive++;
           score += consecutive * 10 + (ti === 0 ? 50 : 0);
-          // Bonus for word boundaries
           if (ti === 0 || ' .-_'.includes(t[ti - 1])) score += 30;
           qi++;
-        } else {
-          consecutive = 0;
-        }
+        } else { consecutive = 0; }
       }
-      if (qi < q.length) return 0; // not all chars matched
+      if (qi < q.length) return 0;
       return score - firstMatch;
     }
 
     function buildSearchIndex() {
       SEARCH_INDEX = [];
-      const seenDirectors = new Set();
-      const seenSlugs = new Set();
-
-      for (const f of DATA) {
-        for (const p of f.personas) {
-          for (const m of p.peliculas) {
-            const titulo = typeof m === 'string' ? m : m.titulo;
-            const slug = typeof m === 'string' ? null : m.slug;
-            if (!slug || seenSlugs.has(slug)) continue;
-            seenSlugs.add(slug);
-            const peli = PELI_CACHE[slug];
-            const searchFields = [titulo];
-            let sub = `${p.nombre} · Finde #${f.numero}`;
-            let poster = null;
-            if (peli) {
-              if (peli.titulo_original && peli.titulo_original !== titulo) searchFields.push(peli.titulo_original);
-              if (peli.titulo_es && peli.titulo_es !== titulo) searchFields.push(peli.titulo_es);
-              if (peli.director) { searchFields.push(peli.director); sub = `${peli.director} (${peli.year || '?'}) · ${p.nombre}`; }
-              if (peli.genre) searchFields.push(peli.genre);
-              if (peli.year) searchFields.push(peli.year);
-              poster = peli.poster;
-              if (peli.director) {
-                for (const d of peli.director.split(', ')) {
-                  if (!seenDirectors.has(d)) {
-                    seenDirectors.add(d);
-                    const dirPelis = [];
-                    for (const [s, pd] of Object.entries(PELI_CACHE)) {
-                      if (pd && pd.director && pd.director.includes(d)) dirPelis.push(pd.titulo);
-                    }
-                    SEARCH_INDEX.push({
-                      type: 'director', label: d, sub: `${dirPelis.length} peli${dirPelis.length>1?'s':''}: ${dirPelis.slice(0,3).join(', ')}${dirPelis.length>3?'…':''}`,
-                      search: d, href: `#peliculas`, poster: null, boost: 1
-                    });
-                  }
-                }
+      const seenDirectors = new Set(), seenSlugs = new Set();
+      for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
+        const titulo = typeof m === 'string' ? m : m.titulo;
+        const slug = typeof m === 'string' ? null : m.slug;
+        if (!slug || seenSlugs.has(slug)) continue;
+        seenSlugs.add(slug);
+        const peli = PELI_CACHE[slug];
+        const searchFields = [titulo];
+        let sub = `${p.nombre} · Finde #${f.numero}`;
+        let poster = null;
+        if (peli) {
+          if (peli.titulo_original && peli.titulo_original !== titulo) searchFields.push(peli.titulo_original);
+          if (peli.titulo_es && peli.titulo_es !== titulo) searchFields.push(peli.titulo_es);
+          if (peli.director) { searchFields.push(peli.director); sub = `${peli.director} (${peli.year || '?'}) · ${p.nombre}`; }
+          if (peli.genre) searchFields.push(peli.genre);
+          if (peli.year) searchFields.push(peli.year);
+          poster = peli.poster;
+          if (peli.director) for (const d of peli.director.split(', ')) {
+            if (!seenDirectors.has(d)) {
+              seenDirectors.add(d);
+              const dirPelis = [];
+              for (const [s, pd] of Object.entries(PELI_CACHE)) {
+                if (pd && pd.director && pd.director.includes(d)) dirPelis.push(pd.titulo);
               }
+              SEARCH_INDEX.push({ type:'director', label:d, sub:`${dirPelis.length} peli${dirPelis.length>1?'s':''}: ${dirPelis.slice(0,3).join(', ')}${dirPelis.length>3?'…':''}`, search:d, href:`#director/${encodeURIComponent(d)}`, poster:null, boost:1 });
             }
-            SEARCH_INDEX.push({
-              type: 'pelicula', label: titulo, sub, search: searchFields.join(' '),
-              href: `#pelicula/${slug}`, poster, boost: 3
-            });
           }
         }
+        SEARCH_INDEX.push({ type:'pelicula', label:titulo, sub, search:searchFields.join(' '), href:`#pelicula/${slug}`, poster, boost:3 });
       }
-
-      // Personas
-      const allPeople = [...new Set(DATA.flatMap(f => f.personas.map(p => p.nombre)))];
-      for (const name of allPeople) {
+      for (const name of [...new Set(DATA.flatMap(f => f.personas.map(p => p.nombre)))]) {
         const count = DATA.reduce((s, f) => s + (f.personas.some(p => p.nombre === name) ? 1 : 0), 0);
-        SEARCH_INDEX.push({
-          type: 'persona', label: name, sub: `${count} findes`,
-          search: name, href: `#persona/${encodeURIComponent(name)}`, poster: null, boost: 2
-        });
+        SEARCH_INDEX.push({ type:'persona', label:name, sub:`${count} findes`, search:name, href:`#persona/${encodeURIComponent(name)}`, poster:null, boost:2 });
       }
-
-      // Lugares
-      const allLugares = [...new Set(DATA.flatMap(f => f.lugares))];
-      for (const l of allLugares) {
+      for (const l of [...new Set(DATA.flatMap(f => f.lugares))]) {
         const count = DATA.filter(f => f.lugares.includes(l)).length;
-        SEARCH_INDEX.push({
-          type: 'lugar', label: l, sub: `${count} findes`,
-          search: l, href: `#lugar/${encodeURIComponent(l)}`, poster: null, boost: 2
-        });
+        SEARCH_INDEX.push({ type:'lugar', label:l, sub:`${count} findes`, search:l, href:`#lugar/${encodeURIComponent(l)}`, poster:null, boost:2 });
       }
-
-      // Findes
       for (const f of DATA) {
-        SEARCH_INDEX.push({
-          type: 'finde', label: `Finde #${f.numero}`,
-          sub: `${f.fecha} · ${f.lugares.join(', ')}`,
-          search: `Finde ${f.numero} ${f.fecha} ${f.lugares.join(' ')}`,
-          href: `#finde/${f.numero}`, poster: null, boost: 1
-        });
+        SEARCH_INDEX.push({ type:'finde', label:`Finde #${f.numero}`, sub:`${f.fecha} · ${f.lugares.join(', ')}`, search:`Finde ${f.numero} ${f.fecha} ${f.lugares.join(' ')}`, href:`#finde/${f.numero}`, poster:null, boost:1 });
       }
     }
 
-    // ── Search UI ──
+    /* ── Search UI ── */
     let searchSelectedIdx = -1;
 
     function setupSearch() {
       const input = document.getElementById('global-search');
       const results = document.getElementById('search-results');
       let debounceTimer;
-
-      input.addEventListener('input', () => {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => doSearch(input.value), 80);
-      });
-
+      input.addEventListener('input', () => { clearTimeout(debounceTimer); debounceTimer = setTimeout(() => doSearch(input.value), 80); });
       input.addEventListener('keydown', (e) => {
         const items = results.querySelectorAll('.sr-item');
         if (e.key === 'ArrowDown') { e.preventDefault(); searchSelectedIdx = Math.min(searchSelectedIdx + 1, items.length - 1); highlightItem(items); }
         else if (e.key === 'ArrowUp') { e.preventDefault(); searchSelectedIdx = Math.max(searchSelectedIdx - 1, -1); highlightItem(items); }
-        else if (e.key === 'Enter' && searchSelectedIdx >= 0 && items[searchSelectedIdx]) {
-          e.preventDefault(); items[searchSelectedIdx].click();
-        }
+        else if (e.key === 'Enter' && searchSelectedIdx >= 0 && items[searchSelectedIdx]) { e.preventDefault(); items[searchSelectedIdx].click(); }
         else if (e.key === 'Escape') { results.classList.remove('open'); input.blur(); }
       });
-
-      document.addEventListener('click', (e) => {
-        if (!e.target.closest('.top-bar-search')) results.classList.remove('open');
-      });
-
+      document.addEventListener('click', (e) => { if (!e.target.closest('.search-wrap')) results.classList.remove('open'); });
       input.addEventListener('focus', () => { if (input.value.length >= 2) doSearch(input.value); });
     }
 
@@ -632,73 +1239,47 @@
     function doSearch(query) {
       const results = document.getElementById('search-results');
       if (query.length < 2) { results.classList.remove('open'); return; }
-
-      // Score and deduplicate (keep best score per href)
       const scored = new Map();
       for (const item of SEARCH_INDEX) {
-        // Score against label first (boosted), then full search text
         const labelScore = fuzzyScore(query, item.label) * item.boost * 2;
         const fullScore = fuzzyScore(query, item.search) * item.boost;
         const score = Math.max(labelScore, fullScore);
         if (score > 0) {
           const existing = scored.get(item.href);
-          if (!existing || score > existing.score) {
-            scored.set(item.href, { ...item, score });
-          }
+          if (!existing || score > existing.score) scored.set(item.href, { ...item, score });
         }
       }
-
       const matches = [...scored.values()].sort((a, b) => b.score - a.score).slice(0, 15);
       searchSelectedIdx = -1;
-
       if (matches.length === 0) {
-        results.innerHTML = '<div style="padding:.75rem;opacity:.6;">Sin resultados</div>';
+        results.innerHTML = '<div style="padding:.85rem;color:var(--tx-3);font-size:.88rem">Sin resultados</div>';
         results.classList.add('open');
         return;
       }
-
       results.innerHTML = matches.map((m, i) => {
         const posterHtml = m.poster
           ? `<img src="${m.poster}" alt="" loading="lazy">`
           : `<div class="sr-placeholder">${{pelicula:'🎬',persona:'👤',lugar:'📍',finde:'📅',director:'🎥'}[m.type]||'•'}</div>`;
-        const highlighted = highlightMatch(m.label, query);
         return `<div class="sr-item" data-href="${m.href}" data-idx="${i}">
           ${posterHtml}
-          <div class="sr-text">
-            <div class="sr-title">${highlighted}</div>
-            <div class="sr-sub">${m.sub}</div>
-          </div>
+          <div class="sr-text"><div class="sr-title">${highlightMatch(m.label, query)}</div><div class="sr-sub">${m.sub}</div></div>
           <span class="sr-type ${m.type}">${m.type}</span>
         </div>`;
       }).join('');
-
       results.classList.add('open');
-
       results.querySelectorAll('.sr-item').forEach(el => {
-        el.addEventListener('click', () => {
-          location.hash = el.dataset.href;
-          results.classList.remove('open');
-          document.getElementById('global-search').value = '';
-        });
+        el.addEventListener('click', () => { location.hash = el.dataset.href; results.classList.remove('open'); document.getElementById('global-search').value = ''; });
       });
     }
 
     function highlightMatch(text, query) {
-      const q = normalize(query);
-      const tNorm = normalize(text);
+      const q = normalize(query), tNorm = normalize(text);
       const idx = tNorm.indexOf(q);
-      if (idx >= 0) {
-        return text.slice(0, idx) + '<mark>' + text.slice(idx, idx + q.length) + '</mark>' + text.slice(idx + q.length);
-      }
-      // Fuzzy highlight
+      if (idx >= 0) return text.slice(0, idx) + '<mark>' + text.slice(idx, idx + q.length) + '</mark>' + text.slice(idx + q.length);
       let result = '', qi = 0;
       for (let i = 0; i < text.length; i++) {
-        if (qi < q.length && normalize(text[i]) === q[qi]) {
-          result += '<mark>' + text[i] + '</mark>';
-          qi++;
-        } else {
-          result += text[i];
-        }
+        if (qi < q.length && normalize(text[i]) === q[qi]) { result += '<mark>' + text[i] + '</mark>'; qi++; }
+        else result += text[i];
       }
       return result;
     }
