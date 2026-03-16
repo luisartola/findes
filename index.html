@@ -265,7 +265,11 @@
     .finde-info { flex: 1; min-width: 0; }
     .finde-date { font-weight: 600; font-size: .92rem; }
     .finde-lugar { font-size: .8rem; color: var(--tx-3); margin-top: .1rem; }
-    .finde-pelis { flex-shrink: 0; font-size: .78rem; color: var(--tx-3); }
+    .finde-card-link .card-content {
+      display: flex; align-items: center; gap: .85rem;
+      overflow: visible;
+    }
+    .finde-pelis { flex-shrink: 0; font-size: .78rem; color: var(--tx-3); white-space: nowrap; }
 
     /* ═══ Panels (person movie lists) ═══ */
     .panel {
@@ -1024,16 +1028,15 @@
           const yr = f.peli.year ? ` (${f.peli.year})` : '';
           return t + yr;
         }).join(', ');
-        const extra = stats.films.length > 3 ? `, +${stats.films.length - 3} más` : '';
+        const extra = stats.films.length > 3 ? `… y ${stats.films.length - 3} más` : '';
         html += `<a href="#director/${encodeURIComponent(name)}" class="finde-card-link" style="--i:${Math.min(i, 20)}">
           <div class="card mb-3">
             <div class="card-content" style="display:flex;align-items:center;gap:.85rem">
-              <div class="persona-avatar" style="background:var(--purple);background:oklch(from var(--purple) l c h / .15);color:var(--purple);font-size:1rem">🎥</div>
+              <div class="persona-avatar" style="background:var(--wine-bg);color:var(--purple);font-size:1rem">🎥</div>
               <div style="flex:1;min-width:0">
-                <div style="font-weight:600;font-size:.95rem">${name}</div>
+                <div style="font-weight:600;font-size:.95rem">${name} <span style="font-weight:400;font-size:.78rem;color:var(--tx-3)">· ${stats.films.length} peli${stats.films.length !== 1 ? 's' : ''}</span></div>
                 <div style="font-size:.78rem;color:var(--tx-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${topFilms}${extra}</div>
               </div>
-              <span class="finde-pelis">${stats.films.length} peli${stats.films.length !== 1 ? 's' : ''}</span>
             </div>
           </div>
         </a>`;
@@ -1075,7 +1078,7 @@
         ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#directores', label:'Directores'}, {href:'#', label: nombre}])}
 
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
-          <div class="persona-avatar" style="width:56px;height:56px;font-size:1.5rem;background:oklch(from var(--purple) l c h / .15);color:var(--purple)">🎥</div>
+          <div class="persona-avatar" style="width:56px;height:56px;font-size:1.5rem;background:var(--wine-bg);color:var(--purple)">🎥</div>
           <div>
             <h1 class="page-heading" style="margin-bottom:.1rem">${nombre}</h1>
             <div class="page-sub" style="margin-bottom:0">${films.length} película${films.length !== 1 ? 's' : ''} en el archivo</div>
