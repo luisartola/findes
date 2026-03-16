@@ -99,6 +99,7 @@
     }
     @media screen and (max-width: 1023px) {
       .navbar-menu { border-top: 1px solid var(--border); padding: .5rem 0; }
+      .navbar > .container { padding-left: 1rem; padding-right: 1rem; }
     }
 
     /* Search in navbar */
@@ -204,6 +205,8 @@
       font-variant-numeric: tabular-nums;
       transition: color .15s;
     }
+    .stats-level a:hover .stat-num { color: var(--wine-soft); }
+    .stats-level a:hover .stat-label { color: var(--wine); }
     .stats-level .stat-label {
       font-size: .78rem;
       color: var(--tx-3);
@@ -360,6 +363,7 @@
       box-shadow: 0 4px 20px rgba(0,0,0,.12);
       width: 100%;
       max-width: 240px;
+      margin-bottom: .5rem;
     }
     .peli-title {
       font-family: var(--ff-display);
@@ -470,9 +474,25 @@
 
     /* ═══ Responsive ═══ */
     @media screen and (max-width: 768px) {
+      /* Breathe — more horizontal padding on mobile */
+      .container { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
       .main-section { padding: 1.25rem 0 2rem; }
       .home-hero { padding: 1.75rem 0 1.5rem; }
       .columns.finde-panels { gap: .5rem; }
+      /* Cards: slightly more internal space */
+      .card .card-content { padding: 1rem; }
+      .panel-heading { padding: .7rem 1rem; }
+      .panel-block { padding: .6rem 1rem; }
+      /* Stats: tighter on tiny screens but still readable */
+      .stats-level { gap: .5rem; }
+      .stats-level .stat-num { font-size: 1.8rem; }
+      /* Poster column: center & breathe */
+      .peli-poster-img { max-width: 180px; }
+      /* Breadcrumb nudge */
+      .breadcrumb { margin-bottom: 1rem !important; }
+    }
+    @media screen and (max-width: 400px) {
+      .container { padding-left: 1rem !important; padding-right: 1rem !important; }
     }
 
     /* ═══ Filter input ═══ */
@@ -662,18 +682,18 @@
         </div>
 
         <nav class="level stats-level">
-          <div class="level-item has-text-centered">
+          <a href="#" class="level-item has-text-centered" style="text-decoration:none;color:inherit">
             <div><div class="stat-num">${DATA.length}</div><div class="stat-label">Findes</div></div>
-          </div>
-          <div class="level-item has-text-centered">
+          </a>
+          <a href="#peliculas" class="level-item has-text-centered" style="text-decoration:none;color:inherit">
             <div><div class="stat-num">${totalPelis}</div><div class="stat-label">Películas</div></div>
-          </div>
-          <div class="level-item has-text-centered">
+          </a>
+          <a href="#personas" class="level-item has-text-centered" style="text-decoration:none;color:inherit">
             <div><div class="stat-num">${allPeople.length}</div><div class="stat-label">Participantes</div></div>
-          </div>
-          <div class="level-item has-text-centered">
+          </a>
+          <a href="#lugares" class="level-item has-text-centered" style="text-decoration:none;color:inherit">
             <div><div class="stat-num">${allLugares.length}</div><div class="stat-label">Lugares</div></div>
-          </div>
+          </a>
         </nav>
 
         <div class="tabs is-medium">
