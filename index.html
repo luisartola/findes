@@ -495,6 +495,92 @@
       .container { padding-left: 1rem !important; padding-right: 1rem !important; }
     }
 
+    /* ═══ Decade Nav ═══ */
+    .decade-nav {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .decade-pill {
+      font-family: var(--ff-body);
+      font-size: .82rem;
+      font-weight: 600;
+      padding: .4rem .9rem;
+      border-radius: 2rem;
+      border: 1px solid var(--border);
+      background: var(--bg-raised);
+      color: var(--tx-2);
+      cursor: pointer;
+      transition: all .2s var(--ease-out-quart);
+      letter-spacing: .01em;
+    }
+    .decade-pill:hover {
+      border-color: var(--wine);
+      color: var(--wine);
+    }
+    .decade-pill.is-active {
+      background: var(--wine);
+      border-color: var(--wine);
+      color: #fff;
+    }
+    .decade-heading {
+      font-family: var(--ff-display);
+      font-size: 1.3rem;
+      color: var(--tx-2);
+      margin: 1.5rem 0 .75rem;
+      padding-bottom: .4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .decade-heading:first-child { margin-top: 0; }
+    .decade-count {
+      font-family: var(--ff-body);
+      font-size: .72rem;
+      font-weight: 500;
+      color: var(--tx-3);
+      margin-left: .4rem;
+    }
+
+    /* ═══ Alpha Nav (Películas) ═══ */
+    .alpha-nav {
+      display: flex;
+      gap: .3rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .alpha-pill {
+      font-family: var(--ff-body);
+      font-size: .75rem;
+      font-weight: 600;
+      padding: .3rem .55rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: var(--bg-raised);
+      color: var(--tx-2);
+      cursor: pointer;
+      transition: all .15s var(--ease-out-quart);
+      line-height: 1.2;
+    }
+    .alpha-pill:hover {
+      border-color: var(--wine);
+      color: var(--wine);
+    }
+    .alpha-pill.is-active {
+      background: var(--wine);
+      border-color: var(--wine);
+      color: #fff;
+    }
+    .alpha-heading {
+      font-family: var(--ff-display);
+      font-size: 1.2rem;
+      color: var(--wine);
+      margin: 1.25rem 0 .5rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 4.5rem;
+    }
+    .alpha-heading:first-child { margin-top: 0; }
+
     /* ═══ Filter input ═══ */
     .filter-input .input {
       background: var(--bg-raised);
@@ -506,6 +592,229 @@
     }
     .filter-input .input::placeholder { color: var(--tx-3); }
     .filter-input .input:focus { border-color: var(--wine); box-shadow: 0 0 0 2px var(--wine-bg); }
+
+    /* ═══ Quiz ═══ */
+    .quiz-arena {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 60vh;
+      padding: 1rem 0 2rem;
+    }
+    .quiz-progress {
+      font-size: .82rem;
+      color: var(--tx-3);
+      margin-bottom: .75rem;
+      font-weight: 500;
+    }
+    .quiz-progress-bar {
+      width: 100%;
+      max-width: 380px;
+      height: 4px;
+      background: var(--bg-inset);
+      border-radius: 2px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+    .quiz-progress-fill {
+      height: 100%;
+      background: var(--wine);
+      border-radius: 2px;
+      transition: width .35s var(--ease-out-quart);
+    }
+    .quiz-card-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      height: 420px;
+      perspective: 800px;
+    }
+    .quiz-card {
+      position: absolute;
+      inset: 0;
+      background: var(--bg-raised);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: grab;
+      user-select: none;
+      touch-action: pan-y;
+      transition: border-color .2s;
+      will-change: transform;
+      box-shadow: 0 4px 24px rgba(0,0,0,.08);
+    }
+    .quiz-card:active { cursor: grabbing; }
+    .quiz-card.swiping-right { border-color: var(--teal); }
+    .quiz-card.swiping-left { border-color: var(--wine); }
+    .quiz-card.exit-left {
+      transition: transform .4s var(--ease-out-expo), opacity .4s;
+      transform: translateX(-150%) rotate(-15deg);
+      opacity: 0;
+    }
+    .quiz-card.exit-right {
+      transition: transform .4s var(--ease-out-expo), opacity .4s;
+      transform: translateX(150%) rotate(15deg);
+      opacity: 0;
+    }
+    .quiz-card-poster {
+      width: 120px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,.1);
+      pointer-events: none;
+    }
+    .quiz-card-poster-ph {
+      width: 120px;
+      height: 180px;
+      background: var(--bg-inset);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    .quiz-card-question {
+      font-family: var(--ff-display);
+      font-size: 1.2rem;
+      line-height: 1.3;
+      color: var(--tx);
+      margin-bottom: .5rem;
+    }
+    .quiz-swipe-hint {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .72rem;
+      color: var(--tx-3);
+      pointer-events: none;
+    }
+    .quiz-overlay {
+      position: absolute;
+      top: 16px;
+      font-family: var(--ff-body);
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: .4rem 1rem;
+      border-radius: 6px;
+      opacity: 0;
+      transition: opacity .15s;
+      pointer-events: none;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .quiz-overlay.yes-label {
+      right: 16px;
+      color: var(--teal);
+      border: 2px solid var(--teal);
+      transform: rotate(12deg);
+    }
+    .quiz-overlay.no-label {
+      left: 16px;
+      color: var(--wine);
+      border: 2px solid var(--wine);
+      transform: rotate(-12deg);
+    }
+    .quiz-buttons {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .quiz-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      background: var(--bg-raised);
+      cursor: pointer;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s var(--ease-out-quart);
+    }
+    .quiz-btn:hover { transform: scale(1.1); }
+    .quiz-btn.btn-no { border-color: var(--wine); color: var(--wine); }
+    .quiz-btn.btn-no:hover { background: var(--wine-bg); }
+    .quiz-btn.btn-yes { border-color: var(--teal); color: var(--teal); }
+    .quiz-btn.btn-yes:hover { background: #e8f5ef; }
+    [data-theme="dark"] .quiz-btn.btn-yes:hover { background: #1a2e22; }
+
+    /* Quiz feedback */
+    .quiz-feedback {
+      position: absolute;
+      inset: 0;
+      background: var(--bg-raised);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity .3s;
+      pointer-events: none;
+    }
+    .quiz-feedback.visible { opacity: 1; pointer-events: auto; }
+    .quiz-feedback-icon { font-size: 3rem; margin-bottom: .75rem; }
+    .quiz-feedback-text {
+      font-family: var(--ff-display);
+      font-size: 1.1rem;
+      color: var(--tx);
+      margin-bottom: .5rem;
+    }
+    .quiz-feedback-explain {
+      font-size: .85rem;
+      color: var(--tx-2);
+      line-height: 1.5;
+      max-width: 300px;
+    }
+
+    /* Quiz results */
+    .quiz-results {
+      text-align: center;
+      max-width: 400px;
+    }
+    .quiz-score-ring {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 1.5rem;
+      position: relative;
+    }
+    .quiz-score-ring svg { transform: rotate(-90deg); }
+    .quiz-score-ring .ring-bg { stroke: var(--bg-inset); }
+    .quiz-score-ring .ring-fg {
+      stroke: var(--wine);
+      transition: stroke-dashoffset 1s var(--ease-out-expo);
+    }
+    .quiz-score-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .quiz-score-num {
+      font-family: var(--ff-display);
+      font-size: 2.4rem;
+      color: var(--wine);
+      line-height: 1;
+    }
+    .quiz-score-label {
+      font-size: .75rem;
+      color: var(--tx-3);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
 
     /* ═══ Scrollbar ═══ */
     ::-webkit-scrollbar { width: 6px; }
@@ -534,6 +843,8 @@
           <a class="navbar-item" href="#personas" data-page="personas">Personas</a>
           <a class="navbar-item" href="#peliculas" data-page="peliculas">Películas</a>
           <a class="navbar-item" href="#directores" data-page="directores">Directores</a>
+          <a class="navbar-item" href="#decadas" data-page="decadas">Décadas</a>
+          <a class="navbar-item" href="#quiz" data-page="quiz">Quiz</a>
         </div>
         <div class="navbar-end">
           <div class="navbar-item">
@@ -627,7 +938,7 @@
     function route() {
       const hash = location.hash.slice(1);
       const seg = hash.split('/')[0] || '';
-      const pageMap = { finde: '', persona: 'personas', pelicula: 'peliculas', lugar: 'lugares', director: 'directores' };
+      const pageMap = { finde: '', persona: 'personas', pelicula: 'peliculas', lugar: 'lugares', director: 'directores', decada: 'decadas', quiz: 'quiz' };
       const page = pageMap[seg] !== undefined ? pageMap[seg] : seg;
       document.querySelectorAll('#main-nav .navbar-item').forEach(a => {
         a.classList.toggle('is-active-page', a.dataset.page === page);
@@ -645,6 +956,9 @@
       else if (hash === 'personas') renderPersonas();
       else if (hash === 'peliculas') renderPeliculas();
       else if (hash === 'directores') renderDirectores();
+      else if (hash === 'decadas') renderDecadas();
+      else if (hash.startsWith('decada/')) renderDecada(parseInt(hash.split('/')[1]));
+      else if (hash === 'quiz') renderQuiz();
       else renderHome();
 
       window.scrollTo({ top: 0, behavior: 'instant' });
@@ -670,10 +984,17 @@
     }
 
     /* ── HOME ── */
+    function getDecade(f) {
+      const year = parseInt(f.fecha_sort);
+      return Math.floor(year / 10) * 10;
+    }
+
     function renderHome() {
       const totalPelis = DATA.reduce((sum, f) => sum + f.personas.reduce((s, p) => s + p.peliculas.length, 0), 0);
       const allPeople = [...new Set(DATA.flatMap(f => f.personas.map(p => p.nombre)))];
       const allLugares = [...new Set(DATA.flatMap(f => f.lugares))];
+
+      const decades = [...new Set(DATA.map(f => getDecade(f)))].sort();
 
       let html = `<section class="main-section"><div class="container">
         <div class="home-hero">
@@ -696,31 +1017,64 @@
           </a>
         </nav>
 
-        <div class="tabs is-medium">
-          <ul>
-            <li class="is-active"><a>Archivo</a></li>
-          </ul>
+        <div class="decade-nav" id="decade-nav">
+          <button class="decade-pill is-active" data-decade="all">Todos</button>
+          ${decades.map(d => {
+            const count = DATA.filter(f => getDecade(f) === d).length;
+            return `<button class="decade-pill" data-decade="${d}">${d}s <span class="decade-count">${count}</span></button>`;
+          }).join('')}
         </div>
 
-        <div class="stagger">
+        <div id="finde-archive">
       `;
-      for (const [i, f] of DATA.entries()) {
-        const npelis = f.personas.reduce((s, p) => s + p.peliculas.length, 0);
-        html += `<a href="#finde/${f.numero}" class="finde-card-link" style="--i:${i}">
-          <div class="card mb-3">
-            <div class="card-content">
-              <span class="finde-num">${f.numero}</span>
-              <div class="finde-info">
-                <div class="finde-date">${f.fecha || '—'}</div>
-                <div class="finde-lugar">${f.lugares.join(' · ')}</div>
+
+      for (const decade of decades) {
+        const decadeFindes = DATA.filter(f => getDecade(f) === decade);
+        const decadePelis = decadeFindes.reduce((s, f) => s + f.personas.reduce((sp, p) => sp + p.peliculas.length, 0), 0);
+        html += `<div class="decade-group" data-decade="${decade}">
+          <div class="decade-heading">${decade}s <span class="decade-count">${decadeFindes.length} findes · ${decadePelis} películas</span></div>
+          <div class="stagger">`;
+
+        for (const [i, f] of decadeFindes.entries()) {
+          const npelis = f.personas.reduce((s, p) => s + p.peliculas.length, 0);
+          html += `<a href="#finde/${f.numero}" class="finde-card-link" style="--i:${i}">
+            <div class="card mb-3">
+              <div class="card-content">
+                <span class="finde-num">${f.numero}</span>
+                <div class="finde-info">
+                  <div class="finde-date">${f.fecha || '—'}</div>
+                  <div class="finde-lugar">${f.lugares.join(' · ')}</div>
+                </div>
+                <span class="finde-pelis">${npelis} películas</span>
               </div>
-              <span class="finde-pelis">${npelis} películas</span>
             </div>
-          </div>
-        </a>`;
+          </a>`;
+        }
+        html += `</div></div>`;
       }
       html += `</div></div></section>`;
       document.getElementById('view').innerHTML = html;
+
+      document.querySelectorAll('#decade-nav .decade-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#decade-nav .decade-pill').forEach(b => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+          const decade = btn.dataset.decade;
+          document.querySelectorAll('#finde-archive .decade-group').forEach(g => {
+            if (decade === 'all' || g.dataset.decade === decade) {
+              g.style.display = '';
+              g.querySelectorAll('.stagger > *').forEach((el, i) => {
+                el.style.animation = 'none';
+                el.offsetHeight;
+                el.style.animation = '';
+                el.style.setProperty('--i', i);
+              });
+            } else {
+              g.style.display = 'none';
+            }
+          });
+        });
+      });
     }
 
     /* ── FINDE DETAIL ── */
@@ -828,6 +1182,11 @@
     }
 
     /* ── PELÍCULAS ── */
+    function filmSortKey(f) {
+      const p = f.slug ? PELI_CACHE[f.slug] : null;
+      return ((p && p.titulo_original) || f.titulo).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
     function renderPeliculas() {
       const allFilms = [];
       for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
@@ -835,33 +1194,52 @@
         const slug = typeof m === 'string' ? null : m.slug;
         allFilms.push({ titulo, slug, persona: p.nombre, finde: f.numero, fecha: f.fecha });
       }
-      allFilms.sort((a, b) => {
-        const pa = a.slug ? PELI_CACHE[a.slug] : null;
-        const pb = b.slug ? PELI_CACHE[b.slug] : null;
-        const ta = (pa && pa.titulo_original) || a.titulo;
-        const tb = (pb && pb.titulo_original) || b.titulo;
-        return ta.localeCompare(tb, 'es');
-      });
+      allFilms.sort((a, b) => filmSortKey(a).localeCompare(filmSortKey(b), 'es'));
+
+      // Build letter index
+      const letters = [];
+      const letterSet = new Set();
+      for (const f of allFilms) {
+        const ch = filmSortKey(f).charAt(0).toUpperCase();
+        const letter = /[A-Z]/.test(ch) ? ch : '#';
+        if (!letterSet.has(letter)) { letterSet.add(letter); letters.push(letter); }
+      }
 
       let html = `<section class="main-section"><div class="container">
         <h1 class="page-heading">Películas <span style="font-family:var(--ff-display);font-style:italic;font-size:.5em;color:var(--tx-3)">${allFilms.length}</span></h1>
 
-        <div class="field filter-input" style="max-width:360px;margin-bottom:1.5rem">
+        <div class="field filter-input" style="max-width:360px;margin-bottom:.75rem">
           <div class="control">
             <input class="input" type="search" id="search" placeholder="Filtrar por título...">
           </div>
         </div>
 
+        <div class="alpha-nav" id="alpha-nav">
+          <button class="alpha-pill is-active" data-letter="all">Todos</button>
+          ${letters.map(l => `<button class="alpha-pill" data-letter="${l}">${l}</button>`).join('')}
+        </div>
+
         <div id="films-list">
       `;
+      let currentLetter = '';
       for (const f of allFilms) {
+        const ch = filmSortKey(f).charAt(0).toUpperCase();
+        const letter = /[A-Z]/.test(ch) ? ch : '#';
+        if (letter !== currentLetter) {
+          currentLetter = letter;
+          const count = allFilms.filter(ff => {
+            const c = filmSortKey(ff).charAt(0).toUpperCase();
+            return (/[A-Z]/.test(c) ? c : '#') === letter;
+          }).length;
+          html += `<div class="alpha-heading" id="letter-${letter}" data-letter="${letter}">${letter} <span class="decade-count">${count}</span></div>`;
+        }
         const peli = f.slug ? PELI_CACHE[f.slug] : null;
         const posterHtml = peli && peli.poster
           ? `<img class="film-poster-sm" src="${peli.poster}" alt="" loading="lazy">`
           : `<div class="film-poster-ph">🎬</div>`;
         const display = f.slug ? peliDisplayTitle(f, f.slug) : f.titulo;
         const link = f.slug ? `<a href="#pelicula/${f.slug}">${display}</a>` : f.titulo;
-        html += `<div class="film-row">
+        html += `<div class="film-row" data-letter="${currentLetter}">
           ${posterHtml}
           <div class="film-row-body">
             <div class="film-row-title">${link}</div>
@@ -872,11 +1250,45 @@
       html += `</div></div></section>`;
       document.getElementById('view').innerHTML = html;
 
-      document.getElementById('search').addEventListener('input', function() {
+      // Text search
+      const searchInput = document.getElementById('search');
+      searchInput.addEventListener('input', function() {
         const q = this.value.toLowerCase();
-        for (const row of document.querySelectorAll('#films-list .film-row')) {
-          row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+        const isFiltering = q.length > 0;
+        // Reset letter filter when typing
+        if (isFiltering) {
+          document.querySelectorAll('#alpha-nav .alpha-pill').forEach(b => b.classList.remove('is-active'));
+          document.querySelector('#alpha-nav .alpha-pill[data-letter="all"]').classList.add('is-active');
         }
+        for (const heading of document.querySelectorAll('#films-list .alpha-heading')) {
+          heading.style.display = isFiltering ? 'none' : '';
+        }
+        for (const row of document.querySelectorAll('#films-list .film-row')) {
+          row.style.display = !isFiltering || row.textContent.toLowerCase().includes(q) ? '' : 'none';
+        }
+      });
+
+      // Alphabetical filter
+      document.querySelectorAll('#alpha-nav .alpha-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Clear text search
+          searchInput.value = '';
+          document.querySelectorAll('#alpha-nav .alpha-pill').forEach(b => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+          const letter = btn.dataset.letter;
+          const showAll = letter === 'all';
+          for (const heading of document.querySelectorAll('#films-list .alpha-heading')) {
+            heading.style.display = showAll || heading.dataset.letter === letter ? '' : 'none';
+          }
+          for (const row of document.querySelectorAll('#films-list .film-row')) {
+            row.style.display = showAll || row.dataset.letter === letter ? '' : 'none';
+          }
+          // Scroll to letter heading
+          if (!showAll) {
+            const target = document.getElementById('letter-' + letter);
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
       });
     }
 
@@ -1326,6 +1738,395 @@
 
       html += `</div></section>`;
       document.getElementById('view').innerHTML = html;
+    }
+
+    /* ── DÉCADAS (de películas) ── */
+    function getMovieDecades() {
+      const decades = {};
+      for (const [slug, peli] of Object.entries(PELI_CACHE)) {
+        if (!peli || !peli.year) continue;
+        const yr = parseInt(peli.year);
+        if (isNaN(yr)) continue;
+        const dec = Math.floor(yr / 10) * 10;
+        if (!decades[dec]) decades[dec] = [];
+        decades[dec].push({ slug, peli });
+      }
+      return decades;
+    }
+
+    function renderDecadas() {
+      const decades = getMovieDecades();
+      const sorted = Object.keys(decades).map(Number).sort();
+
+      let html = `<section class="main-section"><div class="container">
+        <h1 class="page-heading">Décadas</h1>
+        <div class="page-sub">Películas del archivo agrupadas por la década en que fueron realizadas</div>
+
+        <div class="columns is-multiline stagger">
+      `;
+      for (const [i, dec] of sorted.entries()) {
+        const films = decades[dec];
+        const topFilms = films
+          .sort((a, b) => (b.peli.tmdb_rating || 0) - (a.peli.tmdb_rating || 0))
+          .slice(0, 4);
+        const posters = topFilms.filter(f => f.peli.poster).slice(0, 4);
+
+        html += `<div class="column is-half-tablet is-one-third-desktop" style="--i:${i}">
+          <a href="#decada/${dec}" style="text-decoration:none;color:inherit">
+            <div class="card">
+              <div class="card-content" style="padding:1.15rem">
+                <div style="display:flex;gap:4px;margin-bottom:.75rem;height:80px;overflow:hidden;border-radius:4px">
+                  ${posters.length ? posters.map(f =>
+                    `<img src="${f.peli.poster}" alt="" loading="lazy" style="height:80px;width:54px;object-fit:cover;border-radius:3px;flex-shrink:0">`
+                  ).join('') : `<div style="height:80px;width:100%;background:var(--bg-inset);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:1.5rem">🎬</div>`}
+                </div>
+                <div style="font-family:var(--ff-display);font-size:1.6rem;color:var(--wine);line-height:1">${dec}s</div>
+                <div style="font-size:.8rem;color:var(--tx-3);margin-top:.25rem">${films.length} película${films.length !== 1 ? 's' : ''}</div>
+              </div>
+            </div>
+          </a>
+        </div>`;
+      }
+      html += `</div></div></section>`;
+      document.getElementById('view').innerHTML = html;
+    }
+
+    function renderDecada(dec) {
+      const decades = getMovieDecades();
+      const films = decades[dec];
+      if (!films) { renderDecadas(); return; }
+
+      // Sort by year then title
+      films.sort((a, b) => {
+        const ya = parseInt(a.peli.year) || 0, yb = parseInt(b.peli.year) || 0;
+        if (ya !== yb) return ya - yb;
+        const ta = a.peli.titulo_original || a.peli.titulo;
+        const tb = b.peli.titulo_original || b.peli.titulo;
+        return ta.localeCompare(tb, 'es');
+      });
+
+      // Find who brought each film and in which finde
+      function findAppearances(slug) {
+        const apps = [];
+        for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
+          if (typeof m !== 'string' && m.slug === slug) apps.push({ persona: p.nombre, finde: f });
+        }
+        return apps;
+      }
+
+      // Group by year within the decade
+      const years = {};
+      for (const f of films) {
+        const y = f.peli.year;
+        if (!years[y]) years[y] = [];
+        years[y].push(f);
+      }
+
+      let html = `<section class="main-section"><div class="container">
+        ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#decadas', label:'Décadas'}, {href:'#', label: dec + 's'}])}
+
+        <h1 class="page-heading">${dec}s</h1>
+        <div class="page-sub">${films.length} película${films.length !== 1 ? 's' : ''} realizadas entre ${dec} y ${dec + 9}</div>
+
+        <div id="decada-list">
+      `;
+
+      for (const year of Object.keys(years).sort()) {
+        const yearFilms = years[year];
+        html += `<div class="alpha-heading">${year} <span class="decade-count">${yearFilms.length}</span></div>`;
+
+        for (const { slug, peli } of yearFilms) {
+          const orig = peli.titulo_original || peli.titulo;
+          const es = peli.titulo_es || peli.titulo;
+          const titleDisplay = orig.toLowerCase() === es.toLowerCase()
+            ? orig : `${orig} <span class="peli-es">(${es})</span>`;
+          const posterHtml = peli.poster
+            ? `<img class="film-poster-sm" src="${peli.poster}" alt="" loading="lazy">`
+            : `<div class="film-poster-ph">🎬</div>`;
+          const apps = findAppearances(slug);
+          const subParts = [];
+          if (peli.director) subParts.push(peli.director);
+          if (apps.length) subParts.push(apps.map(a =>
+            `<a href="#persona/${encodeURIComponent(a.persona)}" style="color:var(--tx-3)">${a.persona}</a> · <a href="#finde/${a.finde.numero}" style="color:var(--tx-3)">#${a.finde.numero}</a>`
+          ).join(' / '));
+
+          html += `<div class="film-row">
+            ${posterHtml}
+            <div class="film-row-body">
+              <div class="film-row-title"><a href="#pelicula/${slug}">${titleDisplay}</a></div>
+              <div class="film-row-sub">${subParts.join(' — ')}</div>
+            </div>
+          </div>`;
+        }
+      }
+
+      html += `</div></div></section>`;
+      document.getElementById('view').innerHTML = html;
+    }
+
+    /* ── QUIZ ── */
+    let QUIZ_DATA = null;
+
+    async function loadQuiz() {
+      if (QUIZ_DATA) return QUIZ_DATA;
+      try {
+        const res = await fetch('quiz.json');
+        if (res.ok) QUIZ_DATA = await res.json();
+      } catch(e) {}
+      return QUIZ_DATA || [];
+    }
+
+    async function renderQuiz() {
+      const questions = await loadQuiz();
+      if (!questions.length) {
+        document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
+          <h1 class="page-heading">Quiz</h1>
+          <p style="color:var(--tx-2)">No se pudieron cargar las preguntas.</p>
+        </div></section>`;
+        return;
+      }
+
+      // Shuffle questions
+      const shuffled = [...questions].sort(() => Math.random() - 0.5);
+      let current = 0;
+      let score = 0;
+      let answered = false;
+
+      function renderShell() {
+        document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
+          <h1 class="page-heading" style="text-align:center">Quiz 🎬</h1>
+          <div class="quiz-arena">
+            <div class="quiz-progress">
+              <span id="quiz-counter">1 / ${shuffled.length}</span>
+            </div>
+            <div class="quiz-progress-bar">
+              <div class="quiz-progress-fill" id="quiz-bar" style="width:0%"></div>
+            </div>
+            <div class="quiz-card-wrapper" id="quiz-card-wrapper"></div>
+            <div class="quiz-buttons">
+              <button class="quiz-btn btn-no" id="btn-no" title="No">✗</button>
+              <button class="quiz-btn btn-yes" id="btn-yes" title="Sí">✓</button>
+            </div>
+            <div style="margin-top:1rem">
+              <div class="quiz-swipe-hint">← NO &nbsp;·&nbsp; SÍ →</div>
+            </div>
+          </div>
+        </div></section>`;
+      }
+
+      function showCard() {
+        answered = false;
+        const q = shuffled[current];
+        const peli = q.pelicula_slug ? PELI_CACHE[q.pelicula_slug] : null;
+        const wrapper = document.getElementById('quiz-card-wrapper');
+        document.getElementById('quiz-counter').textContent = `${current + 1} / ${shuffled.length}`;
+        document.getElementById('quiz-bar').style.width = `${(current / shuffled.length) * 100}%`;
+
+        const posterHtml = peli && peli.poster
+          ? `<img class="quiz-card-poster" src="${peli.poster}" alt="" draggable="false">`
+          : `<div class="quiz-card-poster-ph">🎬</div>`;
+
+        wrapper.innerHTML = `
+          <div class="quiz-card" id="quiz-active-card">
+            <div class="quiz-overlay yes-label" id="overlay-yes">SÍ</div>
+            <div class="quiz-overlay no-label" id="overlay-no">NO</div>
+            ${posterHtml}
+            <div class="quiz-card-question">${q.pregunta}</div>
+          </div>
+          <div class="quiz-feedback" id="quiz-feedback">
+            <div class="quiz-feedback-icon" id="fb-icon"></div>
+            <div class="quiz-feedback-text" id="fb-text"></div>
+            <div class="quiz-feedback-explain" id="fb-explain"></div>
+          </div>
+        `;
+
+        setupSwipe(document.getElementById('quiz-active-card'));
+      }
+
+      function answer(userSaidYes) {
+        if (answered) return;
+        answered = true;
+        const q = shuffled[current];
+        const correct = (userSaidYes === q.respuesta);
+        if (correct) score++;
+
+        const card = document.getElementById('quiz-active-card');
+        card.classList.add(userSaidYes ? 'exit-right' : 'exit-left');
+
+        // Show feedback after card exits
+        setTimeout(() => {
+          const fb = document.getElementById('quiz-feedback');
+          document.getElementById('fb-icon').textContent = correct ? '✅' : '❌';
+          document.getElementById('fb-text').textContent = correct ? '¡Correcto!' : 'Incorrecto';
+          document.getElementById('fb-explain').textContent = q.explicacion;
+          fb.classList.add('visible');
+
+          // Auto-advance
+          setTimeout(() => {
+            current++;
+            if (current < shuffled.length) {
+              showCard();
+            } else {
+              showResults();
+            }
+          }, 2000);
+        }, 350);
+      }
+
+      function showResults() {
+        const pct = Math.round((score / shuffled.length) * 100);
+        const circ = 2 * Math.PI * 58;
+        const offset = circ - (pct / 100) * circ;
+
+        let emoji, msg;
+        if (pct === 100) { emoji = '🏆'; msg = '¡Perfecto! Eres un auténtico cinéfilo precrítico.'; }
+        else if (pct >= 75) { emoji = '🎬'; msg = '¡Muy bien! Dominas el archivo.'; }
+        else if (pct >= 50) { emoji = '🍿'; msg = 'No está mal, pero hay margen de mejora.'; }
+        else { emoji = '📽️'; msg = 'Necesitas más findes precríticos...'; }
+
+        const wrapper = document.getElementById('quiz-card-wrapper');
+        wrapper.style.height = 'auto';
+        wrapper.innerHTML = `
+          <div class="quiz-results">
+            <div style="font-size:3rem;margin-bottom:.5rem">${emoji}</div>
+            <div class="quiz-score-ring">
+              <svg width="140" height="140" viewBox="0 0 140 140">
+                <circle class="ring-bg" cx="70" cy="70" r="58" fill="none" stroke-width="8" />
+                <circle class="ring-fg" cx="70" cy="70" r="58" fill="none" stroke-width="8"
+                  stroke-linecap="round"
+                  stroke-dasharray="${circ}"
+                  stroke-dashoffset="${circ}" />
+              </svg>
+              <div class="quiz-score-text">
+                <div class="quiz-score-num">${score}/${shuffled.length}</div>
+                <div class="quiz-score-label">aciertos</div>
+              </div>
+            </div>
+            <div style="font-family:var(--ff-display);font-size:1.1rem;color:var(--tx);margin-bottom:.5rem">${msg}</div>
+            <div style="display:flex;gap:.75rem;justify-content:center;margin-top:1rem">
+              <button class="quiz-btn btn-yes" id="quiz-retry" title="Reintentar" style="width:auto;border-radius:8px;padding:.6rem 1.2rem;font-size:.88rem;font-weight:600;font-family:var(--ff-body)">
+                🔄 Reintentar
+              </button>
+              <a href="#" class="quiz-btn btn-no" style="width:auto;border-radius:8px;padding:.6rem 1.2rem;font-size:.88rem;font-weight:600;font-family:var(--ff-body);text-decoration:none;display:flex;align-items:center">
+                🏠 Inicio
+              </a>
+            </div>
+          </div>
+        `;
+
+        document.getElementById('quiz-bar').style.width = '100%';
+        document.getElementById('quiz-counter').textContent = `${shuffled.length} / ${shuffled.length}`;
+
+        // Animate ring
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            document.querySelector('.ring-fg').style.strokeDashoffset = offset;
+          });
+        });
+
+        document.getElementById('quiz-retry').addEventListener('click', () => {
+          renderQuiz();
+        });
+      }
+
+      // Swipe engine
+      function setupSwipe(card) {
+        let startX = 0, startY = 0, deltaX = 0, isDragging = false, startTime = 0;
+        const THRESHOLD = 80;
+        const overlayYes = document.getElementById('overlay-yes');
+        const overlayNo = document.getElementById('overlay-no');
+
+        function onStart(e) {
+          if (answered) return;
+          isDragging = true;
+          startTime = Date.now();
+          const point = e.touches ? e.touches[0] : e;
+          startX = point.clientX;
+          startY = point.clientY;
+          card.style.transition = 'none';
+        }
+
+        function onMove(e) {
+          if (!isDragging || answered) return;
+          const point = e.touches ? e.touches[0] : e;
+          deltaX = point.clientX - startX;
+          const deltaY = point.clientY - startY;
+
+          // If vertical movement is dominant, don't hijack scroll
+          if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaX) < 10) return;
+          if (Math.abs(deltaX) > 10) e.preventDefault();
+
+          const rotation = deltaX * 0.08;
+          card.style.transform = `translateX(${deltaX}px) rotate(${rotation}deg)`;
+
+          const progress = Math.min(Math.abs(deltaX) / THRESHOLD, 1);
+          if (deltaX > 0) {
+            overlayYes.style.opacity = progress;
+            overlayNo.style.opacity = 0;
+            card.classList.add('swiping-right');
+            card.classList.remove('swiping-left');
+          } else if (deltaX < 0) {
+            overlayNo.style.opacity = progress;
+            overlayYes.style.opacity = 0;
+            card.classList.add('swiping-left');
+            card.classList.remove('swiping-right');
+          } else {
+            overlayYes.style.opacity = 0;
+            overlayNo.style.opacity = 0;
+          }
+        }
+
+        function onEnd() {
+          if (!isDragging || answered) return;
+          isDragging = false;
+
+          // Velocity-based: allow fast flicks with shorter distance
+          const elapsed = Date.now() - startTime;
+          const velocity = Math.abs(deltaX) / elapsed;
+          const isFlick = velocity > 0.5 && Math.abs(deltaX) > 30;
+
+          if (Math.abs(deltaX) >= THRESHOLD || isFlick) {
+            answer(deltaX > 0);
+          } else {
+            // Snap back
+            card.style.transition = 'transform .3s var(--ease-out-quart)';
+            card.style.transform = '';
+            overlayYes.style.opacity = 0;
+            overlayNo.style.opacity = 0;
+            card.classList.remove('swiping-right', 'swiping-left');
+          }
+          deltaX = 0;
+        }
+
+        // Touch events
+        card.addEventListener('touchstart', onStart, { passive: true });
+        card.addEventListener('touchmove', onMove, { passive: false });
+        card.addEventListener('touchend', onEnd);
+
+        // Mouse events
+        card.addEventListener('mousedown', onStart);
+        window.addEventListener('mousemove', onMove);
+        window.addEventListener('mouseup', onEnd);
+      }
+
+      // Init
+      renderShell();
+      showCard();
+
+      // Button handlers
+      document.getElementById('btn-no').addEventListener('click', () => answer(false));
+      document.getElementById('btn-yes').addEventListener('click', () => answer(true));
+
+      // Keyboard support
+      const keyHandler = (e) => {
+        if (location.hash !== '#quiz') {
+          document.removeEventListener('keydown', keyHandler);
+          return;
+        }
+        if (e.key === 'ArrowLeft') answer(false);
+        else if (e.key === 'ArrowRight') answer(true);
+      };
+      document.addEventListener('keydown', keyHandler);
     }
 
     /* ── Fuzzy Search Engine ── */

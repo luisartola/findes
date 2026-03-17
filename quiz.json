@@ -1,0 +1,74 @@
+[
+  {
+    "pregunta": "¿Dirigió Stanley Kubrick 'Barry Lyndon'?",
+    "respuesta": true,
+    "explicacion": "Barry Lyndon (1975) es una de las obras maestras de Kubrick, famosa por sus escenas rodadas con luz de velas.",
+    "pelicula_slug": "barry-lyndon"
+  },
+  {
+    "pregunta": "¿Es 'Pulp Fiction' una película de los años 80?",
+    "respuesta": false,
+    "explicacion": "Pulp Fiction se estrenó en 1994, dirigida por Quentin Tarantino.",
+    "pelicula_slug": "pulp-fiction"
+  },
+  {
+    "pregunta": "¿Pertenece '8½' al género de comedia?",
+    "respuesta": false,
+    "explicacion": "8½ (1963) de Federico Fellini es un drama, aunque tiene toques surrealistas.",
+    "pelicula_slug": "8-1-2"
+  },
+  {
+    "pregunta": "¿Dirigió Alfred Hitchcock 'Notorious'?",
+    "respuesta": true,
+    "explicacion": "Notorious (1946) es un clásico del suspense de Hitchcock con Cary Grant e Ingrid Bergman.",
+    "pelicula_slug": "notorious"
+  },
+  {
+    "pregunta": "¿Es 'Rumble Fish' una película de Francis Ford Coppola?",
+    "respuesta": true,
+    "explicacion": "Rumble Fish (1983) fue dirigida por Coppola, con Matt Dillon y Mickey Rourke.",
+    "pelicula_slug": "rumble-fish"
+  },
+  {
+    "pregunta": "¿Se estrenó 'Wild at Heart' antes de 1985?",
+    "respuesta": false,
+    "explicacion": "Wild at Heart de David Lynch se estrenó en 1990 y ganó la Palma de Oro en Cannes.",
+    "pelicula_slug": "wild-at-heart"
+  },
+  {
+    "pregunta": "¿Es 'The Conversation' una película de ciencia ficción?",
+    "respuesta": false,
+    "explicacion": "The Conversation (1974) de Coppola es un thriller de vigilancia y paranoia, no ciencia ficción.",
+    "pelicula_slug": "the-conversation"
+  },
+  {
+    "pregunta": "¿Fue 'Lifeboat' dirigida por Alfred Hitchcock?",
+    "respuesta": true,
+    "explicacion": "Lifeboat (1944) transcurre íntegramente en un bote salvavidas durante la Segunda Guerra Mundial.",
+    "pelicula_slug": "lifeboat"
+  },
+  {
+    "pregunta": "¿Es 'A Nightmare on Elm Street' una película de los 90?",
+    "respuesta": false,
+    "explicacion": "A Nightmare on Elm Street fue dirigida por Wes Craven en 1984.",
+    "pelicula_slug": "a-nightmare-on-elm-street"
+  },
+  {
+    "pregunta": "¿Pertenece 'Barbarian' al género de terror?",
+    "respuesta": true,
+    "explicacion": "Barbarian (2022) de Zach Cregger es una película de terror y suspense.",
+    "pelicula_slug": "barbarian"
+  },
+  {
+    "pregunta": "¿Se rodó 'Gangs of New York' en el siglo XX?",
+    "respuesta": false,
+    "explicacion": "Gangs of New York de Martin Scorsese se estrenó en 2002, ya en el siglo XXI.",
+    "pelicula_slug": "gangs-of-new-york"
+  },
+  {
+    "pregunta": "¿Es 'Being There' una comedia?",
+    "respuesta": true,
+    "explicacion": "Being There (1979) de Hal Ashby es una comedia dramática protagonizada por Peter Sellers.",
+    "pelicula_slug": "being-there"
+  }
+]
