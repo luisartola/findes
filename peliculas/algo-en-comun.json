@@ -1,12 +1,12 @@
 {
   "titulo": "Algo en común",
   "slug": "algo-en-comun",
-  "imdb_id": null,
-  "year": "2013",
-  "director": "Zim Li",
+  "imdb_id": "tt0333766",
+  "year": "2004",
+  "director": "Zach Braff",
   "plot": null,
   "poster": null,
-  "genre": "Drama",
+  "genre": null,
   "imdb_rating": null,
   "runtime": null,
   "traida_por": [
@@ -15,8 +15,8 @@
   "findes": [
     3
   ],
-  "tmdb_id": 937970,
-  "titulo_es": "Algo en Común",
-  "titulo_original": "Algo en Común",
+  "tmdb_id": null,
+  "titulo_es": "Algo en común",
+  "titulo_original": "Garden State",
   "tmdb_rating": null
 }

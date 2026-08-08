@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
   <title>Findes Precríticos</title>
+  <meta name="theme-color" content="#faf8f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#13110f" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%238b2635'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' fill='%23faf8f3' font-family='Georgia,serif'%3EF%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="preconnect" href="https://image.tmdb.org" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -145,6 +149,7 @@
     .sr-type.lugar { background: var(--blue); }
     .sr-type.finde { background: var(--tx-3); }
     .sr-type.director { background: var(--purple); }
+    .sr-type.genero { background: var(--gold); }
 
     /* Theme toggle */
     .theme-toggle {
@@ -154,6 +159,17 @@
       line-height: 1; display: flex; align-items: center;
     }
     .theme-toggle:hover { color: var(--wine); background: var(--bg-inset); }
+    .nav-actions { display: flex; gap: .25rem; }
+    .action-label { display: none; }
+    @media screen and (max-width: 1023px) {
+      /* En el menú desplegable los iconos solos no se entienden: añade texto. */
+      .nav-actions { gap: 1.25rem; padding-top: .25rem; }
+      .theme-toggle { gap: .5rem; font-size: 1rem; }
+      .action-label {
+        display: inline; font-size: .88rem; font-weight: 500;
+        color: var(--tx-2); font-family: var(--ff-body);
+      }
+    }
     [data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
     [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
     [data-theme="light"] .theme-toggle .icon-sun { display: none; }
@@ -778,6 +794,79 @@
       max-width: 300px;
     }
 
+    /* ═══ Quiz Precríticos (opción múltiple) ═══ */
+    .quiz-modes { display: flex; justify-content: center; margin-bottom: 1.5rem; }
+    .quizp {
+      max-width: 560px; margin: 0 auto; width: 100%;
+    }
+    .quizp-card {
+      background: var(--bg-raised); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.5rem;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      animation: fadeUp .35s var(--ease-out-quart) both;
+    }
+    .quizp-kind {
+      font-size: .68rem; text-transform: uppercase; letter-spacing: .09em;
+      color: var(--tx-3); font-weight: 600; margin-bottom: .6rem;
+    }
+    .quizp-poster {
+      width: 130px; aspect-ratio: 2/3; object-fit: cover;
+      border-radius: 8px; margin-bottom: 1rem;
+      box-shadow: 0 4px 18px rgba(0,0,0,.16);
+    }
+    .quizp-question {
+      font-family: var(--ff-display); font-size: 1.3rem; line-height: 1.25;
+      color: var(--tx); margin-bottom: 1.15rem;
+    }
+    .quizp-options { display: flex; flex-direction: column; gap: .5rem; width: 100%; }
+    .quizp-option {
+      font-family: var(--ff-body); font-size: .9rem; font-weight: 500;
+      text-align: left; padding: .7rem .9rem;
+      border: 1px solid var(--border); border-radius: 8px;
+      background: var(--bg); color: var(--tx);
+      cursor: pointer; transition: all .15s var(--ease-out-quart);
+      display: flex; align-items: center; gap: .6rem; line-height: 1.35;
+    }
+    .quizp-option:hover:not(:disabled) { border-color: var(--wine); color: var(--wine); }
+    .quizp-option:disabled { cursor: default; }
+    .quizp-option .letra {
+      flex-shrink: 0; width: 1.4rem; height: 1.4rem; border-radius: 50%;
+      background: var(--bg-inset); color: var(--tx-3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .7rem; font-weight: 700;
+    }
+    .quizp-option.is-correct {
+      border-color: var(--teal); background: var(--teal); color: #fff;
+    }
+    .quizp-option.is-correct .letra { background: rgba(255,255,255,.25); color: #fff; }
+    .quizp-option.is-wrong {
+      border-color: var(--wine); background: var(--wine); color: #fff;
+    }
+    .quizp-option.is-wrong .letra { background: rgba(255,255,255,.25); color: #fff; }
+    .quizp-option.is-dim { opacity: .45; }
+    .quizp-feedback {
+      margin-top: 1rem; width: 100%; text-align: left;
+      background: var(--bg-inset); border-radius: 8px; padding: .8rem .9rem;
+      font-size: .85rem; color: var(--tx-2); line-height: 1.55;
+      animation: fadeUp .3s var(--ease-out-quart) both;
+    }
+    .quizp-feedback a { font-weight: 600; }
+    .quizp-next {
+      margin-top: 1rem; width: 100%;
+      font-family: var(--ff-body); font-size: .9rem; font-weight: 600;
+      padding: .7rem 1rem; border-radius: 8px;
+      border: 1px solid var(--wine); background: var(--wine); color: #fff;
+      cursor: pointer; transition: opacity .15s;
+    }
+    .quizp-next:hover { opacity: .88; }
+    .quizp-review { text-align: left; margin-top: 1.75rem; }
+    .quizp-review-item {
+      border-left: 3px solid var(--wine); padding: .1rem 0 .1rem .8rem;
+      margin-bottom: .9rem; font-size: .85rem;
+    }
+    .quizp-review-q { color: var(--tx-2); }
+    .quizp-review-a { color: var(--tx); font-weight: 600; margin-top: .15rem; }
+
     /* Quiz results */
     .quiz-results {
       text-align: center;
@@ -816,6 +905,236 @@
       letter-spacing: .05em;
     }
 
+    /* ═══ Loading ═══ */
+    .loading-state {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 55vh; gap: .9rem;
+    }
+    .loading-reel { font-size: 2.5rem; animation: spin 2.4s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading-text {
+      font-family: var(--ff-display); font-style: italic;
+      font-size: 1.1rem; color: var(--tx-3);
+    }
+    @media (prefers-reduced-motion: reduce) { .loading-reel { animation: none; } }
+
+    /* ═══ Empty / not found ═══ */
+    .empty-state {
+      text-align: center; padding: 3rem 1rem; color: var(--tx-3);
+    }
+    .empty-state .empty-icon { font-size: 2.5rem; margin-bottom: .5rem; }
+    .empty-state .empty-title {
+      font-family: var(--ff-display); font-size: 1.4rem; color: var(--tx-2); margin-bottom: .35rem;
+    }
+
+    /* ═══ Toolbar (filtros + orden + vista) ═══ */
+    .toolbar {
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: .6rem; margin-bottom: 1rem;
+    }
+    .toolbar .filter-input { margin: 0; flex: 1 1 220px; max-width: 340px; }
+    .toolbar-spacer { flex: 1 1 auto; }
+    .segmented {
+      display: inline-flex; border: 1px solid var(--border);
+      border-radius: 6px; overflow: hidden; background: var(--bg-raised);
+    }
+    .segmented button {
+      font-family: var(--ff-body); font-size: .78rem; font-weight: 600;
+      padding: .38rem .7rem; border: none; background: transparent;
+      color: var(--tx-2); cursor: pointer; transition: all .15s var(--ease-out-quart);
+      border-right: 1px solid var(--border); line-height: 1.3;
+    }
+    .segmented button:last-child { border-right: none; }
+    .segmented button:hover { color: var(--wine); }
+    .segmented button.is-active { background: var(--wine); color: #fff; }
+    .select-wrap select {
+      font-family: var(--ff-body); font-size: .78rem; font-weight: 600;
+      padding: .38rem 1.8rem .38rem .7rem;
+      border: 1px solid var(--border); border-radius: 6px;
+      background: var(--bg-raised); color: var(--tx-2); cursor: pointer;
+      appearance: none; line-height: 1.3;
+      background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+      background-position: calc(100% - 15px) 55%, calc(100% - 10px) 55%;
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat;
+    }
+    .select-wrap select:hover { border-color: var(--wine); color: var(--wine); }
+    .select-wrap select:focus { outline: none; border-color: var(--wine); box-shadow: 0 0 0 2px var(--wine-bg); }
+    .result-count { font-size: .78rem; color: var(--tx-3); white-space: nowrap; }
+
+    /* ═══ Poster grid ═══ */
+    .poster-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 1rem .85rem;
+    }
+    @media screen and (max-width: 480px) {
+      .poster-grid { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: .85rem .6rem; }
+    }
+    .poster-tile { text-decoration: none; color: inherit; display: block; }
+    .poster-tile-img {
+      position: relative; width: 100%; aspect-ratio: 2 / 3;
+      border-radius: 6px; overflow: hidden; background: var(--bg-inset);
+      border: 1px solid var(--border);
+      transition: transform .2s var(--ease-out-quart), border-color .2s, box-shadow .2s;
+    }
+    .poster-tile-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .poster-tile-img .ph {
+      width: 100%; height: 100%; display: flex; align-items: center;
+      justify-content: center; font-size: 1.5rem;
+    }
+    .poster-tile:hover .poster-tile-img {
+      transform: translateY(-3px); border-color: var(--wine);
+      box-shadow: 0 8px 22px rgba(0,0,0,.14);
+    }
+    .poster-tile-cap {
+      font-size: .76rem; font-weight: 600; margin-top: .4rem; line-height: 1.25;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .poster-tile:hover .poster-tile-cap { color: var(--wine); }
+    .poster-tile-sub { font-size: .7rem; color: var(--tx-3); margin-top: .1rem; }
+    .poster-badge {
+      position: absolute; top: 5px; right: 5px;
+      background: rgba(0,0,0,.72); color: var(--gold);
+      font-size: .66rem; font-weight: 700;
+      padding: .12rem .32rem; border-radius: 3px;
+      backdrop-filter: blur(3px);
+    }
+
+    /* ═══ Estadísticas ═══ */
+    .stat-cards {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: .75rem; margin-bottom: 2.25rem;
+    }
+    .stat-card {
+      background: var(--bg-raised); border: 1px solid var(--border);
+      border-radius: 8px; padding: 1rem;
+    }
+    .stat-card .k {
+      font-family: var(--ff-display); font-size: 2rem; line-height: 1;
+      color: var(--wine); font-variant-numeric: tabular-nums;
+    }
+    .stat-card .l {
+      font-size: .72rem; color: var(--tx-3); text-transform: uppercase;
+      letter-spacing: .07em; font-weight: 500; margin-top: .35rem;
+    }
+    .section-title {
+      font-family: var(--ff-display); font-size: 1.35rem;
+      margin: 2.25rem 0 .35rem; color: var(--tx);
+    }
+    .section-note { font-size: .8rem; color: var(--tx-3); margin-bottom: 1rem; }
+
+    .bars { display: flex; flex-direction: column; gap: .4rem; }
+    .bar-row {
+      display: grid; grid-template-columns: 5.5rem 1fr 3.2rem;
+      align-items: center; gap: .6rem; font-size: .8rem;
+    }
+    .bar-row .bar-label {
+      color: var(--tx-2); text-align: right; white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis;
+    }
+    .bar-row a.bar-label { text-decoration: none; }
+    .bar-row a.bar-label:hover { color: var(--wine); }
+    .bar-track { display: block; background: var(--bg-inset); border-radius: 3px; height: 16px; overflow: hidden; }
+    .bar-fill {
+      display: block; height: 100%; min-width: 3px;
+      background: var(--wine); border-radius: 3px;
+      transform-origin: left; animation: growBar .7s var(--ease-out-expo) both;
+      animation-delay: calc(var(--i, 0) * 35ms);
+    }
+    .bar-fill.alt { background: var(--blue); }
+    .bar-fill.alt2 { background: var(--teal); }
+    @keyframes growBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @media (prefers-reduced-motion: reduce) { .bar-fill { animation: none; } }
+    .bar-value { font-size: .75rem; color: var(--tx-3); font-variant-numeric: tabular-nums; }
+    @media screen and (max-width: 560px) {
+      .bar-row { grid-template-columns: 4.5rem 1fr 2.6rem; gap: .45rem; font-size: .75rem; }
+    }
+
+    .record-list { display: flex; flex-direction: column; gap: .5rem; }
+    .record {
+      display: flex; align-items: center; gap: .8rem;
+      background: var(--bg-raised); border: 1px solid var(--border);
+      border-radius: 8px; padding: .7rem .9rem; text-decoration: none; color: inherit;
+      transition: border-color .2s;
+    }
+    .record:hover { border-color: var(--wine); }
+    .record img, .record .ph {
+      width: 38px; height: 57px; object-fit: cover; border-radius: 3px;
+      flex-shrink: 0; background: var(--bg-inset);
+    }
+    .record .ph { display: flex; align-items: center; justify-content: center; font-size: .8rem; }
+    .record-body { flex: 1; min-width: 0; }
+    .record-kind {
+      font-size: .68rem; text-transform: uppercase; letter-spacing: .07em;
+      color: var(--tx-3); font-weight: 600;
+    }
+    .record-title {
+      font-weight: 600; font-size: .88rem; margin-top: .1rem;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .record-meta { font-size: .75rem; color: var(--tx-3); }
+    .record-num {
+      font-family: var(--ff-display); font-size: 1.25rem; color: var(--gold);
+      flex-shrink: 0; font-variant-numeric: tabular-nums;
+    }
+
+    /* ═══ Chips (perfil de gustos, géneros) ═══ */
+    .chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .chip {
+      display: inline-flex; align-items: center; gap: .3rem;
+      background: var(--bg-inset); color: var(--tx-2);
+      border: 1px solid var(--border);
+      font-size: .74rem; padding: .25rem .6rem; border-radius: 2rem;
+      text-decoration: none; transition: all .15s;
+    }
+    a.chip:hover { border-color: var(--wine); color: var(--wine); }
+    .chip .chip-n { color: var(--tx-3); font-size: .68rem; }
+    a.tag.is-genre { text-decoration: none; transition: all .15s; }
+    a.tag.is-genre:hover { background: var(--wine); color: #fff; }
+
+    .profile-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: .75rem; margin-bottom: 1.75rem;
+    }
+    .profile-item {
+      background: var(--bg-raised); border: 1px solid var(--border);
+      border-radius: 8px; padding: .8rem .9rem;
+    }
+    .profile-item .pl {
+      font-size: .68rem; text-transform: uppercase; letter-spacing: .07em;
+      color: var(--tx-3); font-weight: 600; margin-bottom: .25rem;
+    }
+    .profile-item .pv {
+      font-size: .92rem; font-weight: 600; color: var(--tx);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .profile-item .pv a { color: var(--tx); text-decoration: none; }
+    .profile-item .pv a:hover { color: var(--wine); }
+    .profile-item .ps { font-size: .72rem; color: var(--tx-3); margin-top: .1rem; }
+
+    /* ═══ Finde detail poster strip ═══ */
+    .panel-block.film-line { gap: .55rem; align-items: center; display: flex; }
+    .panel-block.film-line img, .panel-block.film-line .ph {
+      width: 26px; height: 39px; object-fit: cover; border-radius: 2px;
+      flex-shrink: 0; background: var(--bg-inset);
+    }
+    .panel-block.film-line .ph {
+      display: flex; align-items: center; justify-content: center; font-size: .6rem;
+    }
+    .panel-block.film-line .fl-body { min-width: 0; flex: 1; }
+    .panel-block.film-line .fl-sub { font-size: .7rem; color: var(--tx-3); }
+
+    /* ═══ Kbd hint ═══ */
+    kbd.hint {
+      font-family: var(--ff-body); font-size: .68rem; font-weight: 600;
+      color: var(--tx-3); background: var(--bg-inset);
+      border: 1px solid var(--border); border-radius: 4px;
+      padding: .08rem .3rem; position: absolute; right: .5rem; top: 50%;
+      transform: translateY(-50%); pointer-events: none;
+    }
+    @media screen and (max-width: 1023px) { kbd.hint { display: none; } }
+
     /* ═══ Scrollbar ═══ */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
@@ -844,19 +1163,25 @@
           <a class="navbar-item" href="#peliculas" data-page="peliculas">Películas</a>
           <a class="navbar-item" href="#directores" data-page="directores">Directores</a>
           <a class="navbar-item" href="#decadas" data-page="decadas">Décadas</a>
+          <a class="navbar-item" href="#estadisticas" data-page="estadisticas">Cifras</a>
           <a class="navbar-item" href="#quiz" data-page="quiz">Quiz</a>
         </div>
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="search-wrap">
               <input class="input" type="search" id="global-search" placeholder="Buscar película, persona..." autocomplete="off">
+              <kbd class="hint" id="search-hint">/</kbd>
               <div class="search-results" id="search-results"></div>
             </div>
           </div>
-          <div class="navbar-item">
-            <button class="theme-toggle" id="theme-toggle" title="Cambiar tema">
+          <div class="navbar-item nav-actions">
+            <button class="theme-toggle" id="random-film" title="Película al azar" aria-label="Película al azar">
+              🎲<span class="action-label">Al azar</span>
+            </button>
+            <button class="theme-toggle" id="theme-toggle" title="Cambiar tema" aria-label="Cambiar tema">
               <span class="icon-moon">🌙</span>
               <span class="icon-sun">☀️</span>
+              <span class="action-label">Tema</span>
             </button>
           </div>
         </div>
@@ -887,6 +1212,36 @@
       localStorage.setItem('fp-theme', next);
     });
 
+    /* ── Película al azar ── */
+    document.getElementById('random-film').addEventListener('click', () => {
+      const slugs = allFilmEntries().map(e => e.slug);
+      if (!slugs.length) return;
+      let next = slugs[Math.floor(Math.random() * slugs.length)];
+      // Evita quedarte en la misma ficha si ya estabas en ella.
+      if (slugs.length > 1 && location.hash === `#pelicula/${next}`) {
+        next = slugs[(slugs.indexOf(next) + 1) % slugs.length];
+      }
+      location.hash = `#pelicula/${next}`;
+    });
+
+    /* ── Atajos de teclado ── */
+    function setupShortcuts() {
+      const input = document.getElementById('global-search');
+      const isMac = /Mac|iP(hone|ad)/.test(navigator.platform || navigator.userAgent);
+      document.getElementById('search-hint').textContent = isMac ? '⌘K' : '/';
+      document.addEventListener('keydown', (e) => {
+        const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
+        if ((e.key === 'k' || e.key === 'K') && (e.metaKey || e.ctrlKey)) {
+          e.preventDefault(); input.focus(); input.select(); return;
+        }
+        if (typing) return;
+        if (e.key === '/') { e.preventDefault(); input.focus(); }
+        else if (e.key === 'r' && !e.metaKey && !e.ctrlKey && !e.altKey) {
+          document.getElementById('random-film').click();
+        }
+      });
+    }
+
     /* ── Navbar burger ── */
     document.querySelector('.navbar-burger').addEventListener('click', function () {
       this.classList.toggle('is-active');
@@ -895,17 +1250,40 @@
 
     /* ── Init ── */
     async function init() {
-      const res = await fetch('data.json');
-      DATA = await res.json();
+      showLoading();
+      const [data, index] = await Promise.all([
+        fetch('data.json').then(r => r.json()),
+        // Un único índice con todas las fichas. Si falta, se cae al modo
+        // antiguo de un fetch por película (lento, pero funciona).
+        fetch('peliculas/index.json').then(r => r.ok ? r.json() : null).catch(() => null)
+      ]);
+      DATA = data;
+
       const slugs = new Set();
       for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
         if (typeof m !== 'string' && m.slug) slugs.add(m.slug);
       }
-      await Promise.all([...slugs].map(s => loadPeli(s)));
-      route();
-      window.addEventListener('hashchange', route);
+
+      if (index && typeof index === 'object' && !Array.isArray(index)) {
+        Object.assign(PELI_CACHE, index);
+      }
+      const pendientes = [...slugs].filter(s => !PELI_CACHE[s]);
+      if (pendientes.length) await Promise.all(pendientes.map(s => loadPeli(s)));
+
       buildSearchIndex();
       setupSearch();
+      setupShortcuts();
+      route();
+      window.addEventListener('hashchange', route);
+    }
+
+    function showLoading() {
+      document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
+        <div class="loading-state">
+          <div class="loading-reel">🎞️</div>
+          <div class="loading-text">Rebobinando el archivo…</div>
+        </div>
+      </div></section>`;
     }
 
     async function loadPeli(slug) {
@@ -915,6 +1293,22 @@
         if (res.ok) { PELI_CACHE[slug] = await res.json(); return PELI_CACHE[slug]; }
       } catch(e) {}
       return null;
+    }
+
+    /* ── Posters ──
+       TMDB sirve varios anchos. Pedir w500 para una miniatura de 32px
+       desperdicia ~10x de ancho de banda, así que reescribimos el tamaño. */
+    function posterUrl(url, size) {
+      if (!url) return null;
+      return url.replace(/\/t\/p\/w\d+\//, `/t/p/${size}/`);
+    }
+
+    const POSTER = { xs: 'w92', sm: 'w154', md: 'w185', lg: 'w342', xl: 'w500' };
+
+    // TMDB devuelve la nota con muchos decimales en algunas fichas.
+    function fmtRating(r) {
+      const n = parseFloat(r);
+      return isNaN(n) ? '' : n.toFixed(1);
     }
 
     function peliDisplayTitle(peli, slug) {
@@ -938,7 +1332,7 @@
     function route() {
       const hash = location.hash.slice(1);
       const seg = hash.split('/')[0] || '';
-      const pageMap = { finde: '', persona: 'personas', pelicula: 'peliculas', lugar: 'lugares', director: 'directores', decada: 'decadas', quiz: 'quiz' };
+      const pageMap = { finde: '', persona: 'personas', pelicula: 'peliculas', lugar: 'lugares', director: 'directores', decada: 'decadas', genero: 'peliculas', quiz: 'quiz' };
       const page = pageMap[seg] !== undefined ? pageMap[seg] : seg;
       document.querySelectorAll('#main-nav .navbar-item').forEach(a => {
         a.classList.toggle('is-active-page', a.dataset.page === page);
@@ -958,10 +1352,95 @@
       else if (hash === 'directores') renderDirectores();
       else if (hash === 'decadas') renderDecadas();
       else if (hash.startsWith('decada/')) renderDecada(parseInt(hash.split('/')[1]));
+      else if (hash.startsWith('genero/')) renderGenero(decodeURIComponent(hash.split('/').slice(1).join('/')));
+      else if (hash === 'estadisticas') renderEstadisticas();
       else if (hash === 'quiz') renderQuiz();
       else renderHome();
 
       window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+
+    function notFound(que, volverHref, volverLabel) {
+      document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
+        <div class="empty-state">
+          <div class="empty-icon">🍿</div>
+          <div class="empty-title">No encontramos ${que}</div>
+          <p>Puede que el enlace esté mal escrito o que ya no exista.</p>
+          <p class="mt-4"><a href="${volverHref}">← ${volverLabel}</a></p>
+        </div>
+      </div></section>`;
+    }
+
+    /* ── Utilidades de películas ── */
+    // Todas las fichas que de verdad aparecen en algún finde, por slug.
+    function allFilmEntries() {
+      const out = [];
+      const seen = new Set();
+      for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
+        const slug = typeof m === 'string' ? null : m.slug;
+        if (!slug || seen.has(slug)) continue;
+        seen.add(slug);
+        out.push({ slug, peli: PELI_CACHE[slug] || null, titulo: typeof m === 'string' ? m : m.titulo });
+      }
+      return out;
+    }
+
+    // Quién trajo una película y en qué finde (puede repetirse).
+    function appearancesOf(slug) {
+      const apps = [];
+      for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
+        if (typeof m !== 'string' && m.slug === slug) apps.push({ persona: p.nombre, finde: f });
+      }
+      return apps;
+    }
+
+    function filmTitle(peli, fallback) {
+      if (!peli) return fallback || '';
+      const orig = peli.titulo_original || peli.titulo;
+      const es = peli.titulo_es || peli.titulo;
+      return orig.toLowerCase() === es.toLowerCase()
+        ? orig : `${orig} <span class="peli-es">(${es})</span>`;
+    }
+
+    function plainTitle(peli, fallback) {
+      if (!peli) return fallback || '';
+      return peli.titulo_original || peli.titulo || fallback || '';
+    }
+
+    function genresOf(peli) {
+      return peli && peli.genre ? peli.genre.split(',').map(g => g.trim()).filter(Boolean) : [];
+    }
+
+    function genreTags(peli) {
+      const gs = genresOf(peli);
+      if (!gs.length) return '';
+      return `<div class="tags">${gs.map(g =>
+        `<a class="tag is-genre" href="#genero/${encodeURIComponent(g)}">${g}</a>`
+      ).join('')}</div>`;
+    }
+
+    // Ficha en formato tarjeta-póster, reutilizada en rejillas.
+    function posterTile(slug, peli, sub, i) {
+      const url = posterUrl(peli && peli.poster, POSTER.md);
+      const rating = peli && peli.tmdb_rating ? `<span class="poster-badge">★ ${fmtRating(peli.tmdb_rating)}</span>` : '';
+      const img = url
+        ? `<img src="${url}" alt="" loading="lazy">`
+        : `<div class="ph">🎬</div>`;
+      return `<a class="poster-tile" href="#pelicula/${slug}" style="--i:${i}">
+        <div class="poster-tile-img">${img}${rating}</div>
+        <div class="poster-tile-cap">${plainTitle(peli, slug)}</div>
+        <div class="poster-tile-sub">${sub || (peli && peli.year) || ''}</div>
+      </a>`;
+    }
+
+    // Bloque "también te puede interesar": título + rejilla de pósteres.
+    function relatedGrid(titulo, items, subFn, verMas) {
+      if (!items.length) return '';
+      return `<h2 class="section-title">${titulo}</h2>
+        <div class="poster-grid stagger">
+          ${items.map((f, i) => posterTile(f.slug, f.peli, subFn(f), i)).join('')}
+        </div>
+        ${verMas ? `<p class="mt-3" style="font-size:.85rem">${verMas}</p>` : ''}`;
     }
 
     function lugarTags(lugares) {
@@ -990,7 +1469,8 @@
     }
 
     function renderHome() {
-      const totalPelis = DATA.reduce((sum, f) => sum + f.personas.reduce((s, p) => s + p.peliculas.length, 0), 0);
+      // Títulos distintos, no proyecciones: así cuadra con la página que enlaza.
+      const totalPelis = allFilmEntries().length;
       const allPeople = [...new Set(DATA.flatMap(f => f.personas.map(p => p.nombre)))];
       const allLugares = [...new Set(DATA.flatMap(f => f.lugares))];
 
@@ -1016,6 +1496,10 @@
             <div><div class="stat-num">${allLugares.length}</div><div class="stat-label">Lugares</div></div>
           </a>
         </nav>
+
+        <p class="has-text-centered mb-5" style="font-size:.85rem">
+          <a href="#estadisticas">Ver todas las cifras del archivo →</a>
+        </p>
 
         <div class="decade-nav" id="decade-nav">
           <button class="decade-pill is-active" data-decade="all">Todos</button>
@@ -1078,9 +1562,50 @@
     }
 
     /* ── FINDE DETAIL ── */
+    // Resumen de una lista de fichas: nota media, año medio, minutos, géneros.
+    function resumen(fichas) {
+      const notas = fichas.map(p => parseFloat(p && p.tmdb_rating)).filter(n => !isNaN(n));
+      const anios = fichas.map(p => parseInt(p && p.year)).filter(n => !isNaN(n));
+      const mins  = fichas.map(p => parseInt(p && p.runtime)).filter(n => !isNaN(n));
+      const gen = {};
+      for (const p of fichas) for (const g of genresOf(p)) gen[g] = (gen[g] || 0) + 1;
+      const dir = {};
+      for (const p of fichas) if (p && p.director) for (const d of p.director.split(', ')) dir[d] = (dir[d] || 0) + 1;
+      const top = obj => Object.entries(obj).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'es'));
+      return {
+        nota: notas.length ? notas.reduce((a, b) => a + b, 0) / notas.length : null,
+        anio: anios.length ? Math.round(anios.reduce((a, b) => a + b, 0) / anios.length) : null,
+        minutos: mins.reduce((a, b) => a + b, 0),
+        generos: top(gen),
+        directores: top(dir)
+      };
+    }
+
+    function filmLine(m) {
+      const slug = typeof m === 'string' ? null : m.slug;
+      const peli = slug ? PELI_CACHE[slug] : null;
+      const titulo = typeof m === 'string' ? m : m.titulo;
+      if (!slug) return `<div class="panel-block">${titulo}</div>`;
+      const url = posterUrl(peli && peli.poster, POSTER.xs);
+      const sub = peli ? [peli.director, peli.year].filter(Boolean).join(' · ') : '';
+      return `<div class="panel-block film-line">
+        ${url ? `<img src="${url}" alt="" loading="lazy">` : `<div class="ph">🎬</div>`}
+        <div class="fl-body">
+          <div><a href="#pelicula/${slug}">${peliDisplayTitle(m, slug)}</a></div>
+          ${sub ? `<div class="fl-sub">${sub}</div>` : ''}
+        </div>
+      </div>`;
+    }
+
     function renderFinde(num) {
       const f = DATA.find(d => d.numero === num);
-      if (!f) { renderHome(); return; }
+      if (!f) { notFound(`el finde #${num}`, '#', 'Volver al archivo'); return; }
+
+      const slugs = f.personas.flatMap(p => p.peliculas.map(m => typeof m === 'string' ? null : m.slug).filter(Boolean));
+      const fichas = slugs.map(s => PELI_CACHE[s]).filter(Boolean);
+      const r = resumen(fichas);
+      const idx = DATA.indexOf(f);
+      const prev = DATA[idx - 1], next = DATA[idx + 1];
 
       let html = `<section class="main-section"><div class="container">
         ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#', label:`Finde #${f.numero}`}])}
@@ -1090,19 +1615,34 @@
           &ensp;${lugarTags(f.lugares)}
         </div>
 
+        <div class="stat-cards">
+          <div class="stat-card"><div class="k">${slugs.length}</div><div class="l">Películas</div></div>
+          <div class="stat-card"><div class="k">${f.personas.length}</div><div class="l">Participantes</div></div>
+          ${r.minutos ? `<div class="stat-card"><div class="k">${Math.round(r.minutos / 60)}</div><div class="l">Horas de cine</div></div>` : ''}
+          ${r.nota ? `<div class="stat-card"><div class="k">${r.nota.toFixed(1)}</div><div class="l">Nota media</div></div>` : ''}
+          ${r.anio ? `<div class="stat-card"><div class="k">${r.anio}</div><div class="l">Año medio</div></div>` : ''}
+        </div>
+
+        ${r.generos.length ? `<div class="chips mb-5">${r.generos.slice(0, 8).map(([g, n]) =>
+          `<a class="chip" href="#genero/${encodeURIComponent(g)}">${g}<span class="chip-n">${n}</span></a>`).join('')}</div>` : ''}
+
         <div class="columns is-multiline finde-panels stagger">
       `;
       for (const [i, p] of f.personas.entries()) {
         html += `<div class="column is-half-tablet is-one-third-desktop" style="--i:${i}">
           <nav class="panel">
             <p class="panel-heading"><a href="#persona/${encodeURIComponent(p.nombre)}">${p.nombre}</a></p>
-            ${p.peliculas.map(m => `<div class="panel-block">
-              <span class="panel-icon">🎬</span> ${peliLink(m)}
-            </div>`).join('')}
+            ${p.peliculas.map(filmLine).join('')}
           </nav>
         </div>`;
       }
-      html += `</div></div></section>`;
+      html += `</div>
+
+        <nav class="toolbar mt-5" style="justify-content:space-between">
+          ${prev ? `<a class="chip" href="#finde/${prev.numero}">← Finde #${prev.numero}</a>` : '<span></span>'}
+          ${next ? `<a class="chip" href="#finde/${next.numero}">Finde #${next.numero} →</a>` : '<span></span>'}
+        </nav>
+      </div></section>`;
       document.getElementById('view').innerHTML = html;
     }
 
@@ -1119,6 +1659,7 @@
 
       let html = `<section class="main-section"><div class="container">
         <h1 class="page-heading">Personas</h1>
+        <div class="page-sub">${Object.keys(stats).length} personas han traído película a algún finde.</div>
         <div class="columns is-multiline stagger">
       `;
       const sorted = Object.entries(stats).sort((a, b) => b[1].pelis - a[1].pelis);
@@ -1145,7 +1686,16 @@
     /* ── PERSONA DETAIL ── */
     function renderPersona(nombre) {
       const findes = DATA.filter(f => f.personas.some(p => p.nombre === nombre));
+      if (!findes.length) { notFound(`a ${nombre}`, '#personas', 'Ver todas las personas'); return; }
+
+      const slugs = [];
+      for (const f of findes) for (const m of f.personas.find(p => p.nombre === nombre).peliculas) {
+        if (typeof m !== 'string' && m.slug) slugs.push(m.slug);
+      }
       const totalPelis = findes.reduce((s, f) => s + f.personas.find(p => p.nombre === nombre).peliculas.length, 0);
+      const fichas = slugs.map(s => PELI_CACHE[s]).filter(Boolean);
+      const r = resumen(fichas);
+      const favDirector = r.directores.find(([, n]) => n > 1);
 
       let html = `<section class="main-section"><div class="container">
         ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#personas', label:'Personas'}, {href:'#', label: nombre}])}
@@ -1158,6 +1708,17 @@
           </div>
         </div>
 
+        <div class="profile-grid">
+          ${r.nota ? `<div class="profile-item"><div class="pl">Nota media</div><div class="pv">${r.nota.toFixed(1)} / 10</div><div class="ps">según TMDB</div></div>` : ''}
+          ${r.anio ? `<div class="profile-item"><div class="pl">Año medio</div><div class="pv">${r.anio}</div><div class="ps">de las que trae</div></div>` : ''}
+          ${r.generos.length ? `<div class="profile-item"><div class="pl">Género favorito</div><div class="pv"><a href="#genero/${encodeURIComponent(r.generos[0][0])}">${r.generos[0][0]}</a></div><div class="ps">${r.generos[0][1]} películas</div></div>` : ''}
+          ${favDirector ? `<div class="profile-item"><div class="pl">Director recurrente</div><div class="pv"><a href="#director/${encodeURIComponent(favDirector[0])}">${favDirector[0]}</a></div><div class="ps">${favDirector[1]} películas</div></div>` : ''}
+          ${r.minutos ? `<div class="profile-item"><div class="pl">Metraje aportado</div><div class="pv">${Math.round(r.minutos / 60)} h</div><div class="ps">${r.minutos} minutos</div></div>` : ''}
+        </div>
+
+        ${r.generos.length > 1 ? `<div class="chips mb-5">${r.generos.slice(0, 10).map(([g, n]) =>
+          `<a class="chip" href="#genero/${encodeURIComponent(g)}">${g}<span class="chip-n">${n}</span></a>`).join('')}</div>` : ''}
+
         <div class="stagger">
       `;
       for (const [i, f] of findes.entries()) {
@@ -1168,9 +1729,7 @@
               <a href="#finde/${f.numero}">Finde #${f.numero}</a>
               <span style="float:right;font-family:var(--ff-display);font-style:italic;font-size:.88rem;color:var(--tx-3)">${f.fecha || ''}</span>
             </p>
-            ${p.peliculas.map(m => `<div class="panel-block">
-              <span class="panel-icon">🎬</span> ${peliLink(m)}
-            </div>`).join('')}
+            ${p.peliculas.map(filmLine).join('')}
             <div class="panel-block" style="font-size:.78rem;color:var(--tx-3)">
               ${lugarTags(f.lugares)}
             </div>
@@ -1182,120 +1741,214 @@
     }
 
     /* ── PELÍCULAS ── */
-    function filmSortKey(f) {
-      const p = f.slug ? PELI_CACHE[f.slug] : null;
-      return ((p && p.titulo_original) || f.titulo).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    function sortKey(peli, fallback) {
+      return plainTitle(peli, fallback).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     }
 
+    function initialLetter(peli, fallback) {
+      const ch = sortKey(peli, fallback).charAt(0).toUpperCase();
+      return /[A-Z]/.test(ch) ? ch : '#';
+    }
+
+    // Estado de la vista de películas, para que sobreviva a los re-render.
+    const peliView = { orden: 'titulo', genero: '', letra: 'all', texto: '', vista: 'lista' };
+
     function renderPeliculas() {
-      const allFilms = [];
-      for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
-        const titulo = typeof m === 'string' ? m : m.titulo;
-        const slug = typeof m === 'string' ? null : m.slug;
-        allFilms.push({ titulo, slug, persona: p.nombre, finde: f.numero, fecha: f.fecha });
-      }
-      allFilms.sort((a, b) => filmSortKey(a).localeCompare(filmSortKey(b), 'es'));
+      const films = allFilmEntries();
 
-      // Build letter index
-      const letters = [];
-      const letterSet = new Set();
-      for (const f of allFilms) {
-        const ch = filmSortKey(f).charAt(0).toUpperCase();
-        const letter = /[A-Z]/.test(ch) ? ch : '#';
-        if (!letterSet.has(letter)) { letterSet.add(letter); letters.push(letter); }
-      }
+      const generos = {};
+      for (const f of films) for (const g of genresOf(f.peli)) generos[g] = (generos[g] || 0) + 1;
+      const generosOrdenados = Object.entries(generos).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'es'));
 
-      let html = `<section class="main-section"><div class="container">
-        <h1 class="page-heading">Películas <span style="font-family:var(--ff-display);font-style:italic;font-size:.5em;color:var(--tx-3)">${allFilms.length}</span></h1>
+      document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
+        <h1 class="page-heading">Películas <span style="font-family:var(--ff-display);font-style:italic;font-size:.5em;color:var(--tx-3)">${films.length}</span></h1>
+        <div class="page-sub">Cada película una vez, aunque la trajeran varios.</div>
 
-        <div class="field filter-input" style="max-width:360px;margin-bottom:.75rem">
-          <div class="control">
-            <input class="input" type="search" id="search" placeholder="Filtrar por título...">
+        <div class="toolbar">
+          <div class="field filter-input">
+            <div class="control">
+              <input class="input" type="search" id="peli-search" placeholder="Filtrar por título, director…" value="${peliView.texto}">
+            </div>
+          </div>
+          <div class="select-wrap">
+            <select id="peli-genero" aria-label="Filtrar por género">
+              <option value="">Todos los géneros</option>
+              ${generosOrdenados.map(([g, n]) => `<option value="${g}"${peliView.genero === g ? ' selected' : ''}>${g} (${n})</option>`).join('')}
+            </select>
+          </div>
+          <div class="select-wrap">
+            <select id="peli-orden" aria-label="Ordenar">
+              <option value="titulo">A · Z</option>
+              <option value="year-asc">Más antiguas</option>
+              <option value="year-desc">Más recientes</option>
+              <option value="rating">Mejor valoradas</option>
+              <option value="duracion">Más largas</option>
+            </select>
+          </div>
+          <div class="toolbar-spacer"></div>
+          <div class="segmented" id="peli-vista">
+            <button data-vista="lista">Lista</button>
+            <button data-vista="rejilla">Rejilla</button>
           </div>
         </div>
 
-        <div class="alpha-nav" id="alpha-nav">
-          <button class="alpha-pill is-active" data-letter="all">Todos</button>
-          ${letters.map(l => `<button class="alpha-pill" data-letter="${l}">${l}</button>`).join('')}
-        </div>
+        <div class="alpha-nav" id="alpha-nav"></div>
+        <div id="films-list"></div>
+      </div></section>`;
 
-        <div id="films-list">
-      `;
-      let currentLetter = '';
-      for (const f of allFilms) {
-        const ch = filmSortKey(f).charAt(0).toUpperCase();
-        const letter = /[A-Z]/.test(ch) ? ch : '#';
-        if (letter !== currentLetter) {
-          currentLetter = letter;
-          const count = allFilms.filter(ff => {
-            const c = filmSortKey(ff).charAt(0).toUpperCase();
-            return (/[A-Z]/.test(c) ? c : '#') === letter;
-          }).length;
-          html += `<div class="alpha-heading" id="letter-${letter}" data-letter="${letter}">${letter} <span class="decade-count">${count}</span></div>`;
-        }
-        const peli = f.slug ? PELI_CACHE[f.slug] : null;
-        const posterHtml = peli && peli.poster
-          ? `<img class="film-poster-sm" src="${peli.poster}" alt="" loading="lazy">`
-          : `<div class="film-poster-ph">🎬</div>`;
-        const display = f.slug ? peliDisplayTitle(f, f.slug) : f.titulo;
-        const link = f.slug ? `<a href="#pelicula/${f.slug}">${display}</a>` : f.titulo;
-        html += `<div class="film-row" data-letter="${currentLetter}">
-          ${posterHtml}
-          <div class="film-row-body">
-            <div class="film-row-title">${link}</div>
-            <div class="film-row-sub"><a href="#persona/${encodeURIComponent(f.persona)}">${f.persona}</a> · <a href="#finde/${f.finde}">#${f.finde}</a></div>
-          </div>
-        </div>`;
-      }
-      html += `</div></div></section>`;
-      document.getElementById('view').innerHTML = html;
+      document.getElementById('peli-orden').value = peliView.orden;
+      document.querySelectorAll('#peli-vista button').forEach(b =>
+        b.classList.toggle('is-active', b.dataset.vista === peliView.vista));
 
-      // Text search
-      const searchInput = document.getElementById('search');
-      searchInput.addEventListener('input', function() {
-        const q = this.value.toLowerCase();
-        const isFiltering = q.length > 0;
-        // Reset letter filter when typing
-        if (isFiltering) {
-          document.querySelectorAll('#alpha-nav .alpha-pill').forEach(b => b.classList.remove('is-active'));
-          document.querySelector('#alpha-nav .alpha-pill[data-letter="all"]').classList.add('is-active');
-        }
-        for (const heading of document.querySelectorAll('#films-list .alpha-heading')) {
-          heading.style.display = isFiltering ? 'none' : '';
-        }
-        for (const row of document.querySelectorAll('#films-list .film-row')) {
-          row.style.display = !isFiltering || row.textContent.toLowerCase().includes(q) ? '' : 'none';
-        }
+      const paint = () => paintPeliculas(films);
+      paint();
+
+      const search = document.getElementById('peli-search');
+      let t;
+      search.addEventListener('input', () => {
+        clearTimeout(t);
+        t = setTimeout(() => { peliView.texto = search.value; peliView.letra = 'all'; paint(); }, 120);
       });
-
-      // Alphabetical filter
-      document.querySelectorAll('#alpha-nav .alpha-pill').forEach(btn => {
+      document.getElementById('peli-genero').addEventListener('change', e => {
+        peliView.genero = e.target.value; peliView.letra = 'all'; paint();
+      });
+      document.getElementById('peli-orden').addEventListener('change', e => {
+        peliView.orden = e.target.value; peliView.letra = 'all'; paint();
+      });
+      document.querySelectorAll('#peli-vista button').forEach(btn => {
         btn.addEventListener('click', () => {
-          // Clear text search
-          searchInput.value = '';
-          document.querySelectorAll('#alpha-nav .alpha-pill').forEach(b => b.classList.remove('is-active'));
-          btn.classList.add('is-active');
-          const letter = btn.dataset.letter;
-          const showAll = letter === 'all';
-          for (const heading of document.querySelectorAll('#films-list .alpha-heading')) {
-            heading.style.display = showAll || heading.dataset.letter === letter ? '' : 'none';
-          }
-          for (const row of document.querySelectorAll('#films-list .film-row')) {
-            row.style.display = showAll || row.dataset.letter === letter ? '' : 'none';
-          }
-          // Scroll to letter heading
-          if (!showAll) {
-            const target = document.getElementById('letter-' + letter);
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+          peliView.vista = btn.dataset.vista;
+          document.querySelectorAll('#peli-vista button').forEach(b =>
+            b.classList.toggle('is-active', b === btn));
+          paint();
         });
       });
+    }
+
+    function filterFilms(films) {
+      const q = normalize(peliView.texto.trim());
+      return films.filter(f => {
+        if (peliView.genero && !genresOf(f.peli).includes(peliView.genero)) return false;
+        if (peliView.letra !== 'all' && initialLetter(f.peli, f.titulo) !== peliView.letra) return false;
+        if (!q) return true;
+        const p = f.peli;
+        const haystack = [f.titulo, p && p.titulo_original, p && p.titulo_es, p && p.director, p && p.year]
+          .filter(Boolean).join(' ');
+        return normalize(haystack).includes(q);
+      });
+    }
+
+    function sortFilms(films) {
+      const num = (v, def) => { const n = parseFloat(v); return isNaN(n) ? def : n; };
+      const byTitle = (a, b) => sortKey(a.peli, a.titulo).localeCompare(sortKey(b.peli, b.titulo), 'es');
+      switch (peliView.orden) {
+        case 'year-asc':  return films.sort((a, b) => num(a.peli && a.peli.year, 9999) - num(b.peli && b.peli.year, 9999) || byTitle(a, b));
+        case 'year-desc': return films.sort((a, b) => num(b.peli && b.peli.year, 0) - num(a.peli && a.peli.year, 0) || byTitle(a, b));
+        case 'rating':    return films.sort((a, b) => num(b.peli && b.peli.tmdb_rating, -1) - num(a.peli && a.peli.tmdb_rating, -1) || byTitle(a, b));
+        case 'duracion':  return films.sort((a, b) => num(b.peli && b.peli.runtime, -1) - num(a.peli && a.peli.runtime, -1) || byTitle(a, b));
+        default:          return films.sort(byTitle);
+      }
+    }
+
+    function paintPeliculas(allFilms) {
+      const alphaNav = document.getElementById('alpha-nav');
+      const list = document.getElementById('films-list');
+      const alfabetico = peliView.orden === 'titulo';
+
+      // La barra A-Z se calcula sobre el conjunto filtrado por texto/género,
+      // no por letra: si no, elegir una letra vaciaría la propia barra.
+      const letraPrevia = peliView.letra;
+      peliView.letra = 'all';
+      const sinLetra = filterFilms(allFilms);
+      peliView.letra = letraPrevia;
+
+      if (alfabetico) {
+        const counts = {};
+        for (const f of sinLetra) {
+          const l = initialLetter(f.peli, f.titulo);
+          counts[l] = (counts[l] || 0) + 1;
+        }
+        const letras = Object.keys(counts).sort();
+        if (letraPrevia !== 'all' && !counts[letraPrevia]) peliView.letra = 'all';
+        alphaNav.style.display = '';
+        alphaNav.innerHTML = `<button class="alpha-pill${peliView.letra === 'all' ? ' is-active' : ''}" data-letter="all">Todos</button>`
+          + letras.map(l => `<button class="alpha-pill${peliView.letra === l ? ' is-active' : ''}" data-letter="${l}">${l}</button>`).join('');
+        alphaNav.querySelectorAll('.alpha-pill').forEach(btn => {
+          btn.addEventListener('click', () => { peliView.letra = btn.dataset.letter; paintPeliculas(allFilms); });
+        });
+      } else {
+        peliView.letra = 'all';
+        alphaNav.style.display = 'none';
+        alphaNav.innerHTML = '';
+      }
+
+      const films = sortFilms(filterFilms(allFilms));
+
+      if (!films.length) {
+        list.innerHTML = `<div class="empty-state">
+          <div class="empty-icon">🔍</div>
+          <div class="empty-title">Ninguna película encaja</div>
+          <p>Prueba con otro título o quita algún filtro.</p>
+        </div>`;
+        return;
+      }
+
+      let html = `<div class="result-count mb-3">${films.length} película${films.length !== 1 ? 's' : ''}</div>`;
+
+      if (peliView.vista === 'rejilla') {
+        html += `<div class="poster-grid stagger">`;
+        for (const [i, f] of films.entries()) {
+          const anio = f.peli && f.peli.year ? f.peli.year : '';
+          const quien = subLineFor(f);
+          html += posterTile(f.slug, f.peli, [anio, quien].filter(Boolean).join(' · '), Math.min(i, 24));
+        }
+        html += `</div>`;
+      } else {
+        const porLetra = {};
+        if (alfabetico) for (const f of films) {
+          const l = initialLetter(f.peli, f.titulo);
+          porLetra[l] = (porLetra[l] || 0) + 1;
+        }
+        let letraActual = '';
+        for (const f of films) {
+          if (alfabetico) {
+            const l = initialLetter(f.peli, f.titulo);
+            if (l !== letraActual) {
+              letraActual = l;
+              html += `<div class="alpha-heading" id="letter-${l}">${l} <span class="decade-count">${porLetra[l]}</span></div>`;
+            }
+          }
+          const url = posterUrl(f.peli && f.peli.poster, POSTER.xs);
+          const poster = url
+            ? `<img class="film-poster-sm" src="${url}" alt="" loading="lazy">`
+            : `<div class="film-poster-ph">🎬</div>`;
+          html += `<div class="film-row">
+            ${poster}
+            <div class="film-row-body">
+              <div class="film-row-title"><a href="#pelicula/${f.slug}">${filmTitle(f.peli, f.titulo)}${f.peli && f.peli.year ? ` (${f.peli.year})` : ''}</a></div>
+              <div class="film-row-sub">${subLineFor(f, true)}</div>
+            </div>
+          </div>`;
+        }
+      }
+      list.innerHTML = html;
+    }
+
+    // Línea secundaria: quién la trajo y en qué finde (+ director en lista).
+    function subLineFor(f, conDirector) {
+      const apps = appearancesOf(f.slug);
+      const quien = apps.map(a =>
+        `<a href="#persona/${encodeURIComponent(a.persona)}">${a.persona}</a> · <a href="#finde/${a.finde.numero}">#${a.finde.numero}</a>`
+      ).join(' / ');
+      if (!conDirector) return apps.map(a => a.persona).join(' / ');
+      const dir = f.peli && f.peli.director ? `${f.peli.director} — ` : '';
+      return dir + quien;
     }
 
     /* ── PELÍCULA DETAIL ── */
     async function renderPelicula(slug) {
       const peli = await loadPeli(slug);
-      if (!peli) { renderHome(); return; }
+      if (!peli) { notFound('esa película', '#peliculas', 'Ver todas las películas'); return; }
 
       const appearances = [];
       for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
@@ -1349,7 +2002,7 @@
           <div class="column is-narrow" style="text-align:center">
       `;
       if (peli.poster) {
-        html += `<img class="peli-poster-img" src="${peli.poster}" alt="${peli.titulo}">`;
+        html += `<img class="peli-poster-img" src="${posterUrl(peli.poster, POSTER.lg)}" alt="Cartel de ${peli.titulo}">`;
       }
 
       html += `</div><div class="column">
@@ -1378,7 +2031,7 @@
       // ── Genres (navigable tags)
       if (genres.length) {
         html += `<div class="tags mb-3">${genres.map(g =>
-          `<span class="tag is-genre" style="cursor:default">${g}</span>`
+          `<a class="tag is-genre" href="#genero/${encodeURIComponent(g)}">${g}</a>`
         ).join('')}</div>`;
       }
 
@@ -1386,7 +2039,7 @@
       if (peli.imdb_id || peli.tmdb_id || peli.tmdb_rating) {
         html += `<div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem">`;
         if (peli.tmdb_rating) {
-          html += `<span class="peli-rating" style="cursor:default">⭐ ${peli.tmdb_rating} / 10</span>`;
+          html += `<span class="peli-rating" style="cursor:default">⭐ ${fmtRating(peli.tmdb_rating)} / 10</span>`;
         }
         if (peli.imdb_id) {
           html += `<a class="peli-rating" href="https://www.imdb.com/title/${peli.imdb_id}" target="_blank" rel="noopener" style="background:var(--gold-bg);color:var(--gold)">IMDb ↗</a>`;
@@ -1424,104 +2077,43 @@
       }
       html += `</div>`;
 
-      // ── More by same director(s)
+      // ── Más del mismo director, mismo año y mismo género.
+      //    Cada bloque excluye lo ya mostrado arriba para no repetir carteles.
+      const yaMostrado = new Set([slug]);
+
       for (const [director, films] of Object.entries(directorFilms)) {
-        if (!films.length) continue;
-        html += `<h2 style="font-family:var(--ff-display);font-size:1.15rem;margin-top:2rem;margin-bottom:.75rem">
-          Más de <a href="#director/${encodeURIComponent(director)}">${director}</a>
-        </h2>`;
-        html += `<div class="columns is-multiline stagger">`;
-        for (const [i, f] of films.slice(0, 6).entries()) {
-          const t = f.peli.titulo_original || f.peli.titulo;
-          const posterHtml = f.peli.poster
-            ? `<img src="${f.peli.poster}" alt="" loading="lazy" style="width:40px;height:60px;object-fit:cover;border-radius:3px;flex-shrink:0">`
-            : `<div style="width:40px;height:60px;background:var(--bg-inset);border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.6rem">🎬</div>`;
-          const yr = f.peli.year ? ` (${f.peli.year})` : '';
-          const rating = f.peli.tmdb_rating ? `<span style="color:var(--gold);font-size:.72rem">⭐ ${f.peli.tmdb_rating}</span>` : '';
-          html += `<div class="column is-half-tablet is-one-third-desktop" style="--i:${i}">
-            <a href="#pelicula/${f.slug}" style="text-decoration:none;color:inherit">
-              <div class="card" style="transition:border-color .2s">
-                <div class="card-content" style="display:flex;align-items:center;gap:.7rem;padding:.75rem;overflow:visible">
-                  ${posterHtml}
-                  <div style="flex:1;min-width:0">
-                    <div style="font-weight:600;font-size:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${t}${yr}</div>
-                    ${rating}
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>`;
-        }
-        html += `</div>`;
-        if (films.length > 6) {
-          html += `<p style="font-size:.85rem"><a href="#director/${encodeURIComponent(director)}">Ver las ${films.length} películas →</a></p>`;
-        }
+        const nuevas = films.filter(f => !yaMostrado.has(f.slug));
+        if (!nuevas.length) continue;
+        const visibles = nuevas.slice(0, 6);
+        visibles.forEach(f => yaMostrado.add(f.slug));
+        html += relatedGrid(
+          `Más de <a href="#director/${encodeURIComponent(director)}">${director}</a>`,
+          visibles,
+          f => f.peli.year || '',
+          nuevas.length > 6 ? `<a href="#director/${encodeURIComponent(director)}">Ver las ${films.length} películas →</a>` : ''
+        );
       }
 
-      // ── Same year
-      if (yearFilms.length) {
-        html += `<h2 style="font-family:var(--ff-display);font-size:1.15rem;margin-top:2rem;margin-bottom:.75rem">
-          También de ${peli.year}
-        </h2>`;
-        html += `<div class="columns is-multiline stagger">`;
-        for (const [i, f] of yearFilms.slice(0, 6).entries()) {
-          const t = f.peli.titulo_original || f.peli.titulo;
-          const posterHtml = f.peli.poster
-            ? `<img src="${f.peli.poster}" alt="" loading="lazy" style="width:40px;height:60px;object-fit:cover;border-radius:3px;flex-shrink:0">`
-            : `<div style="width:40px;height:60px;background:var(--bg-inset);border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.6rem">🎬</div>`;
-          const yr = f.peli.year ? ` (${f.peli.year})` : '';
-          const dir = f.peli.director ? `<div style="font-size:.72rem;color:var(--tx-3)">${f.peli.director}</div>` : '';
-          html += `<div class="column is-half-tablet is-one-third-desktop" style="--i:${i}">
-            <a href="#pelicula/${f.slug}" style="text-decoration:none;color:inherit">
-              <div class="card" style="transition:border-color .2s">
-                <div class="card-content" style="display:flex;align-items:center;gap:.7rem;padding:.75rem;overflow:visible">
-                  ${posterHtml}
-                  <div style="flex:1;min-width:0">
-                    <div style="font-weight:600;font-size:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${t}</div>
-                    ${dir}
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>`;
-        }
-        html += `</div>`;
-        if (yearFilms.length > 6) {
-          html += `<p style="font-size:.85rem;color:var(--tx-3)">y ${yearFilms.length - 6} más del mismo año</p>`;
-        }
+      const yearNuevas = yearFilms.filter(f => !yaMostrado.has(f.slug));
+      if (yearNuevas.length) {
+        const visibles = yearNuevas.slice(0, 6);
+        visibles.forEach(f => yaMostrado.add(f.slug));
+        html += relatedGrid(
+          `También de ${peli.year}`,
+          visibles,
+          f => f.peli.director || '',
+          yearNuevas.length > 6 ? `<span style="color:var(--tx-3)">y ${yearNuevas.length - 6} más del mismo año</span>` : ''
+        );
       }
 
-      // ── Related by genre
-      if (genreFilms.length) {
-        html += `<h2 style="font-family:var(--ff-display);font-size:1.15rem;margin-top:2rem;margin-bottom:.75rem">
-          Mismo género
-        </h2>`;
-        html += `<div class="columns is-multiline stagger">`;
-        const shown = genreFilms.filter(f =>
-          !Object.values(directorFilms).flat().some(df => df.slug === f.slug) &&
-          !yearFilms.some(yf => yf.slug === f.slug)
-        ).slice(0, 6);
-        for (const [i, f] of shown.entries()) {
-          const t = f.peli.titulo_original || f.peli.titulo;
-          const posterHtml = f.peli.poster
-            ? `<img src="${f.peli.poster}" alt="" loading="lazy" style="width:40px;height:60px;object-fit:cover;border-radius:3px;flex-shrink:0">`
-            : `<div style="width:40px;height:60px;background:var(--bg-inset);border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.6rem">🎬</div>`;
-          const dir = f.peli.director ? `<div style="font-size:.72rem;color:var(--tx-3)">${f.peli.director} (${f.peli.year || '?'})</div>` : '';
-          html += `<div class="column is-half-tablet is-one-third-desktop" style="--i:${i}">
-            <a href="#pelicula/${f.slug}" style="text-decoration:none;color:inherit">
-              <div class="card" style="transition:border-color .2s">
-                <div class="card-content" style="display:flex;align-items:center;gap:.7rem;padding:.75rem;overflow:visible">
-                  ${posterHtml}
-                  <div style="flex:1;min-width:0">
-                    <div style="font-weight:600;font-size:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${t}</div>
-                    ${dir}
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>`;
-        }
-        html += `</div>`;
+      const generoNuevas = genreFilms.filter(f => !yaMostrado.has(f.slug));
+      if (generoNuevas.length) {
+        html += relatedGrid(
+          genres.length ? `Más <a href="#genero/${encodeURIComponent(genres[0])}">${genres[0].toLowerCase()}</a>` : 'Mismo género',
+          generoNuevas.slice(0, 6),
+          f => `${f.peli.director || ''}${f.peli.year ? ` · ${f.peli.year}` : ''}`,
+          ''
+        );
       }
 
       html += `</div></div></div></section>`;
@@ -1582,7 +2174,7 @@
             <div class="card-content" style="display:flex;align-items:center;gap:.85rem">
               <span class="finde-num">${f.numero}</span>
               <div class="finde-info">
-                <div class="finde-date">${f.fecha}</div>
+                <div class="finde-date">${f.fecha || '—'}</div>
                 <div class="finde-lugar">${f.personas.map(p=>p.nombre).join(', ')}</div>
               </div>
               <span class="finde-pelis">${npelis} pelis</span>
@@ -1659,7 +2251,7 @@
     function renderDirector(nombre) {
       const directors = getDirectorStats();
       const stats = directors[nombre];
-      if (!stats) { renderDirectores(); return; }
+      if (!stats) { notFound(`a ${nombre}`, '#directores', 'Ver todos los directores'); return; }
 
       const films = stats.films.sort((a, b) => {
         const ya = parseInt(a.peli.year) || 9999;
@@ -1697,10 +2289,10 @@
         const titleDisplay = orig.toLowerCase() === es.toLowerCase()
           ? orig : `${orig} <span class="peli-es">(${es})</span>`;
         const posterHtml = peli.poster
-          ? `<img src="${peli.poster}" alt="" loading="lazy" style="width:60px;height:90px;object-fit:cover;border-radius:4px">`
+          ? `<img src="${posterUrl(peli.poster, POSTER.sm)}" alt="" loading="lazy" style="width:60px;height:90px;object-fit:cover;border-radius:4px">`
           : `<div style="width:60px;height:90px;background:var(--bg-inset);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.8rem">🎬</div>`;
-        const rating = peli.tmdb_rating ? `<span style="color:var(--gold);font-size:.78rem">⭐ ${peli.tmdb_rating}</span>` : '';
-        const genres = peli.genre ? `<div class="tags mt-2">${peli.genre.split(', ').map(g => `<span class="tag is-genre">${g}</span>`).join('')}</div>` : '';
+        const rating = peli.tmdb_rating ? `<span style="color:var(--gold);font-size:.78rem">⭐ ${fmtRating(peli.tmdb_rating)}</span>` : '';
+        const genres = genreTags(peli) ? `<div class="mt-2">${genreTags(peli)}</div>` : '';
 
         html += `<div class="column is-half-tablet" style="--i:${i}">
           <a href="#pelicula/${slug}" style="text-decoration:none;color:inherit">
@@ -1777,7 +2369,7 @@
               <div class="card-content" style="padding:1.15rem">
                 <div style="display:flex;gap:4px;margin-bottom:.75rem;height:80px;overflow:hidden;border-radius:4px">
                   ${posters.length ? posters.map(f =>
-                    `<img src="${f.peli.poster}" alt="" loading="lazy" style="height:80px;width:54px;object-fit:cover;border-radius:3px;flex-shrink:0">`
+                    `<img src="${posterUrl(f.peli.poster, POSTER.xs)}" alt="" loading="lazy" style="height:80px;width:54px;object-fit:cover;border-radius:3px;flex-shrink:0">`
                   ).join('') : `<div style="height:80px;width:100%;background:var(--bg-inset);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:1.5rem">🎬</div>`}
                 </div>
                 <div style="font-family:var(--ff-display);font-size:1.6rem;color:var(--wine);line-height:1">${dec}s</div>
@@ -1794,7 +2386,7 @@
     function renderDecada(dec) {
       const decades = getMovieDecades();
       const films = decades[dec];
-      if (!films) { renderDecadas(); return; }
+      if (!films) { notFound(`la década de los ${dec}`, '#decadas', 'Ver todas las décadas'); return; }
 
       // Sort by year then title
       films.sort((a, b) => {
@@ -1841,7 +2433,7 @@
           const titleDisplay = orig.toLowerCase() === es.toLowerCase()
             ? orig : `${orig} <span class="peli-es">(${es})</span>`;
           const posterHtml = peli.poster
-            ? `<img class="film-poster-sm" src="${peli.poster}" alt="" loading="lazy">`
+            ? `<img class="film-poster-sm" src="${posterUrl(peli.poster, POSTER.xs)}" alt="" loading="lazy">`
             : `<div class="film-poster-ph">🎬</div>`;
           const apps = findAppearances(slug);
           const subParts = [];
@@ -1864,8 +2456,687 @@
       document.getElementById('view').innerHTML = html;
     }
 
+    /* ── GÉNERO ── */
+    function renderGenero(nombre) {
+      const films = allFilmEntries().filter(f => genresOf(f.peli).includes(nombre));
+      if (!films.length) { notFound(`el género "${nombre}"`, '#peliculas', 'Ver todas las películas'); return; }
+
+      films.sort((a, b) => (parseFloat(b.peli.tmdb_rating) || 0) - (parseFloat(a.peli.tmdb_rating) || 0));
+
+      // Géneros que más se repiten junto a este.
+      const vecinos = {};
+      for (const f of films) for (const g of genresOf(f.peli)) {
+        if (g !== nombre) vecinos[g] = (vecinos[g] || 0) + 1;
+      }
+      const relacionados = Object.entries(vecinos).sort((a, b) => b[1] - a[1]).slice(0, 8);
+
+      const conNota = films.filter(f => f.peli.tmdb_rating);
+      const media = conNota.length
+        ? conNota.reduce((s, f) => s + parseFloat(f.peli.tmdb_rating), 0) / conNota.length : null;
+
+      document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
+        ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#peliculas', label:'Películas'}, {href:'#', label: nombre}])}
+        <h1 class="page-heading">${nombre}</h1>
+        <div class="page-sub">
+          ${films.length} película${films.length !== 1 ? 's' : ''} en el archivo${media ? ` · nota media ${media.toFixed(1)}` : ''}
+        </div>
+        ${relacionados.length ? `<div class="chips mb-5">
+          ${relacionados.map(([g, n]) =>
+            `<a class="chip" href="#genero/${encodeURIComponent(g)}">${g}<span class="chip-n">${n}</span></a>`).join('')}
+        </div>` : ''}
+        <div class="poster-grid stagger">
+          ${films.map((f, i) => posterTile(f.slug, f.peli,
+            [f.peli.year, appearancesOf(f.slug).map(a => a.persona).join(' / ')].filter(Boolean).join(' · '),
+            Math.min(i, 24))).join('')}
+        </div>
+      </div></section>`;
+    }
+
+    /* ── ESTADÍSTICAS ── */
+    function renderEstadisticas() {
+      const films = allFilmEntries();
+      const conFicha = films.filter(f => f.peli);
+      const conNota = conFicha.filter(f => f.peli.tmdb_rating);
+      const conAnio = conFicha.filter(f => parseInt(f.peli.year));
+      const minutos = conFicha.reduce((s, f) => s + (parseInt(f.peli.runtime) || 0), 0);
+      const notaMedia = conNota.length
+        ? conNota.reduce((s, f) => s + parseFloat(f.peli.tmdb_rating), 0) / conNota.length : 0;
+      const anioMedio = conAnio.length
+        ? conAnio.reduce((s, f) => s + parseInt(f.peli.year), 0) / conAnio.length : 0;
+
+      const horas = Math.round(minutos / 60);
+      const dias = (minutos / 60 / 24).toFixed(1);
+
+      // ── Rankings
+      const cuenta = (lista) => Object.entries(lista.reduce((acc, k) => (acc[k] = (acc[k] || 0) + 1, acc), {}))
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'es'));
+
+      const generos = cuenta(conFicha.flatMap(f => genresOf(f.peli)));
+      const directores = cuenta(conFicha.flatMap(f => f.peli.director ? f.peli.director.split(', ') : []));
+      const decadas = cuenta(conAnio.map(f => `${Math.floor(parseInt(f.peli.year) / 10) * 10}s`))
+        .sort((a, b) => a[0].localeCompare(b[0]));
+
+      // ── Récords
+      const maxBy = (arr, fn) => arr.reduce((best, f) => (!best || fn(f) > fn(best)) ? f : best, null);
+      const minBy = (arr, fn) => arr.reduce((best, f) => (!best || fn(f) < fn(best)) ? f : best, null);
+      const records = [
+        ['Mejor valorada',  maxBy(conNota, f => parseFloat(f.peli.tmdb_rating)), f => `★ ${fmtRating(f.peli.tmdb_rating)}`],
+        ['Peor valorada',   minBy(conNota, f => parseFloat(f.peli.tmdb_rating)), f => `★ ${fmtRating(f.peli.tmdb_rating)}`],
+        ['La más antigua',  minBy(conAnio, f => parseInt(f.peli.year)),          f => f.peli.year],
+        ['La más reciente', maxBy(conAnio, f => parseInt(f.peli.year)),          f => f.peli.year],
+        ['La más larga',    maxBy(conFicha.filter(f => parseInt(f.peli.runtime)), f => parseInt(f.peli.runtime)), f => f.peli.runtime],
+        ['La más corta',    minBy(conFicha.filter(f => parseInt(f.peli.runtime)), f => parseInt(f.peli.runtime)), f => f.peli.runtime],
+      ].filter(r => r[1]);
+
+      // ── Perfil por persona
+      const personas = [...new Set(DATA.flatMap(f => f.personas.map(p => p.nombre)))];
+      const perfiles = personas.map(nombre => {
+        const slugs = [];
+        for (const f of DATA) for (const p of f.personas) {
+          if (p.nombre !== nombre) continue;
+          for (const m of p.peliculas) if (typeof m !== 'string' && m.slug) slugs.push(m.slug);
+        }
+        const fichas = slugs.map(s => PELI_CACHE[s]).filter(Boolean);
+        const notas = fichas.map(p => parseFloat(p.tmdb_rating)).filter(n => !isNaN(n));
+        const anios = fichas.map(p => parseInt(p.year)).filter(n => !isNaN(n));
+        const gs = cuenta(fichas.flatMap(p => genresOf(p)));
+        return {
+          nombre,
+          total: slugs.length,
+          findes: DATA.filter(f => f.personas.some(p => p.nombre === nombre)).length,
+          nota: notas.length ? notas.reduce((a, b) => a + b, 0) / notas.length : null,
+          anio: anios.length ? Math.round(anios.reduce((a, b) => a + b, 0) / anios.length) : null,
+          genero: gs.length ? gs[0][0] : null
+        };
+      }).sort((a, b) => b.total - a.total);
+
+      const bars = (items, max, clase, hrefFn) => `<div class="bars">
+        ${items.map(([label, n], i) => `<div class="bar-row">
+          ${hrefFn ? `<a class="bar-label" href="${hrefFn(label)}">${label}</a>` : `<span class="bar-label">${label}</span>`}
+          <span class="bar-track"><span class="bar-fill ${clase || ''}" style="width:${(n / max * 100).toFixed(1)}%;--i:${i}"></span></span>
+          <span class="bar-value">${n}</span>
+        </div>`).join('')}
+      </div>`;
+
+      const topGeneros = generos.slice(0, 10);
+      const topDirectores = directores.filter(([, n]) => n > 1).slice(0, 12);
+
+      document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
+        <h1 class="page-heading">Las cifras</h1>
+        <div class="page-sub">Lo que ${DATA.length} findes de cine dejan en números.</div>
+
+        <div class="stat-cards">
+          <div class="stat-card"><div class="k">${films.length}</div><div class="l">Películas</div></div>
+          <div class="stat-card"><div class="k">${horas}</div><div class="l">Horas de cine</div></div>
+          <div class="stat-card"><div class="k">${dias}</div><div class="l">Días seguidos</div></div>
+          <div class="stat-card"><div class="k">${notaMedia.toFixed(1)}</div><div class="l">Nota media</div></div>
+          <div class="stat-card"><div class="k">${Math.round(anioMedio)}</div><div class="l">Año medio</div></div>
+          <div class="stat-card"><div class="k">${directores.length}</div><div class="l">Directores</div></div>
+        </div>
+
+        <h2 class="section-title">Récords del archivo</h2>
+        <div class="section-note">Según las notas de TMDB, con todo el respeto.</div>
+        <div class="record-list">
+          ${records.map(([kind, f, valFn]) => {
+            const url = posterUrl(f.peli.poster, POSTER.xs);
+            return `<a class="record" href="#pelicula/${f.slug}">
+              ${url ? `<img src="${url}" alt="" loading="lazy">` : `<div class="ph">🎬</div>`}
+              <div class="record-body">
+                <div class="record-kind">${kind}</div>
+                <div class="record-title">${plainTitle(f.peli, f.titulo)}</div>
+                <div class="record-meta">${[f.peli.year, f.peli.director].filter(Boolean).join(' · ')}</div>
+              </div>
+              <span class="record-num">${valFn(f)}</span>
+            </a>`;
+          }).join('')}
+        </div>
+
+        <h2 class="section-title">Por década de rodaje</h2>
+        <div class="section-note">En qué época se hicieron las películas que veis.</div>
+        ${bars(decadas, Math.max(...decadas.map(d => d[1])), '', l => `#decada/${parseInt(l)}`)}
+
+        <h2 class="section-title">Géneros favoritos</h2>
+        <div class="section-note">Una película cuenta en todos sus géneros.</div>
+        ${bars(topGeneros, topGeneros[0] ? topGeneros[0][1] : 1, 'alt', l => `#genero/${encodeURIComponent(l)}`)}
+
+        ${topDirectores.length ? `<h2 class="section-title">Directores recurrentes</h2>
+        <div class="section-note">Los que han aparecido más de una vez.</div>
+        ${bars(topDirectores, topDirectores[0][1], 'alt2', l => `#director/${encodeURIComponent(l)}`)}` : ''}
+
+        <h2 class="section-title">Quién trae qué</h2>
+        <div class="section-note">El perfil de cada uno, según lo que ha puesto sobre la mesa.</div>
+        <div class="profile-grid">
+          ${perfiles.map(p => `<div class="profile-item">
+            <div class="pl">${p.findes} findes · ${p.total} pelis</div>
+            <div class="pv"><a href="#persona/${encodeURIComponent(p.nombre)}">${p.nombre}</a></div>
+            <div class="ps">
+              ${p.nota ? `nota ${p.nota.toFixed(1)}` : 'sin notas'}
+              ${p.anio ? ` · año medio ${p.anio}` : ''}
+            </div>
+            ${p.genero ? `<div class="ps">le va el ${p.genero.toLowerCase()}</div>` : ''}
+          </div>`).join('')}
+        </div>
+      </div></section>`;
+    }
+
     /* ── QUIZ ── */
     let QUIZ_DATA = null;
+
+    /* ═══ Quiz Precríticos ═══
+       Las preguntas no están escritas a mano: se generan del propio archivo,
+       así que nunca se repiten dos rondas iguales y siempre están al día. */
+
+    const azar = (arr) => arr[Math.floor(Math.random() * arr.length)];
+    const barajar = (arr) => arr.map(v => [Math.random(), v]).sort((a, b) => a[0] - b[0]).map(v => v[1]);
+    // n elementos distintos, sin repetir.
+    const muestra = (arr, n) => barajar(arr).slice(0, n);
+
+    // En el quiz manda el título en castellano: es por el que las conocéis,
+    // y evita preguntas imposibles del tipo «Krótki film o zabijaniu».
+    function tituloCorto(peli, fallback) {
+      const t = (peli && (peli.titulo_es || peli.titulo)) || fallback || '';
+      return t.length > 60 ? t.slice(0, 57) + '…' : t;
+    }
+
+    // Contexto precalculado: una vez por ronda, no por pregunta.
+    function contextoQuiz() {
+      const findes = DATA.filter(f => f.personas.length);
+      const personas = [...new Set(DATA.flatMap(f => f.personas.map(p => p.nombre)))];
+      const lugares = [...new Set(DATA.flatMap(f => f.lugares))];
+      const pelis = [];
+      for (const f of DATA) for (const p of f.personas) for (const m of p.peliculas) {
+        if (typeof m === 'string' || !m.slug) continue;
+        const ficha = PELI_CACHE[m.slug];
+        pelis.push({ slug: m.slug, titulo: m.titulo, peli: ficha, persona: p.nombre, finde: f });
+      }
+      // Una entrada por película, guardando todas sus apariciones.
+      const porSlug = new Map();
+      for (const e of pelis) {
+        if (!porSlug.has(e.slug)) porSlug.set(e.slug, { ...e, apariciones: [] });
+        porSlug.get(e.slug).apariciones.push({ persona: e.persona, finde: e.finde });
+      }
+      const unicas = [...porSlug.values()];
+      return {
+        findes, personas, lugares, pelis, unicas,
+        conFicha: unicas.filter(e => e.peli),
+        conPoster: unicas.filter(e => e.peli && e.peli.poster),
+        conAnio: unicas.filter(e => e.peli && parseInt(e.peli.year)),
+        conDirector: unicas.filter(e => e.peli && e.peli.director),
+        conNota: unicas.filter(e => e.peli && parseFloat(e.peli.tmdb_rating)),
+        directores: [...new Set(unicas.flatMap(e => e.peli && e.peli.director ? e.peli.director.split(', ') : []))],
+        unaSolaVez: unicas.filter(e => e.apariciones.length === 1)
+      };
+    }
+
+    // Cada generador devuelve una pregunta o null si no hay datos suficientes.
+    const GENERADORES = [
+      // ── Quién trajo qué
+      function quienTrajo(c) {
+        const e = azar(c.unaSolaVez);
+        if (!e || c.personas.length < 4) return null;
+        const correcta = e.apariciones[0].persona;
+        const otras = muestra(c.personas.filter(n => n !== correcta), 3);
+        if (otras.length < 3) return null;
+        return {
+          clave: `quien-${e.slug}`,
+          tipo: 'Quién la trajo',
+          pregunta: `¿Quién trajo <em>${tituloCorto(e.peli, e.titulo)}</em> al Finde #${e.apariciones[0].finde.numero}?`,
+          poster: e.peli && e.peli.poster,
+          opciones: [correcta, ...otras],
+          correcta,
+          explicacion: `La trajo <strong>${correcta}</strong> al Finde #${e.apariciones[0].finde.numero} (${e.apariciones[0].finde.fecha}).`,
+          href: `#pelicula/${e.slug}`
+        };
+      },
+
+      // ── En qué finde se vio
+      function enQueFinde(c) {
+        const e = azar(c.unaSolaVez);
+        if (!e || c.findes.length < 4) return null;
+        const bueno = e.apariciones[0].finde;
+        const otros = muestra(c.findes.filter(f => f.numero !== bueno.numero), 3);
+        if (otros.length < 3) return null;
+        const etiqueta = f => `Finde #${f.numero} · ${f.fecha || '—'}`;
+        return {
+          clave: `finde-${e.slug}`,
+          tipo: 'En qué finde',
+          pregunta: `¿En qué finde se vio <em>${tituloCorto(e.peli, e.titulo)}</em>?`,
+          poster: e.peli && e.peli.poster,
+          opciones: [etiqueta(bueno), ...otros.map(etiqueta)],
+          correcta: etiqueta(bueno),
+          explicacion: `Se vio en el Finde #${bueno.numero}, en ${bueno.lugares.join(' y ')}. La trajo ${e.apariciones[0].persona}.`,
+          href: `#finde/${bueno.numero}`
+        };
+      },
+
+      // ── Dónde se celebró
+      function lugarDelFinde(c) {
+        const f = azar(c.findes);
+        if (!f || c.lugares.length < 4) return null;
+        const bueno = f.lugares[0];
+        const otros = muestra(c.lugares.filter(l => !f.lugares.includes(l)), 3);
+        if (otros.length < 3) return null;
+        return {
+          clave: `lugar-${f.numero}`,
+          tipo: 'Dónde fue',
+          pregunta: `¿Dónde se celebró el Finde #${f.numero}${f.fecha ? ` (${f.fecha})` : ''}?`,
+          poster: null,
+          opciones: [bueno, ...otros],
+          correcta: bueno,
+          explicacion: `El Finde #${f.numero} fue en <strong>${f.lugares.join(' y ')}</strong>, con ${f.personas.length} participantes.`,
+          href: `#finde/${f.numero}`
+        };
+      },
+
+      // ── Qué trajo fulano a tal finde
+      function queTrajoAlFinde(c) {
+        const f = azar(c.findes.filter(x => x.personas.length >= 2));
+        if (!f) return null;
+        const p = azar(f.personas.filter(x => x.peliculas.some(m => typeof m !== 'string' && m.slug)));
+        if (!p) return null;
+        const suya = azar(p.peliculas.filter(m => typeof m !== 'string' && m.slug));
+        const ajenas = f.personas
+          .filter(x => x.nombre !== p.nombre)
+          .flatMap(x => x.peliculas)
+          .filter(m => typeof m !== 'string' && m.slug);
+        const otras = muestra(ajenas, 3);
+        if (otras.length < 3) return null;
+        const et = m => tituloCorto(PELI_CACHE[m.slug], m.titulo);
+        return {
+          clave: `trajo-${f.numero}-${p.nombre}-${suya.slug}`,
+          tipo: 'Quién trajo qué',
+          pregunta: `De estas cuatro del Finde #${f.numero}, ¿cuál trajo <strong>${p.nombre}</strong>?`,
+          poster: null,
+          opciones: [et(suya), ...otras.map(et)],
+          correcta: et(suya),
+          explicacion: `${p.nombre} trajo <em>${et(suya)}</em>. Las otras tres también se vieron ese finde, pero las trajeron otros.`,
+          href: `#finde/${f.numero}`
+        };
+      },
+
+      // ── Cuál NO se vio ahí
+      function cualNoSeVio(c) {
+        const f = azar(c.findes);
+        if (!f) return null;
+        const dentro = f.personas.flatMap(p => p.peliculas).filter(m => typeof m !== 'string' && m.slug);
+        if (dentro.length < 3) return null;
+        const slugsDentro = new Set(dentro.map(m => m.slug));
+        const fuera = azar(c.unicas.filter(e => !slugsDentro.has(e.slug)));
+        if (!fuera) return null;
+        const tres = muestra(dentro, 3);
+        const et = m => tituloCorto(PELI_CACHE[m.slug], m.titulo);
+        const intrusa = tituloCorto(fuera.peli, fuera.titulo);
+        return {
+          clave: `nose-${f.numero}-${fuera.slug}`,
+          tipo: 'La intrusa',
+          pregunta: `¿Cuál de estas <strong>no</strong> se vio en el Finde #${f.numero}?`,
+          poster: null,
+          opciones: [intrusa, ...tres.map(et)],
+          correcta: intrusa,
+          explicacion: `<em>${intrusa}</em> se vio en el Finde #${fuera.apariciones[0].finde.numero}, no en el #${f.numero}.`,
+          href: `#finde/${f.numero}`
+        };
+      },
+
+      // ── Quién dirigió
+      function quienDirigio(c) {
+        const e = azar(c.conDirector);
+        if (!e || c.directores.length < 4) return null;
+        const bueno = e.peli.director.split(', ')[0];
+        const otros = muestra(c.directores.filter(d => !e.peli.director.includes(d)), 3);
+        if (otros.length < 3) return null;
+        return {
+          clave: `dir-${e.slug}`,
+          tipo: 'Quién dirigió',
+          pregunta: `¿Quién dirigió <em>${tituloCorto(e.peli, e.titulo)}</em> (${e.peli.year || '?'})?`,
+          poster: e.peli.poster,
+          opciones: [bueno, ...otros],
+          correcta: bueno,
+          explicacion: `La dirigió <strong>${e.peli.director}</strong>. La trajo ${e.apariciones[0].persona} al Finde #${e.apariciones[0].finde.numero}.`,
+          href: `#director/${encodeURIComponent(bueno)}`
+        };
+      },
+
+      // ── Reconocer el cartel
+      function queCartel(c) {
+        const e = azar(c.conPoster);
+        if (!e) return null;
+        const otras = muestra(c.unicas.filter(x => x.slug !== e.slug), 3);
+        if (otras.length < 3) return null;
+        return {
+          clave: `cartel-${e.slug}`,
+          tipo: 'El cartel',
+          pregunta: `¿De qué película es este cartel?`,
+          poster: e.peli.poster,
+          opciones: [tituloCorto(e.peli, e.titulo), ...otras.map(x => tituloCorto(x.peli, x.titulo))],
+          correcta: tituloCorto(e.peli, e.titulo),
+          explicacion: `Es <em>${tituloCorto(e.peli, e.titulo)}</em>${e.peli.year ? ` (${e.peli.year})` : ''}${e.peli.director ? `, de ${e.peli.director}` : ''}.`,
+          href: `#pelicula/${e.slug}`
+        };
+      },
+
+      // ── La más antigua de cuatro
+      function laMasAntigua(c) {
+        const cuatro = muestra(c.conAnio, 4);
+        if (cuatro.length < 4) return null;
+        const anios = cuatro.map(e => parseInt(e.peli.year));
+        if (new Set(anios).size < 4) return null;
+        const vieja = cuatro.reduce((a, b) => parseInt(a.peli.year) < parseInt(b.peli.year) ? a : b);
+        return {
+          clave: `vieja-${cuatro.map(e => e.slug).sort().join('|')}`,
+          tipo: 'La más antigua',
+          pregunta: '¿Cuál de estas cuatro es la más antigua?',
+          poster: null,
+          opciones: cuatro.map(e => tituloCorto(e.peli, e.titulo)),
+          correcta: tituloCorto(vieja.peli, vieja.titulo),
+          explicacion: cuatro
+            .slice()
+            .sort((a, b) => parseInt(a.peli.year) - parseInt(b.peli.year))
+            .map(e => `${e.peli.year} · ${tituloCorto(e.peli, e.titulo)}`)
+            .join('<br>'),
+          href: `#pelicula/${vieja.slug}`
+        };
+      },
+
+      // ── La mejor valorada de cuatro
+      function laMejorNota(c) {
+        const cuatro = muestra(c.conNota, 4);
+        if (cuatro.length < 4) return null;
+        const notas = cuatro.map(e => parseFloat(e.peli.tmdb_rating));
+        if (new Set(notas).size < 4) return null;
+        const mejor = cuatro.reduce((a, b) => parseFloat(a.peli.tmdb_rating) > parseFloat(b.peli.tmdb_rating) ? a : b);
+        return {
+          clave: `nota-${cuatro.map(e => e.slug).sort().join('|')}`,
+          tipo: 'La mejor valorada',
+          pregunta: '¿Cuál tiene mejor nota en TMDB?',
+          poster: null,
+          opciones: cuatro.map(e => tituloCorto(e.peli, e.titulo)),
+          correcta: tituloCorto(mejor.peli, mejor.titulo),
+          explicacion: cuatro
+            .slice()
+            .sort((a, b) => parseFloat(b.peli.tmdb_rating) - parseFloat(a.peli.tmdb_rating))
+            .map(e => `★ ${fmtRating(e.peli.tmdb_rating)} · ${tituloCorto(e.peli, e.titulo)}`)
+            .join('<br>'),
+          href: `#pelicula/${mejor.slug}`
+        };
+      },
+
+      // ── En qué año fue aquel finde
+      function anioDelFinde(c) {
+        const f = azar(c.findes.filter(x => (x.fecha_sort || '').slice(0, 4).match(/^\d{4}$/)));
+        if (!f) return null;
+        const bueno = f.fecha_sort.slice(0, 4);
+        const posibles = [...new Set(c.findes.map(x => (x.fecha_sort || '').slice(0, 4)))].filter(a => a && a !== bueno);
+        const otros = muestra(posibles, 3);
+        if (otros.length < 3) return null;
+        return {
+          clave: `anio-finde-${f.numero}`,
+          tipo: 'La fecha',
+          pregunta: `¿En qué año se celebró el Finde #${f.numero}, el de ${f.lugares.join(' y ')}?`,
+          poster: null,
+          opciones: [bueno, ...otros],
+          correcta: bueno,
+          explicacion: `Fue en ${f.fecha}, con ${f.personas.length} participantes y ${f.personas.reduce((s, p) => s + p.peliculas.length, 0)} películas.`,
+          href: `#finde/${f.numero}`
+        };
+      },
+
+      // ── De qué año es la película
+      function anioDePeli(c) {
+        const e = azar(c.conAnio);
+        if (!e) return null;
+        const bueno = e.peli.year;
+        const base = parseInt(bueno);
+        const candidatos = [];
+        for (let d = -12; d <= 12; d++) {
+          const a = String(base + d);
+          if (d !== 0 && base + d > 1895 && base + d <= 2026) candidatos.push(a);
+        }
+        const otros = muestra(candidatos, 3);
+        if (otros.length < 3) return null;
+        return {
+          clave: `anio-peli-${e.slug}`,
+          tipo: 'El año',
+          pregunta: `¿De qué año es <em>${tituloCorto(e.peli, e.titulo)}</em>?`,
+          poster: e.peli.poster,
+          opciones: [bueno, ...otros],
+          correcta: bueno,
+          explicacion: `Es de ${bueno}${e.peli.director ? `, de ${e.peli.director}` : ''}. La trajo ${e.apariciones[0].persona} al Finde #${e.apariciones[0].finde.numero}.`,
+          href: `#pelicula/${e.slug}`
+        };
+      },
+
+      // ── Quién trae más de un género
+      function generoDePersona(c) {
+        const p = azar(c.personas);
+        const suyas = c.unicas.filter(e => e.apariciones.some(a => a.persona === p) && e.peli);
+        if (suyas.length < 5) return null;
+        const cuenta = {};
+        for (const e of suyas) for (const g of genresOf(e.peli)) cuenta[g] = (cuenta[g] || 0) + 1;
+        const orden = Object.entries(cuenta).sort((a, b) => b[1] - a[1]);
+        if (orden.length < 4 || orden[0][1] === orden[1][1]) return null;
+        const bueno = orden[0][0];
+        const otros = orden.slice(1).map(x => x[0]);
+        return {
+          clave: `genero-${p}`,
+          tipo: 'Perfil',
+          pregunta: `¿Cuál es el género que más ha traído <strong>${p}</strong>?`,
+          poster: null,
+          opciones: [bueno, ...muestra(otros, 3)],
+          correcta: bueno,
+          explicacion: `${p} ha traído ${orden[0][1]} películas de ${bueno.toLowerCase()}, de ${suyas.length} en total.`,
+          href: `#persona/${encodeURIComponent(p)}`
+        };
+      },
+
+      // ── Quién ha traído más
+      function quienMasPelis(c) {
+        const cuenta = {};
+        for (const e of c.pelis) cuenta[e.persona] = (cuenta[e.persona] || 0) + 1;
+        const orden = Object.entries(cuenta).sort((a, b) => b[1] - a[1]);
+        if (orden.length < 4 || orden[0][1] === orden[1][1]) return null;
+        return {
+          clave: 'quien-mas',
+          tipo: 'Récords',
+          pregunta: '¿Quién ha traído más películas en toda la historia de los findes?',
+          poster: null,
+          opciones: [orden[0][0], ...orden.slice(1, 4).map(x => x[0])],
+          correcta: orden[0][0],
+          explicacion: orden.slice(0, 4).map(([n, v]) => `${n}: ${v} películas`).join('<br>'),
+          href: `#persona/${encodeURIComponent(orden[0][0])}`
+        };
+      },
+
+      // ── Dónde se han hecho más findes
+      function lugarMasFindes(c) {
+        const cuenta = {};
+        for (const f of DATA) for (const l of f.lugares) cuenta[l] = (cuenta[l] || 0) + 1;
+        const orden = Object.entries(cuenta).sort((a, b) => b[1] - a[1]);
+        if (orden.length < 4 || orden[0][1] === orden[1][1]) return null;
+        return {
+          clave: 'lugar-mas',
+          tipo: 'Récords',
+          pregunta: '¿En qué lugar se han celebrado más findes?',
+          poster: null,
+          opciones: [orden[0][0], ...orden.slice(1, 4).map(x => x[0])],
+          correcta: orden[0][0],
+          explicacion: orden.slice(0, 4).map(([n, v]) => `${n}: ${v} findes`).join('<br>'),
+          href: `#lugar/${encodeURIComponent(orden[0][0])}`
+        };
+      }
+    ];
+
+    function generarPreguntas(n) {
+      const c = contextoQuiz();
+      const preguntas = [];
+      const vistas = new Set();
+      const porTipo = {};
+      // Máximo dos preguntas del mismo tipo por ronda, para que no salgan
+      // cuatro carteles seguidos. Se relaja al final si no hay variedad.
+      const tope = (intento) => intento < n * 20 ? 2 : n;
+      // Intentos acotados: algunos generadores fallan si faltan datos.
+      for (let i = 0; i < n * 40 && preguntas.length < n; i++) {
+        const q = azar(GENERADORES)(c);
+        if (!q || vistas.has(q.clave)) continue;
+        if ((porTipo[q.tipo] || 0) >= tope(i)) continue;
+        // Opciones repetidas harían la pregunta ambigua.
+        if (new Set(q.opciones).size !== q.opciones.length) continue;
+        vistas.add(q.clave);
+        porTipo[q.tipo] = (porTipo[q.tipo] || 0) + 1;
+        q.opciones = barajar(q.opciones);
+        preguntas.push(q);
+      }
+      return preguntas;
+    }
+
+    function renderQuizPrecriticos() {
+      const preguntas = generarPreguntas(10);
+      if (!preguntas.length) {
+        document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
+          ${quizCabecera('precriticos')}
+          <div class="empty-state"><div class="empty-icon">🎬</div>
+          <div class="empty-title">No hay datos suficientes</div></div>
+        </div></section>`;
+        return;
+      }
+
+      let actual = 0, aciertos = 0;
+      const fallos = [];
+
+      document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
+        ${quizCabecera('precriticos')}
+        <div class="quiz-arena" style="min-height:auto">
+          <div class="quiz-progress"><span id="quiz-counter">1 / ${preguntas.length}</span></div>
+          <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quiz-bar" style="width:0%"></div></div>
+          <div class="quizp" id="quizp"></div>
+        </div>
+      </div></section>`;
+      engancharModos();
+
+      const pintar = () => {
+        const q = preguntas[actual];
+        document.getElementById('quiz-counter').textContent = `${actual + 1} / ${preguntas.length}`;
+        document.getElementById('quiz-bar').style.width = `${(actual / preguntas.length) * 100}%`;
+        document.getElementById('quizp').innerHTML = `
+          <div class="quizp-card">
+            <div class="quizp-kind">${q.tipo}</div>
+            ${q.poster ? `<img class="quizp-poster" src="${posterUrl(q.poster, POSTER.md)}" alt="">` : ''}
+            <div class="quizp-question">${q.pregunta}</div>
+            <div class="quizp-options" id="quizp-options">
+              ${q.opciones.map((o, i) => `<button class="quizp-option" data-op="${i}">
+                <span class="letra">${'ABCD'[i]}</span><span>${o}</span>
+              </button>`).join('')}
+            </div>
+            <div id="quizp-tras"></div>
+          </div>`;
+
+        document.querySelectorAll('#quizp-options .quizp-option').forEach(btn => {
+          btn.addEventListener('click', () => responder(q, parseInt(btn.dataset.op)));
+        });
+      };
+
+      const responder = (q, elegida) => {
+        const botones = [...document.querySelectorAll('#quizp-options .quizp-option')];
+        const idxCorrecta = q.opciones.indexOf(q.correcta);
+        const acertada = elegida === idxCorrecta;
+        if (acertada) aciertos++; else fallos.push(q);
+
+        botones.forEach((b, i) => {
+          b.disabled = true;
+          if (i === idxCorrecta) b.classList.add('is-correct');
+          else if (i === elegida) b.classList.add('is-wrong');
+          else b.classList.add('is-dim');
+        });
+
+        const ultima = actual === preguntas.length - 1;
+        document.getElementById('quizp-tras').innerHTML = `
+          <div class="quizp-feedback">
+            <strong>${acertada ? '✅' : '❌'} ${acertada ? 'Correcto' : 'Casi'}</strong> — ${q.explicacion}
+            <div style="margin-top:.4rem"><a href="${q.href}">Ver ficha →</a></div>
+          </div>
+          <button class="quizp-next" id="quizp-next">${ultima ? 'Ver resultado' : 'Siguiente →'}</button>`;
+
+        document.getElementById('quizp-next').addEventListener('click', () => {
+          if (ultima) resultado();
+          else { actual++; pintar(); }
+        });
+      };
+
+      const resultado = () => {
+        const pct = Math.round((aciertos / preguntas.length) * 100);
+        const circ = 2 * Math.PI * 58;
+        let emoji, msg;
+        if (pct === 100) { emoji = '🏆'; msg = 'Pleno. Te sabes el archivo de memoria.'; }
+        else if (pct >= 70) { emoji = '🎬'; msg = 'Muy bien: has estado atento todos estos años.'; }
+        else if (pct >= 40) { emoji = '🍿'; msg = 'Aprobado raspado. Toca repasar findes.'; }
+        else { emoji = '😴'; msg = '¿Seguro que no te dormías en las proyecciones?'; }
+
+        document.getElementById('quiz-counter').textContent = `${preguntas.length} / ${preguntas.length}`;
+        document.getElementById('quiz-bar').style.width = '100%';
+        document.getElementById('quizp').innerHTML = `
+          <div class="quiz-results" style="max-width:none;margin:0 auto">
+            <div style="font-size:3rem;margin-bottom:.5rem">${emoji}</div>
+            <div class="quiz-score-ring">
+              <svg width="140" height="140" viewBox="0 0 140 140">
+                <circle class="ring-bg" cx="70" cy="70" r="58" fill="none" stroke-width="8" />
+                <circle class="ring-fg" cx="70" cy="70" r="58" fill="none" stroke-width="8"
+                  stroke-linecap="round" stroke-dasharray="${circ}" stroke-dashoffset="${circ}" />
+              </svg>
+              <div class="quiz-score-text">
+                <div class="quiz-score-num">${aciertos}/${preguntas.length}</div>
+                <div class="quiz-score-label">aciertos</div>
+              </div>
+            </div>
+            <div style="font-family:var(--ff-display);font-size:1.1rem;margin-bottom:1rem">${msg}</div>
+            <button class="quizp-next" id="quizp-otra" style="max-width:260px;margin:0 auto"><span style="margin-right:.35rem">🔄</span>Otra ronda</button>
+            ${fallos.length ? `<div class="quizp-review">
+              <h2 class="section-title" style="margin-top:1.5rem">Lo que se te escapó</h2>
+              ${fallos.map(q => `<div class="quizp-review-item">
+                <div class="quizp-review-q">${q.pregunta}</div>
+                <div class="quizp-review-a">${q.correcta}</div>
+              </div>`).join('')}
+            </div>` : ''}
+          </div>`;
+
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          const anillo = document.querySelector('.ring-fg');
+          if (anillo) anillo.style.strokeDashoffset = circ - (pct / 100) * circ;
+        }));
+        document.getElementById('quizp-otra').addEventListener('click', renderQuizPrecriticos);
+      };
+
+      pintar();
+    }
+
+    /* ── Selector de modo ── */
+    function quizModo() {
+      return localStorage.getItem('fp-quiz-modo') === 'cine' ? 'cine' : 'precriticos';
+    }
+
+    function quizCabecera(modo) {
+      return `<h1 class="page-heading" style="text-align:center">Quiz</h1>
+        <div class="quiz-modes">
+          <div class="segmented" id="quiz-modes">
+            <button data-modo="precriticos" class="${modo === 'precriticos' ? 'is-active' : ''}">Precríticos</button>
+            <button data-modo="cine" class="${modo === 'cine' ? 'is-active' : ''}">Cine general</button>
+          </div>
+        </div>`;
+    }
+
+    function engancharModos() {
+      document.querySelectorAll('#quiz-modes button').forEach(b => {
+        b.addEventListener('click', () => {
+          if (b.dataset.modo === quizModo()) return;
+          localStorage.setItem('fp-quiz-modo', b.dataset.modo);
+          renderQuiz();
+        });
+      });
+    }
+
+    function renderQuiz() {
+      if (quizModo() === 'cine') renderQuizCine();
+      else renderQuizPrecriticos();
+    }
 
     async function loadQuiz() {
       if (QUIZ_DATA) return QUIZ_DATA;
@@ -1876,12 +3147,12 @@
       return QUIZ_DATA || [];
     }
 
-    async function renderQuiz() {
+    async function renderQuizCine() {
       const questions = await loadQuiz();
       if (!questions.length) {
         document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
-          <h1 class="page-heading">Quiz</h1>
-          <p style="color:var(--tx-2)">No se pudieron cargar las preguntas.</p>
+          ${quizCabecera('cine')}
+          <p style="color:var(--tx-2);text-align:center">No se pudieron cargar las preguntas.</p>
         </div></section>`;
         return;
       }
@@ -1894,7 +3165,7 @@
 
       function renderShell() {
         document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
-          <h1 class="page-heading" style="text-align:center">Quiz 🎬</h1>
+          ${quizCabecera('cine')}
           <div class="quiz-arena">
             <div class="quiz-progress">
               <span id="quiz-counter">1 / ${shuffled.length}</span>
@@ -1912,6 +3183,7 @@
             </div>
           </div>
         </div></section>`;
+        engancharModos();
       }
 
       function showCard() {
@@ -1923,7 +3195,7 @@
         document.getElementById('quiz-bar').style.width = `${(current / shuffled.length) * 100}%`;
 
         const posterHtml = peli && peli.poster
-          ? `<img class="quiz-card-poster" src="${peli.poster}" alt="" draggable="false">`
+          ? `<img class="quiz-card-poster" src="${posterUrl(peli.poster, POSTER.md)}" alt="" draggable="false">`
           : `<div class="quiz-card-poster-ph">🎬</div>`;
 
         wrapper.innerHTML = `
@@ -2025,7 +3297,7 @@
         });
 
         document.getElementById('quiz-retry').addEventListener('click', () => {
-          renderQuiz();
+          renderQuizCine();
         });
       }
 
@@ -2203,10 +3475,20 @@
         const count = DATA.filter(f => f.lugares.includes(l)).length;
         SEARCH_INDEX.push({ type:'lugar', label:l, sub:`${count} findes`, search:l, href:`#lugar/${encodeURIComponent(l)}`, poster:null, boost:2 });
       }
+      const generos = {};
+      for (const [slug, p] of Object.entries(PELI_CACHE)) {
+        if (!p || !seenSlugs.has(slug)) continue;
+        for (const g of genresOf(p)) generos[g] = (generos[g] || 0) + 1;
+      }
+      for (const [g, n] of Object.entries(generos)) {
+        SEARCH_INDEX.push({ type:'genero', label:g, sub:`${n} película${n !== 1 ? 's' : ''}`, search:g, href:`#genero/${encodeURIComponent(g)}`, poster:null, boost:1 });
+      }
       for (const f of DATA) {
         SEARCH_INDEX.push({ type:'finde', label:`Finde #${f.numero}`, sub:`${f.fecha} · ${f.lugares.join(', ')}`, search:`Finde ${f.numero} ${f.fecha} ${f.lugares.join(' ')}`, href:`#finde/${f.numero}`, poster:null, boost:1 });
       }
     }
+
+    const SR_LABEL = { pelicula:'Película', persona:'Persona', lugar:'Lugar', finde:'Finde', director:'Director', genero:'Género' };
 
     /* ── Search UI ── */
     let searchSelectedIdx = -1;
@@ -2254,12 +3536,12 @@
       }
       results.innerHTML = matches.map((m, i) => {
         const posterHtml = m.poster
-          ? `<img src="${m.poster}" alt="" loading="lazy">`
-          : `<div class="sr-placeholder">${{pelicula:'🎬',persona:'👤',lugar:'📍',finde:'📅',director:'🎥'}[m.type]||'•'}</div>`;
+          ? `<img src="${posterUrl(m.poster, POSTER.xs)}" alt="" loading="lazy">`
+          : `<div class="sr-placeholder">${{pelicula:'🎬',persona:'👤',lugar:'📍',finde:'📅',director:'🎥',genero:'🏷️'}[m.type]||'•'}</div>`;
         return `<div class="sr-item" data-href="${m.href}" data-idx="${i}">
           ${posterHtml}
           <div class="sr-text"><div class="sr-title">${highlightMatch(m.label, query)}</div><div class="sr-sub">${m.sub}</div></div>
-          <span class="sr-type ${m.type}">${m.type}</span>
+          <span class="sr-type ${m.type}">${SR_LABEL[m.type] || m.type}</span>
         </div>`;
       }).join('');
       results.classList.add('open');

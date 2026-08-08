@@ -1,9 +1,9 @@
 {
   "titulo": "5 Condiciones",
   "slug": "5-condiciones",
-  "imdb_id": null,
-  "year": null,
-  "director": null,
+  "imdb_id": "tt0354575",
+  "year": "2003",
+  "director": "Lars von Trier, Jørgen Leth",
   "plot": null,
   "poster": null,
   "genre": null,
@@ -14,5 +14,9 @@
   ],
   "findes": [
     11
-  ]
+  ],
+  "tmdb_id": null,
+  "tmdb_rating": null,
+  "titulo_original": "De fem benspænd",
+  "titulo_es": "Cinco condiciones"
 }

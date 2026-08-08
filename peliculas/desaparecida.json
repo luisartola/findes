@@ -1,22 +1,22 @@
 {
   "titulo": "Desaparecida",
   "slug": "desaparecida",
-  "imdb_id": null,
-  "year": "2022",
-  "director": "Valeria Mancheva, Fabián Archondo",
+  "imdb_id": "tt1132285",
+  "year": "2012",
+  "director": "Morgan O'Neill",
   "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/dRPgytPevaUgj9BdGIwWku2duo6.jpg",
+  "poster": null,
   "genre": null,
   "imdb_rating": null,
-  "runtime": "16 min",
+  "runtime": null,
   "traida_por": [
     "Romulo"
   ],
   "findes": [
     15
   ],
-  "tmdb_id": 1019223,
+  "tmdb_id": null,
   "titulo_es": "Desaparecida",
-  "titulo_original": "Desaparecida",
-  "tmdb_rating": 7.0
+  "titulo_original": "The Factory",
+  "tmdb_rating": null
 }

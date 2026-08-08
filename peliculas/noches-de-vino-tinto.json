@@ -1,9 +1,9 @@
 {
   "titulo": "Noches de vino tinto",
   "slug": "noches-de-vino-tinto",
-  "imdb_id": null,
-  "year": null,
-  "director": null,
+  "imdb_id": "tt0060757",
+  "year": "1966",
+  "director": "José María Nunes",
   "plot": null,
   "poster": null,
   "genre": null,
@@ -14,5 +14,9 @@
   ],
   "findes": [
     25
-  ]
+  ],
+  "tmdb_id": null,
+  "tmdb_rating": null,
+  "titulo_original": "Noche de vino tinto",
+  "titulo_es": "Noche de vino tinto"
 }
