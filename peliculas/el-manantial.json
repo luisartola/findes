@@ -1,22 +1,22 @@
 {
   "titulo": "El manantial",
   "slug": "el-manantial",
-  "imdb_id": null,
-  "year": "2018",
-  "director": "Andres Rodriguez, Luis Rodriguez",
+  "imdb_id": "tt0041386",
+  "year": "1949",
+  "director": "King Vidor",
   "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/aDJnvTnS5Q2SKOTXnW6E8XeHT2t.jpg",
+  "poster": null,
   "genre": null,
   "imdb_rating": null,
-  "runtime": "12 min",
+  "runtime": null,
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     21
   ],
-  "tmdb_id": 733040,
-  "titulo_es": "El Manantial",
-  "titulo_original": "El Manantial",
+  "tmdb_id": null,
+  "titulo_es": "El manantial",
+  "titulo_original": "The Fountainhead",
   "tmdb_rating": null
 }

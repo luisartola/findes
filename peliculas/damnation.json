@@ -1,22 +1,22 @@
 {
   "titulo": "Damnation",
   "slug": "damnation",
-  "imdb_id": null,
-  "year": "2006",
-  "director": "Sean Rooney",
+  "imdb_id": "tt0095475",
+  "year": "1988",
+  "director": "Béla Tarr",
   "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/55iZJtFZElfX2rLhuFPR7yeGuGF.jpg",
-  "genre": "Terror",
+  "poster": null,
+  "genre": null,
   "imdb_rating": null,
-  "runtime": "3 min",
+  "runtime": null,
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     8
   ],
-  "tmdb_id": 827255,
-  "titulo_es": "Damnation",
-  "titulo_original": "Damnation",
+  "tmdb_id": null,
+  "titulo_es": "Condenación",
+  "titulo_original": "Kárhozat",
   "tmdb_rating": null
 }

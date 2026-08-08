@@ -1,22 +1,22 @@
 {
   "titulo": "El pistolero",
   "slug": "el-pistolero",
-  "imdb_id": null,
-  "year": null,
-  "director": "Ariana Durazo",
+  "imdb_id": "tt0042531",
+  "year": "1950",
+  "director": "Henry King",
   "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/l9EeD1ySPfIEFAKQNSmpCKKk75W.jpg",
-  "genre": "Comedia, Drama",
+  "poster": null,
+  "genre": null,
   "imdb_rating": null,
-  "runtime": "20 min",
+  "runtime": null,
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     1
   ],
-  "tmdb_id": 1468550,
-  "titulo_es": "El Pistolero",
-  "titulo_original": "El Pistolero",
+  "tmdb_id": null,
+  "titulo_es": "El pistolero",
+  "titulo_original": "The Gunfighter",
   "tmdb_rating": null
 }

@@ -1,22 +1,22 @@
 {
   "titulo": "Serie negra",
   "slug": "serie-negra",
-  "imdb_id": null,
-  "year": "2012",
-  "director": "José Carballo",
+  "imdb_id": "tt0079980",
+  "year": "1979",
+  "director": "Alain Corneau",
   "plot": null,
-  "poster": "https://image.tmdb.org/t/p/w500/6o8LT1CscTJGofXwDJF58d8EL68.jpg",
+  "poster": null,
   "genre": null,
   "imdb_rating": null,
-  "runtime": "5 min",
+  "runtime": null,
   "traida_por": [
     "Hypnos"
   ],
   "findes": [
     15
   ],
-  "tmdb_id": 708651,
+  "tmdb_id": null,
   "titulo_es": "Serie negra",
-  "titulo_original": "Serie negra",
+  "titulo_original": "Série noire",
   "tmdb_rating": null
 }

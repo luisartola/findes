@@ -21,40 +21,75 @@
       --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
       --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
+      /* ── Claro: «cinemateca». Papel, tinta y granate de catálogo. ── */
       --bg: #faf8f3;
       --bg-raised: #f3efe8;
-      --bg-inset: #ece7de;
+      --bg-inset: #eae4d9;
       --tx: #1c1814;
-      --tx-2: #5e564b;
-      --tx-3: #918778;
-      --border: #ddd7cc;
-      --wine: #8b2635;
-      --wine-soft: #c4546a;
-      --wine-bg: #f7ecee;
-      --gold: #a8872a;
-      --gold-bg: #faf4e4;
-      --teal: #3a7a5f;
-      --blue: #3d6b8e;
-      --purple: #6b4d8a;
+      --tx-2: #5b5348;
+      --tx-3: #948977;
+      --border: #ddd6c8;
+      --border-strong: #1c1814;   /* filete grueso bajo los titulares */
+
+      /* --acc es el color de marca. En oscuro pasa a ámbar de proyector,
+         por eso los alias --wine* apuntan aquí en vez de a un valor fijo. */
+      --acc: #8b2635;
+      --acc-soft: #a83d4d;
+      --acc-bg: #f6eaec;
+      --wine: var(--acc);
+      --wine-soft: var(--acc-soft);
+      --wine-bg: var(--acc-bg);
+
+      --gold: #9a7b28;
+      --gold-bg: #f7f1e0;
+      /* Secundarios apagados: antes competían con el acento. */
+      --teal: #4a6b57;
+      --blue: #4a6076;
+      --purple: #5f4f72;
+
+      --grain: 0;
+      --poster-filter: none;
+      --tile-shadow: 0 2px 10px rgba(28,24,20,.10);
+      --tile-shadow-hover: 0 10px 26px rgba(28,24,20,.18);
     }
 
+    /* ── Oscuro: «sala oscura». Casi negro, luz cálida de proyector. ── */
     [data-theme="dark"] {
-      --bg: #13110f;
-      --bg-raised: #1d1a16;
-      --bg-inset: #252220;
-      --tx: #e4ded4;
-      --tx-2: #a39a8d;
-      --tx-3: #6e665c;
-      --border: #302c27;
-      --wine: #d4647a;
-      --wine-soft: #e8899a;
-      --wine-bg: #2a1a1e;
-      --gold: #d4b24a;
-      --gold-bg: #24200f;
-      --teal: #5cb88a;
-      --blue: #6ab0db;
-      --purple: #9d7ec2;
+      --bg: #0e0d0c;
+      --bg-raised: #171513;
+      --bg-inset: #221f1b;
+      --tx: #ece5d8;
+      --tx-2: #a89c8a;
+      --tx-3: #6f6558;
+      --border: #2b2724;
+      --border-strong: #4a443c;
+
+      --acc: #e0a253;
+      --acc-soft: #f0bd7d;
+      --acc-bg: #241a0e;
+
+      --gold: #d9b25c;
+      --gold-bg: #241d10;
+      --teal: #7fae8e;
+      --blue: #8aa4bd;
+      --purple: #a693bd;
+
+      --grain: .28;
+      --poster-filter: brightness(.94);
+      --tile-shadow: 0 0 0 1px rgba(255,255,255,.06), 0 8px 22px rgba(0,0,0,.55);
+      --tile-shadow-hover: 0 0 0 1px rgba(224,162,83,.35), 0 14px 32px rgba(0,0,0,.65), 0 0 26px rgba(224,162,83,.15);
     }
+
+    /* Grano de proyección: solo visible en oscuro (--grain: 0 en claro). */
+    body::after {
+      content: '';
+      position: fixed; inset: 0;
+      pointer-events: none; z-index: 9999;
+      opacity: var(--grain);
+      transition: opacity .35s var(--ease-out-quart);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+    }
+    @media (prefers-reduced-motion: reduce) { body::after { display: none; } }
 
     /* ═══ Bulma Overrides ═══ */
     html { background: var(--bg); }
@@ -190,46 +225,115 @@
     .breadcrumb li + li::before { color: var(--tx-3) !important; }
 
     /* ═══ Hero / Home ═══ */
+    .eyebrow {
+      font-size: .68rem; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--tx-3);
+    }
     .home-hero {
-      padding: 3rem 0 2.5rem;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 2.5rem;
+      padding: 2.5rem 0 1rem;
+      border-bottom: 2px solid var(--border-strong);
+      margin-bottom: 0;
     }
     .home-hero .display-title {
       font-family: var(--ff-display);
       font-size: clamp(2.2rem, 1.5rem + 3.5vw, 4.2rem);
-      line-height: 1.05;
+      line-height: 1.02;
       color: var(--tx);
-      margin-bottom: .35rem;
-      letter-spacing: -.02em;
+      margin: .4rem 0 .2rem;
+      letter-spacing: -.025em;
     }
     .home-hero .display-sub {
       font-family: var(--ff-display);
       font-style: italic;
-      font-size: clamp(1rem, 0.8rem + 1vw, 1.4rem);
+      font-size: clamp(1rem, .8rem + 1vw, 1.35rem);
       color: var(--tx-3);
+      margin: 0 0 .1rem;
     }
 
-    /* Level stats */
-    .level.stats-level { margin: 2rem 0; }
-    .stats-level .level-item { flex-direction: column; }
-    .stats-level .stat-num {
-      font-family: var(--ff-display);
-      font-size: clamp(2rem, 1.5rem + 2vw, 3.2rem);
-      line-height: 1;
-      color: var(--wine);
-      font-variant-numeric: tabular-nums;
+    /* Cifras del archivo, en fila y con versalitas (estilo ficha de catálogo) */
+    .ledger {
+      display: flex; flex-wrap: wrap; gap: 1.6rem;
+      padding: .7rem 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+    .ledger a {
+      display: inline-flex; align-items: baseline; gap: .45rem;
+      text-decoration: none;
+      font-size: .7rem; font-weight: 600;
+      letter-spacing: .13em; text-transform: uppercase;
+      color: var(--tx-3);
       transition: color .15s;
     }
-    .stats-level a:hover .stat-num { color: var(--wine-soft); }
-    .stats-level a:hover .stat-label { color: var(--wine); }
-    .stats-level .stat-label {
-      font-size: .78rem;
-      color: var(--tx-3);
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-weight: 500;
-      margin-top: .2rem;
+    .ledger a b {
+      font-size: .95rem; letter-spacing: 0;
+      color: var(--acc); font-variant-numeric: tabular-nums;
+    }
+    .ledger a:hover { color: var(--tx); }
+    .ledger a:hover b { color: var(--acc-soft); }
+    @media screen and (max-width: 560px) { .ledger { gap: .9rem 1.1rem; } }
+
+    /* Tira de fotogramas: en claro entra en gris y se colorea al pasar;
+       en oscuro se queda a color y se ilumina. */
+    .filmstrip {
+      display: flex; gap: .35rem;
+      margin-bottom: 1.75rem;
+      overflow: hidden;
+    }
+    .filmstrip a {
+      flex: 1 1 0; min-width: 0;
+      border-radius: 2px; overflow: hidden;
+      line-height: 0;
+    }
+    .filmstrip img {
+      width: 100%; aspect-ratio: 2/3; object-fit: cover; display: block;
+      filter: grayscale(1) contrast(1.04);
+      transition: filter .35s var(--ease-out-quart), transform .35s var(--ease-out-quart);
+    }
+    .filmstrip a:hover img { filter: none; transform: scale(1.04); }
+    [data-theme="dark"] .filmstrip img { filter: brightness(.7) contrast(1.05); }
+    [data-theme="dark"] .filmstrip a:hover img { filter: brightness(1.05); }
+    @media screen and (max-width: 700px) {
+      .filmstrip a:nth-child(n+7) { display: none; }
+    }
+    @media screen and (max-width: 460px) {
+      .filmstrip a:nth-child(n+5) { display: none; }
+    }
+
+    /* Filas del archivo: sustituyen a las tarjetas de finde */
+    .archive-row {
+      display: grid;
+      grid-template-columns: 2.8rem 1fr auto;
+      align-items: baseline;
+      gap: 1rem;
+      padding: .75rem .25rem;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none; color: inherit;
+      transition: background .15s, padding-left .15s var(--ease-out-quart);
+    }
+    .archive-row:hover { background: var(--bg-raised); padding-left: .6rem; }
+    .ar-num {
+      font-family: var(--ff-display);
+      font-size: 1.5rem; line-height: 1;
+      color: var(--acc);
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+    }
+    .ar-body { min-width: 0; }
+    .ar-date { display: block; font-weight: 600; font-size: .95rem; color: var(--tx); }
+    .ar-place {
+      display: flex; align-items: center; gap: .35rem;
+      font-size: .78rem; color: var(--tx-3); margin-top: .1rem;
+    }
+    .ar-count {
+      font-size: .68rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: var(--tx-3); white-space: nowrap;
+    }
+    @media screen and (max-width: 560px) {
+      .archive-row { grid-template-columns: 2.2rem 1fr; gap: .7rem; }
+      .ar-count { grid-column: 2; margin-top: .15rem; }
     }
 
     /* ═══ Cards ═══ */
@@ -237,13 +341,14 @@
       background: var(--bg-raised);
       border: 1px solid var(--border);
       box-shadow: none;
-      border-radius: 8px;
-      transition: border-color .2s var(--ease-out-quart), transform .2s var(--ease-out-quart);
+      border-radius: 5px;
+      transition: border-color .2s var(--ease-out-quart), transform .2s var(--ease-out-quart), box-shadow .2s;
     }
     .card:hover {
-      border-color: var(--wine);
+      border-color: var(--acc);
       transform: translateY(-2px);
     }
+    [data-theme="dark"] .card:hover { box-shadow: var(--tile-shadow); }
     .card .card-content { padding: 1.15rem; }
     .card-header {
       background: transparent;
@@ -264,31 +369,6 @@
       padding: .65rem;
     }
     .card-footer-item:hover { color: var(--wine) !important; background: var(--bg-inset); }
-
-    /* Finde cards on home */
-    .finde-card-link {
-      text-decoration: none; color: inherit; display: block;
-    }
-    .finde-card-link .card-content {
-      display: flex; align-items: center; gap: .85rem;
-    }
-    .finde-num {
-      font-family: var(--ff-display);
-      font-size: 1.5rem;
-      color: var(--wine);
-      min-width: 2.8rem;
-      text-align: center;
-      flex-shrink: 0;
-      line-height: 1;
-    }
-    .finde-info { flex: 1; min-width: 0; }
-    .finde-date { font-weight: 600; font-size: .92rem; }
-    .finde-lugar { font-size: .8rem; color: var(--tx-3); margin-top: .1rem; }
-    .finde-card-link .card-content {
-      display: flex; align-items: center; gap: .85rem;
-      overflow: visible;
-    }
-    .finde-pelis { flex-shrink: 0; font-size: .78rem; color: var(--tx-3); white-space: nowrap; }
 
     /* ═══ Panels (person movie lists) ═══ */
     .panel {
@@ -319,7 +399,6 @@
     .panel-block:last-child { border-bottom: none; border-radius: 0 0 8px 8px; }
     .panel-block a { color: var(--wine); text-decoration: none; }
     .panel-block a:hover { text-decoration: underline; }
-    .panel-block .panel-icon { color: var(--tx-3); margin-right: .5rem; }
     .peli-es { opacity: .5; font-size: .85em; }
 
     /* ═══ Tags ═══ */
@@ -375,8 +454,8 @@
 
     /* ═══ Movie Detail ═══ */
     .peli-poster-img {
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0,0,0,.12);
+      border-radius: 6px;
+      box-shadow: var(--tile-shadow);
       width: 100%;
       max-width: 240px;
       margin-bottom: .5rem;
@@ -387,13 +466,6 @@
       line-height: 1.1;
       margin-bottom: .4rem;
       letter-spacing: -.01em;
-    }
-    .peli-meta-line {
-      font-size: .88rem;
-      color: var(--tx-2);
-      margin-bottom: .5rem;
-      font-style: italic;
-      font-family: var(--ff-display);
     }
     .peli-rating {
       display: inline-flex; align-items: center; gap: .35rem;
@@ -422,14 +494,16 @@
     .page-heading {
       font-family: var(--ff-display);
       font-size: clamp(1.6rem, 1.2rem + 2vw, 2.8rem);
-      line-height: 1.1;
-      margin-bottom: .6rem;
-      letter-spacing: -.02em;
+      line-height: 1.05;
+      margin-bottom: .35rem;
+      letter-spacing: -.025em;
     }
     .page-sub {
-      font-size: .9rem;
+      font-size: .88rem;
       color: var(--tx-2);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: .9rem;
+      border-bottom: 1px solid var(--border);
     }
     .page-sub a { color: var(--wine); }
 
@@ -499,9 +573,6 @@
       .card .card-content { padding: 1rem; }
       .panel-heading { padding: .7rem 1rem; }
       .panel-block { padding: .6rem 1rem; }
-      /* Stats: tighter on tiny screens but still readable */
-      .stats-level { gap: .5rem; }
-      .stats-level .stat-num { font-size: 1.8rem; }
       /* Poster column: center & breathe */
       .peli-poster-img { max-width: 180px; }
       /* Breadcrumb nudge */
@@ -905,12 +976,79 @@
       letter-spacing: .05em;
     }
 
+    /* ═══ Iconos ═══ */
+    .ico {
+      width: 1em; height: 1em;
+      stroke: currentColor; fill: none;
+      stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;
+      vertical-align: -.13em; flex-shrink: 0;
+    }
+    .ico-estrella { fill: currentColor; stroke: none; }
+
+    .brand-ico { width: 1.05em; height: 1.05em; stroke-width: 1.5; }
+    .navbar-brand > .navbar-item .ico { color: var(--acc); }
+    .theme-toggle .ico { width: 1.15rem; height: 1.15rem; }
+
+    /* Línea de metadatos en la ficha de película */
+    .peli-line {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .92rem; margin-bottom: .45rem; color: var(--tx);
+    }
+    .peli-line .ico { color: var(--tx-3); width: 1.05rem; height: 1.05rem; }
+    .peli-line-muted { font-size: .86rem; color: var(--tx-2); }
+    .peli-rating .ico { width: .95em; height: .95em; }
+
+    .avatar-dir { background: var(--bg-inset); color: var(--tx-2); }
+    .avatar-dir .ico { width: 1.25rem; height: 1.25rem; }
+    .film-poster-ph .ico, .sr-placeholder .ico { width: .95rem; height: .95rem; color: var(--tx-3); }
+    .poster-tile-img .ph .ico { width: 1.6rem; height: 1.6rem; color: var(--tx-3); }
+    .record .ph .ico { width: 1rem; height: 1rem; color: var(--tx-3); }
+    .panel-block.film-line .ph .ico { width: .8rem; height: .8rem; color: var(--tx-3); }
+    .empty-state .empty-icon .ico { width: 2rem; height: 2rem; stroke-width: 1.2; }
+    .result-ico { margin-bottom: .5rem; color: var(--acc); }
+    .result-ico .ico { width: 2.6rem; height: 2.6rem; stroke-width: 1.2; }
+    .quiz-btn .ico { width: 1.4rem; height: 1.4rem; stroke-width: 2; }
+    .quizp-feedback .ico { width: .95rem; height: .95rem; stroke-width: 2.2; }
+    .quiz-card-poster-ph .ico { width: 2rem; height: 2rem; color: var(--tx-3); }
+    .quizp-next .ico { width: .95rem; height: .95rem; }
+    .chip .ico, .bar-label .ico { width: .85rem; height: .85rem; }
+
+    /* ═══ Marcador de película sin cartel ═══ */
+    .poster-ph {
+      display: flex; align-items: center; justify-content: center;
+      background: var(--bg-inset);
+      border: 1px solid var(--border);
+      color: var(--tx-3);
+      font-family: var(--ff-display);
+      line-height: 1;
+      overflow: hidden;
+    }
+    .poster-ph span { opacity: .75; }
+    .film-poster-ph.poster-ph { font-size: 1.05rem; border-radius: 3px; }
+    .ph.poster-ph { font-size: 1.4rem; border-radius: 3px; width: 100%; height: 100%; }
+    .panel-block.film-line .ph.poster-ph { font-size: .85rem; }
+    .record .ph.poster-ph { font-size: 1.1rem; }
+    .poster-ph-md {
+      width: 60px; height: 90px; border-radius: 4px; flex-shrink: 0; font-size: 1.6rem;
+    }
+    .sr-placeholder.poster-ph { font-size: .95rem; }
+    .quiz-card-poster-ph.poster-ph { font-size: 3rem; }
+
+    /* Fila de archivo: variante con icono en vez de número */
+    .ar-ico {
+      display: flex; align-items: center; justify-content: flex-end;
+      color: var(--tx-3); font-size: 1.05rem; align-self: center;
+    }
+    .archive-row:hover .ar-ico { color: var(--acc); }
+    .ar-clip { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
     /* ═══ Loading ═══ */
     .loading-state {
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       min-height: 55vh; gap: .9rem;
     }
-    .loading-reel { font-size: 2.5rem; animation: spin 2.4s linear infinite; }
+    .loading-reel { color: var(--acc); display: flex; animation: spin 3s linear infinite; }
+    .loading-reel .ico { width: 2.4rem; height: 2.4rem; stroke-width: 1.2; }
     @keyframes spin { to { transform: rotate(360deg); } }
     .loading-text {
       font-family: var(--ff-display); font-style: italic;
@@ -983,10 +1121,13 @@
       width: 100%; height: 100%; display: flex; align-items: center;
       justify-content: center; font-size: 1.5rem;
     }
+    .poster-tile-img { box-shadow: var(--tile-shadow); }
     .poster-tile:hover .poster-tile-img {
-      transform: translateY(-3px); border-color: var(--wine);
-      box-shadow: 0 8px 22px rgba(0,0,0,.14);
+      transform: translateY(-3px); border-color: var(--acc);
+      box-shadow: var(--tile-shadow-hover);
     }
+    .poster-tile-img img { filter: var(--poster-filter); transition: filter .25s; }
+    .poster-tile:hover .poster-tile-img img { filter: none; }
     .poster-tile-cap {
       font-size: .76rem; font-weight: 600; margin-top: .4rem; line-height: 1.25;
       display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
@@ -1021,7 +1162,9 @@
     .section-title {
       font-family: var(--ff-display); font-size: 1.35rem;
       margin: 2.25rem 0 .35rem; color: var(--tx);
+      padding-bottom: .4rem; border-bottom: 1px solid var(--border);
     }
+    .section-note { margin-top: .5rem; }
     .section-note { font-size: .8rem; color: var(--tx-3); margin-bottom: 1rem; }
 
     .bars { display: flex; flex-direction: column; gap: .4rem; }
@@ -1147,7 +1290,7 @@
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="#">🎬 Findes Precríticos</a>
+        <a class="navbar-item" href="#"><svg class="ico brand-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg> Findes Precríticos</a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -1176,11 +1319,11 @@
           </div>
           <div class="navbar-item nav-actions">
             <button class="theme-toggle" id="random-film" title="Película al azar" aria-label="Película al azar">
-              🎲<span class="action-label">Al azar</span>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="6.6" r="1.7"/><circle cx="16.7" cy="14.7" r="1.7"/><circle cx="7.3" cy="14.7" r="1.7"/></svg><span class="action-label">Al azar</span>
             </button>
             <button class="theme-toggle" id="theme-toggle" title="Cambiar tema" aria-label="Cambiar tema">
-              <span class="icon-moon">🌙</span>
-              <span class="icon-sun">☀️</span>
+              <span class="icon-moon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></span>
+              <span class="icon-sun"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg></span>
               <span class="action-label">Tema</span>
             </button>
           </div>
@@ -1280,7 +1423,7 @@
     function showLoading() {
       document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
         <div class="loading-state">
-          <div class="loading-reel">🎞️</div>
+          <div class="loading-reel">${ico('bobina')}</div>
           <div class="loading-text">Rebobinando el archivo…</div>
         </div>
       </div></section>`;
@@ -1293,6 +1436,44 @@
         if (res.ok) { PELI_CACHE[slug] = await res.json(); return PELI_CACHE[slug]; }
       } catch(e) {}
       return null;
+    }
+
+    /* ── Iconos ──
+       Los emoji los dibuja cada sistema a su manera y mezclan estilos.
+       Este set comparte grosor de trazo y rejilla de 24px. */
+    const ICONOS = {
+      film:      '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/>',
+      camara:    '<path d="M2 8.5A1.5 1.5 0 0 1 3.5 7h8A1.5 1.5 0 0 1 13 8.5v8A1.5 1.5 0 0 1 11.5 18h-8A1.5 1.5 0 0 1 2 16.5z"/><path d="m13 11 7-3.5v10L13 14z"/><circle cx="6" cy="4.5" r="1.8"/><circle cx="10.5" cy="4.5" r="1.8"/>',
+      lugar:     '<path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+      reloj:     '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+      persona:   '<circle cx="12" cy="8" r="3.5"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/>',
+      fecha:     '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+      genero:    '<path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h5.2a2 2 0 0 1 1.4.6l7.3 7.3a1.5 1.5 0 0 1 0 2.1l-5.4 5.4a1.5 1.5 0 0 1-2.1 0L4.6 12.1a2 2 0 0 1-.6-1.4z"/><circle cx="8.2" cy="8.2" r="1.2"/>',
+      estrella:  '<path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.7l5.9-.8z"/>',
+      bobina:    '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="6.6" r="1.7"/><circle cx="16.7" cy="14.7" r="1.7"/><circle cx="7.3" cy="14.7" r="1.7"/>',
+      luna:      '<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
+      sol:       '<circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/>',
+      buscar:    '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4.5 4.5"/>',
+      si:        '<path d="m5 12.5 5 5 9-11"/>',
+      no:        '<path d="m6 6 12 12M18 6 6 18"/>',
+      trofeo:    '<path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4.5a3 3 0 0 0 3 3M17 6h2.5a3 3 0 0 1-3 3M9.5 14h5l.5 4h-6z"/><path d="M8 20h8"/>',
+      dormido:   '<circle cx="12" cy="12" r="9"/><path d="M8.5 10h2.5l-2.5 3H11M14 9h3l-3 4h3"/><path d="M8.5 16.5c1 .8 2.1 1.2 3.5 1.2s2.5-.4 3.5-1.2"/>',
+      flecha:    '<path d="M5 12h14M13 6l6 6-6 6"/>'
+    };
+
+    // Marcador para las películas sin cartel: una inicial en la serif del
+    // sitio dentro de un marco. Mejor que un icono genérico repetido.
+    function posterPh(titulo, clase) {
+      const limpio = String(titulo || '?').replace(/^(el|la|los|las|un|una|the|a)\s+/i, '').trim();
+      const inicial = (limpio.charAt(0) || '?').toUpperCase();
+      return `<div class="${clase} poster-ph"><span>${inicial}</span></div>`;
+    }
+
+    // `extra` permite ajustar tamaño o color en el punto de uso.
+    function ico(nombre, extra) {
+      const d = ICONOS[nombre];
+      if (!d) return '';
+      return `<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" ${extra || ''}>${d}</svg>`;
     }
 
     /* ── Posters ──
@@ -1363,7 +1544,7 @@
     function notFound(que, volverHref, volverLabel) {
       document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
         <div class="empty-state">
-          <div class="empty-icon">🍿</div>
+          <div class="empty-icon">${ico('buscar')}</div>
           <div class="empty-title">No encontramos ${que}</div>
           <p>Puede que el enlace esté mal escrito o que ya no exista.</p>
           <p class="mt-4"><a href="${volverHref}">← ${volverLabel}</a></p>
@@ -1422,10 +1603,10 @@
     // Ficha en formato tarjeta-póster, reutilizada en rejillas.
     function posterTile(slug, peli, sub, i) {
       const url = posterUrl(peli && peli.poster, POSTER.md);
-      const rating = peli && peli.tmdb_rating ? `<span class="poster-badge">★ ${fmtRating(peli.tmdb_rating)}</span>` : '';
+      const rating = peli && peli.tmdb_rating ? `<span class="poster-badge">${ico('estrella','class="ico ico-estrella"')} ${fmtRating(peli.tmdb_rating)}</span>` : '';
       const img = url
         ? `<img src="${url}" alt="" loading="lazy">`
-        : `<div class="ph">🎬</div>`;
+        : posterPh(plainTitle(peli, slug), 'ph');
       return `<a class="poster-tile" href="#pelicula/${slug}" style="--i:${i}">
         <div class="poster-tile-img">${img}${rating}</div>
         <div class="poster-tile-cap">${plainTitle(peli, slug)}</div>
@@ -1473,33 +1654,39 @@
       const totalPelis = allFilmEntries().length;
       const allPeople = [...new Set(DATA.flatMap(f => f.personas.map(p => p.nombre)))];
       const allLugares = [...new Set(DATA.flatMap(f => f.lugares))];
+      const horas = Math.round(allFilmEntries()
+        .reduce((s, e) => s + (parseInt(e.peli && e.peli.runtime) || 0), 0) / 60);
 
       const decades = [...new Set(DATA.map(f => getDecade(f)))].sort();
+      const anios = DATA.map(f => (f.fecha_sort || '').slice(0, 4)).filter(Boolean).sort();
+
+      // Tira de fotogramas: las mejor valoradas con cartel, en orden aleatorio
+      // para que la portada no sea siempre idéntica.
+      const tira = allFilmEntries()
+        .filter(e => e.peli && e.peli.poster && e.peli.tmdb_rating >= 7.5)
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 10);
 
       let html = `<section class="main-section"><div class="container">
-        <div class="home-hero">
-          <div class="display-title">Findes Precríticos</div>
-          <div class="display-sub">Un archivo cinematográfico entre amigos, desde 2005</div>
-        </div>
+        <header class="home-hero">
+          <div class="eyebrow">Archivo${anios.length ? ` · ${anios[0]} — ${anios[anios.length - 1]}` : ''}</div>
+          <h1 class="display-title">Findes Precríticos</h1>
+          <p class="display-sub">Un archivo cinematográfico entre amigos</p>
+        </header>
 
-        <nav class="level stats-level">
-          <a href="#" class="level-item has-text-centered" style="text-decoration:none;color:inherit">
-            <div><div class="stat-num">${DATA.length}</div><div class="stat-label">Findes</div></div>
-          </a>
-          <a href="#peliculas" class="level-item has-text-centered" style="text-decoration:none;color:inherit">
-            <div><div class="stat-num">${totalPelis}</div><div class="stat-label">Películas</div></div>
-          </a>
-          <a href="#personas" class="level-item has-text-centered" style="text-decoration:none;color:inherit">
-            <div><div class="stat-num">${allPeople.length}</div><div class="stat-label">Participantes</div></div>
-          </a>
-          <a href="#lugares" class="level-item has-text-centered" style="text-decoration:none;color:inherit">
-            <div><div class="stat-num">${allLugares.length}</div><div class="stat-label">Lugares</div></div>
-          </a>
+        <nav class="ledger" aria-label="Resumen del archivo">
+          <a href="#"><span>Findes</span><b>${DATA.length}</b></a>
+          <a href="#peliculas"><span>Películas</span><b>${totalPelis}</b></a>
+          <a href="#personas"><span>Participantes</span><b>${allPeople.length}</b></a>
+          <a href="#lugares"><span>Lugares</span><b>${allLugares.length}</b></a>
+          <a href="#estadisticas"><span>Horas</span><b>${horas}</b></a>
         </nav>
 
-        <p class="has-text-centered mb-5" style="font-size:.85rem">
-          <a href="#estadisticas">Ver todas las cifras del archivo →</a>
-        </p>
+        ${tira.length ? `<div class="filmstrip">
+          ${tira.map(e => `<a href="#pelicula/${e.slug}" title="${plainTitle(e.peli, e.titulo)}">
+            <img src="${posterUrl(e.peli.poster, POSTER.sm)}" alt="${plainTitle(e.peli, e.titulo)}" loading="lazy">
+          </a>`).join('')}
+        </div>` : ''}
 
         <div class="decade-nav" id="decade-nav">
           <button class="decade-pill is-active" data-decade="all">Todos</button>
@@ -1521,17 +1708,13 @@
 
         for (const [i, f] of decadeFindes.entries()) {
           const npelis = f.personas.reduce((s, p) => s + p.peliculas.length, 0);
-          html += `<a href="#finde/${f.numero}" class="finde-card-link" style="--i:${i}">
-            <div class="card mb-3">
-              <div class="card-content">
-                <span class="finde-num">${f.numero}</span>
-                <div class="finde-info">
-                  <div class="finde-date">${f.fecha || '—'}</div>
-                  <div class="finde-lugar">${f.lugares.join(' · ')}</div>
-                </div>
-                <span class="finde-pelis">${npelis} películas</span>
-              </div>
-            </div>
+          html += `<a href="#finde/${f.numero}" class="archive-row" style="--i:${i}">
+            <span class="ar-num">${f.numero}</span>
+            <span class="ar-body">
+              <span class="ar-date">${f.fecha || '—'}</span>
+              <span class="ar-place">${ico('lugar')} ${f.lugares.join(' · ')}</span>
+            </span>
+            <span class="ar-count">${npelis} películas</span>
           </a>`;
         }
         html += `</div></div>`;
@@ -1589,7 +1772,7 @@
       const url = posterUrl(peli && peli.poster, POSTER.xs);
       const sub = peli ? [peli.director, peli.year].filter(Boolean).join(' · ') : '';
       return `<div class="panel-block film-line">
-        ${url ? `<img src="${url}" alt="" loading="lazy">` : `<div class="ph">🎬</div>`}
+        ${url ? `<img src="${url}" alt="" loading="lazy">` : posterPh(titulo, 'ph')}
         <div class="fl-body">
           <div><a href="#pelicula/${slug}">${peliDisplayTitle(m, slug)}</a></div>
           ${sub ? `<div class="fl-sub">${sub}</div>` : ''}
@@ -1886,7 +2069,7 @@
 
       if (!films.length) {
         list.innerHTML = `<div class="empty-state">
-          <div class="empty-icon">🔍</div>
+          <div class="empty-icon">${ico('buscar')}</div>
           <div class="empty-title">Ninguna película encaja</div>
           <p>Prueba con otro título o quita algún filtro.</p>
         </div>`;
@@ -1921,7 +2104,7 @@
           const url = posterUrl(f.peli && f.peli.poster, POSTER.xs);
           const poster = url
             ? `<img class="film-poster-sm" src="${url}" alt="" loading="lazy">`
-            : `<div class="film-poster-ph">🎬</div>`;
+            : posterPh(plainTitle(f.peli, f.titulo), 'film-poster-ph');
           html += `<div class="film-row">
             ${poster}
             <div class="film-row-body">
@@ -2020,12 +2203,12 @@
         const dirLinks = peli.director.split(', ').map(d =>
           `<a href="#director/${encodeURIComponent(d)}" style="color:var(--wine);text-decoration:none;font-weight:500">${d}</a>`
         ).join(', ');
-        html += `<div style="font-size:.95rem;margin-bottom:.4rem">🎥 ${dirLinks}</div>`;
+        html += `<div class="peli-line">${ico('camara')} ${dirLinks}</div>`;
       }
 
       // ── Runtime
       if (peli.runtime) {
-        html += `<div style="font-size:.88rem;color:var(--tx-2);margin-bottom:.5rem">🕐 ${peli.runtime}</div>`;
+        html += `<div class="peli-line peli-line-muted">${ico('reloj')} ${peli.runtime}</div>`;
       }
 
       // ── Genres (navigable tags)
@@ -2039,7 +2222,7 @@
       if (peli.imdb_id || peli.tmdb_id || peli.tmdb_rating) {
         html += `<div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem">`;
         if (peli.tmdb_rating) {
-          html += `<span class="peli-rating" style="cursor:default">⭐ ${fmtRating(peli.tmdb_rating)} / 10</span>`;
+          html += `<span class="peli-rating" style="cursor:default">${ico('estrella','class="ico ico-estrella"')} ${fmtRating(peli.tmdb_rating)} / 10</span>`;
         }
         if (peli.imdb_id) {
           html += `<a class="peli-rating" href="https://www.imdb.com/title/${peli.imdb_id}" target="_blank" rel="noopener" style="background:var(--gold-bg);color:var(--gold)">IMDb ↗</a>`;
@@ -2135,16 +2318,13 @@
       `;
       const sorted = Object.entries(lugarStats).sort((a, b) => b[1].findes - a[1].findes);
       for (const [i, [name, s]] of sorted.entries()) {
-        html += `<a href="#lugar/${encodeURIComponent(name)}" class="finde-card-link" style="--i:${i}">
-          <div class="card mb-3">
-            <div class="card-content" style="display:flex;align-items:center;gap:.85rem">
-              <span style="font-size:1.4rem">📍</span>
-              <div style="flex:1;min-width:0">
-                <div style="font-weight:600;font-size:.95rem">${name}</div>
-                <div style="font-size:.8rem;color:var(--tx-3)">${s.findes} findes · ${s.pelis} películas</div>
-              </div>
-            </div>
-          </div>
+        html += `<a href="#lugar/${encodeURIComponent(name)}" class="archive-row" style="--i:${i}">
+          <span class="ar-num ar-ico">${ico('lugar')}</span>
+          <span class="ar-body">
+            <span class="ar-date">${name}</span>
+            <span class="ar-place">${s.findes} findes · ${s.pelis} películas</span>
+          </span>
+          <span class="ar-count">${s.findes} ${s.findes === 1 ? 'finde' : 'findes'}</span>
         </a>`;
       }
       html += `</div></div></section>`;
@@ -2159,7 +2339,7 @@
       let html = `<section class="main-section"><div class="container">
         ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#lugares', label:'Lugares'}, {href:'#', label: nombre}])}
 
-        <h1 class="page-heading">📍 ${nombre}</h1>
+        <h1 class="page-heading">${nombre}</h1>
         <div class="page-sub">${findes.length} findes · ${totalPelis} películas</div>
 
         <div class="stagger">
@@ -2169,17 +2349,13 @@
         const participantes = f.personas.map(p =>
           `<a href="#persona/${encodeURIComponent(p.nombre)}" style="color:var(--tx-2)">${p.nombre}</a>`
         ).join(', ');
-        html += `<a href="#finde/${f.numero}" class="finde-card-link" style="--i:${i}">
-          <div class="card mb-3">
-            <div class="card-content" style="display:flex;align-items:center;gap:.85rem">
-              <span class="finde-num">${f.numero}</span>
-              <div class="finde-info">
-                <div class="finde-date">${f.fecha || '—'}</div>
-                <div class="finde-lugar">${f.personas.map(p=>p.nombre).join(', ')}</div>
-              </div>
-              <span class="finde-pelis">${npelis} pelis</span>
-            </div>
-          </div>
+        html += `<a href="#finde/${f.numero}" class="archive-row" style="--i:${i}">
+          <span class="ar-num">${f.numero}</span>
+          <span class="ar-body">
+            <span class="ar-date">${f.fecha || '—'}</span>
+            <span class="ar-place ar-clip">${f.personas.map(p=>p.nombre).join(', ')}</span>
+          </span>
+          <span class="ar-count">${npelis} películas</span>
         </a>`;
       }
       html += `</div></div></section>`;
@@ -2224,16 +2400,13 @@
           return t + yr;
         }).join(', ');
         const extra = stats.films.length > 3 ? `… y ${stats.films.length - 3} más` : '';
-        html += `<a href="#director/${encodeURIComponent(name)}" class="finde-card-link" style="--i:${Math.min(i, 20)}">
-          <div class="card mb-3">
-            <div class="card-content" style="display:flex;align-items:center;gap:.85rem">
-              <div class="persona-avatar" style="background:var(--wine-bg);color:var(--purple);font-size:1rem">🎥</div>
-              <div style="flex:1;min-width:0">
-                <div style="font-weight:600;font-size:.95rem">${name} <span style="font-weight:400;font-size:.78rem;color:var(--tx-3)">· ${stats.films.length} peli${stats.films.length !== 1 ? 's' : ''}</span></div>
-                <div style="font-size:.78rem;color:var(--tx-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${topFilms}${extra}</div>
-              </div>
-            </div>
-          </div>
+        html += `<a href="#director/${encodeURIComponent(name)}" class="archive-row" style="--i:${Math.min(i, 20)}">
+          <span class="ar-num ar-ico">${ico('camara')}</span>
+          <span class="ar-body">
+            <span class="ar-date">${name}</span>
+            <span class="ar-place ar-clip">${topFilms}${extra}</span>
+          </span>
+          <span class="ar-count">${stats.films.length} peli${stats.films.length !== 1 ? 's' : ''}</span>
         </a>`;
       }
       html += `</div></div></section>`;
@@ -2241,7 +2414,7 @@
 
       document.getElementById('director-search').addEventListener('input', function() {
         const q = normalize(this.value);
-        for (const card of document.querySelectorAll('#directors-list .finde-card-link')) {
+        for (const card of document.querySelectorAll('#directors-list .archive-row')) {
           card.style.display = normalize(card.textContent).includes(q) ? '' : 'none';
         }
       });
@@ -2273,7 +2446,7 @@
         ${breadcrumb([{href:'#', label:'Inicio'}, {href:'#directores', label:'Directores'}, {href:'#', label: nombre}])}
 
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
-          <div class="persona-avatar" style="width:56px;height:56px;font-size:1.5rem;background:var(--wine-bg);color:var(--purple)">🎥</div>
+          <div class="persona-avatar avatar-dir" style="width:56px;height:56px;font-size:1.35rem">${ico('camara')}</div>
           <div>
             <h1 class="page-heading" style="margin-bottom:.1rem">${nombre}</h1>
             <div class="page-sub" style="margin-bottom:0">${films.length} película${films.length !== 1 ? 's' : ''} en el archivo</div>
@@ -2290,8 +2463,8 @@
           ? orig : `${orig} <span class="peli-es">(${es})</span>`;
         const posterHtml = peli.poster
           ? `<img src="${posterUrl(peli.poster, POSTER.sm)}" alt="" loading="lazy" style="width:60px;height:90px;object-fit:cover;border-radius:4px">`
-          : `<div style="width:60px;height:90px;background:var(--bg-inset);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.8rem">🎬</div>`;
-        const rating = peli.tmdb_rating ? `<span style="color:var(--gold);font-size:.78rem">⭐ ${fmtRating(peli.tmdb_rating)}</span>` : '';
+          : posterPh(orig, 'poster-ph-md');
+        const rating = peli.tmdb_rating ? `<span style="color:var(--gold);font-size:.78rem">${ico('estrella','class="ico ico-estrella"')} ${fmtRating(peli.tmdb_rating)}</span>` : '';
         const genres = genreTags(peli) ? `<div class="mt-2">${genreTags(peli)}</div>` : '';
 
         html += `<div class="column is-half-tablet" style="--i:${i}">
@@ -2370,7 +2543,7 @@
                 <div style="display:flex;gap:4px;margin-bottom:.75rem;height:80px;overflow:hidden;border-radius:4px">
                   ${posters.length ? posters.map(f =>
                     `<img src="${posterUrl(f.peli.poster, POSTER.xs)}" alt="" loading="lazy" style="height:80px;width:54px;object-fit:cover;border-radius:3px;flex-shrink:0">`
-                  ).join('') : `<div style="height:80px;width:100%;background:var(--bg-inset);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:1.5rem">🎬</div>`}
+                  ).join('') : `<div style="height:80px;width:100%;background:var(--bg-inset);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--tx-3)">${ico('film')}</div>`}
                 </div>
                 <div style="font-family:var(--ff-display);font-size:1.6rem;color:var(--wine);line-height:1">${dec}s</div>
                 <div style="font-size:.8rem;color:var(--tx-3);margin-top:.25rem">${films.length} película${films.length !== 1 ? 's' : ''}</div>
@@ -2434,7 +2607,7 @@
             ? orig : `${orig} <span class="peli-es">(${es})</span>`;
           const posterHtml = peli.poster
             ? `<img class="film-poster-sm" src="${posterUrl(peli.poster, POSTER.xs)}" alt="" loading="lazy">`
-            : `<div class="film-poster-ph">🎬</div>`;
+            : posterPh(plainTitle(peli, slug), 'film-poster-ph');
           const apps = findAppearances(slug);
           const subParts = [];
           if (peli.director) subParts.push(peli.director);
@@ -2520,8 +2693,8 @@
       const maxBy = (arr, fn) => arr.reduce((best, f) => (!best || fn(f) > fn(best)) ? f : best, null);
       const minBy = (arr, fn) => arr.reduce((best, f) => (!best || fn(f) < fn(best)) ? f : best, null);
       const records = [
-        ['Mejor valorada',  maxBy(conNota, f => parseFloat(f.peli.tmdb_rating)), f => `★ ${fmtRating(f.peli.tmdb_rating)}`],
-        ['Peor valorada',   minBy(conNota, f => parseFloat(f.peli.tmdb_rating)), f => `★ ${fmtRating(f.peli.tmdb_rating)}`],
+        ['Mejor valorada',  maxBy(conNota, f => parseFloat(f.peli.tmdb_rating)), f => `${ico('estrella','class="ico ico-estrella"')} ${fmtRating(f.peli.tmdb_rating)}`],
+        ['Peor valorada',   minBy(conNota, f => parseFloat(f.peli.tmdb_rating)), f => `${ico('estrella','class="ico ico-estrella"')} ${fmtRating(f.peli.tmdb_rating)}`],
         ['La más antigua',  minBy(conAnio, f => parseInt(f.peli.year)),          f => f.peli.year],
         ['La más reciente', maxBy(conAnio, f => parseInt(f.peli.year)),          f => f.peli.year],
         ['La más larga',    maxBy(conFicha.filter(f => parseInt(f.peli.runtime)), f => parseInt(f.peli.runtime)), f => f.peli.runtime],
@@ -2580,7 +2753,7 @@
           ${records.map(([kind, f, valFn]) => {
             const url = posterUrl(f.peli.poster, POSTER.xs);
             return `<a class="record" href="#pelicula/${f.slug}">
-              ${url ? `<img src="${url}" alt="" loading="lazy">` : `<div class="ph">🎬</div>`}
+              ${url ? `<img src="${url}" alt="" loading="lazy">` : posterPh(plainTitle(f.peli, f.titulo), 'ph')}
               <div class="record-body">
                 <div class="record-kind">${kind}</div>
                 <div class="record-title">${plainTitle(f.peli, f.titulo)}</div>
@@ -2855,7 +3028,7 @@
           explicacion: cuatro
             .slice()
             .sort((a, b) => parseFloat(b.peli.tmdb_rating) - parseFloat(a.peli.tmdb_rating))
-            .map(e => `★ ${fmtRating(e.peli.tmdb_rating)} · ${tituloCorto(e.peli, e.titulo)}`)
+            .map(e => `${ico('estrella','class="ico ico-estrella"')} ${fmtRating(e.peli.tmdb_rating)} · ${tituloCorto(e.peli, e.titulo)}`)
             .join('<br>'),
           href: `#pelicula/${mejor.slug}`
         };
@@ -2994,7 +3167,7 @@
       if (!preguntas.length) {
         document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
           ${quizCabecera('precriticos')}
-          <div class="empty-state"><div class="empty-icon">🎬</div>
+          <div class="empty-state"><div class="empty-icon">${ico('film')}</div>
           <div class="empty-title">No hay datos suficientes</div></div>
         </div></section>`;
         return;
@@ -3051,7 +3224,7 @@
         const ultima = actual === preguntas.length - 1;
         document.getElementById('quizp-tras').innerHTML = `
           <div class="quizp-feedback">
-            <strong>${acertada ? '✅' : '❌'} ${acertada ? 'Correcto' : 'Casi'}</strong> — ${q.explicacion}
+            <strong>${ico(acertada ? 'si' : 'no')} ${acertada ? 'Correcto' : 'Casi'}</strong> — ${q.explicacion}
             <div style="margin-top:.4rem"><a href="${q.href}">Ver ficha →</a></div>
           </div>
           <button class="quizp-next" id="quizp-next">${ultima ? 'Ver resultado' : 'Siguiente →'}</button>`;
@@ -3066,16 +3239,16 @@
         const pct = Math.round((aciertos / preguntas.length) * 100);
         const circ = 2 * Math.PI * 58;
         let emoji, msg;
-        if (pct === 100) { emoji = '🏆'; msg = 'Pleno. Te sabes el archivo de memoria.'; }
-        else if (pct >= 70) { emoji = '🎬'; msg = 'Muy bien: has estado atento todos estos años.'; }
-        else if (pct >= 40) { emoji = '🍿'; msg = 'Aprobado raspado. Toca repasar findes.'; }
-        else { emoji = '😴'; msg = '¿Seguro que no te dormías en las proyecciones?'; }
+        if (pct === 100) { emoji = ico('trofeo'); msg = 'Pleno. Te sabes el archivo de memoria.'; }
+        else if (pct >= 70) { emoji = ico('film'); msg = 'Muy bien: has estado atento todos estos años.'; }
+        else if (pct >= 40) { emoji = ico('film'); msg = 'Aprobado raspado. Toca repasar findes.'; }
+        else { emoji = ico('dormido'); msg = '¿Seguro que no te dormías en las proyecciones?'; }
 
         document.getElementById('quiz-counter').textContent = `${preguntas.length} / ${preguntas.length}`;
         document.getElementById('quiz-bar').style.width = '100%';
         document.getElementById('quizp').innerHTML = `
           <div class="quiz-results" style="max-width:none;margin:0 auto">
-            <div style="font-size:3rem;margin-bottom:.5rem">${emoji}</div>
+            <div class="result-ico">${emoji}</div>
             <div class="quiz-score-ring">
               <svg width="140" height="140" viewBox="0 0 140 140">
                 <circle class="ring-bg" cx="70" cy="70" r="58" fill="none" stroke-width="8" />
@@ -3088,7 +3261,7 @@
               </div>
             </div>
             <div style="font-family:var(--ff-display);font-size:1.1rem;margin-bottom:1rem">${msg}</div>
-            <button class="quizp-next" id="quizp-otra" style="max-width:260px;margin:0 auto"><span style="margin-right:.35rem">🔄</span>Otra ronda</button>
+            <button class="quizp-next" id="quizp-otra" style="max-width:260px;margin:0 auto">${ico('bobina')}&ensp;Otra ronda</button>
             ${fallos.length ? `<div class="quizp-review">
               <h2 class="section-title" style="margin-top:1.5rem">Lo que se te escapó</h2>
               ${fallos.map(q => `<div class="quizp-review-item">
@@ -3175,8 +3348,8 @@
             </div>
             <div class="quiz-card-wrapper" id="quiz-card-wrapper"></div>
             <div class="quiz-buttons">
-              <button class="quiz-btn btn-no" id="btn-no" title="No">✗</button>
-              <button class="quiz-btn btn-yes" id="btn-yes" title="Sí">✓</button>
+              <button class="quiz-btn btn-no" id="btn-no" title="No">${ico('no')}</button>
+              <button class="quiz-btn btn-yes" id="btn-yes" title="Sí">${ico('si')}</button>
             </div>
             <div style="margin-top:1rem">
               <div class="quiz-swipe-hint">← NO &nbsp;·&nbsp; SÍ →</div>
@@ -3196,7 +3369,7 @@
 
         const posterHtml = peli && peli.poster
           ? `<img class="quiz-card-poster" src="${posterUrl(peli.poster, POSTER.md)}" alt="" draggable="false">`
-          : `<div class="quiz-card-poster-ph">🎬</div>`;
+          : `<div class="quiz-card-poster-ph">${ico('film')}</div>`;
 
         wrapper.innerHTML = `
           <div class="quiz-card" id="quiz-active-card">
@@ -3228,7 +3401,7 @@
         // Show feedback after card exits
         setTimeout(() => {
           const fb = document.getElementById('quiz-feedback');
-          document.getElementById('fb-icon').textContent = correct ? '✅' : '❌';
+          document.getElementById('fb-icon').innerHTML = ico(correct ? 'si' : 'no');
           document.getElementById('fb-text').textContent = correct ? '¡Correcto!' : 'Incorrecto';
           document.getElementById('fb-explain').textContent = q.explicacion;
           fb.classList.add('visible');
@@ -3251,16 +3424,16 @@
         const offset = circ - (pct / 100) * circ;
 
         let emoji, msg;
-        if (pct === 100) { emoji = '🏆'; msg = '¡Perfecto! Eres un auténtico cinéfilo precrítico.'; }
-        else if (pct >= 75) { emoji = '🎬'; msg = '¡Muy bien! Dominas el archivo.'; }
-        else if (pct >= 50) { emoji = '🍿'; msg = 'No está mal, pero hay margen de mejora.'; }
-        else { emoji = '📽️'; msg = 'Necesitas más findes precríticos...'; }
+        if (pct === 100) { emoji = ico('trofeo'); msg = '¡Perfecto! Eres un auténtico cinéfilo precrítico.'; }
+        else if (pct >= 75) { emoji = ico('film'); msg = '¡Muy bien! Dominas el archivo.'; }
+        else if (pct >= 50) { emoji = ico('film'); msg = 'No está mal, pero hay margen de mejora.'; }
+        else { emoji = ico('camara'); msg = 'Necesitas más findes precríticos...'; }
 
         const wrapper = document.getElementById('quiz-card-wrapper');
         wrapper.style.height = 'auto';
         wrapper.innerHTML = `
           <div class="quiz-results">
-            <div style="font-size:3rem;margin-bottom:.5rem">${emoji}</div>
+            <div class="result-ico">${emoji}</div>
             <div class="quiz-score-ring">
               <svg width="140" height="140" viewBox="0 0 140 140">
                 <circle class="ring-bg" cx="70" cy="70" r="58" fill="none" stroke-width="8" />
@@ -3277,10 +3450,10 @@
             <div style="font-family:var(--ff-display);font-size:1.1rem;color:var(--tx);margin-bottom:.5rem">${msg}</div>
             <div style="display:flex;gap:.75rem;justify-content:center;margin-top:1rem">
               <button class="quiz-btn btn-yes" id="quiz-retry" title="Reintentar" style="width:auto;border-radius:8px;padding:.6rem 1.2rem;font-size:.88rem;font-weight:600;font-family:var(--ff-body)">
-                🔄 Reintentar
+                ${ico('bobina')}&ensp;Reintentar
               </button>
               <a href="#" class="quiz-btn btn-no" style="width:auto;border-radius:8px;padding:.6rem 1.2rem;font-size:.88rem;font-weight:600;font-family:var(--ff-body);text-decoration:none;display:flex;align-items:center">
-                🏠 Inicio
+                Inicio
               </a>
             </div>
           </div>
@@ -3537,7 +3710,7 @@
       results.innerHTML = matches.map((m, i) => {
         const posterHtml = m.poster
           ? `<img src="${posterUrl(m.poster, POSTER.xs)}" alt="" loading="lazy">`
-          : `<div class="sr-placeholder">${{pelicula:'🎬',persona:'👤',lugar:'📍',finde:'📅',director:'🎥',genero:'🏷️'}[m.type]||'•'}</div>`;
+          : `<div class="sr-placeholder">${ico({pelicula:'film',persona:'persona',lugar:'lugar',finde:'fecha',director:'camara',genero:'genero'}[m.type] || 'film')}</div>`;
         return `<div class="sr-item" data-href="${m.href}" data-idx="${i}">
           ${posterHtml}
           <div class="sr-text"><div class="sr-title">${highlightMatch(m.label, query)}</div><div class="sr-sub">${m.sub}</div></div>

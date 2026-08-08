@@ -25,6 +25,9 @@ UMBRAL_TITULO = 0.6
 # reciente y con nota muy baja suele ser un enlace equivocado.
 ANIO_RECIENTE = 2020
 NOTA_BAJA = 5.0
+# En los findes se ven largometrajes: un metraje de cortometraje delata que
+# la ficha apunta a otra cosa (a un corto homónimo, normalmente).
+DURACION_MINIMA = 45
 
 
 def normaliza(texto):
@@ -54,6 +57,7 @@ def revisar():
     base = os.path.dirname(os.path.abspath(__file__))
     findes_anio = anio_de_findes(base)
     titulo_dudoso, sin_datos, recientes_flojas, imposibles = [], [], [], []
+    muy_cortas = []
 
     for ruta in sorted(glob.glob(os.path.join(base, PELICULAS_DIR, "*.json"))):
         if os.path.basename(ruta) == "index.json":
@@ -86,6 +90,13 @@ def revisar():
         if anio >= ANIO_RECIENTE and nota < NOTA_BAJA:
             recientes_flojas.append((slug, titulo, anio, nota, m.get("director")))
 
+        try:
+            minutos = int(str(m.get("runtime") or "").split()[0])
+        except (ValueError, IndexError):
+            minutos = None
+        if minutos is not None and minutos < DURACION_MINIMA:
+            muy_cortas.append((slug, titulo, minutos, m.get("year"), m.get("director")))
+
         # Nadie pudo ver en 2010 una película estrenada en 2023: si pasa,
         # la ficha está enlazada a otra película.
         vistos = [findes_anio[n] for n in (m.get("findes") or []) if n in findes_anio]
@@ -106,6 +117,13 @@ def revisar():
         "Imposibles: la película es posterior al finde en que se vio",
         imposibles,
         lambda r: f"{r[0]:<34} «{r[1]}» → «{r[4]}» ({r[2]}, {r[5]}) — visto en un finde de {r[3]}",
+    )
+
+    muy_cortas.sort(key=lambda r: r[2])
+    bloque(
+        f"Duran menos de {DURACION_MINIMA} min: ¿es un corto homónimo?",
+        muy_cortas,
+        lambda r: f"{r[0]:<34} «{r[1]}» → {r[2]} min ({r[3]}, {r[4]})",
     )
 
     titulo_dudoso.sort()
