@@ -150,6 +150,18 @@ def revisar():
         lambda r: f"{r[0]:<34} «{r[1]}»",
     )
 
+    # Las preguntas de quiz.json apuntan a fichas por slug; si una ficha se
+    # renombra, la pregunta se queda sin cartel y la web la descarta.
+    with open(os.path.join(base, "quiz.json"), encoding="utf-8") as f:
+        quiz = json.load(f)
+    huerfanas = [q for q in quiz if q.get("pelicula_slug") and not os.path.exists(
+        os.path.join(base, PELICULAS_DIR, q["pelicula_slug"] + ".json"))]
+    bloque(
+        "Preguntas de quiz.json sin ficha",
+        huerfanas,
+        lambda q: f"{q['pelicula_slug']:<34} {q['pregunta']}",
+    )
+
     print("\nOjo: muchos de estos son falsos positivos (subtítulos, títulos")
     print("originales en otro idioma…). Es una lista para mirar, no para borrar.")
 

@@ -889,6 +889,12 @@
       font-family: var(--ff-display); font-size: 1.3rem; line-height: 1.25;
       color: var(--tx); margin-bottom: 1.15rem;
     }
+    .quizp-cita {
+      font-family: var(--ff-body); font-size: .92rem; line-height: 1.5; font-style: italic;
+      color: var(--tx-2); text-align: left; margin-top: .75rem;
+      padding: .75rem 1rem; border-left: 3px solid var(--wine); background: var(--bg-inset); border-radius: 0 6px 6px 0;
+    }
+    .quizp-review .quizp-cita { font-size: .82rem; margin-top: .35rem; padding: .5rem .75rem; }
     .quizp-options { display: flex; flex-direction: column; gap: .5rem; width: 100%; }
     .quizp-option {
       font-family: var(--ff-body); font-size: .9rem; font-weight: 500;
@@ -2811,6 +2817,49 @@
       return t.length > 60 ? t.slice(0, 57) + '…' : t;
     }
 
+    // Fuera de las opciones los nombres en otros alfabetos (松本人志…): como
+    // distractores no engañan a nadie y como respuesta se delatan solos.
+    const latino = (s) => !!s && !/[Ͱ-᷿⺀-￿]/.test(s);
+    const minutos = (peli) => parseInt(peli && peli.runtime) || 0;
+    const anioDe = (e) => parseInt(e.peli.year);
+    const normTitulo = (s) => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    const escHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const etq = (e) => tituloCorto(e.peli, e.titulo);
+    const etiquetaFinde = (f) => `Finde #${f.numero} · ${f.fecha || '—'}`;
+    // Prefiere los candidatos que cumplen `cerca` (mismo finde, misma época…)
+    // y completa con el resto: los distractores verosímiles hacen pensar.
+    function distractores(pool, n, cerca) {
+      const buenos = muestra(pool.filter(cerca), n);
+      if (buenos.length >= n) return buenos;
+      const usados = new Set(buenos);
+      return [...buenos, ...muestra(pool.filter(x => !usados.has(x)), n - buenos.length)];
+    }
+
+    // Géneros de TMDB con los que se puede preguntar sin ambigüedad, y los
+    // vecinos que no pueden hacer de distractor (un «suspense» puede ser terror).
+    const GEN_UNA = {
+      'Terror': 'una película de terror', 'Ciencia ficción': 'una película de ciencia ficción',
+      'Animación': 'una película de animación', 'Documental': 'un documental', 'Western': 'un western',
+      'Bélica': 'una película bélica', 'Música': 'una película musical', 'Fantasía': 'una película fantástica',
+      'Acción': 'una película de acción'
+    };
+    const GEN_VARIAS = {
+      'Terror': 'películas de terror', 'Comedia': 'comedias', 'Crimen': 'películas de crimen',
+      'Suspense': 'películas de suspense', 'Misterio': 'películas de misterio', 'Romance': 'películas románticas',
+      'Ciencia ficción': 'películas de ciencia ficción', 'Fantasía': 'películas fantásticas',
+      'Acción': 'películas de acción', 'Animación': 'películas de animación', 'Documental': 'documentales'
+    };
+    const GEN_VECINOS = {
+      'Terror': ['Suspense', 'Misterio', 'Fantasía'], 'Ciencia ficción': ['Fantasía'],
+      'Fantasía': ['Ciencia ficción', 'Terror', 'Animación', 'Familia'], 'Animación': ['Fantasía', 'Familia'],
+      'Documental': ['Música', 'Historia'], 'Western': ['Aventura', 'Acción'], 'Bélica': ['Historia', 'Acción'],
+      'Música': ['Documental'], 'Acción': ['Aventura', 'Crimen', 'Suspense', 'Bélica', 'Western']
+    };
+    // Solo estos sirven para «¿cuál de estas es…?»: comedia y romance se
+    // mezclan con el drama sin que TMDB lo diga.
+    const GEN_NITIDOS = Object.keys(GEN_VECINOS);
+    const sinGenero = (peli, g) => !genresOf(peli).some(x => x === g || (GEN_VECINOS[g] || []).includes(x));
+
     // Contexto precalculado: una vez por ronda, no por pregunta.
     function contextoQuiz() {
       const findes = DATA.filter(f => f.personas.length);
@@ -2829,35 +2878,49 @@
         porSlug.get(e.slug).apariciones.push({ persona: e.persona, finde: e.finde });
       }
       const unicas = [...porSlug.values()];
+      const conFicha = unicas.filter(e => e.peli);
+      const conDirector = conFicha.filter(e => e.peli.director && latino(e.peli.director));
+      const pelisDeDirector = {};
+      for (const e of conDirector) for (const d of e.peli.director.split(', ')) (pelisDeDirector[d] || (pelisDeDirector[d] = [])).push(e);
+      const findesDe = {};
+      for (const f of findes) for (const p of f.personas) (findesDe[p.nombre] || (findesDe[p.nombre] = [])).push(f.numero);
       return {
-        findes, personas, lugares, pelis, unicas,
-        conFicha: unicas.filter(e => e.peli),
-        conPoster: unicas.filter(e => e.peli && e.peli.poster),
-        conAnio: unicas.filter(e => e.peli && parseInt(e.peli.year)),
-        conDirector: unicas.filter(e => e.peli && e.peli.director),
-        conNota: unicas.filter(e => e.peli && parseFloat(e.peli.tmdb_rating)),
-        directores: [...new Set(unicas.flatMap(e => e.peli && e.peli.director ? e.peli.director.split(', ') : []))],
+        findes, personas, lugares, pelis, unicas, conFicha, conDirector, pelisDeDirector, findesDe,
+        conPoster: conFicha.filter(e => e.peli.poster),
+        conAnio: conFicha.filter(e => parseInt(e.peli.year)),
+        conNota: conFicha.filter(e => parseFloat(e.peli.tmdb_rating)),
+        conDuracion: conFicha.filter(e => minutos(e.peli) >= 40),
+        conSinopsis: conFicha.filter(e => (e.peli.plot || '').length >= 80),
+        // Solo cuando el título español no es una mera traducción literal
+        // ni lo contiene: «5x2 (Cinco veces dos)» no tiene gracia.
+        conOriginal: conFicha.filter(e => {
+          const o = normTitulo(e.peli.titulo_original), s = normTitulo(e.peli.titulo_es);
+          return latino(e.peli.titulo_original) && o && s && !o.includes(s) && !s.includes(o);
+        }),
+        directores: Object.keys(pelisDeDirector),
         unaSolaVez: unicas.filter(e => e.apariciones.length === 1)
       };
     }
 
-    // Cada generador devuelve una pregunta o null si no hay datos suficientes.
+    // Cada generador devuelve una pregunta o null si no hay datos suficientes,
+    // o si la pregunta pudiera tener más de una respuesta buena.
     const GENERADORES = [
       // ── Quién trajo qué
       function quienTrajo(c) {
         const e = azar(c.unaSolaVez);
-        if (!e || c.personas.length < 4) return null;
-        const correcta = e.apariciones[0].persona;
-        const otras = muestra(c.personas.filter(n => n !== correcta), 3);
+        if (!e) return null;
+        const { persona: correcta, finde: f } = e.apariciones[0];
+        // Solo gente que estuvo ese finde: si no, Mario y Olmo se descartan solos.
+        const otras = muestra(f.personas.map(p => p.nombre).filter(n => n !== correcta), 3);
         if (otras.length < 3) return null;
         return {
           clave: `quien-${e.slug}`,
           tipo: 'Quién la trajo',
-          pregunta: `¿Quién trajo <em>${tituloCorto(e.peli, e.titulo)}</em> al Finde #${e.apariciones[0].finde.numero}?`,
+          pregunta: `¿Quién trajo <em>${etq(e)}</em> al Finde #${f.numero}?`,
           poster: e.peli && e.peli.poster,
           opciones: [correcta, ...otras],
           correcta,
-          explicacion: `La trajo <strong>${correcta}</strong> al Finde #${e.apariciones[0].finde.numero} (${e.apariciones[0].finde.fecha}).`,
+          explicacion: `La trajo <strong>${correcta}</strong> al Finde #${f.numero} (${f.fecha}).`,
           href: `#pelicula/${e.slug}`
         };
       },
@@ -2865,18 +2928,18 @@
       // ── En qué finde se vio
       function enQueFinde(c) {
         const e = azar(c.unaSolaVez);
-        if (!e || c.findes.length < 4) return null;
+        if (!e) return null;
         const bueno = e.apariciones[0].finde;
-        const otros = muestra(c.findes.filter(f => f.numero !== bueno.numero), 3);
+        const otros = distractores(c.findes.filter(f => f.numero !== bueno.numero), 3,
+          f => Math.abs(f.numero - bueno.numero) <= 6);
         if (otros.length < 3) return null;
-        const etiqueta = f => `Finde #${f.numero} · ${f.fecha || '—'}`;
         return {
           clave: `finde-${e.slug}`,
           tipo: 'En qué finde',
-          pregunta: `¿En qué finde se vio <em>${tituloCorto(e.peli, e.titulo)}</em>?`,
+          pregunta: `¿En qué finde se vio <em>${etq(e)}</em>?`,
           poster: e.peli && e.peli.poster,
-          opciones: [etiqueta(bueno), ...otros.map(etiqueta)],
-          correcta: etiqueta(bueno),
+          opciones: [etiquetaFinde(bueno), ...otros.map(etiquetaFinde)],
+          correcta: etiquetaFinde(bueno),
           explicacion: `Se vio en el Finde #${bueno.numero}, en ${bueno.lugares.join(' y ')}. La trajo ${e.apariciones[0].persona}.`,
           href: `#finde/${bueno.numero}`
         };
@@ -2911,8 +2974,9 @@
         const ajenas = f.personas
           .filter(x => x.nombre !== p.nombre)
           .flatMap(x => x.peliculas)
-          .filter(m => typeof m !== 'string' && m.slug);
-        const otras = muestra(ajenas, 3);
+          .filter(m => typeof m !== 'string' && m.slug && m.slug !== suya.slug);
+        // Si dos trajeron la misma, que salga una sola vez.
+        const otras = muestra([...new Map(ajenas.map(m => [m.slug, m])).values()], 3);
         if (otras.length < 3) return null;
         const et = m => tituloCorto(PELI_CACHE[m.slug], m.titulo);
         return {
@@ -2934,11 +2998,14 @@
         const dentro = f.personas.flatMap(p => p.peliculas).filter(m => typeof m !== 'string' && m.slug);
         if (dentro.length < 3) return null;
         const slugsDentro = new Set(dentro.map(m => m.slug));
-        const fuera = azar(c.unicas.filter(e => !slugsDentro.has(e.slug)));
+        const distintas = [...new Map(dentro.map(m => [m.slug, m])).values()];
+        // La intrusa sale de un finde cercano: de la misma época, no de otra década.
+        const fuera = azar(c.unicas.filter(e => !slugsDentro.has(e.slug)
+          && e.apariciones.some(a => Math.abs(a.finde.numero - f.numero) <= 4)));
         if (!fuera) return null;
-        const tres = muestra(dentro, 3);
+        const tres = muestra(distintas, 3);
         const et = m => tituloCorto(PELI_CACHE[m.slug], m.titulo);
-        const intrusa = tituloCorto(fuera.peli, fuera.titulo);
+        const intrusa = etq(fuera);
         return {
           clave: `nose-${f.numero}-${fuera.slug}`,
           tipo: 'La intrusa',
@@ -2954,14 +3021,17 @@
       // ── Quién dirigió
       function quienDirigio(c) {
         const e = azar(c.conDirector);
-        if (!e || c.directores.length < 4) return null;
+        if (!e) return null;
         const bueno = e.peli.director.split(', ')[0];
-        const otros = muestra(c.directores.filter(d => !e.peli.director.includes(d)), 3);
+        const anio = anioDe(e);
+        // Directores de la misma época: Fritz Lang frente a Jordan Peele no es pregunta.
+        const otros = distractores(c.directores.filter(d => !e.peli.director.split(', ').includes(d)), 3,
+          d => c.pelisDeDirector[d].some(x => Math.abs(anioDe(x) - anio) <= 12));
         if (otros.length < 3) return null;
         return {
           clave: `dir-${e.slug}`,
           tipo: 'Quién dirigió',
-          pregunta: `¿Quién dirigió <em>${tituloCorto(e.peli, e.titulo)}</em> (${e.peli.year || '?'})?`,
+          pregunta: `¿Quién dirigió <em>${etq(e)}</em> (${e.peli.year || '?'})?`,
           poster: e.peli.poster,
           opciones: [bueno, ...otros],
           correcta: bueno,
@@ -2974,40 +3044,145 @@
       function queCartel(c) {
         const e = azar(c.conPoster);
         if (!e) return null;
-        const otras = muestra(c.unicas.filter(x => x.slug !== e.slug), 3);
+        const suyos = genresOf(e.peli).filter(g => g !== 'Drama');
+        const otras = distractores(c.conFicha.filter(x => x.slug !== e.slug), 3,
+          x => genresOf(x.peli).some(g => suyos.includes(g)));
         if (otras.length < 3) return null;
         return {
           clave: `cartel-${e.slug}`,
           tipo: 'El cartel',
           pregunta: `¿De qué película es este cartel?`,
           poster: e.peli.poster,
-          opciones: [tituloCorto(e.peli, e.titulo), ...otras.map(x => tituloCorto(x.peli, x.titulo))],
-          correcta: tituloCorto(e.peli, e.titulo),
-          explicacion: `Es <em>${tituloCorto(e.peli, e.titulo)}</em>${e.peli.year ? ` (${e.peli.year})` : ''}${e.peli.director ? `, de ${e.peli.director}` : ''}.`,
+          opciones: [etq(e), ...otras.map(etq)],
+          correcta: etq(e),
+          explicacion: `Es <em>${etq(e)}</em>${e.peli.year ? ` (${e.peli.year})` : ''}${e.peli.director ? `, de ${e.peli.director}` : ''}.`,
           href: `#pelicula/${e.slug}`
         };
       },
 
-      // ── La más antigua de cuatro
-      function laMasAntigua(c) {
-        const cuatro = muestra(c.conAnio, 4);
-        if (cuatro.length < 4) return null;
-        const anios = cuatro.map(e => parseInt(e.peli.year));
-        if (new Set(anios).size < 4) return null;
-        const vieja = cuatro.reduce((a, b) => parseInt(a.peli.year) < parseInt(b.peli.year) ? a : b);
+      // ── Adivinar por la sinopsis
+      function laSinopsis(c) {
+        const e = azar(c.conSinopsis);
+        if (!e) return null;
+        // Fuera los repartos entre paréntesis y cualquier palabra del título,
+        // que si no la sinopsis lo canta.
+        let txt = e.peli.plot.replace(/\s*\([^)]*\)/g, '');
+        const palabras = [e.peli.titulo_es, e.peli.titulo_original, e.titulo]
+          .flatMap(t => (t || '').split(/[^\p{L}\p{N}]+/u))
+          .filter(w => w.length >= 4);
+        for (const w of new Set(palabras)) {
+          // Sin lookbehind, que Safari no entiende hasta la 16.4.
+          txt = txt.replace(new RegExp(`(^|[^\\p{L}\\p{N}])${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\p{L}\\p{N}])`, 'giu'), '$1___');
+        }
+        if (txt.length > 280) txt = txt.slice(0, 280).replace(/\s+\S*$/, '') + '…';
+        const suyos = genresOf(e.peli).filter(g => g !== 'Drama');
+        const otras = distractores(c.conFicha.filter(x => x.slug !== e.slug), 3,
+          x => genresOf(x.peli).some(g => suyos.includes(g)));
+        if (otras.length < 3) return null;
         return {
-          clave: `vieja-${cuatro.map(e => e.slug).sort().join('|')}`,
-          tipo: 'La más antigua',
-          pregunta: '¿Cuál de estas cuatro es la más antigua?',
+          clave: `sinopsis-${e.slug}`,
+          tipo: 'La sinopsis',
+          pregunta: `¿De qué película es esta sinopsis?<div class="quizp-cita">${escHtml(txt)}</div>`,
           poster: null,
-          opciones: cuatro.map(e => tituloCorto(e.peli, e.titulo)),
-          correcta: tituloCorto(vieja.peli, vieja.titulo),
-          explicacion: cuatro
-            .slice()
-            .sort((a, b) => parseInt(a.peli.year) - parseInt(b.peli.year))
-            .map(e => `${e.peli.year} · ${tituloCorto(e.peli, e.titulo)}`)
-            .join('<br>'),
-          href: `#pelicula/${vieja.slug}`
+          opciones: [etq(e), ...otras.map(etq)],
+          correcta: etq(e),
+          explicacion: `Es <em>${etq(e)}</em>${e.peli.year ? ` (${e.peli.year})` : ''}. La trajo ${e.apariciones[0].persona} al Finde #${e.apariciones[0].finde.numero}.`,
+          href: `#pelicula/${e.slug}`
+        };
+      },
+
+      // ── Título original ↔ título en España
+      function elTitulo(c) {
+        const e = azar(c.conOriginal);
+        if (!e) return null;
+        const anio = anioDe(e);
+        const otras = distractores(c.conOriginal.filter(x => x.slug !== e.slug), 3,
+          x => Math.abs(anioDe(x) - anio) <= 10);
+        if (otras.length < 3) return null;
+        const corto = t => t.length > 60 ? t.slice(0, 57) + '…' : t;
+        const orig = x => corto(x.peli.titulo_original);
+        // A cara o cruz, en un sentido o en el otro.
+        const haciaEspana = Math.random() < 0.5;
+        return {
+          clave: `titulo-${e.slug}`,
+          tipo: 'El título',
+          pregunta: haciaEspana
+            ? `¿Con qué título se estrenó en España <em>${orig(e)}</em>?`
+            : `¿Cuál es el título original de <em>${etq(e)}</em>?`,
+          poster: null,
+          opciones: haciaEspana ? [etq(e), ...otras.map(etq)] : [orig(e), ...otras.map(orig)],
+          correcta: haciaEspana ? etq(e) : orig(e),
+          explicacion: `<em>${orig(e)}</em> (${e.peli.year}) se conoce aquí como <em>${etq(e)}</em>.`,
+          href: `#pelicula/${e.slug}`
+        };
+      },
+
+      // ── Del mismo director
+      function mismoDirector(c) {
+        const d = azar(Object.keys(c.pelisDeDirector).filter(x => c.pelisDeDirector[x].length >= 2));
+        if (!d) return null;
+        const [a, b] = muestra(c.pelisDeDirector[d], 2);
+        const anio = anioDe(a);
+        const otras = distractores(c.conDirector.filter(x => !x.peli.director.split(', ').includes(d)), 3,
+          x => Math.abs(anioDe(x) - anio) <= 10);
+        if (otras.length < 3) return null;
+        return {
+          clave: `mismodir-${[a.slug, b.slug].sort().join('|')}`,
+          tipo: 'Mismo director',
+          pregunta: `¿Cuál de estas es del mismo director que <em>${etq(a)}</em>?`,
+          poster: a.peli.poster,
+          opciones: [etq(b), ...otras.map(etq)],
+          correcta: etq(b),
+          explicacion: `Las dos son de <strong>${d}</strong>: <em>${etq(a)}</em> (${a.peli.year}) y <em>${etq(b)}</em> (${b.peli.year}).`,
+          href: `#director/${encodeURIComponent(d)}`
+        };
+      },
+
+      // ── Cuál es de tal género
+      function elGenero(c) {
+        const g = azar(GEN_NITIDOS.filter(x => c.conFicha.filter(e => genresOf(e.peli).includes(x)).length >= 3));
+        if (!g) return null;
+        const e = azar(c.conFicha.filter(x => genresOf(x.peli).includes(g)));
+        const otras = muestra(c.conFicha.filter(x => sinGenero(x.peli, g)), 3);
+        if (!e || otras.length < 3) return null;
+        return {
+          clave: `genero-${g}-${e.slug}`,
+          tipo: 'El género',
+          pregunta: `¿Cuál de estas es ${GEN_UNA[g]}?`,
+          poster: null,
+          opciones: [etq(e), ...otras.map(etq)],
+          correcta: etq(e),
+          explicacion: `<em>${etq(e)}</em> figura en TMDB como ${genresOf(e.peli).join(', ').toLowerCase()}. Las otras tres, no.`,
+          href: `#genero/${encodeURIComponent(g)}`
+        };
+      },
+
+      // ── Cara a cara: la más antigua, la más reciente, la más larga…
+      function caraACara(c) {
+        const criterio = azar([
+          { id: 'vieja', pool: c.conAnio, valor: anioDe, mayor: false, fmt: e => e.peli.year,
+            pregunta: '¿Cuál de estas cuatro es la más antigua?' },
+          { id: 'nueva', pool: c.conAnio, valor: anioDe, mayor: true, fmt: e => e.peli.year,
+            pregunta: '¿Cuál de estas cuatro es la más reciente?' },
+          { id: 'larga', pool: c.conDuracion, valor: e => minutos(e.peli), mayor: true, fmt: e => `${minutos(e.peli)} min`,
+            pregunta: '¿Cuál de estas cuatro dura más?' },
+          { id: 'corta', pool: c.conDuracion, valor: e => minutos(e.peli), mayor: false, fmt: e => `${minutos(e.peli)} min`,
+            pregunta: '¿Cuál de estas cuatro es la más corta?' }
+        ]);
+        const cuatro = muestra(criterio.pool, 4);
+        if (cuatro.length < 4 || new Set(cuatro.map(criterio.valor)).size < 4) return null;
+        const orden = cuatro.slice().sort((a, b) => criterio.mayor
+          ? criterio.valor(b) - criterio.valor(a)
+          : criterio.valor(a) - criterio.valor(b));
+        return {
+          clave: `${criterio.id}-${cuatro.map(e => e.slug).sort().join('|')}`,
+          tipo: 'Cara a cara',
+          pregunta: criterio.pregunta,
+          poster: null,
+          opciones: cuatro.map(etq),
+          correcta: etq(orden[0]),
+          explicacion: orden.map(e => `${criterio.fmt(e)} · ${etq(e)}`).join('<br>'),
+          href: `#pelicula/${orden[0].slug}`
         };
       },
 
@@ -3015,32 +3190,32 @@
       function laMejorNota(c) {
         const cuatro = muestra(c.conNota, 4);
         if (cuatro.length < 4) return null;
-        const notas = cuatro.map(e => parseFloat(e.peli.tmdb_rating));
+        const notas = cuatro.map(e => fmtRating(e.peli.tmdb_rating));
+        // Se compara la nota que se ve: 7,25 y 7,3 se leen igual.
         if (new Set(notas).size < 4) return null;
-        const mejor = cuatro.reduce((a, b) => parseFloat(a.peli.tmdb_rating) > parseFloat(b.peli.tmdb_rating) ? a : b);
+        const orden = cuatro.slice().sort((a, b) => parseFloat(b.peli.tmdb_rating) - parseFloat(a.peli.tmdb_rating));
         return {
           clave: `nota-${cuatro.map(e => e.slug).sort().join('|')}`,
           tipo: 'La mejor valorada',
           pregunta: '¿Cuál tiene mejor nota en TMDB?',
           poster: null,
-          opciones: cuatro.map(e => tituloCorto(e.peli, e.titulo)),
-          correcta: tituloCorto(mejor.peli, mejor.titulo),
-          explicacion: cuatro
-            .slice()
-            .sort((a, b) => parseFloat(b.peli.tmdb_rating) - parseFloat(a.peli.tmdb_rating))
-            .map(e => `${ico('estrella','class="ico ico-estrella"')} ${fmtRating(e.peli.tmdb_rating)} · ${tituloCorto(e.peli, e.titulo)}`)
+          opciones: cuatro.map(etq),
+          correcta: etq(orden[0]),
+          explicacion: orden
+            .map(e => `${ico('estrella','class="ico ico-estrella"')} ${fmtRating(e.peli.tmdb_rating)} · ${etq(e)}`)
             .join('<br>'),
-          href: `#pelicula/${mejor.slug}`
+          href: `#pelicula/${orden[0].slug}`
         };
       },
 
       // ── En qué año fue aquel finde
       function anioDelFinde(c) {
-        const f = azar(c.findes.filter(x => (x.fecha_sort || '').slice(0, 4).match(/^\d{4}$/)));
+        const f = azar(c.findes.filter(x => /^\d{4}/.test(x.fecha_sort || '')));
         if (!f) return null;
         const bueno = f.fecha_sort.slice(0, 4);
         const posibles = [...new Set(c.findes.map(x => (x.fecha_sort || '').slice(0, 4)))].filter(a => a && a !== bueno);
-        const otros = muestra(posibles, 3);
+        // Años vecinos: 2009 frente a 2024 se adivina sin acordarse de nada.
+        const otros = distractores(posibles, 3, a => Math.abs(parseInt(a) - parseInt(bueno)) <= 4);
         if (otros.length < 3) return null;
         return {
           clave: `anio-finde-${f.numero}`,
@@ -3070,7 +3245,7 @@
         return {
           clave: `anio-peli-${e.slug}`,
           tipo: 'El año',
-          pregunta: `¿De qué año es <em>${tituloCorto(e.peli, e.titulo)}</em>?`,
+          pregunta: `¿De qué año es <em>${etq(e)}</em>?`,
           poster: e.peli.poster,
           opciones: [bueno, ...otros],
           correcta: bueno,
@@ -3079,44 +3254,200 @@
         };
       },
 
-      // ── Quién trae más de un género
+      // ── El género favorito de cada uno
       function generoDePersona(c) {
         const p = azar(c.personas);
         const suyas = c.unicas.filter(e => e.apariciones.some(a => a.persona === p) && e.peli);
         if (suyas.length < 5) return null;
+        // Sin el drama, que gana siempre y no dice nada de nadie.
         const cuenta = {};
-        for (const e of suyas) for (const g of genresOf(e.peli)) cuenta[g] = (cuenta[g] || 0) + 1;
+        for (const e of suyas) for (const g of genresOf(e.peli)) if (g !== 'Drama') cuenta[g] = (cuenta[g] || 0) + 1;
         const orden = Object.entries(cuenta).sort((a, b) => b[1] - a[1]);
         if (orden.length < 4 || orden[0][1] === orden[1][1]) return null;
         const bueno = orden[0][0];
-        const otros = orden.slice(1).map(x => x[0]);
         return {
           clave: `genero-${p}`,
           tipo: 'Perfil',
-          pregunta: `¿Cuál es el género que más ha traído <strong>${p}</strong>?`,
+          pregunta: `Sin contar el drama, ¿qué género ha traído más <strong>${p}</strong>?`,
           poster: null,
-          opciones: [bueno, ...muestra(otros, 3)],
+          opciones: [bueno, ...muestra(orden.slice(1).map(x => x[0]), 3)],
           correcta: bueno,
-          explicacion: `${p} ha traído ${orden[0][1]} películas de ${bueno.toLowerCase()}, de ${suyas.length} en total.`,
+          explicacion: orden.slice(0, 4).map(([g, n]) => `${g}: ${n}`).join('<br>') + `<br>De ${suyas.length} películas en total.`,
           href: `#persona/${encodeURIComponent(p)}`
         };
       },
 
-      // ── Quién ha traído más
-      function quienMasPelis(c) {
-        const cuenta = {};
-        for (const e of c.pelis) cuenta[e.persona] = (cuenta[e.persona] || 0) + 1;
+      // ── Quién es el especialista en tal género
+      function quienMasGenero(c) {
+        const g = azar(Object.keys(GEN_VARIAS));
+        const cuenta = Object.fromEntries(c.personas.map(p => [p, 0]));
+        for (const e of c.pelis) if (e.peli && genresOf(e.peli).includes(g)) cuenta[e.persona]++;
         const orden = Object.entries(cuenta).sort((a, b) => b[1] - a[1]);
-        if (orden.length < 4 || orden[0][1] === orden[1][1]) return null;
+        if (orden.length < 4 || orden[0][1] < 3 || orden[0][1] === orden[1][1]) return null;
         return {
-          clave: 'quien-mas',
-          tipo: 'Récords',
-          pregunta: '¿Quién ha traído más películas en toda la historia de los findes?',
+          clave: `masgenero-${g}`,
+          tipo: 'Perfil',
+          pregunta: `¿Quién ha traído más ${GEN_VARIAS[g]}?`,
           poster: null,
           opciones: [orden[0][0], ...orden.slice(1, 4).map(x => x[0])],
           correcta: orden[0][0],
-          explicacion: orden.slice(0, 4).map(([n, v]) => `${n}: ${v} películas`).join('<br>'),
+          explicacion: orden.slice(0, 4).map(([n, v]) => `${n}: ${v}`).join('<br>'),
           href: `#persona/${encodeURIComponent(orden[0][0])}`
+        };
+      },
+
+      // ── Quién trajo la más vieja del finde
+      function laDecana(c) {
+        const f = azar(c.findes);
+        if (!f) return null;
+        const suyas = f.personas.flatMap(p => p.peliculas
+          .filter(m => typeof m !== 'string' && m.slug && PELI_CACHE[m.slug] && parseInt(PELI_CACHE[m.slug].year))
+          .map(m => ({ persona: p.nombre, peli: PELI_CACHE[m.slug], titulo: m.titulo, slug: m.slug })));
+        if (suyas.length < 4) return null;
+        suyas.sort((a, b) => anioDe(a) - anioDe(b));
+        if (anioDe(suyas[0]) === anioDe(suyas[1])) return null;
+        const decana = suyas[0];
+        const otras = muestra(f.personas.map(p => p.nombre).filter(n => n !== decana.persona), 3);
+        if (otras.length < 3) return null;
+        return {
+          clave: `decana-${f.numero}`,
+          tipo: 'La decana',
+          pregunta: `¿Quién trajo la película más antigua del Finde #${f.numero}?`,
+          poster: null,
+          opciones: [decana.persona, ...otras],
+          correcta: decana.persona,
+          explicacion: `<strong>${decana.persona}</strong>, con <em>${etq(decana)}</em> (${decana.peli.year}). La siguiente era <em>${etq(suyas[1])}</em> (${suyas[1].peli.year}).`,
+          href: `#finde/${f.numero}`
+        };
+      },
+
+      // ── Cuál se vio en el mismo finde
+      function mismoFinde(c) {
+        const e = azar(c.unaSolaVez);
+        if (!e) return null;
+        const f = e.apariciones[0].finde;
+        const companera = azar(c.unicas.filter(x => x.slug !== e.slug && x.apariciones.some(a => a.finde.numero === f.numero)));
+        // Las otras, de findes lejanos y que nunca pasaron por este.
+        const otras = muestra(c.unicas.filter(x => x.apariciones.every(a => Math.abs(a.finde.numero - f.numero) >= 3)), 3);
+        if (!companera || otras.length < 3) return null;
+        return {
+          clave: `mismofinde-${[e.slug, companera.slug].sort().join('|')}`,
+          tipo: 'Compañeras',
+          pregunta: `¿Cuál de estas se vio en el mismo finde que <em>${etq(e)}</em>?`,
+          poster: null,
+          opciones: [etq(companera), ...otras.map(etq)],
+          correcta: etq(companera),
+          explicacion: `Las dos se vieron en el Finde #${f.numero} (${f.fecha}): <em>${etq(e)}</em> la trajo ${e.apariciones[0].persona} y <em>${etq(companera)}</em>, ${companera.apariciones.find(a => a.finde.numero === f.numero).persona}.`,
+          href: `#finde/${f.numero}`
+        };
+      },
+
+      // ── La que se vio dos veces
+      function laRepetida(c) {
+        const e = azar(c.unicas.filter(x => new Set(x.apariciones.map(a => a.finde.numero)).size >= 2));
+        const otras = muestra(c.unaSolaVez, 3);
+        if (!e || otras.length < 3) return null;
+        return {
+          clave: `repetida-${e.slug}`,
+          tipo: 'La repetida',
+          pregunta: '¿Cuál de estas se ha visto en dos findes distintos?',
+          poster: null,
+          opciones: [etq(e), ...otras.map(etq)],
+          correcta: etq(e),
+          explicacion: `<em>${etq(e)}</em> se vio ${e.apariciones.map(a => `en el Finde #${a.finde.numero} (la trajo ${a.persona})`).join(' y ')}.`,
+          href: `#pelicula/${e.slug}`
+        };
+      },
+
+      // ── Altas y bajas
+      function asistencia(c) {
+        const primero = Math.min(...c.findes.map(f => f.numero));
+        const ultimo = Math.max(...c.findes.map(f => f.numero));
+        const casos = [];
+        for (const [p, fs] of Object.entries(c.findesDe)) {
+          if (fs[0] !== primero) casos.push({ p, fs, cual: 'primer', n: fs[0] });
+          if (fs[fs.length - 1] !== ultimo) casos.push({ p, fs, cual: 'último', n: fs[fs.length - 1] });
+        }
+        const k = azar(casos);
+        if (!k) return null;
+        const bueno = c.findes.find(f => f.numero === k.n);
+        const otros = distractores(c.findes.filter(f => f.numero !== k.n), 3, f => Math.abs(f.numero - k.n) <= 5);
+        if (otros.length < 3) return null;
+        const seguidos = k.fs[k.fs.length - 1] - k.fs[0] + 1 === k.fs.length;
+        return {
+          clave: `asist-${k.p}-${k.cual}`,
+          tipo: 'Altas y bajas',
+          pregunta: `¿Cuál fue el ${k.cual} finde de <strong>${k.p}</strong>?`,
+          poster: null,
+          opciones: [etiquetaFinde(bueno), ...otros.map(etiquetaFinde)],
+          correcta: etiquetaFinde(bueno),
+          explicacion: `${k.p} fue a ${k.fs.length} findes: ${seguidos && k.fs.length > 2
+            ? `del #${k.fs[0]} al #${k.fs[k.fs.length - 1]}`
+            : k.fs.map(n => `#${n}`).join(', ').replace(/, ([^,]*)$/, ' y $1')}.`,
+          href: `#persona/${encodeURIComponent(k.p)}`
+        };
+      },
+
+      // ── Cuántas se vieron
+      function cuantasPelis(c) {
+        const f = azar(c.findes);
+        if (!f) return null;
+        const total = x => x.personas.reduce((s, p) => s + p.peliculas.length, 0);
+        const bueno = String(total(f));
+        const otros = muestra([...new Set(c.findes.map(x => String(total(x))))].filter(n => n !== bueno), 3);
+        if (otros.length < 3) return null;
+        return {
+          clave: `cuantas-${f.numero}`,
+          tipo: 'Las cuentas',
+          pregunta: `¿Cuántas películas se vieron en el Finde #${f.numero} (${f.lugares.join(' y ')}, ${f.fecha})?`,
+          poster: null,
+          opciones: [bueno, ...otros],
+          correcta: bueno,
+          explicacion: `${bueno}: ${f.personas.map(p => `${p.nombre} trajo ${p.peliculas.length}`).join(', ')}.`,
+          href: `#finde/${f.numero}`
+        };
+      },
+
+      // ── Récords del archivo
+      function recordArchivo(c) {
+        const criterio = azar([
+          { id: 'antigua', pool: c.conAnio, valor: anioDe, mayor: false, fmt: e => e.peli.year, que: 'más antigua' },
+          { id: 'larga', pool: c.conDuracion, valor: e => minutos(e.peli), mayor: true, fmt: e => `${minutos(e.peli)} min`, que: 'más larga' }
+        ]);
+        const orden = criterio.pool.slice().sort((a, b) => criterio.mayor
+          ? criterio.valor(b) - criterio.valor(a)
+          : criterio.valor(a) - criterio.valor(b));
+        if (orden.length < 12 || criterio.valor(orden[0]) === criterio.valor(orden[1])) return null;
+        const otras = muestra(orden.slice(1, 12), 3);
+        const todas = [orden[0], ...otras].sort((a, b) => orden.indexOf(a) - orden.indexOf(b));
+        return {
+          clave: `record-${criterio.id}`,
+          tipo: 'Récords',
+          pregunta: `¿Cuál es la película ${criterio.que} que se ha visto en los findes?`,
+          poster: null,
+          opciones: [etq(orden[0]), ...otras.map(etq)],
+          correcta: etq(orden[0]),
+          explicacion: todas.map(e => `${criterio.fmt(e)} · ${etq(e)}`).join('<br>'),
+          href: `#pelicula/${orden[0].slug}`
+        };
+      },
+
+      // ── El director más visto
+      function directorMasVisto(c) {
+        const orden = Object.entries(c.pelisDeDirector).map(([d, es]) => [d, es.length]).sort((a, b) => b[1] - a[1]);
+        if (orden.length < 4 || orden[0][1] === orden[1][1]) return null;
+        const otros = muestra(orden.slice(1).filter(x => x[1] >= 3), 3);
+        if (otros.length < 3) return null;
+        const todos = [orden[0], ...otros];
+        return {
+          clave: 'dir-mas',
+          tipo: 'Récords',
+          pregunta: '¿De qué director se han visto más películas en los findes?',
+          poster: null,
+          opciones: todos.map(x => x[0]),
+          correcta: orden[0][0],
+          explicacion: todos.map(([d, n]) => `${d}: ${n} películas`).join('<br>'),
+          href: `#director/${encodeURIComponent(orden[0][0])}`
         };
       },
 
@@ -3320,9 +3651,152 @@
       return QUIZ_DATA || [];
     }
 
+    /* ═══ Cine general: sí o no ═══
+       Unas pocas preguntas escritas a mano (quiz.json) y el resto generadas
+       de las fichas, siempre sobre películas que se han visto en los findes.
+       Cada generador recibe la respuesta que tiene que salir (`si`), para
+       poder repartir síes y noes a medias: si no, contestar siempre «sí»
+       aprobaría. Las explicaciones van como texto plano. */
+    const decadaDe = (anio) => Math.floor(anio / 10) * 10;
+    const nombreDecada = (d) => d < 2000 ? `${String(d).slice(2)}` : String(d);
+
+    const GENERADORES_CINE = [
+      function siDirigio(c, si) {
+        const e = azar(c.conDirector);
+        if (!e) return null;
+        const suyos = e.peli.director.split(', ');
+        const d = si ? suyos[0] : azar(c.directores.filter(x => !suyos.includes(x)
+          && c.pelisDeDirector[x].some(o => Math.abs(anioDe(o) - anioDe(e)) <= 12)));
+        if (!d) return null;
+        return {
+          clave: `si-dir-${e.slug}-${d}`, pelicula_slug: e.slug, respuesta: si,
+          pregunta: `¿Dirigió ${d} <em>${etq(e)}</em>?`,
+          explicacion: `${etq(e)} (${e.peli.year}) es de ${e.peli.director}.`
+        };
+      },
+
+      function siDecada(c, si) {
+        const e = azar(c.conAnio);
+        if (!e) return null;
+        const real = decadaDe(anioDe(e));
+        const d = si ? real : real + azar([-10, 10]);
+        if (d < 1920 || d > 2020) return null;
+        return {
+          clave: `si-decada-${e.slug}`, pelicula_slug: e.slug, respuesta: si,
+          pregunta: `¿Es <em>${etq(e)}</em> de los años ${nombreDecada(d)}?`,
+          explicacion: `Es de ${e.peli.year}${e.peli.director ? `, de ${e.peli.director}` : ''}.`
+        };
+      },
+
+      function siDosHoras(c, si) {
+        // Nada entre 110 y 130 minutos: eso no lo sabe nadie de memoria.
+        const e = azar(c.conDuracion.filter(x => si ? minutos(x.peli) > 130 : minutos(x.peli) < 110));
+        if (!e) return null;
+        return {
+          clave: `si-horas-${e.slug}`, pelicula_slug: e.slug, respuesta: si,
+          pregunta: `¿Dura <em>${etq(e)}</em> más de dos horas?`,
+          explicacion: `Dura ${minutos(e.peli)} minutos.`
+        };
+      },
+
+      function siGenero(c, si) {
+        let e, g;
+        if (si) {
+          e = azar(c.conFicha.filter(x => genresOf(x.peli).some(y => GEN_NITIDOS.includes(y))));
+          if (!e) return null;
+          g = azar(genresOf(e.peli).filter(y => GEN_NITIDOS.includes(y)));
+        } else {
+          g = azar(GEN_NITIDOS);
+          e = azar(c.conFicha.filter(x => genresOf(x.peli).length && sinGenero(x.peli, g)));
+          if (!e) return null;
+        }
+        return {
+          clave: `si-genero-${e.slug}-${g}`, pelicula_slug: e.slug, respuesta: si,
+          pregunta: `¿Es <em>${etq(e)}</em> ${GEN_UNA[g]}?`,
+          explicacion: `En TMDB figura como ${genresOf(e.peli).join(', ').toLowerCase()}.`
+        };
+      },
+
+      function siAnterior(c, si) {
+        const [a, b] = muestra(c.conAnio, 2);
+        if (!b || Math.abs(anioDe(a) - anioDe(b)) < 3) return null;
+        // Se pregunta por la pareja en el orden que haga verdadera o falsa la frase.
+        const [x, y] = (anioDe(a) < anioDe(b)) === si ? [a, b] : [b, a];
+        return {
+          clave: `si-antes-${[a.slug, b.slug].sort().join('|')}`, pelicula_slug: x.slug, respuesta: si,
+          pregunta: `¿Es <em>${etq(x)}</em> anterior a <em>${etq(y)}</em>?`,
+          explicacion: `${etq(x)} es de ${x.peli.year}; ${etq(y)}, de ${y.peli.year}.`
+        };
+      },
+
+      function siTituloOriginal(c, si) {
+        const e = azar(c.conOriginal);
+        if (!e) return null;
+        const otra = si ? e : azar(c.conOriginal.filter(x => x.slug !== e.slug
+          && decadaDe(anioDe(x)) === decadaDe(anioDe(e))));
+        if (!otra) return null;
+        return {
+          clave: `si-titulo-${e.slug}`, pelicula_slug: e.slug, respuesta: si,
+          pregunta: `¿Es «${otra.peli.titulo_original}» el título original de <em>${etq(e)}</em>?`,
+          explicacion: `Su título original es «${e.peli.titulo_original}»${si ? '' : `; «${otra.peli.titulo_original}» es ${etq(otra)}`}.`
+        };
+      },
+
+      function siMismoDirector(c, si) {
+        let a, b;
+        if (si) {
+          const d = azar(Object.keys(c.pelisDeDirector).filter(x => c.pelisDeDirector[x].length >= 2));
+          if (!d) return null;
+          [a, b] = muestra(c.pelisDeDirector[d], 2);
+        } else {
+          a = azar(c.conDirector);
+          const suyos = a.peli.director.split(', ');
+          b = azar(c.conDirector.filter(x => !x.peli.director.split(', ').some(d => suyos.includes(d))
+            && Math.abs(anioDe(x) - anioDe(a)) <= 8));
+          if (!b) return null;
+        }
+        const comun = a.peli.director.split(', ').find(d => b.peli.director.split(', ').includes(d));
+        return {
+          clave: `si-mismodir-${[a.slug, b.slug].sort().join('|')}`, pelicula_slug: a.slug, respuesta: si,
+          pregunta: `¿Son <em>${etq(a)}</em> y <em>${etq(b)}</em> del mismo director?`,
+          explicacion: si
+            ? `Las dos son de ${comun}.`
+            : `${etq(a)} es de ${a.peli.director}; ${etq(b)}, de ${b.peli.director}.`
+        };
+      }
+    ];
+
+    function rondaCine(curadas, n) {
+      const c = contextoQuiz();
+      const ronda = [];
+      const vistas = new Set();
+      const porTipo = {};
+      // Las escritas a mano solo valen si su ficha existe; como mucho tres por ronda.
+      for (const q of muestra(curadas.filter(q => !q.pelicula_slug || PELI_CACHE[q.pelicula_slug]), 3)) {
+        ronda.push(q);
+        vistas.add(q.pregunta);
+      }
+      const sies = Math.random() < 0.5 ? Math.floor(n / 2) : Math.ceil(n / 2);
+      for (let i = 0; i < n * 40 && ronda.length < n; i++) {
+        const faltanSi = sies - ronda.filter(q => q.respuesta).length;
+        const si = faltanSi > 0 && (faltanSi >= n - ronda.length || Math.random() < 0.5);
+        const gen = azar(GENERADORES_CINE);
+        // Como mucho tres del mismo tipo, para que la ronda no sea monotemática.
+        if ((porTipo[gen.name] || 0) >= 3) continue;
+        const q = gen(c, si);
+        if (!q || vistas.has(q.clave)) continue;
+        // Una sola pregunta por película y ronda.
+        if (ronda.some(r => r.pelicula_slug === q.pelicula_slug)) continue;
+        vistas.add(q.clave);
+        porTipo[gen.name] = (porTipo[gen.name] || 0) + 1;
+        ronda.push(q);
+      }
+      return barajar(ronda);
+    }
+
     async function renderQuizCine() {
-      const questions = await loadQuiz();
-      if (!questions.length) {
+      const shuffled = rondaCine(await loadQuiz(), 15);
+      if (!shuffled.length) {
         document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
           ${quizCabecera('cine')}
           <p style="color:var(--tx-2);text-align:center">No se pudieron cargar las preguntas.</p>
@@ -3330,8 +3804,6 @@
         return;
       }
 
-      // Shuffle questions
-      const shuffled = [...questions].sort(() => Math.random() - 0.5);
       let current = 0;
       let score = 0;
       let answered = false;
