@@ -866,7 +866,13 @@
     }
 
     /* ═══ Quiz Precríticos (opción múltiple) ═══ */
-    .quiz-modes { display: flex; justify-content: center; margin-bottom: 1.5rem; }
+    .quiz-modes { display: flex; flex-wrap: wrap; gap: .6rem 1rem; justify-content: center; align-items: center; margin-bottom: 1.5rem; }
+    .quiz-largo { display: inline-flex; align-items: center; gap: .45rem; font-size: .78rem; color: var(--tx-3); }
+    .quiz-progress { display: flex; justify-content: center; align-items: baseline; gap: .9rem; }
+    .quiz-terminar {
+      font: inherit; font-weight: 600; color: var(--wine); background: none; border: none;
+      padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px;
+    }
     .quizp {
       max-width: 560px; margin: 0 auto; width: 100%;
     }
@@ -3470,14 +3476,15 @@
       }
     ];
 
-    function generarPreguntas(n) {
+    // `vistas` se comparte entre tandas: en las rondas sin fin se piden
+    // preguntas de 20 en 20 y ninguna puede repetirse.
+    function generarPreguntas(n, vistas = new Set()) {
       const c = contextoQuiz();
       const preguntas = [];
-      const vistas = new Set();
       const porTipo = {};
-      // Máximo dos preguntas del mismo tipo por ronda, para que no salgan
-      // cuatro carteles seguidos. Se relaja al final si no hay variedad.
-      const tope = (intento) => intento < n * 20 ? 2 : n;
+      // Pocas del mismo tipo por tanda (dos en diez, cuatro en treinta…), para
+      // que no salgan cuatro carteles seguidos. Se relaja al final si no hay variedad.
+      const tope = (intento) => intento < n * 20 ? Math.max(2, Math.ceil(n / 8)) : n;
       // Intentos acotados: algunos generadores fallan si faltan datos.
       for (let i = 0; i < n * 40 && preguntas.length < n; i++) {
         const q = azar(GENERADORES)(c);
@@ -3494,7 +3501,10 @@
     }
 
     function renderQuizPrecriticos() {
-      const preguntas = generarPreguntas(10);
+      const total = quizLargo();
+      const sinFin = total === Infinity;
+      const vistas = new Set();
+      const preguntas = generarPreguntas(sinFin ? 20 : total, vistas);
       if (!preguntas.length) {
         document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
           ${quizCabecera('precriticos')}
@@ -3504,23 +3514,22 @@
         return;
       }
 
-      let actual = 0, aciertos = 0;
+      let actual = 0, aciertos = 0, respondidas = 0;
       const fallos = [];
 
       document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
         ${quizCabecera('precriticos')}
         <div class="quiz-arena" style="min-height:auto">
-          <div class="quiz-progress"><span id="quiz-counter">1 / ${preguntas.length}</span></div>
-          <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quiz-bar" style="width:0%"></div></div>
+          ${quizMarcador()}
           <div class="quizp" id="quizp"></div>
         </div>
       </div></section>`;
       engancharModos();
+      document.getElementById('quiz-terminar').addEventListener('click', () => resultado());
 
       const pintar = () => {
         const q = preguntas[actual];
-        document.getElementById('quiz-counter').textContent = `${actual + 1} / ${preguntas.length}`;
-        document.getElementById('quiz-bar').style.width = `${(actual / preguntas.length) * 100}%`;
+        pintarMarcador(actual, preguntas.length, aciertos, respondidas, sinFin);
         document.getElementById('quizp').innerHTML = `
           <div class="quizp-card">
             <div class="quizp-kind">${q.tipo}</div>
@@ -3544,6 +3553,9 @@
         const idxCorrecta = q.opciones.indexOf(q.correcta);
         const acertada = elegida === idxCorrecta;
         if (acertada) aciertos++; else fallos.push(q);
+        respondidas++;
+        // Sin fin: se piden más antes de llegar al final de la tanda.
+        if (sinFin && actual >= preguntas.length - 3) preguntas.push(...generarPreguntas(20, vistas));
 
         botones.forEach((b, i) => {
           b.disabled = true;
@@ -3553,6 +3565,7 @@
         });
 
         const ultima = actual === preguntas.length - 1;
+        pintarMarcador(actual, preguntas.length, aciertos, respondidas, sinFin);
         document.getElementById('quizp-tras').innerHTML = `
           <div class="quizp-feedback">
             <strong>${ico(acertada ? 'si' : 'no')} ${acertada ? 'Correcto' : 'Casi'}</strong> — ${q.explicacion}
@@ -3567,7 +3580,7 @@
       };
 
       const resultado = () => {
-        const pct = Math.round((aciertos / preguntas.length) * 100);
+        const pct = respondidas ? Math.round((aciertos / respondidas) * 100) : 0;
         const circ = 2 * Math.PI * 58;
         let emoji, msg;
         if (pct === 100) { emoji = ico('trofeo'); msg = 'Pleno. Te sabes el archivo de memoria.'; }
@@ -3575,8 +3588,7 @@
         else if (pct >= 40) { emoji = ico('film'); msg = 'Aprobado raspado. Toca repasar findes.'; }
         else { emoji = ico('dormido'); msg = '¿Seguro que no te dormías en las proyecciones?'; }
 
-        document.getElementById('quiz-counter').textContent = `${preguntas.length} / ${preguntas.length}`;
-        document.getElementById('quiz-bar').style.width = '100%';
+        pintarMarcador(respondidas, respondidas, aciertos, respondidas, sinFin, true);
         document.getElementById('quizp').innerHTML = `
           <div class="quiz-results" style="max-width:none;margin:0 auto">
             <div class="result-ico">${emoji}</div>
@@ -3587,7 +3599,7 @@
                   stroke-linecap="round" stroke-dasharray="${circ}" stroke-dashoffset="${circ}" />
               </svg>
               <div class="quiz-score-text">
-                <div class="quiz-score-num">${aciertos}/${preguntas.length}</div>
+                <div class="quiz-score-num">${aciertos}/${respondidas}</div>
                 <div class="quiz-score-label">aciertos</div>
               </div>
             </div>
@@ -3617,12 +3629,30 @@
       return localStorage.getItem('fp-quiz-modo') === 'cine' ? 'cine' : 'precriticos';
     }
 
+    // Largo de la ronda: 10, 30, 100 o sin fin (hasta que uno se canse).
+    const QUIZ_LARGOS = ['10', '30', '100', 'sinfin'];
+    function quizLargoClave() {
+      let v = null;
+      try { v = localStorage.getItem('fp-quiz-largo'); } catch (e) {}
+      return QUIZ_LARGOS.includes(v) ? v : '30';
+    }
+    function quizLargo() {
+      const v = quizLargoClave();
+      return v === 'sinfin' ? Infinity : parseInt(v);
+    }
+
     function quizCabecera(modo) {
+      const largo = quizLargoClave();
       return `<h1 class="page-heading" style="text-align:center">Quiz</h1>
         <div class="quiz-modes">
           <div class="segmented" id="quiz-modes">
             <button data-modo="precriticos" class="${modo === 'precriticos' ? 'is-active' : ''}">Precríticos</button>
             <button data-modo="cine" class="${modo === 'cine' ? 'is-active' : ''}">Cine general</button>
+          </div>
+          <div class="quiz-largo">Preguntas
+            <div class="segmented" id="quiz-largo">
+              ${QUIZ_LARGOS.map(v => `<button data-largo="${v}" class="${v === largo ? 'is-active' : ''}">${v === 'sinfin' ? 'Sin fin' : v}</button>`).join('')}
+            </div>
           </div>
         </div>`;
     }
@@ -3635,6 +3665,38 @@
           renderQuiz();
         });
       });
+      document.querySelectorAll('#quiz-largo button').forEach(b => {
+        b.addEventListener('click', () => {
+          if (b.dataset.largo === quizLargoClave()) return;
+          try { localStorage.setItem('fp-quiz-largo', b.dataset.largo); } catch (e) {}
+          renderQuiz();
+        });
+      });
+    }
+
+    // Contador y barra, comunes a los dos modos. En las rondas sin fin la
+    // barra no tiene final: muestra el porcentaje de aciertos.
+    function quizMarcador() {
+      return `<div class="quiz-progress"><span id="quiz-counter"></span>
+          <button class="quiz-terminar" id="quiz-terminar">Terminar</button></div>
+        <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quiz-bar" style="width:0%"></div></div>`;
+    }
+
+    function pintarMarcador(actual, total, aciertos, respondidas, sinFin, fin) {
+      const cont = document.getElementById('quiz-counter');
+      const barra = document.getElementById('quiz-bar');
+      const terminar = document.getElementById('quiz-terminar');
+      if (!cont) return;
+      if (terminar) terminar.style.display = fin ? 'none' : '';
+      if (sinFin) {
+        cont.textContent = fin
+          ? `${respondidas} respondidas · ${aciertos} ${aciertos === 1 ? 'acierto' : 'aciertos'}`
+          : `Pregunta ${actual + 1} · ${aciertos} de ${respondidas}`;
+        barra.style.width = `${respondidas ? (aciertos / respondidas) * 100 : 0}%`;
+      } else {
+        cont.textContent = fin ? `${respondidas} / ${total}` : `${actual + 1} / ${total}`;
+        barra.style.width = `${fin ? 100 : (actual / total) * 100}%`;
+      }
     }
 
     function renderQuiz() {
@@ -3766,28 +3828,34 @@
       }
     ];
 
-    function rondaCine(curadas, n) {
+    // `estado` se comparte entre tandas de una ronda sin fin: ni preguntas
+    // ni películas repetidas en toda la partida.
+    function rondaCine(curadas, n, estado = { vistas: new Set(), pelis: new Set() }) {
       const c = contextoQuiz();
       const ronda = [];
-      const vistas = new Set();
+      const { vistas, pelis } = estado;
       const porTipo = {};
-      // Las escritas a mano solo valen si su ficha existe; como mucho tres por ronda.
-      for (const q of muestra(curadas.filter(q => !q.pelicula_slug || PELI_CACHE[q.pelicula_slug]), 3)) {
+      // Las escritas a mano solo valen si su ficha existe; unas pocas por tanda.
+      const curadasLibres = curadas.filter(q => (!q.pelicula_slug || PELI_CACHE[q.pelicula_slug])
+        && !vistas.has(q.pregunta) && !pelis.has(q.pelicula_slug));
+      for (const q of muestra(curadasLibres, Math.max(3, Math.round(n / 10)))) {
         ronda.push(q);
         vistas.add(q.pregunta);
+        pelis.add(q.pelicula_slug);
       }
       const sies = Math.random() < 0.5 ? Math.floor(n / 2) : Math.ceil(n / 2);
       for (let i = 0; i < n * 40 && ronda.length < n; i++) {
         const faltanSi = sies - ronda.filter(q => q.respuesta).length;
         const si = faltanSi > 0 && (faltanSi >= n - ronda.length || Math.random() < 0.5);
         const gen = azar(GENERADORES_CINE);
-        // Como mucho tres del mismo tipo, para que la ronda no sea monotemática.
-        if ((porTipo[gen.name] || 0) >= 3) continue;
+        // Pocas del mismo tipo (tres en quince), para que no sea monotemática.
+        if ((porTipo[gen.name] || 0) >= Math.max(3, Math.ceil(n / 5))) continue;
         const q = gen(c, si);
         if (!q || vistas.has(q.clave)) continue;
-        // Una sola pregunta por película y ronda.
-        if (ronda.some(r => r.pelicula_slug === q.pelicula_slug)) continue;
+        // Una sola pregunta por película en toda la partida.
+        if (pelis.has(q.pelicula_slug)) continue;
         vistas.add(q.clave);
+        pelis.add(q.pelicula_slug);
         porTipo[gen.name] = (porTipo[gen.name] || 0) + 1;
         ronda.push(q);
       }
@@ -3795,7 +3863,11 @@
     }
 
     async function renderQuizCine() {
-      const shuffled = rondaCine(await loadQuiz(), 15);
+      const total = quizLargo();
+      const sinFin = total === Infinity;
+      const curadas = await loadQuiz();
+      const estado = { vistas: new Set(), pelis: new Set() };
+      const shuffled = rondaCine(curadas, sinFin ? 20 : total, estado);
       if (!shuffled.length) {
         document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
           ${quizCabecera('cine')}
@@ -3807,17 +3879,14 @@
       let current = 0;
       let score = 0;
       let answered = false;
+      let respondidas = 0;
+      let terminado = false;
 
       function renderShell() {
         document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
           ${quizCabecera('cine')}
           <div class="quiz-arena">
-            <div class="quiz-progress">
-              <span id="quiz-counter">1 / ${shuffled.length}</span>
-            </div>
-            <div class="quiz-progress-bar">
-              <div class="quiz-progress-fill" id="quiz-bar" style="width:0%"></div>
-            </div>
+            ${quizMarcador()}
             <div class="quiz-card-wrapper" id="quiz-card-wrapper"></div>
             <div class="quiz-buttons">
               <button class="quiz-btn btn-no" id="btn-no" title="No">${ico('no')}</button>
@@ -3829,6 +3898,9 @@
           </div>
         </div></section>`;
         engancharModos();
+        document.getElementById('quiz-terminar').addEventListener('click', () => {
+          if (!terminado) showResults();
+        });
       }
 
       function showCard() {
@@ -3836,8 +3908,7 @@
         const q = shuffled[current];
         const peli = q.pelicula_slug ? PELI_CACHE[q.pelicula_slug] : null;
         const wrapper = document.getElementById('quiz-card-wrapper');
-        document.getElementById('quiz-counter').textContent = `${current + 1} / ${shuffled.length}`;
-        document.getElementById('quiz-bar').style.width = `${(current / shuffled.length) * 100}%`;
+        pintarMarcador(current, shuffled.length, score, respondidas, sinFin);
 
         const posterHtml = peli && peli.poster
           ? `<img class="quiz-card-poster" src="${posterUrl(peli.poster, POSTER.md)}" alt="" draggable="false">`
@@ -3866,6 +3937,9 @@
         const q = shuffled[current];
         const correct = (userSaidYes === q.respuesta);
         if (correct) score++;
+        respondidas++;
+        pintarMarcador(current, shuffled.length, score, respondidas, sinFin);
+        if (sinFin && current >= shuffled.length - 3) shuffled.push(...rondaCine(curadas, 20, estado));
 
         const card = document.getElementById('quiz-active-card');
         card.classList.add(userSaidYes ? 'exit-right' : 'exit-left');
@@ -3878,8 +3952,9 @@
           document.getElementById('fb-explain').textContent = q.explicacion;
           fb.classList.add('visible');
 
-          // Auto-advance
+          // Auto-advance (salvo si ya se terminó o se cambió de página)
           setTimeout(() => {
+            if (terminado || !document.getElementById('quiz-card-wrapper')) return;
             current++;
             if (current < shuffled.length) {
               showCard();
@@ -3891,7 +3966,11 @@
       }
 
       function showResults() {
-        const pct = Math.round((score / shuffled.length) * 100);
+        // `answered` bloquea también los atajos de teclado de esta ronda.
+        terminado = true;
+        answered = true;
+        document.querySelectorAll('.quiz-buttons, .quiz-swipe-hint').forEach(el => el.style.display = 'none');
+        const pct = respondidas ? Math.round((score / respondidas) * 100) : 0;
         const circ = 2 * Math.PI * 58;
         const offset = circ - (pct / 100) * circ;
 
@@ -3915,7 +3994,7 @@
                   stroke-dashoffset="${circ}" />
               </svg>
               <div class="quiz-score-text">
-                <div class="quiz-score-num">${score}/${shuffled.length}</div>
+                <div class="quiz-score-num">${score}/${respondidas}</div>
                 <div class="quiz-score-label">aciertos</div>
               </div>
             </div>
@@ -3931,8 +4010,7 @@
           </div>
         `;
 
-        document.getElementById('quiz-bar').style.width = '100%';
-        document.getElementById('quiz-counter').textContent = `${shuffled.length} / ${shuffled.length}`;
+        pintarMarcador(respondidas, shuffled.length, score, respondidas, sinFin, true);
 
         // Animate ring
         requestAnimationFrame(() => {
