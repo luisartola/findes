@@ -18,5 +18,53 @@
   "tmdb_id": 1648,
   "titulo_es": "Las alucinantes aventuras de Bill y Ted",
   "titulo_original": "Bill & Ted's Excellent Adventure",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Al Leong",
+    "Alex Winter",
+    "Amy Stoch",
+    "Bernie Casey",
+    "Clifford David",
+    "Dan Shor",
+    "Diane Franklin",
+    "George Carlin",
+    "Jane Wiedlin",
+    "John Karlsen",
+    "Keanu Reeves",
+    "Kimberley Kates",
+    "Robert V. Barron",
+    "Rod Loomis",
+    "Terry Camilleri",
+    "Tony Steedman"
+  ],
+  "musica": [
+    "David Newman"
+  ],
+  "fotografia": [
+    "Tim Suhrstedt"
+  ],
+  "guion": [
+    "Ed Solomon"
+  ],
+  "temas": [
+    "history lesson",
+    "rock",
+    "viaje a través del tiempo",
+    "vocación"
+  ],
+  "escenario": [
+    "Atenas",
+    "Austria",
+    "Casa Blanca",
+    "Inglaterra",
+    "Kassel",
+    "Mongolia",
+    "Nuevo México",
+    "Orleans",
+    "San Dimas",
+    "Viena"
+  ]
 }

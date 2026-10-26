@@ -18,5 +18,33 @@
   "tmdb_id": 2292,
   "titulo_es": "Clerks",
   "titulo_original": "Clerks",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Brian O'Halloran",
+    "Dave Klein",
+    "Jason Mewes",
+    "Jeff Anderson",
+    "Ken Clark",
+    "Kevin Smith",
+    "Lisa Spoonauer",
+    "Marilyn Ghigliotti",
+    "Noelle Parker",
+    "Scott Mosier",
+    "Tom Burke"
+  ],
+  "musica": [
+    "Greg Graffin"
+  ],
+  "fotografia": [
+    "Dave Klein"
+  ],
+  "guion": [
+    "Kevin Smith"
+  ],
+  "escenario": [
+    "Nueva Jersey"
+  ]
 }

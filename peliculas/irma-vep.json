@@ -18,5 +18,36 @@
   "tmdb_id": 25355,
   "titulo_es": "Irma Vep",
   "titulo_original": "Irma Vep",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Alex Descas",
+    "Antoine Basler",
+    "Arsinée Khanjian",
+    "Bernard Nissille",
+    "Bulle Ogier",
+    "Dominique Faysse",
+    "Estelle Larrivaz",
+    "Guy-Patrick Sainderichin",
+    "Jacques Fieschi",
+    "Jean-Pierre Léaud",
+    "Lou Castel",
+    "Maggie Cheung",
+    "Maurice Najman",
+    "Nathalie Boutefeu",
+    "Nathalie Richard",
+    "Olivier Torres",
+    "Philippe Landoulsi",
+    "Smaïl Mekki",
+    "Willy Martin",
+    "Yann Richard"
+  ],
+  "fotografia": [
+    "Éric Gautier"
+  ],
+  "guion": [
+    "Olivier Assayas"
+  ]
 }

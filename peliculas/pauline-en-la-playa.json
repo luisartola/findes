@@ -18,5 +18,23 @@
   "tmdb_id": 10293,
   "titulo_es": "Pauline en la playa",
   "titulo_original": "Pauline à la plage",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Amanda Langlet",
+    "Arielle Dombasle",
+    "Féodor Atkine",
+    "Michel Ferry",
+    "Pascal Greggory",
+    "Rosette",
+    "Simon de La Brosse"
+  ],
+  "fotografia": [
+    "Néstor Almendros"
+  ],
+  "guion": [
+    "Éric Rohmer"
+  ]
 }

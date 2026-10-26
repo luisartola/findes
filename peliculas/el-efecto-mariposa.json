@@ -18,5 +18,50 @@
   "tmdb_id": 1954,
   "titulo_es": "El efecto mariposa",
   "titulo_original": "The Butterfly Effect",
-  "tmdb_rating": 7.6
+  "tmdb_rating": 7.6,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Amy Smart",
+    "Ashton Kutcher",
+    "Callum Keith Rennie",
+    "Cameron Bright",
+    "Camille Sullivan",
+    "Elden Henson",
+    "Eric Stoltz",
+    "Ethan Suplee",
+    "Irene Gorovaia",
+    "Jake Kaese",
+    "Jesse Hutch",
+    "Jesse James",
+    "John Patrick Amedori",
+    "Kevin Durand",
+    "Kevin Schmidt",
+    "Logan Lerman",
+    "Lorena Gale",
+    "Magda Apanowicz",
+    "Meilani Paul",
+    "Melora Walters",
+    "Sam Easton",
+    "Tara Wilson",
+    "William Lee Scott"
+  ],
+  "musica": [
+    "Michael Suby"
+  ],
+  "fotografia": [
+    "Matthew F. Leonetti"
+  ],
+  "guion": [
+    "Eric Bress",
+    "J. Mackye Gruber"
+  ],
+  "temas": [
+    "predestinación",
+    "rollback in time"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

@@ -18,5 +18,22 @@
   "tmdb_id": 74725,
   "titulo_es": "Kill List",
   "titulo_original": "Kill List",
-  "tmdb_rating": 6.2
+  "tmdb_rating": 6.2,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Emma Fryer",
+    "Michael Smiley",
+    "MyAnna Buring"
+  ],
+  "musica": [
+    "Jim Williams"
+  ],
+  "fotografia": [
+    "Laurie Rose"
+  ],
+  "guion": [
+    "Ben Wheatley"
+  ]
 }

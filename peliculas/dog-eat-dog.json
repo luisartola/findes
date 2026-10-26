@@ -18,5 +18,23 @@
   "tmdb_id": 354979,
   "titulo_es": "Como Perros Salvajes",
   "titulo_original": "Dog Eat Dog",
-  "tmdb_rating": 5.1
+  "tmdb_rating": 5.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Christopher Matthew Cook",
+    "Louisa Krause",
+    "Melissa Bolona",
+    "Nicolas Cage",
+    "Omar Dorsey",
+    "Paul Schrader",
+    "Willem Dafoe"
+  ],
+  "musica": [
+    "Deantoni Parks"
+  ],
+  "guion": [
+    "Paul Schrader"
+  ]
 }

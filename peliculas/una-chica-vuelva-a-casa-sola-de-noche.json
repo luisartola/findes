@@ -18,5 +18,30 @@
   "tmdb_id": 252171,
   "titulo_es": "Una chica vuelve a casa sola de noche",
   "titulo_original": "A Girl Walks Home Alone at Night",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Ana Lily Amirpour",
+    "Arash Marandi",
+    "Dominic Rains",
+    "Marshall Manesh",
+    "Mozhan Marnó",
+    "Pej Vahdat",
+    "Reza Sixo Safai",
+    "Sheila Vand"
+  ],
+  "musica": [
+    "Bei Ru"
+  ],
+  "fotografia": [
+    "Lyle Vincent"
+  ],
+  "guion": [
+    "Ana Lily Amirpour"
+  ],
+  "escenario": [
+    "Irán"
+  ]
 }

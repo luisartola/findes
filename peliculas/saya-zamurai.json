@@ -18,5 +18,23 @@
   "tmdb_id": 80801,
   "titulo_es": "Scabbard Samurai",
   "titulo_original": "さや侍",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Itsuji Itao",
+    "Jun Kunimura",
+    "Sea Kumada"
+  ],
+  "musica": [
+    "Yasuaki Shimizu"
+  ],
+  "fotografia": [
+    "Ryūto Kondō"
+  ],
+  "guion": [
+    "Hitoshi Matsumoto",
+    "Sea Kumada"
+  ]
 }

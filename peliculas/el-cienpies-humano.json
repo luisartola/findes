@@ -18,5 +18,31 @@
   "tmdb_id": 37169,
   "titulo_es": "El ciempiés humano",
   "titulo_original": "The Human Centipede (First Sequence)",
-  "tmdb_rating": 5.2
+  "tmdb_rating": 5.2,
+  "paises": [
+    "Países Bajos"
+  ],
+  "reparto": [
+    "Akihiro Kitamura",
+    "Ashlynn Yennie",
+    "Dieter Laser",
+    "Peter Blankenstein",
+    "Winter Williams"
+  ],
+  "musica": [
+    "Holeg Spies",
+    "Patrick Savage"
+  ],
+  "fotografia": [
+    "Goof de Koning"
+  ],
+  "guion": [
+    "Tom Six"
+  ],
+  "temas": [
+    "científico loco"
+  ],
+  "escenario": [
+    "Alemania"
+  ]
 }

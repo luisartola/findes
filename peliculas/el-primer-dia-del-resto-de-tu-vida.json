@@ -18,5 +18,34 @@
   "tmdb_id": 12169,
   "titulo_es": "El primer día del resto de tu vida",
   "titulo_original": "Le Premier Jour du reste de ta vie",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Camille De Pazzis",
+    "Cécile Cassel",
+    "Déborah François",
+    "François-Xavier Demaison",
+    "Françoise Brion",
+    "Gilles Lellouche",
+    "Jacques Gamblin",
+    "Jean-Jacques Vanier",
+    "Marc-André Grondin",
+    "Océane Loison",
+    "Philippe Lefebvre",
+    "Pio Marmaï",
+    "Raphaël Bouvet",
+    "Roger Dumas",
+    "Sarah Cohen-Hadria",
+    "Sinclair",
+    "Stanley Weber",
+    "Zabou Breitman"
+  ],
+  "musica": [
+    "Sinclair"
+  ],
+  "guion": [
+    "Rémi Bezançon"
+  ]
 }

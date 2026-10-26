@@ -18,5 +18,29 @@
   "tmdb_id": 5723,
   "titulo_es": "Once (Una vez)",
   "titulo_original": "Once",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Irlanda"
+  ],
+  "reparto": [
+    "Glen Hansard",
+    "Markéta Irglová"
+  ],
+  "musica": [
+    "Glen Hansard"
+  ],
+  "fotografia": [
+    "Tim Fleming"
+  ],
+  "guion": [
+    "John Carney"
+  ],
+  "temas": [
+    "enamoramiento",
+    "músico",
+    "vinculación humana"
+  ],
+  "escenario": [
+    "Dublín"
+  ]
 }

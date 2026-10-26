@@ -18,5 +18,36 @@
   "tmdb_id": 168502,
   "titulo_es": "El bosque del lobo",
   "titulo_original": "El bosque del lobo",
-  "tmdb_rating": 4.6
+  "tmdb_rating": 4.6,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Alfredo Mayo",
+    "Amparo Soler Leal",
+    "Antonio Casas",
+    "Fernando Sánchez Polack",
+    "Inma de Santis",
+    "John Steiner",
+    "José Luis López Vázquez",
+    "Modesto Blanch",
+    "Nuria Torray",
+    "Paul Ellis",
+    "Porfiria Sanchiz",
+    "Rafael Hernández",
+    "Víctor Israel"
+  ],
+  "musica": [
+    "Antonio Pérez Olea"
+  ],
+  "fotografia": [
+    "Aurelio G. Larraya"
+  ],
+  "guion": [
+    "Juan Antonio Porto",
+    "Pedro Olea"
+  ],
+  "escenario": [
+    "Galicia"
+  ]
 }

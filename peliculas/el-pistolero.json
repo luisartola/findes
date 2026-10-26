@@ -18,5 +18,53 @@
   "tmdb_id": null,
   "titulo_es": "El pistolero",
   "titulo_original": "The Gunfighter",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alan Hale, Jr.",
+    "Alberto Morin",
+    "Angela Clarke",
+    "Anthony Ross",
+    "Archie R. Twitchell",
+    "Bruce Gilbert Norman",
+    "David Clarke",
+    "Dick Curtis",
+    "Edmund Cobb",
+    "Ellen Corby",
+    "Ferris Taylor",
+    "Gregory Peck",
+    "Hank Patterson",
+    "Harry Harvey",
+    "Harry Shannon",
+    "Helen Westcott",
+    "Houseley Stevenson",
+    "James Millican",
+    "Jean Parker",
+    "Jim Hayward",
+    "John Pickard",
+    "Karl Malden",
+    "Kenneth Tobey",
+    "Larry Buchanan",
+    "Mae Marsh",
+    "Millard Mitchell",
+    "Murray Alper",
+    "Pierce Lyden",
+    "Ralph Moody",
+    "Richard Jaeckel",
+    "Skip Homeier",
+    "Verna Felton"
+  ],
+  "musica": [
+    "Alfred Newman"
+  ],
+  "fotografia": [
+    "Arthur Charles Miller"
+  ],
+  "guion": [
+    "Nunnally Johnson",
+    "Roger Corman",
+    "William Bowers"
+  ]
 }

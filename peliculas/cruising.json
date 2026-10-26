@@ -18,5 +18,53 @@
   "tmdb_id": 27958,
   "titulo_es": "A la caza",
   "titulo_original": "Cruising",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Alemania",
+    "Alemania Occidental",
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Al Pacino",
+    "Allan Miller",
+    "Barton Heyman",
+    "Burr DeBenning",
+    "Don Scardino",
+    "Ed O'Neill",
+    "Gene Davis",
+    "James Hayden",
+    "James Remar",
+    "James Sutorius",
+    "Jay Acovone",
+    "Jimmie Ray Weeks",
+    "Joe Spinell",
+    "Karen Allen",
+    "Keith Prentice",
+    "Larry Atlas",
+    "Leo Burmester",
+    "Mike Starr",
+    "Paul Sorvino",
+    "Powers Boothe",
+    "Randy Jurgensen",
+    "Ray Vitte",
+    "Richard Cox",
+    "Sonny Grosso",
+    "William Russ"
+  ],
+  "musica": [
+    "Jack Nitzsche"
+  ],
+  "fotografia": [
+    "James A. Contner"
+  ],
+  "guion": [
+    "William Friedkin"
+  ],
+  "temas": [
+    "Departamento de Policía de Nueva York",
+    "asesino en serie"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

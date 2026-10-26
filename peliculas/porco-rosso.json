@@ -18,5 +18,26 @@
   "tmdb_id": 11621,
   "titulo_es": "Porco Rosso",
   "titulo_original": "紅の豚",
-  "tmdb_rating": 7.8
+  "tmdb_rating": 7.8,
+  "paises": [
+    "Japón"
+  ],
+  "musica": [
+    "Joe Hisaishi"
+  ],
+  "fotografia": [
+    "Atsushi Okui"
+  ],
+  "guion": [
+    "Hayao Miyazaki"
+  ],
+  "temas": [
+    "aviación",
+    "guerra"
+  ],
+  "escenario": [
+    "Italia",
+    "Milán",
+    "mar Adriático"
+  ]
 }

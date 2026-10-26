@@ -18,5 +18,21 @@
   "tmdb_id": 14836,
   "titulo_es": "Los mundos de Coraline",
   "titulo_original": "Coraline",
-  "tmdb_rating": 7.9
+  "tmdb_rating": 7.9,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "musica": [
+    "Bruno Coulais"
+  ],
+  "fotografia": [
+    "Pete Kozachik"
+  ],
+  "guion": [
+    "Henry Selick",
+    "Neil Gaiman"
+  ],
+  "escenario": [
+    "Oregón"
+  ]
 }

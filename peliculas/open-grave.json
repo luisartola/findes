@@ -18,5 +18,22 @@
   "tmdb_id": 215830,
   "titulo_es": "Tumba Abierta",
   "titulo_original": "Open Grave",
-  "tmdb_rating": 6.0
+  "tmdb_rating": 6.0,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Erin Richards",
+    "Joseph Morgan",
+    "Josie Ho",
+    "Sharlto Copley",
+    "Thomas Kretschmann"
+  ],
+  "fotografia": [
+    "José David Montero"
+  ],
+  "guion": [
+    "Chris Borey",
+    "Eddie Borey"
+  ]
 }

@@ -18,5 +18,18 @@
   "tmdb_id": 586940,
   "titulo_es": "¿Dónde está mi cuerpo?",
   "titulo_original": "J'ai perdu mon corps",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Francia"
+  ],
+  "musica": [
+    "Dan Levy"
+  ],
+  "guion": [
+    "Guillaume Laurant",
+    "Jérémy Clapin"
+  ],
+  "escenario": [
+    "París"
+  ]
 }

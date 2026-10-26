@@ -18,5 +18,39 @@
   "tmdb_id": 24488,
   "titulo_es": "Demonlover",
   "titulo_original": "Demonlover",
-  "tmdb_rating": 5.7
+  "tmdb_rating": 5.7,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Abi Sakamoto",
+    "Charles Berling",
+    "Chloë Sevigny",
+    "Connie Nielsen",
+    "Dominique Reymond",
+    "Gina Gershon",
+    "Jean-Baptiste Malartre",
+    "Jean-Pierre Gos",
+    "Julie Brochen",
+    "Mathias Mlekuz",
+    "Nao Ōmori",
+    "Naoko Yamazaki",
+    "Tarō Suwa",
+    "Thomas M. Pollard"
+  ],
+  "musica": [
+    "Jim O'Rourke"
+  ],
+  "fotografia": [
+    "Denis Lenoir"
+  ],
+  "guion": [
+    "Olivier Assayas"
+  ],
+  "temas": [
+    "pornografía"
+  ],
+  "escenario": [
+    "Japón"
+  ]
 }

@@ -18,5 +18,30 @@
   "tmdb_id": 26466,
   "titulo_es": "Triangle",
   "titulo_original": "Triangle",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Australia",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Emma Lung",
+    "Henry Nixon",
+    "Jack Taylor",
+    "Liam Hemsworth",
+    "Melissa George",
+    "Michael Dorman",
+    "Rachael Carpani"
+  ],
+  "musica": [
+    "Christian Henson"
+  ],
+  "fotografia": [
+    "Robert Humphreys"
+  ],
+  "guion": [
+    "Christopher Smith"
+  ],
+  "escenario": [
+    "Florida"
+  ]
 }

@@ -18,5 +18,12 @@
   "tmdb_id": 412766,
   "titulo_es": "Sam Was Here",
   "titulo_original": "Sam Was Here",
-  "tmdb_rating": 5.4
+  "tmdb_rating": 5.4,
+  "paises": [
+    "Estados Unidos",
+    "Francia"
+  ],
+  "escenario": [
+    "California"
+  ]
 }

@@ -17,5 +17,31 @@
   ],
   "findes": [
     20
+  ],
+  "paises": [
+    "Alemania",
+    "Canadá",
+    "Estados Unidos",
+    "Francia",
+    "Italia",
+    "Japón"
+  ],
+  "reparto": [
+    "Emily Alyn Lind",
+    "Gaspar Noé",
+    "Nathaniel Brown",
+    "Olly Alexander",
+    "Paz de la Huerta",
+    "Philippe Nahon"
+  ],
+  "fotografia": [
+    "Benoît Debie"
+  ],
+  "guion": [
+    "Gaspar Noé",
+    "Lucile Hadzihalilovic"
+  ],
+  "escenario": [
+    "Tokio"
   ]
 }

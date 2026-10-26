@@ -18,5 +18,51 @@
   "tmdb_id": 9824,
   "titulo_es": "Mystery Men (Hombres misteriosos)",
   "titulo_original": "Mystery Men",
-  "tmdb_rating": 5.8
+  "tmdb_rating": 5.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Artie Lange",
+    "Ben Stiller",
+    "Billy Beck",
+    "Branden Williams",
+    "Cee Lo Green",
+    "Claire Forlani",
+    "Corbin Bleu",
+    "Dane Cook",
+    "Doug Jones",
+    "Geoffrey Rush",
+    "Greg Kinnear",
+    "Hank Azaria",
+    "Jack Plotnick",
+    "Janeane Garofalo",
+    "Jenifer Lewis",
+    "Joel McCrary",
+    "Kel Mitchell",
+    "Kinka Usher",
+    "Lena Olin",
+    "Louise Lasser",
+    "Luis Guzmán",
+    "Marie Matiko",
+    "Mark Mothersbaugh",
+    "Michael Bay",
+    "Monet Mazur",
+    "Ned Bellamy",
+    "Paul Reubens",
+    "Ricky Jay",
+    "Sung Kang",
+    "Tom Waits",
+    "Wes Studi",
+    "William H. Macy"
+  ],
+  "musica": [
+    "Stephen Warbeck"
+  ],
+  "fotografia": [
+    "Stephen H. Burum"
+  ],
+  "guion": [
+    "Bob Burden"
+  ]
 }

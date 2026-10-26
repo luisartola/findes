@@ -18,5 +18,32 @@
   "tmdb_id": 5544,
   "titulo_es": "Hiroshima mon amour",
   "titulo_original": "Hiroshima mon amour",
-  "tmdb_rating": 7.7
+  "tmdb_rating": 7.7,
+  "paises": [
+    "Francia",
+    "Japón"
+  ],
+  "reparto": [
+    "Bernard Fresson",
+    "Eiji Okada",
+    "Emmanuelle Riva",
+    "Pierre Barbaud"
+  ],
+  "musica": [
+    "Georges Delerue"
+  ],
+  "fotografia": [
+    "Michio Takahashi",
+    "Sacha Vierny"
+  ],
+  "guion": [
+    "Marguerite Duras"
+  ],
+  "temas": [
+    "aviación",
+    "bombardeos atómicos de Hiroshima y Nagasaki en el año 1945"
+  ],
+  "escenario": [
+    "Hiroshima"
+  ]
 }

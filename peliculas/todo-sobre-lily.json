@@ -18,5 +18,29 @@
   "tmdb_id": 16664,
   "titulo_es": "Todo sobre Lily",
   "titulo_original": "リリイ・シュシュのすべて",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Ayumi Ito",
+    "Hayato Ichihara",
+    "Izumi Inamori",
+    "Miwako Ichikawa",
+    "Salyu",
+    "Shugo Oshinari",
+    "Takao Osawa",
+    "Tetsu Sawaki",
+    "Yuki Ito",
+    "Yū Aoi"
+  ],
+  "musica": [
+    "Takeshi Kobayashi"
+  ],
+  "fotografia": [
+    "Noboru Shinoda"
+  ],
+  "guion": [
+    "Shunji Iwai"
+  ]
 }

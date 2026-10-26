@@ -18,5 +18,31 @@
   "tmdb_id": 62761,
   "titulo_es": "Los coches que devoraron París",
   "titulo_original": "The Cars That Ate Paris",
-  "tmdb_rating": 5.5
+  "tmdb_rating": 5.5,
+  "paises": [
+    "Australia"
+  ],
+  "reparto": [
+    "Bruce Spence",
+    "Chris Haywood",
+    "Danny Adcock",
+    "Edward Howell",
+    "John Meillon",
+    "Kevin Golsby",
+    "Kevin Miles",
+    "Max Gillies",
+    "Max Phipps",
+    "Melissa Jaffer",
+    "Patrick Ward",
+    "Terry Camilleri"
+  ],
+  "musica": [
+    "Bruce Smeaton"
+  ],
+  "guion": [
+    "Peter Weir"
+  ],
+  "escenario": [
+    "Australia"
+  ]
 }

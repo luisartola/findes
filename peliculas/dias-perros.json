@@ -18,5 +18,33 @@
   "tmdb_id": 9025,
   "titulo_es": "Días perros",
   "titulo_original": "Hundstage",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Austria"
+  ],
+  "reparto": [
+    "Alfred Mrva",
+    "Claudia Martini",
+    "Erich Finsches",
+    "Franziska Weisz",
+    "Georg Friedrich",
+    "Gerti Lehner",
+    "Maria Hofstätter",
+    "René Wanko"
+  ],
+  "fotografia": [
+    "Wolfgang Thaler"
+  ],
+  "guion": [
+    "Ulrich Seidl",
+    "Veronika Franz"
+  ],
+  "temas": [
+    "agresión",
+    "desilusión",
+    "soledad"
+  ],
+  "escenario": [
+    "Viena"
+  ]
 }

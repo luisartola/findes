@@ -18,5 +18,22 @@
   "tmdb_id": 126185,
   "titulo_es": "Tres días con la familia",
   "titulo_original": "Tres dies amb la família",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Eduard Fernández",
+    "Francesc Orella",
+    "Isabel Rocatti",
+    "Nausicaa Bonnín",
+    "Philippine Leroy-Beaulieu",
+    "Ramon Fontserè"
+  ],
+  "fotografia": [
+    "Neus Ollé"
+  ],
+  "guion": [
+    "Mar Coll"
+  ]
 }

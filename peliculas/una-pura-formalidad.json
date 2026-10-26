@@ -18,5 +18,31 @@
   "tmdb_id": 19223,
   "titulo_es": "Pura formalidad",
   "titulo_original": "Una pura formalità",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Alberto Sironi",
+    "Gérard Depardieu",
+    "Massimo Vanni",
+    "Nicola Di Pinto",
+    "Paolo Lombardi",
+    "Roman Polanski",
+    "Sergio Rubini",
+    "Tano Cimarosa"
+  ],
+  "musica": [
+    "Ennio Morricone"
+  ],
+  "fotografia": [
+    "Blasco Giurato"
+  ],
+  "guion": [
+    "Giuseppe Tornatore"
+  ],
+  "escenario": [
+    "Abruzos"
+  ]
 }

@@ -18,5 +18,20 @@
   "tmdb_id": 81523,
   "titulo_es": "La vida útil",
   "titulo_original": "La vida útil",
-  "tmdb_rating": 6.2
+  "tmdb_rating": 6.2,
+  "paises": [
+    "Uruguay"
+  ],
+  "reparto": [
+    "Gonzalo Delgado Galiana",
+    "Jorge Jellinek",
+    "Manuel Martínez Carril"
+  ],
+  "guion": [
+    "Federico Veiroj",
+    "Inés Bortagaray"
+  ],
+  "escenario": [
+    "Montevideo"
+  ]
 }

@@ -18,5 +18,41 @@
   "tmdb_id": 961,
   "titulo_es": "El maquinista de La General",
   "titulo_original": "The General",
-  "tmdb_rating": 7.9
+  "tmdb_rating": 7.9,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alfred St. John",
+    "Boris Karloff",
+    "Buster Keaton",
+    "Charles Henry Smith",
+    "Frank Hagney",
+    "Frederick Vroom",
+    "Glen Cavender",
+    "James Farley",
+    "Joe Keaton",
+    "Marion Mack"
+  ],
+  "musica": [
+    "Carl Davis"
+  ],
+  "fotografia": [
+    "Bert Haines",
+    "Devereux Jennings"
+  ],
+  "guion": [
+    "Al Boasberg",
+    "Buster Keaton",
+    "Charles Henry Smith",
+    "Clyde Bruckman",
+    "Paul Girard Smith",
+    "William Pittenger"
+  ],
+  "temas": [
+    "tren"
+  ],
+  "escenario": [
+    "Tennessee"
+  ]
 }

@@ -18,5 +18,25 @@
   "tmdb_id": 59851,
   "titulo_es": "El segundo nombre",
   "titulo_original": "El segundo nombre",
-  "tmdb_rating": 5.5
+  "tmdb_rating": 5.5,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Craig Hill",
+    "Richard Collins-Moore",
+    "Saskia Giró",
+    "Teresa Gimpera"
+  ],
+  "musica": [
+    "Mikel Salas"
+  ],
+  "fotografia": [
+    "Pablo Rosso"
+  ],
+  "guion": [
+    "Fernando Marías Amondo",
+    "Paco Plaza",
+    "Ramsey Campbell"
+  ]
 }

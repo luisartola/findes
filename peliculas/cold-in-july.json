@@ -18,5 +18,27 @@
   "tmdb_id": 244509,
   "titulo_es": "Frío en julio",
   "titulo_original": "Cold in July",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Estados Unidos",
+    "Francia"
+  ],
+  "reparto": [
+    "Don Johnson",
+    "Kristin Griffith",
+    "Lanny Flaherty",
+    "Michael C. Hall",
+    "Sam Shepard",
+    "Vinessa Shaw",
+    "Wyatt Russell"
+  ],
+  "musica": [
+    "Jeff Grace"
+  ],
+  "guion": [
+    "Joe R. Lansdale"
+  ],
+  "escenario": [
+    "Texas"
+  ]
 }

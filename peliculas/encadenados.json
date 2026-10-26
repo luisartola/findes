@@ -17,5 +17,54 @@
   ],
   "findes": [
     2
+  ],
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alexis Minotís",
+    "Alfred Hitchcock",
+    "Antonio Moreno",
+    "Bert Moorhouse",
+    "Bess Flowers",
+    "Cary Grant",
+    "Charles D. Brown",
+    "Claude Rains",
+    "Emmett Vogan",
+    "Fay Baker",
+    "Francis McDonald",
+    "Frank Marlowe",
+    "Frank Wilcox",
+    "Friedrich von Ledebur",
+    "Gavin Gordon",
+    "George Lynn",
+    "Harry Hayden",
+    "Ingrid Bergman",
+    "Ivan Triesault",
+    "Lenore Ulric",
+    "Leopoldine Konstantin",
+    "Louis Calhern",
+    "Moroni Olsen",
+    "Reinhold Schünzel",
+    "Virginia Gregg"
+  ],
+  "musica": [
+    "Roy Webb"
+  ],
+  "fotografia": [
+    "Robert Capa",
+    "Ted Tetzlaff"
+  ],
+  "guion": [
+    "Alfred Hitchcock",
+    "Ben Hecht",
+    "Clifford Odets",
+    "John Taintor Foote"
+  ],
+  "temas": [
+    "espionaje"
+  ],
+  "escenario": [
+    "Río de Janeiro"
   ]
 }

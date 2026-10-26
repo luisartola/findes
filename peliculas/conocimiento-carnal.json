@@ -18,5 +18,28 @@
   "tmdb_id": 36492,
   "titulo_es": "Conocimiento carnal",
   "titulo_original": "Carnal Knowledge",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Ann-Margret",
+    "Art Garfunkel",
+    "Candice Bergen",
+    "Carol Kane",
+    "Jack Nicholson",
+    "Rita Moreno"
+  ],
+  "musica": [
+    "Glenn Miller"
+  ],
+  "fotografia": [
+    "Giuseppe Rotunno"
+  ],
+  "guion": [
+    "Jules Feiffer"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

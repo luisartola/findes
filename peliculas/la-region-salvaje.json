@@ -18,5 +18,21 @@
   "tmdb_id": 387801,
   "titulo_es": "La región salvaje",
   "titulo_original": "La región salvaje",
-  "tmdb_rating": 5.9
+  "tmdb_rating": 5.9,
+  "paises": [
+    "México"
+  ],
+  "reparto": [
+    "Ruth Ramos",
+    "Simone Bucio"
+  ],
+  "fotografia": [
+    "Manuel Alberto Claro"
+  ],
+  "guion": [
+    "Amat Escalante"
+  ],
+  "escenario": [
+    "México"
+  ]
 }

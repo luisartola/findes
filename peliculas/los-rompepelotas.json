@@ -18,5 +18,46 @@
   "tmdb_id": 4031,
   "titulo_es": "Los rompepelotas",
   "titulo_original": "Les Valseuses",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Brigitte Fossey",
+    "Bruno Boëglin",
+    "Christian Alers",
+    "Christiane Muller",
+    "Dominique Davray",
+    "Eva Damien",
+    "Gilles Ségal",
+    "Gérard Boucaron",
+    "Gérard Depardieu",
+    "Gérard Jugnot",
+    "Isabelle Huppert",
+    "Jacques Chailleux",
+    "Jacques Rispal",
+    "Jean Sylvere",
+    "Jeanne Moreau",
+    "Marco Perrin",
+    "Michel Peyrelon",
+    "Michel Pilorgé",
+    "Miou-Miou",
+    "Patrick Dewaere",
+    "Rita Maiden",
+    "Sylvie Joly",
+    "Thierry Lhermitte"
+  ],
+  "musica": [
+    "Stéphane Grappelli"
+  ],
+  "fotografia": [
+    "Bruno Nuytten"
+  ],
+  "guion": [
+    "Bertrand Blier",
+    "Philippe Dumarçay"
+  ],
+  "escenario": [
+    "Francia"
+  ]
 }

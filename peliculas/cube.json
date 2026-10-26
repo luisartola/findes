@@ -18,5 +18,36 @@
   "tmdb_id": 431,
   "titulo_es": "Cube",
   "titulo_original": "Cube",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Canadá"
+  ],
+  "reparto": [
+    "Andrew Miller",
+    "David Hewlett",
+    "Julian Richings",
+    "Maurice Dean Wint",
+    "Nicky Guadagni",
+    "Nicole de Boer",
+    "Wayne Robson"
+  ],
+  "musica": [
+    "Mark Korven"
+  ],
+  "fotografia": [
+    "Derek Rogers"
+  ],
+  "guion": [
+    "André Bijelic",
+    "Graeme Manson",
+    "Vincenzo Natali"
+  ],
+  "temas": [
+    "desciframiento",
+    "escapar",
+    "resolución de problemas"
+  ],
+  "escenario": [
+    "http://www.wikidata.org/.well-known/genid/3207d8d865eb6bf7ef8f6166f844e9ed"
+  ]
 }

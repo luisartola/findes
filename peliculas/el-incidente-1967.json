@@ -18,5 +18,30 @@
   "tmdb_id": 66043,
   "titulo_es": "El incidente",
   "titulo_original": "The Incident",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Beau Bridges",
+    "Brock Peters",
+    "Donna Mills",
+    "Ed McMahon",
+    "Gary Merrill",
+    "Jan Sterling",
+    "Martin Sheen",
+    "Mike Kellin",
+    "Ruby Dee",
+    "Thelma Ritter",
+    "Tony Musante"
+  ],
+  "musica": [
+    "Charles Fox"
+  ],
+  "fotografia": [
+    "Gerald Hirschfeld"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

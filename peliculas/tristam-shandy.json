@@ -18,5 +18,47 @@
   "tmdb_id": 8435,
   "titulo_es": "Tristram Shandy: A Cock and Bull Story",
   "titulo_original": "A Cock and Bull Story",
-  "tmdb_rating": 6.1
+  "tmdb_rating": 6.1,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Ashley Jensen",
+    "Benedict Wong",
+    "David Walliams",
+    "Dylan Moran",
+    "Elizabeth Berrington",
+    "Gillian Anderson",
+    "Greg Wise",
+    "Ian Hart",
+    "Jack Shepherd",
+    "James Fleet",
+    "Jeremy Northam",
+    "Keeley Hawes",
+    "Kelly Macdonald",
+    "Kieran O'Brien",
+    "Mark Tandy",
+    "Mark Williams",
+    "Naomie Harris",
+    "Rob Brydon",
+    "Roger Allam",
+    "Ronni Ancona",
+    "Rosie Cavaliero",
+    "Sara Stewart",
+    "Shirley Henderson",
+    "Stephen Fry",
+    "Steve Coogan",
+    "Stuart Wilson",
+    "Tony Wilson"
+  ],
+  "musica": [
+    "Michael Nyman"
+  ],
+  "fotografia": [
+    "Marcel Zyskind"
+  ],
+  "guion": [
+    "Frank Cottrell Boyce",
+    "Michael Winterbottom"
+  ]
 }

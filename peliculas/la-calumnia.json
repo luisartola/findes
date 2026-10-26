@@ -18,5 +18,26 @@
   "tmdb_id": 20139,
   "titulo_es": "La calumnia",
   "titulo_original": "The Children's Hour",
-  "tmdb_rating": 7.7
+  "tmdb_rating": 7.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Audrey Hepburn",
+    "Fay Bainter",
+    "James Garner",
+    "Miriam Hopkins",
+    "Shirley MacLaine",
+    "Veronica Cartwright"
+  ],
+  "musica": [
+    "Alex North"
+  ],
+  "fotografia": [
+    "Franz Planer"
+  ],
+  "guion": [
+    "John Michael Hayes",
+    "Lillian Hellman"
+  ]
 }

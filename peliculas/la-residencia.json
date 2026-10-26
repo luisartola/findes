@@ -18,5 +18,33 @@
   "tmdb_id": 64624,
   "titulo_es": "La residencia",
   "titulo_original": "La residencia",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Cristina Galbó",
+    "Cándida Losada",
+    "Delia Luna",
+    "John Moulder-Brown",
+    "Lilli Palmer",
+    "Luisa Sala",
+    "Maribel Martín",
+    "Mary Maude",
+    "Simón Ramírez Fernández",
+    "Tomás Blanco",
+    "Víctor Israel"
+  ],
+  "musica": [
+    "Waldo de los Ríos"
+  ],
+  "fotografia": [
+    "Manuel Berenguer"
+  ],
+  "guion": [
+    "Narciso Ibáñez Serrador"
+  ],
+  "escenario": [
+    "Francia"
+  ]
 }

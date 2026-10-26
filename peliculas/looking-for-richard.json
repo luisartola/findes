@@ -18,5 +18,54 @@
   "tmdb_id": 42314,
   "titulo_es": "Looking for Richard",
   "titulo_original": "Looking for Richard",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Aidan Quinn",
+    "Al Pacino",
+    "Alec Baldwin",
+    "Clare Holman",
+    "Daniel von Bargen",
+    "Derek Jacobi",
+    "Dominic Chianese",
+    "Estelle Parsons",
+    "F. Murray Abraham",
+    "Gil Bellows",
+    "Harris Yulin",
+    "Heathcote Williams",
+    "Ira Lewis",
+    "Jaime Sánchez",
+    "James Colby",
+    "James Earl Jones",
+    "John Gielgud",
+    "Judith Malina",
+    "Julie Moret",
+    "Kenneth Branagh",
+    "Kevin Conway",
+    "Kevin Kline",
+    "Kevin Spacey",
+    "Madison Arnold",
+    "Neal Jones",
+    "Paul Gleason",
+    "Paul Guilfoyle",
+    "Penelope Allen",
+    "Peter Brook",
+    "Richard Cox",
+    "Rosemary Harris",
+    "Vanessa Redgrave",
+    "Vincent Angell",
+    "Viveca Lindfors",
+    "Winona Ryder"
+  ],
+  "musica": [
+    "Howard Shore"
+  ],
+  "guion": [
+    "Al Pacino"
+  ],
+  "temas": [
+    "actor"
+  ]
 }

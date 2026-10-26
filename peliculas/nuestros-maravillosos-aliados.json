@@ -18,5 +18,36 @@
   "tmdb_id": 11548,
   "titulo_es": "Nuestros maravillosos aliados",
   "titulo_original": "*batteries not included",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Elizabeth Peña",
+    "Frank McRae",
+    "Hume Cronyn",
+    "Jessica Tandy",
+    "John Pankow",
+    "Tom Aldredge",
+    "Wendy Schaal"
+  ],
+  "musica": [
+    "James Horner"
+  ],
+  "fotografia": [
+    "John McPherson"
+  ],
+  "guion": [
+    "Brad Bird",
+    "Brent Maddock",
+    "Matthew Robbins",
+    "S. S. Wilson"
+  ],
+  "temas": [
+    "platillo volador",
+    "vida extraterrestre"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

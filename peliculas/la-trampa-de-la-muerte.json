@@ -18,5 +18,29 @@
   "tmdb_id": 17590,
   "titulo_es": "La trampa de la muerte",
   "titulo_original": "Deathtrap",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Christopher Reeve",
+    "Dyan Cannon",
+    "Henry Jones",
+    "Irene Worth",
+    "Jenny Lumet",
+    "Michael Caine"
+  ],
+  "musica": [
+    "Johnny Mandel"
+  ],
+  "fotografia": [
+    "Andrzej Bartkowiak"
+  ],
+  "guion": [
+    "Ira Levin",
+    "Jay Presson Allen"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

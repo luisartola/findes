@@ -18,5 +18,33 @@
   "tmdb_id": 48243,
   "titulo_es": "Essential Killing",
   "titulo_original": "Essential Killing",
-  "tmdb_rating": 5.9
+  "tmdb_rating": 5.9,
+  "paises": [
+    "Hungría",
+    "Irlanda",
+    "Noruega",
+    "Polonia"
+  ],
+  "reparto": [
+    "David Price",
+    "Emmanuelle Seigner",
+    "Ewa Piaskowska",
+    "Nicolai Cleve Broch",
+    "Stig Frode Henriksen",
+    "Vincent Gallo",
+    "Zach Cohen"
+  ],
+  "musica": [
+    "Paweł Mykietyn"
+  ],
+  "fotografia": [
+    "Adam Sikora"
+  ],
+  "guion": [
+    "Ewa Piaskowska",
+    "Jerzy Skolimowski"
+  ],
+  "escenario": [
+    "Afganistán"
+  ]
 }

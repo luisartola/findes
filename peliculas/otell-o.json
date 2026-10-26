@@ -18,5 +18,36 @@
   "tmdb_id": 47697,
   "titulo_es": "Otelo",
   "titulo_original": "Othello",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Doris Dowling",
+    "Fay Compton",
+    "Hilton Edwards",
+    "Joan Fontaine",
+    "Joseph Cotten",
+    "Michael Laurence",
+    "Micheál Mac Liammóir",
+    "Nicholas Bruce",
+    "Orson Welles",
+    "Robert Coote",
+    "Suzanne Cloutier"
+  ],
+  "musica": [
+    "Angelo Francesco Lavagnino"
+  ],
+  "fotografia": [
+    "Aldo Graziati",
+    "Anchise Brizzi",
+    "Oberdan Troiani"
+  ],
+  "guion": [
+    "Jean Sacha",
+    "Orson Welles"
+  ],
+  "escenario": [
+    "Venecia"
+  ]
 }

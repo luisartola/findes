@@ -18,5 +18,31 @@
   "tmdb_id": 39335,
   "titulo_es": "Moebius",
   "titulo_original": "Moebius",
-  "tmdb_rating": 6.2
+  "tmdb_rating": 6.2,
+  "paises": [
+    "Argentina"
+  ],
+  "reparto": [
+    "Annabella Levy",
+    "Daniel Dibiase",
+    "Felipe Méndez",
+    "Guillermo Angelelli",
+    "Gustavo Machado",
+    "Horacio Roca",
+    "Jean Pierre Reguerraz",
+    "Jorge Noya",
+    "Jorge Petraglia",
+    "Juan Carrasco",
+    "Julio López",
+    "Martín Adjemián",
+    "Martín Pavlovsky",
+    "Miguel Ángel Paludi",
+    "Nora Zinski",
+    "Osvaldo Santoro",
+    "Ricardo Merkin",
+    "Roberto Carnaghi"
+  ],
+  "escenario": [
+    "Subte de Buenos Aires"
+  ]
 }

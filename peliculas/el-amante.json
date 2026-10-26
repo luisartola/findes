@@ -18,5 +18,37 @@
   "tmdb_id": 81482,
   "titulo_es": "El amante bilingüe",
   "titulo_original": "El amante bilingüe",
-  "tmdb_rating": 3.9
+  "tmdb_rating": 3.9,
+  "paises": [
+    "España",
+    "Italia"
+  ],
+  "reparto": [
+    "Cesare Gelli",
+    "Esperanza Grases",
+    "Fernando Guillén Cuervo",
+    "Fernando Guillén Gallego",
+    "Imanol Arias",
+    "Javier Bardem",
+    "Joan Lluís Bozzo",
+    "Jordi Dauder",
+    "Loles León",
+    "Maribel Verdú",
+    "Ornella Muti",
+    "Pep Cruz",
+    "Teresa Cunillé i Rovira",
+    "Vicky Peña"
+  ],
+  "musica": [
+    "José Nieto"
+  ],
+  "fotografia": [
+    "Juan Amorós"
+  ],
+  "guion": [
+    "Vicente Aranda"
+  ],
+  "escenario": [
+    "Barcelona"
+  ]
 }

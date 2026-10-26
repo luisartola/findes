@@ -18,5 +18,25 @@
   "tmdb_id": 32015,
   "titulo_es": "Soy Cuba",
   "titulo_original": "Soy Cuba",
-  "tmdb_rating": 7.8
+  "tmdb_rating": 7.8,
+  "paises": [
+    "Cuba",
+    "Unión Soviética"
+  ],
+  "reparto": [
+    "Sergio Corrieri"
+  ],
+  "musica": [
+    "Carlos Fariñas"
+  ],
+  "fotografia": [
+    "Serguéi Urusevski"
+  ],
+  "guion": [
+    "Enrique Pineda",
+    "Yevgueni Yevtushenko"
+  ],
+  "escenario": [
+    "Cuba"
+  ]
 }

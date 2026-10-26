@@ -17,5 +17,25 @@
   ],
   "findes": [
     1
+  ],
+  "paises": [
+    "Estados Unidos",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Laurence Olivier",
+    "Michael Caine"
+  ],
+  "musica": [
+    "John Addison"
+  ],
+  "fotografia": [
+    "Oswald Morris"
+  ],
+  "guion": [
+    "Anthony Shaffer"
+  ],
+  "escenario": [
+    "Inglaterra"
   ]
 }

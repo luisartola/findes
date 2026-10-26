@@ -18,5 +18,30 @@
   "tmdb_id": null,
   "titulo_es": "El carnicero",
   "titulo_original": "Le Boucher",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Dominique Zardi",
+    "Jean Yanne",
+    "Roger Rudel",
+    "Stéphane Audran"
+  ],
+  "musica": [
+    "Pierre Jansen"
+  ],
+  "fotografia": [
+    "Jean Rabier"
+  ],
+  "guion": [
+    "Claude Chabrol"
+  ],
+  "temas": [
+    "asesino en serie"
+  ],
+  "escenario": [
+    "Francia"
+  ]
 }

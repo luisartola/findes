@@ -18,5 +18,35 @@
   "tmdb_id": 21484,
   "titulo_es": "La posesión",
   "titulo_original": "Possession",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Alemania Occidental",
+    "Francia"
+  ],
+  "reparto": [
+    "Carl Duering",
+    "Heinz Bennent",
+    "Ilse Trautschold",
+    "Isabelle Adjani",
+    "Johanna Hofer",
+    "Margit Carstensen",
+    "Sam Neill",
+    "Shaun Lawton"
+  ],
+  "musica": [
+    "Andrzej Korzynski"
+  ],
+  "fotografia": [
+    "Bruno Nuytten"
+  ],
+  "guion": [
+    "Andrzej Żuławski",
+    "Frederic Tuten"
+  ],
+  "temas": [
+    "sobrenatural"
+  ],
+  "escenario": [
+    "Berlín"
+  ]
 }

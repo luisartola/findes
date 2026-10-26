@@ -18,5 +18,34 @@
   "tmdb_id": 976,
   "titulo_es": "Chantaje en Broadway",
   "titulo_original": "Sweet Smell of Success",
-  "tmdb_rating": 7.6
+  "tmdb_rating": 7.6,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Barbara Nichols",
+    "Burt Lancaster",
+    "David White",
+    "Edith Atwater",
+    "Jeff Donnell",
+    "Lawrence Dobkin",
+    "Martin Milner",
+    "Queenie Smith",
+    "Robert Carson",
+    "Sam Levene",
+    "Tony Curtis"
+  ],
+  "musica": [
+    "Elmer Bernstein"
+  ],
+  "fotografia": [
+    "James Wong Howe"
+  ],
+  "guion": [
+    "Clifford Odets",
+    "Ernest Lehman"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

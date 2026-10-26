@@ -17,5 +17,30 @@
   ],
   "findes": [
     5
+  ],
+  "paises": [
+    "Estados Unidos",
+    "Italia"
+  ],
+  "reparto": [
+    "Ingrid Bergman",
+    "Mario Vitale",
+    "Renzo Cesana"
+  ],
+  "musica": [
+    "Renzo Rossellini"
+  ],
+  "fotografia": [
+    "Otello Martelli"
+  ],
+  "guion": [
+    "Art Cohn",
+    "Gian Paolo Callegari",
+    "Renzo Cesana",
+    "Roberto Rossellini",
+    "Sergio Amidei"
+  ],
+  "escenario": [
+    "Italia"
   ]
 }

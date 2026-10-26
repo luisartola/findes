@@ -18,5 +18,35 @@
   "tmdb_id": 38360,
   "titulo_es": "Cuando pasan las cigüeñas",
   "titulo_original": "Летят журавли",
-  "tmdb_rating": 7.9
+  "tmdb_rating": 7.9,
+  "paises": [
+    "Unión Soviética"
+  ],
+  "reparto": [
+    "Aleksandr Shvorin",
+    "Alexei Batalov",
+    "Antonina Bogdanova",
+    "Boris Kokovkin",
+    "Konstantin Kadochnikov",
+    "Svetlana Kharitonova",
+    "Tatiana Samóilova",
+    "Valentin Zubkov",
+    "Valentina Ananina",
+    "Vasili Merkuryev"
+  ],
+  "musica": [
+    "Mieczysław Weinberg"
+  ],
+  "fotografia": [
+    "Serguéi Urusevski"
+  ],
+  "guion": [
+    "Viktor Rozov"
+  ],
+  "temas": [
+    "Segunda Guerra Mundial"
+  ],
+  "escenario": [
+    "Unión Soviética"
+  ]
 }

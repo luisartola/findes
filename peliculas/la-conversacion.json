@@ -18,5 +18,46 @@
   "tmdb_id": 592,
   "titulo_es": "La conversación",
   "titulo_original": "The Conversation",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Allen Garfield",
+    "Billy Dee Williams",
+    "Cindy Williams",
+    "Elizabeth MacRae",
+    "Frederic Forrest",
+    "Gene Hackman",
+    "Gian-Carlo Coppola",
+    "Harrison Ford",
+    "John Cazale",
+    "Michael Higgins",
+    "Ramon Bieri",
+    "Robert Duvall",
+    "Robert Shields",
+    "Teri Garr"
+  ],
+  "musica": [
+    "David Shire"
+  ],
+  "fotografia": [
+    "Bill Butler",
+    "Haskell Wexler"
+  ],
+  "guion": [
+    "Francis Ford Coppola"
+  ],
+  "temas": [
+    "Guerra Fría",
+    "alienación",
+    "culpa",
+    "paranoia",
+    "poder",
+    "privacidad",
+    "responsabilidad"
+  ],
+  "escenario": [
+    "San Francisco"
+  ]
 }

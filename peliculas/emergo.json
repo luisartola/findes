@@ -18,5 +18,26 @@
   "tmdb_id": 97795,
   "titulo_es": "Emergo",
   "titulo_original": "Emergo",
-  "tmdb_rating": 5.2
+  "tmdb_rating": 5.2,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Fermí Reixach",
+    "Fiona Glascott",
+    "Francesc Garrido",
+    "Gina Mantegna",
+    "Marcel Barrena",
+    "Michael O'Keefe",
+    "Rick Gonzalez"
+  ],
+  "musica": [
+    "Víctor Reyes"
+  ],
+  "fotografia": [
+    "Óscar Durán"
+  ],
+  "guion": [
+    "Rodrigo Cortés Giráldez"
+  ]
 }

@@ -17,5 +17,40 @@
   ],
   "findes": [
     26
+  ],
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Adolfo Celi",
+    "Andrea Bosic",
+    "Annie Gorassini",
+    "Carlo Croccolo",
+    "Caterina Boratto",
+    "Claudio Gora",
+    "Federico Boido",
+    "Francesco Mulè",
+    "Giulio Donnini",
+    "John Phillip Law",
+    "Lidia Biondi",
+    "Lucia Modugno",
+    "Mario Donen",
+    "Marisa Mell",
+    "Michel Piccoli",
+    "Renzo Palmer",
+    "Terry-Thomas",
+    "Tiberio Mitri"
+  ],
+  "musica": [
+    "Ennio Morricone"
+  ],
+  "fotografia": [
+    "Antonio Rinaldi",
+    "Mario Bava"
+  ],
+  "guion": [
+    "Arduino Maiuri",
+    "Mario Bava"
   ]
 }

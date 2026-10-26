@@ -18,5 +18,16 @@
   "tmdb_id": 103753,
   "titulo_es": "En otro país",
   "titulo_original": "다른 나라에서",
-  "tmdb_rating": 6.1
+  "tmdb_rating": 6.1,
+  "paises": [
+    "Corea del Sur"
+  ],
+  "reparto": [
+    "Isabelle Huppert",
+    "Jung Yoo-mi",
+    "Yu Jun-sang"
+  ],
+  "guion": [
+    "Hong Sang-soo"
+  ]
 }

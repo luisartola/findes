@@ -19,5 +19,28 @@
   "findes": [
     15,
     22
+  ],
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Alfredo Mayo",
+    "Emilio Gutiérrez Caba",
+    "Fernando Sánchez Polack",
+    "Ismael Merlo",
+    "José María Prada"
+  ],
+  "musica": [
+    "Luis de Pablo"
+  ],
+  "fotografia": [
+    "Luis Cuadrado"
+  ],
+  "guion": [
+    "Angelino Fons",
+    "Carlos Saura"
+  ],
+  "escenario": [
+    "España"
   ]
 }

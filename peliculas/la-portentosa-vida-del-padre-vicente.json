@@ -18,5 +18,19 @@
   "tmdb_id": 416383,
   "titulo_es": "La portentosa vida del padre Vicente",
   "titulo_original": "La portentosa vida del pare Vicent",
-  "tmdb_rating": 4.4
+  "tmdb_rating": 4.4,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Albert Boadella",
+    "Ovidi Montllor",
+    "Ángela Molina"
+  ],
+  "fotografia": [
+    "Teo Escamilla"
+  ],
+  "guion": [
+    "Carles Mira"
+  ]
 }

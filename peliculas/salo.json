@@ -18,5 +18,47 @@
   "tmdb_id": 5336,
   "titulo_es": "Saló, o los 120 días de Sodoma",
   "titulo_original": "Salò o le 120 giornate di Sodoma",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Aldo Valletti",
+    "Antiniska Nemour",
+    "Antonio Orlando",
+    "Caterina Boratto",
+    "Elsa De Giorgi",
+    "Franco Merli",
+    "Giorgio Cataldi",
+    "Guido Galletti",
+    "Hélène Surgère",
+    "Ines Pellegrini",
+    "Marco Bellocchio",
+    "Paolo Bonacelli",
+    "Sonia Saviange",
+    "Uberto Paolo Quintavalle"
+  ],
+  "musica": [
+    "Ennio Morricone"
+  ],
+  "fotografia": [
+    "Tonino Delli Colli"
+  ],
+  "guion": [
+    "Pier Paolo Pasolini",
+    "Pupi Avati",
+    "Sergio Citti"
+  ],
+  "temas": [
+    "Segunda Guerra Mundial",
+    "incesto",
+    "parafilia",
+    "prostitución",
+    "suicidio",
+    "violencia"
+  ],
+  "escenario": [
+    "Italia"
+  ]
 }

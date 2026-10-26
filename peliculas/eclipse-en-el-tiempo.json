@@ -18,5 +18,35 @@
   "tmdb_id": 73990,
   "titulo_es": "Eclipse en el Tiempo",
   "titulo_original": "戦国自衛隊",
-  "tmdb_rating": 5.9
+  "tmdb_rating": 5.9,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Asao Koike",
+    "Etsuko Shihomi",
+    "Haruki Kadokawa",
+    "Hiroko Yakushimaru",
+    "Hiromitsu Suzuki",
+    "Hiroyuki Sanada",
+    "Isao Natsuyagi",
+    "Jun Etō",
+    "Kenzō Kawarasaki",
+    "Masao Kusakari",
+    "Raita Ryū",
+    "Sonny Chiba",
+    "Tsunehiko Watase"
+  ],
+  "musica": [
+    "Kentarō Haneda"
+  ],
+  "guion": [
+    "Toshio Kamata"
+  ],
+  "temas": [
+    "viaje a través del tiempo"
+  ],
+  "escenario": [
+    "Japón"
+  ]
 }

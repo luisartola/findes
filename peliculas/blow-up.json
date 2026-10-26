@@ -18,5 +18,38 @@
   "tmdb_id": 1052,
   "titulo_es": "Blow-Up (Deseo de una mañana de verano)",
   "titulo_original": "Blow-Up",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Italia",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "David Hemmings",
+    "Fred Wood",
+    "Jane Birkin",
+    "Jimmy Page",
+    "John Castle",
+    "Julio Cortázar",
+    "Peter Bowles",
+    "Ronan O'Casey",
+    "Sarah Miles",
+    "Tsai Chin",
+    "Vanessa Redgrave",
+    "Veruschka von Lehndorff"
+  ],
+  "musica": [
+    "Herbie Hancock"
+  ],
+  "fotografia": [
+    "Carlo Di Palma"
+  ],
+  "guion": [
+    "Edward Bond",
+    "Julio Cortázar",
+    "Michelangelo Antonioni",
+    "Tonino Guerra"
+  ],
+  "escenario": [
+    "Londres"
+  ]
 }

@@ -18,5 +18,49 @@
   "tmdb_id": null,
   "titulo_es": "El manantial",
   "titulo_original": "The Fountainhead",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Ann Doran",
+    "Charles Trowbridge",
+    "Creighton Hale",
+    "Dorothy Christy",
+    "Douglas Kennedy",
+    "Frank Wilcox",
+    "Gary Cooper",
+    "Glen Cavender",
+    "Harry Woods",
+    "Henry Hull",
+    "Jerome Cowan",
+    "John Alvin",
+    "John Doucette",
+    "Kent Smith",
+    "Monte Blue",
+    "Moroni Olsen",
+    "Patricia Neal",
+    "Paul Harvey",
+    "Ray Collins",
+    "Raymond Massey",
+    "Robert Douglas",
+    "Russell Hicks",
+    "Thurston Hall",
+    "Tito Vuolo"
+  ],
+  "musica": [
+    "Max Steiner"
+  ],
+  "fotografia": [
+    "Robert Burks"
+  ],
+  "guion": [
+    "Ayn Rand"
+  ],
+  "temas": [
+    "idealista"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

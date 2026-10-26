@@ -18,5 +18,55 @@
   "tmdb_id": 141,
   "titulo_es": "Donnie Darko",
   "titulo_original": "Donnie Darko",
-  "tmdb_rating": 7.8
+  "tmdb_rating": 7.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Arthur Taxier",
+    "Ashley Tisdale",
+    "Beth Grant",
+    "Daveigh Chase",
+    "Drew Barrymore",
+    "Fran Kranz",
+    "Gary Lundy",
+    "Holmes Osborne",
+    "Jake Gyllenhaal",
+    "James Duval",
+    "Jena Malone",
+    "Jerry Trainor",
+    "Jolene Purdy",
+    "Katharine Ross",
+    "Maggie Gyllenhaal",
+    "Mark Hoffman",
+    "Mary McDonnell",
+    "Noah Wyle",
+    "Patience Cleveland",
+    "Patrick Swayze",
+    "Scotty Leavenworth",
+    "Seth Rogen",
+    "Stuart Stone"
+  ],
+  "musica": [
+    "Michael Andrews"
+  ],
+  "fotografia": [
+    "Steven Barry Poster"
+  ],
+  "guion": [
+    "Richard Kelly"
+  ],
+  "temas": [
+    "adolescencia",
+    "agency",
+    "cine de ciencia ficción de autor",
+    "destino",
+    "libre albedrío",
+    "salud mental",
+    "sueño y realidad",
+    "viaje a través del tiempo"
+  ],
+  "escenario": [
+    "Iowa"
+  ]
 }

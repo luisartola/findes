@@ -18,5 +18,31 @@
   "tmdb_id": 266,
   "titulo_es": "El desprecio",
   "titulo_original": "Le Mépris",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Brigitte Bardot",
+    "Fritz Lang",
+    "Giorgia Moll",
+    "Jack Palance",
+    "Jean-Luc Godard",
+    "Linda Veras",
+    "Michel Piccoli",
+    "Raoul Coutard"
+  ],
+  "musica": [
+    "Georges Delerue"
+  ],
+  "fotografia": [
+    "Raoul Coutard"
+  ],
+  "guion": [
+    "Jean-Luc Godard"
+  ],
+  "escenario": [
+    "Italia"
+  ]
 }

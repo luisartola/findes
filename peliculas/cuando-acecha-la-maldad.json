@@ -18,5 +18,16 @@
   "tmdb_id": 744857,
   "titulo_es": "Cuando acecha la maldad",
   "titulo_original": "Cuando acecha la maldad",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Argentina",
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Ezequiel Rodríguez",
+    "Luis Ziembrowski"
+  ],
+  "guion": [
+    "Demián Rugna"
+  ]
 }

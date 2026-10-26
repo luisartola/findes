@@ -18,5 +18,32 @@
   "tmdb_id": 8744,
   "titulo_es": "Albino Alligator",
   "titulo_original": "Albino Alligator",
-  "tmdb_rating": 5.7
+  "tmdb_rating": 5.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Enrico Colantoni",
+    "Faye Dunaway",
+    "Frankie Faison",
+    "Gary Sinise",
+    "Joe Mantegna",
+    "John Spencer",
+    "M. Emmet Walsh",
+    "Matt Dillon",
+    "Melinda McGraw",
+    "Skeet Ulrich",
+    "Viggo Mortensen",
+    "William Fichtner",
+    "Willie C. Carpenter"
+  ],
+  "musica": [
+    "Michael Brook"
+  ],
+  "guion": [
+    "Fabian"
+  ],
+  "escenario": [
+    "Nueva Orleans"
+  ]
 }

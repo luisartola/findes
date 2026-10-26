@@ -18,5 +18,18 @@
   "tmdb_id": 524780,
   "titulo_es": "Los perros no llevan pantalones",
   "titulo_original": "Koirat eivät käytä housuja",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Finlandia"
+  ],
+  "reparto": [
+    "Krista Kosonen",
+    "Pekka Strang"
+  ],
+  "musica": [
+    "Michal Nejtek"
+  ],
+  "guion": [
+    "Jukka-Pekka Valkeapää"
+  ]
 }

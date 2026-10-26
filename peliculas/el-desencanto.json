@@ -18,5 +18,21 @@
   "tmdb_id": 4496,
   "titulo_es": "El desencanto",
   "titulo_original": "El desencanto",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Juan Luis Panero",
+    "Leopoldo María Panero"
+  ],
+  "musica": [
+    "Franz Schubert"
+  ],
+  "fotografia": [
+    "Teo Escamilla"
+  ],
+  "guion": [
+    "Jaime Chávarri"
+  ]
 }

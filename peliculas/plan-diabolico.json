@@ -18,5 +18,33 @@
   "tmdb_id": 20620,
   "titulo_es": "Plan diabólico",
   "titulo_original": "Seconds",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Dodie Heath",
+    "Dorothy Morris",
+    "Frances Reid",
+    "Jeff Corey",
+    "John Randolph",
+    "Karl Swenson",
+    "Murray Hamilton",
+    "Richard Anderson",
+    "Rock Hudson",
+    "Salome Jens",
+    "Will Geer"
+  ],
+  "musica": [
+    "Jerry Goldsmith"
+  ],
+  "fotografia": [
+    "James Wong Howe"
+  ],
+  "guion": [
+    "Lewis John Carlino"
+  ],
+  "escenario": [
+    "California"
+  ]
 }

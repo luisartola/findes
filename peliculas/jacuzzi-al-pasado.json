@@ -18,5 +18,43 @@
   "tmdb_id": 23048,
   "titulo_es": "Jacuzzi al pasado",
   "titulo_original": "Hot Tub Time Machine",
-  "tmdb_rating": 6.0
+  "tmdb_rating": 6.0,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Charlie McDermott",
+    "Chevy Chase",
+    "Clark Duke",
+    "Collette Wolfe",
+    "Craig Robinson",
+    "Crispin Glover",
+    "Crystal Lowe",
+    "Diora Baird",
+    "Donald MacDonald",
+    "Jessica Paré",
+    "John Cusack",
+    "Lars Anderson",
+    "Lizzy Caplan",
+    "Lynda Boyd",
+    "Lyndsy Fonseca",
+    "Rhys Williams",
+    "Rob Corddry",
+    "Sebastian Stan",
+    "Thomas Lennon",
+    "William Zabka"
+  ],
+  "musica": [
+    "Christophe Beck"
+  ],
+  "fotografia": [
+    "Jack N. Green"
+  ],
+  "guion": [
+    "John Morris",
+    "Sean Anders"
+  ],
+  "temas": [
+    "viaje a través del tiempo"
+  ]
 }

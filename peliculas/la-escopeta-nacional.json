@@ -18,5 +18,37 @@
   "tmdb_id": 116312,
   "titulo_es": "La escopeta nacional",
   "titulo_original": "La escopeta nacional",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Agustín González",
+    "Amparo Soler Leal",
+    "Antonio Ferrandis",
+    "Bárbara Rey",
+    "Conchita Montes",
+    "Fernando Hilbeck",
+    "Héctor Alterio",
+    "José Luis López Vázquez",
+    "José Sazatornil",
+    "Laly Soldevila",
+    "Luis Escobar Kirkpatrick",
+    "Mónica Randall",
+    "Rafael Alonso",
+    "Rosanna Yanni",
+    "Sergio Mendizábal",
+    "Zelmar Gueñol",
+    "Ángel Álvarez"
+  ],
+  "fotografia": [
+    "Carlos Suárez"
+  ],
+  "guion": [
+    "Luis García-Berlanga Martí",
+    "Rafael Azcona"
+  ],
+  "escenario": [
+    "Madrid"
+  ]
 }

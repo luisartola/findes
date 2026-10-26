@@ -18,5 +18,32 @@
   "tmdb_id": 17218,
   "titulo_es": "Nadie puede vencerme",
   "titulo_original": "The Set-Up",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alan Baxter",
+    "Audrey Totter",
+    "Darryl Hickman",
+    "George Tobias",
+    "Herbert Anderson",
+    "James Edwards",
+    "Percy Helton",
+    "Robert Ryan",
+    "Tommy Noonan",
+    "Wallace Ford"
+  ],
+  "musica": [
+    "Constantin Bakaleinikoff"
+  ],
+  "fotografia": [
+    "Milton Krasner"
+  ],
+  "guion": [
+    "Art Cohn"
+  ],
+  "temas": [
+    "boxeo"
+  ]
 }

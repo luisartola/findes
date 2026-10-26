@@ -18,5 +18,21 @@
   "tmdb_id": 983282,
   "titulo_es": "The Artifice Girl",
   "titulo_original": "The Artifice Girl",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "David Girard",
+    "Franklin Ritch",
+    "Lance Henriksen"
+  ],
+  "guion": [
+    "Franklin Ritch"
+  ],
+  "temas": [
+    "IA Fuerte",
+    "abuso sexual infantil",
+    "inteligencia artificial"
+  ]
 }

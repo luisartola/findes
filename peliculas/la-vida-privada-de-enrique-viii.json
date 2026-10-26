@@ -18,5 +18,50 @@
   "tmdb_id": 43122,
   "titulo_es": "La vida privada de Enrique VIII",
   "titulo_original": "The Private Life of Henry VIII",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Annie Esmond",
+    "Arthur Howard",
+    "Binnie Barnes",
+    "Charles Laughton",
+    "Claud Allister",
+    "Elsa Lanchester",
+    "Everley Gregg",
+    "Franklin Dyall",
+    "Frederick Culley",
+    "Gibb McLaughlin",
+    "Hay Petrie",
+    "Helen Maud Holt",
+    "John Loder",
+    "John Turnbull",
+    "Judy Kelly",
+    "Laurence Hanray",
+    "Merle Oberon",
+    "Miles Mander",
+    "Robert Donat",
+    "Sam Livesey",
+    "Wally Patch",
+    "Wendy Barrie",
+    "William Austin",
+    "William Heughan"
+  ],
+  "musica": [
+    "Kurt Schröder"
+  ],
+  "fotografia": [
+    "Georges Périnal"
+  ],
+  "guion": [
+    "Arthur Wimperis",
+    "Lajos Bíró"
+  ],
+  "temas": [
+    "pena de muerte"
+  ],
+  "escenario": [
+    "Londres"
+  ]
 }

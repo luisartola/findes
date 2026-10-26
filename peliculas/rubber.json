@@ -18,5 +18,35 @@
   "tmdb_id": 45649,
   "titulo_es": "Rubber",
   "titulo_original": "Rubber",
-  "tmdb_rating": 5.9
+  "tmdb_rating": 5.9,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Daniel Quinn",
+    "Ethan Cohn",
+    "Gaspard Augé",
+    "Haley Ramm",
+    "Jack Plotnick",
+    "James Parks",
+    "Pedro WinteRS CITY",
+    "Remy Thorne",
+    "Roxane Mesquida",
+    "Stephen Spinella",
+    "Thomas F. Duffy",
+    "Wings Hauser"
+  ],
+  "musica": [
+    "Gaspard Augé",
+    "Quentin Dupieux"
+  ],
+  "fotografia": [
+    "Quentin Dupieux"
+  ],
+  "guion": [
+    "Quentin Dupieux"
+  ],
+  "escenario": [
+    "California"
+  ]
 }

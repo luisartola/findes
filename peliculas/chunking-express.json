@@ -18,5 +18,38 @@
   "tmdb_id": 11104,
   "titulo_es": "Chungking Express",
   "titulo_original": "重慶森林",
-  "tmdb_rating": 8.0
+  "tmdb_rating": 8.0,
+  "paises": [
+    "Hong Kong"
+  ],
+  "reparto": [
+    "Brigitte Lin",
+    "Faye Wong",
+    "Takeshi Kaneshiro",
+    "Tony Leung Chiu-wai"
+  ],
+  "musica": [
+    "Frankie Chan",
+    "Michael Galasso",
+    "Roel A. Garcia"
+  ],
+  "fotografia": [
+    "Andrew Lau",
+    "Christopher Doyle"
+  ],
+  "guion": [
+    "Wong Kar-wai"
+  ],
+  "temas": [
+    "Sehnsucht",
+    "amor romántico",
+    "fleeting relationship",
+    "longing",
+    "ruptura conyugal",
+    "soledad",
+    "vinculación humana"
+  ],
+  "escenario": [
+    "Hong Kong"
+  ]
 }

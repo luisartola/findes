@@ -18,5 +18,33 @@
   "tmdb_id": 18615,
   "titulo_es": "Retrato de una obsesión",
   "titulo_original": "Fur: An Imaginary Portrait of Diane Arbus",
-  "tmdb_rating": 6.1
+  "tmdb_rating": 6.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Boris McGiver",
+    "Emily Bergl",
+    "Emmy Clarke",
+    "Harris Yulin",
+    "Jane Alexander",
+    "Marceline Hugot",
+    "Matt Servitto",
+    "Nicole Kidman",
+    "Robert Downey Jr.",
+    "Ryan Shore",
+    "Ty Burrell"
+  ],
+  "musica": [
+    "Carter Burwell"
+  ],
+  "fotografia": [
+    "Bill Pope"
+  ],
+  "guion": [
+    "Erin Cressida Wilson"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

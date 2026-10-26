@@ -18,5 +18,12 @@
   "tmdb_id": 17467,
   "titulo_es": "Historia de Ricky",
   "titulo_original": "力王",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Hong Kong"
+  ],
+  "reparto": [
+    "Louis Fan",
+    "Yukari Ōshima"
+  ]
 }

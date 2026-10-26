@@ -18,5 +18,33 @@
   "tmdb_id": 12877,
   "titulo_es": "Dead Man's Shoes",
   "titulo_original": "Dead Man's Shoes",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Andrew Shim",
+    "Gary Stretch",
+    "Jo Hartley",
+    "Neil Bell",
+    "Paddy Considine",
+    "Stuart Wolfenden",
+    "Toby Kebbell"
+  ],
+  "musica": [
+    "Aphex Twin"
+  ],
+  "fotografia": [
+    "Danny Cohen"
+  ],
+  "guion": [
+    "Paddy Considine",
+    "Shane Meadows"
+  ],
+  "temas": [
+    "venganza"
+  ],
+  "escenario": [
+    "Derbyshire"
+  ]
 }

@@ -18,5 +18,51 @@
   "tmdb_id": 12713,
   "titulo_es": "Borrachera de poder",
   "titulo_original": "L'Ivresse du pouvoir",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Alemania",
+    "Francia"
+  ],
+  "reparto": [
+    "Cyril Gueï",
+    "Fernand Guiot",
+    "François Berléand",
+    "Hubert Saint-Macary",
+    "Isabelle Huppert",
+    "Jacky Nercessian",
+    "Jacques Bouanich",
+    "Jacques Boudet",
+    "Jean-Christophe Bouvet",
+    "Jean-François Balmer",
+    "Jean-Marie Juan",
+    "Jean-Marie Winling",
+    "Jean-Pierre Niobé",
+    "Laurence Colussi",
+    "Marilyne Canto",
+    "Michel Scourneau",
+    "Michelle Goddet",
+    "Pascale Mariani",
+    "Pascale Michaud",
+    "Patrick Bruel",
+    "Philippe Duclos",
+    "Pierre Vernier",
+    "Pierre-François Duméniaud",
+    "Raphaël Neal",
+    "Raphaëlle Farman",
+    "Robin Renucci",
+    "Roger Dumas",
+    "Stéphane Debac",
+    "Thomas Chabrol",
+    "Yves Verhoeven"
+  ],
+  "musica": [
+    "Matthieu Chabrol"
+  ],
+  "fotografia": [
+    "Eduardo Serra"
+  ],
+  "guion": [
+    "Claude Chabrol",
+    "Odile Barski"
+  ]
 }

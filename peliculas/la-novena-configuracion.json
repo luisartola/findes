@@ -18,5 +18,36 @@
   "tmdb_id": 18910,
   "titulo_es": "La novena configuración",
   "titulo_original": "The Ninth Configuration",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alejandro Rey",
+    "Ed Flanders",
+    "George DiCenzo",
+    "Jason Miller",
+    "Joe Spinell",
+    "Moses Gunn",
+    "Neville Brand",
+    "Richard Lynch",
+    "Robert Loggia",
+    "Scott Wilson",
+    "Stacy Keach",
+    "Tom Atkins",
+    "William Lucking",
+    "William Peter Blatty"
+  ],
+  "musica": [
+    "Barry DeVorzon"
+  ],
+  "fotografia": [
+    "Gerry Fisher"
+  ],
+  "guion": [
+    "William Peter Blatty"
+  ],
+  "temas": [
+    "sobrenatural"
+  ]
 }

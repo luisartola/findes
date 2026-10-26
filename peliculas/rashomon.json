@@ -18,5 +18,44 @@
   "tmdb_id": 548,
   "titulo_es": "Rashomon",
   "titulo_original": "羅生門",
-  "tmdb_rating": 8.0
+  "tmdb_rating": 8.0,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Machiko Kyō",
+    "Masayuki Mori",
+    "Minoru Chiaki",
+    "Takashi Shimura",
+    "Toshirō Mifune"
+  ],
+  "musica": [
+    "Fumio Hayasaka"
+  ],
+  "fotografia": [
+    "Kazuo Miyagawa"
+  ],
+  "guion": [
+    "Akira Kurosawa",
+    "Ryūnosuke Akutagawa",
+    "Shinobu Hashimoto"
+  ],
+  "temas": [
+    "autoengaño",
+    "autoimagen",
+    "crimen",
+    "fiabilidad",
+    "honor",
+    "memory",
+    "mentira",
+    "narración de historias",
+    "naturaleza humana",
+    "recollection",
+    "subjetividad",
+    "testigo",
+    "verdad"
+  ],
+  "escenario": [
+    "Japón"
+  ]
 }

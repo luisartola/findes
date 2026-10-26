@@ -18,5 +18,29 @@
   "tmdb_id": 162510,
   "titulo_es": "El extraño viaje",
   "titulo_original": "El extraño viaje",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Carlos Larrañaga",
+    "Goyo Lebrero",
+    "Jesús Franco",
+    "José Villasante",
+    "Lina Canalejas",
+    "María Luisa Ponte",
+    "Pilar Gómez Ferrer",
+    "Rafaela Aparicio",
+    "Sara Lezana",
+    "Xan das Bolas"
+  ],
+  "musica": [
+    "Cristóbal Halffter"
+  ],
+  "fotografia": [
+    "José Fernández Aguayo"
+  ],
+  "guion": [
+    "Pedro Beltrán"
+  ]
 }

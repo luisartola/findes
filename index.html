@@ -2866,6 +2866,39 @@
     const GEN_NITIDOS = Object.keys(GEN_VECINOS);
     const sinGenero = (peli, g) => !genresOf(peli).some(x => x === g || (GEN_VECINOS[g] || []).includes(x));
 
+    // Datos de Wikidata (enrich_wikidata.py): países, reparto, música,
+    // fotografía, guion, temas y dónde transcurre.
+    const PAIS_NORMAL = {
+      'Alemania Occidental': 'Alemania', 'República Democrática Alemana': 'Alemania',
+      'República Federal de Yugoslavia': 'Yugoslavia'
+    };
+    const paisesDe = (peli) => [...new Set(((peli && peli.paises) || []).map(p => PAIS_NORMAL[p] || p))];
+    const rolDe = (peli, campo) => ((peli && peli[campo]) || []).filter(latino);
+    const dirDe = (peli) => (peli && peli.director ? peli.director.split(', ') : []);
+    const yLista = (xs) => xs.length > 1 ? `${xs.slice(0, -1).join(', ')} y ${xs[xs.length - 1]}` : (xs[0] || '');
+    const conAnio = (e) => `<em>${etq(e)}</em>${e.peli && e.peli.year ? ` (${e.peli.year})` : ''}`;
+    const laTrajo = (e) => `${e.apariciones[0].persona} al Finde #${e.apariciones[0].finde.numero}`;
+    const cerca = (x, anio, r = 10) => Math.abs(anioDe(x) - anio) <= r;
+    const mayuscula = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+    const pl = (n, uno, varios) => `${n} ${n === 1 ? uno : varios}`;
+    const GENTILICIO = {
+      'Francia': 'francesas', 'Reino Unido': 'británicas', 'España': 'españolas', 'Japón': 'japonesas',
+      'Italia': 'italianas', 'Alemania': 'alemanas', 'Canadá': 'canadienses', 'México': 'mexicanas'
+    };
+    // Ciudades que no se solapan entre sí: «Estados Unidos» o «California»
+    // no pueden ser opción junto a «Los Ángeles».
+    const CIUDADES = ['Nueva York', 'Los Ángeles', 'París', 'Londres', 'Tokio', 'San Francisco', 'Nueva Orleans',
+      'Madrid', 'Viena', 'Toronto', 'Milán', 'Roma', 'Hong Kong', 'Berlín'];
+    // Temas de Wikidata por los que se puede preguntar: concretos y en
+    // castellano. El resto («identidad», «longing»…) valdría para cualquiera.
+    const TEMAS = new Set(['Segunda Guerra Mundial', 'Guerra Fría', 'Conflicto norirlandés', 'aborto', 'adolescencia',
+      'alcoholismo', 'asesino en serie', 'aviación', 'casa embrujada', 'crimen organizado', 'epidemia', 'incesto',
+      'industria cinematográfica', 'inteligencia artificial', 'juego de apuestas', 'manipulación mental', 'pena de muerte',
+      'pornografía', 'prostitución', 'secuestro', 'sobrenatural', 'suicidio', 'tercera edad', 'venganza',
+      'viaje a través del tiempo', 'vida extraterrestre', 'voyeurismo']);
+    // Temas que se pisan: una casa embrujada es sobrenatural.
+    const TEMAS_VECINOS = { 'casa embrujada': ['sobrenatural'], 'sobrenatural': ['casa embrujada'] };
+
     // Contexto precalculado: una vez por ronda, no por pregunta.
     function contextoQuiz() {
       const findes = DATA.filter(f => f.personas.length);
@@ -2887,9 +2920,15 @@
       const conFicha = unicas.filter(e => e.peli);
       const conDirector = conFicha.filter(e => e.peli.director && latino(e.peli.director));
       const pelisDeDirector = {};
-      for (const e of conDirector) for (const d of e.peli.director.split(', ')) (pelisDeDirector[d] || (pelisDeDirector[d] = [])).push(e);
+      for (const e of conDirector) for (const d of dirDe(e.peli)) (pelisDeDirector[d] || (pelisDeDirector[d] = [])).push(e);
       const findesDe = {};
       for (const f of findes) for (const p of f.personas) (findesDe[p.nombre] || (findesDe[p.nombre] = [])).push(f.numero);
+      // Índices inversos: actor, músico, país… → sus películas del archivo.
+      const indice = (valores) => {
+        const idx = {};
+        for (const e of conFicha) for (const v of valores(e.peli)) (idx[v] || (idx[v] = [])).push(e);
+        return idx;
+      };
       return {
         findes, personas, lugares, pelis, unicas, conFicha, conDirector, pelisDeDirector, findesDe,
         conPoster: conFicha.filter(e => e.peli.poster),
@@ -2904,170 +2943,487 @@
           return latino(e.peli.titulo_original) && o && s && !o.includes(s) && !s.includes(o);
         }),
         directores: Object.keys(pelisDeDirector),
-        unaSolaVez: unicas.filter(e => e.apariciones.length === 1)
+        unaSolaVez: unicas.filter(e => e.apariciones.length === 1),
+        reparto: indice(p => rolDe(p, 'reparto')),
+        musica: indice(p => rolDe(p, 'musica')),
+        fotografia: indice(p => rolDe(p, 'fotografia')),
+        guion: indice(p => rolDe(p, 'guion')),
+        temas: indice(p => rolDe(p, 'temas').filter(t => TEMAS.has(t))),
+        ciudades: indice(p => rolDe(p, 'escenario').filter(l => CIUDADES.includes(l))),
+        porPais: indice(paisesDe),
+        // Sin reparto en la ficha no se sabe quién sale: no vale de distractor
+        // en preguntas de reparto.
+        conReparto: conFicha.filter(e => rolDe(e.peli, 'reparto').length >= 3)
       };
     }
 
-    // Cada generador devuelve una pregunta o null si no hay datos suficientes,
-    // o si la pregunta pudiera tener más de una respuesta buena.
-    const GENERADORES = [
-      // ── Quién trajo qué
-      function quienTrajo(c) {
-        const e = azar(c.unaSolaVez);
-        if (!e) return null;
-        const { persona: correcta, finde: f } = e.apariciones[0];
-        // Solo gente que estuvo ese finde: si no, Mario y Olmo se descartan solos.
-        const otras = muestra(f.personas.map(p => p.nombre).filter(n => n !== correcta), 3);
+    // ── Vínculos: cada generador devuelve una pregunta o null si no hay datos
+    // suficientes o si pudiera tener más de una respuesta buena. `sobre` es la
+    // persona o el país del que trata: uno por ronda, que Nicolas Cage no copa.
+    // `pelis` son las películas que nombra: ninguna sale en más de dos.
+
+    const ROLES = {
+      reparto: { tipo: 'Mismo actor', hace: 'sale en',
+        pregunta: (a, b) => `¿Qué actor o actriz sale en ${a} y en ${b}?` },
+      musica: { tipo: 'La música', hace: 'puso música a',
+        pregunta: (a, b) => `¿Quién compuso la música de ${a} y de ${b}?` },
+      fotografia: { tipo: 'La fotografía', hace: 'fotografió',
+        pregunta: (a, b) => `¿Quién fue el director de fotografía de ${a} y de ${b}?` },
+      guion: { tipo: 'El guion', hace: 'escribió',
+        pregunta: (a, b) => `¿Quién firmó el guion de ${a} y de ${b}?` }
+    };
+
+    // Quién une dos películas: un actor, un músico, un operador, un guionista.
+    function personaComun(campo) {
+      const rol = ROLES[campo];
+      return (c) => {
+        // Actores, casi siempre de los que salen en tres o más: con dos, muchos
+        // son secundarios que no conoce nadie.
+        const min = campo === 'reparto' && Math.random() < 0.7 ? 3 : 2;
+        const v = azar(Object.keys(c[campo]).filter(x => c[campo][x].length >= min));
+        if (!v) return null;
+        const suyas = c[campo][v];
+        const pares = [];
+        for (let i = 0; i < suyas.length; i++) for (let j = i + 1; j < suyas.length; j++) pares.push([suyas[i], suyas[j]]);
+        // Mejor de directores distintos: Léaud en dos Truffaut se adivina sin saber.
+        const distintos = pares.filter(([a, b]) => !dirDe(a.peli).some(d => dirDe(b.peli).includes(d)));
+        const [a, b] = azar(distintos.length ? distintos : pares);
+        if (dirDe(a.peli).includes(v) && dirDe(b.peli).includes(v)) return null;
+        const de = (e) => rolDe(e.peli, campo);
+        const enAmbas = new Set(de(a).filter(x => de(b).includes(x)));
+        // Tienta más alguien de una de las dos; el resto, del mismo oficio y época.
+        const deUna = muestra([...new Set([...de(a), ...de(b)])].filter(x => !enAmbas.has(x)), 2);
+        const anio = anioDe(a);
+        // Actores, solo los que salen en más de una: son más reconocibles y
+        // así no se recorren los cinco mil del reparto.
+        const oficio = Object.keys(c[campo]).filter(x => campo !== 'reparto' || c[campo][x].length >= 2);
+        const resto = distractores(oficio.filter(x => !enAmbas.has(x) && !deUna.includes(x)
+          && !de(a).includes(x) && !de(b).includes(x)), 3 - deUna.length,
+          x => c[campo][x].some(y => cerca(y, anio, 12)));
+        if (deUna.length + resto.length < 3) return null;
+        return {
+          clave: `${campo}-${v}`, sobre: v, pelis: [a.slug, b.slug],
+          peso: suyas.length + (distintos.length ? 1 : 0) + Math.min(3, Math.abs(anioDe(a) - anioDe(b)) / 10),
+          tipo: rol.tipo,
+          pregunta: rol.pregunta(`<em>${etq(a)}</em>`, `<em>${etq(b)}</em>`),
+          poster: null,
+          opciones: [v, ...deUna, ...resto],
+          correcta: v,
+          explicacion: `<strong>${v}</strong> ${rol.hace} ${yLista(suyas.map(conAnio))}.`
+            + ` <em>${etq(a)}</em> la trajo ${laTrajo(a)}; <em>${etq(b)}</em>, ${laTrajo(b)}.`,
+          href: `#pelicula/${b.slug}`
+        };
+      };
+    }
+
+    const VINCULOS = {
+      // ── Dónde más sale este actor
+      enCualTambien(c) {
+        const v = azar(Object.keys(c.reparto).filter(x => c.reparto[x].length >= (Math.random() < 0.7 ? 3 : 2)));
+        if (!v) return null;
+        const [a, b] = muestra(c.reparto[v], 2);
+        const otras = distractores(c.conReparto.filter(x => !rolDe(x.peli, 'reparto').includes(v)), 3,
+          x => cerca(x, anioDe(b), 8));
         if (otras.length < 3) return null;
         return {
-          clave: `quien-${e.slug}`,
-          tipo: 'Quién la trajo',
-          pregunta: `¿Quién trajo <em>${etq(e)}</em> al Finde #${f.numero}?`,
-          poster: e.peli && e.peli.poster,
-          opciones: [correcta, ...otras],
-          correcta,
-          explicacion: `La trajo <strong>${correcta}</strong> al Finde #${f.numero} (${f.fecha}).`,
-          href: `#pelicula/${e.slug}`
+          clave: `encual-${v}`, sobre: v, pelis: [a.slug, b.slug], peso: c.reparto[v].length,
+          tipo: 'Mismo actor',
+          pregunta: `¿En cuál de estas sale también <strong>${v}</strong>, como en <em>${etq(a)}</em>?`,
+          poster: a.peli.poster,
+          opciones: [etq(b), ...otras.map(etq)],
+          correcta: etq(b),
+          explicacion: `${v} sale en ${yLista(c.reparto[v].map(conAnio))}. <em>${etq(b)}</em> la trajo ${laTrajo(b)}.`,
+          href: `#pelicula/${b.slug}`
         };
       },
 
-      // ── En qué finde se vio
-      function enQueFinde(c) {
-        const e = azar(c.unaSolaVez);
-        if (!e) return null;
-        const bueno = e.apariciones[0].finde;
-        const otros = distractores(c.findes.filter(f => f.numero !== bueno.numero), 3,
-          f => Math.abs(f.numero - bueno.numero) <= 6);
-        if (otros.length < 3) return null;
+      // ── Comparten reparto, sin decir quién
+      comparteReparto(c) {
+        const a = azar(c.conReparto);
+        if (!a) return null;
+        const suyo = new Set(rolDe(a.peli, 'reparto'));
+        const comparte = (x) => x.slug !== a.slug && rolDe(x.peli, 'reparto').some(n => suyo.has(n));
+        const b = azar(c.conReparto.filter(x => comparte(x) && !dirDe(x.peli).some(d => dirDe(a.peli).includes(d))));
+        if (!b) return null;
+        // Las otras, sin nadie del reparto de la primera: si no, habría dos buenas.
+        const otras = distractores(c.conReparto.filter(x => x.slug !== a.slug && !comparte(x)), 3,
+          x => cerca(x, anioDe(b), 8));
+        if (otras.length < 3) return null;
+        const comunes = rolDe(b.peli, 'reparto').filter(n => suyo.has(n));
         return {
-          clave: `finde-${e.slug}`,
-          tipo: 'En qué finde',
-          pregunta: `¿En qué finde se vio <em>${etq(e)}</em>?`,
-          poster: e.peli && e.peli.poster,
-          opciones: [etiquetaFinde(bueno), ...otros.map(etiquetaFinde)],
-          correcta: etiquetaFinde(bueno),
-          explicacion: `Se vio en el Finde #${bueno.numero}, en ${bueno.lugares.join(' y ')}. La trajo ${e.apariciones[0].persona}.`,
-          href: `#finde/${bueno.numero}`
+          clave: `comparte-${[a.slug, b.slug].sort().join('|')}`, pelis: [a.slug, b.slug], peso: 3,
+          tipo: 'Mismo reparto',
+          pregunta: `¿Cuál de estas comparte algún actor con <em>${etq(a)}</em>?`,
+          poster: a.peli.poster,
+          opciones: [etq(b), ...otras.map(etq)],
+          correcta: etq(b),
+          explicacion: `${conAnio(b)} y ${conAnio(a)} comparten a <strong>${yLista(comunes)}</strong>. En las otras tres no sale nadie del reparto de <em>${etq(a)}</em>.`,
+          href: `#pelicula/${b.slug}`
         };
       },
 
-      // ── Dónde se celebró
-      function lugarDelFinde(c) {
-        const f = azar(c.findes);
-        if (!f || c.lugares.length < 4) return null;
-        const bueno = f.lugares[0];
-        const otros = muestra(c.lugares.filter(l => !f.lugares.includes(l)), 3);
-        if (otros.length < 3) return null;
+      // ── Directores que también actúan
+      directorActua(c) {
+        const casos = [];
+        for (const d of c.directores) for (const e of (c.reparto[d] || [])) if (!dirDe(e.peli).includes(d)) casos.push({ d, e });
+        const k = azar(casos);
+        if (!k) return null;
+        const suya = azar(c.pelisDeDirector[k.d]);
+        const otras = distractores(c.conReparto.filter(x => !rolDe(x.peli, 'reparto').includes(k.d) && !dirDe(x.peli).includes(k.d)), 3,
+          x => cerca(x, anioDe(k.e), 8));
+        if (otras.length < 3) return null;
         return {
-          clave: `lugar-${f.numero}`,
-          tipo: 'Dónde fue',
-          pregunta: `¿Dónde se celebró el Finde #${f.numero}${f.fecha ? ` (${f.fecha})` : ''}?`,
+          clave: `actua-${k.d}`, sobre: k.d, pelis: [suya.slug, k.e.slug], peso: 4,
+          tipo: 'Director y actor',
+          pregunta: `<strong>${k.d}</strong> dirigió <em>${etq(suya)}</em>. ¿En cuál de estas, de otro director, sale como actor?`,
           poster: null,
-          opciones: [bueno, ...otros],
-          correcta: bueno,
-          explicacion: `El Finde #${f.numero} fue en <strong>${f.lugares.join(' y ')}</strong>, con ${f.personas.length} participantes.`,
-          href: `#finde/${f.numero}`
+          opciones: [etq(k.e), ...otras.map(etq)],
+          correcta: etq(k.e),
+          explicacion: `${k.d} sale en ${conAnio(k.e)}, de ${k.e.peli.director}. La trajo ${laTrajo(k.e)}.`,
+          href: `#pelicula/${k.e.slug}`
         };
       },
 
-      // ── Qué trajo fulano a tal finde
-      function queTrajoAlFinde(c) {
-        const f = azar(c.findes.filter(x => x.personas.length >= 2));
-        if (!f) return null;
-        const p = azar(f.personas.filter(x => x.peliculas.some(m => typeof m !== 'string' && m.slug)));
+      // ── Del mismo director
+      mismoDirector(c) {
+        const d = azar(c.directores.filter(x => c.pelisDeDirector[x].length >= 2));
+        if (!d) return null;
+        const [a, b] = muestra(c.pelisDeDirector[d], 2);
+        const otras = distractores(c.conDirector.filter(x => !dirDe(x.peli).includes(d)), 3,
+          x => cerca(x, anioDe(b), 8));
+        if (otras.length < 3) return null;
+        return {
+          clave: `mismodir-${d}`, sobre: d, pelis: [a.slug, b.slug], peso: c.pelisDeDirector[d].length,
+          tipo: 'Mismo director',
+          pregunta: `¿Cuál de estas es del mismo director que <em>${etq(a)}</em>?`,
+          poster: a.peli.poster,
+          opciones: [etq(b), ...otras.map(etq)],
+          correcta: etq(b),
+          explicacion: `Las dos son de <strong>${d}</strong>, que en los findes suma ${yLista(c.pelisDeDirector[d].map(conAnio))}.`,
+          href: `#director/${encodeURIComponent(d)}`
+        };
+      },
+
+      // ── Del mismo país (EE. UU. no: sería casi cualquiera)
+      mismoPais(c) {
+        const p = azar(Object.keys(c.porPais).filter(x => x !== 'Estados Unidos' && c.porPais[x].length >= 2 && c.porPais[x].length <= 40));
         if (!p) return null;
-        const suya = azar(p.peliculas.filter(m => typeof m !== 'string' && m.slug));
-        const ajenas = f.personas
-          .filter(x => x.nombre !== p.nombre)
-          .flatMap(x => x.peliculas)
-          .filter(m => typeof m !== 'string' && m.slug && m.slug !== suya.slug);
-        // Si dos trajeron la misma, que salga una sola vez.
-        const otras = muestra([...new Map(ajenas.map(m => [m.slug, m])).values()], 3);
+        const [a, b] = muestra(c.porPais[p], 2);
+        // Las otras, sin ningún país en común con la primera: con las
+        // coproducciones, «también» podría valer por otro país.
+        const suyos = paisesDe(a.peli);
+        const otras = distractores(c.conFicha.filter(x => paisesDe(x.peli).length && !paisesDe(x.peli).some(q => suyos.includes(q))), 3,
+          x => cerca(x, anioDe(b), 8));
         if (otras.length < 3) return null;
-        const et = m => tituloCorto(PELI_CACHE[m.slug], m.titulo);
+        const pb = paisesDe(b.peli);
         return {
-          clave: `trajo-${f.numero}-${p.nombre}-${suya.slug}`,
-          tipo: 'Quién trajo qué',
-          pregunta: `De estas cuatro del Finde #${f.numero}, ¿cuál trajo <strong>${p.nombre}</strong>?`,
-          poster: null,
-          opciones: [et(suya), ...otras.map(et)],
-          correcta: et(suya),
-          explicacion: `${p.nombre} trajo <em>${et(suya)}</em>. Las otras tres también se vieron ese finde, pero las trajeron otros.`,
-          href: `#finde/${f.numero}`
+          clave: `pais-${p}`, sobre: p, pelis: [a.slug, b.slug], peso: 2 + 20 / c.porPais[p].length,
+          tipo: 'Mismo país',
+          pregunta: `<em>${etq(a)}</em> es una producción de <strong>${p}</strong>. ¿Cuál de estas también?`,
+          poster: a.peli.poster,
+          opciones: [etq(b), ...otras.map(etq)],
+          correcta: etq(b),
+          explicacion: `${conAnio(b)} es ${pb.length > 1 ? `una coproducción de ${yLista(pb)}` : `de ${p}`}. En los findes se han visto ${c.porPais[p].length} películas con participación de ${p}.`,
+          href: `#pelicula/${b.slug}`
         };
       },
 
-      // ── Cuál NO se vio ahí
-      function cualNoSeVio(c) {
-        const f = azar(c.findes);
-        if (!f) return null;
-        const dentro = f.personas.flatMap(p => p.peliculas).filter(m => typeof m !== 'string' && m.slug);
-        if (dentro.length < 3) return null;
-        const slugsDentro = new Set(dentro.map(m => m.slug));
-        const distintas = [...new Map(dentro.map(m => [m.slug, m])).values()];
-        // La intrusa sale de un finde cercano: de la misma época, no de otra década.
-        const fuera = azar(c.unicas.filter(e => !slugsDentro.has(e.slug)
-          && e.apariciones.some(a => Math.abs(a.finde.numero - f.numero) <= 4)));
-        if (!fuera) return null;
-        const tres = muestra(distintas, 3);
-        const et = m => tituloCorto(PELI_CACHE[m.slug], m.titulo);
-        const intrusa = etq(fuera);
-        return {
-          clave: `nose-${f.numero}-${fuera.slug}`,
-          tipo: 'La intrusa',
-          pregunta: `¿Cuál de estas <strong>no</strong> se vio en el Finde #${f.numero}?`,
-          poster: null,
-          opciones: [intrusa, ...tres.map(et)],
-          correcta: intrusa,
-          explicacion: `<em>${intrusa}</em> se vio en el Finde #${fuera.apariciones[0].finde.numero}, no en el #${f.numero}.`,
-          href: `#finde/${f.numero}`
-        };
-      },
-
-      // ── Quién dirigió
-      function quienDirigio(c) {
-        const e = azar(c.conDirector);
-        if (!e) return null;
-        const bueno = e.peli.director.split(', ')[0];
-        const anio = anioDe(e);
-        // Directores de la misma época: Fritz Lang frente a Jordan Peele no es pregunta.
-        const otros = distractores(c.directores.filter(d => !e.peli.director.split(', ').includes(d)), 3,
-          d => c.pelisDeDirector[d].some(x => Math.abs(anioDe(x) - anio) <= 12));
+      // ── Qué tema comparten tres películas
+      temaComun(c) {
+        const t = azar(Object.keys(c.temas).filter(x => c.temas[x].length >= 3));
+        if (!t) return null;
+        const tres = muestra(c.temas[t], 3);
+        const suyos = new Set(tres.flatMap(e => rolDe(e.peli, 'temas')));
+        const otros = muestra(Object.keys(c.temas).filter(x => c.temas[x].length >= 2 && !suyos.has(x)
+          && !(TEMAS_VECINOS[t] || []).includes(x)), 3);
         if (otros.length < 3) return null;
         return {
-          clave: `dir-${e.slug}`,
-          tipo: 'Quién dirigió',
-          pregunta: `¿Quién dirigió <em>${etq(e)}</em> (${e.peli.year || '?'})?`,
-          poster: e.peli.poster,
-          opciones: [bueno, ...otros],
-          correcta: bueno,
-          explicacion: `La dirigió <strong>${e.peli.director}</strong>. La trajo ${e.apariciones[0].persona} al Finde #${e.apariciones[0].finde.numero}.`,
-          href: `#director/${encodeURIComponent(bueno)}`
+          clave: `tema-${t}`, sobre: t, pelis: tres.map(e => e.slug), peso: 3,
+          tipo: 'Tema común',
+          pregunta: `¿Qué tema tienen en común ${yLista(tres.map(e => `<em>${etq(e)}</em>`))}?`,
+          poster: null,
+          opciones: [t, ...otros].map(mayuscula),
+          correcta: mayuscula(t),
+          explicacion: c.temas[t].length > 3
+            ? `Las tres tratan de ${t}, igual que ${yLista(c.temas[t].filter(e => !tres.includes(e)).map(conAnio))}.`
+            : `Las tres tratan de ${t}, y ninguna otra del archivo.`,
+          href: `#pelicula/${tres[0].slug}`
         };
       },
 
-      // ── Reconocer el cartel
-      function queCartel(c) {
-        const e = azar(c.conPoster);
-        if (!e) return null;
-        const suyos = genresOf(e.peli).filter(g => g !== 'Drama');
-        const otras = distractores(c.conFicha.filter(x => x.slug !== e.slug), 3,
-          x => genresOf(x.peli).some(g => suyos.includes(g)));
+      // ── En qué ciudad transcurren tres películas
+      dondeTranscurren(c) {
+        const l = azar(Object.keys(c.ciudades).filter(x => c.ciudades[x].length >= 3));
+        if (!l) return null;
+        const tres = muestra(c.ciudades[l], 3);
+        const suyas = new Set(tres.flatMap(e => rolDe(e.peli, 'escenario')));
+        const otras = muestra(Object.keys(c.ciudades).filter(x => !suyas.has(x)), 3);
         if (otras.length < 3) return null;
         return {
-          clave: `cartel-${e.slug}`,
-          tipo: 'El cartel',
-          pregunta: `¿De qué película es este cartel?`,
-          poster: e.peli.poster,
+          clave: `ciudad-${l}`, sobre: l, pelis: tres.map(e => e.slug), peso: 3,
+          tipo: 'Dónde pasa',
+          pregunta: `¿En qué ciudad transcurren ${yLista(tres.map(e => `<em>${etq(e)}</em>`))}?`,
+          poster: null,
+          opciones: [l, ...otras],
+          correcta: l,
+          explicacion: `En ${l} transcurren ${c.ciudades[l].length} películas del archivo, entre ellas ${yLista(tres.map(conAnio))}.`,
+          href: `#pelicula/${tres[0].slug}`
+        };
+      },
+
+      // ── Tres comparten algo; la cuarta, no
+      laIntrusa(c) {
+        const conCampo = (campo) => c.conFicha.filter(x => rolDe(x.peli, campo).length);
+        const tipos = [
+          { id: 'actor', idx: c.reparto, pool: c.conReparto, tiene: (x, v) => rolDe(x.peli, 'reparto').includes(v),
+            txt: v => `tienen a <strong>${v}</strong> en el reparto` },
+          { id: 'dir', idx: c.pelisDeDirector, pool: c.conDirector, tiene: (x, v) => dirDe(x.peli).includes(v),
+            txt: v => `son de <strong>${v}</strong>` },
+          { id: 'foto', idx: c.fotografia, pool: conCampo('fotografia'), tiene: (x, v) => rolDe(x.peli, 'fotografia').includes(v),
+            txt: v => `tienen fotografía de <strong>${v}</strong>` },
+          { id: 'musica', idx: c.musica, pool: conCampo('musica'), tiene: (x, v) => rolDe(x.peli, 'musica').includes(v),
+            txt: v => `tienen música de <strong>${v}</strong>` },
+          { id: 'pais', idx: c.porPais, pool: c.conFicha.filter(x => paisesDe(x.peli).length), tiene: (x, v) => paisesDe(x.peli).includes(v),
+            txt: v => `son producciones de <strong>${v}</strong>`, max: 15 },
+          { id: 'ciudad', idx: c.ciudades, pool: conCampo('escenario'), tiene: (x, v) => rolDe(x.peli, 'escenario').includes(v),
+            txt: v => `transcurren en <strong>${v}</strong>` }
+        ];
+        const t = azar(tipos);
+        const v = azar(Object.keys(t.idx).filter(x => t.idx[x].length >= 3 && t.idx[x].length <= (t.max || 99)));
+        if (!v) return null;
+        const tres = muestra(t.idx[v], 3);
+        const anio = tres.map(anioDe).sort((x, y) => x - y)[1];
+        const intrusa = distractores(t.pool.filter(x => !t.tiene(x, v)), 1, x => cerca(x, anio, 6))[0];
+        if (!intrusa) return null;
+        return {
+          clave: `intrusa-${t.id}-${v}`, sobre: v, pelis: [...tres, intrusa].map(e => e.slug), peso: t.idx[v].length,
+          tipo: 'La intrusa',
+          pregunta: `Tres de estas ${t.txt(v)}. ¿Cuál es la intrusa?`,
+          poster: null,
+          opciones: [etq(intrusa), ...tres.map(etq)],
+          correcta: etq(intrusa),
+          explicacion: `${conAnio(intrusa)} no. Las otras tres sí: ${yLista(tres.map(conAnio))}.`,
+          href: `#pelicula/${intrusa.slug}`
+        };
+      }
+    };
+
+    // ── Cifras del archivo
+
+    // «¿Quién/cuál tiene más…?» a partir de un recuento. Null si hay empate
+    // arriba: no se puede preguntar por un primero que no existe.
+    function ranking({ clave, tipo = 'Cifras', pregunta, cuenta, fmt, href }) {
+      const orden = Object.entries(cuenta).sort((a, b) => b[1] - a[1]);
+      if (orden.length < 4 || fmt(orden[0][1]) === fmt(orden[1][1])) return null;
+      // Los distractores, de los que van justo detrás en la tabla.
+      const todos = [orden[0], ...muestra(orden.slice(1, 7), 3)].sort((a, b) => b[1] - a[1]);
+      return {
+        clave, tipo, pregunta, poster: null,
+        opciones: todos.map(x => x[0]),
+        correcta: orden[0][0],
+        explicacion: todos.map(([k, v]) => `${k}: ${fmt(v)}`).join('<br>'),
+        href: href(orden[0][0])
+      };
+    }
+
+    // «¿Cuántas…?», con opciones a saltos proporcionales al valor.
+    function cuantas({ clave, pregunta, valor, explicacion, href }) {
+      const paso = Math.max(1, Math.round(valor * 0.2));
+      const otros = muestra([-3, -2, -1, 1, 2, 3].map(k => valor + k * paso).filter(v => v > 0), 3);
+      return {
+        clave, tipo: 'Cifras', pregunta, poster: null,
+        opciones: [valor, ...otros].map(String),
+        correcta: String(valor),
+        explicacion, href
+      };
+    }
+
+    const media = (xs) => xs.reduce((s, x) => s + x, 0) / xs.length;
+    // Recuento por persona sobre lo que trajo (las repetidas cuentan para cada uno).
+    function porPersona(c, valor, minimo = 0) {
+      const res = {};
+      for (const p of c.personas) {
+        const suyas = c.pelis.filter(e => e.persona === p && e.peli);
+        if (suyas.length < minimo) continue;
+        const v = valor(suyas);
+        if (v !== null && !Number.isNaN(v)) res[p] = v;
+      }
+      return res;
+    }
+    const contar = (idx) => Object.fromEntries(Object.entries(idx).map(([k, v]) => [k, v.length]));
+    // «Años 70», pero «Años 2020»: «Años 20» sería ambiguo.
+    const decadaEtiqueta = (e) => {
+      const d = Math.floor(anioDe(e) / 10) * 10;
+      return `Años ${d < 2000 ? String(d).slice(2) : d}`;
+    };
+    const hrefPersona = (p) => `#persona/${encodeURIComponent(p)}`;
+
+    const CIFRAS = {
+      directorMas: (c) => ranking({
+        clave: 'mas-director', pregunta: '¿De qué director se han visto más películas en los findes?',
+        cuenta: contar(c.pelisDeDirector), fmt: n => pl(n, 'película', 'películas'), href: d => `#director/${encodeURIComponent(d)}` }),
+      actorMas: (c) => ranking({
+        clave: 'mas-actor', pregunta: '¿Qué actor o actriz sale en más películas de los findes?',
+        cuenta: contar(c.reparto), fmt: n => pl(n, 'película', 'películas'), href: () => '#estadisticas' }),
+      fotografiaMas: (c) => ranking({
+        clave: 'mas-foto', pregunta: '¿Qué director de fotografía firma más películas de los findes?',
+        cuenta: contar(c.fotografia), fmt: n => pl(n, 'película', 'películas'), href: () => '#estadisticas' }),
+      musicaMas: (c) => ranking({
+        clave: 'mas-musica', pregunta: '¿Qué compositor firma más bandas sonoras de los findes?',
+        cuenta: contar(c.musica), fmt: n => pl(n, 'película', 'películas'), href: () => '#estadisticas' }),
+      guionMas: (c) => ranking({
+        clave: 'mas-guion', pregunta: '¿Qué guionista firma más películas de los findes?',
+        cuenta: contar(c.guion), fmt: n => pl(n, 'película', 'películas'), href: () => '#estadisticas' }),
+      paisSegundo(c) {
+        const cuenta = contar(c.porPais);
+        delete cuenta['Estados Unidos'];
+        return ranking({
+          clave: 'mas-pais', pregunta: 'Quitando Estados Unidos, ¿qué país ha puesto más películas en los findes?',
+          cuenta, fmt: n => pl(n, 'película', 'películas'), href: () => '#estadisticas' });
+      },
+      cuantasDePais(c) {
+        const p = azar(Object.keys(GENTILICIO).filter(x => c.porPais[x]));
+        if (!p) return null;
+        const n = c.porPais[p].length;
+        const solas = c.porPais[p].filter(e => paisesDe(e.peli).length === 1).length;
+        return cuantas({
+          clave: 'cuantas-pais', valor: n,
+          pregunta: `¿Cuántas películas ${GENTILICIO[p]} (contando coproducciones) se han visto en los findes?`,
+          explicacion: `${n}, de las que ${solas} son solo de ${p} y ${n - solas} coproducciones.`, href: '#estadisticas' });
+      },
+      cuantosPaises(c) {
+        const n = Object.keys(c.porPais).length;
+        const raros = Object.keys(c.porPais).filter(p => c.porPais[p].length === 1);
+        return cuantas({
+          clave: 'cuantos-paises', valor: n,
+          pregunta: '¿De cuántos países distintos son las películas que se han visto en los findes?',
+          explicacion: `${n}. Con una sola película: ${yLista(raros)}.`, href: '#estadisticas' });
+      },
+      // La única de su país: curiosidades como Filipinas o Irán.
+      paisUnico(c) {
+        const p = azar(Object.keys(c.porPais).filter(x => c.porPais[x].length === 1));
+        if (!p) return null;
+        const e = c.porPais[p][0];
+        // «A Serbian Film» de Serbia se contesta sola.
+        if (normTitulo(`${e.peli.titulo_es} ${e.peli.titulo_original}`).includes(normTitulo(p).slice(0, 5))) return null;
+        const otras = distractores(c.conFicha.filter(x => paisesDe(x.peli).length && !paisesDe(x.peli).includes(p)), 3,
+          x => cerca(x, anioDe(e), 8));
+        if (otras.length < 3) return null;
+        return {
+          clave: 'pais-unico', tipo: 'Cifras', pelis: [e.slug],
+          pregunta: `Solo una película de los findes es de <strong>${p}</strong>. ¿Cuál?`,
+          poster: null,
           opciones: [etq(e), ...otras.map(etq)],
           correcta: etq(e),
-          explicacion: `Es <em>${etq(e)}</em>${e.peli.year ? ` (${e.peli.year})` : ''}${e.peli.director ? `, de ${e.peli.director}` : ''}.`,
+          explicacion: `${conAnio(e)}${paisesDe(e.peli).length > 1 ? `, coproducción de ${yLista(paisesDe(e.peli))}` : ''}. La trajo ${laTrajo(e)}.`,
           href: `#pelicula/${e.slug}`
         };
       },
+      decadaMas(c) {
+        const cuenta = {};
+        for (const e of c.conAnio) cuenta[decadaEtiqueta(e)] = (cuenta[decadaEtiqueta(e)] || 0) + 1;
+        return ranking({
+          clave: 'mas-decada', pregunta: '¿De qué década son más películas de las vistas en los findes?',
+          cuenta, fmt: n => pl(n, 'película', 'películas'), href: () => '#decadas' });
+      },
+      antesDe1950(c) {
+        const viejas = c.conAnio.filter(e => anioDe(e) < 1950).sort((a, b) => anioDe(a) - anioDe(b));
+        return cuantas({
+          clave: 'antes-1950', valor: viejas.length,
+          pregunta: '¿Cuántas películas anteriores a 1950 se han visto en los findes?',
+          explicacion: `${viejas.length}. La más antigua, ${conAnio(viejas[0])}.`, href: '#decadas' });
+      },
+      personaMasPaises: (c) => ranking({
+        clave: 'persona-paises', tipo: 'Perfil', pregunta: '¿Quién ha traído películas de más países distintos?',
+        cuenta: porPersona(c, es => new Set(es.flatMap(e => paisesDe(e.peli))).size),
+        fmt: n => pl(n, 'país', 'países'), href: hrefPersona }),
+      personaMasDePais(c) {
+        const p = azar(Object.keys(GENTILICIO));
+        return ranking({
+          clave: `persona-pais-${p}`, tipo: 'Perfil', pregunta: `¿Quién ha traído más películas ${GENTILICIO[p]}?`,
+          cuenta: porPersona(c, es => es.filter(e => paisesDe(e.peli).includes(p)).length),
+          fmt: n => pl(n, 'película', 'películas'), href: hrefPersona });
+      },
+      personaFueraDeUSA: (c) => ranking({
+        clave: 'persona-no-usa', tipo: 'Perfil',
+        pregunta: '¿Quién trae, en proporción, más cine de fuera de Estados Unidos?',
+        cuenta: porPersona(c, es => {
+          const con = es.filter(e => paisesDe(e.peli).length);
+          return Math.round(100 * con.filter(e => !paisesDe(e.peli).includes('Estados Unidos')).length / con.length);
+        }, 15),
+        fmt: n => `${n} %`, href: hrefPersona }),
+      personaMasAntigua: (c) => ranking({
+        clave: 'persona-antigua', tipo: 'Perfil', pregunta: '¿Quién trae, de media, las películas más antiguas?',
+        cuenta: porPersona(c, es => -Math.round(media(es.filter(e => anioDe(e)).map(anioDe))), 15),
+        fmt: n => `de media, de ${-n}`, href: hrefPersona }),
+      personaMasReciente: (c) => ranking({
+        clave: 'persona-reciente', tipo: 'Perfil', pregunta: '¿Quién trae, de media, las películas más recientes?',
+        cuenta: porPersona(c, es => Math.round(media(es.filter(e => anioDe(e)).map(anioDe))), 15),
+        fmt: n => `de media, de ${n}`, href: hrefPersona }),
+      personaMasNota: (c) => ranking({
+        clave: 'persona-nota', tipo: 'Perfil', pregunta: '¿Quién trae, de media, las películas mejor valoradas en TMDB?',
+        cuenta: porPersona(c, es => Math.round(10 * media(es.filter(e => parseFloat(e.peli.tmdb_rating)).map(e => parseFloat(e.peli.tmdb_rating)))) / 10, 15),
+        fmt: n => fmtRating(n), href: hrefPersona }),
+      personaMasLarga: (c) => ranking({
+        clave: 'persona-larga', tipo: 'Perfil', pregunta: '¿Quién trae, de media, las películas más largas?',
+        cuenta: porPersona(c, es => Math.round(media(es.filter(e => minutos(e.peli) >= 40).map(e => minutos(e.peli)))), 15),
+        fmt: n => `${n} min`, href: hrefPersona }),
+      personaMasFindes: (c) => ranking({
+        clave: 'persona-findes', tipo: 'Perfil', pregunta: '¿Quién ha ido a más findes?',
+        cuenta: contar(c.findesDe), fmt: n => pl(n, 'finde', 'findes'), href: hrefPersona }),
+      // El director que más gente distinta ha traído: el que pone de acuerdo.
+      directorMasGente(c) {
+        const quienes = {};
+        for (const e of c.pelis) if (e.peli) for (const d of dirDe(e.peli)) (quienes[d] || (quienes[d] = new Set())).add(e.persona);
+        const cuenta = Object.fromEntries(Object.entries(quienes).filter(([d]) => latino(d)).map(([d, s]) => [d, s.size]));
+        return ranking({
+          clave: 'director-gente', pregunta: '¿Qué director ha sido traído por más personas distintas?',
+          cuenta, fmt: n => pl(n, 'persona', 'personas'), href: d => `#director/${encodeURIComponent(d)}` });
+      },
+      lugarMasFindes(c) {
+        const cuenta = {};
+        for (const f of DATA) for (const l of f.lugares) cuenta[l] = (cuenta[l] || 0) + 1;
+        return ranking({
+          clave: 'lugar-mas', pregunta: '¿En qué lugar se han celebrado más findes?',
+          cuenta, fmt: n => pl(n, 'finde', 'findes'), href: l => `#lugar/${encodeURIComponent(l)}` });
+      },
+      // ── Quién es el especialista en tal género
+      quienMasGenero(c) {
+        const g = azar(Object.keys(GEN_VARIAS));
+        return ranking({
+          clave: `masgenero-${g}`, tipo: 'Perfil', pregunta: `¿Quién ha traído más ${GEN_VARIAS[g]}?`,
+          cuenta: porPersona(c, es => es.filter(e => genresOf(e.peli).includes(g)).length),
+          fmt: n => pl(n, 'película', 'películas'), href: hrefPersona });
+      },
+      // ── Récords del archivo
+      recordArchivo(c) {
+        const criterio = azar([
+          { id: 'antigua', pool: c.conAnio, valor: anioDe, mayor: false, fmt: e => e.peli.year, que: 'más antigua' },
+          { id: 'larga', pool: c.conDuracion, valor: e => minutos(e.peli), mayor: true, fmt: e => `${minutos(e.peli)} min`, que: 'más larga' },
+          { id: 'corta', pool: c.conDuracion, valor: e => minutos(e.peli), mayor: false, fmt: e => `${minutos(e.peli)} min`, que: 'más corta' }
+        ]);
+        const orden = criterio.pool.slice().sort((a, b) => criterio.mayor
+          ? criterio.valor(b) - criterio.valor(a)
+          : criterio.valor(a) - criterio.valor(b));
+        if (orden.length < 12 || criterio.valor(orden[0]) === criterio.valor(orden[1])) return null;
+        const otras = muestra(orden.slice(1, 12), 3);
+        const todas = [orden[0], ...otras].sort((a, b) => orden.indexOf(a) - orden.indexOf(b));
+        return {
+          clave: `record-${criterio.id}`,
+          tipo: 'Récords', pelis: [orden[0].slug],
+          pregunta: `¿Cuál es la película ${criterio.que} que se ha visto en los findes?`,
+          poster: null,
+          opciones: [etq(orden[0]), ...otras.map(etq)],
+          correcta: etq(orden[0]),
+          explicacion: todas.map(e => `${criterio.fmt(e)} · ${etq(e)}`).join('<br>'),
+          href: `#pelicula/${orden[0].slug}`
+        };
+      }
+    };
 
-      // ── Adivinar por la sinopsis
-      function laSinopsis(c) {
+    // ── La película en sí: sinopsis, título y cartel
+    const PELICULAS = {
+      laSinopsis(c) {
         const e = azar(c.conSinopsis);
         if (!e) return null;
         // Fuera los repartos entre paréntesis y cualquier palabra del título,
@@ -3086,19 +3442,19 @@
           x => genresOf(x.peli).some(g => suyos.includes(g)));
         if (otras.length < 3) return null;
         return {
-          clave: `sinopsis-${e.slug}`,
+          clave: `sinopsis-${e.slug}`, pelis: [e.slug],
           tipo: 'La sinopsis',
           pregunta: `¿De qué película es esta sinopsis?<div class="quizp-cita">${escHtml(txt)}</div>`,
           poster: null,
           opciones: [etq(e), ...otras.map(etq)],
           correcta: etq(e),
-          explicacion: `Es <em>${etq(e)}</em>${e.peli.year ? ` (${e.peli.year})` : ''}. La trajo ${e.apariciones[0].persona} al Finde #${e.apariciones[0].finde.numero}.`,
+          explicacion: `Es ${conAnio(e)}. La trajo ${laTrajo(e)}.`,
           href: `#pelicula/${e.slug}`
         };
       },
 
       // ── Título original ↔ título en España
-      function elTitulo(c) {
+      elTitulo(c) {
         const e = azar(c.conOriginal);
         if (!e) return null;
         const anio = anioDe(e);
@@ -3110,7 +3466,7 @@
         // A cara o cruz, en un sentido o en el otro.
         const haciaEspana = Math.random() < 0.5;
         return {
-          clave: `titulo-${e.slug}`,
+          clave: `titulo-${e.slug}`, pelis: [e.slug],
           tipo: 'El título',
           pregunta: haciaEspana
             ? `¿Con qué título se estrenó en España <em>${orig(e)}</em>?`
@@ -3123,238 +3479,80 @@
         };
       },
 
-      // ── Del mismo director
-      function mismoDirector(c) {
-        const d = azar(Object.keys(c.pelisDeDirector).filter(x => c.pelisDeDirector[x].length >= 2));
-        if (!d) return null;
-        const [a, b] = muestra(c.pelisDeDirector[d], 2);
-        const anio = anioDe(a);
-        const otras = distractores(c.conDirector.filter(x => !x.peli.director.split(', ').includes(d)), 3,
-          x => Math.abs(anioDe(x) - anio) <= 10);
+      // ── Reconocer el cartel
+      queCartel(c) {
+        const e = azar(c.conPoster);
+        if (!e) return null;
+        const suyos = genresOf(e.peli).filter(g => g !== 'Drama');
+        const otras = distractores(c.conFicha.filter(x => x.slug !== e.slug), 3,
+          x => genresOf(x.peli).some(g => suyos.includes(g)));
         if (otras.length < 3) return null;
         return {
-          clave: `mismodir-${[a.slug, b.slug].sort().join('|')}`,
-          tipo: 'Mismo director',
-          pregunta: `¿Cuál de estas es del mismo director que <em>${etq(a)}</em>?`,
-          poster: a.peli.poster,
-          opciones: [etq(b), ...otras.map(etq)],
-          correcta: etq(b),
-          explicacion: `Las dos son de <strong>${d}</strong>: <em>${etq(a)}</em> (${a.peli.year}) y <em>${etq(b)}</em> (${b.peli.year}).`,
-          href: `#director/${encodeURIComponent(d)}`
-        };
-      },
-
-      // ── Cuál es de tal género
-      function elGenero(c) {
-        const g = azar(GEN_NITIDOS.filter(x => c.conFicha.filter(e => genresOf(e.peli).includes(x)).length >= 3));
-        if (!g) return null;
-        const e = azar(c.conFicha.filter(x => genresOf(x.peli).includes(g)));
-        const otras = muestra(c.conFicha.filter(x => sinGenero(x.peli, g)), 3);
-        if (!e || otras.length < 3) return null;
-        return {
-          clave: `genero-${g}-${e.slug}`,
-          tipo: 'El género',
-          pregunta: `¿Cuál de estas es ${GEN_UNA[g]}?`,
-          poster: null,
+          clave: `cartel-${e.slug}`, pelis: [e.slug],
+          tipo: 'El cartel',
+          pregunta: `¿De qué película es este cartel?`,
+          poster: e.peli.poster,
           opciones: [etq(e), ...otras.map(etq)],
           correcta: etq(e),
-          explicacion: `<em>${etq(e)}</em> figura en TMDB como ${genresOf(e.peli).join(', ').toLowerCase()}. Las otras tres, no.`,
-          href: `#genero/${encodeURIComponent(g)}`
+          explicacion: `Es ${conAnio(e)}${e.peli.director ? `, de ${e.peli.director}` : ''}.`,
+          href: `#pelicula/${e.slug}`
         };
-      },
+      }
+    };
 
-      // ── Cara a cara: la más antigua, la más reciente, la más larga…
-      function caraACara(c) {
-        const criterio = azar([
-          { id: 'vieja', pool: c.conAnio, valor: anioDe, mayor: false, fmt: e => e.peli.year,
-            pregunta: '¿Cuál de estas cuatro es la más antigua?' },
-          { id: 'nueva', pool: c.conAnio, valor: anioDe, mayor: true, fmt: e => e.peli.year,
-            pregunta: '¿Cuál de estas cuatro es la más reciente?' },
-          { id: 'larga', pool: c.conDuracion, valor: e => minutos(e.peli), mayor: true, fmt: e => `${minutos(e.peli)} min`,
-            pregunta: '¿Cuál de estas cuatro dura más?' },
-          { id: 'corta', pool: c.conDuracion, valor: e => minutos(e.peli), mayor: false, fmt: e => `${minutos(e.peli)} min`,
-            pregunta: '¿Cuál de estas cuatro es la más corta?' }
-        ]);
-        const cuatro = muestra(criterio.pool, 4);
-        if (cuatro.length < 4 || new Set(cuatro.map(criterio.valor)).size < 4) return null;
-        const orden = cuatro.slice().sort((a, b) => criterio.mayor
-          ? criterio.valor(b) - criterio.valor(a)
-          : criterio.valor(a) - criterio.valor(b));
-        return {
-          clave: `${criterio.id}-${cuatro.map(e => e.slug).sort().join('|')}`,
-          tipo: 'Cara a cara',
-          pregunta: criterio.pregunta,
-          poster: null,
-          opciones: cuatro.map(etq),
-          correcta: etq(orden[0]),
-          explicacion: orden.map(e => `${criterio.fmt(e)} · ${etq(e)}`).join('<br>'),
-          href: `#pelicula/${orden[0].slug}`
-        };
-      },
-
-      // ── La mejor valorada de cuatro
-      function laMejorNota(c) {
-        const cuatro = muestra(c.conNota, 4);
-        if (cuatro.length < 4) return null;
-        const notas = cuatro.map(e => fmtRating(e.peli.tmdb_rating));
-        // Se compara la nota que se ve: 7,25 y 7,3 se leen igual.
-        if (new Set(notas).size < 4) return null;
-        const orden = cuatro.slice().sort((a, b) => parseFloat(b.peli.tmdb_rating) - parseFloat(a.peli.tmdb_rating));
-        return {
-          clave: `nota-${cuatro.map(e => e.slug).sort().join('|')}`,
-          tipo: 'La mejor valorada',
-          pregunta: '¿Cuál tiene mejor nota en TMDB?',
-          poster: null,
-          opciones: cuatro.map(etq),
-          correcta: etq(orden[0]),
-          explicacion: orden
-            .map(e => `${ico('estrella','class="ico ico-estrella"')} ${fmtRating(e.peli.tmdb_rating)} · ${etq(e)}`)
-            .join('<br>'),
-          href: `#pelicula/${orden[0].slug}`
-        };
-      },
-
-      // ── En qué año fue aquel finde
-      function anioDelFinde(c) {
-        const f = azar(c.findes.filter(x => /^\d{4}/.test(x.fecha_sort || '')));
-        if (!f) return null;
-        const bueno = f.fecha_sort.slice(0, 4);
-        const posibles = [...new Set(c.findes.map(x => (x.fecha_sort || '').slice(0, 4)))].filter(a => a && a !== bueno);
-        // Años vecinos: 2009 frente a 2024 se adivina sin acordarse de nada.
-        const otros = distractores(posibles, 3, a => Math.abs(parseInt(a) - parseInt(bueno)) <= 4);
-        if (otros.length < 3) return null;
-        return {
-          clave: `anio-finde-${f.numero}`,
-          tipo: 'La fecha',
-          pregunta: `¿En qué año se celebró el Finde #${f.numero}, el de ${f.lugares.join(' y ')}?`,
-          poster: null,
-          opciones: [bueno, ...otros],
-          correcta: bueno,
-          explicacion: `Fue en ${f.fecha}, con ${f.personas.length} participantes y ${f.personas.reduce((s, p) => s + p.peliculas.length, 0)} películas.`,
-          href: `#finde/${f.numero}`
-        };
-      },
-
-      // ── De qué año es la película
-      function anioDePeli(c) {
-        const e = azar(c.conAnio);
+    // ── Quién trajo qué, sin acordarse de números de finde
+    const GENTE = {
+      quienTrajo(c) {
+        const e = azar(c.unaSolaVez);
         if (!e) return null;
-        const bueno = e.peli.year;
-        const base = parseInt(bueno);
-        const candidatos = [];
-        for (let d = -12; d <= 12; d++) {
-          const a = String(base + d);
-          if (d !== 0 && base + d > 1895 && base + d <= 2026) candidatos.push(a);
-        }
-        const otros = muestra(candidatos, 3);
-        if (otros.length < 3) return null;
+        const { persona: correcta, finde: f } = e.apariciones[0];
+        // Solo gente que estuvo ese finde: si no, Mario y Olmo se descartan solos.
+        const otras = muestra(f.personas.map(p => p.nombre).filter(n => n !== correcta), 3);
+        if (otras.length < 3) return null;
         return {
-          clave: `anio-peli-${e.slug}`,
-          tipo: 'El año',
-          pregunta: `¿De qué año es <em>${etq(e)}</em>?`,
-          poster: e.peli.poster,
-          opciones: [bueno, ...otros],
-          correcta: bueno,
-          explicacion: `Es de ${bueno}${e.peli.director ? `, de ${e.peli.director}` : ''}. La trajo ${e.apariciones[0].persona} al Finde #${e.apariciones[0].finde.numero}.`,
+          clave: `quien-${e.slug}`, pelis: [e.slug],
+          tipo: 'Quién la trajo',
+          pregunta: `¿Quién trajo <em>${etq(e)}</em>${e.peli && e.peli.year ? ` (${e.peli.year})` : ''}?`,
+          poster: e.peli && e.peli.poster,
+          opciones: [correcta, ...otras],
+          correcta,
+          explicacion: `La trajo <strong>${correcta}</strong> al Finde #${f.numero} (${f.fecha}), en ${f.lugares.join(' y ')}.`,
           href: `#pelicula/${e.slug}`
         };
       },
 
-      // ── El género favorito de cada uno
-      function generoDePersona(c) {
+      // ── Tres películas de la misma persona, de findes distintos
+      lasTresDe(c) {
         const p = azar(c.personas);
-        const suyas = c.unicas.filter(e => e.apariciones.some(a => a.persona === p) && e.peli);
-        if (suyas.length < 5) return null;
-        // Sin el drama, que gana siempre y no dice nada de nadie.
-        const cuenta = {};
-        for (const e of suyas) for (const g of genresOf(e.peli)) if (g !== 'Drama') cuenta[g] = (cuenta[g] || 0) + 1;
-        const orden = Object.entries(cuenta).sort((a, b) => b[1] - a[1]);
-        if (orden.length < 4 || orden[0][1] === orden[1][1]) return null;
-        const bueno = orden[0][0];
-        return {
-          clave: `genero-${p}`,
-          tipo: 'Perfil',
-          pregunta: `Sin contar el drama, ¿qué género ha traído más <strong>${p}</strong>?`,
-          poster: null,
-          opciones: [bueno, ...muestra(orden.slice(1).map(x => x[0]), 3)],
-          correcta: bueno,
-          explicacion: orden.slice(0, 4).map(([g, n]) => `${g}: ${n}`).join('<br>') + `<br>De ${suyas.length} películas en total.`,
-          href: `#persona/${encodeURIComponent(p)}`
-        };
-      },
-
-      // ── Quién es el especialista en tal género
-      function quienMasGenero(c) {
-        const g = azar(Object.keys(GEN_VARIAS));
-        const cuenta = Object.fromEntries(c.personas.map(p => [p, 0]));
-        for (const e of c.pelis) if (e.peli && genresOf(e.peli).includes(g)) cuenta[e.persona]++;
-        const orden = Object.entries(cuenta).sort((a, b) => b[1] - a[1]);
-        if (orden.length < 4 || orden[0][1] < 3 || orden[0][1] === orden[1][1]) return null;
-        return {
-          clave: `masgenero-${g}`,
-          tipo: 'Perfil',
-          pregunta: `¿Quién ha traído más ${GEN_VARIAS[g]}?`,
-          poster: null,
-          opciones: [orden[0][0], ...orden.slice(1, 4).map(x => x[0])],
-          correcta: orden[0][0],
-          explicacion: orden.slice(0, 4).map(([n, v]) => `${n}: ${v}`).join('<br>'),
-          href: `#persona/${encodeURIComponent(orden[0][0])}`
-        };
-      },
-
-      // ── Quién trajo la más vieja del finde
-      function laDecana(c) {
-        const f = azar(c.findes);
-        if (!f) return null;
-        const suyas = f.personas.flatMap(p => p.peliculas
-          .filter(m => typeof m !== 'string' && m.slug && PELI_CACHE[m.slug] && parseInt(PELI_CACHE[m.slug].year))
-          .map(m => ({ persona: p.nombre, peli: PELI_CACHE[m.slug], titulo: m.titulo, slug: m.slug })));
-        if (suyas.length < 4) return null;
-        suyas.sort((a, b) => anioDe(a) - anioDe(b));
-        if (anioDe(suyas[0]) === anioDe(suyas[1])) return null;
-        const decana = suyas[0];
-        const otras = muestra(f.personas.map(p => p.nombre).filter(n => n !== decana.persona), 3);
+        const suyas = c.unaSolaVez.filter(e => e.apariciones[0].persona === p);
+        const porFinde = new Map();
+        for (const e of barajar(suyas)) if (!porFinde.has(e.apariciones[0].finde.numero)) porFinde.set(e.apariciones[0].finde.numero, e);
+        const tres = muestra([...porFinde.values()], 3);
+        if (tres.length < 3) return null;
+        // Distractores: gente que coincidió con ella en alguno de esos findes.
+        const coincidieron = new Set(tres.flatMap(e => e.apariciones[0].finde.personas.map(x => x.nombre)));
+        coincidieron.delete(p);
+        const otras = muestra([...coincidieron], 3);
         if (otras.length < 3) return null;
         return {
-          clave: `decana-${f.numero}`,
-          tipo: 'La decana',
-          pregunta: `¿Quién trajo la película más antigua del Finde #${f.numero}?`,
+          clave: `tres-${p}`, sobre: p, pelis: tres.map(e => e.slug),
+          tipo: 'Quién las trajo',
+          pregunta: `¿Quién trajo ${yLista(tres.map(e => `<em>${etq(e)}</em>`))}?`,
           poster: null,
-          opciones: [decana.persona, ...otras],
-          correcta: decana.persona,
-          explicacion: `<strong>${decana.persona}</strong>, con <em>${etq(decana)}</em> (${decana.peli.year}). La siguiente era <em>${etq(suyas[1])}</em> (${suyas[1].peli.year}).`,
-          href: `#finde/${f.numero}`
-        };
-      },
-
-      // ── Cuál se vio en el mismo finde
-      function mismoFinde(c) {
-        const e = azar(c.unaSolaVez);
-        if (!e) return null;
-        const f = e.apariciones[0].finde;
-        const companera = azar(c.unicas.filter(x => x.slug !== e.slug && x.apariciones.some(a => a.finde.numero === f.numero)));
-        // Las otras, de findes lejanos y que nunca pasaron por este.
-        const otras = muestra(c.unicas.filter(x => x.apariciones.every(a => Math.abs(a.finde.numero - f.numero) >= 3)), 3);
-        if (!companera || otras.length < 3) return null;
-        return {
-          clave: `mismofinde-${[e.slug, companera.slug].sort().join('|')}`,
-          tipo: 'Compañeras',
-          pregunta: `¿Cuál de estas se vio en el mismo finde que <em>${etq(e)}</em>?`,
-          poster: null,
-          opciones: [etq(companera), ...otras.map(etq)],
-          correcta: etq(companera),
-          explicacion: `Las dos se vieron en el Finde #${f.numero} (${f.fecha}): <em>${etq(e)}</em> la trajo ${e.apariciones[0].persona} y <em>${etq(companera)}</em>, ${companera.apariciones.find(a => a.finde.numero === f.numero).persona}.`,
-          href: `#finde/${f.numero}`
+          opciones: [p, ...otras],
+          correcta: p,
+          explicacion: `Las trajo <strong>${p}</strong>: ${tres.map(e => `<em>${etq(e)}</em> al Finde #${e.apariciones[0].finde.numero}`).join(', ')}.`,
+          href: hrefPersona(p)
         };
       },
 
       // ── La que se vio dos veces
-      function laRepetida(c) {
+      laRepetida(c) {
         const e = azar(c.unicas.filter(x => new Set(x.apariciones.map(a => a.finde.numero)).size >= 2));
         const otras = muestra(c.unaSolaVez, 3);
         if (!e || otras.length < 3) return null;
         return {
-          clave: `repetida-${e.slug}`,
+          clave: `repetida-${e.slug}`, pelis: [e.slug],
           tipo: 'La repetida',
           pregunta: '¿Cuál de estas se ha visto en dos findes distintos?',
           poster: null,
@@ -3363,148 +3561,80 @@
           explicacion: `<em>${etq(e)}</em> se vio ${e.apariciones.map(a => `en el Finde #${a.finde.numero} (la trajo ${a.persona})`).join(' y ')}.`,
           href: `#pelicula/${e.slug}`
         };
-      },
-
-      // ── Altas y bajas
-      function asistencia(c) {
-        const primero = Math.min(...c.findes.map(f => f.numero));
-        const ultimo = Math.max(...c.findes.map(f => f.numero));
-        const casos = [];
-        for (const [p, fs] of Object.entries(c.findesDe)) {
-          if (fs[0] !== primero) casos.push({ p, fs, cual: 'primer', n: fs[0] });
-          if (fs[fs.length - 1] !== ultimo) casos.push({ p, fs, cual: 'último', n: fs[fs.length - 1] });
-        }
-        const k = azar(casos);
-        if (!k) return null;
-        const bueno = c.findes.find(f => f.numero === k.n);
-        const otros = distractores(c.findes.filter(f => f.numero !== k.n), 3, f => Math.abs(f.numero - k.n) <= 5);
-        if (otros.length < 3) return null;
-        const seguidos = k.fs[k.fs.length - 1] - k.fs[0] + 1 === k.fs.length;
-        return {
-          clave: `asist-${k.p}-${k.cual}`,
-          tipo: 'Altas y bajas',
-          pregunta: `¿Cuál fue el ${k.cual} finde de <strong>${k.p}</strong>?`,
-          poster: null,
-          opciones: [etiquetaFinde(bueno), ...otros.map(etiquetaFinde)],
-          correcta: etiquetaFinde(bueno),
-          explicacion: `${k.p} fue a ${k.fs.length} findes: ${seguidos && k.fs.length > 2
-            ? `del #${k.fs[0]} al #${k.fs[k.fs.length - 1]}`
-            : k.fs.map(n => `#${n}`).join(', ').replace(/, ([^,]*)$/, ' y $1')}.`,
-          href: `#persona/${encodeURIComponent(k.p)}`
-        };
-      },
-
-      // ── Cuántas se vieron
-      function cuantasPelis(c) {
-        const f = azar(c.findes);
-        if (!f) return null;
-        const total = x => x.personas.reduce((s, p) => s + p.peliculas.length, 0);
-        const bueno = String(total(f));
-        const otros = muestra([...new Set(c.findes.map(x => String(total(x))))].filter(n => n !== bueno), 3);
-        if (otros.length < 3) return null;
-        return {
-          clave: `cuantas-${f.numero}`,
-          tipo: 'Las cuentas',
-          pregunta: `¿Cuántas películas se vieron en el Finde #${f.numero} (${f.lugares.join(' y ')}, ${f.fecha})?`,
-          poster: null,
-          opciones: [bueno, ...otros],
-          correcta: bueno,
-          explicacion: `${bueno}: ${f.personas.map(p => `${p.nombre} trajo ${p.peliculas.length}`).join(', ')}.`,
-          href: `#finde/${f.numero}`
-        };
-      },
-
-      // ── Récords del archivo
-      function recordArchivo(c) {
-        const criterio = azar([
-          { id: 'antigua', pool: c.conAnio, valor: anioDe, mayor: false, fmt: e => e.peli.year, que: 'más antigua' },
-          { id: 'larga', pool: c.conDuracion, valor: e => minutos(e.peli), mayor: true, fmt: e => `${minutos(e.peli)} min`, que: 'más larga' }
-        ]);
-        const orden = criterio.pool.slice().sort((a, b) => criterio.mayor
-          ? criterio.valor(b) - criterio.valor(a)
-          : criterio.valor(a) - criterio.valor(b));
-        if (orden.length < 12 || criterio.valor(orden[0]) === criterio.valor(orden[1])) return null;
-        const otras = muestra(orden.slice(1, 12), 3);
-        const todas = [orden[0], ...otras].sort((a, b) => orden.indexOf(a) - orden.indexOf(b));
-        return {
-          clave: `record-${criterio.id}`,
-          tipo: 'Récords',
-          pregunta: `¿Cuál es la película ${criterio.que} que se ha visto en los findes?`,
-          poster: null,
-          opciones: [etq(orden[0]), ...otras.map(etq)],
-          correcta: etq(orden[0]),
-          explicacion: todas.map(e => `${criterio.fmt(e)} · ${etq(e)}`).join('<br>'),
-          href: `#pelicula/${orden[0].slug}`
-        };
-      },
-
-      // ── El director más visto
-      function directorMasVisto(c) {
-        const orden = Object.entries(c.pelisDeDirector).map(([d, es]) => [d, es.length]).sort((a, b) => b[1] - a[1]);
-        if (orden.length < 4 || orden[0][1] === orden[1][1]) return null;
-        const otros = muestra(orden.slice(1).filter(x => x[1] >= 3), 3);
-        if (otros.length < 3) return null;
-        const todos = [orden[0], ...otros];
-        return {
-          clave: 'dir-mas',
-          tipo: 'Récords',
-          pregunta: '¿De qué director se han visto más películas en los findes?',
-          poster: null,
-          opciones: todos.map(x => x[0]),
-          correcta: orden[0][0],
-          explicacion: todos.map(([d, n]) => `${d}: ${n} películas`).join('<br>'),
-          href: `#director/${encodeURIComponent(orden[0][0])}`
-        };
-      },
-
-      // ── Dónde se han hecho más findes
-      function lugarMasFindes(c) {
-        const cuenta = {};
-        for (const f of DATA) for (const l of f.lugares) cuenta[l] = (cuenta[l] || 0) + 1;
-        const orden = Object.entries(cuenta).sort((a, b) => b[1] - a[1]);
-        if (orden.length < 4 || orden[0][1] === orden[1][1]) return null;
-        return {
-          clave: 'lugar-mas',
-          tipo: 'Récords',
-          pregunta: '¿En qué lugar se han celebrado más findes?',
-          poster: null,
-          opciones: [orden[0][0], ...orden.slice(1, 4).map(x => x[0])],
-          correcta: orden[0][0],
-          explicacion: orden.slice(0, 4).map(([n, v]) => `${n}: ${v} findes`).join('<br>'),
-          href: `#lugar/${encodeURIComponent(orden[0][0])}`
-        };
       }
+    };
+
+    // El banco de una ronda: unas cien preguntas, con un cupo por familia.
+    // Sobre todo vínculos entre películas y cifras del archivo.
+    const FAMILIAS = [
+      { id: 'reparto', cupo: 9, gens: [personaComun('reparto'), VINCULOS.enCualTambien] },
+      { id: 'comparte', cupo: 3, gens: [VINCULOS.comparteReparto] },
+      { id: 'musica', cupo: 5, gens: [personaComun('musica')] },
+      { id: 'foto', cupo: 5, gens: [personaComun('fotografia')] },
+      { id: 'guion', cupo: 4, gens: [personaComun('guion')] },
+      { id: 'actua', cupo: 3, gens: [VINCULOS.directorActua] },
+      { id: 'director', cupo: 5, gens: [VINCULOS.mismoDirector] },
+      { id: 'pais', cupo: 5, gens: [VINCULOS.mismoPais] },
+      { id: 'tema', cupo: 4, gens: [VINCULOS.temaComun] },
+      { id: 'ciudad', cupo: 4, gens: [VINCULOS.dondeTranscurren] },
+      { id: 'intrusa', cupo: 7, gens: [VINCULOS.laIntrusa] },
+      { id: 'cifras', cupo: 27, gens: Object.values(CIFRAS) },
+      { id: 'peliculas', cupo: 9, gens: Object.values(PELICULAS) },
+      { id: 'gente', cupo: 7, gens: Object.values(GENTE) }
     ];
 
-    // `vistas` se comparte entre tandas: en las rondas sin fin se piden
-    // preguntas de 20 en 20 y ninguna puede repetirse.
-    function generarPreguntas(n, vistas = new Set()) {
+    function construirBanco() {
       const c = contextoQuiz();
-      const preguntas = [];
-      const porTipo = {};
-      // Pocas del mismo tipo por tanda (dos en diez, cuatro en treinta…), para
-      // que no salgan cuatro carteles seguidos. Se relaja al final si no hay variedad.
-      const tope = (intento) => intento < n * 20 ? Math.max(2, Math.ceil(n / 8)) : n;
-      // Intentos acotados: algunos generadores fallan si faltan datos.
-      for (let i = 0; i < n * 40 && preguntas.length < n; i++) {
-        const q = azar(GENERADORES)(c);
-        if (!q || vistas.has(q.clave)) continue;
-        if ((porTipo[q.tipo] || 0) >= tope(i)) continue;
-        // Opciones repetidas harían la pregunta ambigua.
-        if (new Set(q.opciones).size !== q.opciones.length) continue;
-        vistas.add(q.clave);
-        porTipo[q.tipo] = (porTipo[q.tipo] || 0) + 1;
-        q.opciones = barajar(q.opciones);
-        preguntas.push(q);
+      const banco = [];
+      const claves = new Set(), sobre = new Set(), usos = {};
+      for (const fam of FAMILIAS) {
+        // Se generan muchas candidatas y se quedan las mejores, con algo de
+        // azar para que cada ronda sea distinta.
+        const candidatas = [];
+        // Las cifras salen siempre igual: tras media docena de repetidas, ese
+        // generador ya no da más de sí y no se le vuelve a llamar.
+        const repetidas = {}, vistas = new Set();
+        for (let i = 0; i < fam.cupo * 8; i++) {
+          const gen = Math.floor(Math.random() * fam.gens.length);
+          if (repetidas[gen] >= 6) continue;
+          const q = fam.gens[gen](c);
+          // Opciones repetidas harían la pregunta ambigua.
+          if (!q || q.opciones.length < 4 || new Set(q.opciones).size !== q.opciones.length) continue;
+          if (vistas.has(q.clave)) { repetidas[gen] = (repetidas[gen] || 0) + 1; continue; }
+          vistas.add(q.clave);
+          candidatas.push({ ...q, gen, familia: fam.id, orden: (q.peso || 1) + Math.random() * 3 });
+        }
+        candidatas.sort((a, b) => b.orden - a.orden);
+        // En las familias con varios generadores, que ninguno acapare.
+        const tope = fam.gens.length > 1 ? Math.ceil(fam.cupo / fam.gens.length) + 1 : fam.cupo;
+        const porGen = {};
+        let puestas = 0;
+        for (const q of candidatas) {
+          if (puestas >= fam.cupo) break;
+          if (claves.has(q.clave) || (q.sobre && sobre.has(q.sobre)) || (porGen[q.gen] || 0) >= tope) continue;
+          if ((q.pelis || []).some(s => (usos[s] || 0) >= 2)) continue;
+          claves.add(q.clave);
+          if (q.sobre) sobre.add(q.sobre);
+          for (const s of q.pelis || []) usos[s] = (usos[s] || 0) + 1;
+          porGen[q.gen] = (porGen[q.gen] || 0) + 1;
+          q.opciones = barajar(q.opciones);
+          banco.push(q);
+          puestas++;
+        }
       }
-      return preguntas;
+      // Repartidas a lo largo de la ronda en proporción a su cupo, para que
+      // una ronda de diez también mezcle vínculos y cifras.
+      const posicion = new Map();
+      const porFamilia = {};
+      for (const q of barajar(banco)) (porFamilia[q.familia] || (porFamilia[q.familia] = [])).push(q);
+      for (const qs of Object.values(porFamilia)) qs.forEach((q, i) => posicion.set(q, (i + Math.random()) / qs.length));
+      return banco.sort((a, b) => posicion.get(a) - posicion.get(b));
     }
 
     function renderQuizPrecriticos() {
-      const total = quizLargo();
-      const sinFin = total === Infinity;
-      const vistas = new Set();
-      const preguntas = generarPreguntas(sinFin ? 20 : total, vistas);
+      // «Todas» es el banco entero, unas cien.
+      const preguntas = construirBanco().slice(0, quizLargo());
+      const sinFin = false;
       if (!preguntas.length) {
         document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
           ${quizCabecera('precriticos')}
@@ -3554,8 +3684,6 @@
         const acertada = elegida === idxCorrecta;
         if (acertada) aciertos++; else fallos.push(q);
         respondidas++;
-        // Sin fin: se piden más antes de llegar al final de la tanda.
-        if (sinFin && actual >= preguntas.length - 3) preguntas.push(...generarPreguntas(20, vistas));
 
         botones.forEach((b, i) => {
           b.disabled = true;
@@ -3629,20 +3757,26 @@
       return localStorage.getItem('fp-quiz-modo') === 'cine' ? 'cine' : 'precriticos';
     }
 
-    // Largo de la ronda: 10, 30, 100 o sin fin (hasta que uno se canse).
-    const QUIZ_LARGOS = ['10', '30', '100', 'sinfin'];
-    function quizLargoClave() {
+    // Largo de la ronda. Precríticos tiene un banco de unas cien: 10, 30 o
+    // todas. Cine general: 10, 30, 100 o sin fin (hasta que uno se canse).
+    const QUIZ_LARGOS = { precriticos: ['10', '30', 'todas'], cine: ['10', '30', '100', 'sinfin'] };
+    const QUIZ_ROTULOS = { todas: 'Todas', sinfin: 'Sin fin' };
+    function quizLargoClave(modo = quizModo()) {
       let v = null;
       try { v = localStorage.getItem('fp-quiz-largo'); } catch (e) {}
-      return QUIZ_LARGOS.includes(v) ? v : '30';
+      const largos = QUIZ_LARGOS[modo];
+      if (largos.includes(v)) return v;
+      // El máximo de un modo vale como máximo del otro.
+      if (['100', 'sinfin', 'todas'].includes(v)) return largos[largos.length - 1];
+      return '30';
     }
     function quizLargo() {
       const v = quizLargoClave();
-      return v === 'sinfin' ? Infinity : parseInt(v);
+      return v === 'sinfin' || v === 'todas' ? Infinity : parseInt(v);
     }
 
     function quizCabecera(modo) {
-      const largo = quizLargoClave();
+      const largo = quizLargoClave(modo);
       return `<h1 class="page-heading" style="text-align:center">Quiz</h1>
         <div class="quiz-modes">
           <div class="segmented" id="quiz-modes">
@@ -3651,7 +3785,7 @@
           </div>
           <div class="quiz-largo">Preguntas
             <div class="segmented" id="quiz-largo">
-              ${QUIZ_LARGOS.map(v => `<button data-largo="${v}" class="${v === largo ? 'is-active' : ''}">${v === 'sinfin' ? 'Sin fin' : v}</button>`).join('')}
+              ${QUIZ_LARGOS[modo].map(v => `<button data-largo="${v}" class="${v === largo ? 'is-active' : ''}">${QUIZ_ROTULOS[v] || v}</button>`).join('')}
             </div>
           </div>
         </div>`;

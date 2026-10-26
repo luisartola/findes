@@ -18,5 +18,69 @@
   "tmdb_id": 335,
   "titulo_es": "Hasta que llegó su hora",
   "titulo_original": "C'era una volta il West",
-  "tmdb_rating": 8.3
+  "tmdb_rating": 8.3,
+  "paises": [
+    "Estados Unidos",
+    "Italia"
+  ],
+  "reparto": [
+    "Al Mulock",
+    "Aldo Berti",
+    "Aldo Sambrell",
+    "Antonio Molino Rojo",
+    "Benito Stefanelli",
+    "Bruno Corazzari",
+    "Charles Bronson",
+    "Claudia Cardinale",
+    "Claudio Scarchilli",
+    "Conrado San Martín",
+    "Don Galloway",
+    "Enzo Santaniello",
+    "Fabio Testi",
+    "Frank Braña",
+    "Frank Wolff",
+    "Gabriele Ferzetti",
+    "Henry Fonda",
+    "Jack Elam",
+    "Jason Robards",
+    "John Frederick",
+    "Keenan Wynn",
+    "Lionel Stander",
+    "Lorenzo Robledo",
+    "Marco Zuanelli",
+    "Paolo Stoppa",
+    "Ricardo Palacios",
+    "Robert Hossein",
+    "Saturno Cerra",
+    "Sergio Leone",
+    "Spartaco Conversi",
+    "Woody Strode"
+  ],
+  "musica": [
+    "Ennio Morricone"
+  ],
+  "fotografia": [
+    "Tonino Delli Colli"
+  ],
+  "guion": [
+    "Bernardo Bertolucci",
+    "Dario Argento",
+    "Sergio Donati",
+    "Sergio Leone"
+  ],
+  "temas": [
+    "Amoralismo",
+    "Viejo Oeste",
+    "anonimato",
+    "capitalismo",
+    "castigo extrajudicial",
+    "construcción comunitaria",
+    "identidad",
+    "masculinidad",
+    "pionero de Norteamérica",
+    "venganza"
+  ],
+  "escenario": [
+    "Viejo Oeste"
+  ]
 }

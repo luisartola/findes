@@ -18,5 +18,26 @@
   "tmdb_id": 42002,
   "titulo_es": "Angustia",
   "titulo_original": "Angustia",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Craig Hill",
+    "Michael Lerner",
+    "Vicente Gil",
+    "Zelda Rubinstein"
+  ],
+  "fotografia": [
+    "Josep Maria Civit"
+  ],
+  "guion": [
+    "Bigas Luna"
+  ],
+  "temas": [
+    "asesino en serie"
+  ],
+  "escenario": [
+    "Estados Unidos"
+  ]
 }

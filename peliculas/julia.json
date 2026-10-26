@@ -17,5 +17,31 @@
   ],
   "findes": [
     9
+  ],
+  "paises": [
+    "Bélgica",
+    "Estados Unidos",
+    "Francia",
+    "México"
+  ],
+  "reparto": [
+    "Aidan Gould",
+    "Bruno Bichir",
+    "Eugene Byrd",
+    "Ezra Buzzington",
+    "Jude Ciccolella",
+    "Kate del Castillo",
+    "Kevin Kilner",
+    "Saul Rubinek",
+    "Tilda Swinton"
+  ],
+  "fotografia": [
+    "Yorick Le Saux"
+  ],
+  "guion": [
+    "Érick Zonca"
+  ],
+  "temas": [
+    "alcoholismo"
   ]
 }

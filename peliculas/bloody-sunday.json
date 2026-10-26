@@ -18,5 +18,41 @@
   "tmdb_id": 4107,
   "titulo_es": "Domingo sangriento",
   "titulo_original": "Bloody Sunday",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Irlanda",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Allan Gildea",
+    "Carmel McCallion",
+    "Christopher Villiers",
+    "David Clayton Rogers",
+    "Eva Birthistle",
+    "Gerard Crossan",
+    "Gerard McSorley",
+    "James Hewitt",
+    "James Nesbitt",
+    "Kathy Kiera Clarke",
+    "Mary Moulds",
+    "Nicholas Farrell",
+    "Simon Mann",
+    "Tim Pigott-Smith"
+  ],
+  "musica": [
+    "Dominic Muldowney"
+  ],
+  "fotografia": [
+    "Ivan Strasburg"
+  ],
+  "guion": [
+    "Paul Greengrass"
+  ],
+  "temas": [
+    "Conflicto norirlandés",
+    "Domingo Sangriento"
+  ],
+  "escenario": [
+    "Derry"
+  ]
 }

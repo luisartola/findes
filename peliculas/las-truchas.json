@@ -18,5 +18,30 @@
   "tmdb_id": 162438,
   "titulo_es": "Las truchas",
   "titulo_original": "Las truchas",
-  "tmdb_rating": 5.2
+  "tmdb_rating": 5.2,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Amparo Valle",
+    "Cristina Torres",
+    "Enrique San Francisco",
+    "Heinrich Rüdiger Fürst von Starhemberg",
+    "Héctor Alterio",
+    "Lautaro Murúa",
+    "Luis Ciges",
+    "Mary Carrillo",
+    "Ofelia Angélica",
+    "Paloma Hurtado",
+    "Roberto Font",
+    "Verónica Forqué",
+    "Walter Vidarte",
+    "Yelena Samarina"
+  ],
+  "musica": [
+    "Víctor Manuel"
+  ],
+  "guion": [
+    "Manuel Gutiérrez Aragón"
+  ]
 }

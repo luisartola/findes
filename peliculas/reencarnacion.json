@@ -18,5 +18,22 @@
   "tmdb_id": null,
   "titulo_es": "Reencarnación",
   "titulo_original": "輪廻",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Karina Nose",
+    "Kippei Shiina",
+    "Marika Matsumoto",
+    "Shun Oguri",
+    "Takako Fuji",
+    "Tetta Sugimoto"
+  ],
+  "musica": [
+    "Kenji Kawai"
+  ],
+  "temas": [
+    "sobrenatural"
+  ]
 }

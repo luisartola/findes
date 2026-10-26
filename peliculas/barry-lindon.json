@@ -18,5 +18,79 @@
   "tmdb_id": 3175,
   "titulo_es": "Barry Lyndon",
   "titulo_original": "Barry Lyndon",
-  "tmdb_rating": 8.0
+  "tmdb_rating": 8.0,
+  "paises": [
+    "Estados Unidos",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "André Morell",
+    "Anthony Sharp",
+    "Arthur O'Sullivan",
+    "Barry Jackson",
+    "Billy Boyle",
+    "David Morley",
+    "Diana Körner",
+    "Dominic Savage",
+    "Ferdy Mayne",
+    "Frank Middlemass",
+    "Frederick Schiller",
+    "Gay Hamilton",
+    "Geoffrey Chater",
+    "George Sewell",
+    "Godfrey Quigley",
+    "Hans Meyer",
+    "Hardy Krüger",
+    "Harry Towb",
+    "John Alcott",
+    "John Bindon",
+    "John Sharp",
+    "Jonathan Cecil",
+    "Leon Vitali",
+    "Leonard Rossiter",
+    "Liam Redmond",
+    "Marie Kean",
+    "Marisa Berenson",
+    "Michael Hordern",
+    "Murray Melvin",
+    "Pat Roach",
+    "Patrick Magee",
+    "Peter Cellier",
+    "Philip Stone",
+    "Roger Booth",
+    "Ryan O'Neal",
+    "Steven Berkoff",
+    "Vivian Kubrick",
+    "Wolf Kahler"
+  ],
+  "musica": [
+    "Leonard Rosenman"
+  ],
+  "fotografia": [
+    "John Alcott"
+  ],
+  "guion": [
+    "Stanley Kubrick"
+  ],
+  "temas": [
+    "colonialismo",
+    "control social",
+    "emotional competence",
+    "historiografía",
+    "individuo y sociedad",
+    "jerarquía social",
+    "libertad",
+    "masculinidad",
+    "narración de historias",
+    "oportunismo",
+    "sexualidad",
+    "violencia"
+  ],
+  "escenario": [
+    "Berlín",
+    "Dublín",
+    "Europa continental",
+    "Inglaterra",
+    "Reino de Irlanda"
+  ]
 }

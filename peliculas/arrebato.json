@@ -18,5 +18,34 @@
   "tmdb_id": 4494,
   "titulo_es": "Arrebato",
   "titulo_original": "Arrebato",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Carmen Giralt",
+    "Cecilia Roth",
+    "Eusebio Poncela",
+    "Helena Fernán-Gómez",
+    "Marta Fernández-Muro",
+    "Will More"
+  ],
+  "musica": [
+    "Iván Zulueta"
+  ],
+  "guion": [
+    "Iván Zulueta"
+  ],
+  "temas": [
+    "cinefilia",
+    "empeño",
+    "filmmaking",
+    "heroína",
+    "intoxicación por sustancias",
+    "obsesión"
+  ],
+  "escenario": [
+    "Madrid",
+    "Segovia"
+  ]
 }

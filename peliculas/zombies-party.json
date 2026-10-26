@@ -18,5 +18,45 @@
   "tmdb_id": 747,
   "titulo_es": "Zombies Party",
   "titulo_original": "Shaun of the Dead",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Francia",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Antonia Campbell-Hughes",
+    "Bill Nighy",
+    "Chris Martin",
+    "David Walliams",
+    "Dylan Moran",
+    "Edgar Wright",
+    "Jessica Hynes",
+    "Joe Cornish",
+    "Julia Davis",
+    "Julia Deakin",
+    "Kate Ashfield",
+    "Lucy Akhurst",
+    "Lucy Davis",
+    "Mark Gatiss",
+    "Martin Freeman",
+    "Matt Lucas",
+    "Michael Smiley",
+    "Nick Frost",
+    "Paul Kaye",
+    "Penelope Wilton",
+    "Peter Serafinowicz",
+    "Rob Brydon",
+    "Simon Pegg",
+    "Tamsin Greig"
+  ],
+  "fotografia": [
+    "Edgar Wright"
+  ],
+  "guion": [
+    "Edgar Wright",
+    "Simon Pegg"
+  ],
+  "escenario": [
+    "Londres"
+  ]
 }

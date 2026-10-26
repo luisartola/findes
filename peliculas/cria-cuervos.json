@@ -18,5 +18,26 @@
   "tmdb_id": 51857,
   "titulo_es": "Cría cuervos",
   "titulo_original": "Cría cuervos",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Ana Torrent",
+    "Florinda Chico Martín-Mora",
+    "Geraldine Chaplin",
+    "Germán Cobos",
+    "Héctor Alterio",
+    "Mirta Miller",
+    "Mónica Randall"
+  ],
+  "musica": [
+    "Federico Mompou"
+  ],
+  "fotografia": [
+    "Teo Escamilla"
+  ],
+  "guion": [
+    "Carlos Saura"
+  ]
 }

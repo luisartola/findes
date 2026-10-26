@@ -18,5 +18,8 @@
   "tmdb_id": 723072,
   "titulo_es": "Host",
   "titulo_original": "Host",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Reino Unido"
+  ]
 }

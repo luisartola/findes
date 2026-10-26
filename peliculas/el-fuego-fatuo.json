@@ -18,5 +18,47 @@
   "tmdb_id": 2593,
   "titulo_es": "El fuego fatuo",
   "titulo_original": "Le Feu follet",
-  "tmdb_rating": 7.6
+  "tmdb_rating": 7.6,
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Alain Mottet",
+    "Alexandra Stewart",
+    "Bernard Nöel",
+    "Bernard Tiphaine",
+    "Claude Deschamps",
+    "Darling Légitimus",
+    "Henri Serre",
+    "Hervé Sand",
+    "Hubert Deschamps",
+    "Jacques Sereys",
+    "Jean-Paul Moulinot",
+    "Jeanne Moreau",
+    "Maurice Ronet",
+    "Micha Bayard",
+    "Mona Dol",
+    "Pierre Moncorbier",
+    "René Dupuy",
+    "Romain Bouteille",
+    "Tony Taffin",
+    "Ursula Kübler",
+    "Yvonne Clech"
+  ],
+  "musica": [
+    "Erik Satie"
+  ],
+  "fotografia": [
+    "Ghislain Cloquet"
+  ],
+  "guion": [
+    "Louis Malle"
+  ],
+  "temas": [
+    "alcoholismo"
+  ],
+  "escenario": [
+    "París"
+  ]
 }

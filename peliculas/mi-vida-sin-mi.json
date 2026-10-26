@@ -18,5 +18,46 @@
   "tmdb_id": null,
   "titulo_es": "Mi vida sin mí",
   "titulo_original": "My Life Without Me",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Canadá",
+    "España"
+  ],
+  "reparto": [
+    "Alfred Molina",
+    "Amanda Plummer",
+    "Debbie Harry",
+    "Esther García Rodríguez",
+    "Gillian Barber",
+    "Jessica Amlee",
+    "Julian Richings",
+    "Lauren Diewold",
+    "Leonor Watling",
+    "Maria de Medeiros",
+    "Mark Ruffalo",
+    "Sarah Polley",
+    "Scott Speedman",
+    "Sonja Bennett",
+    "Tyron Leitso"
+  ],
+  "musica": [
+    "Alfonso Vilallonga"
+  ],
+  "fotografia": [
+    "Jean-Claude Larrieu"
+  ],
+  "guion": [
+    "Isabel Coixet"
+  ],
+  "temas": [
+    "Tempus fugit",
+    "cáncer",
+    "cáncer de ovario",
+    "morir",
+    "mortality salience",
+    "paciente terminal"
+  ],
+  "escenario": [
+    "Vancouver"
+  ]
 }

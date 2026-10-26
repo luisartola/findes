@@ -18,5 +18,19 @@
   "tmdb_id": 1234397,
   "titulo_es": "Grand Theft Hamlet",
   "titulo_original": "Grand Theft Hamlet",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Mark Oosterveen",
+    "Sam Crane"
+  ],
+  "fotografia": [
+    "Pinny Grylls"
+  ],
+  "guion": [
+    "Pinny Grylls",
+    "Sam Crane"
+  ]
 }

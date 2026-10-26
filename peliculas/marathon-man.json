@@ -18,5 +18,37 @@
   "tmdb_id": 10518,
   "titulo_es": "Marathon Man",
   "titulo_original": "Marathon Man",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alma Beltran",
+    "Ben Dova",
+    "Fritz Weaver",
+    "Jacques Marin",
+    "Laurence Olivier",
+    "Lotte Palfi-Andor",
+    "Marc Lawrence",
+    "Marthe Keller",
+    "Raymond Serra",
+    "Richard Bright",
+    "Roy Scheider",
+    "Treat Williams",
+    "William Devane"
+  ],
+  "musica": [
+    "Michael Small"
+  ],
+  "fotografia": [
+    "Conrad Hall"
+  ],
+  "guion": [
+    "Robert Towne",
+    "William Goldman"
+  ],
+  "escenario": [
+    "Nueva York",
+    "París"
+  ]
 }

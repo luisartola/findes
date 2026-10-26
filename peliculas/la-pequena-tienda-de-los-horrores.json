@@ -18,5 +18,30 @@
   "tmdb_id": 24452,
   "titulo_es": "La pequeña tienda de los horrores",
   "titulo_original": "The Little Shop of Horrors",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Charles B. Griffith",
+    "Dick Miller",
+    "Frank Mills",
+    "Jack Nicholson",
+    "Jackie Joseph",
+    "Jonathan Haze",
+    "Karyn Kupcinet",
+    "Mel Welles"
+  ],
+  "musica": [
+    "Fred Katz"
+  ],
+  "fotografia": [
+    "Archie R. Dalzell"
+  ],
+  "guion": [
+    "Charles B. Griffith"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

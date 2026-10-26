@@ -17,5 +17,34 @@
   ],
   "findes": [
     27
+  ],
+  "paises": [
+    "Alemania",
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Dan Stevens",
+    "Greta Fernández",
+    "Hunter Schafer",
+    "Jan Bluthardt",
+    "Jessica Henwick",
+    "Kalin Morrow",
+    "Konrad Singer",
+    "Marton Csokas",
+    "Mila Lieu",
+    "Proschat Madani",
+    "Àstrid Bergès-Frisbey"
+  ],
+  "musica": [
+    "Simon Waskow"
+  ],
+  "fotografia": [
+    "Paul Faltz"
+  ],
+  "guion": [
+    "Tilman Singer"
+  ],
+  "escenario": [
+    "Alemania"
   ]
 }

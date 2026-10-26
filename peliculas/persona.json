@@ -18,5 +18,26 @@
   "tmdb_id": 797,
   "titulo_es": "Persona",
   "titulo_original": "Persona",
-  "tmdb_rating": 8.1
+  "tmdb_rating": 8.1,
+  "paises": [
+    "Suecia"
+  ],
+  "reparto": [
+    "Bibi Andersson",
+    "Gunnar Björnstrand",
+    "Liv Ullmann",
+    "Margaretha Krook"
+  ],
+  "musica": [
+    "Lars Johan Werle"
+  ],
+  "fotografia": [
+    "Sven Nykvist"
+  ],
+  "guion": [
+    "Ingmar Bergman"
+  ],
+  "escenario": [
+    "Suecia"
+  ]
 }

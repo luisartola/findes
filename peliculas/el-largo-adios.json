@@ -17,5 +17,42 @@
   ],
   "findes": [
     16
+  ],
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Arnold Schwarzenegger",
+    "Carl Gottlieb",
+    "David Arkin",
+    "David Carradine",
+    "Elliott Gould",
+    "Enrique Lucero",
+    "George Wyner",
+    "Henry Gibson",
+    "Jack Riley",
+    "Jim Bouton",
+    "Ken Sansom",
+    "Mark Rydell",
+    "Nina van Pallandt",
+    "Pancho Córdova",
+    "Robert Altman",
+    "Rutanya Alda",
+    "Sally Field",
+    "Sterling Hayden",
+    "Warren Berlinger"
+  ],
+  "musica": [
+    "John Williams"
+  ],
+  "fotografia": [
+    "Vilmos Zsigmond"
+  ],
+  "guion": [
+    "Leigh Brackett",
+    "Raymond Chandler"
+  ],
+  "escenario": [
+    "Los Ángeles"
   ]
 }

@@ -18,5 +18,17 @@
   "tmdb_id": 64450,
   "titulo_es": "Kinatay",
   "titulo_original": "Kinatay",
-  "tmdb_rating": 6.2
+  "tmdb_rating": 6.2,
+  "paises": [
+    "Filipinas",
+    "Francia"
+  ],
+  "reparto": [
+    "Coco Martín",
+    "Jhong Hilario",
+    "María Isabel López"
+  ],
+  "guion": [
+    "Bing Lao"
+  ]
 }

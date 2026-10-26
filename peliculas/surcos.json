@@ -18,5 +18,32 @@
   "tmdb_id": 103937,
   "titulo_es": "Surcos",
   "titulo_original": "Surcos",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Francisco Bernal",
+    "José Guardiola",
+    "José Prada",
+    "José Villasante",
+    "Luis Peña Illescas",
+    "Marisa de Leza",
+    "Marujita Díaz",
+    "María Asquerino",
+    "María Francés",
+    "Montserrat Carulla"
+  ],
+  "musica": [
+    "Jesús García Leoz"
+  ],
+  "fotografia": [
+    "Sebastián Perera"
+  ],
+  "guion": [
+    "Gonzalo Torrente Ballester"
+  ],
+  "escenario": [
+    "Madrid"
+  ]
 }

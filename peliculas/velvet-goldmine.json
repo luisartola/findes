@@ -18,5 +18,44 @@
   "tmdb_id": 1808,
   "titulo_es": "Velvet Goldmine",
   "titulo_original": "Velvet Goldmine",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Estados Unidos",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Brian Molko",
+    "Christian Bale",
+    "Ewan McGregor",
+    "Janet McTeer",
+    "Jonathan Rhys-Meyers",
+    "Joseph Beattie",
+    "Michael Feast",
+    "Stefan Olsdal",
+    "Steve Hewitt",
+    "Toni Collette",
+    "Wash Westmoreland"
+  ],
+  "musica": [
+    "Carter Burwell"
+  ],
+  "fotografia": [
+    "Maryse Alberti"
+  ],
+  "guion": [
+    "James Lyons",
+    "Todd Haynes"
+  ],
+  "temas": [
+    "cultura de Londres",
+    "cultura popular",
+    "glam rock",
+    "género",
+    "personalidad asumida",
+    "reminiscencia",
+    "self-expression values"
+  ],
+  "escenario": [
+    "Londres"
+  ]
 }

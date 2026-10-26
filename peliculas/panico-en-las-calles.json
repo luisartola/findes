@@ -18,5 +18,36 @@
   "tmdb_id": 32078,
   "titulo_es": "Pánico en las calles",
   "titulo_original": "Panic in the Streets",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alexis Minotís",
+    "Barbara Bel Geddes",
+    "Daniela Rocca",
+    "Elia Kazan",
+    "Emile Meyer",
+    "Jack Palance",
+    "Paul Douglas",
+    "Richard Widmark",
+    "Tommy Rettig",
+    "Zero Mostel"
+  ],
+  "musica": [
+    "Billie Holiday"
+  ],
+  "fotografia": [
+    "Joseph MacDonald"
+  ],
+  "guion": [
+    "Daniel Fuchs",
+    "Richard Murphy"
+  ],
+  "temas": [
+    "epidemia"
+  ],
+  "escenario": [
+    "Nueva Orleans"
+  ]
 }

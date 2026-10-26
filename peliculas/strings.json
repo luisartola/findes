@@ -18,5 +18,38 @@
   "tmdb_id": 21290,
   "titulo_es": "Strings (Cuerdas)",
   "titulo_original": "Strings",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Dinamarca",
+    "Noruega",
+    "Reino Unido",
+    "Suecia"
+  ],
+  "reparto": [
+    "Catherine McCormack",
+    "Claire Skinner",
+    "David Harewood",
+    "Derek Jacobi",
+    "Henning Moritzen",
+    "Ian Hart",
+    "James McAvoy",
+    "Jens Arentzen",
+    "Jonas Karlsson",
+    "Julian Glover",
+    "Marina Bouras",
+    "Melinda Kinnaman",
+    "Oliver Golding",
+    "Rolf Skoglund",
+    "Samantha Bond"
+  ],
+  "musica": [
+    "Jørgen Lauritsen"
+  ],
+  "fotografia": [
+    "Jan Weincke"
+  ],
+  "guion": [
+    "Anders Rønnow Klarlund",
+    "Naja Marie Aidt"
+  ]
 }

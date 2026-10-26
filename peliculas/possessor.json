@@ -18,5 +18,23 @@
   "tmdb_id": 435615,
   "titulo_es": "Possessor",
   "titulo_original": "Possessor",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "Canadá",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Andrea Riseborough",
+    "Christopher Abbott",
+    "Jennifer Jason Leigh",
+    "Rossif Sutherland",
+    "Sean Bean",
+    "Tuppence Middleton"
+  ],
+  "temas": [
+    "asesinato a sueldo",
+    "control",
+    "identidad",
+    "manipulación mental"
+  ]
 }

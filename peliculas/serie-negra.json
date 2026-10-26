@@ -18,5 +18,28 @@
   "tmdb_id": null,
   "titulo_es": "Serie negra",
   "titulo_original": "Série noire",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Alain Chabat",
+    "Andreas Katsulas",
+    "Bernard Blier",
+    "Jeanne Herviale",
+    "Marie Trintignant",
+    "Myriam Boyer",
+    "Patrick Dewaere"
+  ],
+  "musica": [
+    "Gérard Lenorman"
+  ],
+  "fotografia": [
+    "Pierre-William Glenn"
+  ],
+  "guion": [
+    "Alain Corneau",
+    "Georges Perec",
+    "Jim Thompson"
+  ]
 }

@@ -18,5 +18,34 @@
   "tmdb_id": 14554,
   "titulo_es": "Conspiración de silencio",
   "titulo_original": "Bad Day at Black Rock",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Anne Francis",
+    "Dean Jagger",
+    "Ernest Borgnine",
+    "Harry Harvey",
+    "John Ericson",
+    "Lee Marvin",
+    "Robert Ryan",
+    "Russell Collins",
+    "Spencer Tracy",
+    "Walter Brennan",
+    "Walter Sande"
+  ],
+  "musica": [
+    "André Previn"
+  ],
+  "fotografia": [
+    "William C. Mellor"
+  ],
+  "guion": [
+    "Don McGuire",
+    "Millard Kaufman"
+  ],
+  "escenario": [
+    "Estados Unidos"
+  ]
 }

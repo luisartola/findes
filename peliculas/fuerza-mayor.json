@@ -18,5 +18,36 @@
   "tmdb_id": 265189,
   "titulo_es": "Fuerza mayor",
   "titulo_original": "Turist",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Dinamarca",
+    "Francia",
+    "Noruega",
+    "Suecia"
+  ],
+  "reparto": [
+    "Brady Corbet",
+    "Clara Wettergren",
+    "Fanni Metelius",
+    "Johannes Moustos",
+    "Jorge Lattof",
+    "Karin Myrenberg Faber",
+    "Kristofer Hivju",
+    "Lisa Loven Kongsli",
+    "Malin Dahl",
+    "Vincent Wettergren"
+  ],
+  "musica": [
+    "Ola Fløttum"
+  ],
+  "fotografia": [
+    "Fred Arne Wergeland",
+    "Fredrik Wenzel"
+  ],
+  "guion": [
+    "Ruben Östlund"
+  ],
+  "escenario": [
+    "Francia"
+  ]
 }

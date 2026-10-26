@@ -18,5 +18,15 @@
   "tmdb_id": 42296,
   "titulo_es": "Catfish",
   "titulo_original": "Catfish",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Henry Joost",
+    "Nev Schulman"
+  ],
+  "musica": [
+    "Mark Mothersbaugh"
+  ]
 }

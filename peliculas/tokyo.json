@@ -18,5 +18,46 @@
   "tmdb_id": 8938,
   "titulo_es": "Tokyo",
   "titulo_original": "TOKYO!",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Alemania",
+    "Corea del Sur",
+    "Francia",
+    "Japón"
+  ],
+  "reparto": [
+    "Andrée Damant",
+    "Ayako Fujitani",
+    "Ayumi Ito",
+    "Denis Lavant",
+    "Jean-François Balmer",
+    "Julie Dreyfus",
+    "Kenjirō Ishimaru",
+    "Nao Ōmori",
+    "Naoto Takenaka",
+    "Ryo Kase",
+    "Satoshi Tsumabuki",
+    "Teruyuki Kagawa",
+    "Yū Aoi"
+  ],
+  "musica": [
+    "Lee Byung-woo",
+    "Étienne Charry"
+  ],
+  "fotografia": [
+    "Caroline Champetier",
+    "Jun Fukumoto",
+    "Masami Inomoto"
+  ],
+  "guion": [
+    "Bong Joon-ho",
+    "Leos Carax",
+    "Michel Gondry"
+  ],
+  "temas": [
+    "pena de muerte"
+  ],
+  "escenario": [
+    "Tokio"
+  ]
 }

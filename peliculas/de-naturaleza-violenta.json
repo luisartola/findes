@@ -18,5 +18,24 @@
   "tmdb_id": 1214509,
   "titulo_es": "De naturaleza violenta",
   "titulo_original": "In a Violent Nature",
-  "tmdb_rating": 5.6
+  "tmdb_rating": 5.6,
+  "paises": [
+    "Canadá"
+  ],
+  "reparto": [
+    "Alexander Oliver",
+    "Andrea Pavlovic",
+    "Cameron Love",
+    "Charlotte Creaghan",
+    "Lauren-Marie Taylor",
+    "Lea Rose Sebastianis",
+    "Liam Leone",
+    "Reece Presley",
+    "Ry Barrett",
+    "Sam Roulston",
+    "Timothy Paul McCarthy"
+  ],
+  "guion": [
+    "Chris Nash"
+  ]
 }

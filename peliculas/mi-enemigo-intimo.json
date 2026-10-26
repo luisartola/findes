@@ -18,5 +18,32 @@
   "tmdb_id": 8672,
   "titulo_es": "Mi enemigo íntimo",
   "titulo_original": "Mein liebster Feind",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Alemania"
+  ],
+  "reparto": [
+    "Claudia Cardinale",
+    "Eva Mattes",
+    "Isabelle Adjani",
+    "Jason Robards",
+    "Klaus Kinski",
+    "Maximilian Schell",
+    "Mick Jagger",
+    "Thomas Mauch",
+    "Werner Herzog"
+  ],
+  "musica": [
+    "Popol Vuh"
+  ],
+  "fotografia": [
+    "Peter Zeitlinger"
+  ],
+  "guion": [
+    "Werner Herzog"
+  ],
+  "temas": [
+    "Klaus Kinski",
+    "actor"
+  ]
 }

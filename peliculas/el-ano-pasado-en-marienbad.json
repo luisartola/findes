@@ -18,5 +18,30 @@
   "tmdb_id": 4024,
   "titulo_es": "El año pasado en Marienbad",
   "titulo_original": "L'Année dernière à Marienbad",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Alemania",
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Alan Edwards",
+    "Davide Montemurri",
+    "Delphine Seyrig",
+    "Françoise Bertin",
+    "Françoise Spira",
+    "Gilles Quéant",
+    "Giorgio Albertazzi",
+    "Gérard Lorin",
+    "Jean Lanier",
+    "Luce Garcia-Ville",
+    "Pierre Barbaud",
+    "Sacha Pitoëff"
+  ],
+  "fotografia": [
+    "Sacha Vierny"
+  ],
+  "guion": [
+    "Alain Robbe-Grillet"
+  ]
 }

@@ -17,5 +17,61 @@
   ],
   "findes": [
     2
+  ],
+  "paises": [
+    "Alemania",
+    "Bulgaria",
+    "Francia",
+    "Hungría",
+    "República Checa",
+    "República Federal de Yugoslavia",
+    "Yugoslavia"
+  ],
+  "reparto": [
+    "Albena Stavreva",
+    "Bora Todorović",
+    "Branislav Lečić",
+    "Branko Petkovic",
+    "Danilo Stojković",
+    "Davor Dujmović",
+    "Dragan Nikolić",
+    "Emir Kusturica",
+    "Ernst Stötzner",
+    "Erol Kadić",
+    "Felipe de Edimburgo",
+    "Hark Bohm",
+    "Helmut Schmidt",
+    "Josif Tatić",
+    "Kurt Waldheim",
+    "Lazar Ristovski",
+    "Leonid Brézhnev",
+    "Miki Manojlović",
+    "Milena Pavlović",
+    "Mirjana Karanović",
+    "Nele Karajlić",
+    "Nicolae Ceaușescu",
+    "Pierre Spengler",
+    "Predrag Milinković",
+    "Rick Dano",
+    "Slavko Štimac",
+    "Srđan Todorović",
+    "Stojan Sotirov",
+    "Zjeljko Mitrović"
+  ],
+  "musica": [
+    "Goran Bregović"
+  ],
+  "fotografia": [
+    "Vilko Filac"
+  ],
+  "guion": [
+    "Dušan Kovačević",
+    "Emir Kusturica"
+  ],
+  "temas": [
+    "Segunda Guerra Mundial"
+  ],
+  "escenario": [
+    "Serbia"
   ]
 }

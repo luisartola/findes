@@ -18,5 +18,33 @@
   "tmdb_id": 10086,
   "titulo_es": "Ocurrió cerca de su casa",
   "titulo_original": "C'est arrivé près de chez vous",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Bélgica"
+  ],
+  "reparto": [
+    "André Bonzel",
+    "Benoît Mariage",
+    "Benoît Poelvoorde",
+    "Philippe Blasband",
+    "Rémy Belvaux",
+    "Vincent Tavier",
+    "Édith Le Merdy"
+  ],
+  "fotografia": [
+    "André Bonzel"
+  ],
+  "guion": [
+    "André Bonzel",
+    "Benoît Poelvoorde",
+    "Rémy Belvaux",
+    "Vincent Tavier"
+  ],
+  "temas": [
+    "asesino en serie",
+    "sicario"
+  ],
+  "escenario": [
+    "Bélgica"
+  ]
 }

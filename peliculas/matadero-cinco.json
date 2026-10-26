@@ -18,5 +18,66 @@
   "tmdb_id": 24559,
   "titulo_es": "Matadero Cinco",
   "titulo_original": "Slaughterhouse-Five",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alexander Allerson",
+    "Barbara Frey",
+    "Bill Lee",
+    "Bob Harks",
+    "Bryan Montgomery",
+    "Charles Stapley",
+    "Ekkehardt Belle",
+    "Eugene Roche",
+    "Friedrich von Ledebur",
+    "Gilmer McCormick",
+    "Harald Dietl",
+    "Henry Bumstead",
+    "Holly Near",
+    "Joan Swift",
+    "John Dehner",
+    "John Goddard",
+    "John Wood",
+    "Karl-Otto Alberty",
+    "Kevin Conway",
+    "Ladislav Jakim",
+    "Lucille Benson",
+    "Michael Sacks",
+    "Oto Ševčík",
+    "Paul Hansard",
+    "Perry King",
+    "Richard Schaal",
+    "Richard Stahl",
+    "Roberts Blossom",
+    "Ron Leibman",
+    "Sharon Gans",
+    "Sorrell Booke",
+    "Valerie Perrine",
+    "Walter Feuchtenberg",
+    "Warren Frost",
+    "Werner Umberg"
+  ],
+  "musica": [
+    "Glenn Gould"
+  ],
+  "fotografia": [
+    "Miroslav Ondříček"
+  ],
+  "guion": [
+    "Kurt Vonnegut",
+    "Stephen Geller"
+  ],
+  "temas": [
+    "Bombardeo de Dresde",
+    "Segunda Guerra Mundial",
+    "prisionero de guerra",
+    "viaje a través del tiempo"
+  ],
+  "escenario": [
+    "Dresde",
+    "Nueva York",
+    "Tralfamadore"
+  ]
 }

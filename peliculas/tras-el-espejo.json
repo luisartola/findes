@@ -18,5 +18,36 @@
   "tmdb_id": null,
   "titulo_es": "Como en un espejo",
   "titulo_original": "Såsom i en spegel",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Suecia"
+  ],
+  "reparto": [
+    "Gunnar Björnstrand",
+    "Harriet Andersson",
+    "Lars Passgård",
+    "Max von Sydow"
+  ],
+  "musica": [
+    "Johann Sebastian Bach"
+  ],
+  "fotografia": [
+    "Sven Nykvist"
+  ],
+  "guion": [
+    "Ingmar Bergman"
+  ],
+  "temas": [
+    "Dios en el cristianismo",
+    "abandono emocional",
+    "creación artística",
+    "curación",
+    "delirio",
+    "duda",
+    "fe",
+    "vacío"
+  ],
+  "escenario": [
+    "Suecia"
+  ]
 }

@@ -18,5 +18,29 @@
   "tmdb_id": 438674,
   "titulo_es": "Al otro lado de la ley",
   "titulo_original": "Dragged Across Concrete",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Canadá",
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Don Johnson",
+    "Fred Melamed",
+    "Jennifer Carpenter",
+    "Laurie Holden",
+    "Mel Gibson",
+    "Michael Jai White",
+    "Myles Truitt",
+    "Noel Gugliemi",
+    "Richard Newman",
+    "Tattiawna Jones",
+    "Thomas Kretschmann",
+    "Tory Kittles",
+    "Udo Kier",
+    "Vanessa Bell Calloway",
+    "Vince Vaughn"
+  ],
+  "guion": [
+    "S. Craig Zahler"
+  ]
 }

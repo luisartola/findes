@@ -18,5 +18,20 @@
   "tmdb_id": 1023922,
   "titulo_es": "MaXXXine",
   "titulo_original": "MaXXXine",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Mia Goth"
+  ],
+  "musica": [
+    "Tyler Bates"
+  ],
+  "fotografia": [
+    "Eliot Rockett"
+  ],
+  "guion": [
+    "Ti West"
+  ]
 }

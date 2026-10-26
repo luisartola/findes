@@ -18,5 +18,40 @@
   "tmdb_id": 73861,
   "titulo_es": "A Serbian Film",
   "titulo_original": "Srpski film",
-  "tmdb_rating": 5.4
+  "tmdb_rating": 5.4,
+  "paises": [
+    "Serbia"
+  ],
+  "reparto": [
+    "Ana Sakić",
+    "Carni Đerić",
+    "Jelena Gavrilović",
+    "Katarina Zjutić",
+    "Lena Bogdanović",
+    "Lidija Pletl",
+    "Nenad Heraković",
+    "Sergej Trifunović",
+    "Slobodan Beštić",
+    "Srđan Todorović"
+  ],
+  "musica": [
+    "Wikluh Sky"
+  ],
+  "guion": [
+    "Aleksandar Radivojević",
+    "Srđan Spasojević"
+  ],
+  "temas": [
+    "crueldad",
+    "incesto",
+    "necrofilia",
+    "pedofilia",
+    "pornografía",
+    "tortura",
+    "venganza",
+    "violación"
+  ],
+  "escenario": [
+    "Serbia"
+  ]
 }

@@ -18,5 +18,39 @@
   "tmdb_id": 11348,
   "titulo_es": "Frágiles",
   "titulo_original": "Fragile",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "España",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Calista Flockhart",
+    "Colin McFarlane",
+    "Elena Anaya",
+    "Fergus Riordan",
+    "Freda Dowie",
+    "Gemma Jones",
+    "Geoffrey Beevers",
+    "Ivana Baquero",
+    "Matyelok Gibbs",
+    "Michael Pennington",
+    "Patrick Mölleken",
+    "Richard Roxburgh"
+  ],
+  "musica": [
+    "Roque Baños"
+  ],
+  "fotografia": [
+    "Xavi Giménez"
+  ],
+  "guion": [
+    "Jaume Balagueró",
+    "Jordi Galceran"
+  ],
+  "temas": [
+    "casa embrujada"
+  ],
+  "escenario": [
+    "Inglaterra"
+  ]
 }

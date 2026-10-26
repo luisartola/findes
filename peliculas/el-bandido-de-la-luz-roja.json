@@ -18,5 +18,11 @@
   "tmdb_id": 186738,
   "titulo_es": "El bandido de la luz roja",
   "titulo_original": "O Bandido da Luz Vermelha",
-  "tmdb_rating": 7.6
+  "tmdb_rating": 7.6,
+  "paises": [
+    "Brasil"
+  ],
+  "escenario": [
+    "São Paulo"
+  ]
 }

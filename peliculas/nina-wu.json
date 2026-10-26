@@ -18,5 +18,20 @@
   "tmdb_id": 595923,
   "titulo_es": "Nina Wu",
   "titulo_original": "灼人秘密",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "República de China"
+  ],
+  "reparto": [
+    "Kimi Hsia",
+    "Patty Wu",
+    "Vivian Sung"
+  ],
+  "musica": [
+    "Lim Giong"
+  ],
+  "guion": [
+    "Midi Z",
+    "Patty Wu"
+  ]
 }

@@ -18,5 +18,34 @@
   "tmdb_id": 16227,
   "titulo_es": "La senda tenebrosa",
   "titulo_original": "Dark Passage",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Agnes Moorehead",
+    "Bruce Bennett",
+    "Douglas Kennedy",
+    "Houseley Stevenson",
+    "Humphrey Bogart",
+    "Ian MacDonald",
+    "John Arledge",
+    "Lauren Bacall",
+    "Rory Mallinson",
+    "Tom D'Andrea",
+    "Vince Edwards"
+  ],
+  "musica": [
+    "Franz Waxman"
+  ],
+  "fotografia": [
+    "Sidney Hickox"
+  ],
+  "guion": [
+    "David Goodis",
+    "Delmer Daves"
+  ],
+  "escenario": [
+    "San Francisco"
+  ]
 }

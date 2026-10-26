@@ -18,5 +18,45 @@
   "tmdb_id": 10102,
   "titulo_es": "La gran comilona",
   "titulo_original": "La Grande Bouffe",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Andréa Ferréol",
+    "Bernard Menez",
+    "Florence Giorgetti",
+    "Gérard Boucaron",
+    "Jean Odoutan",
+    "Louis Navarre",
+    "Marcello Mastroianni",
+    "Maurice Dorléac",
+    "Michel Piccoli",
+    "Monique Chaumette",
+    "Philippe Noiret",
+    "Ugo Tognazzi"
+  ],
+  "musica": [
+    "Philippe Sarde"
+  ],
+  "fotografia": [
+    "Mario Vulpiani"
+  ],
+  "guion": [
+    "Francis Blanche",
+    "Marco Ferreri",
+    "Rafael Azcona"
+  ],
+  "temas": [
+    "burguesía",
+    "condición humana",
+    "excess",
+    "hedonismo",
+    "ideación suicida",
+    "nihilismo"
+  ],
+  "escenario": [
+    "París"
+  ]
 }

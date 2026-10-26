@@ -18,5 +18,42 @@
   "tmdb_id": 11654,
   "titulo_es": "El ansia",
   "titulo_original": "The Hunger",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Estados Unidos",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Ann Magnuson",
+    "Bauhaus",
+    "Bessie Love",
+    "Beth Ehlers",
+    "Catherine Deneuve",
+    "Cliff DeYoung",
+    "Dan Hedaya",
+    "David Bowie",
+    "Georges Claisse",
+    "James Aubrey",
+    "Jane Leeves",
+    "John Pankow",
+    "Lise Hilboldt",
+    "Philip Sayer",
+    "Rufus Collins",
+    "Shane Rimmer",
+    "Sophie Ward",
+    "Susan Sarandon",
+    "Suzanne Bertish",
+    "Sylvie Orcier",
+    "Willem Dafoe"
+  ],
+  "fotografia": [
+    "Stephen Goldblatt"
+  ],
+  "guion": [
+    "Ivan Davis",
+    "Michael Thomas"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

@@ -18,5 +18,45 @@
   "tmdb_id": 1675,
   "titulo_es": "La noche americana",
   "titulo_original": "La Nuit américaine",
-  "tmdb_rating": 7.7
+  "tmdb_rating": 7.7,
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Alexandra Stewart",
+    "Bernard Menez",
+    "Claude Miller",
+    "Dani",
+    "David Markham",
+    "François Truffaut",
+    "Georges Delerue",
+    "Graham Greene",
+    "Jacqueline Bisset",
+    "Jean Champion",
+    "Jean-François Stévenin",
+    "Jean-Pierre Aumont",
+    "Jean-Pierre Léaud",
+    "Martine Barraqué",
+    "Maurice Séveno",
+    "Nathalie Baye",
+    "Niké Arrighi",
+    "Pierre Zucca",
+    "Valentina Cortese",
+    "Xavier Saint-Macary"
+  ],
+  "musica": [
+    "Georges Delerue"
+  ],
+  "fotografia": [
+    "Pierre-William Glenn"
+  ],
+  "guion": [
+    "François Truffaut",
+    "Jean-Louis Richard",
+    "Suzanne Schiffman"
+  ],
+  "escenario": [
+    "Niza"
+  ]
 }

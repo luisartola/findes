@@ -18,5 +18,54 @@
   "tmdb_id": 146015,
   "titulo_es": "El Doble",
   "titulo_original": "The Double",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Bruce Byron",
+    "Cathy Moriarty",
+    "Chris Morris",
+    "Chris O'Dowd",
+    "Craig Roberts",
+    "Danny",
+    "Gabrielle Downey",
+    "Gemma Chan",
+    "J Mascis",
+    "James Fox",
+    "Jesse Eisenberg",
+    "Jon Korkes",
+    "Kierston Wareing",
+    "Kim Noble",
+    "Kobna Holdbrook-Smith",
+    "Mia Wasikowska",
+    "Natalia Warner",
+    "Nathalie Cox",
+    "Noah Taylor",
+    "Paddy Considine",
+    "Phyllis Somerville",
+    "Rade Šerbedžija",
+    "Sally Hawkins",
+    "Susan Blommaert",
+    "Tim Key",
+    "Tony Rohr",
+    "Wallace Shawn",
+    "Yasmin Paige"
+  ],
+  "musica": [
+    "Andrew Hewitt"
+  ],
+  "fotografia": [
+    "Erik Wilson"
+  ],
+  "guion": [
+    "Avi Korine",
+    "Richard Ayoade"
+  ],
+  "temas": [
+    "clonación"
+  ],
+  "escenario": [
+    "Imperio ruso"
+  ]
 }

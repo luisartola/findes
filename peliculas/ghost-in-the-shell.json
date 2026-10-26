@@ -18,5 +18,24 @@
   "tmdb_id": 9323,
   "titulo_es": "Ghost in the Shell",
   "titulo_original": "GHOST IN THE SHELL",
-  "tmdb_rating": 7.9
+  "tmdb_rating": 7.9,
+  "paises": [
+    "Japón",
+    "Reino Unido"
+  ],
+  "musica": [
+    "Kenji Kawai"
+  ],
+  "fotografia": [
+    "Hisao Shirai"
+  ],
+  "guion": [
+    "Kazunori Itō",
+    "Masamune Shirow"
+  ],
+  "temas": [
+    "existencialismo",
+    "inteligencia artificial",
+    "telepresencia"
+  ]
 }

@@ -18,5 +18,15 @@
   "tmdb_id": 223702,
   "titulo_es": "La fiesta de las salchichas",
   "titulo_original": "Sausage Party",
-  "tmdb_rating": 5.8
+  "tmdb_rating": 5.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "musica": [
+    "Alan Menken",
+    "Christopher Lennertz"
+  ],
+  "guion": [
+    "Seth Rogen"
+  ]
 }

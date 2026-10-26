@@ -18,5 +18,50 @@
   "tmdb_id": 924,
   "titulo_es": "Amanecer de los muertos",
   "titulo_original": "Dawn of the Dead",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Boyd Banks",
+    "Bruce Bohne",
+    "Derek Keurvorst",
+    "Hannah Lochner",
+    "Inna Korobkina",
+    "Jake Weber",
+    "Jayne Eastwood",
+    "Justin Louis",
+    "Ken Foree",
+    "Kevin Zegers",
+    "Kim Poirier",
+    "Kim Roberts",
+    "Laura de Carteret",
+    "Lindy Booth",
+    "Matt Frewer",
+    "Mekhi Phifer",
+    "Michael Barry",
+    "Michael Kelly",
+    "Natalie Brown",
+    "R. D. Reid",
+    "Sanjay Talwar",
+    "Sarah Polley",
+    "Scott Reiniger",
+    "Tom Savini",
+    "Ty Burrell",
+    "Ving Rhames",
+    "Zack Snyder"
+  ],
+  "musica": [
+    "Tyler Bates"
+  ],
+  "fotografia": [
+    "Matthew F. Leonetti"
+  ],
+  "guion": [
+    "George A. Romero",
+    "James Gunn"
+  ],
+  "escenario": [
+    "Wisconsin"
+  ]
 }

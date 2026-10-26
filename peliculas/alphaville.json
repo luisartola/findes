@@ -18,5 +18,30 @@
   "tmdb_id": 8072,
   "titulo_es": "Alphaville (Lemmy contra Alphaville)",
   "titulo_original": "Alphaville, une étrange aventure de Lemmy Caution",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Akim Tamiroff",
+    "Anna Karina",
+    "Christa Lang",
+    "Eddie Constantine",
+    "Howard Vernon",
+    "Jean-Louis Comolli",
+    "Jean-Pierre Léaud",
+    "László Szabó",
+    "Michel Delahaye",
+    "Valérie Boisgel"
+  ],
+  "musica": [
+    "Paul Misraki"
+  ],
+  "fotografia": [
+    "Raoul Coutard"
+  ],
+  "guion": [
+    "Jean-Luc Godard"
+  ]
 }

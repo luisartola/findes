@@ -18,5 +18,38 @@
   "tmdb_id": 30308,
   "titulo_es": "El asesino poeta",
   "titulo_original": "Lured",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alan Mowbray",
+    "Alan Napier",
+    "Ann Codee",
+    "Boris Karloff",
+    "Cedric Hardwicke",
+    "Charles Coburn",
+    "Charles Pearce Coleman",
+    "Cyril Delevanti",
+    "George Sanders",
+    "George Zucco",
+    "Jimmy Aubrey",
+    "Joseph Calleia",
+    "Lucille Ball",
+    "Robert Coote",
+    "Wyndham Standing"
+  ],
+  "musica": [
+    "Michel Michelet"
+  ],
+  "fotografia": [
+    "William H. Daniels"
+  ],
+  "guion": [
+    "Leo Rosten",
+    "Robert Siodmak"
+  ],
+  "escenario": [
+    "Londres"
+  ]
 }

@@ -18,5 +18,12 @@
   "tmdb_id": 191720,
   "titulo_es": "Jodorowsky's Dune",
   "titulo_original": "Jodorowsky's Dune",
-  "tmdb_rating": 7.8
+  "tmdb_rating": 7.8,
+  "paises": [
+    "Estados Unidos",
+    "Francia"
+  ],
+  "temas": [
+    "Dune"
+  ]
 }

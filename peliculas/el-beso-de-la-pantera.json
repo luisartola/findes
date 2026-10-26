@@ -18,5 +18,42 @@
   "tmdb_id": 6217,
   "titulo_es": "El beso de la pantera",
   "titulo_original": "Cat People",
-  "tmdb_rating": 6.0
+  "tmdb_rating": 6.0,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Annette O'Toole",
+    "Berry Berenson",
+    "Ed Begley Jr.",
+    "Frankie Faison",
+    "John Heard",
+    "John Larroquette",
+    "Lynn Lowry",
+    "Malcolm McDowell",
+    "Meshach Taylor",
+    "Nastassja Kinski",
+    "Pui Fan Lee",
+    "Ray Wise",
+    "Ruby Dee",
+    "Scott Paulin",
+    "Stocker Fontelieu",
+    "Tessa Richarde"
+  ],
+  "musica": [
+    "Giorgio Moroder"
+  ],
+  "fotografia": [
+    "John Bailey"
+  ],
+  "guion": [
+    "DeWitt Bodeen",
+    "Paul Schrader"
+  ],
+  "temas": [
+    "incesto"
+  ],
+  "escenario": [
+    "Nueva Orleans"
+  ]
 }

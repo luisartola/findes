@@ -18,5 +18,27 @@
   "tmdb_id": 29845,
   "titulo_es": "Una mujer bajo la influencia",
   "titulo_original": "A Woman Under the Influence",
-  "tmdb_rating": 7.8
+  "tmdb_rating": 7.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Fred Draper",
+    "Gena Rowlands",
+    "Mario Gallo",
+    "Matthew Laborteaux",
+    "Peter Falk"
+  ],
+  "musica": [
+    "Bo Harwood"
+  ],
+  "fotografia": [
+    "Al Ruban"
+  ],
+  "guion": [
+    "John Cassavetes"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

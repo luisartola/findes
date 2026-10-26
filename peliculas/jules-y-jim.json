@@ -18,5 +18,32 @@
   "tmdb_id": 1628,
   "titulo_es": "Jules y Jim",
   "titulo_original": "Jules et Jim",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Henri Serre",
+    "Jean-Louis Richard",
+    "Jeanne Moreau",
+    "Marie Dubois",
+    "Michel Subor",
+    "Oskar Werner",
+    "Sabine Haudepin",
+    "Serge Rezvani"
+  ],
+  "musica": [
+    "Georges Delerue"
+  ],
+  "fotografia": [
+    "Raoul Coutard"
+  ],
+  "guion": [
+    "François Truffaut",
+    "Henri-Pierre Roché",
+    "Jean Gruault"
+  ],
+  "escenario": [
+    "París"
+  ]
 }

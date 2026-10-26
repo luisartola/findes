@@ -18,5 +18,40 @@
   "tmdb_id": 49018,
   "titulo_es": "Insidious",
   "titulo_original": "Insidious",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Canadá",
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Angus Sampson",
+    "Barbara Hershey",
+    "Emily Brobst",
+    "Heather Tocquigny",
+    "J. Larose",
+    "Joseph Bishara",
+    "Leigh Whannell",
+    "Lin Shaye",
+    "Patrick Wilson",
+    "Philip Friedman",
+    "Rose Byrne",
+    "Ruben Pla",
+    "Ty Simpkins"
+  ],
+  "musica": [
+    "Joseph Bishara"
+  ],
+  "fotografia": [
+    "John R. Leonetti"
+  ],
+  "guion": [
+    "Leigh Whannell"
+  ],
+  "temas": [
+    "casa embrujada",
+    "sobrenatural"
+  ],
+  "escenario": [
+    "California"
+  ]
 }

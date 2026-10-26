@@ -18,5 +18,28 @@
   "tmdb_id": 10288,
   "titulo_es": "Fido",
   "titulo_original": "Fido",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "Canadá"
+  ],
+  "reparto": [
+    "Alexia Fast",
+    "Billy Connolly",
+    "Carrie-Anne Moss",
+    "Dylan Baker",
+    "Henry Czerny",
+    "K'Sun Ray",
+    "Sonja Bennett",
+    "Tim Blake Nelson"
+  ],
+  "musica": [
+    "Don MacDonald"
+  ],
+  "fotografia": [
+    "Jan Kiesser"
+  ],
+  "guion": [
+    "Andrew Currie",
+    "Dennis Heaton"
+  ]
 }

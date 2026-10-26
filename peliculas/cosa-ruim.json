@@ -18,5 +18,28 @@
   "tmdb_id": 30447,
   "titulo_es": "El Maligno",
   "titulo_original": "Coisa Ruim",
-  "tmdb_rating": 5.9
+  "tmdb_rating": 5.9,
+  "paises": [
+    "Portugal"
+  ],
+  "reparto": [
+    "Adriano Luz",
+    "Filipe Duarte",
+    "Gonçalo Waddington",
+    "José Afonso Dias Pimentel",
+    "Manuela Couto",
+    "Paulo Branco"
+  ],
+  "fotografia": [
+    "Vítor Estêvão"
+  ],
+  "guion": [
+    "Rodrigo Guedes de Carvalho"
+  ],
+  "temas": [
+    "sobrenatural"
+  ],
+  "escenario": [
+    "Portugal"
+  ]
 }

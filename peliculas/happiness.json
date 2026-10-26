@@ -18,5 +18,43 @@
   "tmdb_id": 10683,
   "titulo_es": "Happiness",
   "titulo_original": "Happiness",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Anne Bobby",
+    "Arthur J. Nascarella",
+    "Ben Gazzara",
+    "Camryn Manheim",
+    "Cynthia Stevenson",
+    "Douglas McGrath",
+    "Dylan Baker",
+    "Elizabeth Ashley",
+    "Gerry Becker",
+    "Jane Adams",
+    "Jared Harris",
+    "Jon Lovitz",
+    "Lara Flynn Boyle",
+    "Louise Lasser",
+    "Marla Maples",
+    "Matt Malloy",
+    "Molly Shannon",
+    "Philip Seymour Hoffman"
+  ],
+  "musica": [
+    "Robbie Kondor"
+  ],
+  "fotografia": [
+    "Maryse Alberti"
+  ],
+  "guion": [
+    "Todd Solondz"
+  ],
+  "temas": [
+    "familia disfuncional"
+  ],
+  "escenario": [
+    "Nueva Jersey"
+  ]
 }

@@ -17,5 +17,69 @@
   ],
   "findes": [
     6
+  ],
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Abdalqadir as-Sufi",
+    "Annibale Ninchi",
+    "Annie Gorassini",
+    "Anouk Aimée",
+    "Antonio Acqua",
+    "Barbara Steele",
+    "Caterina Boratto",
+    "Claudia Cardinale",
+    "Dina De Santis",
+    "Eddra Gale",
+    "Edward Fleming",
+    "Edy Vessel",
+    "Eugene Walter",
+    "Giuditta Rissone",
+    "Giuliana Calandra",
+    "Giulio Calì",
+    "Giulio Paradisi",
+    "Guido Alberti",
+    "Jean Rougeul",
+    "John Francis Lane",
+    "John Karlsen",
+    "John Stacy",
+    "Madeleine LeBeau",
+    "Marcello Mastroianni",
+    "Maria Antonietta Beluzzi",
+    "Maria Tedeschi",
+    "Mario Conocchia",
+    "Mario Pisu",
+    "Marisa Colomber",
+    "Mark Herron",
+    "Mino Doro",
+    "Nadine Sanders",
+    "Olimpia Cavalli",
+    "Polidor",
+    "Roberto Nicolosi",
+    "Rossella Como",
+    "Rossella Falk",
+    "Sandra Milo"
+  ],
+  "musica": [
+    "Nino Rota"
+  ],
+  "fotografia": [
+    "Gianni di Venanzo"
+  ],
+  "guion": [
+    "Brunello Rondi",
+    "Ennio Flaiano",
+    "Federico Fellini",
+    "Tullio Pinelli"
+  ],
+  "temas": [
+    "creatividad",
+    "industria cinematográfica",
+    "Ánimus"
+  ],
+  "escenario": [
+    "Roma"
   ]
 }

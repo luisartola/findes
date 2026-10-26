@@ -18,5 +18,25 @@
   "tmdb_id": 586586,
   "titulo_es": "Bliss",
   "titulo_original": "Bliss",
-  "tmdb_rating": 5.7
+  "tmdb_rating": 5.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Abraham Benrubi",
+    "Chris McKenna",
+    "George Wendt",
+    "Graham Skipper",
+    "Jeremy Gardner",
+    "Josh Ethier",
+    "Madison Burge",
+    "Mark Beltzman",
+    "Matt Mercer",
+    "Rachel Avery",
+    "Rhys Wakefield",
+    "Tru Collins"
+  ],
+  "guion": [
+    "Joe Begos"
+  ]
 }

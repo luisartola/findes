@@ -18,5 +18,31 @@
   "tmdb_id": 34070,
   "titulo_es": "Canciones del segundo piso",
   "titulo_original": "Sånger från andra våningen",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Francia",
+    "Noruega",
+    "Suecia"
+  ],
+  "reparto": [
+    "Bengt C.W. Carlsson",
+    "Klas Gösta Olsson",
+    "Lars Nordh"
+  ],
+  "musica": [
+    "Benny Andersson"
+  ],
+  "fotografia": [
+    "Jesper Klevenås"
+  ],
+  "guion": [
+    "Roy Andersson"
+  ],
+  "temas": [
+    "Humanitas romana",
+    "condición humana",
+    "humillación",
+    "naturaleza humana",
+    "respeto"
+  ]
 }

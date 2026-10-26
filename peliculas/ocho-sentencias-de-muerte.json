@@ -18,5 +18,41 @@
   "tmdb_id": 11898,
   "titulo_es": "Ocho sentencias de muerte",
   "titulo_original": "Kind Hearts and Coronets",
-  "tmdb_rating": 7.6
+  "tmdb_rating": 7.6,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Alec Guinness",
+    "Dennis Price",
+    "Hugh Griffith",
+    "Joan Greenwood",
+    "Miles Malleson",
+    "Valerie Hobson"
+  ],
+  "musica": [
+    "Ernest Irving"
+  ],
+  "fotografia": [
+    "Douglas Slocombe"
+  ],
+  "guion": [
+    "John Dighton"
+  ],
+  "temas": [
+    "Birthright",
+    "Selección intersexual",
+    "alta sociedad",
+    "clase alta",
+    "familicidio",
+    "nobleza",
+    "oportunismo",
+    "repudio",
+    "sucesión",
+    "venganza"
+  ],
+  "escenario": [
+    "Inglaterra",
+    "Londres"
+  ]
 }

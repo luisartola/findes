@@ -18,5 +18,27 @@
   "tmdb_id": 118673,
   "titulo_es": "La torre de los siete jorobados",
   "titulo_original": "La torre de los siete jorobados",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Antonio Casal",
+    "Antonio García-Riquelme Salvador",
+    "Guillermo Marín",
+    "Isabel de Pomés",
+    "José Franco Pumarega",
+    "Julia Lajos"
+  ],
+  "fotografia": [
+    "Henri Barreyre"
+  ],
+  "guion": [
+    "Edgar Neville",
+    "Emilio Carrere",
+    "José Santugini"
+  ],
+  "escenario": [
+    "Madrid"
+  ]
 }

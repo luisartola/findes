@@ -18,5 +18,35 @@
   "tmdb_id": 403431,
   "titulo_es": "Brigsby Bear",
   "titulo_original": "Brigsby Bear",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Andy Samberg",
+    "Beck Bennett",
+    "Claire Danes",
+    "Greg Kinnear",
+    "Jane Adams",
+    "Jorge Lendeborg Jr.",
+    "Kate Lyn Sheil",
+    "Kyle Mooney",
+    "Mark Hamill",
+    "Matt Walsh",
+    "Michaela Watkins",
+    "Ryan Simpkins"
+  ],
+  "musica": [
+    "David Wingo"
+  ],
+  "fotografia": [
+    "Christian Sprenger"
+  ],
+  "guion": [
+    "Kevin Costello",
+    "Kyle Mooney"
+  ],
+  "escenario": [
+    "Utah"
+  ]
 }

@@ -20,5 +20,43 @@
   "tmdb_id": 11699,
   "titulo_es": "Teniente corrupto",
   "titulo_original": "Bad Lieutenant: Port of Call - New Orleans",
-  "tmdb_rating": 6.2
+  "tmdb_rating": 6.2,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Brad Dourif",
+    "Denzel Whitaker",
+    "Douglas M. Griffin",
+    "Eva Mendes",
+    "Fairuza Balk",
+    "Gary Grubbs",
+    "Irma P. Hall",
+    "J.D. Evermore",
+    "Jennifer Coolidge",
+    "Marco St. John",
+    "Michael Shannon",
+    "Nick Gomez",
+    "Nicolas Cage",
+    "Shawn Hatosy",
+    "Shea Whigham",
+    "Stephanie Honoré",
+    "Tom Bower",
+    "Val Kilmer",
+    "Vondie Curtis-Hall",
+    "Xzibit"
+  ],
+  "musica": [
+    "Mark Isham"
+  ],
+  "fotografia": [
+    "Peter Zeitlinger"
+  ],
+  "guion": [
+    "Abel Ferrara",
+    "William M. Finkelstein"
+  ],
+  "escenario": [
+    "Nueva Orleans"
+  ]
 }

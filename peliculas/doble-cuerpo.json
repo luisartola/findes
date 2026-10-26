@@ -18,5 +18,41 @@
   "tmdb_id": 11507,
   "titulo_es": "Doble cuerpo",
   "titulo_original": "Body Double",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Al Israel",
+    "Annette Haven",
+    "Barbara Crampton",
+    "Brinke Stevens",
+    "Casey Sander",
+    "Craig Wasson",
+    "Darcy DeMoss",
+    "Deborah Shelton",
+    "Dennis Franz",
+    "Gregg Henry",
+    "Guy Boyd",
+    "Lane Davies",
+    "Larry \"Flash\" Jenkins",
+    "Melanie Griffith",
+    "Monte Landis",
+    "Rob Paulsen"
+  ],
+  "musica": [
+    "Pino Donaggio"
+  ],
+  "fotografia": [
+    "Stephen H. Burum"
+  ],
+  "guion": [
+    "Brian De Palma"
+  ],
+  "temas": [
+    "pornografía"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

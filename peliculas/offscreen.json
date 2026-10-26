@@ -18,5 +18,24 @@
   "tmdb_id": 16009,
   "titulo_es": "Offscreen",
   "titulo_original": "Offscreen",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Dinamarca"
+  ],
+  "reparto": [
+    "Bjarke de Koning",
+    "Brigitte Christensen",
+    "Christoffer Boe",
+    "Ellen Hillingsø",
+    "Jakob Cedergren",
+    "Katrine Wiedemann",
+    "Mathilde Norholt",
+    "Mogens Pedersen",
+    "Signe Skov",
+    "Trine Dyrholm"
+  ],
+  "guion": [
+    "Christoffer Boe",
+    "Knud Romer"
+  ]
 }

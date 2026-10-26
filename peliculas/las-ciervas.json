@@ -18,5 +18,32 @@
   "tmdb_id": 1787,
   "titulo_es": "Las ciervas",
   "titulo_original": "Les Biches",
-  "tmdb_rating": 6.0
+  "tmdb_rating": 6.0,
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Claude Chabrol",
+    "Dominique Zardi",
+    "Henri Attal",
+    "Jacqueline Sassard",
+    "Jean-Louis Trintignant",
+    "Nane Germon",
+    "Serge Bento",
+    "Stéphane Audran"
+  ],
+  "musica": [
+    "Pierre Jansen"
+  ],
+  "fotografia": [
+    "Jean Rabier"
+  ],
+  "guion": [
+    "Claude Chabrol",
+    "Paul Gégauff"
+  ],
+  "escenario": [
+    "París"
+  ]
 }

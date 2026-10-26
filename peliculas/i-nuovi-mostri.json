@@ -18,5 +18,48 @@
   "tmdb_id": 45004,
   "titulo_es": "¡Que viva Italia!",
   "titulo_original": "I nuovi mostri",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Italia"
+  ],
+  "reparto": [
+    "Alberto Sordi",
+    "Alfredo Adami",
+    "Aristide Caporale",
+    "Aïché Nana",
+    "Carla Mancini",
+    "Eros Pagni",
+    "Giancarlo Giannini",
+    "Gianfranco Barra",
+    "Linda Moretti",
+    "Luciano Bonanni",
+    "Luigi Diberti",
+    "Margherita Horowitz",
+    "Nerina Montagnani",
+    "Orietta Berti",
+    "Ornella Muti",
+    "Paolo Baroni",
+    "Patrizia De Clara",
+    "Pina Borione",
+    "Simona Patitucci",
+    "Ugo Tognazzi",
+    "Vittorio Gassman",
+    "Vittorio Zarfati",
+    "Yorgo Voyagis"
+  ],
+  "musica": [
+    "Armando Trovaioli"
+  ],
+  "fotografia": [
+    "Tonino Delli Colli"
+  ],
+  "guion": [
+    "Agenore Incrocci",
+    "Bernardino Zapponi",
+    "Furio Scarpelli",
+    "Ruggero Maccari"
+  ],
+  "escenario": [
+    "Roma"
+  ]
 }

@@ -18,5 +18,17 @@
   "tmdb_id": 722913,
   "titulo_es": "Malcolm & Marie",
   "titulo_original": "Malcolm & Marie",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "John David Washington"
+  ],
+  "musica": [
+    "Labrinth"
+  ],
+  "fotografia": [
+    "Marcell Rév"
+  ]
 }

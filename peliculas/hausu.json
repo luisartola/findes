@@ -18,5 +18,30 @@
   "tmdb_id": null,
   "titulo_es": "House",
   "titulo_original": "ハウス",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Kimiko Ikegami",
+    "Kumiko Ōba",
+    "Miki Jinbo",
+    "Yōko Minamida"
+  ],
+  "musica": [
+    "Asei Kobayashi",
+    "Mitsuyoshi Yoshino"
+  ],
+  "fotografia": [
+    "Yoshitaka Sakamoto"
+  ],
+  "guion": [
+    "Chiho Katsura"
+  ],
+  "temas": [
+    "casa embrujada"
+  ],
+  "escenario": [
+    "Japón"
+  ]
 }

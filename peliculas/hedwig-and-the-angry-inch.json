@@ -18,5 +18,35 @@
   "tmdb_id": 13403,
   "titulo_es": "Hedwig and the Angry Inch",
   "titulo_original": "Hedwig and the Angry Inch",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alberta Watson",
+    "Andrea Martin",
+    "Dar Williams",
+    "John Cameron Mitchell",
+    "Karen Hines",
+    "Maurice Dean Wint",
+    "Michael Aronov",
+    "Michael Pitt",
+    "Miriam Shor",
+    "Rob Campbell",
+    "Sook-Yin Lee",
+    "Stephen Trask"
+  ],
+  "musica": [
+    "Stephen Trask"
+  ],
+  "fotografia": [
+    "Frankie DeMarco"
+  ],
+  "guion": [
+    "John Cameron Mitchell",
+    "Stephen Trask"
+  ],
+  "escenario": [
+    "Berlín"
+  ]
 }

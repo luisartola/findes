@@ -18,5 +18,28 @@
   "tmdb_id": 18671,
   "titulo_es": "El demonio de las armas",
   "titulo_original": "Gun Crazy",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Berry Kroeger",
+    "Harry Lewis",
+    "John Dall",
+    "Morris Carnovsky",
+    "Nedrick Young",
+    "Peggy Cummins",
+    "Russ Tamblyn",
+    "Trevor Bardette"
+  ],
+  "musica": [
+    "Victor Young"
+  ],
+  "fotografia": [
+    "Russell Harlan"
+  ],
+  "guion": [
+    "Dalton Trumbo",
+    "MacKinlay Kantor"
+  ]
 }

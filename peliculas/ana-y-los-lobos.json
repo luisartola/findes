@@ -18,5 +18,30 @@
   "tmdb_id": 107287,
   "titulo_es": "Ana y los lobos",
   "titulo_original": "Ana y los lobos",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Charo Soriano",
+    "Fernando Fernán Gómez",
+    "Geraldine Chaplin",
+    "José María Prada",
+    "José Vivó",
+    "Marisa Porcel",
+    "Rafaela Aparicio"
+  ],
+  "musica": [
+    "Luis de Pablo"
+  ],
+  "fotografia": [
+    "Luis Cuadrado"
+  ],
+  "guion": [
+    "Carlos Saura",
+    "Rafael Azcona"
+  ],
+  "escenario": [
+    "España"
+  ]
 }

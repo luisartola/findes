@@ -18,5 +18,35 @@
   "tmdb_id": 2088,
   "titulo_es": "Doble juego",
   "titulo_original": "Romeo Is Bleeding",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Estados Unidos",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Annabella Sciorra",
+    "David Proval",
+    "Dennis Farina",
+    "Gary Oldman",
+    "James Cromwell",
+    "Juliette Lewis",
+    "Lena Olin",
+    "Michael Wincott",
+    "Ron Perlman",
+    "Roy Scheider",
+    "Tony Sirico",
+    "Will Patton"
+  ],
+  "musica": [
+    "Mark Isham"
+  ],
+  "fotografia": [
+    "Dariusz Wolski"
+  ],
+  "guion": [
+    "Hilary Henkin"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

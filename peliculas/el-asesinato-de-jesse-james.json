@@ -18,5 +18,44 @@
   "tmdb_id": 4512,
   "titulo_es": "El asesinato de Jesse James por el cobarde Robert Ford",
   "titulo_original": "The Assassination of Jesse James by the Coward Robert Ford",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alison Elliott",
+    "Brad Pitt",
+    "Brooklynn Proulx",
+    "Casey Affleck",
+    "Garret Dillahunt",
+    "James Carville",
+    "Jeremy Renner",
+    "Mary-Louise Parker",
+    "Michael Copeman",
+    "Michael Parks",
+    "Nick Cave",
+    "Pat Healy",
+    "Paul Schneider",
+    "Ron Hansen",
+    "Sam Rockwell",
+    "Sam Shepard",
+    "Ted Levine",
+    "Tom Aldredge"
+  ],
+  "musica": [
+    "Nick Cave"
+  ],
+  "fotografia": [
+    "Roger Deakins"
+  ],
+  "guion": [
+    "Andrew Dominik"
+  ],
+  "temas": [
+    "Jesse James",
+    "Robert Ford"
+  ],
+  "escenario": [
+    "Misuri"
+  ]
 }

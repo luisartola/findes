@@ -18,5 +18,24 @@
   "tmdb_id": 94329,
   "titulo_es": "Redada asesina (The Raid)",
   "titulo_original": "Serbuan Maut",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Indonesia"
+  ],
+  "reparto": [
+    "Donny Alamsyah",
+    "Iko Uwais",
+    "Joe Taslim",
+    "Yayan Ruhian"
+  ],
+  "musica": [
+    "Mike Shinoda"
+  ],
+  "guion": [
+    "Gareth Evans"
+  ],
+  "escenario": [
+    "Indonesia",
+    "Yakarta"
+  ]
 }

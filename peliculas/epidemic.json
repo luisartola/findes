@@ -18,5 +18,38 @@
   "tmdb_id": 29445,
   "titulo_es": "Epidemic",
   "titulo_original": "Epidemic",
-  "tmdb_rating": 5.7
+  "tmdb_rating": 5.7,
+  "paises": [
+    "Dinamarca"
+  ],
+  "reparto": [
+    "Ali Hamann",
+    "Allan de Waal",
+    "Claes Kastholm Hansen",
+    "Cæcilia Holbek Trier",
+    "Ib Hansen",
+    "Lars von Trier",
+    "Leif Magnusson",
+    "Lennart Pasborg",
+    "Michael Simpson",
+    "Niels Vørsel",
+    "Olaf Ussing",
+    "Udo Kier"
+  ],
+  "musica": [
+    "Peter Bach"
+  ],
+  "fotografia": [
+    "Henning Bendtsen"
+  ],
+  "guion": [
+    "Lars von Trier",
+    "Niels Vørsel"
+  ],
+  "temas": [
+    "epidemia"
+  ],
+  "escenario": [
+    "Dinamarca"
+  ]
 }

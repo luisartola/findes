@@ -18,5 +18,25 @@
   "tmdb_id": 257019,
   "titulo_es": "Juguetes rotos",
   "titulo_original": "Juguetes rotos",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Guillermo Gorostiza",
+    "Hilario Martínez",
+    "Marina Torres",
+    "Nicanor Villalta",
+    "Paulino Uzcudun"
+  ],
+  "musica": [
+    "Carmelo Bernaola"
+  ],
+  "fotografia": [
+    "Luis Cuadrado"
+  ],
+  "guion": [
+    "Manuel Summers Rivero",
+    "Tico Medina"
+  ]
 }

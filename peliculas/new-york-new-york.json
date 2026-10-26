@@ -18,5 +18,42 @@
   "tmdb_id": null,
   "titulo_es": "New York, New York",
   "titulo_original": "New York, New York",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Barry Primus",
+    "Casey Kasem",
+    "Clarence Clemons",
+    "Dick Miller",
+    "Dimitri Logothetis",
+    "Frank Sivero",
+    "George Memmoli",
+    "Georgie Auld",
+    "Harry Northup",
+    "Jack Haley",
+    "Lionel Stander",
+    "Liza Minnelli",
+    "Mary Kay Place",
+    "Robert De Niro"
+  ],
+  "musica": [
+    "Fred Ebb",
+    "John Kander",
+    "Ralph Burns"
+  ],
+  "fotografia": [
+    "László Kovács"
+  ],
+  "guion": [
+    "Earl Mac Rauch",
+    "Mardik Martin"
+  ],
+  "temas": [
+    "Segunda Guerra Mundial"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

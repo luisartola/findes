@@ -18,5 +18,25 @@
   "tmdb_id": 913290,
   "titulo_es": "Barbarian",
   "titulo_original": "Barbarian",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Bill Skarsgård",
+    "Georgina Campbell",
+    "Justin Long",
+    "Kurt Braunohler",
+    "Richard Brake",
+    "Zach Cregger"
+  ],
+  "musica": [
+    "Anna Drubich"
+  ],
+  "guion": [
+    "Zach Cregger"
+  ],
+  "escenario": [
+    "Brightmoor"
+  ]
 }

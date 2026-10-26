@@ -18,5 +18,41 @@
   "tmdb_id": 31767,
   "titulo_es": "Los demonios",
   "titulo_original": "The Devils",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Andrew Faulds",
+    "Brian Murphy",
+    "Catherine Willmer",
+    "Christopher Logue",
+    "Dudley Sutton",
+    "Gemma Jones",
+    "Georgina Hale",
+    "Graham Armitage",
+    "John Woodvine",
+    "Judith Paris",
+    "Kenneth Colley",
+    "Max Adrian",
+    "Michael Gothard",
+    "Murray Melvin",
+    "Oliver Reed",
+    "Vanessa Redgrave"
+  ],
+  "musica": [
+    "Peter Maxwell Davies"
+  ],
+  "fotografia": [
+    "David Watkin"
+  ],
+  "guion": [
+    "Ken Russell"
+  ],
+  "temas": [
+    "pena de muerte"
+  ],
+  "escenario": [
+    "Francia"
+  ]
 }

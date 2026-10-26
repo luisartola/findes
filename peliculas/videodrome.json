@@ -18,5 +18,38 @@
   "tmdb_id": 837,
   "titulo_es": "Videodrome",
   "titulo_original": "Videodrome",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Canadá",
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Debbie Harry",
+    "Jack Creley",
+    "James Woods",
+    "Jayne Eastwood",
+    "Leslie Carlson",
+    "Peter Dvorský",
+    "Sonja Smits"
+  ],
+  "musica": [
+    "Howard Shore"
+  ],
+  "fotografia": [
+    "Mark Irwin"
+  ],
+  "guion": [
+    "David Cronenberg"
+  ],
+  "temas": [
+    "Influencia de los medios de comunicación",
+    "delirio",
+    "pornografía",
+    "realidad",
+    "sexo en el cine",
+    "tumor cerebral"
+  ],
+  "escenario": [
+    "Toronto"
+  ]
 }

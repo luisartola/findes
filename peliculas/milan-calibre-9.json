@@ -18,5 +18,38 @@
   "tmdb_id": 40022,
   "titulo_es": "Milán, calibre 9",
   "titulo_original": "Milano Calibro 9",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Italia"
+  ],
+  "reparto": [
+    "Barbara Bouchet",
+    "Ernesto Colli",
+    "Ettore Geri",
+    "Fernando Di Leo",
+    "Frank Wolff",
+    "Gastone Moschin",
+    "Giorgio Trestini",
+    "Ivo Garrani",
+    "Lina Franchi",
+    "Lionel Stander",
+    "Luigi Pistilli",
+    "Marco Mariani",
+    "Mario Adorf",
+    "Mario Novelli",
+    "Philippe Leroy",
+    "Salvatore Billa"
+  ],
+  "musica": [
+    "Luis Bacalov"
+  ],
+  "fotografia": [
+    "Franco Villa"
+  ],
+  "guion": [
+    "Fernando Di Leo"
+  ],
+  "escenario": [
+    "Milán"
+  ]
 }

@@ -18,5 +18,35 @@
   "tmdb_id": 398175,
   "titulo_es": "Brawl in Cell Block 99",
   "titulo_original": "Brawl in Cell Block 99",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Clark Johnson",
+    "Dan Amboyer",
+    "Devon Windsor",
+    "Don Johnson",
+    "Fred Melamed",
+    "Geno Segers",
+    "Jennifer Carpenter",
+    "Marc Blucas",
+    "Mustafa Shakir",
+    "Philip Ettinger",
+    "Pooja Kumar",
+    "Rob Morgan",
+    "Tom Guiry",
+    "Udo Kier",
+    "Vince Vaughn",
+    "Willie C. Carpenter"
+  ],
+  "musica": [
+    "S. Craig Zahler"
+  ],
+  "fotografia": [
+    "Benji Bakshi"
+  ],
+  "guion": [
+    "S. Craig Zahler"
+  ]
 }

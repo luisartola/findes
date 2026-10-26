@@ -18,5 +18,24 @@
   "tmdb_id": 435707,
   "titulo_es": "Pieles",
   "titulo_original": "Pieles",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Adolfo Fernández",
+    "Ana Polvorosa",
+    "Candela Peña",
+    "Carmen Machi",
+    "Carolina Bang",
+    "Joaquín Climent",
+    "Jon Kortajarena",
+    "Lucía de la Fuente",
+    "Macarena Gómez",
+    "Secun de la Rosa",
+    "Álex de la Iglesia"
+  ],
+  "guion": [
+    "Eduardo Casanova"
+  ]
 }

@@ -18,5 +18,35 @@
   "tmdb_id": 23330,
   "titulo_es": "La balada de Cable Hogue",
   "titulo_original": "The Ballad of Cable Hogue",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "David Warner",
+    "Gene Evans",
+    "James Anderson",
+    "Jason Robards",
+    "Kathleen Freeman",
+    "L. Q. Jones",
+    "Peter Whitney",
+    "R. G. Armstrong",
+    "Slim Pickens",
+    "Stella Stevens",
+    "Strother Martin",
+    "Vaughn Taylor"
+  ],
+  "musica": [
+    "Jerry Goldsmith"
+  ],
+  "fotografia": [
+    "Lucien Ballard"
+  ],
+  "guion": [
+    "Edmund Penney",
+    "John Crawford"
+  ],
+  "escenario": [
+    "Arizona"
+  ]
 }

@@ -18,5 +18,25 @@
   "tmdb_id": 458737,
   "titulo_es": "El reverendo",
   "titulo_original": "First Reformed",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Amanda Seyfried",
+    "Bill Hoag",
+    "Cedric the Entertainer",
+    "Ethan Hawke",
+    "Michael Gaston",
+    "Victoria Hill"
+  ],
+  "musica": [
+    "Lustmord"
+  ],
+  "guion": [
+    "Paul Schrader"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

@@ -18,5 +18,30 @@
   "tmdb_id": 11655,
   "titulo_es": "Cronos",
   "titulo_original": "Cronos",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "México"
+  ],
+  "reparto": [
+    "Claudio Brook",
+    "Daniel Giménez Cacho",
+    "Federico Luppi",
+    "Guillermo del Toro",
+    "Jorge Martínez de Hoyos",
+    "Margarita Isabel",
+    "Mario Iván Martínez",
+    "Ron Perlman"
+  ],
+  "musica": [
+    "Javier Álvarez Fuentes"
+  ],
+  "fotografia": [
+    "Guillermo Navarro"
+  ],
+  "guion": [
+    "Guillermo del Toro"
+  ],
+  "escenario": [
+    "México"
+  ]
 }

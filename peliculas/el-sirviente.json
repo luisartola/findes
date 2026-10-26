@@ -17,5 +17,38 @@
   ],
   "findes": [
     16
+  ],
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Catherine Lacey",
+    "Dirk Bogarde",
+    "Harold Pinter",
+    "James Fox",
+    "Patrick Magee",
+    "Richard Vernon",
+    "Sarah Miles",
+    "Wendy Craig"
+  ],
+  "musica": [
+    "John Dankworth"
+  ],
+  "fotografia": [
+    "Douglas Slocombe"
+  ],
+  "guion": [
+    "Harold Pinter",
+    "Robin Maugham, 2nd Viscount Maugham"
+  ],
+  "temas": [
+    "autonomía",
+    "clase social",
+    "mando",
+    "privilegio",
+    "servitude"
+  ],
+  "escenario": [
+    "Londres"
   ]
 }

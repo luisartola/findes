@@ -18,5 +18,34 @@
   "tmdb_id": 294963,
   "titulo_es": "Bone Tomahawk",
   "titulo_original": "Bone Tomahawk",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "David Arquette",
+    "Eddie Spears",
+    "Fred Melamed",
+    "Geno Segers",
+    "James Tolkan",
+    "Jamie Hector",
+    "Jay Tavare",
+    "Kathryn Morris",
+    "Kurt Russell",
+    "Lili Simmons",
+    "Maestro Harrell",
+    "Matthew Fox",
+    "Michael Paré",
+    "Patrick Wilson",
+    "Richard Jenkins",
+    "Robert Allen Mukes",
+    "Sean Young",
+    "Sid Haig"
+  ],
+  "guion": [
+    "S. Craig Zahler"
+  ],
+  "escenario": [
+    "California"
+  ]
 }

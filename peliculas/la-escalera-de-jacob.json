@@ -18,5 +18,42 @@
   "tmdb_id": 2291,
   "titulo_es": "La escalera de Jacob",
   "titulo_original": "Jacob's Ladder",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Becky Ann Baker",
+    "Brent Hinkley",
+    "Brian Tarantina",
+    "Danny Aiello",
+    "Elizabeth Peña",
+    "Eriq La Salle",
+    "Jason Alexander",
+    "John Capodice",
+    "Kyle Gass",
+    "Lewis Black",
+    "Macaulay Culkin",
+    "Matt Craven",
+    "Patricia Kalember",
+    "Perry Lang",
+    "Pruitt Taylor Vince",
+    "S. Epatha Merkerson",
+    "Scott Cohen",
+    "Suzanne Shepherd",
+    "Tim Robbins",
+    "Ving Rhames"
+  ],
+  "musica": [
+    "Maurice Jarre"
+  ],
+  "fotografia": [
+    "Jeffrey L. Kimball"
+  ],
+  "guion": [
+    "Bruce Joel Rubin"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

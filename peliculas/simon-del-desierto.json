@@ -18,5 +18,25 @@
   "tmdb_id": 36265,
   "titulo_es": "Simón del desierto",
   "titulo_original": "Simón del desierto",
-  "tmdb_rating": 7.6
+  "tmdb_rating": 7.6,
+  "paises": [
+    "México"
+  ],
+  "reparto": [
+    "Antonio Bravo",
+    "Claudio Brook",
+    "Enrique Álvarez Félix",
+    "Francisco Reiguera",
+    "Glauber Rocha"
+  ],
+  "musica": [
+    "Raúl Lavista"
+  ],
+  "fotografia": [
+    "Gabriel Figueroa"
+  ],
+  "guion": [
+    "Julio Alejandro",
+    "Luis Buñuel"
+  ]
 }

@@ -18,5 +18,49 @@
   "tmdb_id": 2757,
   "titulo_es": "Adaptation. El ladrón de orquídeas",
   "titulo_original": "Adaptation.",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Bob Stephenson",
+    "Bob Yerkes",
+    "Brian Cox",
+    "Cara Seymour",
+    "Catherine Keener",
+    "Chris Cooper",
+    "Curtis Hanson",
+    "David O. Russell",
+    "Doug Jones",
+    "Gary Farmer",
+    "Gregory Itzin",
+    "Jay Tavare",
+    "Jim Beaver",
+    "John Cusack",
+    "John Malkovich",
+    "Judy Greer",
+    "Lance Acord",
+    "Litefoot",
+    "Maggie Gyllenhaal",
+    "Meryl Streep",
+    "Nicolas Cage",
+    "Peter Jason",
+    "Ron Livingston",
+    "Sandra Lee Gimpel",
+    "Spike Jonze",
+    "Stephen Tobolowsky",
+    "Tilda Swinton"
+  ],
+  "musica": [
+    "Carter Burwell"
+  ],
+  "fotografia": [
+    "Lance Acord"
+  ],
+  "guion": [
+    "Charlie Kaufman"
+  ],
+  "escenario": [
+    "Estados Unidos"
+  ]
 }

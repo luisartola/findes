@@ -18,5 +18,56 @@
   "tmdb_id": null,
   "titulo_es": "Nubes pasajeras",
   "titulo_original": "Kauas pilvet karkaavat",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Alemania",
+    "Finlandia",
+    "Francia"
+  ],
+  "reparto": [
+    "Aarre Karén",
+    "Antti Reini",
+    "Arvi Lind",
+    "Atte Blom",
+    "Elina Salo",
+    "Erkki Lahti",
+    "Esko Nikkari",
+    "Jaakko Talaskivi",
+    "Kaija Pakarinen",
+    "Kari Väänänen",
+    "Kati Outinen",
+    "Markku Peltola",
+    "Markus Allan",
+    "Mato Valtonen",
+    "Matti Onnismaa",
+    "Matti Pellonpää",
+    "Minna Aaltonen",
+    "Ona Kamu",
+    "Outi Mäenpää",
+    "Pauli Granfelt",
+    "Pentti Auer",
+    "Pentti Mutikainen",
+    "Peter von Bagh",
+    "Rose-Marie Precht",
+    "Sakari Kuosmanen",
+    "Silu Seppälä",
+    "Solmu Mäkelä",
+    "Sulevi Peltola",
+    "Taisto Wesslin",
+    "Tero Jartti",
+    "Vesa Mäkelä",
+    "Yrjö Järvinen"
+  ],
+  "musica": [
+    "Timo Salminen"
+  ],
+  "fotografia": [
+    "Timo Salminen"
+  ],
+  "guion": [
+    "Aki Kaurismäki"
+  ],
+  "escenario": [
+    "Helsinki"
+  ]
 }

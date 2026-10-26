@@ -18,5 +18,15 @@
   "tmdb_id": null,
   "tmdb_rating": null,
   "titulo_original": "Noche de vino tinto",
-  "titulo_es": "Noche de vino tinto"
+  "titulo_es": "Noche de vino tinto",
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Enrique Irazoqui",
+    "Serena Vergano"
+  ],
+  "guion": [
+    "José María Nunes"
+  ]
 }

@@ -18,5 +18,30 @@
   "tmdb_id": 12229,
   "titulo_es": "The Acid House",
   "titulo_original": "The Acid House",
-  "tmdb_rating": 6.2
+  "tmdb_rating": 6.2,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Ewen Bremner",
+    "Gary McCormack",
+    "Irvine Welsh",
+    "Jemma Redgrave",
+    "Kevin McKidd",
+    "Kirsty Mitchell",
+    "Martin Clunes",
+    "Maurice Roëves",
+    "Michelle Gomez",
+    "Simon Weir",
+    "Stephen McCole"
+  ],
+  "guion": [
+    "Irvine Welsh"
+  ],
+  "temas": [
+    "cambio de cuerpos"
+  ],
+  "escenario": [
+    "Glasgow"
+  ]
 }

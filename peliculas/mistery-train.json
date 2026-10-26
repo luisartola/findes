@@ -18,5 +18,47 @@
   "tmdb_id": 11305,
   "titulo_es": "Mystery Train",
   "titulo_original": "Mystery Train",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Estados Unidos",
+    "Japón"
+  ],
+  "reparto": [
+    "Cinqué Lee",
+    "D'Army Bailey",
+    "Elizabeth Bracco",
+    "Jodie Markell",
+    "Joe Strummer",
+    "Marvell Thomas",
+    "Masatoshi Nagase",
+    "Nicoletta Braschi",
+    "Rick Aviles",
+    "Rockets Redglare",
+    "Rufus Thomas",
+    "Sara Driver",
+    "Screamin' Jay Hawkins",
+    "Steve Buscemi",
+    "Sy Richardson",
+    "Tom Noonan",
+    "Tom Waits",
+    "Vondie Curtis-Hall",
+    "Youki Kudoh"
+  ],
+  "musica": [
+    "John Lurie"
+  ],
+  "fotografia": [
+    "Robby Müller"
+  ],
+  "guion": [
+    "Jim Jarmusch"
+  ],
+  "temas": [
+    "culture of Memphis, Tennessee",
+    "relación interpersonal",
+    "viaje"
+  ],
+  "escenario": [
+    "Memphis"
+  ]
 }

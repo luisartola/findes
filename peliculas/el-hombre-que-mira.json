@@ -18,5 +18,30 @@
   "tmdb_id": 27066,
   "titulo_es": "El hombre que mira",
   "titulo_original": "L'uomo che guarda",
-  "tmdb_rating": 5.5
+  "tmdb_rating": 5.5,
+  "paises": [
+    "Italia"
+  ],
+  "reparto": [
+    "Antonio Salines",
+    "Franco Branciaroli",
+    "Katarzyna Kozaczyk",
+    "Martine Brochard",
+    "Ted Rusoff",
+    "Tinto Brass"
+  ],
+  "musica": [
+    "Riz Ortolani"
+  ],
+  "guion": [
+    "Alberto Moravia",
+    "Tinto Brass",
+    "Vincenzo Siniscalchi"
+  ],
+  "temas": [
+    "voyeurismo"
+  ],
+  "escenario": [
+    "Roma"
+  ]
 }

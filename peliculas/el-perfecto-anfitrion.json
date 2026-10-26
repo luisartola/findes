@@ -18,5 +18,27 @@
   "tmdb_id": 66195,
   "titulo_es": "El perfecto anfitrión",
   "titulo_original": "The Perfect Host",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Clayne Crawford",
+    "David Hyde Pierce",
+    "Helen Reddy",
+    "Megahn Perry",
+    "Nathaniel Parker"
+  ],
+  "musica": [
+    "John Swihart"
+  ],
+  "fotografia": [
+    "John Brawley"
+  ],
+  "guion": [
+    "Nick Tomnay"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

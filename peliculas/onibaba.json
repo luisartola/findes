@@ -18,5 +18,27 @@
   "tmdb_id": 3763,
   "titulo_es": "Onibaba",
   "titulo_original": "鬼婆",
-  "tmdb_rating": 7.7
+  "tmdb_rating": 7.7,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Jitsuko Yoshimura",
+    "Jukichi Uno",
+    "Kei Sato",
+    "Nobuko Otowa",
+    "Taiji Tonoyama"
+  ],
+  "musica": [
+    "Hikaru Hayashi"
+  ],
+  "guion": [
+    "Kaneto Shindō"
+  ],
+  "temas": [
+    "sobrenatural"
+  ],
+  "escenario": [
+    "Japón"
+  ]
 }

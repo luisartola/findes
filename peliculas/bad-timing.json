@@ -18,5 +18,31 @@
   "tmdb_id": 33214,
   "titulo_es": "Contratiempo",
   "titulo_original": "Bad Timing",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Ania Marson",
+    "Art Garfunkel",
+    "Dana Gillespie",
+    "Daniel Massey",
+    "Denholm Elliott",
+    "Eugene Lipinski",
+    "Harvey Keitel",
+    "Theresa Russell",
+    "William Hootkins"
+  ],
+  "musica": [
+    "Richard Hartley"
+  ],
+  "fotografia": [
+    "Anthony B. Richmond"
+  ],
+  "guion": [
+    "Yale Udoff"
+  ],
+  "escenario": [
+    "Viena"
+  ]
 }

@@ -18,5 +18,30 @@
   "tmdb_id": 14135,
   "titulo_es": "Bad Boy Bubby",
   "titulo_original": "Bad Boy Bubby",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Australia",
+    "Italia"
+  ],
+  "reparto": [
+    "Grant Piro",
+    "Nicholas Hope",
+    "Norman Kaye",
+    "Ralph Cotterill"
+  ],
+  "musica": [
+    "Graham Tardif"
+  ],
+  "fotografia": [
+    "Ian Jones"
+  ],
+  "guion": [
+    "Rolf de Heer"
+  ],
+  "temas": [
+    "incesto"
+  ],
+  "escenario": [
+    "Australia Meridional"
+  ]
 }

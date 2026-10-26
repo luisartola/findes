@@ -18,5 +18,45 @@
   "tmdb_id": 11850,
   "titulo_es": "La invasión de los ultracuerpos",
   "titulo_original": "Invasion of the Body Snatchers",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Art Hindle",
+    "Brooke Adams",
+    "David Fisher",
+    "Don Siegel",
+    "Donald Sutherland",
+    "Garry Goodrow",
+    "Jeff Goldblum",
+    "Kevin McCarthy",
+    "Lelia Goldoni",
+    "Leonard Nimoy",
+    "Philip Kaufman",
+    "Robert Duvall",
+    "Veronica Cartwright"
+  ],
+  "musica": [
+    "Denny Zeitlin"
+  ],
+  "fotografia": [
+    "Michael Chapman"
+  ],
+  "guion": [
+    "W. D. Richter"
+  ],
+  "temas": [
+    "Humanitas romana",
+    "colonización",
+    "emoción",
+    "identidad",
+    "identidad personal",
+    "invasión extraterrestre",
+    "naturaleza humana",
+    "vida extraterrestre"
+  ],
+  "escenario": [
+    "San Francisco"
+  ]
 }

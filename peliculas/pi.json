@@ -17,5 +17,36 @@
   ],
   "findes": [
     1
+  ],
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Ajay Naidu",
+    "Ben Shenkman",
+    "Clint Mansell",
+    "Mark Margolis",
+    "Samia Shoaib",
+    "Sean Gullette",
+    "Stephen Pearlman"
+  ],
+  "musica": [
+    "Clint Mansell"
+  ],
+  "fotografia": [
+    "Matthew Libatique"
+  ],
+  "guion": [
+    "Darren Aronofsky",
+    "Eric Watson",
+    "Sean Gullette"
+  ],
+  "temas": [
+    "Torá",
+    "bolsa",
+    "pi"
+  ],
+  "escenario": [
+    "Nueva York"
   ]
 }

@@ -18,5 +18,50 @@
   "tmdb_id": 11482,
   "titulo_es": "El quimérico inquilino",
   "titulo_original": "Le locataire",
-  "tmdb_rating": 7.6
+  "tmdb_rating": 7.6,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Albert Delpy",
+    "André Penvern",
+    "Bernard Fresson",
+    "Bernard-Pierre Donnadieu",
+    "Claude Dauphin",
+    "Claude Piéplu",
+    "Eva Ionesco",
+    "Florence Blot",
+    "François Viaur",
+    "Gérard Jugnot",
+    "Héléna Manson",
+    "Isabelle Adjani",
+    "Jacques Monod",
+    "Jacques Rosny",
+    "Jean-Pierre Bagot",
+    "Jo Van Fleet",
+    "Josiane Balasko",
+    "Lila Kedrova",
+    "Louba Guertchikoff",
+    "Maïté Nahyr",
+    "Melvyn Douglas",
+    "Michel Blanc",
+    "Patrice Alexsandre",
+    "Romain Bouteille",
+    "Roman Polanski",
+    "Rufus",
+    "Shelley Winters"
+  ],
+  "musica": [
+    "Philippe Sarde"
+  ],
+  "fotografia": [
+    "Sven Nykvist"
+  ],
+  "guion": [
+    "Gérard Brach",
+    "Roman Polanski"
+  ],
+  "temas": [
+    "sobrenatural"
+  ]
 }

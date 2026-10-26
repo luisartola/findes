@@ -18,5 +18,32 @@
   "tmdb_id": 12543,
   "titulo_es": "Breaking News",
   "titulo_original": "大事件",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Hong Kong"
+  ],
+  "reparto": [
+    "Benz Hui",
+    "Cheung Siu-fai",
+    "Kelly Chen",
+    "Lam Suet",
+    "Maggie Shiu",
+    "Nick Cheung",
+    "Richie Ren",
+    "Simon Yam",
+    "You Yong"
+  ],
+  "musica": [
+    "Ben Cheung"
+  ],
+  "fotografia": [
+    "Cheng Siu-Keung"
+  ],
+  "guion": [
+    "Chan Hing-ka",
+    "Yip Tin-Shing"
+  ],
+  "escenario": [
+    "Hong Kong"
+  ]
 }

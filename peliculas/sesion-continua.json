@@ -18,5 +18,27 @@
   "tmdb_id": 202787,
   "titulo_es": "Sesión continua",
   "titulo_original": "Sesión continua",
-  "tmdb_rating": 5.2
+  "tmdb_rating": 5.2,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Adolfo Marsillach",
+    "Emma Suárez",
+    "Encarna Paso",
+    "Jesús Puente",
+    "José Bódalo",
+    "Rafael Hernández",
+    "Víctor Valverde",
+    "Yolanda Ríos"
+  ],
+  "musica": [
+    "Jesús Glück Sarasibar"
+  ],
+  "fotografia": [
+    "Manuel Rojas"
+  ],
+  "guion": [
+    "José Luis Garci"
+  ]
 }

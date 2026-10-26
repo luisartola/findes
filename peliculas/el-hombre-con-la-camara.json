@@ -18,5 +18,24 @@
   "tmdb_id": 26317,
   "titulo_es": "El hombre de la cámara",
   "titulo_original": "Человек с киноаппаратом",
-  "tmdb_rating": 7.8
+  "tmdb_rating": 7.8,
+  "paises": [
+    "Unión Soviética"
+  ],
+  "reparto": [
+    "Mikhail Kaufman"
+  ],
+  "musica": [
+    "Michael Nyman"
+  ],
+  "fotografia": [
+    "Mikhail Kaufman"
+  ],
+  "guion": [
+    "Dziga Vértov"
+  ],
+  "escenario": [
+    "Ucrania",
+    "Unión Soviética"
+  ]
 }

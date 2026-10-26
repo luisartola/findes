@@ -18,5 +18,31 @@
   "tmdb_id": 13937,
   "titulo_es": "En nombre de Caín",
   "titulo_original": "Raising Cain",
-  "tmdb_rating": 6.1
+  "tmdb_rating": 6.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Frances Sternhagen",
+    "Gabrielle Carteris",
+    "Gregg Henry",
+    "John Lithgow",
+    "Lolita Davidovich",
+    "Mel Harris",
+    "Steven Bauer",
+    "Teri Austin",
+    "Tom Bower"
+  ],
+  "musica": [
+    "Pino Donaggio"
+  ],
+  "fotografia": [
+    "Stephen H. Burum"
+  ],
+  "guion": [
+    "Brian De Palma"
+  ],
+  "temas": [
+    "Transtorno de Identidad Disociativo"
+  ]
 }

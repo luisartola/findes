@@ -18,5 +18,26 @@
   "tmdb_id": 425591,
   "titulo_es": "Ya no me siento a gusto en este mundo",
   "titulo_original": "I Don't Feel at Home in This World Anymore",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Christine Woods",
+    "David Yow",
+    "Derek Mears",
+    "Devon Graye",
+    "Elijah Wood",
+    "Gary Anthony Williams",
+    "Jane Levy",
+    "Jason Manuel Olazabal",
+    "Macon Blair",
+    "Melanie Lynskey"
+  ],
+  "fotografia": [
+    "Larkin Seiple"
+  ],
+  "guion": [
+    "Macon Blair"
+  ]
 }

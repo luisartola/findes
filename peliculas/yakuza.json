@@ -17,5 +17,33 @@
   ],
   "findes": [
     12
+  ],
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Brian Keith",
+    "Christina Kokubo",
+    "Eiji Okada",
+    "Herb Edelman",
+    "James Shigeta",
+    "Keiko Kishi",
+    "Ken Takakura",
+    "Richard Jordan",
+    "Robert Mitchum",
+    "William Ross"
+  ],
+  "musica": [
+    "Dave Grusin"
+  ],
+  "fotografia": [
+    "Kôzô Okazaki"
+  ],
+  "guion": [
+    "Paul Schrader",
+    "Robert Towne"
+  ],
+  "escenario": [
+    "Tokio"
   ]
 }

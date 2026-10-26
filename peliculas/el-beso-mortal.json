@@ -18,5 +18,43 @@
   "tmdb_id": 18030,
   "titulo_es": "El beso mortal",
   "titulo_original": "Kiss Me Deadly",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Albert Dekker",
+    "Cloris Leachman",
+    "Fortunio Bonanova",
+    "Jack Elam",
+    "Jack Lambert",
+    "James McCallion",
+    "Juano Hernández",
+    "Leigh Snowden",
+    "Leonard Mudie",
+    "Marjorie Bennett",
+    "Maxine Cooper Gomberg",
+    "Nick Dennis",
+    "Paul Stewart",
+    "Percy Helton",
+    "Ralph Meeker",
+    "Robert O. Cornthwaite",
+    "Strother Martin",
+    "Wesley Addy"
+  ],
+  "musica": [
+    "Frank De Vol"
+  ],
+  "fotografia": [
+    "Ernest Laszlo"
+  ],
+  "guion": [
+    "A. I. Bezzerides"
+  ],
+  "temas": [
+    "Guerra Fría"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

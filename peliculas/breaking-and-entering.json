@@ -18,5 +18,46 @@
   "tmdb_id": 1253,
   "titulo_es": "Breaking and Entering",
   "titulo_original": "Breaking and Entering",
-  "tmdb_rating": 6.1
+  "tmdb_rating": 6.1,
+  "paises": [
+    "Estados Unidos",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Anna Chancellor",
+    "Branka Katić",
+    "Caroline Chikezie",
+    "Dado Džihan",
+    "Ed Westwick",
+    "Eleanor Matsuura",
+    "Ellen Thomas",
+    "Jude Law",
+    "Juliet Stevenson",
+    "Juliette Binoche",
+    "Martin Freeman",
+    "Michael Shaeffer",
+    "Michael Smiley",
+    "Rafi Gavron",
+    "Ray Winstone",
+    "Robin Wright",
+    "Romi Aboulafia",
+    "Ting-Ting Hu",
+    "Velibor Topic",
+    "Vera Farmiga"
+  ],
+  "musica": [
+    "Gabriel Yared"
+  ],
+  "fotografia": [
+    "Benoît Delhomme"
+  ],
+  "guion": [
+    "Anthony Minghella"
+  ],
+  "temas": [
+    "autismo"
+  ],
+  "escenario": [
+    "Londres"
+  ]
 }

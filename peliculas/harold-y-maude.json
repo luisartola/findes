@@ -18,5 +18,42 @@
   "tmdb_id": 343,
   "titulo_es": "Harold y Maude",
   "titulo_original": "Harold and Maude",
-  "tmdb_rating": 7.6
+  "tmdb_rating": 7.6,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Bud Cort",
+    "Cyril Cusack",
+    "Ellen Geer",
+    "Eric Christmas",
+    "G. Wood",
+    "Ruth Gordon",
+    "Tom Skerritt"
+  ],
+  "musica": [
+    "Cat Stevens gato"
+  ],
+  "fotografia": [
+    "John A. Alonzo"
+  ],
+  "guion": [
+    "Colin Higgins"
+  ],
+  "temas": [
+    "Joie de vivre",
+    "Sociedad de Estados Unidos",
+    "alienación",
+    "clase alta",
+    "diferencia de edad en las relaciones sexuales",
+    "ideación suicida",
+    "intergenerationality",
+    "outsider",
+    "sobreviviente del Holocausto",
+    "suicidio",
+    "tercera edad"
+  ],
+  "escenario": [
+    "San Francisco"
+  ]
 }

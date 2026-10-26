@@ -18,5 +18,11 @@
   "tmdb_id": 10494,
   "titulo_es": "Perfect Blue",
   "titulo_original": "PERFECT BLUE",
-  "tmdb_rating": 8.3
+  "tmdb_rating": 8.3,
+  "paises": [
+    "Japón"
+  ],
+  "guion": [
+    "Sadayuki Murai"
+  ]
 }

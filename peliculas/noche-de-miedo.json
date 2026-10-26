@@ -18,5 +18,37 @@
   "tmdb_id": 11797,
   "titulo_es": "Noche de miedo",
   "titulo_original": "Fright Night",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Amanda Bearse",
+    "Art Evans",
+    "Chris Sarandon",
+    "Heidi Sorenson",
+    "Jonathan Stark",
+    "Roddy McDowall",
+    "Stephen Geoffreys",
+    "Stewart Stern",
+    "William Ragsdale"
+  ],
+  "musica": [
+    "Brad Fiedel"
+  ],
+  "fotografia": [
+    "Jan Kiesser"
+  ],
+  "guion": [
+    "Tom Holland"
+  ],
+  "temas": [
+    "adolescencia",
+    "industria cinematográfica",
+    "sexualidad humana",
+    "vampiro"
+  ],
+  "escenario": [
+    "Estados Unidos"
+  ]
 }

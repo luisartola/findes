@@ -18,5 +18,29 @@
   "tmdb_id": 2153,
   "titulo_es": "Driver",
   "titulo_original": "The Driver",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Bruce Dern",
+    "Felice Orlandi",
+    "Isabelle Adjani",
+    "Joseph Walsh",
+    "Matt Clark",
+    "Ronee Blakley",
+    "Ryan O'Neal"
+  ],
+  "musica": [
+    "Michael Small"
+  ],
+  "fotografia": [
+    "Philip H. Lathrop"
+  ],
+  "guion": [
+    "Walter Hill"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

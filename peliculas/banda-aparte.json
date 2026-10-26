@@ -18,5 +18,31 @@
   "tmdb_id": 8073,
   "titulo_es": "Banda aparte",
   "titulo_original": "Bande à part",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Anna Karina",
+    "Claude Brasseur",
+    "Danièle Delorme",
+    "Georges Staquet",
+    "Jean-Claude Rémoleux",
+    "Jean-Luc Godard",
+    "Louisa Colpeyn",
+    "Sami Frey"
+  ],
+  "musica": [
+    "Jean Ferrat",
+    "Michel Legrand"
+  ],
+  "fotografia": [
+    "Raoul Coutard"
+  ],
+  "guion": [
+    "Jean-Luc Godard"
+  ],
+  "escenario": [
+    "París"
+  ]
 }

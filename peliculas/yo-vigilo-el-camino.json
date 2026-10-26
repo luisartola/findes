@@ -18,5 +18,28 @@
   "tmdb_id": 72881,
   "titulo_es": "Yo vigilo el camino",
   "titulo_original": "I Walk the Line",
-  "tmdb_rating": 5.7
+  "tmdb_rating": 5.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Charles Durning",
+    "Estelle Parsons",
+    "Gregory Peck",
+    "Lonny Chapman",
+    "Ralph Meeker",
+    "Tuesday Weld"
+  ],
+  "musica": [
+    "Johnny Cash"
+  ],
+  "fotografia": [
+    "David M. Walsh"
+  ],
+  "guion": [
+    "Alvin Sargent"
+  ],
+  "escenario": [
+    "Tennessee"
+  ]
 }

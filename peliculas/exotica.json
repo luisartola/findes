@@ -18,5 +18,29 @@
   "tmdb_id": 20156,
   "titulo_es": "Exótica",
   "titulo_original": "Exotica",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Canadá"
+  ],
+  "reparto": [
+    "Arsinée Khanjian",
+    "Bruce Greenwood",
+    "Don McKellar",
+    "Elias Koteas",
+    "Mia Kirshner",
+    "Sarah Polley",
+    "Victor Garber"
+  ],
+  "musica": [
+    "Mychael Danna"
+  ],
+  "fotografia": [
+    "Paul Sarossy"
+  ],
+  "guion": [
+    "Atom Egoyan"
+  ],
+  "escenario": [
+    "Toronto"
+  ]
 }

@@ -18,5 +18,38 @@
   "tmdb_id": 42695,
   "titulo_es": "Soy curiosa (amarillo)",
   "titulo_original": "Jag är nyfiken - en film i gult",
-  "tmdb_rating": 5.7
+  "tmdb_rating": 5.7,
+  "paises": [
+    "Suecia"
+  ],
+  "reparto": [
+    "Anders Ek",
+    "Bengt Palmers",
+    "Bertil Norström",
+    "Börje Ahlstedt",
+    "Chris Wahlström",
+    "Dora Söderberg",
+    "Holger Löwenadler",
+    "Lena Nyman",
+    "Marie Göranzon",
+    "Martin Luther King",
+    "Olof Palme",
+    "Peter Lindgren",
+    "Sven Wollter",
+    "Vilgot Sjöman",
+    "Yevgueni Yevtushenko",
+    "Öllegård Wellton"
+  ],
+  "musica": [
+    "Bengt Ernryd"
+  ],
+  "fotografia": [
+    "Peter Wester"
+  ],
+  "guion": [
+    "Vilgot Sjöman"
+  ],
+  "escenario": [
+    "Estocolmo"
+  ]
 }

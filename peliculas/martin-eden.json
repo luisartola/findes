@@ -18,5 +18,41 @@
   "tmdb_id": 582873,
   "titulo_es": "Martin Eden",
   "titulo_original": "Martin Eden",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Carlo Cecchi",
+    "Carmen Pommella",
+    "Denise Sardisco",
+    "Jessica Cressy",
+    "Luca Marinelli",
+    "Vincenzo Nemolato"
+  ],
+  "musica": [
+    "Marco Messina",
+    "Paolo Marzocchi",
+    "Sacha Ricci"
+  ],
+  "fotografia": [
+    "Alessandro Abate",
+    "Francesco Di Giacomo"
+  ],
+  "guion": [
+    "Maurizio Braucci",
+    "Pietro Marcello"
+  ],
+  "temas": [
+    "clase obrera",
+    "escritor",
+    "relaciones de clase",
+    "relación intercultural",
+    "upward social mobility"
+  ],
+  "escenario": [
+    "Alemania",
+    "Nápoles"
+  ]
 }

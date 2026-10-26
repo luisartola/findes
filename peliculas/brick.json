@@ -18,5 +18,36 @@
   "tmdb_id": 9270,
   "titulo_es": "Brick",
   "titulo_original": "Brick",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Brian J. White",
+    "Emilie de Ravin",
+    "Joseph Gordon-Levitt",
+    "Lukas Haas",
+    "Matthew O'Leary",
+    "Meagan Good",
+    "Noah Fleiss",
+    "Noah Segan",
+    "Nora Zehetner",
+    "Reedy Gibbs",
+    "Richard Roundtree"
+  ],
+  "musica": [
+    "Nathan Johnson"
+  ],
+  "fotografia": [
+    "Steve Yedlin"
+  ],
+  "guion": [
+    "Rian Johnson"
+  ],
+  "temas": [
+    "narcotráfico"
+  ],
+  "escenario": [
+    "California"
+  ]
 }

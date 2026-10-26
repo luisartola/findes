@@ -18,5 +18,15 @@
   "tmdb_id": 81,
   "titulo_es": "Nausicaä del valle del viento",
   "titulo_original": "風の谷のナウシカ",
-  "tmdb_rating": 7.9
+  "tmdb_rating": 7.9,
+  "paises": [
+    "Japón"
+  ],
+  "musica": [
+    "Joe Hisaishi"
+  ],
+  "guion": [
+    "Hayao Miyazaki",
+    "Kazunori Itō"
+  ]
 }

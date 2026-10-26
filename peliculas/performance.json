@@ -18,5 +18,30 @@
   "tmdb_id": null,
   "titulo_es": "Performance",
   "titulo_original": "Performance",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Allan Cuthbertson",
+    "Anita Pallenberg",
+    "James Fox",
+    "John Creasey",
+    "Kenneth Colley",
+    "Mick Jagger"
+  ],
+  "musica": [
+    "Jack Nitzsche"
+  ],
+  "fotografia": [
+    "Nicolas Roeg"
+  ],
+  "guion": [
+    "Donald Cammell"
+  ],
+  "escenario": [
+    "Inglaterra",
+    "Japón",
+    "Nueva York"
+  ]
 }

@@ -18,5 +18,25 @@
   "tmdb_id": 118007,
   "titulo_es": "El esqueleto de la señora Morales",
   "titulo_original": "El esqueleto de la señora Morales",
-  "tmdb_rating": 8.0
+  "tmdb_rating": 8.0,
+  "paises": [
+    "México"
+  ],
+  "reparto": [
+    "Amparo Rivelles",
+    "Antonio Bravo",
+    "Arturo de Córdova",
+    "Elda Peralta",
+    "Jorge Mondragón",
+    "Rosenda Monteros"
+  ],
+  "musica": [
+    "Raúl Lavista"
+  ],
+  "fotografia": [
+    "Víctor Herrera Piggott"
+  ],
+  "guion": [
+    "Luis Alcoriza"
+  ]
 }

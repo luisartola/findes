@@ -18,5 +18,44 @@
   "tmdb_id": 35921,
   "titulo_es": "Impulso criminal",
   "titulo_original": "Compulsion",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Bradford Dillman",
+    "Colin Kenny",
+    "Dayton Lummis",
+    "Dean Stockwell",
+    "Diane Varsi",
+    "E. G. Marshall",
+    "Edward Binns",
+    "Gavin MacLeod",
+    "Hank Mann",
+    "Ina Balin",
+    "Louise Lorimer",
+    "Martin Milner",
+    "Orson Welles",
+    "Peter Brocco",
+    "Richard Anderson",
+    "Robert Burton",
+    "Robert F. Simon",
+    "Simon Scott",
+    "Wilton Graff"
+  ],
+  "musica": [
+    "Lionel Newman"
+  ],
+  "fotografia": [
+    "William C. Mellor"
+  ],
+  "guion": [
+    "Richard Murphy"
+  ],
+  "temas": [
+    "pena de muerte"
+  ],
+  "escenario": [
+    "Chicago"
+  ]
 }

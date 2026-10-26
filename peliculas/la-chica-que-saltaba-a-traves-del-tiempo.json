@@ -18,5 +18,20 @@
   "tmdb_id": 14069,
   "titulo_es": "La chica que saltaba a través del tiempo",
   "titulo_original": "時をかける少女",
-  "tmdb_rating": 7.8
+  "tmdb_rating": 7.8,
+  "paises": [
+    "Japón"
+  ],
+  "musica": [
+    "Kiyoshi Yoshida"
+  ],
+  "guion": [
+    "Satoko Okudera"
+  ],
+  "temas": [
+    "viaje a través del tiempo"
+  ],
+  "escenario": [
+    "Tokio"
+  ]
 }

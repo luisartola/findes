@@ -18,5 +18,54 @@
   "tmdb_id": 4723,
   "titulo_es": "Southland Tales",
   "titulo_original": "Southland Tales",
-  "tmdb_rating": 5.2
+  "tmdb_rating": 5.2,
+  "paises": [
+    "Alemania",
+    "Estados Unidos",
+    "Francia"
+  ],
+  "reparto": [
+    "Amy Poehler",
+    "Bai Ling",
+    "Beth Grant",
+    "Cheri Oteri",
+    "Christopher Lambert",
+    "Curtis Armstrong",
+    "Dwayne Johnson",
+    "Holmes Osborne",
+    "Janeane Garofalo",
+    "Jill Ritchie",
+    "John Larroquette",
+    "Jon Lovitz",
+    "Katherine Kendall",
+    "Kevin Smith",
+    "Lou Taylor Pucci",
+    "Mandy Moore",
+    "Miranda Richardson",
+    "Nora Dunn",
+    "Sab Shimono",
+    "Sarah Michelle Gellar",
+    "Seann William Scott",
+    "Todd Berger",
+    "Wallace Shawn",
+    "Will Sasso",
+    "Wood Harris",
+    "Zelda Rubinstein"
+  ],
+  "musica": [
+    "Moby"
+  ],
+  "fotografia": [
+    "Steven Barry Poster"
+  ],
+  "guion": [
+    "Richard Kelly"
+  ],
+  "temas": [
+    "viaje a través del tiempo"
+  ],
+  "escenario": [
+    "California",
+    "Los Ángeles"
+  ]
 }

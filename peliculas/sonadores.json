@@ -17,5 +17,40 @@
   ],
   "findes": [
     1
+  ],
+  "paises": [
+    "Francia",
+    "Italia",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Anna Chancellor",
+    "Eva Green",
+    "François Truffaut",
+    "Gilbert Adair",
+    "Henri Langlois",
+    "Jean Seberg",
+    "Jean-Paul Belmondo",
+    "Jean-Pierre Kalfon",
+    "Jean-Pierre Léaud",
+    "Louis Garrel",
+    "Michael Pitt",
+    "Robin Renucci",
+    "Valentin Merlet"
+  ],
+  "fotografia": [
+    "Fabio Cianchetti"
+  ],
+  "guion": [
+    "Gilbert Adair"
+  ],
+  "temas": [
+    "cinefilia",
+    "libertad",
+    "sexualidad humana",
+    "triángulo amoroso"
+  ],
+  "escenario": [
+    "París"
   ]
 }

@@ -18,5 +18,32 @@
   "tmdb_id": 11542,
   "titulo_es": "Un viaje alucinante al fondo de la mente",
   "titulo_original": "Altered States",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Blair Brown",
+    "Bob Balaban",
+    "Charles Haid",
+    "Drew Barrymore",
+    "Francis X. McCarthy",
+    "George Gaynes",
+    "John Larroquette",
+    "Paul Larsson",
+    "Thaao Penghlis",
+    "William Hurt"
+  ],
+  "musica": [
+    "John Corigliano"
+  ],
+  "fotografia": [
+    "Jordan Cronenweth"
+  ],
+  "guion": [
+    "Paddy Chayefsky"
+  ],
+  "escenario": [
+    "Boston"
+  ]
 }

@@ -18,5 +18,28 @@
   "tmdb_id": 428449,
   "titulo_es": "A Ghost Story",
   "titulo_original": "A Ghost Story",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Brea Grant",
+    "Casey Affleck",
+    "David Lowery",
+    "Kesha",
+    "Rooney Mara",
+    "Will Oldham"
+  ],
+  "musica": [
+    "Daniel Hart"
+  ],
+  "fotografia": [
+    "Andrew Droz Palermo"
+  ],
+  "guion": [
+    "David Lowery"
+  ],
+  "escenario": [
+    "Dallas"
+  ]
 }

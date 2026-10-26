@@ -18,5 +18,31 @@
   "tmdb_id": 2771,
   "titulo_es": "American Splendor",
   "titulo_original": "American Splendor",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Donal Logue",
+    "Harvey Pekar",
+    "Hope Davis",
+    "James Urbaniak",
+    "Judah Friedlander",
+    "Katrina Bowden",
+    "Molly Shannon",
+    "Paul Giamatti"
+  ],
+  "musica": [
+    "Basil Poledouris"
+  ],
+  "fotografia": [
+    "Terry Stacey"
+  ],
+  "guion": [
+    "Robert Pulcini",
+    "Shari Springer Berman"
+  ],
+  "escenario": [
+    "Cleveland"
+  ]
 }

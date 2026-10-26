@@ -18,5 +18,42 @@
   "tmdb_id": 468,
   "titulo_es": "Mi Idaho privado",
   "titulo_original": "My Own Private Idaho",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Chiara Caselli",
+    "Flea",
+    "Grace Zabriskie",
+    "Gus Van Sant",
+    "James Caviezel",
+    "James Russo",
+    "Keanu Reeves",
+    "Massimo Di Cataldo",
+    "River Phoenix",
+    "Rodney Harvey",
+    "Scott Patrick Green",
+    "Tom Troupe",
+    "Udo Kier",
+    "William Richert"
+  ],
+  "musica": [
+    "Bill Stafford"
+  ],
+  "fotografia": [
+    "Eric Alan Edwards"
+  ],
+  "guion": [
+    "Gus Van Sant"
+  ],
+  "temas": [
+    "prostitución"
+  ],
+  "escenario": [
+    "Idaho",
+    "Italia",
+    "Portland",
+    "Seattle"
+  ]
 }

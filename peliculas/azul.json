@@ -17,5 +17,57 @@
   ],
   "findes": [
     4
+  ],
+  "paises": [
+    "Francia",
+    "Polonia",
+    "Reino Unido",
+    "Suiza"
+  ],
+  "reparto": [
+    "Alain Decaux",
+    "Alain Ollivier",
+    "Arno Chevrier",
+    "Benoît Régent",
+    "Charlotte Véry",
+    "Claude Duneton",
+    "Daniel Martin",
+    "Emmanuelle Riva",
+    "Florence Pernel",
+    "Florence Vignon",
+    "Guillaume de Tonquédec",
+    "Hugues Quester",
+    "Hélène Vincent",
+    "Idit Cebula",
+    "Isabelle Sadoyan",
+    "Julie Delpy",
+    "Julie Gayet",
+    "Juliette Binoche",
+    "Philippe Manesse",
+    "Philippe Morier-Genoud",
+    "Philippe Volter",
+    "Pierre Forget",
+    "Stanislas Nordey",
+    "Yann Trégouët",
+    "Zbigniew Zamachowski"
+  ],
+  "musica": [
+    "Zbigniew Preisner"
+  ],
+  "fotografia": [
+    "Sławomir Idziak"
+  ],
+  "guion": [
+    "Agnieszka Holland",
+    "Edward Zebrowski",
+    "Krzysztof Kieślowski",
+    "Krzysztof Piesiewicz",
+    "Sławomir Idziak"
+  ],
+  "temas": [
+    "libertad"
+  ],
+  "escenario": [
+    "París"
   ]
 }

@@ -18,5 +18,41 @@
   "tmdb_id": 10360,
   "titulo_es": "Hunger",
   "titulo_original": "Hunger",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Irlanda",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "BJ Hogg",
+    "Ben Peel",
+    "Brian Milligan",
+    "Ciaran Flynn",
+    "Des McAleer",
+    "Karen Hassan",
+    "Lalor Roddy",
+    "Liam Cunningham",
+    "Liam McMahon",
+    "Michael Fassbender",
+    "Stuart Graham"
+  ],
+  "musica": [
+    "David Holmes"
+  ],
+  "fotografia": [
+    "Sean Bobbitt"
+  ],
+  "guion": [
+    "Enda Walsh",
+    "Steve McQueen"
+  ],
+  "temas": [
+    "Conflicto norirlandés",
+    "Huelga de hambre de 1981 en Irlanda del Norte",
+    "IRA"
+  ],
+  "escenario": [
+    "Belfast",
+    "Irlanda del Norte"
+  ]
 }

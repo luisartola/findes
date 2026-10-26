@@ -18,5 +18,22 @@
   "tmdb_id": 10857,
   "titulo_es": "Cuando el viento sopla",
   "titulo_original": "When the Wind Blows",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Reino Unido"
+  ],
+  "musica": [
+    "Roger Waters"
+  ],
+  "guion": [
+    "Raymond Briggs"
+  ],
+  "temas": [
+    "Guerra Fría",
+    "contaminación radiactiva",
+    "guerra nuclear"
+  ],
+  "escenario": [
+    "Sussex"
+  ]
 }

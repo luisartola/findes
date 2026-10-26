@@ -18,5 +18,26 @@
   "tmdb_id": 932801,
   "titulo_es": "La Teoría Universal",
   "titulo_original": "Die Theorie von Allem",
-  "tmdb_rating": 5.9
+  "tmdb_rating": 5.9,
+  "paises": [
+    "Alemania",
+    "Austria",
+    "Suiza"
+  ],
+  "reparto": [
+    "Gottfried Breitfuss",
+    "Hanns Zischler",
+    "Jan Bülow",
+    "Olivia Ross"
+  ],
+  "musica": [
+    "Diego Ramos Rodríguez"
+  ],
+  "fotografia": [
+    "Roland Stuprich"
+  ],
+  "guion": [
+    "Roderick Warich",
+    "Timm Kröger"
+  ]
 }

@@ -17,5 +17,41 @@
   ],
   "findes": [
     25
+  ],
+  "paises": [
+    "Alemania",
+    "España",
+    "Estados Unidos",
+    "Francia",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Benjamin Sadler",
+    "Dominic Raacke",
+    "Frank Witter",
+    "Karoline Herfurth",
+    "Katrin Pollitt",
+    "Max Urlacher",
+    "Michael Rotschopf",
+    "Noomi Rapace",
+    "Patrick Heyn",
+    "Paul Anderson",
+    "Peer Martiny",
+    "Rachel McAdams",
+    "Rainer Bock",
+    "Trystan Pütter"
+  ],
+  "musica": [
+    "Pino Donaggio"
+  ],
+  "fotografia": [
+    "José Luis Alcaine"
+  ],
+  "guion": [
+    "Alain Corneau",
+    "Brian De Palma"
+  ],
+  "escenario": [
+    "Londres"
   ]
 }

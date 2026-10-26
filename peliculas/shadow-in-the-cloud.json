@@ -18,5 +18,26 @@
   "tmdb_id": 675327,
   "titulo_es": "Pasajero oculto",
   "titulo_original": "Shadow in the Cloud",
-  "tmdb_rating": 5.8
+  "tmdb_rating": 5.8,
+  "paises": [
+    "Estados Unidos",
+    "Nueva Zelanda"
+  ],
+  "reparto": [
+    "Benedict Wall",
+    "Beulah Koale",
+    "Byron Coll",
+    "Callan Mulvey",
+    "Chloë Grace Moretz",
+    "Joe Witkowski",
+    "Nick Robinson",
+    "Taylor John Smith"
+  ],
+  "musica": [
+    "Mahuia Bridgman-Cooper"
+  ],
+  "guion": [
+    "Max Landis",
+    "Roseanne Liang"
+  ]
 }

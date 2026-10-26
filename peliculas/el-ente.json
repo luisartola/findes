@@ -18,5 +18,31 @@
   "tmdb_id": 24740,
   "titulo_es": "El Ente",
   "titulo_original": "The Entity",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alex Rocco",
+    "Allan Rich",
+    "Barbara Hershey",
+    "David Labiosa",
+    "George Coe",
+    "Jacqueline Brookes",
+    "Maggie Blye",
+    "Michael Alldredge",
+    "Ron Silver"
+  ],
+  "musica": [
+    "Charles Bernstein"
+  ],
+  "fotografia": [
+    "Stephen H. Burum"
+  ],
+  "guion": [
+    "Frank DeFelitta"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

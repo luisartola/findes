@@ -18,5 +18,35 @@
   "tmdb_id": 8070,
   "titulo_es": "La habitación verde",
   "titulo_original": "La Chambre verte",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Antoine Vitez",
+    "François Truffaut",
+    "Jean Dasté",
+    "Jean-Pierre Ducos",
+    "Jean-Pierre Moulin",
+    "Nathalie Baye",
+    "Serge Rousseau"
+  ],
+  "musica": [
+    "Maurice Jaubert"
+  ],
+  "fotografia": [
+    "Néstor Almendros"
+  ],
+  "guion": [
+    "François Truffaut",
+    "Jean Gruault"
+  ],
+  "temas": [
+    "Primera Guerra Mundial",
+    "duelo",
+    "muerte"
+  ],
+  "escenario": [
+    "Francia"
+  ]
 }

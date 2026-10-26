@@ -18,5 +18,32 @@
   "tmdb_id": 11018,
   "titulo_es": "Manhattan Sur",
   "titulo_original": "Year of the Dragon",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Ariane Koizumi",
+    "Caroline Kava",
+    "Dennis Dun",
+    "Eddie Jones",
+    "Jack Kehler",
+    "John Lone",
+    "Mickey Rourke",
+    "Raymond J. Barry",
+    "Victor Wong"
+  ],
+  "musica": [
+    "David Mansfield"
+  ],
+  "fotografia": [
+    "Alex Thomson"
+  ],
+  "guion": [
+    "Michael Cimino",
+    "Oliver Stone"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

@@ -18,5 +18,17 @@
   "tmdb_id": 814776,
   "titulo_es": "El club de las luchadoras",
   "titulo_original": "Bottoms",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Ayo Edebiri",
+    "Rachel Sennott",
+    "Ruby Cruz"
+  ],
+  "guion": [
+    "Emma Seligman",
+    "Rachel Sennott"
+  ]
 }

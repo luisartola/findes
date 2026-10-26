@@ -18,5 +18,30 @@
   "tmdb_id": 43751,
   "titulo_es": "¿Quién puede matar a un niño?",
   "titulo_original": "¿Quién puede matar a un niño?",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Antonio Iranzo",
+    "Cristina Torres",
+    "Jesús Nieto",
+    "Lewis Fiander",
+    "Marisa Porcel",
+    "Miguel Narros",
+    "Narciso Ibáñez Serrador",
+    "Prunella Ransome"
+  ],
+  "musica": [
+    "Waldo de los Ríos"
+  ],
+  "fotografia": [
+    "José Luis Alcaine"
+  ],
+  "guion": [
+    "Narciso Ibáñez Serrador"
+  ],
+  "escenario": [
+    "España"
+  ]
 }

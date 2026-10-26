@@ -18,5 +18,35 @@
   "tmdb_id": 45132,
   "titulo_es": "Super",
   "titulo_original": "Super",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Andre Royo",
+    "Elliot Page",
+    "Gregg Henry",
+    "James Gunn",
+    "Kevin Bacon",
+    "Linda Cardellini",
+    "Liv Tyler",
+    "Lloyd Kaufman",
+    "Michael Rooker",
+    "Nathan Fillion",
+    "Rainn Wilson",
+    "Rob Zombie",
+    "Sean Gunn",
+    "Stephen Blackehart",
+    "William Katt",
+    "Zach Gilford"
+  ],
+  "musica": [
+    "Tyler Bates"
+  ],
+  "fotografia": [
+    "Steve Gainer"
+  ],
+  "guion": [
+    "James Gunn"
+  ]
 }

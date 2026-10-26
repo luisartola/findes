@@ -18,5 +18,29 @@
   "tmdb_id": 115470,
   "titulo_es": "La madre muerta",
   "titulo_original": "La madre muerta",
-  "tmdb_rating": 5.9
+  "tmdb_rating": 5.9,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Ana Álvarez",
+    "Elena Irureta",
+    "José Sacristán",
+    "Juanma Bajo Ulloa",
+    "Karra Elejalde",
+    "Lio",
+    "Ramón Barea",
+    "Silvia Marsó",
+    "Txarly Llorente"
+  ],
+  "musica": [
+    "Bingen Mendizábal"
+  ],
+  "fotografia": [
+    "Javier Aguirresarobe"
+  ],
+  "guion": [
+    "Eduardo Bajo Ulloa",
+    "Juanma Bajo Ulloa"
+  ]
 }

@@ -18,5 +18,46 @@
   "tmdb_id": 16871,
   "titulo_es": "Arrástrame al infierno",
   "titulo_original": "Drag Me to Hell",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Adriana Barraza",
+    "Alex Veadov",
+    "Alexis Cruz",
+    "Alison Lohman",
+    "Bojana Novakovic",
+    "Chelcie Ross",
+    "Chloe Dykstra",
+    "Christopher Young",
+    "David Paymer",
+    "Dileep Rao",
+    "Justin Long",
+    "Kevin Foster",
+    "Lorna Raver",
+    "Molly Cheek",
+    "Octavia Spencer",
+    "Reggie Lee",
+    "Sam Raimi",
+    "Ted Raimi"
+  ],
+  "musica": [
+    "Christopher Young"
+  ],
+  "fotografia": [
+    "Peter Deming"
+  ],
+  "guion": [
+    "Ivan Raimi",
+    "Sam Raimi"
+  ],
+  "temas": [
+    "arribismo",
+    "maldición",
+    "sobrenatural"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

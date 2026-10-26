@@ -18,5 +18,17 @@
   "tmdb_id": 457962,
   "titulo_es": "Lago Shimmer",
   "titulo_original": "Shimmer Lake",
-  "tmdb_rating": 5.9
+  "tmdb_rating": 5.9,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Benjamin Walker"
+  ],
+  "musica": [
+    "Joseph Trapanese"
+  ],
+  "fotografia": [
+    "Jarin Blaschke"
+  ]
 }

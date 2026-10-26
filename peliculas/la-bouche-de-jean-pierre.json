@@ -18,5 +18,18 @@
   "tmdb_id": 80990,
   "titulo_es": "La Bouche de Jean-Pierre",
   "titulo_original": "La Bouche de Jean-Pierre",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Francia"
+  ],
+  "musica": [
+    "François Roy",
+    "Loïc Da Silva"
+  ],
+  "fotografia": [
+    "Gaspar Noé"
+  ],
+  "guion": [
+    "Lucile Hadzihalilovic"
+  ]
 }

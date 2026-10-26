@@ -18,5 +18,48 @@
   "tmdb_id": 13550,
   "titulo_es": "Al final de la escalera",
   "titulo_original": "The Changeling",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Canadá"
+  ],
+  "reparto": [
+    "Barry Morse",
+    "Eric Christmas",
+    "Frances Hyland",
+    "George C. Scott",
+    "Helen Burns",
+    "J. Kenneth Campbell",
+    "Janne Mortil",
+    "Jean Marsh",
+    "John Colicos",
+    "Madeleine Sherwood",
+    "Melvyn Douglas",
+    "Robert Monroe",
+    "Ruth Springford",
+    "Trish Van Devere"
+  ],
+  "musica": [
+    "Rick Wilkins"
+  ],
+  "fotografia": [
+    "John Coquillon"
+  ],
+  "guion": [
+    "Russell Hunter",
+    "William Gray"
+  ],
+  "temas": [
+    "esconder",
+    "infanticidio",
+    "investigación criminal",
+    "luto",
+    "muerte del hijo",
+    "usurpación de identidad",
+    "venganza",
+    "vida después de la muerte"
+  ],
+  "escenario": [
+    "Seattle",
+    "Washington"
+  ]
 }

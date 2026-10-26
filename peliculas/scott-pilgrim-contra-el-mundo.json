@@ -18,5 +18,48 @@
   "tmdb_id": 22538,
   "titulo_es": "Scott Pilgrim contra el mundo",
   "titulo_original": "Scott Pilgrim vs. the World",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Canadá",
+    "Estados Unidos",
+    "Japón",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Alison Pill",
+    "Anna Kendrick",
+    "Aubrey Plaza",
+    "Ben Lewis",
+    "Bill Hader",
+    "Brandon Routh",
+    "Brie Larson",
+    "Chris Evans",
+    "Clifton Collins Jr.",
+    "Ellen Wong",
+    "Erik Knudsen",
+    "Jason Schwartzman",
+    "John Patrick Amedori",
+    "Johnny Simmons",
+    "Kieran Culkin",
+    "Mark Webber",
+    "Mary Elizabeth Winstead",
+    "Michael Cera",
+    "Satya Bhabha",
+    "Thomas Jane",
+    "Will Seatle Bowes"
+  ],
+  "musica": [
+    "Nigel Godrich"
+  ],
+  "fotografia": [
+    "Bill Pope"
+  ],
+  "guion": [
+    "Bryan Lee O'Malley",
+    "Edgar Wright",
+    "Michael Bacall"
+  ],
+  "escenario": [
+    "Toronto"
+  ]
 }

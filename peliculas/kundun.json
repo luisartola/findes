@@ -18,5 +18,26 @@
   "tmdb_id": 9746,
   "titulo_es": "Kundun",
   "titulo_original": "Kundun",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Losang Gyatso",
+    "Losang Samten",
+    "Phintso Thonden",
+    "Tencho Gyatso",
+    "Tenzin Thuthob Tsarong",
+    "Tsewang Jigme Tsarong",
+    "Yoon C. Joyce"
+  ],
+  "musica": [
+    "Philip Glass"
+  ],
+  "fotografia": [
+    "Roger Deakins"
+  ],
+  "guion": [
+    "Melissa Mathison"
+  ]
 }

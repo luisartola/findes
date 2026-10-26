@@ -18,5 +18,38 @@
   "tmdb_id": 38985,
   "titulo_es": "Carga maldita",
   "titulo_original": "Sorcerer",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Estados Unidos",
+    "México"
+  ],
+  "reparto": [
+    "Amidou",
+    "André Falcon",
+    "Anne-Marie Deschodt",
+    "Bruno Cremer",
+    "Francisco Rabal",
+    "Friedrich von Ledebur",
+    "Jacques François",
+    "Jean-Luc Bideau",
+    "Joe Spinell",
+    "Karl John",
+    "Peter Capell",
+    "Ramon Bieri",
+    "Roy Scheider",
+    "Tom Signorelli"
+  ],
+  "musica": [
+    "Michel Colombier"
+  ],
+  "fotografia": [
+    "Dick Bush",
+    "John M. Stephens"
+  ],
+  "guion": [
+    "Walon Green"
+  ],
+  "escenario": [
+    "Venezuela"
+  ]
 }

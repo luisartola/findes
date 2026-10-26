@@ -18,5 +18,57 @@
   "tmdb_id": 4995,
   "titulo_es": "Boogie nights",
   "titulo_original": "Boogie Nights",
-  "tmdb_rating": 7.6
+  "tmdb_rating": 7.6,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alfred Molina",
+    "Anne Fletcher",
+    "Burt Reynolds",
+    "Channon Roe",
+    "Don Cheadle",
+    "Heather Graham",
+    "Jack Riley",
+    "Joanna Gleason",
+    "John C. Reilly",
+    "John Doe",
+    "Jon Brion",
+    "Julianne Moore",
+    "Laurel Holloman",
+    "Luis Guzmán",
+    "Mark Wahlberg",
+    "Melora Walters",
+    "Michael Jace",
+    "Michael Penn",
+    "Nicole Ari Parker",
+    "Nina Hartley",
+    "Philip Baker Hall",
+    "Philip Seymour Hoffman",
+    "Ricky Jay",
+    "Robert Downey Sr.",
+    "Robert Ridgely",
+    "Skye Blue",
+    "Thomas Jane",
+    "Tom Lenk",
+    "Tony Tedeschi",
+    "Veronica Hart",
+    "William H. Macy"
+  ],
+  "musica": [
+    "Michael Penn"
+  ],
+  "fotografia": [
+    "Robert Elswit"
+  ],
+  "guion": [
+    "Paul Thomas Anderson"
+  ],
+  "temas": [
+    "industria pornográfica",
+    "pornografía"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

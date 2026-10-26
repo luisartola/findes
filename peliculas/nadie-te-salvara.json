@@ -18,5 +18,20 @@
   "tmdb_id": 820609,
   "titulo_es": "Nadie te salvará",
   "titulo_original": "No One Will Save You",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Kaitlyn Dever"
+  ],
+  "musica": [
+    "Joseph Trapanese"
+  ],
+  "fotografia": [
+    "Aaron Morton"
+  ],
+  "guion": [
+    "Brian Duffield"
+  ]
 }

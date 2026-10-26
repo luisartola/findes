@@ -18,5 +18,24 @@
   "tmdb_id": 795811,
   "titulo_es": "La ruleta de la fortuna y la fantasía",
   "titulo_original": "偶然と想像",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Aoba Kawai",
+    "Ayumu Nakajima",
+    "Fusako Urabe",
+    "Hyunri",
+    "Katsuki Mori",
+    "Kiyohiko Shibukawa",
+    "Kotone Furukawa",
+    "Shōma Kai"
+  ],
+  "fotografia": [
+    "Yukiko Iioka"
+  ],
+  "guion": [
+    "Ryūsuke Hamaguchi"
+  ]
 }

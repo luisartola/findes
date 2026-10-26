@@ -18,5 +18,33 @@
   "tmdb_id": 14696,
   "titulo_es": "Cuentos de la luna pálida",
   "titulo_original": "雨月物語",
-  "tmdb_rating": 8.0
+  "tmdb_rating": 8.0,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Eitaro Ozawa",
+    "Ikio Sawamura",
+    "Kichijirō Ueda",
+    "Kinuyo Tanaka",
+    "Machiko Kyō",
+    "Masayuki Mori",
+    "Mitsuko Mito",
+    "Ryosuke Kagawa",
+    "Saburo Date"
+  ],
+  "musica": [
+    "Fumio Hayasaka",
+    "Ichirō Saitō"
+  ],
+  "fotografia": [
+    "Kazuo Miyagawa"
+  ],
+  "guion": [
+    "Matsutarō Kawaguchi",
+    "Yoshikata Yoda"
+  ],
+  "escenario": [
+    "Japón"
+  ]
 }

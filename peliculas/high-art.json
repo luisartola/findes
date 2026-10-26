@@ -18,5 +18,26 @@
   "tmdb_id": 37636,
   "titulo_es": "High Art",
   "titulo_original": "High Art",
-  "tmdb_rating": 6.2
+  "tmdb_rating": 6.2,
+  "paises": [
+    "Canadá",
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Ally Sheedy",
+    "Anh Duong",
+    "Bill Sage",
+    "David Thornton",
+    "Gabriel Mann",
+    "Patricia Clarkson"
+  ],
+  "fotografia": [
+    "Tami Reiker"
+  ],
+  "guion": [
+    "Lisa Cholodenko"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

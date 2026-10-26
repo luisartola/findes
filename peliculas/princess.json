@@ -17,5 +17,42 @@
   ],
   "findes": [
     9
+  ],
+  "paises": [
+    "Australia",
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "André the Giant",
+    "Anne Dyson",
+    "Betsy Brantley",
+    "Billy Crystal",
+    "Carol Kane",
+    "Cary Elwes",
+    "Chris Sarandon",
+    "Christopher Guest",
+    "Fred Savage",
+    "Mandy Patinkin",
+    "Mark Knopfler",
+    "Mel Smith",
+    "Peter Cook",
+    "Peter Falk",
+    "Robin Wright",
+    "Wallace Shawn"
+  ],
+  "musica": [
+    "Mark Knopfler"
+  ],
+  "fotografia": [
+    "Adrian Biddle"
+  ],
+  "guion": [
+    "William Goldman"
+  ],
+  "temas": [
+    "piratería"
+  ],
+  "escenario": [
+    "Europa Central"
   ]
 }

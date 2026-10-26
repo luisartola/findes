@@ -18,5 +18,28 @@
   "tmdb_id": 193722,
   "titulo_es": "R100",
   "titulo_original": "R100",
-  "tmdb_rating": 5.7
+  "tmdb_rating": 5.7,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Ai Tominaga",
+    "Atsuro Watabe",
+    "Eriko Sato",
+    "Gin Maeda",
+    "Hitoshi Matsumoto",
+    "Nao Ōmori",
+    "Naomi Watanabe",
+    "Shinobu Terajima",
+    "Suzuki Matsuo",
+    "You"
+  ],
+  "fotografia": [
+    "Kazunari Tanaka"
+  ],
+  "guion": [
+    "Hitoshi Matsumoto",
+    "Mitsuru Kuramoto",
+    "Mitsuyoshi Takasu"
+  ]
 }

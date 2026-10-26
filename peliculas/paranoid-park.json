@@ -18,5 +18,28 @@
   "tmdb_id": 1990,
   "titulo_es": "Paranoid Park",
   "titulo_original": "Paranoid Park",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Estados Unidos",
+    "Francia"
+  ],
+  "reparto": [
+    "Christopher Doyle",
+    "Gabe Nevins",
+    "Scott Patrick Green",
+    "Taylor Momsen"
+  ],
+  "musica": [
+    "Ethan Rose"
+  ],
+  "fotografia": [
+    "Christopher Doyle"
+  ],
+  "guion": [
+    "Blake Nelson",
+    "Gus Van Sant"
+  ],
+  "escenario": [
+    "Portland"
+  ]
 }

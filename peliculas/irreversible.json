@@ -18,5 +18,31 @@
   "tmdb_id": 979,
   "titulo_es": "Irreversible",
   "titulo_original": "Irréversible",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Albert Dupontel",
+    "Estella Warren",
+    "Jean-Louis Costes",
+    "Jo Prestia",
+    "Monica Bellucci",
+    "Philippe Nahon",
+    "Stéphane Drouot",
+    "Vincent Cassel"
+  ],
+  "fotografia": [
+    "Benoît Debie",
+    "Gaspar Noé"
+  ],
+  "guion": [
+    "Gaspar Noé"
+  ],
+  "temas": [
+    "venganza"
+  ],
+  "escenario": [
+    "París"
+  ]
 }

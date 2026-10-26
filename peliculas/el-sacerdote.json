@@ -18,5 +18,32 @@
   "tmdb_id": 47121,
   "titulo_es": "El sacerdote",
   "titulo_original": "El sacerdote",
-  "tmdb_rating": 5.9
+  "tmdb_rating": 5.9,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Emilio Gutiérrez Caba",
+    "Esperanza Roy",
+    "José Franco Pumarega",
+    "José Manuel Cervino",
+    "José Vivó",
+    "Queta Claver",
+    "Ramón Pons",
+    "Ramón Reparaz",
+    "Simón Andreu",
+    "África Pratt"
+  ],
+  "musica": [
+    "Carmelo Bernaola"
+  ],
+  "fotografia": [
+    "Magí Torruella"
+  ],
+  "guion": [
+    "Enrique Barreiro"
+  ],
+  "escenario": [
+    "España"
+  ]
 }

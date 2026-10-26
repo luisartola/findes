@@ -18,5 +18,36 @@
   "tmdb_id": 33257,
   "titulo_es": "Fando y Lis",
   "titulo_original": "Fando y Lis",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "México"
+  ],
+  "reparto": [
+    "Alejandro Jodorowsky",
+    "Amparo Villegas",
+    "Carlos Ancira",
+    "Diana Mariscal",
+    "Juan José Arreola",
+    "Julia Marichal",
+    "Rafael Corkidi",
+    "Sergio Klainer",
+    "Tamara Garina"
+  ],
+  "fotografia": [
+    "Rafael Corkidi"
+  ],
+  "guion": [
+    "Alejandro Jodorowsky",
+    "Fernando Arrabal"
+  ],
+  "temas": [
+    "amor romántico",
+    "defecto",
+    "errantry",
+    "relación íntima",
+    "vida y muerte"
+  ],
+  "escenario": [
+    "http://www.wikidata.org/.well-known/genid/e9cb7cd598422f8f629a16561d08f4c6"
+  ]
 }

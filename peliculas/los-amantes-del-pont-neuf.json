@@ -18,5 +18,35 @@
   "tmdb_id": 2767,
   "titulo_es": "Los amantes del Pont-Neuf",
   "titulo_original": "Les Amants du Pont-Neuf",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Denis Lavant",
+    "Juliette Binoche",
+    "Klaus Michael Grüber",
+    "Marc Maurette",
+    "Marie Trintignant",
+    "Édith Scob"
+  ],
+  "musica": [
+    "Arvo Pärt"
+  ],
+  "fotografia": [
+    "Jean-Yves Escoffier"
+  ],
+  "guion": [
+    "Leos Carax"
+  ],
+  "temas": [
+    "amor romántico",
+    "artista",
+    "drogadicción",
+    "precariado",
+    "sinhogarismo"
+  ],
+  "escenario": [
+    "París"
+  ]
 }

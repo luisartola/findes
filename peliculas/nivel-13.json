@@ -18,5 +18,44 @@
   "tmdb_id": 1090,
   "titulo_es": "Nivel 13",
   "titulo_original": "The Thirteenth Floor",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Alemania",
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alison Lohman",
+    "Armin Mueller-Stahl",
+    "Brad William Henke",
+    "Brooks Almy",
+    "Craig Bierko",
+    "Dennis Haysbert",
+    "Ernie Lively",
+    "Gretchen Mol",
+    "Hadda Brooks",
+    "Janet MacLachlan",
+    "Johnny Crawford",
+    "Leon Rippy",
+    "Rif Hutton",
+    "Shiri Appleby",
+    "Tia Texada",
+    "Vincent D'Onofrio",
+    "Will Wallace"
+  ],
+  "musica": [
+    "Harald Kloser"
+  ],
+  "fotografia": [
+    "Wedigo von Schultzendorff"
+  ],
+  "guion": [
+    "Josef Rusnak"
+  ],
+  "temas": [
+    "realidad simulada",
+    "telepresencia"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

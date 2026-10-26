@@ -18,5 +18,42 @@
   "tmdb_id": 16858,
   "titulo_es": "All That Jazz (Empieza el espectáculo)",
   "titulo_original": "All That Jazz",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alan Heim",
+    "Ann Reinking",
+    "Anthony Holland",
+    "Ben Vereen",
+    "Chris Chase",
+    "Cliff Gorman",
+    "David Margulies",
+    "Jessica Lange",
+    "Joanna Merlin",
+    "John Lithgow",
+    "Keith Gordon",
+    "Leah Ayres",
+    "Leland Palmer",
+    "Max Wright",
+    "Michael Tolan",
+    "Roy Scheider",
+    "Sandahl Bergman",
+    "Susan Brooks",
+    "Wallace Shawn"
+  ],
+  "musica": [
+    "Ralph Burns"
+  ],
+  "fotografia": [
+    "Giuseppe Rotunno"
+  ],
+  "guion": [
+    "Bob Fosse",
+    "Robert Alan Aurthur"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

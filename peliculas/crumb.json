@@ -18,5 +18,18 @@
   "tmdb_id": 26564,
   "titulo_es": "Crumb",
   "titulo_original": "Crumb",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "fotografia": [
+    "Maryse Alberti"
+  ],
+  "temas": [
+    "Robert Crumb",
+    "familia disfuncional"
+  ],
+  "escenario": [
+    "San Francisco"
+  ]
 }

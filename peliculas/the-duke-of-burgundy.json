@@ -18,5 +18,23 @@
   "tmdb_id": 250225,
   "titulo_es": "The Duke of Burgundy",
   "titulo_original": "The Duke of Burgundy",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Hungría",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Kata Bartsch",
+    "Monica Swinn"
+  ],
+  "musica": [
+    "Faris Badwan",
+    "Rachel Zeffira"
+  ],
+  "fotografia": [
+    "Nic Knowland"
+  ],
+  "guion": [
+    "Peter Strickland"
+  ]
 }

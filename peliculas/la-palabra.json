@@ -18,5 +18,37 @@
   "tmdb_id": 48035,
   "titulo_es": "Ordet (La palabra)",
   "titulo_original": "Ordet",
-  "tmdb_rating": 7.9
+  "tmdb_rating": 7.9,
+  "paises": [
+    "Dinamarca"
+  ],
+  "reparto": [
+    "Birgitte Federspiel",
+    "Cay Kristiansen",
+    "Edith Thrane",
+    "Ejner Federspiel",
+    "Emil Hass Christensen",
+    "Henrik Malberg",
+    "Henry Skjær",
+    "Kirsten Andreasen",
+    "Ove Rud",
+    "Preben Lerdorff Rye"
+  ],
+  "musica": [
+    "Poul Schierbeck"
+  ],
+  "fotografia": [
+    "Henning Bendtsen"
+  ],
+  "guion": [
+    "Carl Theodor Dreyer",
+    "Kaj Munk"
+  ],
+  "temas": [
+    "aborto",
+    "embarazo humano"
+  ],
+  "escenario": [
+    "Dinamarca"
+  ]
 }

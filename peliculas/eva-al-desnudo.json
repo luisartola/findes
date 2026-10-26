@@ -18,5 +18,42 @@
   "tmdb_id": 705,
   "titulo_es": "Eva al desnudo",
   "titulo_original": "All About Eve",
-  "tmdb_rating": 8.1
+  "tmdb_rating": 8.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Anne Baxter",
+    "Barbara Bates",
+    "Bess Flowers",
+    "Bette Davis",
+    "Celeste Holm",
+    "Craig Hill",
+    "Franklyn Farnum",
+    "Gary Merrill",
+    "George Sanders",
+    "Gregory Ratoff",
+    "Harold Miller",
+    "Hugh Marlowe",
+    "Jack Chefe",
+    "Marilyn Monroe",
+    "Snub Pollard",
+    "Steven Geray",
+    "Thelma Ritter",
+    "Walter Hampden"
+  ],
+  "musica": [
+    "Alfred Newman"
+  ],
+  "fotografia": [
+    "Milton Krasner"
+  ],
+  "guion": [
+    "Erich Kästner",
+    "Joseph L. Mankiewicz"
+  ],
+  "escenario": [
+    "Connecticut",
+    "Nueva York"
+  ]
 }

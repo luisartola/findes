@@ -18,5 +18,49 @@
   "tmdb_id": 14580,
   "titulo_es": "Los sobornados",
   "titulo_original": "The Big Heat",
-  "tmdb_rating": 7.7
+  "tmdb_rating": 7.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Adam Williams",
+    "Alexander Scourby",
+    "Carolyn Jones",
+    "Celia Lovsky",
+    "Chris Alcaide",
+    "Dan Seymour",
+    "Dorothy Green",
+    "Edith Evanson",
+    "Glenn Ford",
+    "Gloria Grahame",
+    "Harry Lauter",
+    "Howard Wendell",
+    "Jeanette Nolan",
+    "Jocelyn Brando",
+    "John Crawford",
+    "Lee Marvin",
+    "Peter Whitney",
+    "Phil Arnold",
+    "Ric Roman",
+    "Robert Burton",
+    "Sidney Clute",
+    "Willis Bouchey"
+  ],
+  "musica": [
+    "Mischa Bakaleinikoff"
+  ],
+  "fotografia": [
+    "Charles Lang"
+  ],
+  "guion": [
+    "Fritz Lang",
+    "Sydney Boehm",
+    "William P. McGivern"
+  ],
+  "temas": [
+    "suicidio"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

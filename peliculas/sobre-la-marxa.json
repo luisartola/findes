@@ -18,5 +18,11 @@
   "tmdb_id": 250294,
   "titulo_es": "El inventor de la selva",
   "titulo_original": "Sobre la marxa",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "España"
+  ],
+  "guion": [
+    "Jordi Morató"
+  ]
 }

@@ -18,5 +18,29 @@
   "tmdb_id": 234,
   "titulo_es": "El gabinete del doctor Caligari",
   "titulo_original": "Das Cabinet des Dr. Caligari",
-  "tmdb_rating": 7.9
+  "tmdb_rating": 7.9,
+  "paises": [
+    "Alemania"
+  ],
+  "reparto": [
+    "Conrad Veidt",
+    "Elsa Wagner",
+    "Friedrich Feher",
+    "Hans Heinrich von Twardowski",
+    "Lil Dagover",
+    "Ludwig Rex",
+    "Rudolf Klein-Rogge",
+    "Rudolf Lettinger",
+    "Werner Krauß"
+  ],
+  "musica": [
+    "Giuseppe Becce"
+  ],
+  "fotografia": [
+    "Willy Hameister"
+  ],
+  "guion": [
+    "Carl Mayer",
+    "Hans Janowitz"
+  ]
 }

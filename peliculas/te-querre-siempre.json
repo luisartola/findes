@@ -18,5 +18,37 @@
   "tmdb_id": 2748,
   "titulo_es": "Te querré siempre",
   "titulo_original": "Viaggio in Italia",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Anna Proclemer",
+    "George Sanders",
+    "Ingrid Bergman",
+    "Lucio Caracciolo",
+    "Lyla Rocco",
+    "Maria Mauban",
+    "María Martín",
+    "Paul Muller"
+  ],
+  "musica": [
+    "Renzo Rossellini"
+  ],
+  "fotografia": [
+    "Enzo Serafin"
+  ],
+  "guion": [
+    "Antonio Pietrangeli",
+    "Roberto Rossellini",
+    "Vitaliano Brancati"
+  ],
+  "escenario": [
+    "Isla de Capri",
+    "Maiori",
+    "Nápoles",
+    "Pompeya",
+    "Pozzuoli"
+  ]
 }

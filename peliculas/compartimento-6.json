@@ -18,5 +18,43 @@
   "tmdb_id": 588182,
   "titulo_es": "Compartimento Nº 6",
   "titulo_original": "Hytti nro 6",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Alemania",
+    "Estonia",
+    "Finlandia",
+    "Rusia"
+  ],
+  "reparto": [
+    "Dinara Drukarova",
+    "Seidi Haarla",
+    "Tomi Alatalo",
+    "Yuliya Aug",
+    "Yuri Borísov"
+  ],
+  "fotografia": [
+    "Jani-Petteri Passi"
+  ],
+  "guion": [
+    "Andris Feldmanis",
+    "Juho Kuosmanen",
+    "Livia Ulman",
+    "Lyubov Mulmenko"
+  ],
+  "temas": [
+    "autodescubrimiento",
+    "fleeting relationship",
+    "foreignness",
+    "longing",
+    "soledad",
+    "tiempo histórico",
+    "viaje",
+    "vinculación humana"
+  ],
+  "escenario": [
+    "Moscú",
+    "Múrmansk",
+    "Petrozavodsk",
+    "San Petersburgo"
+  ]
 }

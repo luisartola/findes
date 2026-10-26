@@ -18,5 +18,40 @@
   "tmdb_id": 595,
   "titulo_es": "Matar a un ruiseñor",
   "titulo_original": "To Kill a Mockingbird",
-  "tmdb_rating": 8.0
+  "tmdb_rating": 8.0,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alice Ghostley",
+    "Brock Peters",
+    "Collin Wilcox",
+    "Estelle Evans",
+    "Frank Overton",
+    "Gregory Peck",
+    "Hugh Sanders",
+    "James Anderson",
+    "John Megna",
+    "Kim Hamilton",
+    "Mary Badham",
+    "Paul Fix",
+    "Phillip Alford",
+    "Richard Hale",
+    "Robert Duvall",
+    "Rosemary Murphy",
+    "Ruth White",
+    "William Windom"
+  ],
+  "musica": [
+    "Elmer Bernstein"
+  ],
+  "fotografia": [
+    "Russell Harlan"
+  ],
+  "guion": [
+    "Horton Foote"
+  ],
+  "escenario": [
+    "Alabama"
+  ]
 }

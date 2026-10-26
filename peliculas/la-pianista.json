@@ -17,5 +17,53 @@
   ],
   "findes": [
     7
+  ],
+  "paises": [
+    "Alemania",
+    "Austria",
+    "Francia"
+  ],
+  "reparto": [
+    "Anna Sigalevitch",
+    "Annie Girardot",
+    "Benoît Magimel",
+    "Cornelia Köndgen",
+    "Dieter Berner",
+    "Eva Green",
+    "Gabriele Schuchter",
+    "Georg Friedrich",
+    "Gerti Drassl",
+    "Isabelle Huppert",
+    "Karoline Zeisler",
+    "Klaus Händl",
+    "Liliana Nelska",
+    "Lisa Oláh",
+    "Luz Leskowitz",
+    "Michael Schottenberg",
+    "Noam Morgensztern",
+    "Rudolf Melichar",
+    "Susanne Lothar",
+    "Thomas Weinhappel",
+    "Udo Samel",
+    "Vitus Wieser",
+    "Vivian Bartsch",
+    "William Mang"
+  ],
+  "fotografia": [
+    "Christian Berger"
+  ],
+  "guion": [
+    "Michael Haneke"
+  ],
+  "temas": [
+    "ambivalencia",
+    "diferencia de edad en las relaciones sexuales",
+    "relación padres-hijos",
+    "sexualidad humana",
+    "social dependency",
+    "teacher-student relationship"
+  ],
+  "escenario": [
+    "Viena"
   ]
 }

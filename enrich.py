@@ -245,3 +245,4 @@ if not_found:
     print("\nLas no encontradas puedes editarlas a mano en peliculas/<slug>.json")
     print("Añade tmdb_id y ejecuta de nuevo, o rellena los campos.")
 print("\nRevisa el resultado con: python3 check_data.py")
+print("Y completa reparto, países, etc. con: python3 enrich_wikidata.py")

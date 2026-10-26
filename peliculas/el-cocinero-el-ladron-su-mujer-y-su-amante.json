@@ -18,5 +18,46 @@
   "tmdb_id": 7452,
   "titulo_es": "El cocinero, el ladrón, su mujer y su amante",
   "titulo_original": "The Cook, the Thief, His Wife & Her Lover",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Francia",
+    "Países Bajos",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Alan Howard",
+    "Alex Kingston",
+    "Arnie Breeveld",
+    "Bob Goody",
+    "Ciarán Hinds",
+    "Diane Langton",
+    "Ewan Stewart",
+    "Gary Olsen",
+    "Helen Mirren",
+    "Hywel Williams-Ellis",
+    "Ian Dury",
+    "Janet Henfrey",
+    "Liz Smith",
+    "Michael Clark",
+    "Richard Bohringer",
+    "Roger Ashton-Griffiths",
+    "Roger Lloyd-Pack",
+    "Ron Cook",
+    "Tim Roth",
+    "Yolande Brener"
+  ],
+  "musica": [
+    "Michael Nyman"
+  ],
+  "fotografia": [
+    "Sacha Vierny"
+  ],
+  "guion": [
+    "Peter Greenaway"
+  ],
+  "temas": [
+    "adulterio",
+    "crimen organizado",
+    "sexo extramarital"
+  ]
 }

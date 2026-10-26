@@ -18,5 +18,26 @@
   "tmdb_id": 10404,
   "titulo_es": "La linterna roja",
   "titulo_original": "大红灯笼高高挂",
-  "tmdb_rating": 7.9
+  "tmdb_rating": 7.9,
+  "paises": [
+    "República Popular China"
+  ],
+  "reparto": [
+    "Cao Cuifen",
+    "Gong Li",
+    "He Saifei",
+    "Kong Lin"
+  ],
+  "musica": [
+    "Zhao Jiping"
+  ],
+  "fotografia": [
+    "Zhao Fei"
+  ],
+  "guion": [
+    "Ni Zhen"
+  ],
+  "escenario": [
+    "China"
+  ]
 }

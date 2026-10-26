@@ -18,5 +18,62 @@
   "tmdb_id": 38442,
   "titulo_es": "Al fuego, bomberos",
   "titulo_original": "Hoří, má panenko",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Checoslovaquia",
+    "Italia"
+  ],
+  "reparto": [
+    "Alena Freiburgová",
+    "Alena Květová",
+    "Anna Liepoldová",
+    "Antonín Blažejovský",
+    "E. Šnajdrová",
+    "F. Řehořková",
+    "František Debelka",
+    "František Paska",
+    "František Reinstein",
+    "František Svět",
+    "Hana Hanusová",
+    "Hana Kuberová",
+    "J. Řeháček",
+    "Jan Stöckl",
+    "Jan Vostrčil",
+    "Jarmila Kuchařová",
+    "Jiří Líbal",
+    "Josef Kolb",
+    "Josef Kutálek",
+    "Josef Valnoha",
+    "Josef Řehořek",
+    "Josef Šebánek",
+    "Ladislav Adam",
+    "M. Mejsnarová",
+    "Marie Kovářová",
+    "Marie Slívová",
+    "Milada Ježková",
+    "Miloš Forman",
+    "Miluše Zelená",
+    "Olga Matušková",
+    "Stanislav Dytrich",
+    "Stanislav Holubec",
+    "V. Bartošová",
+    "V. Janusová",
+    "Vlastimila Vlková",
+    "Vratislav Čermák",
+    "Václav Novotný"
+  ],
+  "musica": [
+    "Karel Mareš"
+  ],
+  "fotografia": [
+    "Miroslav Ondříček"
+  ],
+  "guion": [
+    "Ivan Passer",
+    "Jaroslav Papoušek",
+    "Miloš Forman"
+  ],
+  "escenario": [
+    "República Checa"
+  ]
 }

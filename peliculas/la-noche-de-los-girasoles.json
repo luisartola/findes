@@ -18,5 +18,41 @@
   "tmdb_id": 58946,
   "titulo_es": "La noche de los girasoles",
   "titulo_original": "La noche de los girasoles",
-  "tmdb_rating": 6.2
+  "tmdb_rating": 6.2,
+  "paises": [
+    "España",
+    "Francia",
+    "Portugal"
+  ],
+  "reparto": [
+    "Carmelo Gómez",
+    "Celso Bugallo",
+    "Cesáreo Estébanez",
+    "Enrique Martínez",
+    "Judith Diakhate",
+    "Luís Mascarenhas",
+    "Manuel Morón",
+    "Mariano Peña",
+    "Petra Martínez Pérez",
+    "Rodolfo Sancho",
+    "Vicente Romero Sánchez",
+    "Walter Vidarte"
+  ],
+  "musica": [
+    "Krishna Levy"
+  ],
+  "fotografia": [
+    "Ángel Iguácel"
+  ],
+  "guion": [
+    "Jorge Sánchez-Cabezudo"
+  ],
+  "temas": [
+    "abuso de poder",
+    "ruralidad",
+    "violencia"
+  ],
+  "escenario": [
+    "provincia de Ávila"
+  ]
 }

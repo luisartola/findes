@@ -18,5 +18,44 @@
   "tmdb_id": 52859,
   "titulo_es": "Hombres intrépidos",
   "titulo_original": "The Long Voyage Home",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Arthur Shields",
+    "Barry Fitzgerald",
+    "Billy Bevan",
+    "Douglas Walton",
+    "Harry Tenbrook",
+    "Harry Woods",
+    "Ian Hunter",
+    "J. M. Kerrigan",
+    "Jack Pennick",
+    "James Flavin",
+    "Joe Sawyer",
+    "John Qualen",
+    "John Wayne",
+    "Lionel Pape",
+    "Mildred Natwick",
+    "Rafaela Ottiano",
+    "Thomas Mitchell",
+    "Ward Bond",
+    "Wilfrid Lawson",
+    "Wyndham Standing"
+  ],
+  "musica": [
+    "Richard Hageman"
+  ],
+  "fotografia": [
+    "Gregg Toland"
+  ],
+  "guion": [
+    "Dudley Nichols",
+    "Eugene O'Neill"
+  ],
+  "temas": [
+    "Segunda Guerra Mundial",
+    "náutica"
+  ]
 }

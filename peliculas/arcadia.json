@@ -17,5 +17,60 @@
   ],
   "findes": [
     17
+  ],
+  "paises": [
+    "Bélgica",
+    "España",
+    "Francia"
+  ],
+  "reparto": [
+    "Airy Routier",
+    "Alain Guillo",
+    "Catherine Salée",
+    "Christa Theret",
+    "Dieudonné Kabongo",
+    "Donald E. Westlake",
+    "Geordy Monfils",
+    "Hervé Pauchon",
+    "Jean-Claude Grumberg",
+    "Jean-Michel Balthazar",
+    "Jean-Pierre Gos",
+    "Jeanne Savary",
+    "John Landis",
+    "José Garcia",
+    "Karin Viard",
+    "Luce Mouchel",
+    "Marie Kremer",
+    "Nabil Ben Yadir",
+    "Olga Grumberg",
+    "Olivier Gourmet",
+    "Philippe Bardy",
+    "Renaud Rutten",
+    "Romain Gavras",
+    "Serge Larivière",
+    "Thierry Hancisse",
+    "Ulrich Tukur",
+    "Vanessa Larré",
+    "Yolande Moreau",
+    "Yvon Back"
+  ],
+  "musica": [
+    "Armand Amar"
+  ],
+  "fotografia": [
+    "Patrick Blossier"
+  ],
+  "guion": [
+    "Costa-Gavras",
+    "Jean-Claude Grumberg"
+  ],
+  "temas": [
+    "cambio social",
+    "competitividad",
+    "desempleo",
+    "homicidio doloso"
+  ],
+  "escenario": [
+    "Europa Occidental"
   ]
 }

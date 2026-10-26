@@ -18,5 +18,37 @@
   "tmdb_id": 46362,
   "titulo_es": "Malpertuis",
   "titulo_original": "Malpertuis",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "Alemania",
+    "Bélgica",
+    "Francia"
+  ],
+  "reparto": [
+    "Charles Janssens",
+    "Daniel Pilon",
+    "Dora van der Groen",
+    "Jean-Pierre Cassel",
+    "Jet Naessens",
+    "Johnny Hallyday",
+    "Marc Didden",
+    "Mathieu Carrière",
+    "Michel Bouquet",
+    "Orson Welles",
+    "Robert Lussac",
+    "Rosemarie Bergmans",
+    "Susan Hampshire",
+    "Sylvie Vartan",
+    "Walter Rilla"
+  ],
+  "musica": [
+    "Georges Delerue"
+  ],
+  "fotografia": [
+    "Gerry Fisher"
+  ],
+  "guion": [
+    "Jean Ferry",
+    "Jean Ray"
+  ]
 }

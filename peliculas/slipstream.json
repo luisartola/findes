@@ -18,5 +18,30 @@
   "tmdb_id": 18633,
   "titulo_es": "Slipstream",
   "titulo_original": "Slipstream",
-  "tmdb_rating": 4.9
+  "tmdb_rating": 4.9,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Anthony Hopkins",
+    "Camryn Manheim",
+    "Christian Slater",
+    "Christopher Lawford",
+    "Fionnula Flanagan",
+    "Jeffrey Tambor",
+    "John Turturro",
+    "Kevin McCarthy",
+    "Michael Clarke Duncan",
+    "Michael Lerner",
+    "S. Epatha Merkerson"
+  ],
+  "musica": [
+    "Anthony Hopkins"
+  ],
+  "fotografia": [
+    "Dante Spinotti"
+  ],
+  "guion": [
+    "Anthony Hopkins"
+  ]
 }

@@ -18,5 +18,36 @@
   "tmdb_id": 10475,
   "titulo_es": "Factotum",
   "titulo_original": "Factotum",
-  "tmdb_rating": 6.2
+  "tmdb_rating": 6.2,
+  "paises": [
+    "Alemania",
+    "Estados Unidos",
+    "Francia",
+    "Noruega"
+  ],
+  "reparto": [
+    "Adrienne Shelly",
+    "Didier Flamand",
+    "Fisher Stevens",
+    "Karen Young",
+    "Lili Taylor",
+    "Marisa Tomei",
+    "Matt Dillon"
+  ],
+  "musica": [
+    "Kristin Asbjørnsen"
+  ],
+  "fotografia": [
+    "John Christian Rosenlund"
+  ],
+  "guion": [
+    "Bent Hamer",
+    "Charles Bukowski"
+  ],
+  "temas": [
+    "alcoholismo"
+  ],
+  "escenario": [
+    "Estados Unidos"
+  ]
 }

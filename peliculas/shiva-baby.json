@@ -18,5 +18,12 @@
   "tmdb_id": 664300,
   "titulo_es": "Shiva Baby",
   "titulo_original": "Shiva Baby",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Canadá",
+    "Estados Unidos"
+  ],
+  "guion": [
+    "Emma Seligman"
+  ]
 }

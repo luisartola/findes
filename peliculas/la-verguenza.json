@@ -18,5 +18,16 @@
   "tmdb_id": 164572,
   "titulo_es": "La vergüenza",
   "titulo_original": "La vergüenza",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Alberto San Juan",
+    "Natalia Mateo",
+    "Norma Martínez"
+  ],
+  "guion": [
+    "David Planell"
+  ]
 }

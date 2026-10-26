@@ -18,5 +18,36 @@
   "tmdb_id": 54561,
   "titulo_es": "Un burgués pequeño, muy pequeño",
   "titulo_original": "Un borghese piccolo piccolo",
-  "tmdb_rating": 8.0
+  "tmdb_rating": 8.0,
+  "paises": [
+    "Italia"
+  ],
+  "reparto": [
+    "Alberto Sordi",
+    "Enrico Beruschi",
+    "Ettore Garofolo",
+    "Francesco D'Adda",
+    "Lina Franchi",
+    "Paolo Paoloni",
+    "Pietro Tordi",
+    "Renato Malavasi",
+    "Renato Romano",
+    "Renato Scarpa",
+    "Romolo Valli",
+    "Shelley Winters",
+    "Vincenzo Crocitti"
+  ],
+  "musica": [
+    "Giancarlo Chiaramello"
+  ],
+  "fotografia": [
+    "Mario Vulpiani"
+  ],
+  "guion": [
+    "Mario Monicelli",
+    "Sergio Amidei"
+  ],
+  "escenario": [
+    "Italia"
+  ]
 }

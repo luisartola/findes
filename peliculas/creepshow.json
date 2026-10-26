@@ -18,5 +18,39 @@
   "tmdb_id": 16281,
   "titulo_es": "Creepshow",
   "titulo_original": "Creepshow",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Adrienne Barbeau",
+    "Carrie Nye",
+    "E. G. Marshall",
+    "Ed Harris",
+    "Fritz Weaver",
+    "Gaylen Ross",
+    "Gwen Verdon",
+    "Hal Holbrook",
+    "Joe Hill",
+    "John Colicos",
+    "Leslie Nielsen",
+    "Robert Harper",
+    "Stephen King",
+    "Ted Danson",
+    "Tom Atkins",
+    "Tom Savini",
+    "Viveca Lindfors"
+  ],
+  "musica": [
+    "John Harrison"
+  ],
+  "fotografia": [
+    "Michael Gornick"
+  ],
+  "guion": [
+    "Stephen King"
+  ],
+  "escenario": [
+    "Pittsburgh"
+  ]
 }

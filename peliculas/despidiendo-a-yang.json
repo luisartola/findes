@@ -18,5 +18,29 @@
   "tmdb_id": 585378,
   "titulo_es": "Despidiendo a Yang",
   "titulo_original": "After Yang",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Brett Dier",
+    "Clifton Collins Jr.",
+    "Colin Farrell",
+    "Haley Lu Richardson",
+    "Jodie Turner-Smith",
+    "Justin H. Min",
+    "Malea Emma Tjandrawidjaja",
+    "Orlagh Cassidy",
+    "Ritchie Coster",
+    "Sarita Choudhury"
+  ],
+  "musica": [
+    "Ryūichi Sakamoto"
+  ],
+  "fotografia": [
+    "Benjamin Loeb"
+  ],
+  "guion": [
+    "Kogonada"
+  ]
 }

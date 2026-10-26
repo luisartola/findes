@@ -18,5 +18,29 @@
   "tmdb_id": 95031,
   "titulo_es": "El anacoreta",
   "titulo_original": "El anacoreta",
-  "tmdb_rating": 5.5
+  "tmdb_rating": 5.5,
+  "paises": [
+    "España",
+    "Francia"
+  ],
+  "reparto": [
+    "Charo Soriano",
+    "Claude Dauphin",
+    "Eduardo Calvo",
+    "Fernando Fernán Gómez",
+    "Isabel Mestres",
+    "Luis Ciges",
+    "Luis Sánchez Polack",
+    "Pedro Beltrán",
+    "Rafael Albaicín",
+    "Sergio Mendizábal",
+    "Vicente Haro",
+    "Ángel Álvarez"
+  ],
+  "fotografia": [
+    "Alejandro Ulloa"
+  ],
+  "guion": [
+    "Rafael Azcona"
+  ]
 }

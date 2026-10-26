@@ -18,5 +18,42 @@
   "tmdb_id": 931,
   "titulo_es": "Amenaza en la sombra",
   "titulo_original": "Don't Look Now",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Italia",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Bruno Cattaneo",
+    "Clelia Matania",
+    "David Tree",
+    "Donald Sutherland",
+    "Giorgio Trestini",
+    "Hilary Mason",
+    "Julie Christie",
+    "Leopoldo Trieste",
+    "Massimo Serato",
+    "Renato Scarpa"
+  ],
+  "musica": [
+    "Pino Donaggio"
+  ],
+  "fotografia": [
+    "Anthony B. Richmond",
+    "Nicolas Roeg"
+  ],
+  "guion": [
+    "Allan Scott",
+    "Chris Bryant",
+    "Daphne du Maurier"
+  ],
+  "temas": [
+    "asesino en serie",
+    "destino",
+    "luto",
+    "muerte del hijo"
+  ],
+  "escenario": [
+    "Venecia"
+  ]
 }

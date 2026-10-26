@@ -18,5 +18,36 @@
   "tmdb_id": 8043,
   "titulo_es": "Nevada Express",
   "titulo_original": "Breakheart Pass",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Archie Moore",
+    "Ben Johnson",
+    "Bill McKinney",
+    "Charles Bronson",
+    "Charles Durning",
+    "David Huddleston",
+    "Ed Lauter",
+    "Jill Ireland",
+    "Joe Kapp",
+    "Rayford Barnes",
+    "Richard Crenna",
+    "Robert Tessier",
+    "Roy Jenson",
+    "Sally Kirkland"
+  ],
+  "musica": [
+    "Jerry Goldsmith"
+  ],
+  "fotografia": [
+    "Lucien Ballard"
+  ],
+  "guion": [
+    "Alistair MacLean"
+  ],
+  "escenario": [
+    "Utah"
+  ]
 }

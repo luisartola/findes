@@ -18,5 +18,31 @@
   "tmdb_id": 164283,
   "titulo_es": "El mundo sigue",
   "titulo_original": "El mundo sigue",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Agustín González",
+    "Ana María Custodio",
+    "Antonio Giménez Escribano",
+    "Elena María Tejeiro",
+    "Fernando Fernán Gómez",
+    "Fernando Guillén Gallego",
+    "Gemma Cuervo",
+    "Jacinto San Emeterio",
+    "Joaquín Pamplona",
+    "José Calvo",
+    "José María Caffarel",
+    "Julia Delgado Caro",
+    "Lina Canalejas",
+    "Mari Carmen Prendes",
+    "Marisa Paredes",
+    "María Luisa Ponte",
+    "Milagros Leal",
+    "Pilar Bardem"
+  ],
+  "fotografia": [
+    "Emilio Foriscot"
+  ]
 }

@@ -18,5 +18,30 @@
   "tmdb_id": 63435,
   "titulo_es": "Melodía para un asesinato",
   "titulo_original": "Fingers",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Danny Aiello",
+    "Dominic Chianese",
+    "Harvey Keitel",
+    "Jim Brown",
+    "Lenny Montana",
+    "Marian Seldes",
+    "Michael V. Gazzo",
+    "Sam Coppola",
+    "Tanya Roberts",
+    "Tisa Farrow",
+    "Tony Sirico"
+  ],
+  "fotografia": [
+    "Michael Chapman"
+  ],
+  "guion": [
+    "James Toback"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

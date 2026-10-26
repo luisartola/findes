@@ -18,5 +18,25 @@
   "tmdb_id": 46595,
   "titulo_es": "El gran éxtasis del escultor de madera Steiner",
   "titulo_original": "Die große Ekstase des Bildschnitzers Steiner",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Alemania",
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Walter Steiner",
+    "Werner Herzog"
+  ],
+  "musica": [
+    "Popol Vuh"
+  ],
+  "fotografia": [
+    "Jörg Schmidt-Reitwein"
+  ],
+  "guion": [
+    "Werner Herzog"
+  ],
+  "temas": [
+    "Alpes"
+  ]
 }

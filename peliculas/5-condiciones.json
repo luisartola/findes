@@ -18,5 +18,44 @@
   "tmdb_id": null,
   "tmdb_rating": null,
   "titulo_original": "De fem benspænd",
-  "titulo_es": "Cinco condiciones"
+  "titulo_es": "Cinco condiciones",
+  "paises": [
+    "Alemania",
+    "Bélgica",
+    "Dinamarca",
+    "Francia",
+    "Países Bajos",
+    "Reino Unido",
+    "Suecia",
+    "Suiza"
+  ],
+  "reparto": [
+    "Alexandra Vandernoot",
+    "Anders Hove",
+    "Charlotte Sieling",
+    "Claus Nissen",
+    "Daniel Hernández Rodríguez",
+    "Jacqueline Arenal",
+    "Jan Nowicki",
+    "Jørgen Leth",
+    "Lars von Trier",
+    "Majken Algren Nielsen",
+    "Patrick Bauchau",
+    "Stina Ekblad",
+    "Vivian Rosa"
+  ],
+  "musica": [
+    "Henning Christiansen"
+  ],
+  "fotografia": [
+    "Dan Holmberg"
+  ],
+  "guion": [
+    "Asger Leth",
+    "Jørgen Leth",
+    "Lars von Trier"
+  ],
+  "escenario": [
+    "Dinamarca"
+  ]
 }

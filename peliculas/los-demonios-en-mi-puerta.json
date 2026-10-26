@@ -18,5 +18,26 @@
   "tmdb_id": 25838,
   "titulo_es": "Los demonios en mi puerta",
   "titulo_original": "鬼子来了",
-  "tmdb_rating": 8.2
+  "tmdb_rating": 8.2,
+  "paises": [
+    "República Popular China"
+  ],
+  "reparto": [
+    "Chen Qiang",
+    "Jiang Wen",
+    "Teruyuki Kagawa"
+  ],
+  "musica": [
+    "Cui Jian",
+    "Liu Xing"
+  ],
+  "fotografia": [
+    "Gu Changwei"
+  ],
+  "guion": [
+    "Shi Ping"
+  ],
+  "escenario": [
+    "Hebei"
+  ]
 }

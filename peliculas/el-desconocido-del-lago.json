@@ -18,5 +18,33 @@
   "tmdb_id": 186992,
   "titulo_es": "El desconocido del lago",
   "titulo_original": "L'Inconnu du lac",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Christophe Paou",
+    "Emmanuel Daumas",
+    "François Renaud Labarthe",
+    "Jérôme Chappatte",
+    "Patrick d'Assumçao",
+    "Pierre Deladonchamps"
+  ],
+  "fotografia": [
+    "Claire Mathon"
+  ],
+  "guion": [
+    "Alain Guiraudie"
+  ],
+  "temas": [
+    "Cruising",
+    "comportamiento sexual humano",
+    "homicidio doloso",
+    "homosexualidad masculina",
+    "peligro",
+    "sexual desire"
+  ],
+  "escenario": [
+    "Var"
+  ]
 }

@@ -17,5 +17,33 @@
   ],
   "findes": [
     1
+  ],
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Agnes Moorehead",
+    "Anne Baxter",
+    "Dolores Costello",
+    "Don Dillaway",
+    "Dorothy Vaughan",
+    "Erskine Sanford",
+    "Joseph Cotten",
+    "Nancy Gates",
+    "Orson Welles",
+    "Ray Collins",
+    "Richard Bennett",
+    "Tim Holt"
+  ],
+  "musica": [
+    "Bernard Herrmann"
+  ],
+  "fotografia": [
+    "Orson Welles",
+    "Russell Metty",
+    "Stanley Cortez"
+  ],
+  "guion": [
+    "Orson Welles"
   ]
 }

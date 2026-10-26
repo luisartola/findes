@@ -18,5 +18,32 @@
   "tmdb_id": 38358,
   "titulo_es": "El último exorcismo",
   "titulo_original": "The Last Exorcism",
-  "tmdb_rating": 5.7
+  "tmdb_rating": 5.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Ashley Bell",
+    "Caleb Landry Jones",
+    "Carol Sutton",
+    "Iris Bahr",
+    "Louis Herthum",
+    "Patrick Fabian"
+  ],
+  "musica": [
+    "Nathan Barr"
+  ],
+  "fotografia": [
+    "Zoltan Honti"
+  ],
+  "guion": [
+    "Andrew Gurland",
+    "Huck Botko"
+  ],
+  "temas": [
+    "sobrenatural"
+  ],
+  "escenario": [
+    "Luisiana"
+  ]
 }

@@ -18,5 +18,27 @@
   "tmdb_id": 42344,
   "titulo_es": "El alucinante mundo de los Ashby",
   "titulo_original": "Paranoiac",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Colin Tapley",
+    "Janette Scott",
+    "John Stuart",
+    "Marianne Stone",
+    "Maurice Denham",
+    "Oliver Reed",
+    "Sheila Burrell",
+    "Sydney Bromley"
+  ],
+  "musica": [
+    "Elisabeth Lutyens"
+  ],
+  "fotografia": [
+    "Arthur Grant"
+  ],
+  "guion": [
+    "Jimmy Sangster"
+  ]
 }

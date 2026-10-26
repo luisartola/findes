@@ -18,5 +18,55 @@
   "tmdb_id": 110398,
   "titulo_es": "No",
   "titulo_original": "No",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Chile",
+    "Estados Unidos",
+    "Francia",
+    "México"
+  ],
+  "reparto": [
+    "Alejandro Goic",
+    "Alfredo Castro",
+    "Amparo Noguera",
+    "Antonia Zegers",
+    "Claudia Cabezas",
+    "César Caillet",
+    "Diego Muñoz",
+    "Elsa Poblete",
+    "Francisca Castillo",
+    "Gael García Bernal",
+    "Jaime Vadell",
+    "Luis Gnecco",
+    "Marcial Tagle",
+    "Néstor Cantillana",
+    "Pablo Ausensi",
+    "Pablo Krögh",
+    "Paloma Moreno",
+    "Patricio Achurra",
+    "Patricio Aylwin",
+    "Paulo Brunetti",
+    "Pedro Peirano",
+    "Roberto Farías",
+    "Sergio Hernández",
+    "Íñigo Urrutia"
+  ],
+  "musica": [
+    "Carlos Cabezas González"
+  ],
+  "fotografia": [
+    "Sergio Armstrong"
+  ],
+  "guion": [
+    "Antonio Skármeta",
+    "Pedro Peirano"
+  ],
+  "temas": [
+    "Chile, la alegría ya viene",
+    "Plebiscito nacional de Chile de 1988"
+  ],
+  "escenario": [
+    "Chile",
+    "Santiago de Chile"
+  ]
 }

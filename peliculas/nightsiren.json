@@ -18,5 +18,46 @@
   "tmdb_id": 997660,
   "titulo_es": "Nightsiren",
   "titulo_original": "Svetlonoc",
-  "tmdb_rating": 5.5
+  "tmdb_rating": 5.5,
+  "paises": [
+    "Eslovaquia",
+    "República Checa"
+  ],
+  "reparto": [
+    "Daniela Kenderová",
+    "Denis Polyák",
+    "Ela Stanová",
+    "Eva Mores",
+    "Iva Bittová",
+    "Jana Oľhová",
+    "Juliána Brutovská",
+    "Marek Geišberg",
+    "Martin Gallo",
+    "Matúš Ryšan",
+    "Milan Mikulčík",
+    "Miroslav Gerec",
+    "Monika Horváthová",
+    "Mária Stafuríková",
+    "Natália Germáni",
+    "Noël Czuczor",
+    "Peter Ondrejička",
+    "Peter Toman",
+    "Peter Čižmár",
+    "Petra Vajdová",
+    "Róbert Jakab",
+    "Sára Tömölová",
+    "Timothy Hlinka",
+    "Zuzana Konečná"
+  ],
+  "musica": [
+    "Jonatán Pastirčák",
+    "Robin Coudert"
+  ],
+  "fotografia": [
+    "Federico Cesca"
+  ],
+  "guion": [
+    "Barbora Námerová",
+    "Tereza Nvotová"
+  ]
 }

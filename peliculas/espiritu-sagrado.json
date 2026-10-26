@@ -18,5 +18,20 @@
   "tmdb_id": 846779,
   "titulo_es": "Espíritu sagrado",
   "titulo_original": "Espíritu sagrado",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "España",
+    "Francia",
+    "Turquía"
+  ],
+  "reparto": [
+    "Lorena Iglesias",
+    "Nacho Fernández"
+  ],
+  "fotografia": [
+    "Ion de Sosa"
+  ],
+  "guion": [
+    "Chema García Ibarra"
+  ]
 }

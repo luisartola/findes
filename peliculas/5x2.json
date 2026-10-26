@@ -18,5 +18,35 @@
   "tmdb_id": 4974,
   "titulo_es": "5x2 (Cinco veces dos)",
   "titulo_original": "5x2",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Antoine Chappey",
+    "Françoise Fabian",
+    "Géraldine Pailhas",
+    "Jean-Pol Brissart",
+    "Marc Ruchmann",
+    "Michael Lonsdale",
+    "Ninon Brétécher",
+    "Stéphane Freiss",
+    "Valeria Bruni-Tedeschi"
+  ],
+  "musica": [
+    "Philippe Rombi"
+  ],
+  "fotografia": [
+    "Yorick Le Saux"
+  ],
+  "guion": [
+    "Emmanuèle Bernheim",
+    "François Ozon"
+  ],
+  "temas": [
+    "relación íntima"
+  ],
+  "escenario": [
+    "París"
+  ]
 }

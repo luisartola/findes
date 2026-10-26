@@ -18,5 +18,30 @@
   "tmdb_id": 27197,
   "titulo_es": "La venganza de un actor",
   "titulo_original": "雪之丞変化",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Ayako Wakao",
+    "Eiji Funakoshi",
+    "Eijirō Yanagi",
+    "Fujiko Yamamoto",
+    "Ganjirō Nakamura",
+    "Jun Hamamura",
+    "Kazuo Hasegawa",
+    "Raizō Ichikawa",
+    "Saburo Date",
+    "Shintaro Katsu"
+  ],
+  "musica": [
+    "Yasushi Akutagawa"
+  ],
+  "guion": [
+    "Natto Wada",
+    "Teinosuke Kinugasa"
+  ],
+  "escenario": [
+    "Tokio"
+  ]
 }

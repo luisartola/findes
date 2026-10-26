@@ -18,5 +18,35 @@
   "tmdb_id": 539181,
   "titulo_es": "Relic",
   "titulo_original": "Relic",
-  "tmdb_rating": 6.1
+  "tmdb_rating": 6.1,
+  "paises": [
+    "Australia",
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Bella Heathcote",
+    "Emily Mortimer",
+    "Jeremy Stanford",
+    "Robyn Nevin"
+  ],
+  "musica": [
+    "Brian Reitzell"
+  ],
+  "fotografia": [
+    "Charlie Sarroff"
+  ],
+  "guion": [
+    "Christian White",
+    "Natalie Erika James"
+  ],
+  "temas": [
+    "demencia",
+    "enfermería",
+    "muerte",
+    "relación padres-hijos",
+    "tercera edad"
+  ],
+  "escenario": [
+    "Australia"
+  ]
 }

@@ -18,5 +18,35 @@
   "tmdb_id": 13391,
   "titulo_es": "Vexille",
   "titulo_original": "ベクシル 2077日本鎖国",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Akio Ōtsuka",
+    "Antoine Tomé",
+    "Cyril Aubin",
+    "Emmanuel Gradi",
+    "Frederic Souterelle",
+    "Jacques Albaret",
+    "Jiro Saito",
+    "Julie Deliquet",
+    "Meisa Kuroki",
+    "Romi Park",
+    "Shōsuke Tanihara",
+    "Takahiro Sakurai",
+    "Tetsuya Kakihara",
+    "Toshiyuki Morikawa",
+    "Yasuko Matsuyuki"
+  ],
+  "musica": [
+    "Paul Oakenfold"
+  ],
+  "guion": [
+    "Fumihiko Sori",
+    "Haruka Handa"
+  ],
+  "escenario": [
+    "Tokio"
+  ]
 }

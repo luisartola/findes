@@ -18,5 +18,47 @@
   "tmdb_id": 5767,
   "titulo_es": "Dos en la carretera",
   "titulo_original": "Two for the Road",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Estados Unidos",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Albert Finney",
+    "Albert Michel",
+    "Audrey Hepburn",
+    "Cathy Jones",
+    "Claude Dauphin",
+    "Denise Péron",
+    "Eleanor Bron",
+    "Georges Descrières",
+    "Hélène Tossy",
+    "Irène Hilda",
+    "Jacqueline Bisset",
+    "Jacques Hilling",
+    "Jean-François Laley",
+    "Judy Cornwell",
+    "Karyn Balm",
+    "Mario Verdon",
+    "Moustache",
+    "Nadia Gray",
+    "Olga Georges-Picot",
+    "Patricia Viterbo",
+    "Paul Mercey",
+    "Robert Le Béal",
+    "William Daniels",
+    "Yves Barsacq"
+  ],
+  "musica": [
+    "Henry Mancini"
+  ],
+  "fotografia": [
+    "Christopher Challis"
+  ],
+  "guion": [
+    "Frederic Raphael"
+  ],
+  "escenario": [
+    "Francia"
+  ]
 }

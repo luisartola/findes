@@ -18,5 +18,16 @@
   "tmdb_id": 522406,
   "titulo_es": "Flashback",
   "titulo_original": "Flashback",
-  "tmdb_rating": 6.0
+  "tmdb_rating": 6.0,
+  "paises": [
+    "Canadá"
+  ],
+  "reparto": [
+    "Dylan O'Brien",
+    "Hannah Gross",
+    "Maika Monroe"
+  ],
+  "guion": [
+    "Christopher MacBride"
+  ]
 }

@@ -18,5 +18,19 @@
   "tmdb_id": 158936,
   "titulo_es": "Interior. Bar de cuero.",
   "titulo_original": "Interior. Leather Bar.",
-  "tmdb_rating": 5.2
+  "tmdb_rating": 5.2,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "James Franco",
+    "Travis Mathews"
+  ],
+  "fotografia": [
+    "James Franco",
+    "Travis Mathews"
+  ],
+  "guion": [
+    "Travis Mathews"
+  ]
 }

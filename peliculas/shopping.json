@@ -18,5 +18,35 @@
   "tmdb_id": 45549,
   "titulo_es": "Shopping: de tiendas",
   "titulo_original": "Shopping",
-  "tmdb_rating": 5.3
+  "tmdb_rating": 5.3,
+  "paises": [
+    "Japón",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Daniel Newman",
+    "Eamonn Walker",
+    "Jason Isaacs",
+    "Jonathan Pryce",
+    "Jude Law",
+    "Marianne Faithfull",
+    "Melanie Hill",
+    "Ralph Ineson",
+    "Sadie Frost",
+    "Sean Bean",
+    "Sean Pertwee",
+    "Tilly Vosburgh"
+  ],
+  "musica": [
+    "Barrington Pheloung"
+  ],
+  "fotografia": [
+    "Tony Imi"
+  ],
+  "guion": [
+    "Paul W. S. Anderson"
+  ],
+  "escenario": [
+    "Londres"
+  ]
 }

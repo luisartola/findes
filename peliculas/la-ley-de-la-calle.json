@@ -17,5 +17,40 @@
   ],
   "findes": [
     1
+  ],
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Chris Penn",
+    "Dennis Hopper",
+    "Diana Scarwid",
+    "Diane Lane",
+    "Glenn Withrow",
+    "Heather Langenkamp",
+    "Laurence Fishburne",
+    "Matt Dillon",
+    "Michael Higgins",
+    "Mickey Rourke",
+    "Nicolas Cage",
+    "Sofia Coppola",
+    "Susan E. Hinton",
+    "Tom Waits",
+    "Tracey Walter",
+    "Vincent Spano",
+    "William Smith"
+  ],
+  "musica": [
+    "Stewart Copeland"
+  ],
+  "fotografia": [
+    "Stephen H. Burum"
+  ],
+  "guion": [
+    "Francis Ford Coppola",
+    "Susan E. Hinton"
+  ],
+  "escenario": [
+    "Oklahoma"
   ]
 }

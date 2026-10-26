@@ -18,5 +18,23 @@
   "tmdb_id": 25922,
   "titulo_es": "3 días",
   "titulo_original": "3 días",
-  "tmdb_rating": 5.7
+  "tmdb_rating": 5.7,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Antonio Dechent",
+    "Daniel Casadellà",
+    "Eduard Fernández",
+    "Mariana Cordero",
+    "Nani Jiménez",
+    "Vicente Romero Sánchez",
+    "Víctor Clavijo"
+  ],
+  "fotografia": [
+    "Kiko de la Rica"
+  ],
+  "guion": [
+    "Francisco Javier Gutiérrez"
+  ]
 }

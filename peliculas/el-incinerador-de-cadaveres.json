@@ -18,5 +18,88 @@
   "tmdb_id": 18352,
   "titulo_es": "El incinerador de cadáveres",
   "titulo_original": "Spalovač mrtvol",
-  "tmdb_rating": 7.8
+  "tmdb_rating": 7.8,
+  "paises": [
+    "Checoslovaquia"
+  ],
+  "reparto": [
+    "Alena Balejová",
+    "Alfred Růžička",
+    "Carmen Mayerová",
+    "Dimitri Rafalsky",
+    "Eduard Kohout",
+    "Erich Fichtner",
+    "Eva Ulincová",
+    "Felix Černý",
+    "František Häusler",
+    "František Kubíček",
+    "František Poláček",
+    "Helena Anýzová",
+    "Helena Kotoucová",
+    "Ilja Prachař",
+    "Jan Kraus",
+    "Jan Vlček",
+    "Jan Řeřicha",
+    "Jana Sulcová",
+    "Jana Čechová",
+    "Jaroslav Toms",
+    "Jindřich Narenta",
+    "Jirina Bila-Strechová",
+    "Jiřina Jandová",
+    "Jiří Hálek",
+    "Jiří Kaftan",
+    "Jiří Lír",
+    "Jiří Menzel",
+    "Josef Kemr",
+    "Josef Střecha",
+    "Karel Fiala",
+    "Karel Hovorka st.",
+    "Karel Přinesdomů",
+    "Libuše Peškova",
+    "Marie Hübschova",
+    "Marie Rosůlková",
+    "Miloslav Sindler",
+    "Miloš Vognič",
+    "Míla Myslíková",
+    "Nataša Gollová",
+    "Oldřich Vízner",
+    "Olga Bušková",
+    "Pavla Břínková",
+    "Radomír Hubáček",
+    "Rudolf Hrušínský",
+    "Rudolf Iltis",
+    "Růžena Vlčková",
+    "Theodor Kunst",
+    "Vladimír Menšík",
+    "Vlasta Chramostová",
+    "Václav Halama",
+    "Václav Kotva",
+    "Václav Vodák",
+    "Václav Štekl",
+    "Věra Vlčková",
+    "Zdeněk Šmidrkal",
+    "Zora Božinová",
+    "Zuzana Rumlová"
+  ],
+  "musica": [
+    "Zdenek Liska"
+  ],
+  "fotografia": [
+    "Stanislav Milota"
+  ],
+  "guion": [
+    "Juraj Herz",
+    "Ladislav Fuks"
+  ],
+  "temas": [
+    "Acuerdos de Múnich",
+    "Holocausto",
+    "cremación",
+    "nazismo",
+    "ocupación alemana de Checoslovaquia"
+  ],
+  "escenario": [
+    "Praga",
+    "Protectorado de Bohemia y Moravia"
+  ]
 }

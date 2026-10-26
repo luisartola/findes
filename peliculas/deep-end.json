@@ -18,5 +18,45 @@
   "tmdb_id": 59408,
   "titulo_es": "Deep end",
   "titulo_original": "Deep End",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Alemania",
+    "Polonia",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Anita Lochner",
+    "Burt Kwouk",
+    "Cheryl Hall",
+    "Chris Sandford",
+    "Christine Paul-Podlasky",
+    "Diana Dors",
+    "Dieter Eppler",
+    "Eduard Linkers",
+    "Erica Beer",
+    "Erika Wackernagel",
+    "Jane Asher",
+    "Jerzy Skolimowski",
+    "John Moulder-Brown",
+    "Karl Ludwig Lindt",
+    "Karl Michael Vogler",
+    "Louise Martini",
+    "Peter Martin Urtel",
+    "Robert Rietti",
+    "Will Danin"
+  ],
+  "musica": [
+    "Cat Stevens gato"
+  ],
+  "fotografia": [
+    "Charly Steinberger"
+  ],
+  "guion": [
+    "Bolesław Sulik",
+    "Jerzy Gruza",
+    "Jerzy Skolimowski"
+  ],
+  "escenario": [
+    "Londres"
+  ]
 }

@@ -18,5 +18,36 @@
   "tmdb_id": 991,
   "titulo_es": "El hombre que cayó a la Tierra",
   "titulo_original": "The Man Who Fell to Earth",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Adrienne La Russa",
+    "Albert Nelson",
+    "Bernie Casey",
+    "Buck Henry",
+    "Candy Clark",
+    "Claudia Jennings",
+    "David Bowie",
+    "James A. Lovell",
+    "Rip Torn",
+    "Terry Southern"
+  ],
+  "musica": [
+    "John Phillips"
+  ],
+  "fotografia": [
+    "Anthony B. Richmond"
+  ],
+  "guion": [
+    "Paul Mayersberg"
+  ],
+  "temas": [
+    "alcoholismo"
+  ],
+  "escenario": [
+    "Nueva York",
+    "Nuevo México"
+  ]
 }

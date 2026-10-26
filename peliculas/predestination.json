@@ -18,5 +18,23 @@
   "tmdb_id": 206487,
   "titulo_es": "Predestination",
   "titulo_original": "Predestination",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Australia"
+  ],
+  "reparto": [
+    "Christopher Kirby",
+    "Ethan Hawke",
+    "Jim Knobeloch",
+    "Noah Taylor",
+    "Sarah Snook"
+  ],
+  "guion": [
+    "Michael Spierig",
+    "Peter Spierig"
+  ],
+  "escenario": [
+    "Cleveland",
+    "Nueva York"
+  ]
 }

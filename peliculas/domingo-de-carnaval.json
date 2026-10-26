@@ -18,5 +18,28 @@
   "tmdb_id": 102707,
   "titulo_es": "Domingo de carnaval",
   "titulo_original": "Domingo de carnaval",
-  "tmdb_rating": 5.6
+  "tmdb_rating": 5.6,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Conchita Montes",
+    "Fernando Fernán Gómez",
+    "Guillermo Marín",
+    "Juanita Mansó",
+    "Julia Lajos",
+    "Manuel Arbó"
+  ],
+  "musica": [
+    "José Muñoz Molleda"
+  ],
+  "fotografia": [
+    "Henri Barreyre"
+  ],
+  "guion": [
+    "Edgar Neville"
+  ],
+  "escenario": [
+    "Madrid"
+  ]
 }

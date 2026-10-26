@@ -18,5 +18,32 @@
   "tmdb_id": 42179,
   "titulo_es": "Sangre sabia (El profeta del diablo)",
   "titulo_original": "Wise Blood",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Alemania",
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Amy Wright",
+    "Brad Dourif",
+    "Dan Shor",
+    "Harry Dean Stanton",
+    "Joe Dorsey",
+    "John Huston",
+    "Ned Beatty",
+    "William Finley",
+    "William Hickey"
+  ],
+  "musica": [
+    "Alex North"
+  ],
+  "fotografia": [
+    "Gerry Fisher"
+  ],
+  "guion": [
+    "Flannery O'Connor"
+  ],
+  "escenario": [
+    "Georgia"
+  ]
 }

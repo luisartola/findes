@@ -18,5 +18,30 @@
   "tmdb_id": 15244,
   "titulo_es": "Un condenado a muerte se ha escapado",
   "titulo_original": "Un condamné à mort s'est échappé",
-  "tmdb_rating": 7.9
+  "tmdb_rating": 7.9,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "César Gattegno",
+    "François Leterrier",
+    "Jacques Ertaud",
+    "Roger Planchon",
+    "Roland Monod"
+  ],
+  "musica": [
+    "Wolfgang Amadeus Mozart"
+  ],
+  "fotografia": [
+    "Léonce-Henri Burel"
+  ],
+  "guion": [
+    "Robert Bresson"
+  ],
+  "temas": [
+    "Segunda Guerra Mundial"
+  ],
+  "escenario": [
+    "Lyon"
+  ]
 }

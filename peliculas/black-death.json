@@ -18,5 +18,36 @@
   "tmdb_id": 41215,
   "titulo_es": "Black Death",
   "titulo_original": "Black Death",
-  "tmdb_rating": 6.1
+  "tmdb_rating": 6.1,
+  "paises": [
+    "Alemania",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Andy Nyman",
+    "Carice van Houten",
+    "Daniel Steiner",
+    "David Warner",
+    "Eddie Redmayne",
+    "Emun Elliott",
+    "John Lynch",
+    "Johnny Harris",
+    "Kimberley Nixon",
+    "Sean Bean",
+    "Tim Mclnnerny",
+    "Tygo Gernandt"
+  ],
+  "musica": [
+    "Christian Henson"
+  ],
+  "fotografia": [
+    "Sebastian Edschmid"
+  ],
+  "guion": [
+    "Christopher Smith",
+    "Dario Poloni"
+  ],
+  "escenario": [
+    "Inglaterra"
+  ]
 }

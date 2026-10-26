@@ -18,5 +18,22 @@
   "tmdb_id": 158743,
   "titulo_es": "Computer Chess",
   "titulo_original": "Computer Chess",
-  "tmdb_rating": 6.1
+  "tmdb_rating": 6.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Gerald Peary",
+    "Wiley Wiggins"
+  ],
+  "fotografia": [
+    "Matthias Grunsky"
+  ],
+  "guion": [
+    "Andrew Bujalski"
+  ],
+  "temas": [
+    "ajedrez",
+    "informática"
+  ]
 }

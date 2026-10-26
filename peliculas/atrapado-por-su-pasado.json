@@ -18,5 +18,51 @@
   "tmdb_id": 6075,
   "titulo_es": "Atrapado por su pasado",
   "titulo_original": "Carlito's Way",
-  "tmdb_rating": 7.8
+  "tmdb_rating": 7.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Adrian Pasdar",
+    "Al Israel",
+    "Al Pacino",
+    "Frank Minucci",
+    "Ingrid Rogers",
+    "Jaime Sánchez",
+    "James Rebhorn",
+    "John Finn",
+    "John Hoyt",
+    "John Leguizamo",
+    "John Ortiz",
+    "Jon Seda",
+    "Jorge Porcel",
+    "Joseph Siravo",
+    "Luis Guzmán",
+    "Marc Anthony",
+    "Orlando Urdaneta",
+    "Paul Mazursky",
+    "Penelope Ann Miller",
+    "Richard Foronjy",
+    "Rick Aviles",
+    "Sean Penn",
+    "Viggo Mortensen",
+    "Ángel Salazar"
+  ],
+  "musica": [
+    "Patrick Doyle"
+  ],
+  "fotografia": [
+    "Stephen H. Burum"
+  ],
+  "guion": [
+    "David Koepp",
+    "Edwin Torres"
+  ],
+  "temas": [
+    "crimen organizado",
+    "venganza"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

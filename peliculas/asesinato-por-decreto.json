@@ -18,5 +18,32 @@
   "tmdb_id": 34374,
   "titulo_es": "Asesinato por decreto",
   "titulo_original": "Murder by Decree",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Canadá",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Anthony Quayle",
+    "Christopher Plummer",
+    "David Hemmings",
+    "Donald Sutherland",
+    "Frank Finlay",
+    "Geneviève Bujold",
+    "James Mason",
+    "John Gielgud",
+    "Susan Clark"
+  ],
+  "musica": [
+    "Paul Zaza"
+  ],
+  "fotografia": [
+    "Reginald H. Morris"
+  ],
+  "guion": [
+    "John Hopkins"
+  ],
+  "escenario": [
+    "Londres"
+  ]
 }

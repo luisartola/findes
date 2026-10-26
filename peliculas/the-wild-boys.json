@@ -18,5 +18,23 @@
   "tmdb_id": 474444,
   "titulo_es": "The Wild Boys",
   "titulo_original": "Les Garçons sauvages",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Christophe Bier",
+    "Diane Rouxel",
+    "Elina Löwensohn",
+    "Mathilde Warnier",
+    "Nathalie Richard",
+    "Sam Louwyck",
+    "Vimala Pons"
+  ],
+  "fotografia": [
+    "Pascale Granel"
+  ],
+  "guion": [
+    "Bertrand Mandico"
+  ]
 }

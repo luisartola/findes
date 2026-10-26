@@ -18,5 +18,22 @@
   "tmdb_id": 50272,
   "titulo_es": "Somos lo que hay",
   "titulo_original": "Somos lo que hay",
-  "tmdb_rating": 5.9
+  "tmdb_rating": 5.9,
+  "paises": [
+    "México"
+  ],
+  "reparto": [
+    "Daniel Giménez Cacho",
+    "Jorge Zárate",
+    "Paulina Gaitán"
+  ],
+  "musica": [
+    "Enrico Chapela"
+  ],
+  "guion": [
+    "Jorge Michel Grau"
+  ],
+  "escenario": [
+    "México"
+  ]
 }

@@ -18,5 +18,44 @@
   "tmdb_id": 2000,
   "titulo_es": "Aguirre, la cólera de Dios",
   "titulo_original": "Aguirre, der Zorn Gottes",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Alemania",
+    "México",
+    "Perú"
+  ],
+  "reparto": [
+    "Christian Brückner",
+    "Claus Biederstaedt",
+    "Del Negro",
+    "Edgar Ott",
+    "Gerd Martienzen",
+    "Heinz Theo Branding",
+    "Helena Rojo",
+    "Klaus Kinski",
+    "Lothar Blumhagen",
+    "Manfred Lehmann",
+    "Michael Chevalier",
+    "Norbert Gescher",
+    "Peter Berling",
+    "Ruy Guerra",
+    "Uta Hallant",
+    "Uwe Paulsen"
+  ],
+  "musica": [
+    "Popol Vuh"
+  ],
+  "fotografia": [
+    "Thomas Mauch"
+  ],
+  "guion": [
+    "Werner Herzog"
+  ],
+  "temas": [
+    "Lope de Aguirre"
+  ],
+  "escenario": [
+    "Amazonas",
+    "Perú"
+  ]
 }

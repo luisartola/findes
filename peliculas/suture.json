@@ -18,5 +18,22 @@
   "tmdb_id": 87078,
   "titulo_es": "Suture",
   "titulo_original": "Suture",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "David Graf",
+    "Dennis Haysbert",
+    "Dina Merrill",
+    "Mel Harris",
+    "Sab Shimono"
+  ],
+  "fotografia": [
+    "Greg Gardiner"
+  ],
+  "guion": [
+    "David Siegel",
+    "Scott McGehee"
+  ]
 }

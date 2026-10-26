@@ -18,5 +18,38 @@
   "tmdb_id": 9428,
   "titulo_es": "Los Tenenbaums. Una familia de genios",
   "titulo_original": "The Royal Tenenbaums",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alec Baldwin",
+    "Anjelica Huston",
+    "Ben Stiller",
+    "Bill Murray",
+    "Danny Glover",
+    "Gene Hackman",
+    "Gwyneth Paltrow",
+    "Kumar Pallana",
+    "Luke Wilson",
+    "Owen Wilson",
+    "Seymour Cassel",
+    "Wes Anderson"
+  ],
+  "musica": [
+    "Mark Mothersbaugh"
+  ],
+  "fotografia": [
+    "Robert Yeoman"
+  ],
+  "guion": [
+    "Owen Wilson",
+    "Wes Anderson"
+  ],
+  "temas": [
+    "familia disfuncional"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

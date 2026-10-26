@@ -18,5 +18,35 @@
   "tmdb_id": 2487,
   "titulo_es": "Lady Snowblood",
   "titulo_original": "修羅雪姫",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Akemi Negishi",
+    "Eiji Okada",
+    "Hitoshi Takagi",
+    "Kō Nishimura",
+    "Meiko Kaji",
+    "Miyoko Akaza",
+    "Takeo Chii"
+  ],
+  "musica": [
+    "Masaaki Hirao"
+  ],
+  "fotografia": [
+    "Masaki Tamura"
+  ],
+  "guion": [
+    "Kazuo Kamimura"
+  ],
+  "temas": [
+    "destino",
+    "venganza",
+    "vocación"
+  ],
+  "escenario": [
+    "Prefectura de Shimane",
+    "Tokio"
+  ]
 }

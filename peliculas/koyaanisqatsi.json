@@ -18,5 +18,20 @@
   "tmdb_id": 11314,
   "titulo_es": "Koyaanisqatsi",
   "titulo_original": "Koyaanisqatsi",
-  "tmdb_rating": 7.9
+  "tmdb_rating": 7.9,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "musica": [
+    "Philip Glass"
+  ],
+  "fotografia": [
+    "Ron Fricke"
+  ],
+  "guion": [
+    "Alton Walpole",
+    "Godfrey Reggio",
+    "Michael Hoenig",
+    "Ron Fricke"
+  ]
 }

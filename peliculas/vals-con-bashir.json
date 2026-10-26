@@ -18,5 +18,28 @@
   "tmdb_id": 8885,
   "titulo_es": "Vals con Bashir",
   "titulo_original": "ואלס עם באשיר",
-  "tmdb_rating": 7.7
+  "tmdb_rating": 7.7,
+  "paises": [
+    "Alemania",
+    "Francia",
+    "Israel",
+    "Reino Unido"
+  ],
+  "musica": [
+    "Max Richter"
+  ],
+  "fotografia": [
+    "Declan Quinn"
+  ],
+  "guion": [
+    "Ari Folman"
+  ],
+  "temas": [
+    "Guerra del Líbano de 1982",
+    "Masacre de Sabra y Chatila",
+    "amnesia"
+  ],
+  "escenario": [
+    "Beirut"
+  ]
 }

@@ -18,5 +18,32 @@
   "tmdb_id": 114745,
   "titulo_es": "Los peces rojos",
   "titulo_original": "Los peces rojos",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Arturo de Córdova",
+    "Emma Penella",
+    "Félix Acaso",
+    "Félix Dafauce",
+    "Julio Goróstegui",
+    "Manuel Guitián",
+    "Ángel Álvarez"
+  ],
+  "musica": [
+    "Miquel Asins"
+  ],
+  "fotografia": [
+    "Francisco Sempere"
+  ],
+  "guion": [
+    "Carlos Blanco Hernández"
+  ],
+  "temas": [
+    "Cynoscion analis"
+  ],
+  "escenario": [
+    "Gijón"
+  ]
 }

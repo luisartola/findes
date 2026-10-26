@@ -18,5 +18,15 @@
   "tmdb_id": 164205,
   "titulo_es": "The Public Defender",
   "titulo_original": "The Public Defender",
-  "tmdb_rating": 6.0
+  "tmdb_rating": 6.0,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Richard Dix",
+    "Shirley Grey"
+  ],
+  "guion": [
+    "George Goodchild"
+  ]
 }

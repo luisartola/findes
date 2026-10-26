@@ -18,5 +18,28 @@
   "tmdb_id": 18415,
   "titulo_es": "Gummo",
   "titulo_original": "Gummo",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Carisa Glucksman",
+    "Chloë Sevigny",
+    "Harmony Korine",
+    "Jacob Reynolds",
+    "Linda Manz",
+    "Max Perlich"
+  ],
+  "musica": [
+    "Randall Poster"
+  ],
+  "fotografia": [
+    "Jean-Yves Escoffier"
+  ],
+  "guion": [
+    "Harmony Korine"
+  ],
+  "escenario": [
+    "Ohio"
+  ]
 }

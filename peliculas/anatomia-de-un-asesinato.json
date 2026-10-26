@@ -18,5 +18,37 @@
   "tmdb_id": 93,
   "titulo_es": "Anatomía de un asesinato",
   "titulo_original": "Anatomy of a Murder",
-  "tmdb_rating": 7.8
+  "tmdb_rating": 7.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Arthur O'Connell",
+    "Ben Gazzara",
+    "Don Ross",
+    "Duke Ellington",
+    "Eve Arden",
+    "George C. Scott",
+    "James Stewart",
+    "Jimmy Conlin",
+    "John Qualen",
+    "Kathryn Crosby",
+    "Ken Lynch",
+    "Lee Remick",
+    "Murray Hamilton",
+    "Orson Bean"
+  ],
+  "musica": [
+    "Duke Ellington"
+  ],
+  "fotografia": [
+    "Sam Leavitt"
+  ],
+  "guion": [
+    "John D. Voelker",
+    "Wendell Mayes"
+  ],
+  "escenario": [
+    "Míchigan"
+  ]
 }

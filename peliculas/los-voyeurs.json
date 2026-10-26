@@ -18,5 +18,18 @@
   "tmdb_id": 645710,
   "titulo_es": "Los Voyeurs",
   "titulo_original": "The Voyeurs",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Ben Hardy",
+    "Jean Yoon",
+    "Justice Smith",
+    "Natasha Liu Bordizzo",
+    "Sydney Sweeney"
+  ],
+  "temas": [
+    "voyeurismo"
+  ]
 }

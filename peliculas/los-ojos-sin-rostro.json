@@ -18,5 +18,47 @@
   "tmdb_id": 31417,
   "titulo_es": "Los ojos sin rostro",
   "titulo_original": "Les Yeux sans visage",
-  "tmdb_rating": 7.6
+  "tmdb_rating": 7.6,
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Alexandre Rignault",
+    "Alida Valli",
+    "Béatrice Altariba",
+    "Charles Bayard",
+    "Charles Blavette",
+    "Charles Lavialle",
+    "Claude Brasseur",
+    "Corrado Guarducci",
+    "France Asselin",
+    "François Guérin",
+    "Gabrielle Doulcet",
+    "Jimmy Perrys",
+    "Juliette Mayniel",
+    "Lucien Hubert",
+    "Marcel Pérès",
+    "Max Montavon",
+    "Michel Etcheverry",
+    "Pierre Brasseur",
+    "René Génin",
+    "Yvette Etiévant",
+    "Édith Scob"
+  ],
+  "musica": [
+    "Maurice Jarre"
+  ],
+  "fotografia": [
+    "Eugen Schüfftan"
+  ],
+  "guion": [
+    "Claude Sautet",
+    "Pierre Boileau",
+    "Pierre Gascar",
+    "Thomas Narcejac"
+  ],
+  "escenario": [
+    "París"
+  ]
 }

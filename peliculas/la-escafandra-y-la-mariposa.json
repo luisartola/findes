@@ -18,5 +18,54 @@
   "tmdb_id": 2013,
   "titulo_es": "La escafandra y la mariposa",
   "titulo_original": "Le Scaphandre et le Papillon",
-  "tmdb_rating": 7.6
+  "tmdb_rating": 7.6,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Agathe de La Fontaine",
+    "Anne Alvaro",
+    "Anne Consigny",
+    "Emma de Caunes",
+    "Emmanuelle Seigner",
+    "Farida Khelfa",
+    "Fiorella Campanella",
+    "Franck Victor",
+    "Françoise Lebrun",
+    "Gérard Watkins",
+    "Jean-Baptiste Mondino",
+    "Jean-Philippe Écoffey",
+    "Jean-Pierre Cassel",
+    "Laure de Clermont-Tonnerre",
+    "Lenny Kravitz",
+    "Marie-Josée Croze",
+    "Marina Hands",
+    "Mathieu Amalric",
+    "Max von Sydow",
+    "Michael Wincott",
+    "Nicolas Le Riche",
+    "Niels Arestrup",
+    "Patrick Chesnais",
+    "Zinedine Soualem"
+  ],
+  "musica": [
+    "Paul Cantelon"
+  ],
+  "fotografia": [
+    "Janusz Kaminski"
+  ],
+  "guion": [
+    "Ronald Harwood"
+  ],
+  "temas": [
+    "Jean-Dominique Bauby",
+    "Síndrome de enclaustramiento",
+    "care dependency",
+    "comunicación",
+    "deficiencia motriz"
+  ],
+  "escenario": [
+    "Berck",
+    "París"
+  ]
 }

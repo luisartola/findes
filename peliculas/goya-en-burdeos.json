@@ -18,5 +18,42 @@
   "tmdb_id": 170767,
   "titulo_es": "Goya en Burdeos",
   "titulo_original": "Goya en Burdeos",
-  "tmdb_rating": 6.0
+  "tmdb_rating": 6.0,
+  "paises": [
+    "España",
+    "Italia"
+  ],
+  "reparto": [
+    "Cristina Espinosa",
+    "Dafne Fernández",
+    "Emilio Gutiérrez Caba",
+    "Eulàlia Ramon",
+    "Francisco Rabal",
+    "Franco Di Francescantonio",
+    "Joaquín Climent",
+    "Josep Maria Pou",
+    "José Coronado",
+    "Manuel de Blas",
+    "Maribel Verdú",
+    "Mario de Candia",
+    "Paco Catalá"
+  ],
+  "musica": [
+    "Roque Baños"
+  ],
+  "fotografia": [
+    "Vittorio Storaro"
+  ],
+  "guion": [
+    "Carlos Saura"
+  ],
+  "temas": [
+    "Francisco de Goya",
+    "creación artística",
+    "pintor",
+    "reminiscencia"
+  ],
+  "escenario": [
+    "España"
+  ]
 }

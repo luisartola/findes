@@ -18,5 +18,48 @@
   "tmdb_id": 18628,
   "titulo_es": "El arte de vivir... pero bien",
   "titulo_original": "Alexandre le bienheureux",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Antoinette Moya",
+    "Bernard Charlan",
+    "François Vibert",
+    "Françoise Brion",
+    "Guy Henri",
+    "Jean Carmet",
+    "Jean Saudray",
+    "Léonce Corne",
+    "Madeleine Damien",
+    "Marc Dudicourt",
+    "Marcel Bernier",
+    "Marie Marc",
+    "Marlène Jobert",
+    "Paul Bonifas",
+    "Paul Le Person",
+    "Philippe Noiret",
+    "Pierre Barnley",
+    "Pierre Bellemare",
+    "Pierre Maguelon",
+    "Pierre Richard",
+    "Tsilla Chelton"
+  ],
+  "musica": [
+    "Vladimir Cosma"
+  ],
+  "fotografia": [
+    "René Mathelin"
+  ],
+  "guion": [
+    "Pierre Lévy-Corti",
+    "Yves Robert"
+  ],
+  "temas": [
+    "agricultura en Francia",
+    "pereza"
+  ],
+  "escenario": [
+    "Beauce"
+  ]
 }

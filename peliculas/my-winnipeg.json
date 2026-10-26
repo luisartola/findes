@@ -18,5 +18,27 @@
   "tmdb_id": 13241,
   "titulo_es": "My Winnipeg",
   "titulo_original": "My Winnipeg",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Canadá"
+  ],
+  "reparto": [
+    "Amii Stewart",
+    "Ann Savage",
+    "Darcy Fehr",
+    "Guy Maddin",
+    "Louis Negin"
+  ],
+  "musica": [
+    "Jason Staczek"
+  ],
+  "guion": [
+    "Guy Maddin"
+  ],
+  "temas": [
+    "Winnipeg"
+  ],
+  "escenario": [
+    "Winnipeg"
+  ]
 }

@@ -18,5 +18,16 @@
   "tmdb_id": 48594,
   "titulo_es": "El habitante incierto",
   "titulo_original": "El habitante incierto",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Agustí Villaronga",
+    "Francesc Garrido",
+    "Mónica López"
+  ],
+  "guion": [
+    "Guillem Morales"
+  ]
 }

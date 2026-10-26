@@ -18,5 +18,37 @@
   "tmdb_id": 15742,
   "titulo_es": "Taxidermia",
   "titulo_original": "Taxidermia",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Austria",
+    "Francia",
+    "Hungría"
+  ],
+  "reparto": [
+    "Adél Stanczel",
+    "Csaba Czene",
+    "Erwin Leder",
+    "Gergely Trócsányi",
+    "Gábor Máté",
+    "Marc Bischoff",
+    "Piroska Molnár",
+    "Zoltán Koppány"
+  ],
+  "musica": [
+    "Amon Tobin"
+  ],
+  "fotografia": [
+    "Gergely Pohárnok"
+  ],
+  "guion": [
+    "György Pálfi",
+    "Zsófia Ruttkay"
+  ],
+  "temas": [
+    "condición humana",
+    "corporeidad",
+    "cuerpo",
+    "deseo",
+    "intergenerationality"
+  ]
 }

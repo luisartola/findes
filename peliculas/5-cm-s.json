@@ -18,5 +18,25 @@
   "tmdb_id": 38142,
   "titulo_es": "5 centímetros por segundo",
   "titulo_original": "秒速5センチメートル",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Japón"
+  ],
+  "musica": [
+    "Tenmon"
+  ],
+  "guion": [
+    "Makoto Shinkai"
+  ],
+  "temas": [
+    "Sehnsucht",
+    "amor no correspondido",
+    "amor romántico",
+    "soledad"
+  ],
+  "escenario": [
+    "Kagoshima",
+    "Tochigi",
+    "Tokio"
+  ]
 }

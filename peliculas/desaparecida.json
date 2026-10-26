@@ -18,5 +18,33 @@
   "tmdb_id": null,
   "titulo_es": "Desaparecida",
   "titulo_original": "The Factory",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Cindy Sampson",
+    "Dallas Roberts",
+    "Gary Anthony Williams",
+    "Jennifer Carpenter",
+    "John Cusack",
+    "Katherine Waterston",
+    "Ksenia Solo",
+    "Mageina Tovah",
+    "Maxim Roy",
+    "Michael Trevino",
+    "Sonya Walger"
+  ],
+  "musica": [
+    "Mark Isham"
+  ],
+  "fotografia": [
+    "Kramer Morgenthau"
+  ],
+  "guion": [
+    "Paul Leyden"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

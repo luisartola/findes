@@ -18,5 +18,36 @@
   "tmdb_id": 10299,
   "titulo_es": "Canción de cuna para un cadáver",
   "titulo_original": "Hush... Hush, Sweet Charlotte",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Agnes Moorehead",
+    "Bette Davis",
+    "Bruce Dern",
+    "Cecil Kellaway",
+    "Frank Ferguson",
+    "George Kennedy",
+    "Joseph Cotten",
+    "Lillian Randolph",
+    "Mary Astor",
+    "Olivia de Havilland",
+    "Victor Buono",
+    "Wesley Addy",
+    "William Campbell"
+  ],
+  "musica": [
+    "Frank De Vol"
+  ],
+  "fotografia": [
+    "Joseph F. Biroc"
+  ],
+  "guion": [
+    "Henry Farrell",
+    "Lukas Heller"
+  ],
+  "escenario": [
+    "Luisiana"
+  ]
 }

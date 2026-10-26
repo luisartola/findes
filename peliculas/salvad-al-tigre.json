@@ -18,5 +18,33 @@
   "tmdb_id": 38714,
   "titulo_es": "Salvad al tigre",
   "titulo_original": "Save the Tiger",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Biff Elliot",
+    "Harvey Jason",
+    "Jack Gilford",
+    "Jack Lemmon",
+    "Lara Parker",
+    "Laurie Heineman",
+    "Liv Lindeland",
+    "Ned Glass",
+    "Norman Burton",
+    "Patricia Smith",
+    "Thayer David"
+  ],
+  "musica": [
+    "Marvin Hamlisch"
+  ],
+  "fotografia": [
+    "James Aubrey Crabe"
+  ],
+  "guion": [
+    "Steve Shagan"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

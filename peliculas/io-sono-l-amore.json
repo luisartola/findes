@@ -18,5 +18,37 @@
   "tmdb_id": 41110,
   "titulo_es": "Yo soy el amor",
   "titulo_original": "Io sono l'amore",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Italia"
+  ],
+  "reparto": [
+    "Alba Rohrwacher",
+    "Diane Fleri",
+    "Edoardo Gabbriellini",
+    "Flavio Parenti",
+    "Gabriele Ferzetti",
+    "Honor Swinton Byrne",
+    "Maria Paiato",
+    "Marisa Berenson",
+    "Martina Codecasa",
+    "Pippo Delbono",
+    "Tilda Swinton",
+    "Waris Ahluwalia"
+  ],
+  "musica": [
+    "John Coolidge Adams"
+  ],
+  "fotografia": [
+    "Yorick Le Saux"
+  ],
+  "guion": [
+    "Barbara Alberti",
+    "Ivan Cotroneo",
+    "Luca Guadagnino",
+    "Walter Fasano"
+  ],
+  "escenario": [
+    "Milán"
+  ]
 }

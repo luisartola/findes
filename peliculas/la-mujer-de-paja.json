@@ -18,5 +18,41 @@
   "tmdb_id": 4999,
   "titulo_es": "La mujer de paja",
   "titulo_original": "Woman of Straw",
-  "tmdb_rating": 6.2
+  "tmdb_rating": 6.2,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "A.J. Brown",
+    "Alexander Knox",
+    "André Morell",
+    "Douglas Wilmer",
+    "Edward Underdown",
+    "George Curzon",
+    "George Zenios",
+    "Georgina Cookson",
+    "Gina Lollobrigida",
+    "Johnny Sekka",
+    "Michael Goodliffe",
+    "Noel Howlett",
+    "Peggy Marshall",
+    "Peter Madden",
+    "Ralph Richardson",
+    "Sean Connery"
+  ],
+  "fotografia": [
+    "Otto Heller"
+  ],
+  "guion": [
+    "Michael Relph",
+    "Robert Muller",
+    "Stanley Mann"
+  ],
+  "temas": [
+    "avaricia",
+    "manipulación mental"
+  ],
+  "escenario": [
+    "Inglaterra"
+  ]
 }

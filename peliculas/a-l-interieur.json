@@ -18,5 +18,32 @@
   "tmdb_id": 13312,
   "titulo_es": "Al interior",
   "titulo_original": "À l'intérieur",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Alysson Paradis",
+    "Aymen Saïdi",
+    "Béatrice Dalle",
+    "Dominique Frot",
+    "François-Régis Marchasson",
+    "Hyam Zeytoun",
+    "Ludovic Berthillot",
+    "Nathalie Roussel",
+    "Nicolas Duvauchelle",
+    "Tahar Rahim"
+  ],
+  "musica": [
+    "François-Eudes Chanfrault"
+  ],
+  "guion": [
+    "Alexandre Bustillo"
+  ],
+  "temas": [
+    "embarazo humano"
+  ],
+  "escenario": [
+    "París"
+  ]
 }

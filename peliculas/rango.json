@@ -18,5 +18,23 @@
   "tmdb_id": 44896,
   "titulo_es": "Rango",
   "titulo_original": "Rango",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "musica": [
+    "Hans Zimmer"
+  ],
+  "fotografia": [
+    "Roger Deakins"
+  ],
+  "guion": [
+    "John Logan"
+  ],
+  "temas": [
+    "agua"
+  ],
+  "escenario": [
+    "Área metropolitana de Las Vegas"
+  ]
 }

@@ -18,5 +18,20 @@
   "tmdb_id": 966238,
   "titulo_es": "La cocina",
   "titulo_original": "La cocina",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Estados Unidos",
+    "México"
+  ],
+  "reparto": [
+    "James Waterston",
+    "Laura Gómez",
+    "Oded Fehr",
+    "Raúl Briones",
+    "Rooney Mara"
+  ],
+  "guion": [
+    "Alonso Ruizpalacios",
+    "Arnold Wesker"
+  ]
 }

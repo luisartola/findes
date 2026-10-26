@@ -18,5 +18,38 @@
   "tmdb_id": 13672,
   "titulo_es": "JCVD",
   "titulo_original": "JCVD",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Bélgica",
+    "Francia",
+    "Luxemburgo"
+  ],
+  "reparto": [
+    "Bella Wajnberg",
+    "François Beukelaers",
+    "François Damiens",
+    "Isabelle de Hertogh",
+    "Jean-Claude Van Damme",
+    "Jean-François Wolff",
+    "Karim Belkhadra",
+    "Mourade Zeguendi",
+    "Patrick Steltzer",
+    "Raphaëlle Lubansu",
+    "Valérie Bodson",
+    "Zinedine Soualem"
+  ],
+  "musica": [
+    "Gast Waltzing"
+  ],
+  "fotografia": [
+    "Pierre-Yves Bastard"
+  ],
+  "guion": [
+    "Christophe Turpin",
+    "Vincent Ravalec"
+  ],
+  "escenario": [
+    "Bélgica",
+    "Los Ángeles"
+  ]
 }

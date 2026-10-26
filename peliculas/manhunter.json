@@ -17,5 +17,47 @@
   ],
   "findes": [
     15
+  ],
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Annie McEnroe",
+    "Bill Smitrovich",
+    "Brian Cox",
+    "Chris Elliott",
+    "Dan Butler",
+    "David Allen Brooks",
+    "David Seaman",
+    "Dennis Farina",
+    "Frankie Faison",
+    "Garcelle Beauvais",
+    "Joan Allen",
+    "Kim Greist",
+    "Marshall Bell",
+    "Michael D. Roberts",
+    "Michael Talbott",
+    "Peter Maloney",
+    "Stephen Lang",
+    "Tom Noonan",
+    "William Petersen"
+  ],
+  "musica": [
+    "Michel Rubini"
+  ],
+  "fotografia": [
+    "Dante Spinotti"
+  ],
+  "guion": [
+    "Michael Mann",
+    "Thomas Harris"
+  ],
+  "temas": [
+    "asesino en serie"
+  ],
+  "escenario": [
+    "Alabama",
+    "San Luis",
+    "Washington D. C."
   ]
 }

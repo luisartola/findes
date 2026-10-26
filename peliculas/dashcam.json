@@ -18,5 +18,17 @@
   "tmdb_id": 858015,
   "titulo_es": "Dashcam",
   "titulo_original": "Dashcam",
-  "tmdb_rating": 4.9
+  "tmdb_rating": 4.9,
+  "paises": [
+    "Estados Unidos",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Amar Chadha-Patel",
+    "Annie Hardy"
+  ],
+  "guion": [
+    "Jed Shepherd",
+    "Rob Savage"
+  ]
 }

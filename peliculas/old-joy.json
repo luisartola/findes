@@ -18,5 +18,21 @@
   "tmdb_id": 26518,
   "titulo_es": "Old Joy",
   "titulo_original": "Old Joy",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Daniel London",
+    "Will Oldham"
+  ],
+  "musica": [
+    "Yo La Tengo"
+  ],
+  "guion": [
+    "Jonathan Raymond"
+  ],
+  "escenario": [
+    "Oregón"
+  ]
 }

@@ -18,5 +18,57 @@
   "tmdb_id": 680,
   "titulo_es": "Pulp Fiction",
   "titulo_original": "Pulp Fiction",
-  "tmdb_rating": 8.5
+  "tmdb_rating": 8.5,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alexis Arquette",
+    "Amanda Plummer",
+    "Angela Jones",
+    "Brenda Hillhouse",
+    "Bronagh Gallagher",
+    "Burr Steers",
+    "Christopher Walken",
+    "Dick Miller",
+    "Duane Whitaker",
+    "Emil Sitka",
+    "Eric Stoltz",
+    "Frank Whaley",
+    "Harvey Keitel",
+    "John Travolta",
+    "Joseph Pilato",
+    "Julia Sweeney",
+    "Karen Maruyama",
+    "Kathy Griffin",
+    "Lawrence Bender",
+    "Linda Kaye",
+    "Maria de Medeiros",
+    "Michael Gilden",
+    "Paul Calderón",
+    "Peter Greene",
+    "Phil LaMarr",
+    "Quentin Tarantino",
+    "Rosanna Arquette",
+    "Samuel L. Jackson",
+    "Stephen Hibbert",
+    "Steve Buscemi",
+    "Susan Griffiths",
+    "Tim Roth",
+    "Uma Thurman",
+    "Ving Rhames"
+  ],
+  "fotografia": [
+    "Andrzej Sekuła"
+  ],
+  "guion": [
+    "Quentin Tarantino",
+    "Roger Avary"
+  ],
+  "temas": [
+    "crimen organizado"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

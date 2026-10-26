@@ -18,5 +18,47 @@
   "tmdb_id": null,
   "titulo_es": "Algo en común",
   "titulo_original": "Garden State",
-  "tmdb_rating": null
+  "tmdb_rating": null,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alex Burns",
+    "Ann Dowd",
+    "Armando Riesco",
+    "Ato Essandoh",
+    "Aunjanue Ellis",
+    "Denis O'Hare",
+    "Geoffrey Arend",
+    "George C. Wolfe",
+    "Ian Holm",
+    "Jackie Hoffman",
+    "Jayne Houdyshell",
+    "Jean Smart",
+    "Jill Flint",
+    "Method Man",
+    "Michael Weston",
+    "Natalie Portman",
+    "Peter Sarsgaard",
+    "Ron Leibman",
+    "Trisha LaFache",
+    "Zach Braff"
+  ],
+  "musica": [
+    "Alexi Murdoch",
+    "Chad Fischer",
+    "Nick Drake"
+  ],
+  "fotografia": [
+    "Lawrence Sher"
+  ],
+  "guion": [
+    "Zach Braff"
+  ],
+  "temas": [
+    "familia disfuncional"
+  ],
+  "escenario": [
+    "Nueva Jersey"
+  ]
 }

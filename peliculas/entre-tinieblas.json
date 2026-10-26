@@ -18,5 +18,30 @@
   "tmdb_id": 8220,
   "titulo_es": "Entre tinieblas",
   "titulo_original": "Entre tinieblas",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Agustín Almodóvar",
+    "Carmen Giralt",
+    "Carmen Maura",
+    "Cecilia Roth",
+    "Cristina Sánchez Pascual",
+    "Julieta Serrano",
+    "Lina Canalejas",
+    "Lucia Bosè",
+    "Marisa Paredes",
+    "Mary Carrillo",
+    "Pedro Almodóvar"
+  ],
+  "musica": [
+    "Cheo Feliciano"
+  ],
+  "guion": [
+    "Pedro Almodóvar"
+  ],
+  "escenario": [
+    "España"
+  ]
 }

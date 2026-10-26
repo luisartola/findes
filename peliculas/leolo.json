@@ -18,5 +18,37 @@
   "tmdb_id": 11139,
   "titulo_es": "Léolo",
   "titulo_original": "Léolo",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Canadá",
+    "Francia"
+  ],
+  "reparto": [
+    "Andrée Lachapelle",
+    "Denys Arcand",
+    "Germain Houde",
+    "Gilbert Sicotte",
+    "Ginette Reno",
+    "Giuditta del Vecchio",
+    "Julien Guiomar",
+    "Lorne Brass",
+    "Maxime Collin",
+    "Pierre Bourgault"
+  ],
+  "musica": [
+    "Richard Grégoire",
+    "Tom Waits"
+  ],
+  "fotografia": [
+    "Guy Dufaux"
+  ],
+  "guion": [
+    "Jean-Claude Lauzon"
+  ],
+  "temas": [
+    "familia disfuncional"
+  ],
+  "escenario": [
+    "Canadá"
+  ]
 }

@@ -18,5 +18,61 @@
   "tmdb_id": 262,
   "titulo_es": "El rey de la comedia",
   "titulo_original": "The King of Comedy",
-  "tmdb_rating": 7.8
+  "tmdb_rating": 7.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Catherine Scorsese",
+    "Chuck Low",
+    "Diahnne Abbott",
+    "Don Letts",
+    "Ed Herlihy",
+    "Edgar Scherick",
+    "Ellen Foley",
+    "Frederick de Cordova",
+    "Gerard Murphy",
+    "Jerry Lewis",
+    "Joe Strummer",
+    "Joyce Brothers",
+    "Kim Chan",
+    "Liza Minnelli",
+    "Loretta Clemens Tupper",
+    "Margo Winkler",
+    "Marta Heflin",
+    "Martin Scorsese",
+    "Mary Elizabeth Mastrantonio",
+    "Mick Jones",
+    "Paul Simonon",
+    "Robert De Niro",
+    "Sandra Bernhard",
+    "Scotty Bloch",
+    "Senator Bobby",
+    "Shelley Hack",
+    "Thelma Lee",
+    "Tony Devon",
+    "Tony Randall",
+    "Víctor Borge"
+  ],
+  "musica": [
+    "Robbie Robertson"
+  ],
+  "fotografia": [
+    "Fred Schuler"
+  ],
+  "guion": [
+    "Paul D. Zimmerman"
+  ],
+  "temas": [
+    "ambición",
+    "fan",
+    "megalomanía",
+    "obsesión",
+    "parasocial relationships",
+    "secuestro",
+    "stalker"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

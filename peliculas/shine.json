@@ -18,5 +18,43 @@
   "tmdb_id": 7863,
   "titulo_es": "Shine. El resplandor de un genio",
   "titulo_original": "Shine",
-  "tmdb_rating": 7.4
+  "tmdb_rating": 7.4,
+  "paises": [
+    "Australia"
+  ],
+  "reparto": [
+    "Alex Rafalowicz",
+    "Armin Mueller-Stahl",
+    "Chris Haywood",
+    "Ella Scott Lynch",
+    "Geoffrey Rush",
+    "Googie Withers",
+    "John Gielgud",
+    "Lynn Redgrave",
+    "Marc Warren",
+    "Nicholas Bell",
+    "Noah Taylor",
+    "Sonia Todd"
+  ],
+  "musica": [
+    "David Hirschfelder"
+  ],
+  "fotografia": [
+    "Geoffrey Simpson"
+  ],
+  "guion": [
+    "Jan Sardi",
+    "Scott Hicks"
+  ],
+  "temas": [
+    "David Helfgott",
+    "ambición",
+    "músico",
+    "relación padres-hijos",
+    "trastorno mental"
+  ],
+  "escenario": [
+    "Australia",
+    "Londres"
+  ]
 }

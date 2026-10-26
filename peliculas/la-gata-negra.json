@@ -18,5 +18,39 @@
   "tmdb_id": 60792,
   "titulo_es": "La gata negra",
   "titulo_original": "Walk on the Wild Side",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Anne Baxter",
+    "Barbara Stanwyck",
+    "Capucine",
+    "Don \"Red\" Barry",
+    "Jane Fonda",
+    "Joanna Moore",
+    "John Anderson",
+    "Juanita Moore",
+    "Karl Swenson",
+    "Ken Lynch",
+    "Laurence Harvey",
+    "Lee Marvin",
+    "Richard Rust"
+  ],
+  "musica": [
+    "Elmer Bernstein"
+  ],
+  "fotografia": [
+    "Joseph MacDonald"
+  ],
+  "guion": [
+    "Ben Hecht",
+    "John Fante"
+  ],
+  "temas": [
+    "prostitución"
+  ],
+  "escenario": [
+    "Nueva Orleans"
+  ]
 }

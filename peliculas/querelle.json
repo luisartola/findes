@@ -18,5 +18,51 @@
   "tmdb_id": 42135,
   "titulo_es": "Querelle",
   "titulo_original": "Querelle",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Alemania",
+    "Francia"
+  ],
+  "reparto": [
+    "Brad Davis",
+    "Burkhard Driest",
+    "Dieter Schidor",
+    "Franco Nero",
+    "Frank Ripploh",
+    "Günther Kaufmann",
+    "Hanno Pöschl",
+    "Harry Baer",
+    "Isa Jank",
+    "Isolde Barth",
+    "Jeanne Moreau",
+    "Karl Scheydt",
+    "Karl-Heinz von Hassel",
+    "Laurent Malet",
+    "Natja Brunckhorst",
+    "Robert van Ackeren",
+    "Roger Fritz",
+    "Vitus Zeplichal",
+    "Volker Spengler",
+    "Werner Asam",
+    "Wolf Gremm",
+    "Y Sa Lo"
+  ],
+  "musica": [
+    "Peer Raben"
+  ],
+  "fotografia": [
+    "Xaver Schwarzenberger"
+  ],
+  "guion": [
+    "Burkhard Driest",
+    "Jean Genet",
+    "Kurt Raab",
+    "Rainer Werner Fassbinder"
+  ],
+  "temas": [
+    "asesino en serie"
+  ],
+  "escenario": [
+    "Brest"
+  ]
 }

@@ -18,5 +18,22 @@
   "tmdb_id": 186752,
   "titulo_es": "El crimen del cine Oriente",
   "titulo_original": "El crimen del cine Oriente",
-  "tmdb_rating": 3.5
+  "tmdb_rating": 3.5,
+  "paises": [
+    "España"
+  ],
+  "reparto": [
+    "Anabel Alonso",
+    "Berta Ojea",
+    "Enrique Villén",
+    "Joan Dalmau",
+    "Josefina Güell i Saumell",
+    "Josep Maria Pou",
+    "Marta Fernández-Muro",
+    "Pep Molina",
+    "Pepe Rubianes"
+  ],
+  "fotografia": [
+    "Jaume Peracaula i Roura"
+  ]
 }

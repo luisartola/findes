@@ -18,5 +18,40 @@
   "tmdb_id": 46027,
   "titulo_es": "La noche cae sobre Manhattan",
   "titulo_original": "Night Falls on Manhattan",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Andy García",
+    "Bobby Cannavale",
+    "Colm Feore",
+    "David Watkin",
+    "Dominic Chianese",
+    "Frank Vincent",
+    "Ian Holm",
+    "James Gandolfini",
+    "Jude Ciccolella",
+    "Lena Olin",
+    "Paul Guilfoyle",
+    "Richard Bright",
+    "Richard Dreyfuss",
+    "Ron Leibman",
+    "Shiek Mahmud-Bey"
+  ],
+  "musica": [
+    "Mark Isham"
+  ],
+  "fotografia": [
+    "David Watkin"
+  ],
+  "guion": [
+    "Sidney Lumet"
+  ],
+  "temas": [
+    "Departamento de Policía de Nueva York"
+  ],
+  "escenario": [
+    "Nueva York"
+  ]
 }

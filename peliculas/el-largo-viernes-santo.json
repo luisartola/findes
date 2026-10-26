@@ -18,5 +18,41 @@
   "tmdb_id": 14807,
   "titulo_es": "El largo viernes santo",
   "titulo_original": "The Long Good Friday",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Alan Ford",
+    "Billy Cornelius",
+    "Bob Hoskins",
+    "Bruce Alexander",
+    "Bryan Marshall",
+    "Dave King",
+    "Derek Thompson",
+    "Dexter Fletcher",
+    "Eddie Constantine",
+    "Helen Mirren",
+    "Kevin McNally",
+    "P. H. Moriarty",
+    "Paul Freeman",
+    "Pierce Brosnan",
+    "Stephen Davies",
+    "Tony Rohr"
+  ],
+  "musica": [
+    "Francis Monkman"
+  ],
+  "fotografia": [
+    "Phil Méheux"
+  ],
+  "guion": [
+    "Barrie Keeffe"
+  ],
+  "temas": [
+    "IRA"
+  ],
+  "escenario": [
+    "Londres"
+  ]
 }

@@ -18,5 +18,28 @@
   "tmdb_id": 37861,
   "titulo_es": "Valhalla Rising",
   "titulo_original": "Valhalla Rising",
-  "tmdb_rating": 6.1
+  "tmdb_rating": 6.1,
+  "paises": [
+    "Dinamarca",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Alexander Morton",
+    "Charlie Allan",
+    "Ewan Stewart",
+    "Garry Sweeney",
+    "Gary Lewis",
+    "Gary McCormack",
+    "Jamie Sives"
+  ],
+  "fotografia": [
+    "Morten Søborg"
+  ],
+  "guion": [
+    "Nicolas Winding Refn",
+    "Roy Jacobsen"
+  ],
+  "escenario": [
+    "América del Norte"
+  ]
 }

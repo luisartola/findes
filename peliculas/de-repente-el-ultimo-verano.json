@@ -18,5 +18,37 @@
   "tmdb_id": 14698,
   "titulo_es": "De repente, el último verano",
   "titulo_original": "Suddenly, Last Summer",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Albert Dekker",
+    "David Cameron",
+    "Eddie Fisher",
+    "Elizabeth Taylor",
+    "Gary Raymond",
+    "Gore Vidal",
+    "Ian Wilson",
+    "Katharine Hepburn",
+    "Mavis Villiers",
+    "Mercedes McCambridge",
+    "Montgomery Clift",
+    "Patricia Marmont",
+    "Rita Webb"
+  ],
+  "musica": [
+    "Buxton Orr",
+    "Malcolm Arnold"
+  ],
+  "fotografia": [
+    "Jack Hildyard"
+  ],
+  "guion": [
+    "Gore Vidal",
+    "Tennessee Williams"
+  ],
+  "escenario": [
+    "Nueva Orleans"
+  ]
 }

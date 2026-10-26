@@ -18,5 +18,33 @@
   "tmdb_id": 4595,
   "titulo_es": "Día de fiesta",
   "titulo_original": "Jour de fête",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "André Pierdel",
+    "Guy Decomble",
+    "Henri Marquet",
+    "Jacques Beauvais",
+    "Jacques Tati",
+    "Paul Frankeur",
+    "Robert Balpo"
+  ],
+  "fotografia": [
+    "Jacques Sauvageot"
+  ],
+  "guion": [
+    "Henri Marquet",
+    "Jacques Tati",
+    "René Wheeler"
+  ],
+  "temas": [
+    "American way of life",
+    "Racionalización",
+    "modernización"
+  ],
+  "escenario": [
+    "Sainte-Sévère-sur-Indre"
+  ]
 }

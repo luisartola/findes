@@ -17,5 +17,40 @@
   ],
   "findes": [
     4
+  ],
+  "paises": [
+    "Francia",
+    "Italia"
+  ],
+  "reparto": [
+    "Adrien Cayla-Legrand",
+    "Alain Delon",
+    "André Thorent",
+    "Carlo Nell",
+    "Catherine Jourdan",
+    "Cathy Rosier",
+    "François Périer",
+    "Gaston Meunier",
+    "Georges Billy",
+    "Jacques Deschamps",
+    "Jacques Léonard",
+    "Jean Gold",
+    "Maurice Magalon",
+    "Michel Boisrond",
+    "Nathalie Delon",
+    "Robert Favart",
+    "Roger Fradet"
+  ],
+  "musica": [
+    "François de Roubaix"
+  ],
+  "fotografia": [
+    "Henri Decaë"
+  ],
+  "guion": [
+    "Jean-Pierre Melville"
+  ],
+  "escenario": [
+    "París"
   ]
 }

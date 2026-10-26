@@ -18,5 +18,21 @@
   "tmdb_id": 18930,
   "titulo_es": "Asesinato por contrato",
   "titulo_original": "Murder by Contract",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Herschel Bernardi",
+    "Janet Brandt",
+    "Kathie Browne",
+    "Phillip Pine",
+    "Vince Edwards"
+  ],
+  "musica": [
+    "Perry Botkin"
+  ],
+  "fotografia": [
+    "Lucien Ballard"
+  ]
 }

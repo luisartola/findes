@@ -18,5 +18,20 @@
   "tmdb_id": 324857,
   "titulo_es": "Spider-Man: un nuevo universo",
   "titulo_original": "Spider-Man: Into the Spider-Verse",
-  "tmdb_rating": 8.4
+  "tmdb_rating": 8.4,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "musica": [
+    "Daniel Pemberton"
+  ],
+  "guion": [
+    "Phil Lord y Christopher Miller"
+  ],
+  "temas": [
+    "Spider-Verse"
+  ],
+  "escenario": [
+    "Brooklyn"
+  ]
 }

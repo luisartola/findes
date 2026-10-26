@@ -18,5 +18,28 @@
   "tmdb_id": 19621,
   "titulo_es": "La venganza (The Hit)",
   "titulo_original": "The Hit",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Bill Hunter",
+    "Carlos Zabala Zabaleta",
+    "Fernando Rey",
+    "Jim Broadbent",
+    "John Hurt",
+    "Laura del Sol",
+    "Ralph Brown",
+    "Terence Stamp",
+    "Tim Roth"
+  ],
+  "musica": [
+    "Paco de Lucía"
+  ],
+  "guion": [
+    "Peter Prince"
+  ],
+  "escenario": [
+    "España"
+  ]
 }

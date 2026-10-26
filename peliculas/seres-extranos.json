@@ -18,5 +18,22 @@
   "tmdb_id": 52398,
   "titulo_es": "Seres extraños",
   "titulo_original": "稀人",
-  "tmdb_rating": 6.0
+  "tmdb_rating": 6.0,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Miho Ninagawa",
+    "Shinya Tsukamoto",
+    "Tomomi Miyashita"
+  ],
+  "guion": [
+    "Chiaki Konaka"
+  ],
+  "temas": [
+    "sobrenatural"
+  ],
+  "escenario": [
+    "Tokio"
+  ]
 }

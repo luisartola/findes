@@ -18,5 +18,38 @@
   "tmdb_id": 32613,
   "titulo_es": "Pánico en el Transiberiano",
   "titulo_original": "Pánico en el Transiberiano",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "España",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Alberto de Mendoza",
+    "Barta Barri",
+    "Christopher Lee",
+    "Helga Liné",
+    "Jorge Rigaud",
+    "José Canalejas",
+    "José Jaspe",
+    "José Marco",
+    "Peter Cushing",
+    "Silvia Tortosa",
+    "Telly Savalas",
+    "Víctor Israel",
+    "Ángel del Pozo"
+  ],
+  "musica": [
+    "John Cacavas"
+  ],
+  "fotografia": [
+    "Alejandro Ulloa",
+    "Teo Escamilla"
+  ],
+  "guion": [
+    "Arnaud d'Usseau",
+    "Julian Zimet"
+  ],
+  "escenario": [
+    "Unión Soviética"
+  ]
 }

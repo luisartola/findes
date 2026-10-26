@@ -18,5 +18,33 @@
   "tmdb_id": 2001,
   "titulo_es": "La noche es nuestra",
   "titulo_original": "We Own the Night",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alex Veadov",
+    "Elena Solovéi",
+    "Eva Mendes",
+    "Joaquin Phoenix",
+    "Mark Wahlberg",
+    "Moni Moshonov",
+    "Oleg Taktarov",
+    "Robert Duvall",
+    "Tony Musante"
+  ],
+  "musica": [
+    "Wojciech Kilar"
+  ],
+  "guion": [
+    "James Gray"
+  ],
+  "temas": [
+    "Departamento de Policía de Nueva York",
+    "Russian mafia in popular culture"
+  ],
+  "escenario": [
+    "Brooklyn",
+    "Nueva York"
+  ]
 }

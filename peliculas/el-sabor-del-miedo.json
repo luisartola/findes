@@ -18,5 +18,27 @@
   "tmdb_id": 64568,
   "titulo_es": "El sabor del miedo",
   "titulo_original": "Taste of Fear",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Ann Todd",
+    "Christopher Lee",
+    "Leonard Sachs",
+    "Ronald Lewis",
+    "Susan Strasberg"
+  ],
+  "musica": [
+    "Clifton Parker"
+  ],
+  "fotografia": [
+    "Douglas Slocombe"
+  ],
+  "guion": [
+    "Jimmy Sangster"
+  ],
+  "escenario": [
+    "Francia"
+  ]
 }

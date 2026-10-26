@@ -18,5 +18,29 @@
   "tmdb_id": 27098,
   "titulo_es": "La belleza de las cosas",
   "titulo_original": "Lust och fägring stor",
-  "tmdb_rating": 6.4
+  "tmdb_rating": 6.4,
+  "paises": [
+    "Suecia"
+  ],
+  "reparto": [
+    "Björn Kjellman",
+    "Johan Widerberg",
+    "Kenneth Milldoff",
+    "Marika Lagercrantz",
+    "Nina Gunke",
+    "Thomaz",
+    "Tomas von Brömssen"
+  ],
+  "fotografia": [
+    "Morten Bruus"
+  ],
+  "guion": [
+    "Bo Widerberg"
+  ],
+  "temas": [
+    "Segunda Guerra Mundial"
+  ],
+  "escenario": [
+    "Suecia"
+  ]
 }

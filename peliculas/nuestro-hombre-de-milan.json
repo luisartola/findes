@@ -18,5 +18,48 @@
   "tmdb_id": 61462,
   "titulo_es": "Nuestro hombre de Milán",
   "titulo_original": "La mala ordina",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Alemania",
+    "Italia"
+  ],
+  "reparto": [
+    "Adolfo Celi",
+    "Andrea Scotti",
+    "Carolyn De Fonseca",
+    "Cyril Cusack",
+    "Ettore Geri",
+    "Femi Benussi",
+    "Fernando Di Leo",
+    "Franca Sciutto",
+    "Francesca Romana Coluzzi",
+    "Franco Fabrizi",
+    "Gianni Macchia",
+    "Giuliano Petrelli",
+    "Guerrino Crivello",
+    "Henry Silva",
+    "Jessica Dublin",
+    "Lara Wendel",
+    "Lina Franchi",
+    "Luciana Paluzzi",
+    "Mario Adorf",
+    "Peter Berling",
+    "Pietro Ceccarelli",
+    "Renato Zero",
+    "Sylva Koscina",
+    "Ulli Lommel",
+    "Woody Strode"
+  ],
+  "musica": [
+    "Armando Trovaioli"
+  ],
+  "fotografia": [
+    "Franco Villa"
+  ],
+  "guion": [
+    "Fernando Di Leo"
+  ],
+  "escenario": [
+    "Milán"
+  ]
 }

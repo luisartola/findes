@@ -18,5 +18,30 @@
   "tmdb_id": 26031,
   "titulo_es": "Una luz en el hampa",
   "titulo_original": "The Naked Kiss",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Anthony Eisley",
+    "Barbara Perry",
+    "Betty Bronson",
+    "Constance Towers",
+    "Elizabeth Robinson",
+    "Michael Dante",
+    "Patsy Kelly",
+    "Virginia Grey"
+  ],
+  "musica": [
+    "Paul Dunlap"
+  ],
+  "fotografia": [
+    "Stanley Cortez"
+  ],
+  "guion": [
+    "Samuel Fuller"
+  ],
+  "temas": [
+    "prostitución"
+  ]
 }

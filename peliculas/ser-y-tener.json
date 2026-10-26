@@ -18,5 +18,22 @@
   "tmdb_id": 5168,
   "titulo_es": "Ser y tener",
   "titulo_original": "Être et avoir",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Francia"
+  ],
+  "musica": [
+    "Philippe Hersant"
+  ],
+  "fotografia": [
+    "Katell Djian",
+    "Laurent Didier"
+  ],
+  "guion": [
+    "Nicolas Philibert"
+  ],
+  "temas": [
+    "escuela unitaria",
+    "sistema educativo de Francia"
+  ]
 }

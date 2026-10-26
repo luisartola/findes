@@ -17,5 +17,38 @@
   ],
   "findes": [
     3
+  ],
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Alfred Hitchcock",
+    "Canada Lee",
+    "Heather Angel",
+    "Henry Hull",
+    "Hume Cronyn",
+    "John Hodiak",
+    "Mary Anderson",
+    "Tallulah Bankhead",
+    "Walter Slezak",
+    "William Bendix"
+  ],
+  "musica": [
+    "Hugo Friedhofer"
+  ],
+  "fotografia": [
+    "Glen MacWilliams"
+  ],
+  "guion": [
+    "Ben Hecht",
+    "Jo Swerling",
+    "John Steinbeck"
+  ],
+  "temas": [
+    "Segunda Guerra Mundial",
+    "náutica"
+  ],
+  "escenario": [
+    "Océano Atlántico"
   ]
 }

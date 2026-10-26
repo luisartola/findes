@@ -18,5 +18,36 @@
   "tmdb_id": 756,
   "titulo_es": "Fantasía",
   "titulo_original": "Fantasia",
-  "tmdb_rating": 7.3
+  "tmdb_rating": 7.3,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Deems Taylor",
+    "Jimmy MacDonald",
+    "Leopold Stokowski",
+    "Paul Smith",
+    "Walt Disney"
+  ],
+  "musica": [
+    "Amilcare Ponchielli",
+    "Franz Schubert",
+    "Johann Sebastian Bach",
+    "Ludwig van Beethoven",
+    "Modest Músorgski",
+    "Paul Dukas",
+    "Piotr Ilich Chaikovski",
+    "Ígor Stravinsky"
+  ],
+  "fotografia": [
+    "James Wong Howe"
+  ],
+  "guion": [
+    "Dick Huemer",
+    "Joe Grant"
+  ],
+  "temas": [
+    "música",
+    "visualización"
+  ]
 }

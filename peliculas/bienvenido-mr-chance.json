@@ -18,5 +18,35 @@
   "tmdb_id": 10322,
   "titulo_es": "Bienvenido Mr. Chance",
   "titulo_original": "Being There",
-  "tmdb_rating": 7.6
+  "tmdb_rating": 7.6,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "David Clennon",
+    "Denise DuBarry",
+    "Jack Warden",
+    "James Noble",
+    "Jerome Hellman",
+    "Melvyn Douglas",
+    "Peter Sellers",
+    "Richard Basehart",
+    "Richard Dysart",
+    "Richard Venture",
+    "Sam Weisman",
+    "Shirley MacLaine"
+  ],
+  "musica": [
+    "Johnny Mandel"
+  ],
+  "fotografia": [
+    "Caleb Deschanel"
+  ],
+  "guion": [
+    "Jerzy Kosinski",
+    "Robert C. Jones"
+  ],
+  "escenario": [
+    "Washington D. C."
+  ]
 }

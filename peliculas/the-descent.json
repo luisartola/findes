@@ -18,5 +18,29 @@
   "tmdb_id": 9392,
   "titulo_es": "The Descent",
   "titulo_original": "The Descent",
-  "tmdb_rating": 7.0
+  "tmdb_rating": 7.0,
+  "paises": [
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Alex Reid",
+    "MyAnna Buring",
+    "Natalie Mendoza",
+    "Nora Jane Noone",
+    "Oliver Milburn",
+    "Saskia Mulder",
+    "Shauna Macdonald"
+  ],
+  "musica": [
+    "David Julyan"
+  ],
+  "fotografia": [
+    "Sam McCurdy"
+  ],
+  "guion": [
+    "Neil Marshall"
+  ],
+  "escenario": [
+    "Carolina del Norte"
+  ]
 }

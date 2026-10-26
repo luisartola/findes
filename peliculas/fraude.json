@@ -17,5 +17,35 @@
   ],
   "findes": [
     11
+  ],
+  "paises": [
+    "Alemania",
+    "Estados Unidos",
+    "Francia",
+    "Irán"
+  ],
+  "reparto": [
+    "Clifford Irving",
+    "Elmyr de Hory",
+    "François Reichenbach",
+    "Gary Graver",
+    "Howard Hughes",
+    "Jean-Pierre Aumont",
+    "Joseph Cotten",
+    "Laurence Harvey",
+    "Oja Kodar",
+    "Orson Welles",
+    "Paul Stewart",
+    "Peter Bogdanovich"
+  ],
+  "musica": [
+    "Michel Legrand"
+  ],
+  "fotografia": [
+    "François Reichenbach"
+  ],
+  "guion": [
+    "Oja Kodar",
+    "Orson Welles"
   ]
 }

@@ -18,5 +18,33 @@
   "tmdb_id": 47850,
   "titulo_es": "Ensayo de orquesta",
   "titulo_original": "Prova d'orchestra",
-  "tmdb_rating": 6.6
+  "tmdb_rating": 6.6,
+  "paises": [
+    "Alemania",
+    "Italia"
+  ],
+  "reparto": [
+    "Adelaide Aste",
+    "Balduin Baas",
+    "Barbara Herrera",
+    "Clara Colosimo",
+    "Federico Fellini",
+    "Franco Iavarone",
+    "Luigi Uzzo",
+    "Rolando De Santis",
+    "Sibilla"
+  ],
+  "musica": [
+    "Nino Rota"
+  ],
+  "fotografia": [
+    "Giuseppe Rotunno"
+  ],
+  "guion": [
+    "Brunello Rondi",
+    "Federico Fellini"
+  ],
+  "temas": [
+    "orchestra rehearsal"
+  ]
 }

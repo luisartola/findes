@@ -18,5 +18,18 @@
   "tmdb_id": 1160003,
   "titulo_es": "Noche de caza",
   "titulo_original": "Night of the Hunted",
-  "tmdb_rating": 6.0
+  "tmdb_rating": 6.0,
+  "paises": [
+    "Estados Unidos",
+    "Francia"
+  ],
+  "reparto": [
+    "Camille Rowe"
+  ],
+  "fotografia": [
+    "Steeven Petitteville"
+  ],
+  "guion": [
+    "Franck Khalfoun"
+  ]
 }

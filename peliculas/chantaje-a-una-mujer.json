@@ -18,5 +18,35 @@
   "tmdb_id": 42995,
   "titulo_es": "Chantaje contra una mujer",
   "titulo_original": "Experiment in Terror",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Clifton James",
+    "Dick Crockett",
+    "Fay McKenzie",
+    "Gilbert Green",
+    "Glenn Ford",
+    "Harold Goodwin",
+    "James Callahan",
+    "Lee Remick",
+    "Ned Glass",
+    "Ross Martin",
+    "Roy Poole",
+    "Sidney Miller",
+    "Stefanie Powers"
+  ],
+  "musica": [
+    "Henry Mancini"
+  ],
+  "fotografia": [
+    "Philip H. Lathrop"
+  ],
+  "guion": [
+    "The Gordons"
+  ],
+  "escenario": [
+    "San Francisco"
+  ]
 }

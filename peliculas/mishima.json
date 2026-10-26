@@ -18,5 +18,50 @@
   "tmdb_id": 27064,
   "titulo_es": "Mishima: Una vida en cuatro capítulos",
   "titulo_original": "Mishima: A Life in Four Chapters",
-  "tmdb_rating": 7.8
+  "tmdb_rating": 7.8,
+  "paises": [
+    "Estados Unidos",
+    "Japón"
+  ],
+  "reparto": [
+    "Gō Rijū",
+    "Hiroshi Katsuno",
+    "Hiroshi Mikami",
+    "Jun Negami",
+    "Ken Ogata",
+    "Kenji Sawada",
+    "Kōichi Satō",
+    "Roy Scheider",
+    "Ryō Ikebe",
+    "Sachiko Hidari"
+  ],
+  "musica": [
+    "Philip Glass"
+  ],
+  "fotografia": [
+    "John Bailey"
+  ],
+  "guion": [
+    "Chieko Schrader",
+    "Leonard Schrader",
+    "Paul Schrader"
+  ],
+  "temas": [
+    "Yukio Mishima",
+    "acción",
+    "arte",
+    "bushidō",
+    "harakiri",
+    "incidente Mishima",
+    "masculinidad",
+    "militarismo",
+    "mind and body",
+    "nacionalismo",
+    "pulsión de muerte",
+    "vita activa",
+    "vita contemplativa"
+  ],
+  "escenario": [
+    "Tokio"
+  ]
 }

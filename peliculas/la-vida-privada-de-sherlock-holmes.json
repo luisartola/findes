@@ -18,5 +18,35 @@
   "tmdb_id": 5185,
   "titulo_es": "La vida privada de Sherlock Holmes",
   "titulo_original": "The Private Life of Sherlock Holmes",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Estados Unidos",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Catherine Lacey",
+    "Christopher Lee",
+    "Clive Revill",
+    "Colin Blakely",
+    "Geneviève Page",
+    "Kynaston Reeves",
+    "Peter Madden",
+    "Robert Stephens",
+    "Stanley Holloway",
+    "Tamara Tumánova"
+  ],
+  "musica": [
+    "Miklós Rózsa"
+  ],
+  "fotografia": [
+    "Christopher Challis"
+  ],
+  "guion": [
+    "Billy Wilder",
+    "I. A. L. Diamond"
+  ],
+  "escenario": [
+    "Escocia",
+    "Londres"
+  ]
 }

@@ -18,5 +18,38 @@
   "tmdb_id": 11954,
   "titulo_es": "Lifeforce, fuerza vital",
   "titulo_original": "Lifeforce",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Australia",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Aubrey Morris",
+    "Frank Finlay",
+    "Fred Haggerty",
+    "John Hallam",
+    "Julian Firth",
+    "Mathilda May",
+    "Michael Gothard",
+    "Patrick Stewart",
+    "Peter Firth",
+    "Steve Railsback"
+  ],
+  "musica": [
+    "Henry Mancini"
+  ],
+  "fotografia": [
+    "Alan Hume"
+  ],
+  "guion": [
+    "Colin Wilson",
+    "Dan O'Bannon",
+    "Don Jakoby"
+  ],
+  "temas": [
+    "vida extraterrestre"
+  ],
+  "escenario": [
+    "Londres"
+  ]
 }

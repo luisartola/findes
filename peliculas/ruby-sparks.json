@@ -18,5 +18,34 @@
   "tmdb_id": 103332,
   "titulo_es": "Ruby Sparks",
   "titulo_original": "Ruby Sparks",
-  "tmdb_rating": 7.1
+  "tmdb_rating": 7.1,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Aasif Mandvi",
+    "Alia Shawkat",
+    "Annette Bening",
+    "Antonio Banderas",
+    "Chris Messina",
+    "Deborah Ann Woll",
+    "Elliott Gould",
+    "Paul Dano",
+    "Steve Coogan",
+    "Toni Trucks",
+    "Wallace Langham",
+    "Zoe Kazan"
+  ],
+  "musica": [
+    "DeVotchKa"
+  ],
+  "fotografia": [
+    "Matthew Libatique"
+  ],
+  "guion": [
+    "Zoe Kazan"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

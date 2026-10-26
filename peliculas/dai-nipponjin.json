@@ -18,5 +18,25 @@
   "tmdb_id": 11693,
   "titulo_es": "Big Man Japan",
   "titulo_original": "大日本人",
-  "tmdb_rating": 6.1
+  "tmdb_rating": 6.1,
+  "paises": [
+    "Japón"
+  ],
+  "reparto": [
+    "Hiroyuki Miyasako",
+    "Hitoshi Matsumoto",
+    "Itsuji Itao",
+    "Riki Takeuchi",
+    "Ryunosuke Kamiki",
+    "Ua"
+  ],
+  "musica": [
+    "Towa Tei"
+  ],
+  "fotografia": [
+    "Hideo Yamamoto"
+  ],
+  "guion": [
+    "Hitoshi Matsumoto"
+  ]
 }

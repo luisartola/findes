@@ -18,5 +18,23 @@
   "tmdb_id": 1045770,
   "titulo_es": "Daaaaaalí !",
   "titulo_original": "Daaaaaalí !",
-  "tmdb_rating": 6.1
+  "tmdb_rating": 6.1,
+  "paises": [
+    "Francia"
+  ],
+  "reparto": [
+    "Anaïs Demoustier",
+    "Didier Flamand",
+    "Gilles Lellouche",
+    "Jonathan Cohen",
+    "Pio Marmaï",
+    "Romain Duris",
+    "Édouard Baer"
+  ],
+  "fotografia": [
+    "Quentin Dupieux"
+  ],
+  "guion": [
+    "Quentin Dupieux"
+  ]
 }

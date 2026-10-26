@@ -18,5 +18,63 @@
   "tmdb_id": 938,
   "titulo_es": "La muerte tenía un precio",
   "titulo_original": "Per qualche dollaro in più",
-  "tmdb_rating": 8.0
+  "tmdb_rating": 8.0,
+  "paises": [
+    "Alemania",
+    "Alemania Occidental",
+    "España",
+    "Italia"
+  ],
+  "reparto": [
+    "Aldo Sambrell",
+    "Antonio Molino Rojo",
+    "Benito Stefanelli",
+    "Carlo Simi",
+    "Clint Eastwood",
+    "Dante Maggio",
+    "Fernando Di Leo",
+    "Frank Braña",
+    "Gian Maria Volonté",
+    "Guillermo Méndez",
+    "Jacques Herlin",
+    "Jesús Guzmán",
+    "Joseph Egger",
+    "José Calvo",
+    "José Canalejas",
+    "José Terrón",
+    "Klaus Kinski",
+    "Kurt Zips",
+    "Lee Van Cleef",
+    "Lorenzo Robledo",
+    "Luigi Pistilli",
+    "Mario Brega",
+    "Panos Papadopulos",
+    "Peter Lee Lawrence",
+    "Ricardo Palacios",
+    "Roberto Camardiel",
+    "Rosemary Dexter",
+    "Sergio Leone",
+    "Sergio Mendizábal",
+    "Tomás Blanco",
+    "Werner Abrolat"
+  ],
+  "musica": [
+    "Ennio Morricone"
+  ],
+  "fotografia": [
+    "Massimo Dallamano"
+  ],
+  "guion": [
+    "Fernando Di Leo",
+    "Luciano Vincenzoni",
+    "Sergio Donati",
+    "Sergio Leone"
+  ],
+  "temas": [
+    "violación en los Estados Unidos"
+  ],
+  "escenario": [
+    "Nuevo México",
+    "Texas"
+  ]
 }

@@ -18,5 +18,28 @@
   "tmdb_id": 26036,
   "titulo_es": "Más poderoso que la vida",
   "titulo_original": "Bigger Than Life",
-  "tmdb_rating": 7.2
+  "tmdb_rating": 7.2,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Barbara Rush",
+    "James Mason",
+    "Robert F. Simon",
+    "Roland Winters",
+    "Walter Matthau"
+  ],
+  "musica": [
+    "David Raksin"
+  ],
+  "fotografia": [
+    "Joseph MacDonald"
+  ],
+  "guion": [
+    "Clifford Odets",
+    "Cyril Hume",
+    "James Mason",
+    "Nicholas Ray",
+    "Richard Maibaum"
+  ]
 }

@@ -18,5 +18,30 @@
   "tmdb_id": 11782,
   "titulo_es": "Hervidero",
   "titulo_original": "辣手神探",
-  "tmdb_rating": 7.5
+  "tmdb_rating": 7.5,
+  "paises": [
+    "Hong Kong"
+  ],
+  "reparto": [
+    "Anthony Wong",
+    "Bowie Lam",
+    "Chow Yun-fat",
+    "John Woo",
+    "Kwan Hoi-san",
+    "Philip Chan",
+    "Philip Kwok",
+    "Stephen Wai",
+    "Teresa Mo",
+    "Tony Leung Chiu-wai"
+  ],
+  "musica": [
+    "Mike Gibbs"
+  ],
+  "guion": [
+    "Barry Wong",
+    "John Woo"
+  ],
+  "escenario": [
+    "Hong Kong"
+  ]
 }

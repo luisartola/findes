@@ -18,5 +18,28 @@
   "tmdb_id": 9707,
   "titulo_es": "Bubba Ho-tep",
   "titulo_original": "Bubba Ho-tep",
-  "tmdb_rating": 6.5
+  "tmdb_rating": 6.5,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Bob Ivy",
+    "Bruce Campbell",
+    "Daniel Roebuck",
+    "Ella Joyce",
+    "Harrison Young",
+    "Heidi Marnhout",
+    "Larry Pennell",
+    "Ossie Davis",
+    "Reggie Bannister"
+  ],
+  "musica": [
+    "Brian Tyler"
+  ],
+  "guion": [
+    "Don Coscarelli"
+  ],
+  "escenario": [
+    "Texas"
+  ]
 }

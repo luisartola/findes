@@ -18,5 +18,13 @@
   "tmdb_id": 242090,
   "titulo_es": "The One I Love",
   "titulo_original": "The One I Love",
-  "tmdb_rating": 6.9
+  "tmdb_rating": 6.9,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Elisabeth Moss",
+    "Mark Duplass",
+    "Ted Danson"
+  ]
 }

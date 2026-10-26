@@ -18,5 +18,45 @@
   "tmdb_id": 2179,
   "titulo_es": "Tenacious D: dando la nota",
   "titulo_original": "Tenacious D in The Pick of Destiny",
-  "tmdb_rating": 6.8
+  "tmdb_rating": 6.8,
+  "paises": [
+    "Estados Unidos"
+  ],
+  "reparto": [
+    "Amy Adams",
+    "Amy Poehler",
+    "Andrew Caldwell",
+    "Ben Stiller",
+    "Colin Hanks",
+    "Dave Allen",
+    "Dave Grohl",
+    "David Koechner",
+    "David Krumholtz",
+    "Fred Armisen",
+    "Gregg Turkington",
+    "JR Reed",
+    "Jack Black",
+    "John C. Reilly",
+    "John Ennis",
+    "Kyle Gass",
+    "Meat Loaf",
+    "Ned Bellamy",
+    "Paul F. Tompkins",
+    "Ronnie James Dio",
+    "Tim Robbins",
+    "Troy Gentile"
+  ],
+  "musica": [
+    "Jack Black"
+  ],
+  "fotografia": [
+    "Robert Brinkmann"
+  ],
+  "guion": [
+    "Jack Black",
+    "Kyle Gass"
+  ],
+  "escenario": [
+    "Los Ángeles"
+  ]
 }

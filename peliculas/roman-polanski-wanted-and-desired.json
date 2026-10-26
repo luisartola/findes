@@ -18,5 +18,43 @@
   "tmdb_id": 16800,
   "titulo_es": "Roman Polanski: Se busca",
   "titulo_original": "Roman Polanski: Wanted and Desired",
-  "tmdb_rating": 6.3
+  "tmdb_rating": 6.3,
+  "paises": [
+    "Estados Unidos",
+    "Reino Unido"
+  ],
+  "reparto": [
+    "Catherine Deneuve",
+    "Clive James",
+    "David Wells",
+    "Dick Cavett",
+    "Emmanuelle Seigner",
+    "Faye Dunaway",
+    "Gene Gutowski",
+    "Harrison Ford",
+    "Hugh Hefner",
+    "Jack Nicholson",
+    "Joan Collins",
+    "John Cassavetes",
+    "Leonor Watling",
+    "Meryl Streep",
+    "Michael Caine",
+    "Mick Jagger",
+    "Mike Wallace",
+    "Mía Farrow",
+    "Nicolas Cage",
+    "Pedro Almodóvar",
+    "Pierre-André Boutang",
+    "Rob Marshall",
+    "Roman Polanski",
+    "Sharon Tate",
+    "Stephen Daldry",
+    "Terence Stamp"
+  ],
+  "musica": [
+    "Mark De Gli Antoni"
+  ],
+  "guion": [
+    "Joe Bini"
+  ]
 }

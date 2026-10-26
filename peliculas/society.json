@@ -18,5 +18,19 @@
   "tmdb_id": 22244,
   "titulo_es": "Society",
   "titulo_original": "Society",
-  "tmdb_rating": 6.7
+  "tmdb_rating": 6.7,
+  "paises": [
+    "Estados Unidos",
+    "Japón"
+  ],
+  "reparto": [
+    "Billy Warlock",
+    "Devin DeVasquez"
+  ],
+  "musica": [
+    "Mark Ryder"
+  ],
+  "escenario": [
+    "Beverly Hills"
+  ]
 }
