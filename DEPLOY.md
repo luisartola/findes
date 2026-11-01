@@ -91,10 +91,6 @@ enlazadas a la película equivocada.
 
 ## El Quiz
 
-Tiene dos modos:
-
-- **Precríticos**: las preguntas se generan solas a partir de `data.json` y de
-  las fichas, así que salen distintas cada ronda y se actualizan solas cuando
-  añadís un finde. No hay nada que mantener.
-- **Cine general**: preguntas de verdadero/falso escritas a mano en
-  `quiz.json`. Para añadir más, añade objetos a ese fichero.
+Las preguntas se generan solas a partir de `data.json` y de las fichas, así
+que salen distintas cada ronda y se actualizan solas cuando añadís un finde.
+No hay nada que mantener.

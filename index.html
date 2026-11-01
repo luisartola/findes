@@ -709,162 +709,6 @@
       border-radius: 2px;
       transition: width .35s var(--ease-out-quart);
     }
-    .quiz-card-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 380px;
-      height: 420px;
-      perspective: 800px;
-    }
-    .quiz-card {
-      position: absolute;
-      inset: 0;
-      background: var(--bg-raised);
-      border: 2px solid var(--border);
-      border-radius: 16px;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      cursor: grab;
-      user-select: none;
-      touch-action: pan-y;
-      transition: border-color .2s;
-      will-change: transform;
-      box-shadow: 0 4px 24px rgba(0,0,0,.08);
-    }
-    .quiz-card:active { cursor: grabbing; }
-    .quiz-card.swiping-right { border-color: var(--teal); }
-    .quiz-card.swiping-left { border-color: var(--wine); }
-    .quiz-card.exit-left {
-      transition: transform .4s var(--ease-out-expo), opacity .4s;
-      transform: translateX(-150%) rotate(-15deg);
-      opacity: 0;
-    }
-    .quiz-card.exit-right {
-      transition: transform .4s var(--ease-out-expo), opacity .4s;
-      transform: translateX(150%) rotate(15deg);
-      opacity: 0;
-    }
-    .quiz-card-poster {
-      width: 120px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,.1);
-      pointer-events: none;
-    }
-    .quiz-card-poster-ph {
-      width: 120px;
-      height: 180px;
-      background: var(--bg-inset);
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-    }
-    .quiz-card-question {
-      font-family: var(--ff-display);
-      font-size: 1.2rem;
-      line-height: 1.3;
-      color: var(--tx);
-      margin-bottom: .5rem;
-    }
-    .quiz-swipe-hint {
-      display: flex;
-      align-items: center;
-      gap: .4rem;
-      font-size: .72rem;
-      color: var(--tx-3);
-      pointer-events: none;
-    }
-    .quiz-overlay {
-      position: absolute;
-      top: 16px;
-      font-family: var(--ff-body);
-      font-size: 1.1rem;
-      font-weight: 700;
-      padding: .4rem 1rem;
-      border-radius: 6px;
-      opacity: 0;
-      transition: opacity .15s;
-      pointer-events: none;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-    }
-    .quiz-overlay.yes-label {
-      right: 16px;
-      color: var(--teal);
-      border: 2px solid var(--teal);
-      transform: rotate(12deg);
-    }
-    .quiz-overlay.no-label {
-      left: 16px;
-      color: var(--wine);
-      border: 2px solid var(--wine);
-      transform: rotate(-12deg);
-    }
-    .quiz-buttons {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    .quiz-btn {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: 2px solid var(--border);
-      background: var(--bg-raised);
-      cursor: pointer;
-      font-size: 1.4rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all .2s var(--ease-out-quart);
-    }
-    .quiz-btn:hover { transform: scale(1.1); }
-    .quiz-btn.btn-no { border-color: var(--wine); color: var(--wine); }
-    .quiz-btn.btn-no:hover { background: var(--wine-bg); }
-    .quiz-btn.btn-yes { border-color: var(--teal); color: var(--teal); }
-    .quiz-btn.btn-yes:hover { background: #e8f5ef; }
-    [data-theme="dark"] .quiz-btn.btn-yes:hover { background: #1a2e22; }
-
-    /* Quiz feedback */
-    .quiz-feedback {
-      position: absolute;
-      inset: 0;
-      background: var(--bg-raised);
-      border-radius: 16px;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      opacity: 0;
-      transition: opacity .3s;
-      pointer-events: none;
-    }
-    .quiz-feedback.visible { opacity: 1; pointer-events: auto; }
-    .quiz-feedback-icon { font-size: 3rem; margin-bottom: .75rem; }
-    .quiz-feedback-text {
-      font-family: var(--ff-display);
-      font-size: 1.1rem;
-      color: var(--tx);
-      margin-bottom: .5rem;
-    }
-    .quiz-feedback-explain {
-      font-size: .85rem;
-      color: var(--tx-2);
-      line-height: 1.5;
-      max-width: 300px;
-    }
-
     /* ═══ Quiz Precríticos (opción múltiple) ═══ */
     .quiz-modes { display: flex; flex-wrap: wrap; gap: .6rem 1rem; justify-content: center; align-items: center; margin-bottom: 1.5rem; }
     .quiz-largo { display: inline-flex; align-items: center; gap: .45rem; font-size: .78rem; color: var(--tx-3); }
@@ -1019,9 +863,7 @@
     .empty-state .empty-icon .ico { width: 2rem; height: 2rem; stroke-width: 1.2; }
     .result-ico { margin-bottom: .5rem; color: var(--acc); }
     .result-ico .ico { width: 2.6rem; height: 2.6rem; stroke-width: 1.2; }
-    .quiz-btn .ico { width: 1.4rem; height: 1.4rem; stroke-width: 2; }
     .quizp-feedback .ico { width: .95rem; height: .95rem; stroke-width: 2.2; }
-    .quiz-card-poster-ph .ico { width: 2rem; height: 2rem; color: var(--tx-3); }
     .quizp-next .ico { width: .95rem; height: .95rem; }
     .chip .ico, .bar-label .ico { width: .85rem; height: .85rem; }
 
@@ -1044,7 +886,6 @@
       width: 60px; height: 90px; border-radius: 4px; flex-shrink: 0; font-size: 1.6rem;
     }
     .sr-placeholder.poster-ph { font-size: .95rem; }
-    .quiz-card-poster-ph.poster-ph { font-size: 3rem; }
 
     /* Fila de archivo: variante con icono en vez de número */
     .ar-ico {
@@ -2805,8 +2646,6 @@
     }
 
     /* ── QUIZ ── */
-    let QUIZ_DATA = null;
-
     /* ═══ Quiz Precríticos ═══
        Las preguntas no están escritas a mano: se generan del propio archivo,
        así que nunca se repiten dos rondas iguales y siempre están al día. */
@@ -2841,31 +2680,13 @@
       return [...buenos, ...muestra(pool.filter(x => !usados.has(x)), n - buenos.length)];
     }
 
-    // Géneros de TMDB con los que se puede preguntar sin ambigüedad, y los
-    // vecinos que no pueden hacer de distractor (un «suspense» puede ser terror).
-    const GEN_UNA = {
-      'Terror': 'una película de terror', 'Ciencia ficción': 'una película de ciencia ficción',
-      'Animación': 'una película de animación', 'Documental': 'un documental', 'Western': 'un western',
-      'Bélica': 'una película bélica', 'Música': 'una película musical', 'Fantasía': 'una película fantástica',
-      'Acción': 'una película de acción'
-    };
+    // Géneros de TMDB en plural, para las preguntas por género.
     const GEN_VARIAS = {
       'Terror': 'películas de terror', 'Comedia': 'comedias', 'Crimen': 'películas de crimen',
       'Suspense': 'películas de suspense', 'Misterio': 'películas de misterio', 'Romance': 'películas románticas',
       'Ciencia ficción': 'películas de ciencia ficción', 'Fantasía': 'películas fantásticas',
       'Acción': 'películas de acción', 'Animación': 'películas de animación', 'Documental': 'documentales'
     };
-    const GEN_VECINOS = {
-      'Terror': ['Suspense', 'Misterio', 'Fantasía'], 'Ciencia ficción': ['Fantasía'],
-      'Fantasía': ['Ciencia ficción', 'Terror', 'Animación', 'Familia'], 'Animación': ['Fantasía', 'Familia'],
-      'Documental': ['Música', 'Historia'], 'Western': ['Aventura', 'Acción'], 'Bélica': ['Historia', 'Acción'],
-      'Música': ['Documental'], 'Acción': ['Aventura', 'Crimen', 'Suspense', 'Bélica', 'Western']
-    };
-    // Solo estos sirven para «¿cuál de estas es…?»: comedia y romance se
-    // mezclan con el drama sin que TMDB lo diga.
-    const GEN_NITIDOS = Object.keys(GEN_VECINOS);
-    const sinGenero = (peli, g) => !genresOf(peli).some(x => x === g || (GEN_VECINOS[g] || []).includes(x));
-
     // Datos de Wikidata (enrich_wikidata.py): países, reparto, música,
     // fotografía, guion, temas y dónde transcurre.
     const PAIS_NORMAL = {
@@ -3634,10 +3455,9 @@
     function renderQuizPrecriticos() {
       // «Todas» es el banco entero, unas cien.
       const preguntas = construirBanco().slice(0, quizLargo());
-      const sinFin = false;
       if (!preguntas.length) {
         document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
-          ${quizCabecera('precriticos')}
+          ${quizCabecera()}
           <div class="empty-state"><div class="empty-icon">${ico('film')}</div>
           <div class="empty-title">No hay datos suficientes</div></div>
         </div></section>`;
@@ -3648,7 +3468,7 @@
       const fallos = [];
 
       document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
-        ${quizCabecera('precriticos')}
+        ${quizCabecera()}
         <div class="quiz-arena" style="min-height:auto">
           ${quizMarcador()}
           <div class="quizp" id="quizp"></div>
@@ -3659,7 +3479,7 @@
 
       const pintar = () => {
         const q = preguntas[actual];
-        pintarMarcador(actual, preguntas.length, aciertos, respondidas, sinFin);
+        pintarMarcador(actual, preguntas.length, aciertos, respondidas);
         document.getElementById('quizp').innerHTML = `
           <div class="quizp-card">
             <div class="quizp-kind">${q.tipo}</div>
@@ -3693,7 +3513,7 @@
         });
 
         const ultima = actual === preguntas.length - 1;
-        pintarMarcador(actual, preguntas.length, aciertos, respondidas, sinFin);
+        pintarMarcador(actual, preguntas.length, aciertos, respondidas);
         document.getElementById('quizp-tras').innerHTML = `
           <div class="quizp-feedback">
             <strong>${ico(acertada ? 'si' : 'no')} ${acertada ? 'Correcto' : 'Casi'}</strong> — ${q.explicacion}
@@ -3716,7 +3536,7 @@
         else if (pct >= 40) { emoji = ico('film'); msg = 'Aprobado raspado. Toca repasar findes.'; }
         else { emoji = ico('dormido'); msg = '¿Seguro que no te dormías en las proyecciones?'; }
 
-        pintarMarcador(respondidas, respondidas, aciertos, respondidas, sinFin, true);
+        pintarMarcador(respondidas, respondidas, aciertos, respondidas, true);
         document.getElementById('quizp').innerHTML = `
           <div class="quiz-results" style="max-width:none;margin:0 auto">
             <div class="result-ico">${emoji}</div>
@@ -3752,53 +3572,35 @@
       pintar();
     }
 
-    /* ── Selector de modo ── */
-    function quizModo() {
-      return localStorage.getItem('fp-quiz-modo') === 'cine' ? 'cine' : 'precriticos';
-    }
-
-    // Largo de la ronda. Precríticos tiene un banco de unas cien: 10, 30 o
-    // todas. Cine general: 10, 30, 100 o sin fin (hasta que uno se canse).
-    const QUIZ_LARGOS = { precriticos: ['10', '30', 'todas'], cine: ['10', '30', '100', 'sinfin'] };
-    const QUIZ_ROTULOS = { todas: 'Todas', sinfin: 'Sin fin' };
-    function quizLargoClave(modo = quizModo()) {
+    // Largo de la ronda: el banco tiene unas cien preguntas, así que 10, 30 o todas.
+    const QUIZ_LARGOS = ['10', '30', 'todas'];
+    const QUIZ_ROTULOS = { todas: 'Todas' };
+    function quizLargoClave() {
       let v = null;
       try { v = localStorage.getItem('fp-quiz-largo'); } catch (e) {}
-      const largos = QUIZ_LARGOS[modo];
-      if (largos.includes(v)) return v;
-      // El máximo de un modo vale como máximo del otro.
-      if (['100', 'sinfin', 'todas'].includes(v)) return largos[largos.length - 1];
+      if (QUIZ_LARGOS.includes(v)) return v;
+      // Lo que quede guardado de cuando había rondas de 100 o sin fin.
+      if (['100', 'sinfin'].includes(v)) return 'todas';
       return '30';
     }
     function quizLargo() {
       const v = quizLargoClave();
-      return v === 'sinfin' || v === 'todas' ? Infinity : parseInt(v);
+      return v === 'todas' ? Infinity : parseInt(v);
     }
 
-    function quizCabecera(modo) {
-      const largo = quizLargoClave(modo);
+    function quizCabecera() {
+      const largo = quizLargoClave();
       return `<h1 class="page-heading" style="text-align:center">Quiz</h1>
         <div class="quiz-modes">
-          <div class="segmented" id="quiz-modes">
-            <button data-modo="precriticos" class="${modo === 'precriticos' ? 'is-active' : ''}">Precríticos</button>
-            <button data-modo="cine" class="${modo === 'cine' ? 'is-active' : ''}">Cine general</button>
-          </div>
           <div class="quiz-largo">Preguntas
             <div class="segmented" id="quiz-largo">
-              ${QUIZ_LARGOS[modo].map(v => `<button data-largo="${v}" class="${v === largo ? 'is-active' : ''}">${QUIZ_ROTULOS[v] || v}</button>`).join('')}
+              ${QUIZ_LARGOS.map(v => `<button data-largo="${v}" class="${v === largo ? 'is-active' : ''}">${QUIZ_ROTULOS[v] || v}</button>`).join('')}
             </div>
           </div>
         </div>`;
     }
 
     function engancharModos() {
-      document.querySelectorAll('#quiz-modes button').forEach(b => {
-        b.addEventListener('click', () => {
-          if (b.dataset.modo === quizModo()) return;
-          localStorage.setItem('fp-quiz-modo', b.dataset.modo);
-          renderQuiz();
-        });
-      });
       document.querySelectorAll('#quiz-largo button').forEach(b => {
         b.addEventListener('click', () => {
           if (b.dataset.largo === quizLargoClave()) return;
@@ -3808,454 +3610,25 @@
       });
     }
 
-    // Contador y barra, comunes a los dos modos. En las rondas sin fin la
-    // barra no tiene final: muestra el porcentaje de aciertos.
+    // Contador y barra.
     function quizMarcador() {
       return `<div class="quiz-progress"><span id="quiz-counter"></span>
           <button class="quiz-terminar" id="quiz-terminar">Terminar</button></div>
         <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quiz-bar" style="width:0%"></div></div>`;
     }
 
-    function pintarMarcador(actual, total, aciertos, respondidas, sinFin, fin) {
+    function pintarMarcador(actual, total, aciertos, respondidas, fin) {
       const cont = document.getElementById('quiz-counter');
       const barra = document.getElementById('quiz-bar');
       const terminar = document.getElementById('quiz-terminar');
       if (!cont) return;
       if (terminar) terminar.style.display = fin ? 'none' : '';
-      if (sinFin) {
-        cont.textContent = fin
-          ? `${respondidas} respondidas · ${aciertos} ${aciertos === 1 ? 'acierto' : 'aciertos'}`
-          : `Pregunta ${actual + 1} · ${aciertos} de ${respondidas}`;
-        barra.style.width = `${respondidas ? (aciertos / respondidas) * 100 : 0}%`;
-      } else {
-        cont.textContent = fin ? `${respondidas} / ${total}` : `${actual + 1} / ${total}`;
-        barra.style.width = `${fin ? 100 : (actual / total) * 100}%`;
-      }
+      cont.textContent = fin ? `${respondidas} / ${total}` : `${actual + 1} / ${total}`;
+      barra.style.width = `${fin ? 100 : (actual / total) * 100}%`;
     }
 
     function renderQuiz() {
-      if (quizModo() === 'cine') renderQuizCine();
-      else renderQuizPrecriticos();
-    }
-
-    async function loadQuiz() {
-      if (QUIZ_DATA) return QUIZ_DATA;
-      try {
-        const res = await fetch('quiz.json');
-        if (res.ok) QUIZ_DATA = await res.json();
-      } catch(e) {}
-      return QUIZ_DATA || [];
-    }
-
-    /* ═══ Cine general: sí o no ═══
-       Unas pocas preguntas escritas a mano (quiz.json) y el resto generadas
-       de las fichas, siempre sobre películas que se han visto en los findes.
-       Cada generador recibe la respuesta que tiene que salir (`si`), para
-       poder repartir síes y noes a medias: si no, contestar siempre «sí»
-       aprobaría. Las explicaciones van como texto plano. */
-    const decadaDe = (anio) => Math.floor(anio / 10) * 10;
-    const nombreDecada = (d) => d < 2000 ? `${String(d).slice(2)}` : String(d);
-
-    const GENERADORES_CINE = [
-      function siDirigio(c, si) {
-        const e = azar(c.conDirector);
-        if (!e) return null;
-        const suyos = e.peli.director.split(', ');
-        const d = si ? suyos[0] : azar(c.directores.filter(x => !suyos.includes(x)
-          && c.pelisDeDirector[x].some(o => Math.abs(anioDe(o) - anioDe(e)) <= 12)));
-        if (!d) return null;
-        return {
-          clave: `si-dir-${e.slug}-${d}`, pelicula_slug: e.slug, respuesta: si,
-          pregunta: `¿Dirigió ${d} <em>${etq(e)}</em>?`,
-          explicacion: `${etq(e)} (${e.peli.year}) es de ${e.peli.director}.`
-        };
-      },
-
-      function siDecada(c, si) {
-        const e = azar(c.conAnio);
-        if (!e) return null;
-        const real = decadaDe(anioDe(e));
-        const d = si ? real : real + azar([-10, 10]);
-        if (d < 1920 || d > 2020) return null;
-        return {
-          clave: `si-decada-${e.slug}`, pelicula_slug: e.slug, respuesta: si,
-          pregunta: `¿Es <em>${etq(e)}</em> de los años ${nombreDecada(d)}?`,
-          explicacion: `Es de ${e.peli.year}${e.peli.director ? `, de ${e.peli.director}` : ''}.`
-        };
-      },
-
-      function siDosHoras(c, si) {
-        // Nada entre 110 y 130 minutos: eso no lo sabe nadie de memoria.
-        const e = azar(c.conDuracion.filter(x => si ? minutos(x.peli) > 130 : minutos(x.peli) < 110));
-        if (!e) return null;
-        return {
-          clave: `si-horas-${e.slug}`, pelicula_slug: e.slug, respuesta: si,
-          pregunta: `¿Dura <em>${etq(e)}</em> más de dos horas?`,
-          explicacion: `Dura ${minutos(e.peli)} minutos.`
-        };
-      },
-
-      function siGenero(c, si) {
-        let e, g;
-        if (si) {
-          e = azar(c.conFicha.filter(x => genresOf(x.peli).some(y => GEN_NITIDOS.includes(y))));
-          if (!e) return null;
-          g = azar(genresOf(e.peli).filter(y => GEN_NITIDOS.includes(y)));
-        } else {
-          g = azar(GEN_NITIDOS);
-          e = azar(c.conFicha.filter(x => genresOf(x.peli).length && sinGenero(x.peli, g)));
-          if (!e) return null;
-        }
-        return {
-          clave: `si-genero-${e.slug}-${g}`, pelicula_slug: e.slug, respuesta: si,
-          pregunta: `¿Es <em>${etq(e)}</em> ${GEN_UNA[g]}?`,
-          explicacion: `En TMDB figura como ${genresOf(e.peli).join(', ').toLowerCase()}.`
-        };
-      },
-
-      function siAnterior(c, si) {
-        const [a, b] = muestra(c.conAnio, 2);
-        if (!b || Math.abs(anioDe(a) - anioDe(b)) < 3) return null;
-        // Se pregunta por la pareja en el orden que haga verdadera o falsa la frase.
-        const [x, y] = (anioDe(a) < anioDe(b)) === si ? [a, b] : [b, a];
-        return {
-          clave: `si-antes-${[a.slug, b.slug].sort().join('|')}`, pelicula_slug: x.slug, respuesta: si,
-          pregunta: `¿Es <em>${etq(x)}</em> anterior a <em>${etq(y)}</em>?`,
-          explicacion: `${etq(x)} es de ${x.peli.year}; ${etq(y)}, de ${y.peli.year}.`
-        };
-      },
-
-      function siTituloOriginal(c, si) {
-        const e = azar(c.conOriginal);
-        if (!e) return null;
-        const otra = si ? e : azar(c.conOriginal.filter(x => x.slug !== e.slug
-          && decadaDe(anioDe(x)) === decadaDe(anioDe(e))));
-        if (!otra) return null;
-        return {
-          clave: `si-titulo-${e.slug}`, pelicula_slug: e.slug, respuesta: si,
-          pregunta: `¿Es «${otra.peli.titulo_original}» el título original de <em>${etq(e)}</em>?`,
-          explicacion: `Su título original es «${e.peli.titulo_original}»${si ? '' : `; «${otra.peli.titulo_original}» es ${etq(otra)}`}.`
-        };
-      },
-
-      function siMismoDirector(c, si) {
-        let a, b;
-        if (si) {
-          const d = azar(Object.keys(c.pelisDeDirector).filter(x => c.pelisDeDirector[x].length >= 2));
-          if (!d) return null;
-          [a, b] = muestra(c.pelisDeDirector[d], 2);
-        } else {
-          a = azar(c.conDirector);
-          const suyos = a.peli.director.split(', ');
-          b = azar(c.conDirector.filter(x => !x.peli.director.split(', ').some(d => suyos.includes(d))
-            && Math.abs(anioDe(x) - anioDe(a)) <= 8));
-          if (!b) return null;
-        }
-        const comun = a.peli.director.split(', ').find(d => b.peli.director.split(', ').includes(d));
-        return {
-          clave: `si-mismodir-${[a.slug, b.slug].sort().join('|')}`, pelicula_slug: a.slug, respuesta: si,
-          pregunta: `¿Son <em>${etq(a)}</em> y <em>${etq(b)}</em> del mismo director?`,
-          explicacion: si
-            ? `Las dos son de ${comun}.`
-            : `${etq(a)} es de ${a.peli.director}; ${etq(b)}, de ${b.peli.director}.`
-        };
-      }
-    ];
-
-    // `estado` se comparte entre tandas de una ronda sin fin: ni preguntas
-    // ni películas repetidas en toda la partida.
-    function rondaCine(curadas, n, estado = { vistas: new Set(), pelis: new Set() }) {
-      const c = contextoQuiz();
-      const ronda = [];
-      const { vistas, pelis } = estado;
-      const porTipo = {};
-      // Las escritas a mano solo valen si su ficha existe; unas pocas por tanda.
-      const curadasLibres = curadas.filter(q => (!q.pelicula_slug || PELI_CACHE[q.pelicula_slug])
-        && !vistas.has(q.pregunta) && !pelis.has(q.pelicula_slug));
-      for (const q of muestra(curadasLibres, Math.max(3, Math.round(n / 10)))) {
-        ronda.push(q);
-        vistas.add(q.pregunta);
-        pelis.add(q.pelicula_slug);
-      }
-      const sies = Math.random() < 0.5 ? Math.floor(n / 2) : Math.ceil(n / 2);
-      for (let i = 0; i < n * 40 && ronda.length < n; i++) {
-        const faltanSi = sies - ronda.filter(q => q.respuesta).length;
-        const si = faltanSi > 0 && (faltanSi >= n - ronda.length || Math.random() < 0.5);
-        const gen = azar(GENERADORES_CINE);
-        // Pocas del mismo tipo (tres en quince), para que no sea monotemática.
-        if ((porTipo[gen.name] || 0) >= Math.max(3, Math.ceil(n / 5))) continue;
-        const q = gen(c, si);
-        if (!q || vistas.has(q.clave)) continue;
-        // Una sola pregunta por película en toda la partida.
-        if (pelis.has(q.pelicula_slug)) continue;
-        vistas.add(q.clave);
-        pelis.add(q.pelicula_slug);
-        porTipo[gen.name] = (porTipo[gen.name] || 0) + 1;
-        ronda.push(q);
-      }
-      return barajar(ronda);
-    }
-
-    async function renderQuizCine() {
-      const total = quizLargo();
-      const sinFin = total === Infinity;
-      const curadas = await loadQuiz();
-      const estado = { vistas: new Set(), pelis: new Set() };
-      const shuffled = rondaCine(curadas, sinFin ? 20 : total, estado);
-      if (!shuffled.length) {
-        document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
-          ${quizCabecera('cine')}
-          <p style="color:var(--tx-2);text-align:center">No se pudieron cargar las preguntas.</p>
-        </div></section>`;
-        return;
-      }
-
-      let current = 0;
-      let score = 0;
-      let answered = false;
-      let respondidas = 0;
-      let terminado = false;
-
-      function renderShell() {
-        document.getElementById('view').innerHTML = `<section class="main-section"><div class="container">
-          ${quizCabecera('cine')}
-          <div class="quiz-arena">
-            ${quizMarcador()}
-            <div class="quiz-card-wrapper" id="quiz-card-wrapper"></div>
-            <div class="quiz-buttons">
-              <button class="quiz-btn btn-no" id="btn-no" title="No">${ico('no')}</button>
-              <button class="quiz-btn btn-yes" id="btn-yes" title="Sí">${ico('si')}</button>
-            </div>
-            <div style="margin-top:1rem">
-              <div class="quiz-swipe-hint">← NO &nbsp;·&nbsp; SÍ →</div>
-            </div>
-          </div>
-        </div></section>`;
-        engancharModos();
-        document.getElementById('quiz-terminar').addEventListener('click', () => {
-          if (!terminado) showResults();
-        });
-      }
-
-      function showCard() {
-        answered = false;
-        const q = shuffled[current];
-        const peli = q.pelicula_slug ? PELI_CACHE[q.pelicula_slug] : null;
-        const wrapper = document.getElementById('quiz-card-wrapper');
-        pintarMarcador(current, shuffled.length, score, respondidas, sinFin);
-
-        const posterHtml = peli && peli.poster
-          ? `<img class="quiz-card-poster" src="${posterUrl(peli.poster, POSTER.md)}" alt="" draggable="false">`
-          : `<div class="quiz-card-poster-ph">${ico('film')}</div>`;
-
-        wrapper.innerHTML = `
-          <div class="quiz-card" id="quiz-active-card">
-            <div class="quiz-overlay yes-label" id="overlay-yes">SÍ</div>
-            <div class="quiz-overlay no-label" id="overlay-no">NO</div>
-            ${posterHtml}
-            <div class="quiz-card-question">${q.pregunta}</div>
-          </div>
-          <div class="quiz-feedback" id="quiz-feedback">
-            <div class="quiz-feedback-icon" id="fb-icon"></div>
-            <div class="quiz-feedback-text" id="fb-text"></div>
-            <div class="quiz-feedback-explain" id="fb-explain"></div>
-          </div>
-        `;
-
-        setupSwipe(document.getElementById('quiz-active-card'));
-      }
-
-      function answer(userSaidYes) {
-        if (answered) return;
-        answered = true;
-        const q = shuffled[current];
-        const correct = (userSaidYes === q.respuesta);
-        if (correct) score++;
-        respondidas++;
-        pintarMarcador(current, shuffled.length, score, respondidas, sinFin);
-        if (sinFin && current >= shuffled.length - 3) shuffled.push(...rondaCine(curadas, 20, estado));
-
-        const card = document.getElementById('quiz-active-card');
-        card.classList.add(userSaidYes ? 'exit-right' : 'exit-left');
-
-        // Show feedback after card exits
-        setTimeout(() => {
-          const fb = document.getElementById('quiz-feedback');
-          document.getElementById('fb-icon').innerHTML = ico(correct ? 'si' : 'no');
-          document.getElementById('fb-text').textContent = correct ? '¡Correcto!' : 'Incorrecto';
-          document.getElementById('fb-explain').textContent = q.explicacion;
-          fb.classList.add('visible');
-
-          // Auto-advance (salvo si ya se terminó o se cambió de página)
-          setTimeout(() => {
-            if (terminado || !document.getElementById('quiz-card-wrapper')) return;
-            current++;
-            if (current < shuffled.length) {
-              showCard();
-            } else {
-              showResults();
-            }
-          }, 2000);
-        }, 350);
-      }
-
-      function showResults() {
-        // `answered` bloquea también los atajos de teclado de esta ronda.
-        terminado = true;
-        answered = true;
-        document.querySelectorAll('.quiz-buttons, .quiz-swipe-hint').forEach(el => el.style.display = 'none');
-        const pct = respondidas ? Math.round((score / respondidas) * 100) : 0;
-        const circ = 2 * Math.PI * 58;
-        const offset = circ - (pct / 100) * circ;
-
-        let emoji, msg;
-        if (pct === 100) { emoji = ico('trofeo'); msg = '¡Perfecto! Eres un auténtico cinéfilo precrítico.'; }
-        else if (pct >= 75) { emoji = ico('film'); msg = '¡Muy bien! Dominas el archivo.'; }
-        else if (pct >= 50) { emoji = ico('film'); msg = 'No está mal, pero hay margen de mejora.'; }
-        else { emoji = ico('camara'); msg = 'Necesitas más findes precríticos...'; }
-
-        const wrapper = document.getElementById('quiz-card-wrapper');
-        wrapper.style.height = 'auto';
-        wrapper.innerHTML = `
-          <div class="quiz-results">
-            <div class="result-ico">${emoji}</div>
-            <div class="quiz-score-ring">
-              <svg width="140" height="140" viewBox="0 0 140 140">
-                <circle class="ring-bg" cx="70" cy="70" r="58" fill="none" stroke-width="8" />
-                <circle class="ring-fg" cx="70" cy="70" r="58" fill="none" stroke-width="8"
-                  stroke-linecap="round"
-                  stroke-dasharray="${circ}"
-                  stroke-dashoffset="${circ}" />
-              </svg>
-              <div class="quiz-score-text">
-                <div class="quiz-score-num">${score}/${respondidas}</div>
-                <div class="quiz-score-label">aciertos</div>
-              </div>
-            </div>
-            <div style="font-family:var(--ff-display);font-size:1.1rem;color:var(--tx);margin-bottom:.5rem">${msg}</div>
-            <div style="display:flex;gap:.75rem;justify-content:center;margin-top:1rem">
-              <button class="quiz-btn btn-yes" id="quiz-retry" title="Reintentar" style="width:auto;border-radius:8px;padding:.6rem 1.2rem;font-size:.88rem;font-weight:600;font-family:var(--ff-body)">
-                ${ico('bobina')}&ensp;Reintentar
-              </button>
-              <a href="#" class="quiz-btn btn-no" style="width:auto;border-radius:8px;padding:.6rem 1.2rem;font-size:.88rem;font-weight:600;font-family:var(--ff-body);text-decoration:none;display:flex;align-items:center">
-                Inicio
-              </a>
-            </div>
-          </div>
-        `;
-
-        pintarMarcador(respondidas, shuffled.length, score, respondidas, sinFin, true);
-
-        // Animate ring
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            document.querySelector('.ring-fg').style.strokeDashoffset = offset;
-          });
-        });
-
-        document.getElementById('quiz-retry').addEventListener('click', () => {
-          renderQuizCine();
-        });
-      }
-
-      // Swipe engine
-      function setupSwipe(card) {
-        let startX = 0, startY = 0, deltaX = 0, isDragging = false, startTime = 0;
-        const THRESHOLD = 80;
-        const overlayYes = document.getElementById('overlay-yes');
-        const overlayNo = document.getElementById('overlay-no');
-
-        function onStart(e) {
-          if (answered) return;
-          isDragging = true;
-          startTime = Date.now();
-          const point = e.touches ? e.touches[0] : e;
-          startX = point.clientX;
-          startY = point.clientY;
-          card.style.transition = 'none';
-        }
-
-        function onMove(e) {
-          if (!isDragging || answered) return;
-          const point = e.touches ? e.touches[0] : e;
-          deltaX = point.clientX - startX;
-          const deltaY = point.clientY - startY;
-
-          // If vertical movement is dominant, don't hijack scroll
-          if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaX) < 10) return;
-          if (Math.abs(deltaX) > 10) e.preventDefault();
-
-          const rotation = deltaX * 0.08;
-          card.style.transform = `translateX(${deltaX}px) rotate(${rotation}deg)`;
-
-          const progress = Math.min(Math.abs(deltaX) / THRESHOLD, 1);
-          if (deltaX > 0) {
-            overlayYes.style.opacity = progress;
-            overlayNo.style.opacity = 0;
-            card.classList.add('swiping-right');
-            card.classList.remove('swiping-left');
-          } else if (deltaX < 0) {
-            overlayNo.style.opacity = progress;
-            overlayYes.style.opacity = 0;
-            card.classList.add('swiping-left');
-            card.classList.remove('swiping-right');
-          } else {
-            overlayYes.style.opacity = 0;
-            overlayNo.style.opacity = 0;
-          }
-        }
-
-        function onEnd() {
-          if (!isDragging || answered) return;
-          isDragging = false;
-
-          // Velocity-based: allow fast flicks with shorter distance
-          const elapsed = Date.now() - startTime;
-          const velocity = Math.abs(deltaX) / elapsed;
-          const isFlick = velocity > 0.5 && Math.abs(deltaX) > 30;
-
-          if (Math.abs(deltaX) >= THRESHOLD || isFlick) {
-            answer(deltaX > 0);
-          } else {
-            // Snap back
-            card.style.transition = 'transform .3s var(--ease-out-quart)';
-            card.style.transform = '';
-            overlayYes.style.opacity = 0;
-            overlayNo.style.opacity = 0;
-            card.classList.remove('swiping-right', 'swiping-left');
-          }
-          deltaX = 0;
-        }
-
-        // Touch events
-        card.addEventListener('touchstart', onStart, { passive: true });
-        card.addEventListener('touchmove', onMove, { passive: false });
-        card.addEventListener('touchend', onEnd);
-
-        // Mouse events
-        card.addEventListener('mousedown', onStart);
-        window.addEventListener('mousemove', onMove);
-        window.addEventListener('mouseup', onEnd);
-      }
-
-      // Init
-      renderShell();
-      showCard();
-
-      // Button handlers
-      document.getElementById('btn-no').addEventListener('click', () => answer(false));
-      document.getElementById('btn-yes').addEventListener('click', () => answer(true));
-
-      // Keyboard support
-      const keyHandler = (e) => {
-        if (location.hash !== '#quiz') {
-          document.removeEventListener('keydown', keyHandler);
-          return;
-        }
-        if (e.key === 'ArrowLeft') answer(false);
-        else if (e.key === 'ArrowRight') answer(true);
-      };
-      document.addEventListener('keydown', keyHandler);
+      renderQuizPrecriticos();
     }
 
     /* ── Fuzzy Search Engine ── */
